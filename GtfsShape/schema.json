@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$id": "https://fiware.github.io/data-models/specs/UrbanMobility/GtfsShape/schema.json",
+  "title": "NGSI GTFS Schema",
+  "description": "GTFS Shape",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["GtfsShape"],
+          "description": "NGSI Entity type"
+        },
+        "distanceTravelled": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "minimum": 0
+          },
+          "minItems": 1
+        },
+        "location": {
+          "oneOf": [
+            {
+              "$ref": "http://geojson.org/schema/Geometry.json#LineString"
+            },
+            {
+              "$ref": "http://geojson.org/schema/Geometry.json#MultiLineString"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "required": ["id", "type", "location"]
+}

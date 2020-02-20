@@ -1,0 +1,44 @@
+{
+    "id": "urn:ngsi-ld:ArrivalEstimation:Santander:1",
+    "type": "ArrivalEstimation",
+    "refGtfsTransitFeedFile": {
+        "type": "Property",
+        "value": "urn:ngsi-ld:GtfsTransitFeedFile:Santander:bus"
+    },
+    "routeId": {
+        "type": "Property",
+        "value": "route1"
+    },
+    "stopId": {
+        "type": "Property",
+        "value": "stop1"
+    },
+    "lastUpdatedAt": {
+        "type": "Property",
+        "value": {
+            "@type": "DateTime",
+            "@value": "2018-12-19T10:14:00.238Z"
+        }
+    },
+    "arrivalEstimationUpdate": {
+        "type": "Property",
+        "value": [
+            {
+                "tripId": "1",
+                "arrivalDelay": -2
+            },
+            {
+                "tripId": "2",
+                "arrivalDelay": -2
+            },
+            {
+                "tripId": "3",
+                "arrivalDelay": -2
+            }
+        ]
+    },
+    "@context": [
+        "https://schema.lab.fiware.org/ld/context",
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ]
+}
