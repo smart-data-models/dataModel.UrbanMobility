@@ -1,0 +1,2 @@
+"id", "type", "transferType__value", "minimumTransferTime__value", "hasDestination__object", "hasOrigin__object", "name__value", "@context"
+"urn:ngsi-ld:GtfsTransferRule:Malaga:Linea1_Linea5", "GtfsTransferRule", "0", "10", "urn:ngsi-ld:GtfsStop:Malaga_508", "urn:ngsi-ld:GtfsStop:Malaga_101", "L1_L5", "['https://schema.lab.fiware.org/ld/context', 'https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld']"

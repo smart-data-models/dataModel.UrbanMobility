@@ -1,0 +1,2 @@
+"id", "type", "code__value", "name__value", "hasStop__object", "location__value__coordinates", "address__value__addressLocality", "address__value__addressCountry", "address__value__streetAddress", "@context"
+"urn:ngsi-ld:GtfsStation:Madrid:est_90_21", "GtfsStation", "21", "Intercambiador de Plaza de Castilla", "['urn:ngsi-ld:GtfsStop:Madrid_par_4_1']", "[-3.6892, 40.4669]", "Madrid", "ES", "Paseo de la Castellana 189", "['https://schema.lab.fiware.org/ld/context', 'https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld']"

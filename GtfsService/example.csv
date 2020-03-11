@@ -1,0 +1,2 @@
+"id", "type", "name", "description", "operatedBy"
+"urn:ngsi-ld:Service:Malaga:LAB", "GtfsService", "LAB", "Laborables", "urn:ngsi-ld:GtfsAgency:Malaga_EMT"
