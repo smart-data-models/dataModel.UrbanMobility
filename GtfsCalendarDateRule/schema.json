@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "$schemaVersion": "0.0",
   "$id": "https://fiware.github.io/data-models/specs/UrbanMobility/GtfsCalendarDateRule/schema.json",
   "title": "NGSI GTFS Schema",
   "description": "GTFS Calendar Date Rule",
