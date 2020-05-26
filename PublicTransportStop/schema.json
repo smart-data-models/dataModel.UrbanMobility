@@ -1,0 +1,124 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$schemaVersion": "0.0",
+  "$id": "https://smart-data-models.github.io/dataModel.UrbanMobility/PublicTransportStop/schema.json",
+  "title": "Urban mobility PublicTransportStop schema",
+  "description": "A generic public transport stop",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+    },
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "PublicTransportStop"
+          ],
+          "description": "NGSI Entity type"
+        },
+        "stopCode": {
+          "type": "string"
+        },
+        "shortStopCode": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "wheelchairAccessible": {
+          "type": "integer",
+          "enum": [
+            0,
+            1,
+            2
+          ]
+        },
+        "transportationType": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "enum": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          }
+        },
+        "refPublicTransportRoute": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uri"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "peopleCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "refPeopleCountDevice": {
+          "type": "string",
+          "format": "uri"
+        },
+        "openingHoursSpecification": {
+          "type": "array",
+          "items": {
+            "properties": {
+              "opens": {
+                "type": "string",
+                "pattern": "[0-9]{2}:[0-9]{2}"
+              },
+              "closes": {
+                "type": "string",
+                "pattern": "[0-9]{2}:[0-9]{2}"
+              },
+              "dayOfWeek": {
+                "type": "string",
+                "enum": [
+                  "Friday",
+                  "Monday",
+                  "PublicHolidays",
+                  "Saturday",
+                  "Sunday",
+                  "Thursday",
+                  "Tuesday",
+                  "Wednesday"
+                ]
+              }
+            }
+          },
+          "minItems": 1
+        }
+      }
+    }
+  ],
+  "required": [
+    "id",
+    "type",
+    "transportationType",
+    "name"
+  ],
+  "anyOf": [
+    {
+      "required": [
+        "location"
+      ]
+    },
+    {
+      "required": [
+        "address"
+      ]
+    }
+  ]
+}
