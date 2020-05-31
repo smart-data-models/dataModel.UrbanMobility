@@ -8,63 +8,60 @@
   "source": "https://api.smartsantander.eu/",
   "dataProvider": "http://www.smartsantander.eu/",
   "entityVersion": 2.0,
-  "routeCode": {
-    "type": "Property",
-    "value": "5200103000"
-  },
-  "shortRouteCode": {
-    "type": "Property",
-    "value": "N3"
-  },
-  "name": {
-    "type": "Property",
-    "value": "PEÑACASTILLO-PLAZA DE ITALIA "
-  },
-  "transportationType": {
-    "type": "Property",
-    "value": 3
-  },
-  "routeColor": {
-    "type": "Property",
-    "value": "#ff0000"
-  },
-  "routeTextColor": {
-    "type": "Property",
-    "value": "RED"
-  },
-  "routeSegments": {
-    "type": "Property",
-    "value": [
-      {
-        "segmentName": "PEÑACASTILLO-PLAZA DE ITALIA:1",
-        "refPublicTransportStops": [
-          "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:311",
-          "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:129"
-        ]
-      },
-      {
-        "segmentName": "PEÑACASTILLO-PLAZA DE ITALIA:2",
-        "refPublicTransportStops": [
-          "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:130",
-          "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:131"
-        ]
-      }
-    ]
-  },
-  "schedule": {
-    "type": "Property"
-    "value": [
-      {
-        "validFrom": "2018-01-24",
-        "validThrough": "2018-05-25",
-        "opens": "09:00",
-        "closes": "23:00"
-      },
-      {
-        "dayOfWeek": "Sunday",
-        "opens": "09:00",
-        "closes": "14:00"
-      }
-    ]
-  }
+  "routeCode": "5200103000",
+  "shortRouteCode": "N3",
+  "name": "PEÑACASTILLO-PLAZA DE ITALIA ",
+  "transportationType":3,
+  "routeColor": "#ff0000",
+  "routeTextColor": "RED",
+  "routeSegments":[
+    {
+      "segmentName": "PEÑACASTILLO-PLAZA DE ITALIA:1",
+      "refPublicTransportStops":
+      [
+        "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:311",
+        "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:129"
+      ]
+    },
+    {
+      "segmentName": "PEÑACASTILLO-PLAZA DE ITALIA:2",
+      "refPublicTransportStops":
+      [
+        "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:130",
+        "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:131"
+      ]
+    }
+  ],
+  "schedule": [
+    {
+      "dayOfWeek": "Monday",
+      "opens": "09:00",
+      "closes": "23:00"
+    },
+    {
+      "dayOfWeek": "Tuesday",
+      "opens": "09:00",
+      "closes": "23:00"
+    },
+    {
+      "dayOfWeek": "Wednesday",
+      "opens": "09:00",
+      "closes": "23:00"
+    },
+    {
+      "dayOfWeek": "Thursday",
+      "opens": "09:00",
+      "closes": "23:00"
+    },
+    {
+      "dayOfWeek": "Friday",
+      "opens": "09:00",
+      "closes": "23:00"
+    },
+    {
+      "dayOfWeek": "Sunday",
+      "opens": "09:00",
+      "closes": "14:00"
+    }
+  ]
 }

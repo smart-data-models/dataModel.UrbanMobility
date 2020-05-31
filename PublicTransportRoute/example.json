@@ -27,8 +27,27 @@
   ],
   "schedule": [
     {
-      "validFrom": "2018-01-24",
-      "validThrough": "2018-05-25",
+      "dayOfWeek": "Monday",
+      "opens": "09:00",
+      "closes": "23:00"
+    },
+    {
+      "dayOfWeek": "Tuesday",
+      "opens": "09:00",
+      "closes": "23:00"
+    },
+    {
+      "dayOfWeek": "Wednesday",
+      "opens": "09:00",
+      "closes": "23:00"
+    },
+    {
+      "dayOfWeek": "Thursday",
+      "opens": "09:00",
+      "closes": "23:00"
+    },
+    {
+      "dayOfWeek": "Friday",
       "opens": "09:00",
       "closes": "23:00"
     },
