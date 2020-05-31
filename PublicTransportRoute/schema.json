@@ -1,0 +1,93 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$id": "https://gitlab.com/synchronicity-iot/synchronicity-data-models/raw/master/UrbanMobility/PublicTransportRoute/schema.json",
+  "title": "SynchroniCity - Urban mobility PublicTransportRoute schema",
+  "description": "A generic public transport route",
+  "type": "object",
+  "allOf": [
+    { "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/GSMA-Commons" },
+    { "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/Location-Commons" },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "PublicTransportRoute"
+          ],
+          "description": "NGSI Entity type"
+        },
+        "routeCode": {
+          "type": "string"
+        },
+        "shortRouteCode": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "transportationType": {
+          "type": "integer",
+          "enum": [0,1,2,3,4,5,6,7]
+        },
+        "routeColor": {
+          "type": "string",
+          "pattern": "^#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$"
+        },
+        "routeTextColor": {
+          "type": "string"
+        },
+        "routeSegments": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "segmentName": {"type": "string"},
+              "refPublicTransportStops": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              }
+            },
+            "required": ["segmentName", "refPublicTransportStops"]
+          }
+        },
+        "schedule": {
+          "type": "array",
+          "items": {
+            "properties": {
+              "opens": {
+                "type": "string",
+                "pattern": "[0-9]{2}:[0-9]{2}"
+              },
+              "closes": {
+                "type": "string",
+                "pattern": "[0-9]{2}:[0-9]{2}"
+              },
+              "dayOfWeek": {
+                "type": "string",
+                "enum": [
+                  "Friday",
+                  "Monday",
+                  "PublicHolidays",
+                  "Saturday",
+                  "Sunday",
+                  "Thursday",
+                  "Tuesday",
+                  "Wednesday"  
+                ]
+              }
+            }
+          },
+          "minItems": 1
+        }
+      }
+    }
+  ],
+  "required": [
+    "id",
+    "type",
+    "transportationType"
+  ]
+}
