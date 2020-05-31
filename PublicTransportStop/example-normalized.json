@@ -73,16 +73,75 @@
     "type": "StructuredValue",
     "value": [
       {
-        "opens": "00:01",
-        "closes": "23:59",
-        "dayOfWeek": [
-          "Friday",
-          "Monday",
-          "Thursday",
-          "Tuesday",
-          "Wednesday"
-        ]
+        "opens" : {
+          "type": "string", 
+          "value": "00:01"
+        },
+        "closes": {
+          "type": "string",
+          "value": "23:59"
+        },
+        "dayOfWeek":{
+          "type": "string",
+          "value": "Friday"
+        }
+      },
+      {
+        "opens" : {
+          "type": "string", 
+          "value": "00:01"
+        },
+        "closes": {
+          "type": "string",
+          "value": "23:59"
+        },
+        "dayOfWeek":{
+          "type": "string",
+          "value": "Monday"
+        }
+      },
+      {
+        "opens" : {
+          "type": "string", 
+          "value": "00:01"
+        },
+        "closes": {
+          "type": "string",
+          "value": "23:59"
+        },
+        "dayOfWeek":{
+          "type": "string",
+          "value": "Tuesday"
+        }
+      },
+      {
+        "opens" : {
+          "type": "string", 
+          "value": "00:01"
+        },
+        "closes": {
+          "type": "string",
+          "value": "23:59"
+        },
+        "dayOfWeek":{
+          "type": "string",
+          "value": "Thursday"
+        }
+      },
+      {
+        "opens" : {
+          "type": "string", 
+          "value": "00:01"
+        },
+        "closes": {
+          "type": "string",
+          "value": "23:59"
+        },
+        "dayOfWeek":{
+          "type": "string",
+          "value": "Wednesday"
+        }
       }
-    ]
+    ]  
   }
 }
