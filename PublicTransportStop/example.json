@@ -30,17 +30,32 @@
   ],
   "peopleCount": 0,
   "refPeopleCountDevice": "urn:ngsi-ld:PorpleCountDecice:santander:463",
-  "openingHoursSpecification": [
+ "openingHoursSpecification": 
+  [
     {
       "opens": "00:01",
       "closes": "23:59",
-      "dayOfWeek": [
-        "Friday",
-        "Monday",
-        "Thursday",
-        "Tuesday",
-        "Wednesday"
-      ]
+      "dayOfWeek": "Monday"
+    },
+    {
+      "opens": "00:01",
+      "closes": "23:59",
+      "dayOfWeek": "Tuesday"
+    },
+    {
+      "opens": "00:01",
+      "closes": "23:59",
+      "dayOfWeek": "Wednesday"
+    },
+    {
+      "opens": "00:01",
+      "closes": "23:59",
+      "dayOfWeek": "Thursday"
+    },
+    {
+      "opens": "00:01",
+      "closes": "23:59",
+      "dayOfWeek": "Friday"
     }
   ]
 }
