@@ -1,0 +1,113 @@
+GtfsCalendarRule:
+  required:
+    - id
+    - type
+    - hasService
+    - monday
+    - tuesday
+    - wednesday
+    - thursday
+    - friday
+    - saturday
+    - sunday
+    - startDate
+    - endDate
+  allOf:
+    - $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
+  type: object
+  description: GTFS Calendar Rule
+  properties:
+    alternateName:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    dataProvider:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    description:
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/description
+    endDate:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+      format: date
+    friday:
+      x-ngsi:
+        type: Property
+      type: boolean
+      description: ''
+    hasService:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/URL'
+      type: string
+      description: ''
+      format: uri
+    monday:
+      x-ngsi:
+        type: Property
+      type: boolean
+      description: ''
+    name:
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/name
+    owner:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items:
+        anyOf:
+          - type: string
+            minLength: 1
+            maxLength: 256
+            pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
+          - type: string
+            format: uri
+    saturday:
+      x-ngsi:
+        type: Property
+      type: boolean
+      description: ''
+    source:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    startDate:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+      format: date
+    sunday:
+      x-ngsi:
+        type: Property
+      type: boolean
+      description: ''
+    thursday:
+      x-ngsi:
+        type: Property
+      type: boolean
+      description: ''
+    tuesday:
+      x-ngsi:
+        type: Property
+      type: boolean
+      description: ''
+    wednesday:
+      x-ngsi:
+        type: Property
+      type: boolean
+      description: ''
