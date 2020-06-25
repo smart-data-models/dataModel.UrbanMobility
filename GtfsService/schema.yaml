@@ -11,11 +11,8 @@ GtfsService:
   description: GTFS Service
   properties:
     alternateName:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/alternateName
     dataProvider:
       x-ngsi:
         type: Property
@@ -50,8 +47,5 @@ GtfsService:
           - type: string
             format: uri
     source:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/source
