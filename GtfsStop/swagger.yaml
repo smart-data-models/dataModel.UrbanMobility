@@ -2,7 +2,7 @@
 components: 
   schemas: 
     GtfsStop: 
-      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/GtfsStop/schema.yaml#/GtfsStop"
+      $ref: "https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsStop/model.yaml#/GtfsStop"
 info: 
   description: "GTFS Stop"
   title: GtfsStop
@@ -33,12 +33,12 @@ paths:
                   summary: "Key-Values Pairs"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/GtfsStop/example.json"
+                      $ref: "https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsStop/example.json"
                 normalized: 
                   summary: "Normalized NGSI-LD"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/GtfsStop/example-normalized-ld.jsonld"
+                      $ref: "https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsStop/example-normalized-ld.jsonld"
           description: OK
       tags: 
         - ngsi-ld

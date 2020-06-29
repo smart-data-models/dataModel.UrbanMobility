@@ -1,19 +1,20 @@
-GtfsTransferRule:
+GtfsFrequency:
   required:
     - id
     - type
-    - hasOrigin
-    - hasDestination
-    - transferType
+    - hasTrip
+    - startTime
+    - endTime
+    - headwaySeconds
   allOf:
     - $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
   type: object
-  description: GTFS Transfer Rule
+  description: GTFS Frequency
   properties:
     alternateName:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/alternateName
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/alternateName
     dataProvider:
       x-ngsi:
         type: Property
@@ -22,22 +23,26 @@ GtfsTransferRule:
       description: ''
     description:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/description
-    hasDestination:
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description
+    endTime:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    exactTimes:
+      x-ngsi:
+        type: Property
+      type: boolean
+      description: ''
+    hasTrip:
       x-ngsi:
         type: Property
         model: 'https://schema.org/URL'
       type: string
       description: ''
       format: uri
-    hasOrigin:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/URL'
-      type: string
-      description: ''
-      format: uri
-    minimumTransferTime:
+    headwaySeconds:
       x-ngsi:
         type: Property
         model: 'https://schema.org/Integer'
@@ -46,7 +51,7 @@ GtfsTransferRule:
       format: int32
     name:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/name
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name
     owner:
       x-ngsi:
         type: Relationship
@@ -63,8 +68,8 @@ GtfsTransferRule:
             format: uri
     source:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/source
-    transferType:
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source
+    startTime:
       x-ngsi:
         type: Property
         model: 'https://schema.org/Text'

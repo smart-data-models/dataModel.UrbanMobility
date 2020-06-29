@@ -2,7 +2,7 @@
 components: 
   schemas: 
     GtfsStation: 
-      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/GtfsStation/schema.yaml#/GtfsStation"
+      $ref: "https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsStation/model.yaml#/GtfsStation"
 info: 
   description: "GTFS Station"
   title: GtfsStation
@@ -33,12 +33,12 @@ paths:
                   summary: "Key-Values Pairs"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/GtfsStation/example.json"
+                      $ref: "https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsStation/example.json"
                 normalized: 
                   summary: "Normalized NGSI-LD"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/GtfsStation/example-normalized-ld.jsonld"
+                      $ref: "https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsStation/example-normalized-ld.jsonld"
           description: OK
       tags: 
         - ngsi-ld

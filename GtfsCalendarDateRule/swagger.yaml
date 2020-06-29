@@ -2,7 +2,7 @@
 components: 
   schemas: 
     GtfsCalendarDateRule: 
-      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/GtfsCalendarDateRule/schema.yaml#/GtfsCalendarDateRule"
+      $ref: "https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsCalendarDateRule/model.yaml#/GtfsCalendarDateRule"
 info: 
   description: "GTFS Calendar Date Rule"
   title: GtfsCalendarDateRule
@@ -33,12 +33,12 @@ paths:
                   summary: "Key-Values Pairs"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/GtfsCalendarDateRule/example.json"
+                      $ref: "https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsCalendarDateRule/example.json"
                 normalized: 
                   summary: "Normalized NGSI-LD"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/GtfsCalendarDateRule/example-normalized-ld.jsonld"
+                      $ref: "https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsCalendarDateRule/example-normalized-ld.jsonld"
           description: OK
       tags: 
         - ngsi-ld

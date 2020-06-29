@@ -1,20 +1,19 @@
-ArrivalEstimation:
+GtfsTransferRule:
   required:
     - id
     - type
-    - hasStop
-    - hasTrip
-    - remainingTime
-    - headSign
+    - hasOrigin
+    - hasDestination
+    - transferType
   allOf:
     - $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
   type: object
-  description: Arrival Estimation
+  description: GTFS Transfer Rule
   properties:
     alternateName:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/alternateName
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/alternateName
     dataProvider:
       x-ngsi:
         type: Property
@@ -23,30 +22,31 @@ ArrivalEstimation:
       description: ''
     description:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/description
-    hasStop:
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description
+    hasDestination:
       x-ngsi:
         type: Property
         model: 'https://schema.org/URL'
       type: string
       description: ''
       format: uri
-    hasTrip:
+    hasOrigin:
       x-ngsi:
         type: Property
         model: 'https://schema.org/URL'
       type: string
       description: ''
       format: uri
-    headsign:
+    minimumTransferTime:
       x-ngsi:
         type: Property
-        model: 'https://schema.org/Text'
-      type: string
+        model: 'https://schema.org/Integer'
+      type: integer
       description: ''
+      format: int32
     name:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/name
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name
     owner:
       x-ngsi:
         type: Relationship
@@ -61,17 +61,12 @@ ArrivalEstimation:
             pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
           - type: string
             format: uri
-    remainingDistance:
-      x-ngsi:
-        type: Property
-      type: number
-      description: ''
-    remainingTime:
+    source:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source
+    transferType:
       x-ngsi:
         type: Property
         model: 'https://schema.org/Text'
       type: string
       description: ''
-    source:
-      $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/source

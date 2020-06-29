@@ -2,7 +2,7 @@
 components: 
   schemas: 
     PublicTransportStop: 
-      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/PublicTransportStop/schema.yaml#/PublicTransportStop"
+      $ref: "https://smart-data-models.github.io/dataModel.UrbanMobility/PublicTransportStop/model.yaml#/PublicTransportStop"
 info: 
   description: "A generic public transport stop"
   title: PublicTransportStop
@@ -33,12 +33,12 @@ paths:
                   summary: "Key-Values Pairs"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/PublicTransportStop/example.json"
+                      $ref: "https://smart-data-models.github.io/dataModel.UrbanMobility/PublicTransportStop/example.json"
                 normalized: 
                   summary: "Normalized NGSI-LD"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/PublicTransportStop/example-normalized.json"
+                      $ref: "https://smart-data-models.github.io/dataModel.UrbanMobility/PublicTransportStop/example-normalized.json"
           description: OK
       tags: 
         - ngsi-ld

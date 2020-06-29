@@ -2,7 +2,7 @@
 components: 
   schemas: 
     GtfsTransferRule: 
-      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/GtfsTransferRule/schema.yaml#/GtfsTransferRule"
+      $ref: "https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsTransferRule/model.yaml#/GtfsTransferRule"
 info: 
   description: "GTFS Transfer Rule"
   title: GtfsTransferRule
@@ -33,12 +33,12 @@ paths:
                   summary: "Key-Values Pairs"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/GtfsTransferRule/example.json"
+                      $ref: "https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsTransferRule/example.json"
                 normalized: 
                   summary: "Normalized NGSI-LD"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/GtfsTransferRule/example-normalized-ld.jsonld"
+                      $ref: "https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsTransferRule/example-normalized-ld.jsonld"
           description: OK
       tags: 
         - ngsi-ld

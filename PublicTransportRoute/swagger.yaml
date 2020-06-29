@@ -2,7 +2,7 @@
 components: 
   schemas: 
     PublicTransportRoute: 
-      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/PublicTransportRoute/schema.yaml#/PublicTransportRoute"
+      $ref: "https://smart-data-models.github.io/dataModel.UrbanMobility/PublicTransportRoute/model.yaml#/PublicTransportRoute"
 info: 
   description: "A generic public transport route"
   title: PublicTransportRoute
@@ -33,12 +33,12 @@ paths:
                   summary: "Key-Values Pairs"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/PublicTransportRoute/example.json"
+                      $ref: "https://smart-data-models.github.io/dataModel.UrbanMobility/PublicTransportRoute/example.json"
                 normalized: 
                   summary: "Normalized NGSI-LD"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/PublicTransportRoute/example-normalized.json"
+                      $ref: "https://smart-data-models.github.io/dataModel.UrbanMobility/PublicTransportRoute/example-normalized.json"
           description: OK
       tags: 
         - ngsi-ld

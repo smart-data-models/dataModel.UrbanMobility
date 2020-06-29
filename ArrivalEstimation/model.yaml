@@ -1,20 +1,20 @@
-GtfsFrequency:
+ArrivalEstimation:
   required:
     - id
     - type
+    - hasStop
     - hasTrip
-    - startTime
-    - endTime
-    - headwaySeconds
+    - remainingTime
+    - headSign
   allOf:
     - $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
   type: object
-  description: GTFS Frequency
+  description: Arrival Estimation
   properties:
     alternateName:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/alternateName
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/alternateName
     dataProvider:
       x-ngsi:
         type: Property
@@ -23,18 +23,14 @@ GtfsFrequency:
       description: ''
     description:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/description
-    endTime:
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description
+    hasStop:
       x-ngsi:
         type: Property
-        model: 'https://schema.org/Text'
+        model: 'https://schema.org/URL'
       type: string
       description: ''
-    exactTimes:
-      x-ngsi:
-        type: Property
-      type: boolean
-      description: ''
+      format: uri
     hasTrip:
       x-ngsi:
         type: Property
@@ -42,16 +38,15 @@ GtfsFrequency:
       type: string
       description: ''
       format: uri
-    headwaySeconds:
+    headsign:
       x-ngsi:
         type: Property
-        model: 'https://schema.org/Integer'
-      type: integer
+        model: 'https://schema.org/Text'
+      type: string
       description: ''
-      format: int32
     name:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/name
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name
     owner:
       x-ngsi:
         type: Relationship
@@ -66,12 +61,17 @@ GtfsFrequency:
             pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
           - type: string
             format: uri
-    source:
-      $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/source
-    startTime:
+    remainingDistance:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    remainingTime:
       x-ngsi:
         type: Property
         model: 'https://schema.org/Text'
       type: string
       description: ''
+    source:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source

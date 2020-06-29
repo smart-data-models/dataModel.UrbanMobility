@@ -6,19 +6,19 @@ GtfsAccessPoint:
     - location
   allOf:
     - $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
   type: object
   description: GTFS Access Point
   properties:
     address:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/address
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/address
     alternateName:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/alternateName
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/alternateName
     areaServed:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/areaServed
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/areaServed
     code:
       x-ngsi:
         type: Property
@@ -33,7 +33,7 @@ GtfsAccessPoint:
       description: ''
     description:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/description
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description
     hasParentStation:
       x-ngsi:
         type: Property
@@ -43,10 +43,10 @@ GtfsAccessPoint:
       format: uri
     location:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/location
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/location
     name:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/name
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name
     owner:
       x-ngsi:
         type: Relationship
@@ -70,7 +70,7 @@ GtfsAccessPoint:
       format: uri
     source:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/source
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source
     wheelChairAccessible:
       x-ngsi:
         type: Property

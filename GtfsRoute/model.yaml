@@ -1,4 +1,4 @@
-GtfsService:
+GtfsRoute:
   required:
     - id
     - type
@@ -6,13 +6,16 @@ GtfsService:
     - operatedBy
   allOf:
     - $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
   type: object
-  description: GTFS Service
+  description: GTFS Route
   properties:
     alternateName:
-      $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/alternateName
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
     dataProvider:
       x-ngsi:
         type: Property
@@ -21,10 +24,10 @@ GtfsService:
       description: ''
     description:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/description
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description
     name:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/name
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name
     operatedBy:
       x-ngsi:
         type: Property
@@ -47,5 +50,8 @@ GtfsService:
           - type: string
             format: uri
     source:
-      $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/source
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''

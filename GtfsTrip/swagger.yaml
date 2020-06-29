@@ -2,7 +2,7 @@
 components: 
   schemas: 
     GtfsTrip: 
-      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/GtfsTrip/schema.yaml#/GtfsTrip"
+      $ref: "https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsTrip/model.yaml#/GtfsTrip"
 info: 
   description: "GTFS Trip"
   title: GtfsTrip
@@ -33,12 +33,12 @@ paths:
                   summary: "Key-Values Pairs"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/GtfsTrip/example.json"
+                      $ref: "https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsTrip/example.json"
                 normalized: 
                   summary: "Normalized NGSI-LD"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/GtfsTrip/example-normalized-ld.jsonld"
+                      $ref: "https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsTrip/example-normalized-ld.jsonld"
           description: OK
       tags: 
         - ngsi-ld

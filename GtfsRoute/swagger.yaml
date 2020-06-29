@@ -2,7 +2,7 @@
 components: 
   schemas: 
     GtfsRoute: 
-      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/GtfsRoute/schema.yaml#/GtfsRoute"
+      $ref: "https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsRoute/model.yaml#/GtfsRoute"
 info: 
   description: "GTFS GtfsRoute"
   title: GtfsFrequency
@@ -33,12 +33,12 @@ paths:
                   summary: "Key-Values Pairs"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/GtfsRoute/example.json"
+                      $ref: "https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsRoute/example.json"
                 normalized: 
                   summary: "Normalized NGSI-LD"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/GtfsRoute/example-normalized-ld.jsonld"
+                      $ref: "https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsRoute/example-normalized-ld.jsonld"
           description: OK
       tags: 
         - ngsi-ld

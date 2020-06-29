@@ -2,7 +2,7 @@
 components: 
   schemas: 
     ArrivalEstimation: 
-      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/ArrivalEstimation/schema.yaml#/ArrivalEstimation"
+      $ref: "https://smart-data-models.github.io/dataModel.UrbanMobility/ArrivalEstimation/model.yaml#/ArrivalEstimation"
 info: 
   description: "Arrival Estimation"
   title: ArrivalEstimation
@@ -33,12 +33,12 @@ paths:
                   summary: "Key-Values Pairs"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/ArrivalEstimation/example.json"
+                      $ref: "https://smart-data-models.github.io/dataModel.UrbanMobility/ArrivalEstimation/example.json"
                 normalized: 
                   summary: "Normalized NGSI-LD"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/ArrivalEstimation/example-normalized-ld.jsonld"
+                      $ref: "https://smart-data-models.github.io/dataModel.UrbanMobility/ArrivalEstimation/example-normalized-ld.jsonld"
           description: OK
       tags: 
         - ngsi-ld
