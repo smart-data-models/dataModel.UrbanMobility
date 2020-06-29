@@ -33,12 +33,12 @@ paths:
                   summary: "Key-Values Pairs"
                   value: 
                     - 
-                      $ref: "https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsFrequency/example.json"
+                      $ref: "https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsFrequency/examples/example.json"
                 normalized: 
                   summary: "Normalized NGSI-LD"
                   value: 
                     - 
-                      $ref: "https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsFrequency/example-normalized-ld.jsonld"
+                      $ref: "https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsFrequency/examples/example-normalized-ld.jsonld"
           description: OK
       tags: 
         - ngsi-ld

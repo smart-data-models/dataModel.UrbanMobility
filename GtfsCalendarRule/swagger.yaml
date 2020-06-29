@@ -33,12 +33,12 @@ paths:
                   summary: "Key-Values Pairs"
                   value: 
                     - 
-                      $ref: "https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsCalendarRule/example.json"
+                      $ref: "https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsCalendarRule/examples/example.json"
                 normalized: 
                   summary: "Normalized NGSI-LD"
                   value: 
                     - 
-                      $ref: "https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsCalendarRule/example-normalized-ld.jsonld"
+                      $ref: "https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsCalendarRule/examples/example-normalized-ld.jsonld"
           description: OK
       tags: 
         - ngsi-ld

@@ -33,12 +33,12 @@ paths:
                   summary: "Key-Values Pairs"
                   value: 
                     - 
-                      $ref: "https://smart-data-models.github.io/dataModel.UrbanMobility/PublicTransportStop/example.json"
+                      $ref: "https://smart-data-models.github.io/dataModel.UrbanMobility/PublicTransportStop/examples/example.json"
                 normalized: 
                   summary: "Normalized NGSI-LD"
                   value: 
                     - 
-                      $ref: "https://smart-data-models.github.io/dataModel.UrbanMobility/PublicTransportStop/example-normalized.json"
+                      $ref: "https://smart-data-models.github.io/dataModel.UrbanMobility/PublicTransportStop/examples/example-normalized.json"
           description: OK
       tags: 
         - ngsi-ld
