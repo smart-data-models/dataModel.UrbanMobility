@@ -1,12 +1,12 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "https://gitlab.com/synchronicity-iot/synchronicity-data-models/raw/master/UrbanMobility/PublicTransportRoute/schema.json",
+  "$id": "https://smart-data-models.github.io/dataModel.UrbanMobility/PublicTransportRoute/schema.json",
   "title": "SynchroniCity - Urban mobility PublicTransportRoute schema",
   "description": "A generic public transport route",
   "type": "object",
   "allOf": [
-    { "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/GSMA-Commons" },
-    { "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/Location-Commons" },
+    { "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons" },
+    { "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons" },
     {
       "properties": {
         "type": {
