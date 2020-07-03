@@ -43,8 +43,5 @@ GtfsRoute:
       $ref: >-
         https://smart-data-models.github.io/data-models/fiware-terms.yaml#/owner
     source:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source

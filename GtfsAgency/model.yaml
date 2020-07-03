@@ -54,12 +54,8 @@ GtfsAgency:
       type: string
       description: ''
     source:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/URL'
-      type: string
-      description: ''
-      format: uri
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source
     timezone:
       x-ngsi:
         type: Property
