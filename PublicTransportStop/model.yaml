@@ -24,11 +24,8 @@ PublicTransportStop:
       $ref: >-
         https://smart-data-models.github.io/data-models/schema.org.yaml#/areaServed
     dataProvider:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/dataProvider
     description:
       $ref: >-
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description
@@ -74,7 +71,7 @@ PublicTransportStop:
       format: int32
     refPeopleCountDevice:
       x-ngsi:
-        type: Property
+        type: Relationship
         model: 'https://schema.org/URL'
       type: string
       description: ''

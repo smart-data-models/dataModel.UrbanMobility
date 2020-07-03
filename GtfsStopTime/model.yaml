@@ -27,11 +27,8 @@ GtfsStopTime:
       type: string
       description: ''
     dataProvider:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/dataProvider
     departureTime:
       x-ngsi:
         type: Property
