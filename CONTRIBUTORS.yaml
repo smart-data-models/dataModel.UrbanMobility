@@ -1,0 +1,72 @@
+description: This is a compilation list of all CONTRIBUTORS across different objects (data models) alphabetically ordered. All fields are non mandatory
+contributors:
+-
+ name: Choque,
+ surname:  Johnny
+ mail:  [email](mailto:jchoque@tlmat.unican.es)
+ organization:  [University of Cantabria](https://web.unican.es/) for the [SynchroniCity](https://synchronicity-iot.eu/) project
+ project: 
+ comments: 
+-
+ name: Diez,
+ surname:  Luis
+ mail:  [email](mailto:ldiez@tlmat.unican.es)
+ organization:  [University of Cantabria](https://web.unican.es/) for the [SynchroniCity](https://synchronicity-iot.eu/) project
+ project: 
+ comments: 
+-
+ name: Dmitrii
+ surname:  Demin
+ mail: mail@demin.co
+ organization: None
+ project: 
+ comments: 
+-
+ name: Jason
+ surname:  Fox
+ mail: None
+ organization: @Fiware
+ project: 
+ comments: 
+-
+ name: Jose M.
+ surname:  Cantera
+ mail: jmcanterafonseca4github@gmail.com
+ organization: CanteraFonseca.EU
+ project: 
+ comments: 
+-
+ name: Joud
+ surname: 
+ mail: None
+ organization: None
+ project: 
+ comments: 
+-
+ name: Kazuhito
+ surname:  Suda
+ mail: None
+ organization: None
+ project: 
+ comments: 
+-
+ name: Luis
+ surname:  Muñoz
+ mail:  [email](mailto:luis@tlmat.unican.es)
+ organization:  [University of Cantabria](https://web.unican.es/) for the [SmartSantander](http://www.smartsantander.eu/) project
+ project: 
+ comments: 
+-
+ name: Santana, Juan
+ surname:  Ramón
+ mail:  [email](mailto:jrsantana@tlmat.unican.es)
+ organization:  [University of Cantabria](https://web.unican.es/) for the [FESTIVAL](http://www.festival-project.eu/) and [SmartSantander](http://www.smartsantander.eu/) projects
+ project: 
+ comments: 
+-
+ name: Sotres,
+ surname:  Pablo
+ mail:  [email](mailto:psotres@tlmat.unican.es)
+ organization:  [University of Cantabria](https://web.unican.es/) for the [WISE IoT](http://wise-iot.eu/en/home/) and [SmartSantander](http://www.smartsantander.eu/) projects 
+ project: 
+ comments: 
