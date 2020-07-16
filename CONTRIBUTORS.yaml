@@ -1,11 +1,25 @@
 description: This is a compilation list of all CONTRIBUTORS across different objects (data models) alphabetically ordered. All fields are non mandatory
 contributors:
 -
+ name: Jose M.
+ surname: Cantera
+ mail: jmcanterafonseca4github@gmail.com
+ organization: CanteraFonseca.EU
+ project: 
+ comments: 
+-
  name: Johnny
  surname: Choque
  mail: mailto:jchoque@tlmat.unican.es
  organization: University of Cantabria. https://web.unican.es/
  project: SynchroniCity project. https://synchronicity-iot.eu/
+ comments: 
+-
+ name: Dmitrii
+ surname: Demin
+ mail: mail@demin.co
+ organization:
+ project: 
  comments: 
 -
  name: Luis
@@ -15,38 +29,10 @@ contributors:
  project: SynchroniCity project. https://synchronicity-iot.eu/
  comments: 
 -
- name: Dmitrii
- surname: Demin
- mail: mail@demin.co
- organization: None
- project: 
- comments: 
--
  name: Jason
- surname:  Fox
- mail: None
+ surname: Fox
+ mail:
  organization: Fiware
- project: 
- comments: 
--
- name: Jose M.
- surname: Cantera
- mail: jmcanterafonseca4github@gmail.com
- organization: CanteraFonseca.EU
- project: 
- comments: 
--
- name: Joud
- surname: Sayed Issa
- mail: joudsayedissa@gmail.com
- organization: None
- project: 
- comments: 
--
- name: Kazuhito
- surname: Suda
- mail: None
- organization: None
  project: 
  comments: 
 -
@@ -57,11 +43,18 @@ contributors:
  project: SmartSantander. http://www.smartsantander.eu/
  comments: 
 -
- name: Juan  Ramón
+ name: Juan Ramón
  surname: Santana 
  mail: jrsantana@tlmat.unican.es
  organization: University of Cantabria. https://web.unican.es/ 
  project: FESTIVAL. http://www.festival-project.eu/, SmartSantander. http://www.smartsantander.eu/
+ comments: 
+-
+ name: Joud
+ surname: Sayed Issa
+ mail: joudsayedissa@gmail.com
+ organization:
+ project: 
  comments: 
 -
  name: Pablo
@@ -69,4 +62,11 @@ contributors:
  mail: psotres@tlmat.unican.es
  organization:  [University of Cantabria](https://web.unican.es/) 
  project: WISE IoT. http://wise-iot.eu/en/home/, SmartSantander. http://www.smartsantander.eu/
- comments: 
+ comments:
+-
+ name: Kazuhito
+ surname: Suda
+ mail:
+ organization:
+ project: 
+ comments:
