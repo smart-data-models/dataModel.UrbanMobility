@@ -1,22 +1,22 @@
 description: This is a compilation list of all CONTRIBUTORS across different objects (data models) alphabetically ordered. All fields are non mandatory
 contributors:
 -
- name: Choque,
- surname:  Johnny
- mail:  [email](mailto:jchoque@tlmat.unican.es)
- organization:  [University of Cantabria](https://web.unican.es/) for the [SynchroniCity](https://synchronicity-iot.eu/) project
- project: 
+ name: Johnny
+ surname: Choque
+ mail: mailto:jchoque@tlmat.unican.es
+ organization: University of Cantabria. https://web.unican.es/
+ project: SynchroniCity project. https://synchronicity-iot.eu/
  comments: 
 -
- name: Diez,
- surname:  Luis
- mail:  [email](mailto:ldiez@tlmat.unican.es)
- organization:  [University of Cantabria](https://web.unican.es/) for the [SynchroniCity](https://synchronicity-iot.eu/) project
- project: 
+ name: Luis
+ surname: Díez
+ mail: mailto:ldiez@tlmat.unican.es
+ organization: University of Cantabria. https://web.unican.es/
+ project: SynchroniCity project. https://synchronicity-iot.eu/
  comments: 
 -
  name: Dmitrii
- surname:  Demin
+ surname: Demin
  mail: mail@demin.co
  organization: None
  project: 
@@ -25,48 +25,48 @@ contributors:
  name: Jason
  surname:  Fox
  mail: None
- organization: @Fiware
+ organization: Fiware
  project: 
  comments: 
 -
  name: Jose M.
- surname:  Cantera
+ surname: Cantera
  mail: jmcanterafonseca4github@gmail.com
  organization: CanteraFonseca.EU
  project: 
  comments: 
 -
  name: Joud
- surname: 
- mail: None
+ surname: Sayed Issa
+ mail: joudsayedissa@gmail.com
  organization: None
  project: 
  comments: 
 -
  name: Kazuhito
- surname:  Suda
+ surname: Suda
  mail: None
  organization: None
  project: 
  comments: 
 -
  name: Luis
- surname:  Muñoz
- mail:  [email](mailto:luis@tlmat.unican.es)
- organization:  [University of Cantabria](https://web.unican.es/) for the [SmartSantander](http://www.smartsantander.eu/) project
- project: 
+ surname: Muñoz
+ mail: luis@tlmat.unican.es
+ organization: University of Cantabria. https://web.unican.es/ 
+ project: SmartSantander. http://www.smartsantander.eu/
  comments: 
 -
- name: Santana, Juan
- surname:  Ramón
- mail:  [email](mailto:jrsantana@tlmat.unican.es)
- organization:  [University of Cantabria](https://web.unican.es/) for the [FESTIVAL](http://www.festival-project.eu/) and [SmartSantander](http://www.smartsantander.eu/) projects
- project: 
+ name: Juan  Ramón
+ surname: Santana 
+ mail: jrsantana@tlmat.unican.es
+ organization: University of Cantabria. https://web.unican.es/ 
+ project: FESTIVAL. http://www.festival-project.eu/, SmartSantander. http://www.smartsantander.eu/
  comments: 
 -
- name: Sotres,
- surname:  Pablo
- mail:  [email](mailto:psotres@tlmat.unican.es)
- organization:  [University of Cantabria](https://web.unican.es/) for the [WISE IoT](http://wise-iot.eu/en/home/) and [SmartSantander](http://www.smartsantander.eu/) projects 
- project: 
+ name: Pablo
+ surname: Sotres
+ mail: psotres@tlmat.unican.es
+ organization:  [University of Cantabria](https://web.unican.es/) 
+ project: WISE IoT. http://wise-iot.eu/en/home/, SmartSantander. http://www.smartsantander.eu/
  comments: 
