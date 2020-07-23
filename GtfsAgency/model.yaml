@@ -31,7 +31,7 @@ GtfsAgency:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'Same as GTFS agency_language.'
     name:
       $ref: >-
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name
@@ -43,13 +43,13 @@ GtfsAgency:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'Same as GTFS agency_url.'
     phone:
       x-ngsi:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'Same as GFTS agency_phone.'
     source:
       $ref: >-
         https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source
@@ -58,4 +58,4 @@ GtfsAgency:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'Same as GTFS agency_timezone.'
