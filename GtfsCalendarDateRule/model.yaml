@@ -23,7 +23,7 @@ GtfsCalendarDateRule:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'Date (in YYYY-MM-DD format) this rule applies to. It shall be obtained from the GTFS date field.'
       format: date
     dataProvider:
       $ref: >-
@@ -36,13 +36,13 @@ GtfsCalendarDateRule:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'Same as GTFS exception_type field. Allowed values: ("1", "2")'
     hasService:
       x-ngsi:
         type: Property
         model: 'https://schema.org/URL'
       type: string
-      description: ''
+      description: 'Service to which this rule applies to. Derived from service_id.'
       format: uri
     name:
       $ref: >-
