@@ -30,21 +30,21 @@ ArrivalEstimation:
         type: Property
         model: 'https://schema.org/URL'
       type: string
-      description: ''
+      description: 'Stop to which this estimation applies to.'
       format: uri
     hasTrip:
       x-ngsi:
         type: Property
         model: 'https://schema.org/URL'
       type: string
-      description: ''
+      description: 'The trip to which this estimation applies to.'
       format: uri
     headsign:
       x-ngsi:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'It shall contain the text that appears on a sign that identifies the trip's destination to passengers.'
     name:
       $ref: >-
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name
@@ -55,13 +55,13 @@ ArrivalEstimation:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: 'It shall contain the remaining distance (in meters) of arrival for the trip heading to the concerned stop.'
     remainingTime:
       x-ngsi:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'It shall contain the remaining time of arrival for the trip heading to the concerned stop.'
     source:
       $ref: >-
         https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source
