@@ -36,47 +36,36 @@ GtfsCalendarRule:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'End date of this rule in YYYY-MM-DD format. It can be obtained from the field end_date of calendar.txt .'
       format: date
     friday:
       x-ngsi:
         type: Property
       type: boolean
-      description: ''
+      description: 'Same as GTFS friday'
     hasService:
       x-ngsi:
         type: Property
         model: 'https://schema.org/URL'
       type: string
-      description: ''
+      description: 'Service to which this rule applies to. Derived from service_id.'
       format: uri
     monday:
       x-ngsi:
         type: Property
       type: boolean
-      description: ''
+      description: 'Same as GTFS monday'
     name:
       $ref: >-
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name
     owner:
-      x-ngsi:
-        type: Relationship
-        model: https://schema.org/URL  
-      type: array
-      description: ''
-      items:
-        anyOf:
-          - type: string
-            minLength: 1
-            maxLength: 256
-            pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
-          - type: string
-            format: uri
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/owner
     saturday:
       x-ngsi:
         type: Property
       type: boolean
-      description: ''
+      description: 'Same as GTFS saturday'
     source:
       $ref: >-
         https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source
@@ -85,25 +74,25 @@ GtfsCalendarRule:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'Start date of this rule in YYYY-MM-DD format. It can be obtained from the field start_date of calendar.txt.'
       format: date
     sunday:
       x-ngsi:
         type: Property
       type: boolean
-      description: ''
+      description: 'Same as GTFS sunday'
     thursday:
       x-ngsi:
         type: Property
       type: boolean
-      description: ''
+      description: 'Same as GTFS thursday'
     tuesday:
       x-ngsi:
         type: Property
       type: boolean
-      description: ''
+      description: 'Same as GTFS tuesday'
     wednesday:
       x-ngsi:
         type: Property
       type: boolean
-      description: ''
+      description: 'Same as GTFS wednesday'
