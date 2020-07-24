@@ -31,7 +31,7 @@ GtfsService:
         type: Property
         model: 'https://schema.org/URL'
       type: string
-      description: ''
+      description: 'Agency that operates this service.'
       format: uri
     owner:
       $ref: >-

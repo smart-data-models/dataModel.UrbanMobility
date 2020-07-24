@@ -29,21 +29,21 @@ GtfsTransferRule:
         type: Property
         model: 'https://schema.org/URL'
       type: string
-      description: ''
+      description: 'Trip associated to this Entity.'
       format: uri
     hasOrigin:
       x-ngsi:
         type: Property
         model: 'https://schema.org/URL'
       type: string
-      description: ''
+      description: 'Trip associated to this Entity.'
       format: uri
     minimumTransferTime:
       x-ngsi:
         type: Property
         model: 'https://schema.org/Integer'
       type: integer
-      description: ''
+      description: 'Same as GTFS min_transfer_time.'
       format: int32
     name:
       $ref: >-
@@ -59,4 +59,4 @@ GtfsTransferRule:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'Same as GTFS transfer_type.'

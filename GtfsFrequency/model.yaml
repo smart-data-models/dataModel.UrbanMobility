@@ -30,25 +30,25 @@ GtfsFrequency:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: ' Same as GTFS end_time. See format.'
     exactTimes:
       x-ngsi:
         type: Property
       type: boolean
-      description: ''
+      description: 'Same as GTFS exact_times but encoded as a Boolean: false: Frequency-based trips are not exactly scheduled. true: Frequency-based trips are exactly scheduled.'
     hasTrip:
       x-ngsi:
         type: Property
         model: 'https://schema.org/URL'
       type: string
-      description: ''
+      description: 'Trip associated to this Entity.'
       format: uri
     headwaySeconds:
       x-ngsi:
         type: Property
         model: 'https://schema.org/Integer'
       type: integer
-      description: ''
+      description: 'Same as GTFS headway_secs.'
       format: int32
     name:
       $ref: >-
@@ -64,4 +64,4 @@ GtfsFrequency:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'Same as GTFS start_time. See format.'
