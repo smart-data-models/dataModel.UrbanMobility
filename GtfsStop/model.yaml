@@ -28,7 +28,7 @@ GtfsStop:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'Same as GTFS stop_code.'
     dataProvider:
       $ref: >-
         https://smart-data-models.github.io/data-models/fiware-terms.yaml#/dataProvider
@@ -40,7 +40,7 @@ GtfsStop:
         type: Property
         model: 'https://schema.org/URL'
       type: string
-      description: ''
+      description: 'Same as GTFS parent_station.'
       format: uri
     location:
       $ref: >-
@@ -52,7 +52,7 @@ GtfsStop:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: 'Agency that operates this stop.'
       items: &ref_0
         anyOf:
           - type: string
@@ -69,7 +69,7 @@ GtfsStop:
         type: Property
         model: 'https://schema.org/URL'
       type: string
-      description: ''
+      description: 'Same as GTFS stop_url.'
       format: uri
     source:
       $ref: >-
@@ -79,10 +79,10 @@ GtfsStop:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'Same as GTFS wheelchair_boarding.'
     zoneCode:
       x-ngsi:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'Transport zone to which this stop belongs to. Same as GTFS zone_id.'
