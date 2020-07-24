@@ -31,7 +31,7 @@ GtfsRoute:
         type: Property
         model: 'https://schema.org/URL'
       type: string
-      description: ''
+      description: 'Agency that operates this route.'
       format: uri
     owner:
       $ref: >-

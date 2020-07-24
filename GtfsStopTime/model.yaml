@@ -25,7 +25,7 @@ GtfsStopTime:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'Same as GTFS arrival_time'
     dataProvider:
       $ref: >-
         https://smart-data-models.github.io/data-models/fiware-terms.yaml#/dataProvider
@@ -34,7 +34,7 @@ GtfsStopTime:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'Same as GTFS departure_time'
     description:
       $ref: >-
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description
@@ -42,7 +42,7 @@ GtfsStopTime:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: 'Same as GTFS shape_dist_traveled.'
     dropOffType:
       x-ngsi:
         type: Property
@@ -54,14 +54,14 @@ GtfsStopTime:
         type: Property
         model: 'https://schema.org/URL'
       type: string
-      description: ''
+      description: 'Same as GTFS stop_id'
       format: uri
     hasTrip:
       x-ngsi:
         type: Property
         model: 'https://schema.org/URL'
       type: string
-      description: ''
+      description: 'Same as GTFS trip_id.'
       format: uri
     name:
       $ref: >-
@@ -74,7 +74,7 @@ GtfsStopTime:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: ' Same as GTFS pickup_type.'
     source:
       $ref: >-
         https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source
@@ -83,17 +83,17 @@ GtfsStopTime:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'Same as GTFS stop_headsign'
     stopSequence:
       x-ngsi:
         type: Property
         model: 'https://schema.org/Integer'
       type: integer
-      description: ''
+      description: 'Same as GTFS stop_sequence'
       format: int32
     timepoint:
       x-ngsi:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'Same as GTFS timepoint.'

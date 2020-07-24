@@ -40,7 +40,7 @@ GtfsStation:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: 'It shall point to another Entity(ies) of type GtfsAccessPoint'
       items:
         type: string
         format: uri
@@ -55,7 +55,7 @@ GtfsStation:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: ' It shall point to another Entity(ies) of type GtfsStop'
       items:
         type: string
         format: uri

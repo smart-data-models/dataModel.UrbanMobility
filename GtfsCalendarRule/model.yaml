@@ -36,7 +36,10 @@ GtfsCalendarRule:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: 'End date of this rule in YYYY-MM-DD format. It can be obtained from the field end_date of calendar.txt .'
+      description: |
+        End date of this rule in `YYYY-MM-DD` format. It can be obtained
+        from the field `end_date` of
+        [calendar.txt](https://developers.google.com/transit/gtfs/reference/#calendartxt)
       format: date
     friday:
       x-ngsi:
