@@ -44,7 +44,7 @@ ArrivalEstimation:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: 'It shall contain the text that appears on a sign that identifies the trip's destination to passengers.'
+      description: 'It shall contain the text that appears on a sign that identifies the trip s destination to passengers.'
     name:
       $ref: >-
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name
