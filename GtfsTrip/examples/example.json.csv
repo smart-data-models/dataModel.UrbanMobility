@@ -1,0 +1,2 @@
+"id_", "type_", "hasService_", "headSign_", "direction_", "hasRoute_", "hasShape_"
+"urn:ngsi-ld:GtfsTrip:Spain:Malaga:1", "GtfsTrip", "urn:ngsi-ld:GtfsService:Malaga_LAB", "San Andrés", "0", "urn:ngsi-ld:GtfsRoute:Spain:Malaga:1", "urn:ngsi-ld:GtfsShape:Shape01"
