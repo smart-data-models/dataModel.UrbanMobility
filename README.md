@@ -27,7 +27,7 @@ entities are:
 This document provides guidelines on how to map GTFS feeds into FIWARE NGSI
 content. This work leverages on
 [LinkedGTFS specification](https://github.com/OpenTransport/linked-gtfs/blob/master/spec.md).
-Whenever possible the NGSI attributes map directly to GTFS fields. Nonethless
+Whenever possible the NGSI attributes map directly to GTFS fields. Nonetheless
 for some Entity Types extra attributes are suggested in order to better support
 the data model using the NGSI information model.
 
