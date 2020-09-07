@@ -1,19 +1,19 @@
 {
   "$schema": "http://json-schema.org/schema#",
   "$schemaVersion": "0.0",
-  "$id": "https://fiware.github.io/data-models/specs/UrbanMobility/GtfsStation/schema.json",
-  "title": "NGSI GTFS Schema - Station",
+  "$id": "https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsStation/schema.json",
+  "title": "Smart Data Models. GTFS Schema - Station",
   "description": "GTFS Station",
   "type": "object",
   "allOf": [
     {
-      "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
     },
     {
-      "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
     },
     {
-      "$ref": "https://fiware.github.io/data-models/specs/UrbanMobility/gtfs-schema.json#/definitions/GTFS-Stop-Commons"
+      "$ref": "https://smart-data-models.github.io/dataModel.UrbanMobility/gtfs-schema.json#/definitions/GTFS-Stop-Commons"
     },
     {
       "properties": {

@@ -1,0 +1,115 @@
+---
+# Copyright (c) 2020 Contributors to Smart-Data-Models
+# see https://github.com/smart-data-models/dataModel.UrbanMobility
+
+PublicTransportRoute:
+  required:
+    - id
+    - type
+    - transportationType
+  allOf:
+    - $ref: >-
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
+  type: object
+  description: A generic public transport route
+  properties:
+    address:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/address
+    alternateName:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/alternateName
+    areaServed:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/areaServed
+    dataProvider:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/dataProvider
+    description:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description
+    location:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/location
+    name:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name
+    owner:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/owner
+    routeCode:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    routeColor:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    routeSegments:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items:
+        type: object
+        properties:
+          segmentName:
+            type: string
+          refPublicTransportStops:
+            type: array
+            items:
+              type: string
+              format: uri
+        required:
+          - segmentName
+          - refPublicTransportStops
+    routeTextColor:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    schedule:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items:
+        properties:
+          opens:
+            type: string
+            pattern: '[0-9]{2}:[0-9]{2}'
+          closes:
+            type: string
+            pattern: '[0-9]{2}:[0-9]{2}'
+          dayOfWeek:
+            type: string
+            enum:
+              - Friday
+              - Monday
+              - PublicHolidays
+              - Saturday
+              - Sunday
+              - Thursday
+              - Tuesday
+              - Wednesday
+    shortRouteCode:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    source:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source
+    transportationType:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Integer'
+      type: integer
+      description: ''
+      format: int32

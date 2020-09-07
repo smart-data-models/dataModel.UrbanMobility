@@ -1,0 +1,67 @@
+---
+# Copyright (c) 2020 Contributors to Smart-Data-Models
+# see https://github.com/smart-data-models/dataModel.UrbanMobility
+
+GtfsFrequency:
+  required:
+    - id
+    - type
+    - hasTrip
+    - startTime
+    - endTime
+    - headwaySeconds
+  allOf:
+    - $ref: >-
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
+  type: object
+  description: GTFS Frequency
+  properties:
+    alternateName:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/alternateName
+    dataProvider:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/dataProvider
+    description:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description
+    endTime:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ' Same as GTFS end_time. See format.'
+    exactTimes:
+      x-ngsi:
+        type: Property
+      type: boolean
+      description: 'Same as GTFS exact_times but encoded as a Boolean: false: Frequency-based trips are not exactly scheduled. true: Frequency-based trips are exactly scheduled.'
+    hasTrip:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/URL'
+      type: string
+      description: 'Trip associated to this Entity.'
+      format: uri
+    headwaySeconds:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Integer'
+      type: integer
+      description: 'Same as GTFS headway_secs.'
+      format: int32
+    name:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name
+    owner:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/owner
+    source:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source
+    startTime:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: 'Same as GTFS start_time. See format.'

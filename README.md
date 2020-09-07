@@ -11,18 +11,18 @@ data in an interoperable way.
 These data models are intended to map GTFS feeds into FIWARE NGSI content. Main
 entities are:
 
--   [GtfsAgency](./GtfsAgency/doc/spec.md)
--   [GtfsStop](./GtfsStop/doc/spec.md)
--   [GtfsStation](./GtfsStation/doc/spec.md)
--   [GtfsAccessPoint](./GtfsAccessPoint/doc/spec.md)
--   [GtfsRoute](./GtfsRoute/doc/spec.md)
--   [GtfsTrip](./GtfsTrip/doc/spec.md)
--   [GtfsStopTime](./GtfsStopTime/doc/spec.md)
--   [GtfsService](./GtfsService/doc/spec.md)
--   [GtfsCalendarRule](./GtfsCalendarRule/doc/spec.md)
--   [GtfsCalendarDateRule](./GtfsCalendarDateRule/doc/spec.md)
--   [GtfsFrequency](./GtfsFrequency/doc/spec.md)
--   [GtfsTransferRule](./GtfsTransferRule/doc/spec.md)
+-   [`GtfsAgency`](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsAgency/swagger.yaml)
+-   [`GtfsStop`](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsStop/swagger.yaml)
+-   [`GtfsStation`](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsStation/swagger.yaml)
+-   [`GtfsAccessPoint`](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsAccessPoint/swagger.yaml)
+-   [`GtfsRoute`](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsRoute/swagger.yaml)
+-   [`GtfsTrip`](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsTrip/swagger.yaml)
+-   [`GtfsStopTime`](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsStopTime/swagger.yaml)
+-   [`GtfsService`](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsService/swagger.yaml)
+-   [`GtfsCalendarRule`](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsCalendarRule/swagger.yaml)
+-   [`GtfsCalendarDateRule`](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsCalendarDateRule/swagger.yaml)
+-   [`GtfsFrequency`](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsFrequency/swagger.yaml)
+-   [`GtfsTransferRule`](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsTransferRule/swagger.yaml)
 
 This document provides guidelines on how to map GTFS feeds into FIWARE NGSI
 content. This work leverages on

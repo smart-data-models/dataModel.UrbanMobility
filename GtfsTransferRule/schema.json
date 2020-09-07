@@ -1,13 +1,13 @@
 {
   "$schema": "http://json-schema.org/schema#",
   "$schemaVersion": "0.0",
-  "$id": "https://fiware.github.io/data-models/specs/UrbanMobility/GtfsTransferRule/schema.json",
-  "title": "NGSI GTFS Schema - TransferRule",
+  "$id": "https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsTransferRule/schema.json",
+  "title": "Smart Data Models. GTFS Schema - TransferRule",
   "description": "GTFS Transfer Rule",
   "type": "object",
   "allOf": [
     {
-      "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
     },
     {
       "properties": {

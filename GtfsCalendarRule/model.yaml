@@ -1,0 +1,101 @@
+---
+# Copyright (c) 2020 Contributors to Smart-Data-Models
+# see https://github.com/smart-data-models/dataModel.UrbanMobility
+
+GtfsCalendarRule:
+  required:
+    - id
+    - type
+    - hasService
+    - monday
+    - tuesday
+    - wednesday
+    - thursday
+    - friday
+    - saturday
+    - sunday
+    - startDate
+    - endDate
+  allOf:
+    - $ref: >-
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
+  type: object
+  description: GTFS Calendar Rule
+  properties:
+    alternateName:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/alternateName
+    dataProvider:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/dataProvider
+    description:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description
+    endDate:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: |
+        End date of this rule in `YYYY-MM-DD` format. It can be obtained
+        from the field `end_date` of
+        [calendar.txt](https://developers.google.com/transit/gtfs/reference/#calendartxt)
+      format: date
+    friday:
+      x-ngsi:
+        type: Property
+      type: boolean
+      description: 'Same as GTFS friday'
+    hasService:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/URL'
+      type: string
+      description: 'Service to which this rule applies to. Derived from service_id.'
+      format: uri
+    monday:
+      x-ngsi:
+        type: Property
+      type: boolean
+      description: 'Same as GTFS monday'
+    name:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name
+    owner:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/owner
+    saturday:
+      x-ngsi:
+        type: Property
+      type: boolean
+      description: 'Same as GTFS saturday'
+    source:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source
+    startDate:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: 'Start date of this rule in YYYY-MM-DD format. It can be obtained from the field start_date of calendar.txt.'
+      format: date
+    sunday:
+      x-ngsi:
+        type: Property
+      type: boolean
+      description: 'Same as GTFS sunday'
+    thursday:
+      x-ngsi:
+        type: Property
+      type: boolean
+      description: 'Same as GTFS thursday'
+    tuesday:
+      x-ngsi:
+        type: Property
+      type: boolean
+      description: 'Same as GTFS tuesday'
+    wednesday:
+      x-ngsi:
+        type: Property
+      type: boolean
+      description: 'Same as GTFS wednesday'

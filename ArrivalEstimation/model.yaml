@@ -1,0 +1,67 @@
+---
+# Copyright (c) 2020 Contributors to Smart-Data-Models
+# see https://github.com/smart-data-models/dataModel.UrbanMobility
+
+ArrivalEstimation:
+  required:
+    - id
+    - type
+    - hasStop
+    - hasTrip
+    - remainingTime
+    - headSign
+  allOf:
+    - $ref: >-
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
+  type: object
+  description: Arrival Estimation
+  properties:
+    alternateName:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/alternateName
+    dataProvider:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/dataProvider
+    description:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description
+    hasStop:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/URL'
+      type: string
+      description: 'Stop to which this estimation applies to.'
+      format: uri
+    hasTrip:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/URL'
+      type: string
+      description: 'The trip to which this estimation applies to.'
+      format: uri
+    headsign:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: 'It shall contain the text that appears on a sign that identifies the trip s destination to passengers.'
+    name:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name
+    owner:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/owner
+    remainingDistance:
+      x-ngsi:
+        type: Property
+      type: number
+      description: 'It shall contain the remaining distance (in meters) of arrival for the trip heading to the concerned stop.'
+    remainingTime:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: 'It shall contain the remaining time of arrival for the trip heading to the concerned stop.'
+    source:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source
