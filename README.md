@@ -34,7 +34,7 @@ The following entity types are available:
 - [PublicTransportStop](https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/PublicTransportStop/README.md). A generic public transport stop
 
 
-[Link](https://smart-data-models.github.io/dataModel.UrbanMobility//CONTRIBUTORS.yaml) to the 10 current contributors of the data models of this Subject.
+[Link](https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/CONTRIBUTORS.yaml) to the 10 current contributors of the data models of this Subject.
 
 You can raise an [issue](https://github.com/smart-data-models/dataModel.UrbanMobility/issues) or submit your [PR](https://github.com/smart-data-models/dataModel.UrbanMobility/pulls) on existing data models
 
