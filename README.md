@@ -1,59 +1,57 @@
-# Urban Mobility Data Models
+# dataModel.UrbanMobility
 
-## Introduction
+The following entity types are available:
+- [ArrivalEstimation](https://smart-data-models.github.io/dataModel.UrbanMobility/ArrivalEstimation/README.md
+). Arrival Estimation
 
-The General Transit Feed Specification (GTFS), also known as GTFS static or
-static transit, defines a common format for public transportation schedules and
-associated geographic information. GTFS "feeds" let public transit agencies
-publish their transit data and developers write applications that consume that
-data in an interoperable way.
+- [GtfsAccessPoint](https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsAccessPoint/README.md
+). GTFS Access Point
 
-These data models are intended to map GTFS feeds into FIWARE NGSI content. Main
-entities are:
+- [GtfsAgency](https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsAgency/README.md
+). GTFS Agency
 
--   [`GtfsAgency`](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsAgency/swagger.yaml)
--   [`GtfsStop`](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsStop/swagger.yaml)
--   [`GtfsStation`](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsStation/swagger.yaml)
--   [`GtfsAccessPoint`](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsAccessPoint/swagger.yaml)
--   [`GtfsRoute`](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsRoute/swagger.yaml)
--   [`GtfsTrip`](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsTrip/swagger.yaml)
--   [`GtfsStopTime`](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsStopTime/swagger.yaml)
--   [`GtfsService`](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsService/swagger.yaml)
--   [`GtfsCalendarRule`](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsCalendarRule/swagger.yaml)
--   [`GtfsCalendarDateRule`](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsCalendarDateRule/swagger.yaml)
--   [`GtfsFrequency`](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsFrequency/swagger.yaml)
--   [`GtfsTransferRule`](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsTransferRule/swagger.yaml)
+- [GtfsCalendarDateRule](https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsCalendarDateRule/README.md
+). GTFS Calendar Date Rule
 
-This document provides guidelines on how to map GTFS feeds into FIWARE NGSI
-content. This work leverages on
-[LinkedGTFS specification](https://github.com/OpenTransport/linked-gtfs/blob/master/spec.md).
-Whenever possible the NGSI attributes map directly to GTFS fields. Nonetheless
-for some Entity Types extra attributes are suggested in order to better support
-the data model using the NGSI information model.
+- [GtfsCalendarRule](https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsCalendarRule/README.md
+). GTFS Calendar Rule
 
-## General rules
+- [GtfsFrequency](https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsFrequency/README.md
+). GTFS Frequency
 
-Entity Attributes (Properties or Relationships) are subject to the restrictions
-defined by the
-[GTFS specification](https://developers.google.com/transit/gtfs/reference/#term-definitions)
-If an Attribute is an enumeration its value shall be provided as per the GTFS
-specification (not LinkedGTFS).
+- [GtfsRoute](https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsRoute/README.md
+). GTFS Route
 
-## Summary of Entity mappings with GTFS
+- [GtfsService](https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsService/README.md
+). GTFS Service
 
-| GTFS Feed Member Name                                                                           | NGSI Entity Type                                                                                                                  |
-| :---------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------- |
-| [agency.txt](https://developers.google.com/transit/gtfs/reference/#agencytxt)                   | [GtfsAgency](../GtfsAgency/doc/spec.md)                                                                                           |
-| [stops.txt](https://developers.google.com/transit/gtfs/reference/#stopstxt)                     | [GtfsStop](../GtfsStop/doc/spec.md). [GtfsStation](../GtfsStation/doc/spec.md). [GtfsAccessPoint](../GtfsAccessPoint/doc/spec.md) |
-| [routes.txt](https://developers.google.com/transit/gtfs/reference/#routestxt)                   | [GtfsRoute](../GtfsRoute/doc/spec.md)                                                                                             |
-| [trips.txt](https://developers.google.com/transit/gtfs/reference/#tripstxt)                     | [GtfsTrip](../GtfsTrip/doc/spec.md). See also [GtfsService](../GtfsService/doc/spec.md)                                           |
-| [stop_times.txt](https://developers.google.com/transit/gtfs/reference/#stop_timestxt)           | [GtfsStopTime](../GtfsStopTime/doc/spec.md)                                                                                       |
-| [calendar.txt](https://developers.google.com/transit/gtfs/reference/#calendartxt)               | [GtfsCalendarRule](../GtfsCalendarRule/doc/spec.md)                                                                               |
-| [calendar_dates.txt](https://developers.google.com/transit/gtfs/reference/#calendar_datestxt)   | [GtfsCalendarDateRule](../GtfsCalendarDateRule/doc/spec.md)                                                                       |
-| [fare_attributes.txt](https://developers.google.com/transit/gtfs/reference/#fare_attributestxt) | N/A                                                                                                                               |
-| [fare_rules.txt](https://developers.google.com/transit/gtfs/reference/#fare_rulestxt)           | N/A                                                                                                                               |
-| [shapes.txt](https://developers.google.com/transit/gtfs/reference/#shapestxt)                   | See [GtfsRoute](../GtfsRoute/doc/spec.md), [GtfsTrip](../GtfsTrip/doc/spec.md)                                                    |
-| [frequencies.txt](https://developers.google.com/transit/gtfs/reference/#frequenciestxt)         | [GtfsFrequency](../GtfsFrequency/doc/spec.md)                                                                                     |
-| [transfers.txt](https://developers.google.com/transit/gtfs/reference/#transferstxt)             | [GtfsTransferRule](../GtfsTransferRule/doc/spec.md)                                                                               |
-| [feedinfo.txt](https://developers.google.com/transit/gtfs/reference/#feed_infotxt)              | N/A                                                                                                                               |
+- [GtfsShape](https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsShape/README.md
+). GTFS Shape
+
+- [GtfsStation](https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsStation/README.md
+). GTFS Station
+
+- [GtfsStop](https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsStop/README.md
+). GTFS Stop
+
+- [GtfsStopTime](https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsStopTime/README.md
+). GTFS Stop Time
+
+- [GtfsTransferRule](https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsTransferRule/README.md
+). GTFS Transfer Rule
+
+- [GtfsTrip](https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsTrip/README.md
+). GTFS Trip
+
+- [PublicTransportRoute](https://smart-data-models.github.io/dataModel.UrbanMobility/PublicTransportRoute/README.md
+). A generic public transport route
+
+- [PublicTransportStop](https://smart-data-models.github.io/dataModel.UrbanMobility/PublicTransportStop/README.md
+). A generic public transport stop
+
+
+[Link](https://smart-data-models.github.io/dataModel.UrbanMobility/CONTRIBUTORS.yaml) to the 10 current contributors of the data models of this Subject.
+
+You can raise an [issue](https://github.com/smart-data-models/dataModel.UrbanMobility/issues) or submit your [PR](https://github.com/smart-data-models/dataModel.UrbanMobility/pulls) on existing data models
+
 
