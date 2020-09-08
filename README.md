@@ -1,53 +1,37 @@
 # dataModel.UrbanMobility
 
 The following entity types are available:
-- [ArrivalEstimation](https://smart-data-models.github.io/dataModel.UrbanMobility/ArrivalEstimation/README.md
-). Arrival Estimation
+- [ArrivalEstimation](https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/ArrivalEstimation/README.md). Arrival Estimation
 
-- [GtfsAccessPoint](https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsAccessPoint/README.md
-). GTFS Access Point
+- [GtfsAccessPoint](https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/GtfsAccessPoint/README.md). GTFS Access Point
 
-- [GtfsAgency](https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsAgency/README.md
-). GTFS Agency
+- [GtfsAgency](https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/GtfsAgency/README.md). GTFS Agency
 
-- [GtfsCalendarDateRule](https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsCalendarDateRule/README.md
-). GTFS Calendar Date Rule
+- [GtfsCalendarDateRule](https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/GtfsCalendarDateRule/README.md). GTFS Calendar Date Rule
 
-- [GtfsCalendarRule](https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsCalendarRule/README.md
-). GTFS Calendar Rule
+- [GtfsCalendarRule](https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/GtfsCalendarRule/README.md). GTFS Calendar Rule
 
-- [GtfsFrequency](https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsFrequency/README.md
-). GTFS Frequency
+- [GtfsFrequency](https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/GtfsFrequency/README.md). GTFS Frequency
 
-- [GtfsRoute](https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsRoute/README.md
-). GTFS Route
+- [GtfsRoute](https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/GtfsRoute/README.md). GTFS Route
 
-- [GtfsService](https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsService/README.md
-). GTFS Service
+- [GtfsService](https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/GtfsService/README.md). GTFS Service
 
-- [GtfsShape](https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsShape/README.md
-). GTFS Shape
+- [GtfsShape](https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/GtfsShape/README.md). GTFS Shape
 
-- [GtfsStation](https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsStation/README.md
-). GTFS Station
+- [GtfsStation](https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/GtfsStation/README.md). GTFS Station
 
-- [GtfsStop](https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsStop/README.md
-). GTFS Stop
+- [GtfsStop](https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/GtfsStop/README.md). GTFS Stop
 
-- [GtfsStopTime](https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsStopTime/README.md
-). GTFS Stop Time
+- [GtfsStopTime](https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/GtfsStopTime/README.md). GTFS Stop Time
 
-- [GtfsTransferRule](https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsTransferRule/README.md
-). GTFS Transfer Rule
+- [GtfsTransferRule](https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/GtfsTransferRule/README.md). GTFS Transfer Rule
 
-- [GtfsTrip](https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsTrip/README.md
-). GTFS Trip
+- [GtfsTrip](https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/GtfsTrip/README.md). GTFS Trip
 
-- [PublicTransportRoute](https://smart-data-models.github.io/dataModel.UrbanMobility/PublicTransportRoute/README.md
-). A generic public transport route
+- [PublicTransportRoute](https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/PublicTransportRoute/README.md). A generic public transport route
 
-- [PublicTransportStop](https://smart-data-models.github.io/dataModel.UrbanMobility/PublicTransportStop/README.md
-). A generic public transport stop
+- [PublicTransportStop](https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/PublicTransportStop/README.md). A generic public transport stop
 
 
 No public contributors currently.
