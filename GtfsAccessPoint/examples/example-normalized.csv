@@ -1,2 +1,0 @@
-"id", "type", "name__value", "hasParentStation__value", "location__value__coordinates", "address__value__addressLocality", "address__value__addressCountry", "address__value__streetAddress"
-"urn:ngsi-ld:AccessPoint:Madrid:acc_4_1_3", "GtfsAccessPoint", "Bravo Murillo", "urn:ngsi-ld:GtfsStation:Madrid:est_90_21", "[-3.69036, 40.46629]", "Madrid", "ES", "Calle de Bravo Murillo 377"

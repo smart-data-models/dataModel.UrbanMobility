@@ -1,2 +1,0 @@
-"id", "type", "code", "name", "location__coordinates", "address__streetAddress", "address__addressLocality", "address__addressCountry", "hasStop"
-"urn:ngsi-ld:GtfsStation:Madrid:est_90_21", "GtfsStation", "21", "Intercambiador de Plaza de Castilla", "[-3.6892, 40.4669]", "Paseo de la Castellana 189", "Madrid", "ES", "['urn:ngsi-ld:GtfsStop:Madrid_par_4_1']"

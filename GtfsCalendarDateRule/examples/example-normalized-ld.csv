@@ -1,2 +1,0 @@
-"id", "type", "name__value", "exceptionType__value", "hasService__object", "appliesOn__value", "@context"
-"urn:ngsi-ld:CalendarDateRule:Malaga:Rule67", "GtfsCalendarDateRule", "Rule Fair Area", "1", "urn:ngsi-ld:GtfsService:Malaga:FairArea_1", "2018-03-19", "['https://schema.lab.fiware.org/ld/context', 'https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld']"

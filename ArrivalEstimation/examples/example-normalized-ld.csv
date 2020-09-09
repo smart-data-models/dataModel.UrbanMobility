@@ -1,2 +1,0 @@
-"id", "type", "hasTrip__object", "headSign__value", "remainingTime__value", "hasStop__object", "remainingDistance__value", "@context"
-"urn:ngsi-ld:ArrivalEstimation:L5C1_Stop74_1", "ArrivalEstimation", "urn:ngsi-ld:GtfsTrip:tus:5C1", "Plaza Italia", "PT8M5S", "urn:ngsi-ld:GtfsStop:tus:74", "1200", "['https://schema.lab.fiware.org/ld/context', 'https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld']"

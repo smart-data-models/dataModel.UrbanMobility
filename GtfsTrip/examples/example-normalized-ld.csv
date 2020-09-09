@@ -1,2 +1,0 @@
-"id", "type", "direction__value", "headSign__value", "hasRoute__object", "hasService__object", "hasShape__object", "@context"
-"urn:ngsi-ld:GtfsTrip:Spain:Malaga:1", "GtfsTrip", "0", "San Andrés", "urn:ngsi-ld:GtfsRoute:Spain:Malaga:1", "urn:ngsi-ld:GtfsService:Malaga_LAB", "urn:ngsi-ld:GtfsShape:Shape01", "['https://schema.lab.fiware.org/ld/context', 'https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld']"

@@ -1,2 +1,0 @@
-"id", "type", "name__value", "shortName__value", "page__value", "routeType__value", "operatedBy__object", "@context"
-"urn:ngsi-ld:GtfsRoute:Spain:Malaga:1", "GtfsRoute", "Parque del Sur _ Alameda Principal _ San Andrés", "1", "http://www.emtmalaga.es/emt-mobile/informacionLinea.html", "3", "urn:ngsi-ld:GtfsAgency:Malaga_EMT", "['https://schema.lab.fiware.org/ld/context', 'https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld']"

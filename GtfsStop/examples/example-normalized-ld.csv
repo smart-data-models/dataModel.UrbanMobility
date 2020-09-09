@@ -1,2 +1,0 @@
-"id", "type", "code__value", "operatedBy__object", "location__value__coordinates", "name__value", "@context"
-"urn:ngsi-ld:GtfsStop:Malaga_101", "GtfsStop", "101", "urn:ngsi-ld:GtfsAgency:Malaga_EMT", "[-4.424393, 36.716872]", "Alameda Principal Sur", "['https://schema.lab.fiware.org/ld/context', 'https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld']"
