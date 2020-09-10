@@ -1,0 +1,7 @@
+{"@context": ["https://schema.lab.fiware.org/ld/context",
+              "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],
+ "description": "Laborables",
+ "id": "urn:ngsi-ld:Service:Malaga:LAB",
+ "name": "LAB",
+ "operatedBy": "urn:ngsi-ld:GtfsAgency:Malaga_EMT",
+ "type": "GtfsService"}
