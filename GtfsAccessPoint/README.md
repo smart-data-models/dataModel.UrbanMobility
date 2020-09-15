@@ -7,7 +7,7 @@ GTFS Access Point
 
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsAccessPoint/swagger.yaml)
 
-Link to the [specification](https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsAccessPoint/doc/spec.md)
+Link to the [specification](https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/GtfsAccessPoint/doc/spec.md)
 ### Examples
 
 Link to the [example](https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsAccessPoint/examples/example.json) (keyvalues) for NGSI v2
