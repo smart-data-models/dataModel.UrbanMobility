@@ -7,7 +7,7 @@ GTFS Trip
 
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsTrip/swagger.yaml)
 
-Link to the [specification](https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsTrip/doc/spec.md)
+Link to the [specification](https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/GtfsTrip/doc/spec.md)
 ### Examples
 
 Link to the [example](https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsTrip/examples/example.json) (keyvalues) for NGSI v2
