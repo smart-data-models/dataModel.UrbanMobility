@@ -7,7 +7,7 @@ PublicTransportRoute
     - transportationType
   - type: "object"
    - allOf:
-      - $ref: "https://smart-data-models.github.io/data-models/common-schema.yaml#Common"
+      - $ref: "https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#Common"
 
   - description :>
     ## Description
@@ -35,13 +35,13 @@ PublicTransportRoute
       - x-ngsi:
         - type: "Property"
         - model: "https://schema.org/address"
-      - $ref: "https://smart-data-models.github.io/data-models/common-schema.yaml#Address"
+      - $ref: "https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#Address"
 
     - location:
       - x-ngsi:
         - type: "Property"
         - model: "https://tools.ietf.org/html/rfc7946"
-      - $ref: "https://smart-data-models.github.io/data-models/common-schema.yaml#Geometry"
+      - $ref: "https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#Geometry"
 
     - stopCode:
       - x-ngsi:
