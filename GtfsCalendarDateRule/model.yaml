@@ -36,7 +36,7 @@ GtfsCalendarDateRule:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: 'Same as GTFS exception_type field. Allowed values: ("1", "2")'
+      description: 'Same as GTFS exception_type field. Allowed values: (1, 2)'
     hasService:
       x-ngsi:
         type: Property
