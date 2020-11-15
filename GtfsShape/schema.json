@@ -27,10 +27,10 @@
         "location": {
           "oneOf": [
             {
-              "$ref": "http://geojson.org/schema/Geometry.json#LineString"
+              "$ref": "http://geojson.org/schema/LineString.json"
             },
             {
-              "$ref": "http://geojson.org/schema/Geometry.json#MultiLineString"
+              "$ref": "http://geojson.org/schema/MultiLineString.json"
             }
           ]
         }
