@@ -1,0 +1,83 @@
+GtfsRoute:
+  description: 'GTFS Route'
+  properties:
+    alternateName:
+      description: 'An alternative name for this item'
+      type: Property
+    dataProvider:
+      description: 'A sequence of characters identifying the provider of the harmonised data entity.'
+      type: Property
+    dateCreated:
+      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'
+      format: date-time
+      type: Property
+    dateModified:
+      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'
+      format: date-time
+      type: Property
+    description:
+      description: 'A description of this item'
+      type: Property
+    id:
+      anyOf: &gtfsroute_-_properties_-_owner_-_items_-_anyof
+        - description: 'Property. Identifier format of any NGSI entity'
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+        - description: 'Property. Identifier format of any NGSI entity'
+          format: uri
+          type: string
+    name:
+      type: string
+    operatedBy:
+      format: uri
+      type: string
+    owner:
+      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
+      items:
+        anyOf: *gtfsroute_-_properties_-_owner_-_items_-_anyof
+      type: Property
+    page:
+      type: string
+    routeColor:
+      type: string
+    routeSortOrder:
+      minimum: 0
+      type: integer
+    routeTextColor:
+      type: string
+    routeType:
+      enum:
+        - 0
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+        - 6
+        - 7
+      type: string
+    seeAlso:
+      oneOf:
+        - items:
+            - format: uri
+              type: string
+          minItems: 1
+          type: array
+        - format: uri
+          type: string
+    shortName:
+      type: string
+    source:
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'
+      type: Property
+    type:
+      description: 'NGSI Entity type'
+      enum:
+        - GtfsRoute
+      type: string
+  required:
+    - id
+    - type
+  type: object
