@@ -263,7 +263,7 @@ GtfsStation:
     - hasStop    
   type: object    
 ```  
-Voici un exemple de GtfsStation au format JSON comme valeurs clés. Elle est compatible avec NGSI V2 lorsqu'elle utilise `options=keyValues` et renvoie les données de contexte d'une entité individuelle.  
+Voici un exemple d'une GtfsStation au format JSON comme valeurs clés. Elle est compatible avec NGSI V2 lorsqu'elle utilise `options=keyValues` et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
   "id": "urn:ngsi-ld:GtfsStation:Madrid:est_90_21",  
@@ -282,7 +282,7 @@ GtfsStation:
   "hasStop": ["urn:ngsi-ld:GtfsStop:Madrid_par_4_1"]  
 }  
 ```  
-Voici un exemple de GtfsStation au format JSON normalisé. Elle est compatible avec NGSI V2 lorsqu'elle utilise `options=keyValues` et renvoie les données de contexte d'une entité individuelle.  
+Voici un exemple d'une GtfsStation au format JSON normalisé. Elle est compatible avec NGSI V2 lorsqu'elle utilise `options=keyValues` et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
   "id": "urn:ngsi-ld:GtfsStation:Madrid:est_90_21",  
