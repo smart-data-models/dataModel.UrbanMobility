@@ -5,7 +5,7 @@ Entidad: GtfsAgency
 
 ## Lista de propiedades  
 
-`address`:   `alternateName`: Un nombre alternativo para este artículo  `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  `dateCreated`: Sello de tiempo de creación de la entidad. Normalmente será asignado por la plataforma de almacenamiento.  `dateModified`: Sello de tiempo de la última modificación de la entidad. Esta será normalmente asignada por la plataforma de almacenamiento.  `description`: Una descripción de este artículo  `id`:   `language`:   `name`:   `owner`: Una lista que contiene una secuencia de caracteres codificados JSON que hace referencia a los Ids únicos de los propietarios  `page`:   `phone`:   `seeAlso`:   `source`:   `timezone`:   `type`: NGSI Tipo de entidad  ## Modelo de datos Descripción de las propiedades  
+`address`:   `alternateName`: Un nombre alternativo para este artículo  `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  `dateCreated`: Sello de tiempo de creación de la entidad. Normalmente será asignado por la plataforma de almacenamiento.  `dateModified`: Sello de tiempo de la última modificación de la entidad. Normalmente será asignado por la plataforma de almacenamiento.  `description`: Una descripción de este artículo  `id`:   `language`:   `name`:   `owner`: Una lista que contiene una secuencia de caracteres codificados JSON que hace referencia a los Ids únicos de los propietarios  `page`:   `phone`:   `seeAlso`:   `source`:   `timezone`:   `type`: NGSI Tipo de entidad  ## Modelo de datos Descripción de las propiedades  
 Ordenados alfabéticamente  
 ```yaml  
 GtfsAgency:    
@@ -91,7 +91,7 @@ GtfsAgency:
   "source": "http://datosabiertos.malaga.eu/dataset/lineas-y-horarios-bus-google-transit/resource/24e86888-b91e-45bf-a48c-09855832fd52"  
 }  
 ```  
-Aquí hay un ejemplo de una Agencia Gtfs en formato JSON como normalizado. Es compatible con NGSI V2 cuando se utiliza `opciones=valores clave` y devuelve los datos de contexto de una entidad individual.  
+Aquí hay un ejemplo de una Agencia Gtfs en formato JSON como normalizado. Esto es compatible con NGSI V2 cuando se utiliza `opciones=valores clave` y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
   "id": "urn:ngsi-ld:GtfsAgency:Malaga_EMT",  
