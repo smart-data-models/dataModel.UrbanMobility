@@ -1,0 +1,106 @@
+GtfsStopTime:
+  description: 'GTFS Stop Time'
+  properties:
+    alternateName:
+      description: 'An alternative name for this item'
+      type: Property
+    arrivalTime:
+      pattern: ^([0-3][0-9]|4[0-7]):[0-5][0-9]:[0-5][0-9]$
+      type: string
+    dataProvider:
+      description: 'A sequence of characters identifying the provider of the harmonised data entity.'
+      type: Property
+    dateCreated:
+      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'
+      format: date-time
+      type: Property
+    dateModified:
+      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'
+      format: date-time
+      type: Property
+    departureTime:
+      pattern: ^([0-3][0-9]|4[0-7]):[0-5][0-9]:[0-5][0-9]$
+      type: string
+    description:
+      description: 'A description of this item'
+      type: Property
+    distanceTravelled:
+      minValue: 0
+      type: number
+    dropOffType:
+      default: 0
+      enum:
+        - 0
+        - 1
+        - 2
+        - 3
+      type: string
+    hasStop:
+      format: uri
+      type: string
+    hasTrip:
+      format: uri
+      type: string
+    id:
+      anyOf: &gtfsstoptime_-_properties_-_owner_-_items_-_anyof
+        - description: 'Property. Identifier format of any NGSI entity'
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+        - description: 'Property. Identifier format of any NGSI entity'
+          format: uri
+          type: string
+    name:
+      description: 'The name of this item.'
+      type: Property
+    owner:
+      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
+      items:
+        anyOf: *gtfsstoptime_-_properties_-_owner_-_items_-_anyof
+      type: Property
+    pickupType:
+      default: 0
+      enum:
+        - 0
+        - 1
+        - 2
+        - 3
+      type: string
+    seeAlso:
+      oneOf:
+        - items:
+            - format: uri
+              type: string
+          minItems: 1
+          type: array
+        - format: uri
+          type: string
+    source:
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'
+      type: Property
+    stopHeadsign:
+      type: string
+    stopSequence:
+      minValue: 1
+      type: integer
+    timepoint:
+      default: 1
+      enum:
+        - 0
+        - 1
+      type: string
+    type:
+      description: 'NGSI Entity type'
+      enum:
+        - GtfsStopTime
+      type: string
+  required:
+    - id
+    - type
+    - arrivalTime
+    - departureTime
+    - hasStop
+    - hasTrip
+    - stopSequence
+  type: object
