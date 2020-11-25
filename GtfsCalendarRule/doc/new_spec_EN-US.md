@@ -5,7 +5,7 @@ Entity: GtfsCalendarRule
 
 ## List of properties  
 
-`alternateName`: An alternative name for this item  `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  `description`: A description of this item  `endDate`:   `friday`:   `hasService`:   `id`:   `monday`:   `name`: The name of this item.  `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  `saturday`:   `seeAlso`:   `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  `startDate`:   `sunday`:   `thursday`:   `tuesday`:   `type`: NGSI Entity type  `wednesday`:   ## Data Model description of properties  
+- `alternateName`: An alternative name for this item  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `endDate`:   - `friday`:   - `hasService`:   - `id`:   - `monday`:   - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `saturday`:   - `seeAlso`:   - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `startDate`:   - `sunday`:   - `thursday`:   - `tuesday`:   - `type`: NGSI Entity type  - `wednesday`:   ## Data Model description of properties  
 Sorted alphabetically  
 ```yaml  
 GtfsCalendarRule:    
@@ -101,6 +101,7 @@ GtfsCalendarRule:
     - endDate    
   type: object    
 ```  
+#### GtfsCalendarRule NGSI V2 key-values Example    
 Here is an example of a GtfsCalendarRule in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
@@ -119,6 +120,7 @@ GtfsCalendarRule:
   "endDate": "2019-01-01"  
 }  
 ```  
+#### GtfsCalendarRule NGSI V2 normalized Example    
 Here is an example of a GtfsCalendarRule in JSON format as normalized. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
@@ -162,6 +164,7 @@ GtfsCalendarRule:
   }  
 }  
 ```  
+#### GtfsCalendarRule NGSI-LD key-values Example    
 Here is an example of a GtfsCalendarRule in JSON-LD format as key-values. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context",  
@@ -180,6 +183,7 @@ GtfsCalendarRule:
  "type": "GtfsCalendarRule",  
  "wednesday": True}  
 ```  
+#### GtfsCalendarRule NGSI-LD normalized Example    
 Here is an example of a GtfsCalendarRule in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
