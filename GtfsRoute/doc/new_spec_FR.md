@@ -5,9 +5,10 @@ Entité : GtfsRoute
 
 ## Liste des biens  
 
-`alternateName`: Un autre nom pour cet article  `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  `description`: Une description de cet article  `id`:   `name`:   `operatedBy`:   `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  `page`:   `routeColor`:   `routeSortOrder`:   `routeTextColor`:   `routeType`:   `seeAlso`:   `shortName`:   `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  `type`: NGSI Type d'entité  ## Modèle de données description des biens  
-Classement par ordre alphabétique  
-```yaml  
+- `alternateName`: Un autre nom pour cet article  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `description`: Une description de cet article  - `id`:   - `name`:   - `operatedBy`:   - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `page`:   - `routeColor`:   - `routeSortOrder`:   - `routeTextColor`:   - `routeType`:   - `seeAlso`:   - `shortName`:   - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `type`: NGSI Type d'entité  ## Modèle de données description des biens  
+Classement par ordre alphabétique (cliquez pour plus de détails)  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 GtfsRoute:    
   description: 'GTFS Route'    
   properties:    
@@ -92,6 +93,9 @@ GtfsRoute:
     - type    
   type: object    
 ```  
+</details>    
+## Exemples de charges utiles  
+#### GtfsRoute NGSI V2 valeurs clés Exemple  
 Voici un exemple de GtfsRoute au format JSON comme valeurs clés. Il est compatible avec NGSI V2 lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -104,6 +108,7 @@ GtfsRoute:
   "operatedBy": "urn:ngsi-ld:GtfsAgency:Malaga_EMT"  
 }  
 ```  
+#### GtfsRoute NGSI V2 normalisée Exemple  
 Voici un exemple de GtfsRoute au format JSON normalisé. Il est compatible avec NGSI V2 lorsqu'il utilise "options=valeurs clés" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -127,6 +132,7 @@ GtfsRoute:
   }  
 }  
 ```  
+#### GtfsRoute NGSI-LD valeurs clés Exemple  
 Voici un exemple de GtfsRoute au format JSON-LD comme valeurs clés. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context",  
@@ -139,6 +145,7 @@ GtfsRoute:
  "shortName": "1",  
  "type": "GtfsRoute"}  
 ```  
+#### GtfsRoute NGSI-LD normalisée Exemple  
 Voici un exemple de GtfsRoute au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
