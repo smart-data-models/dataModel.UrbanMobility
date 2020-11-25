@@ -5,9 +5,10 @@ Entité : GtfsFrequency
 
 ## Liste des biens  
 
-`alternateName`: Un autre nom pour cet article  `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  `description`:   `endTime`:   `exactTimes`:   `hasTrip`:   `headwaySeconds`:   `id`:   `name`:   `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  `seeAlso`:   `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  `startTime`:   `type`: NGSI Type d'entité  ## Modèle de données description des biens  
-Classement par ordre alphabétique  
-```yaml  
+- `alternateName`: Un autre nom pour cet article  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `description`:   - `endTime`:   - `exactTimes`:   - `hasTrip`:   - `headwaySeconds`:   - `id`:   - `name`:   - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `seeAlso`:   - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `startTime`:   - `type`: NGSI Type d'entité  ## Modèle de données description des biens  
+Classement par ordre alphabétique (cliquez pour plus de détails)  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 GtfsFrequency:    
   description: 'GTFS Frequency'    
   properties:    
@@ -84,6 +85,9 @@ GtfsFrequency:
     - headwaySeconds    
   type: object    
 ```  
+</details>    
+## Exemples de charges utiles  
+#### GtfsFrequency NGSI V2 key-values Exemple  
 Voici un exemple d'une fréquence GtfsF au format JSON comme valeurs clés. Ce format est compatible avec NGSI V2 lorsqu'on utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -97,6 +101,7 @@ GtfsFrequency:
   "headwaySeconds": 600  
 }  
 ```  
+#### GtfsFrequency NGSI V2 normalisé Exemple  
 Voici un exemple de fréquence GtfsF au format JSON normalisé. Il est compatible avec NGSI V2 lorsque l'on utilise "options=valeurs clés" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -123,6 +128,7 @@ GtfsFrequency:
   }  
 }  
 ```  
+#### GtfsFrequency NGSI-LD key-values Exemple  
 Voici un exemple d'une fréquence GtfsF au format JSON-LD comme valeurs clés. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context",  
@@ -136,6 +142,7 @@ GtfsFrequency:
  "startTime": "07:00:00",  
  "type": "GtfsFrequency"}  
 ```  
+#### GtfsFrequency NGSI-LD normalisé Exemple  
 Voici un exemple de fréquence GtfsF au format JSON-LD normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
