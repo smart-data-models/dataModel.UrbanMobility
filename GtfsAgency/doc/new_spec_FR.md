@@ -5,9 +5,10 @@ Entité : GtfsAgency
 
 ## Liste des biens  
 
-`address`:   `alternateName`: Un autre nom pour cet article  `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  `description`: Une description de cet article  `id`:   `language`:   `name`:   `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  `page`:   `phone`:   `seeAlso`:   `source`:   `timezone`:   `type`: NGSI Type d'entité  ## Modèle de données description des biens  
-Classement par ordre alphabétique  
-```yaml  
+- `address`:   - `alternateName`: Un autre nom pour cet article  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `description`: Une description de cet article  - `id`:   - `language`:   - `name`:   - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `page`:   - `phone`:   - `seeAlso`:   - `source`:   - `timezone`:   - `type`: NGSI Type d'entité  ## Modèle de données description des biens  
+Classement par ordre alphabétique (cliquez pour plus de détails)  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 GtfsAgency:    
   description: 'GTFS Agency'    
   properties:    
@@ -79,6 +80,9 @@ GtfsAgency:
     - source    
   type: object    
 ```  
+</details>    
+## Exemples de charges utiles  
+#### GtfsAgency NGSI V2 key-values Exemple  
 Voici un exemple d'une agence Gtfs au format JSON comme valeurs clés. Il est compatible avec NGSI V2 lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -91,6 +95,7 @@ GtfsAgency:
   "source": "http://datosabiertos.malaga.eu/dataset/lineas-y-horarios-bus-google-transit/resource/24e86888-b91e-45bf-a48c-09855832fd52"  
 }  
 ```  
+#### GtfsAgency NGSI V2 normalisé Exemple  
 Voici un exemple de GtfsAgency au format JSON tel que normalisé. Il est compatible avec NGSI V2 lorsqu'il utilise "options=valeurs clés" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -113,6 +118,7 @@ GtfsAgency:
   }  
 }  
 ```  
+#### GtfsAgency NGSI-LD valeurs clés Exemple  
 Voici un exemple d'une agence Gtfs au format JSON-LD comme valeurs clés. Ce format est compatible avec le format NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context",  
@@ -125,6 +131,7 @@ GtfsAgency:
  "timezone": "Europe/Madrid",  
  "type": "GtfsAgency"}  
 ```  
+#### GtfsAgency NGSI-LD normalisé Exemple  
 Voici un exemple de GtfsAgency au format JSON-LD tel que normalisé. Ce format est compatible avec le format NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
