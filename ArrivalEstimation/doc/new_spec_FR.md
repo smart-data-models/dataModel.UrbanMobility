@@ -5,9 +5,10 @@ Entité : ArrivéeEstimation
 
 ## Liste des biens  
 
-`alternateName`: Un autre nom pour cet article  `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  `description`: Une description de cet article  `hasStop`:   `hasTrip`:   `headsign`:   `id`:   `name`: Le nom de cet article.  `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  `remainingDistance`:   `remainingTime`:   `seeAlso`:   `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  `type`: NGSI Type d'entité  ## Modèle de données description des biens  
-Classement par ordre alphabétique  
-```yaml  
+- `alternateName`: Un autre nom pour cet article  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `description`: Une description de cet article  - `hasStop`:   - `hasTrip`:   - `headsign`:   - `id`:   - `name`: Le nom de cet article.  - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `remainingDistance`:   - `remainingTime`:   - `seeAlso`:   - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `type`: NGSI Type d'entité  ## Modèle de données description des biens  
+Classement par ordre alphabétique (cliquez pour plus de détails)  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 ArrivalEstimation:    
   description: 'Arrival Estimation'    
   properties:    
@@ -86,6 +87,9 @@ ArrivalEstimation:
     - headSign    
   type: object    
 ```  
+</details>    
+## Exemples de charges utiles  
+#### ArrivalEstimation NGSI V2 key-values Exemple  
 Voici un exemple d'une ArrivalEstimation au format JSON comme valeurs clés. Ce format est compatible avec la version 2 de l'INSG lorsqu'il utilise "options=valeurs clés" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -98,6 +102,7 @@ ArrivalEstimation:
   "headSign": "Plaza Italia"  
 }  
 ```  
+#### ArrivalEstimation NGSI V2 normalisé Exemple  
 Voici un exemple d'une ArrivalEstimation au format JSON tel que normalisé. Ce format est compatible avec la version 2 de l'INSG lorsqu'il utilise "options=valeurs clés" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -122,6 +127,7 @@ ArrivalEstimation:
   }  
 }  
 ```  
+#### ArrivalEstimation NGSI-LD key-values Example  
 Voici un exemple d'une ArrivalEstimation au format JSON-LD comme valeurs clés. Ce format est compatible avec le format NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context",  
@@ -134,6 +140,7 @@ ArrivalEstimation:
  "remainingTime": "PT8M5S",  
  "type": "ArrivalEstimation"}  
 ```  
+#### ArrivalEstimation NGSI-LD normalisé Exemple  
 Voici un exemple d'une ArrivalEstimation au format JSON-LD normalisé. Ce format est compatible avec le format JSON-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
