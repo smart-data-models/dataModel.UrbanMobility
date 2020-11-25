@@ -5,9 +5,10 @@ Entité : GtfsCalendarDateRule
 
 ## Liste des biens  
 
-`alternateName`: Un autre nom pour cet article  `appliesOn`:   `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  `description`: Une description de cet article  `exceptionType`:   `hasService`:   `id`:   `name`: Le nom de cet article.  `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  `seeAlso`:   `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  `type`: NGSI Type d'entité  ## Modèle de données description des biens  
-Classement par ordre alphabétique  
-```yaml  
+- `alternateName`: Un autre nom pour cet article  - `appliesOn`:   - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `description`: Une description de cet article  - `exceptionType`:   - `hasService`:   - `id`:   - `name`: Le nom de cet article.  - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `seeAlso`:   - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `type`: NGSI Type d'entité  ## Modèle de données description des biens  
+Classement par ordre alphabétique (cliquez pour plus de détails)  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 GtfsCalendarDateRule:    
   description: 'GTFS Calendar Date Rule'    
   properties:    
@@ -82,6 +83,9 @@ GtfsCalendarDateRule:
     - exceptionType    
   type: object    
 ```  
+</details>    
+## Exemples de charges utiles  
+#### GtfsCalendarDateRule NGSI V2 key-values Exemple  
 Voici un exemple de GtfsCalendarDateRule au format JSON comme valeurs clés. Cette règle est compatible avec la version 2 du NGSI lorsqu'elle utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -93,6 +97,7 @@ GtfsCalendarDateRule:
   "exceptionType": "1"  
 }  
 ```  
+#### GtfsCalendarDateRule NGSI V2 normalisé Exemple  
 Voici un exemple de GtfsCalendarDateRule au format JSON, tel que normalisé. Elle est compatible avec NGSI V2 lorsqu'elle utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -113,6 +118,7 @@ GtfsCalendarDateRule:
   }  
 }  
 ```  
+#### GtfsCalendarDateRule NGSI-LD valeurs clés Exemple  
 Voici un exemple de GtfsCalendarDateRule au format JSON-LD comme valeurs clés. Cette règle est compatible avec le format NGSI-LD lorsqu'elle n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context",  
@@ -124,6 +130,7 @@ GtfsCalendarDateRule:
  "name": "Rule Fair Area",  
  "type": "GtfsCalendarDateRule"}  
 ```  
+#### GtfsCalendarDateRule NGSI-LD normalisé Exemple  
 Voici un exemple de GtfsCalendarDateRule au format JSON-LD tel que normalisé. Cette règle est compatible avec le format NGSI-LD lorsqu'elle n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
