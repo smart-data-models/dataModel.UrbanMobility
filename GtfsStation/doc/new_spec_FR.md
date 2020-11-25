@@ -5,9 +5,10 @@ Entité : GtfsStation
 
 ## Liste des biens  
 
-`address`: L'adresse postale.  `alternateName`: Un autre nom pour cet article  `areaServed`: La zone géographique où un service ou un article offert est fourni.  `code`:   `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  `description`:   `hasAccessPoint`:   `hasParentStation`:   `hasStop`:   `id`:   `location`:   `name`:   `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  `page`:   `seeAlso`:   `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  `type`: NGSI Type d'entité  `wheelChairAccessible`:   `zoneCode`:   ## Modèle de données description des biens  
-Classement par ordre alphabétique  
-```yaml  
+- `address`: L'adresse postale.  - `alternateName`: Un autre nom pour cet article  - `areaServed`: La zone géographique où un service ou un article offert est fourni.  - `code`:   - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `description`:   - `hasAccessPoint`:   - `hasParentStation`:   - `hasStop`:   - `id`:   - `location`:   - `name`:   - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `page`:   - `seeAlso`:   - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `type`: NGSI Type d'entité  - `wheelChairAccessible`:   - `zoneCode`:   ## Modèle de données description des biens  
+Classement par ordre alphabétique (cliquez pour plus de détails)  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 GtfsStation:    
   description: 'GTFS Station'    
   properties:    
@@ -263,6 +264,9 @@ GtfsStation:
     - hasStop    
   type: object    
 ```  
+</details>    
+## Exemples de charges utiles  
+#### GtfsStation NGSI V2 valeurs clés Exemple  
 Voici un exemple d'une GtfsStation au format JSON comme valeurs clés. Elle est compatible avec NGSI V2 lorsqu'elle utilise `options=keyValues` et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -282,6 +286,7 @@ GtfsStation:
   "hasStop": ["urn:ngsi-ld:GtfsStop:Madrid_par_4_1"]  
 }  
 ```  
+#### GtfsStation NGSI V2 normalisée Exemple  
 Voici un exemple d'une GtfsStation au format JSON normalisé. Elle est compatible avec NGSI V2 lorsqu'elle utilise `options=keyValues` et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -314,6 +319,7 @@ GtfsStation:
   }  
 }  
 ```  
+#### GtfsStation NGSI-LD valeurs clés Exemple  
 Voici un exemple de GtfsStation au format JSON-LD comme valeurs clés. Elle est compatible avec le format NGSI-LD lorsqu'elle n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context",  
@@ -329,7 +335,8 @@ GtfsStation:
  "name": "Intercambiador de Plaza de Castilla",  
  "type": "GtfsStation"}  
 ```  
-Voici un exemple d'une GtfsStation au format JSON-LD normalisé. Elle est compatible avec le format NGSI-LD lorsqu'elle n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
+#### GtfsStation NGSI-LD normalisée Exemple  
+Voici un exemple de GtfsStation au format JSON-LD normalisé. Elle est compatible avec le format NGSI-LD lorsqu'elle n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
     "id": "urn:ngsi-ld:GtfsStation:Madrid:est_90_21",  
