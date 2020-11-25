@@ -5,9 +5,10 @@ Entité : GtfsCalendarRule
 
 ## Liste des biens  
 
-`alternateName`: Un autre nom pour cet article  `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  `description`: Une description de cet article  `endDate`:   `friday`:   `hasService`:   `id`:   `monday`:   `name`: Le nom de cet article.  `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  `saturday`:   `seeAlso`:   `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  `startDate`:   `sunday`:   `thursday`:   `tuesday`:   `type`: NGSI Type d'entité  `wednesday`:   ## Modèle de données description des biens  
-Classement par ordre alphabétique  
-```yaml  
+- `alternateName`: Un autre nom pour cet article  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `description`: Une description de cet article  - `endDate`:   - `friday`:   - `hasService`:   - `id`:   - `monday`:   - `name`: Le nom de cet article.  - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `saturday`:   - `seeAlso`:   - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `startDate`:   - `sunday`:   - `thursday`:   - `tuesday`:   - `type`: NGSI Type d'entité  - `wednesday`:   ## Modèle de données description des biens  
+Classement par ordre alphabétique (cliquez pour plus de détails)  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 GtfsCalendarRule:    
   description: 'Smart Data Models. GTFS Calendar Rule'    
   properties:    
@@ -101,6 +102,9 @@ GtfsCalendarRule:
     - endDate    
   type: object    
 ```  
+</details>    
+## Exemples de charges utiles  
+#### GtfsCalendarRule NGSI V2 key-values Exemple  
 Voici un exemple de GtfsCalendarRule au format JSON comme valeurs clés. Cette règle est compatible avec la version 2 du NGSI lorsqu'elle utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -119,6 +123,7 @@ GtfsCalendarRule:
   "endDate": "2019-01-01"  
 }  
 ```  
+#### GtfsCalendarRule NGSI V2 normalisée Exemple  
 Voici un exemple de règle d'agenda GtfsC en format JSON normalisé. Elle est compatible avec NGSI V2 lorsqu'elle utilise "options=valeurs clés" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -162,6 +167,7 @@ GtfsCalendarRule:
   }  
 }  
 ```  
+#### GtfsCalendarRule NGSI-LD key-values Example  
 Voici un exemple de GtfsCalendarRule au format JSON-LD comme valeurs clés. Cette règle est compatible avec le format NGSI-LD lorsqu'elle n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context",  
@@ -180,6 +186,7 @@ GtfsCalendarRule:
  "type": "GtfsCalendarRule",  
  "wednesday": True}  
 ```  
+#### GtfsCalendarRule NGSI-LD normalisée Exemple  
 Voici un exemple de règle d'agenda GtfsCalendarRule au format JSON-LD, telle que normalisée. Il est compatible avec le format NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
