@@ -108,17 +108,5 @@
     "type",
     "transportationType",
     "name"
-  ],
-  "anyOf": [
-    {
-      "required": [
-        "location"
-      ]
-    },
-    {
-      "required": [
-        "address"
-      ]
-    }
   ]
 }
