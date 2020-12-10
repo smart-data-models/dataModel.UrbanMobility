@@ -13,30 +13,68 @@
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ArrivalEstimation"],
+          "enum": [
+            "ArrivalEstimation"
+          ],
           "description": "Property. NGSI Entity Type: It has to be ArrivalEstimation"
         },
         "hasStop": {
-          "type": "string",
-          "format": "uri"
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+              "description": "Property. Identifier format of any NGSI entity"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "description": "Property. Identifier format of any NGSI entity"
+            }
+          ],
+          "description": "Relationship. It shall point to an Entity of Type GtfsStop"
         },
         "hasTrip": {
-          "type": "string",
-          "format": "uri"
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+              "description": "Property. Identifier format of any NGSI entity"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "description": "Property. Identifier format of any NGSI entity"
+            }
+          ],
+          "description": "Property. The trip to which this estimation applies to. Model:'https://schema.org/URL'."
         },
         "remainingTime": {
           "type": "string",
-          "pattern": "^P(?=\\w*\\d)(?:\\d+Y|Y)?(?:\\d+M|M)?(?:\\d+W|W)?(?:\\d+D|D)?(?:T(?:\\d+H|H)?(?:\\d+M|M)?(?:\\d+(?:\\?.\\d{1,2})?S|S)?)?$"
+          "pattern": "^P(?=\\w*\\d)(?:\\d+Y|Y)?(?:\\d+M|M)?(?:\\d+W|W)?(?:\\d+D|D)?(?:T(?:\\d+H|H)?(?:\\d+M|M)?(?:\\d+(?:\\?.\\d{1,2})?S|S)?)?$",
+          "description": "Property. It shall contain the remaining time of arrival for the trip heading to the concerned stop. Remaining time shall be encoded as a ISO8601 duration. Ex. `PT8M5S`."
         },
         "remainingDistance": {
           "type": "number",
-          "minValue": 0
+          "minValue": 0,
+          "description": "Property. It shall contain the remaining distance (in meters) of arrival for the trip heading to the concerned stop. Model:'https://schema.org/Number'. Units:'Meters'"
         },
-        "headsign": {
-          "type": "string"
+        "headSign": {
+          "type": "string",
+          "description": "Property. It shall contain the text that appears on a sign that identifies the trip's destination to passengers. Model:'https://schema.org/Text'."
         }
       }
     }
   ],
-  "required": ["id", "type", "hasStop", "hasTrip", "remainingTime", "headSign"]
+  "required": [
+    "id",
+    "type",
+    "hasStop",
+    "hasTrip",
+    "remainingTime",
+    "headSign"
+  ]
 }
