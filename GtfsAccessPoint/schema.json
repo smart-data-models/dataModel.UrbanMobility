@@ -20,7 +20,7 @@
         "type": {
           "type": "string",
           "enum": ["GtfsAccessPoint"],
-          "description": "NGSI Entity type"
+          "description": "Property. NGSI Entity Type: It has to be GtfsAccessPoint"
         }
       }
     }

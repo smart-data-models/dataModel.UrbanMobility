@@ -14,7 +14,7 @@
         "type": {
           "type": "string",
           "enum": ["GtfsAgency"],
-          "description": "NGSI Entity type"
+          "description": "Property. NGSI Entity Type: It has to be "
         },
         "source": {
           "type": "string",

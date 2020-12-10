@@ -7,29 +7,48 @@
     "GTFS-Stop-Commons": {
       "type": "object",
       "properties": {
-        "name": {
-          "type": "string"
-        },
         "code": {
-          "type": "string"
+          "type": "string",
+          "description": "Property. Same as GTFS `stop_code`. Model:'http://schema.org/Text'"
         },
         "page": {
           "type": "string",
-          "format": "uri"
-        },
-        "description": {
-          "type": "string"
+          "format": "uri",
+          "description": "Property. Same as GTFS `stop_url`. Model:'http://schema.org/URL'"
         },
         "zoneCode": {
-          "type": "string"
+          "type": "string",
+          "description": "Property. Transport zone to which this stop belongs to. Same as GTFS `zone_id`. Model:'https://schema.org/Text'"
         },
         "wheelChairAccessible": {
           "type": "string",
-          "enum": ["0", "1", "2"]
+          "enum": [
+            "0",
+            "1",
+            "2"
+          ],
+          "description": "Property. Same as GTFS `wheelchair_boarding`. Enum:'0, 1 ,2'. Reference in [GTFS](https://developers.google.com/transit/gtfs/reference/#stopstxt) "
         },
         "hasParentStation": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+              "description": "Property. Identifier format of any NGSI entity"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "description": "Property. Identifier format of any NGSI entity"
+            }
+          ],
+          "description": "Relationship. Same as GTFS `parent_station`."
+        },
+        "stop_desc": {
           "type": "string",
-          "format": "uri"
+          "description": "Property. Same as GTFS `stop_desc`."
         }
       }
     }
