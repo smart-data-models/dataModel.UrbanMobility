@@ -14,7 +14,7 @@
         "type": {
           "type": "string",
           "enum": ["ArrivalEstimation"],
-          "description": "NGSI Entity type"
+          "description": "Property. NGSI Entity Type: It has to be ArrivalEstimation"
         },
         "hasStop": {
           "type": "string",
