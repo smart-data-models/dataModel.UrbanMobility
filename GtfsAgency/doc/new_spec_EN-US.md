@@ -7,7 +7,9 @@ Entity: GtfsAgency
 
 - `address`:   - `alternateName`: An alternative name for this item  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `id`:   - `language`:   - `name`:   - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `page`:   - `phone`:   - `seeAlso`:   - `source`:   - `timezone`:   - `type`: NGSI Entity type    
 Required properties  
-- `id`  - `name`  - `source`  - `type`  ## Data Model description of properties  
+- `id`  - `name`  - `source`  - `type`    
+See [https://developers.google.com/transit/gtfs/reference/#agencytxt](https://developers.google.com/transit/gtfs/reference/#agencytxt)  
+## Data Model description of properties  
 Sorted alphabetically (click for details)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
