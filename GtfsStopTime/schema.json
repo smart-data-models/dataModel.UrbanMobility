@@ -36,21 +36,7 @@
           "description": "Relationship. Same as GTFS `stop_id`. It shall point to an Entity of type GtfsStop. Model:'http://schema.org/URL'"
         },
         "hasTrip": {
-          "anyOf": [
-            {
-              "type": "string",
-              "minLength": 1,
-              "maxLength": 256,
-              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
-              "description": "Property. Identifier format of any NGSI entity"
-            },
-            {
-              "type": "string",
-              "format": "uri",
-              "description": "Property. Identifier format of any NGSI entity"
-            }
-          ],
-          "description": "Relationship. Same as GTFS `trip_id`. It shall point to an Entity of type GtfsTrip. Model:'http://schema.org/URL'"
+          "$ref": "https://smart-data-models.github.io/dataModel.UrbanMobility/gtfs-schema.json#/definitions/GTFS-Stop-Commons/hasTrip"
         },
         "arrivalTime": {
           "type": "string",
