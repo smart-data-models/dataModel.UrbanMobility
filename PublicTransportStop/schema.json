@@ -19,27 +19,22 @@
           "enum": [
             "PublicTransportStop"
           ],
-          "description": "NGSI Entity type"
+          "description": "Property. NGSI Entity type. It has to be PublicTransportStop"
         },
         "stopCode": {
-          "type": "string"
+          "type": "string",
+          "description": "Property. Identifier/code of the public transport stop. Model:'https://schema.org/Text'."
         },
         "shortStopCode": {
-          "type": "string"
-        },
-        "name": {
-          "type": "string"
+          "type": "string",
+          "description": "Property. Shorter form of the identifier/code of the public transport stop. Model:'https://schema.org/Text'."
         },
         "wheelchairAccessible": {
-          "type": "integer",
-          "enum": [
-            0,
-            1,
-            2
-          ]
+          "$ref": "https://smart-data-models.github.io/datamodel.urbanMobility#/definitions/GTFS-Stop-Commons.json/wheelchairAccessible"
         },
         "transportationType": {
           "type": "array",
+          "description": "Property. Types of public transport using this stop as defined in (https://developers.google.com/transit/gtfs/reference/#routestxt). Model:'https://schema.org/Number'. Enum:'0, 1, 2, 3, 4, 5, 6, 7'",
           "items": {
             "type": "integer",
             "enum": [
@@ -56,57 +51,59 @@
         },
         "refPublicTransportRoute": {
           "type": "array",
+          "description": "Relationship.  Model:'https://schema.org/URL'. Public transport routes using this stop.",
           "items": {
-            "type": "string",
-            "format": "uri"
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 256,
+                "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+                "description": "Property. Identifier format of any NGSI entity"
+              },
+              {
+                "type": "string",
+                "format": "uri",
+                "description": "Property. Identifier format of any NGSI entity"
+              }
+            ]
           },
           "minItems": 1,
           "uniqueItems": true
         },
         "peopleCount": {
           "type": "integer",
-          "minimum": 0
+          "minimum": 0,
+          "description": "Property. Estimation of people waiting in the stop. Model:'https://schema.org/Number'."
         },
         "refPeopleCountDevice": {
           "type": "string",
-          "format": "uri"
+          "description": "Property. Reference to the [Device](https://github.com/Fiware/dataModels/blob/master/specs/Device/Device/doc/spec.md) providing people count estimate.",
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+              "description": "Property. Identifier format of any NGSI entity"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "description": "Property. Identifier format of any NGSI entity"
+            }
+          ]
         },
         "openingHoursSpecification": {
-          "type": "array",
-          "items": {
-            "properties": {
-              "opens": {
-                "type": "string",
-                "pattern": "[0-9]{2}:[0-9]{2}"
-              },
-              "closes": {
-                "type": "string",
-                "pattern": "[0-9]{2}:[0-9]{2}"
-              },
-              "dayOfWeek": {
-                "type": "string",
-                "enum": [
-                  "Friday",
-                  "Monday",
-                  "PublicHolidays",
-                  "Saturday",
-                  "Sunday",
-                  "Thursday",
-                  "Tuesday",
-                  "Wednesday"
-                ]
-              }
-            }
-          },
-          "minItems": 1
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/DateTime-Commons/openingHoursSpecification"
         }
-      }
+      },
+      "required": [
+        "id",
+        "type",
+        "transportationType",
+        "name"
+      ]
     }
-  ],
-  "required": [
-    "id",
-    "type",
-    "transportationType",
-    "name"
   ]
 }

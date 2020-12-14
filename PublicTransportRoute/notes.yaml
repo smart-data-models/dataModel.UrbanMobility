@@ -1,5 +1,5 @@
 notesHeader:
-
+  Generic model for public transport route. It adopts some GTFS definitions, but it does not need to be linked to additional GTFS data. A route is a journey, offered by one public transport service, that goes through a set of stops.
 notesMiddle:
 
 notesFooter:

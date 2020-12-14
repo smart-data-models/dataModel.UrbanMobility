@@ -19,13 +19,28 @@
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["GtfsStop"],
-          "description": "NGSI Entity type"
+          "enum": [
+            "GtfsStop"
+          ],
+          "description": "Property. NGSI Entity type. It has to be GtfsStop"
         },
         "operatedBy": {
           "type": "array",
           "items": {
-            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 256,
+                "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+                "description": "Property. Identifier format of any NGSI entity"
+              },
+              {
+                "type": "string",
+                "format": "uri",
+                "description": "Property. Identifier format of any NGSI entity"
+              }
+            ]
           },
           "minItems": 0,
           "uniqueItems": true
@@ -33,5 +48,10 @@
       }
     }
   ],
-  "required": ["id", "type", "name", "location"]
+  "required": [
+    "id",
+    "type",
+    "name",
+    "location"
+  ]
 }

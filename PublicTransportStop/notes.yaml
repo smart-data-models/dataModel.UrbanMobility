@@ -1,5 +1,5 @@
 notesHeader:
-
+  Generic model for a public transport stop. It adopts some GTFS definitions, but it does not need to be linked to additional GTFS data.
 notesMiddle:
 
 notesFooter:

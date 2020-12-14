@@ -1,5 +1,5 @@
 notesHeader:
-
+  See [https://developers.google.com/transit/gtfs/reference/#shapestxt](https://developers.google.com/transit/gtfs/reference/#shapestxt). It represents a GTFS `shape`.
 notesMiddle:
 
 notesFooter:

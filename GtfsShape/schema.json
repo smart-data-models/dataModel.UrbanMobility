@@ -13,11 +13,14 @@
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["GtfsShape"],
-          "description": "NGSI Entity type"
+          "enum": [
+            "GtfsShape"
+          ],
+          "description": "Property. NGSI Entity type. It has to be GtfsShape"
         },
         "distanceTravelled": {
           "type": "array",
+          "description": "An array of the distance travelled when reaching each of the points that make the `LineString` or `MultiLineString` that represents this shape. It shall match the same number of elements as the corresponding `LineString` or `MultiLineString`.",
           "items": {
             "type": "number",
             "minimum": 0
@@ -32,10 +35,15 @@
             {
               "$ref": "http://geojson.org/schema/MultiLineString.json"
             }
-          ]
+          ],
+          "description": "Geoproperty. The geographical shape associated to this entity encoded as GeoJSON `LineString` or `MultiLineString`. The coordinates shall be obtained from the `shapes.txt` feed file as per the value of `shape_id`, `shape_pt_lat`, `shape_pt_lon`, `shape_pt_sequence`."
         }
       }
     }
   ],
-  "required": ["id", "type", "location"]
+  "required": [
+    "id",
+    "type",
+    "location"
+  ]
 }

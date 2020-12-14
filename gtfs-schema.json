@@ -53,38 +53,55 @@
         "hasService": {
           "type": "string",
           "anyOf": [
-        {
-          "type": "string",
-          "minLength": 1,
-          "maxLength": 256,
-          "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
-          "description": "Property. Identifier format of any NGSI entity"
-        },
-        {
-          "type": "string",
-          "format": "uri",
-          "description": "Property. Identifier format of any NGSI entity"
-        }
-      ]
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+              "description": "Property. Identifier format of any NGSI entity"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "description": "Property. Identifier format of any NGSI entity"
+            }
+          ],
           "description": "Relationship. Service to which this rule applies to. Derived from `service_id`. Model:'https://schema.org/URL'"
         },
         "hasTrip": {
           "type": "string",
           "anyOf": [
-        {
-          "type": "string",
-          "minLength": 1,
-          "maxLength": 256,
-          "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
-          "description": "Property. Identifier format of any NGSI entity"
-        },
-        {
-          "type": "string",
-          "format": "uri",
-          "description": "Property. Identifier format of any NGSI entity"
-        }
-      ],
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+              "description": "Property. Identifier format of any NGSI entity"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "description": "Property. Identifier format of any NGSI entity"
+            }
+          ],
           "description": "Relationship. Trip associated to this Entity. It shall point to an Entity of Type GtfsTrip. Model:'https://schema.org/URL'"
+        },
+        "hasStop": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+              "description": "Property. Identifier format of any NGSI entity"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "description": "Property. Identifier format of any NGSI entity"
+            }
+          ],
+          "description": "Relationship. It shall point to an Entity of Type GtfsStop"
         }
       }
     }

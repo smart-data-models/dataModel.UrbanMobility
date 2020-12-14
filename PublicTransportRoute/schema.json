@@ -5,8 +5,12 @@
   "description": "A generic public transport route",
   "type": "object",
   "allOf": [
-    { "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons" },
-    { "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons" },
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+    },
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    },
     {
       "properties": {
         "type": {
@@ -14,34 +18,48 @@
           "enum": [
             "PublicTransportRoute"
           ],
-          "description": "NGSI Entity type"
+          "description": "Property. NGSI Entity type. It has to be PublicTransportRoute"
         },
         "routeCode": {
-          "type": "string"
+          "type": "string",
+          "description": "Property. ID or code of the route (e.g. ‘HT5200104000’).  Model:'https://schema.org/Text'."
         },
         "shortRouteCode": {
-          "type": "string"
-        },
-        "name": {
-          "type": "string"
+          "type": "string",
+          "description": "Property. Shorter form of the ID/code of the route (e.g. ‘5200104000’’). Model:'https://schema.org/Text'."
         },
         "transportationType": {
           "type": "integer",
-          "enum": [0,1,2,3,4,5,6,7]
+          "enum": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "description": "Property. Types of public transport using this stop as defined in (https://developers.google.com/transit/gtfs/reference/#routestxt). Model:'https://schema.org/Number'. Enum:'0, 1, 2, 3, 4, 5, 6, 7'"
         },
         "routeColor": {
           "type": "string",
-          "pattern": "^#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$"
+          "pattern": "^#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$",
+          "description": "Property. Color assigned to route in text.  Model:'https://schema.org/color'."
         },
         "routeTextColor": {
-          "type": "string"
+          "type": "string",
+          "description": "Property. Color assigned to route in hexadecimal.  Model:'https://schema.org/color'."
         },
         "routeSegments": {
           "type": "array",
+          "description": "Property. Segments of this route defined by their name and stops.",
           "items": {
             "type": "object",
             "properties": {
-              "segmentName": {"type": "string"},
+              "segmentName": {
+                "type": "string"
+              },
               "refPublicTransportStops": {
                 "type": "array",
                 "items": {
@@ -50,11 +68,15 @@
                 }
               }
             },
-            "required": ["segmentName", "refPublicTransportStops"]
+            "required": [
+              "segmentName",
+              "refPublicTransportStops"
+            ]
           }
         },
         "schedule": {
           "type": "array",
+          "description": "Property. Working hours of this route. Model:'https://schema.org/OpeningHoursSpecification'.",
           "items": {
             "properties": {
               "opens": {
@@ -75,7 +97,7 @@
                   "Sunday",
                   "Thursday",
                   "Tuesday",
-                  "Wednesday"  
+                  "Wednesday"
                 ]
               }
             }
