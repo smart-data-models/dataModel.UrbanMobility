@@ -7,7 +7,9 @@ Entity: GtfsStop
 
 - `address`: The mailing address.  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided.  - `code`:   - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`:   - `hasParentStation`:   - `id`:   - `location`:   - `name`:   - `operatedBy`:   - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `page`:   - `seeAlso`:   - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: NGSI Entity type  - `wheelChairAccessible`:   - `zoneCode`:     
 Required properties  
-- `id`  - `location`  - `name`  - `type`  ## Data Model description of properties  
+- `id`  - `location`  - `name`  - `type`    
+See [https://developers.google.com/transit/gtfs/reference/#stopstxt](https://developers.google.com/transit/gtfs/reference/#stopstxt). It represents a GTFS `stop` which `location_type` shall be equal to `0`.  
+## Data Model description of properties  
 Sorted alphabetically (click for details)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
