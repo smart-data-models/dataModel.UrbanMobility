@@ -19,7 +19,7 @@
           "description": "Property. NGSI Entity Type: It has to be ArrivalEstimation"
         },
         "hasStop": {
-          "$ref": ""
+          "$ref": "https://smart-data-models.github.io/dataModel.UrbanMobility/gtfs-schema.json#/definitions/GTFS-Stop-Commons/hasStop"
         },
         "hasTrip": {
           "$ref": "https://smart-data-models.github.io/dataModel.UrbanMobility/gtfs-schema.json#/definitions/GTFS-Stop-Commons/hasTrip"
