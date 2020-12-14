@@ -69,7 +69,6 @@
           "description": "Relationship. Service to which this rule applies to. Derived from `service_id`. Model:'https://schema.org/URL'"
         },
         "hasTrip": {
-          "type": "string",
           "anyOf": [
             {
               "type": "string",
