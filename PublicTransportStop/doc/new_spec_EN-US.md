@@ -7,7 +7,9 @@ Entity: PublicTransportStop
 
 - `address`: The mailing address.  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided.  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `id`:   - `location`:   - `name`:   - `openingHoursSpecification`:   - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `peopleCount`:   - `refPeopleCountDevice`:   - `refPublicTransportRoute`:   - `seeAlso`:   - `shortStopCode`:   - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `stopCode`:   - `transportationType`:   - `type`: NGSI Entity type  - `wheelchairAccessible`:     
 Required properties  
-- `id`  - `name`  - `transportationType`  - `type`  ## Data Model description of properties  
+- `id`  - `name`  - `transportationType`  - `type`    
+Generic model for a public transport stop. It adopts some GTFS definitions, but it does not need to be linked to additional GTFS data.  
+## Data Model description of properties  
 Sorted alphabetically (click for details)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
