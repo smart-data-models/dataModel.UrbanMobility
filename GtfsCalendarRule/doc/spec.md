@@ -74,6 +74,7 @@ The data model is defined as shown below:
 
 -   `wednesday`: Same as GTFS `wednesday`
 
+
     -   Attribute type: Property.
         [https://schema.org/Boolean](https://schema.org/Boolean)
     -   Mandatory
