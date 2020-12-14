@@ -7,7 +7,9 @@ Entity: ArrivalEstimation
 
 - `alternateName`: An alternative name for this item  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `hasStop`:   - `hasTrip`:   - `headsign`:   - `id`:   - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `remainingDistance`:   - `remainingTime`:   - `seeAlso`:   - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: NGSI Entity type    
 Required properties  
-- `hasStop`  - `hasTrip`  - `headSign`  - `id`  - `remainingTime`  - `type`  ## Data Model description of properties  
+- `hasStop`  - `hasTrip`  - `headSign`  - `id`  - `remainingTime`  - `type`    
+This Entity Type captures the estimated arrival time of a public transport vehicle reaching a particular stop, whilst the vehicle is servicing a particular route.  
+## Data Model description of properties  
 Sorted alphabetically (click for details)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
