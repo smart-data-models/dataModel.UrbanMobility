@@ -13,33 +13,68 @@
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["GtfsTransferRule"],
-          "description": "NGSI Entity type"
-        },
-        "name": {
-          "type": "string"
-        },
-        "description": {
-          "type": "string"
+          "enum": [
+            "GtfsTransferRule"
+          ],
+          "description": "Property. NGSI Entity type. It has to be GtfsTransferRule"
         },
         "hasOrigin": {
-          "type": "string",
-          "format": "uri"
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+              "description": "Property. Identifier format of any NGSI entity"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "description": "Property. Identifier format of any NGSI entity"
+            }
+          ],
+          "description": "Relationship. Trip associated to this Entity. It shall point to an Entity of type GtfsStop or GtfsStation. Model:'http://schema.org/URL'"
         },
         "hasDestination": {
-          "type": "string",
-          "format": "uri"
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+              "description": "Property. Identifier format of any NGSI entity"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "description": "Property. Identifier format of any NGSI entity"
+            }
+          ],
+          "description": "Relationship. Trip associated to this Entity. It shall point to an Entity of type GtfsStop or GtfsStation. Model:'http://schema.org/URL'"
         },
         "transferType": {
           "type": "string",
-          "enum": ["0", "1", "2", "3"]
+          "enum": [
+            "0",
+            "1",
+            "2",
+            "3"
+          ],
+          "description": "Property. Same as GTFS `transfer_type`. Model:'https://schema.org/Text'. Enum:'0, 1, 2, 3'"
         },
         "minimumTransferTime": {
           "type": "integer",
-          "minValue": 1
+          "minValue": 1,
+          "description": "Property. Same as GTFS `min_transfer_time`. Model:'https://schema.org/Integer'. Unit:'seconds'"
         }
       }
     }
   ],
-  "required": ["id", "type", "hasOrigin", "hasDestination", "transferType"]
+  "required": [
+    "id",
+    "type",
+    "hasOrigin",
+    "hasDestination",
+    "transferType"
+  ]
 }
