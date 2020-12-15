@@ -10,7 +10,7 @@
       "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
     },
     {
-      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/address"
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/address"
     },
     {
       "properties": {
@@ -31,7 +31,7 @@
           "description": "Property. Same as GTFS `agency_name`. Model:'https://schema.org/Text'"
         },
         "page": {
-          "$ref": "https://smart-data-models.github.io/dataModel.UrbanMobility/gtfs-schema.json#/definitions/GTFS-Stop-Commons/page"
+          "$ref": "https://smart-data-models.github.io/dataModel.UrbanMobility/gtfs-schema.json#/definitions/GTFS-Stop-Commons/properties/page"
         },
         "phone": {
           "type": "string",
