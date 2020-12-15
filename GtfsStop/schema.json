@@ -26,6 +26,7 @@
         },
         "operatedBy": {
           "type": "array",
+          "description": "Relationship. Model:'https://schema.org/URL'. Agency that operates this stop. List of Relationships. They shall point to an Entity of Type GtfsAgency",
           "items": {
             "anyOf": [
               {

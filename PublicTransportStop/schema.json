@@ -30,7 +30,7 @@
           "description": "Property. Shorter form of the identifier/code of the public transport stop. Model:'https://schema.org/Text'."
         },
         "wheelchairAccessible": {
-          "$ref": "https://smart-data-models.github.io/datamodel.urbanMobility#/definitions/GTFS-Stop-Commons.json/wheelchairAccessible"
+          "$ref": "https://smart-data-models.github.io/datamodel.urbanMobility#/definitions/GTFS-Stop-Commons.json/properties/wheelchairAccessible"
         },
         "transportationType": {
           "type": "array",
@@ -95,7 +95,7 @@
           ]
         },
         "openingHoursSpecification": {
-          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/DateTime-Commons/openingHoursSpecification"
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/DateTime-Commons/properties/openingHoursSpecification"
         }
       },
       "required": [

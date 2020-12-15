@@ -20,7 +20,7 @@
         },
         "distanceTravelled": {
           "type": "array",
-          "description": "An array of the distance travelled when reaching each of the points that make the `LineString` or `MultiLineString` that represents this shape. It shall match the same number of elements as the corresponding `LineString` or `MultiLineString`.",
+          "description": "Property. An array of the distance travelled when reaching each of the points that make the `LineString` or `MultiLineString` that represents this shape. It shall match the same number of elements as the corresponding `LineString` or `MultiLineString`.",
           "items": {
             "type": "number",
             "minimum": 0

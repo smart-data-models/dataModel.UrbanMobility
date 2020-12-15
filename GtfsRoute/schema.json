@@ -19,7 +19,7 @@
           "description": "Property. NGSI Entity type. It has to be GtfsRoute"
         },
         "page": {
-          "$ref": "https://smart-data-models.github.io/dataModel.UrbanMobility/gtfs-schema.json#/definitions/GTFS-Stop-Commons"
+          "$ref": "https://smart-data-models.github.io/dataModel.UrbanMobility/gtfs-schema.json#/definitions/GTFS-Stop-Commons/properties/page"
         },
         "routeColor": {
           "type": "string",
