@@ -18,9 +18,6 @@
           ],
           "description": "Property. NGSI Entity Type: It has to be ArrivalEstimation"
         },
-        "hasStop": {
-          "$ref": "https://smart-data-models.github.io/dataModel.UrbanMobility/gtfs-schema.json#/definitions/GTFS-Stop-Commons/hasStop"
-        },
         "hasTrip": {
           "$ref": "https://smart-data-models.github.io/dataModel.UrbanMobility/gtfs-schema.json#/definitions/GTFS-Stop-Commons/hasTrip"
         },
@@ -37,6 +34,9 @@
         "headSign": {
           "type": "string",
           "description": "Property. It shall contain the text that appears on a sign that identifies the trip's destination to passengers. Model:'https://schema.org/Text'."
+        },
+        "hasStop": {
+          "$ref": "https://smart-data-models.github.io/dataModel.UrbanMobility/gtfs-schema.json#/definitions/GTFS-Stop-Commons/hasStop"
         }
       }
     }
