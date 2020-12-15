@@ -29,8 +29,8 @@
           "type": "string",
           "description": "Property. Shorter form of the identifier/code of the public transport stop. Model:'https://schema.org/Text'."
         },
-        "wheelchairAccessible": {
-          "$ref": "https://smart-data-models.github.io/datamodel.urbanMobility#/definitions/GTFS-Stop-Commons.json/properties/wheelchairAccessible"
+        "wheelChairAccessible": {
+          "$ref": "https://smart-data-models.github.io/dataModel.UrbanMobility/gtfs-schema.json#/definitions/GTFS-Stop-Commons/properties/wheelChairAccessible"
         },
         "transportationType": {
           "type": "array",
