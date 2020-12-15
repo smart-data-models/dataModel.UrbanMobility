@@ -19,13 +19,30 @@ GtfsCalendarRule:
       description: 'A description of this item'
       type: Property
     endDate:
+      description: "End date of this rule in `YYYY-MM-DD` format. It can be obtained from the field `end_date` of [calendar.txt](https://developers.google.com/transit/gtfs/reference/#calendartxt)"
       format: date
-      type: string
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Boolean
     friday:
-      type: boolean
+      description: 'Same as GTFS `friday`'
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Boolean
     hasService:
-      format: uri
-      type: string
+      anyOf:
+        - description: 'Property. Identifier format of any NGSI entity'
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+        - description: 'Property. Identifier format of any NGSI entity'
+          format: uri
+          type: string
+      description: 'Service to which this rule applies to. Derived from `service_id`'
+      type: Relationship
+      x-ngsi:
+        model: https://schema.org/URL
     id:
       anyOf: &gtfscalendarrule_-_properties_-_owner_-_items_-_anyof
         - description: 'Property. Identifier format of any NGSI entity'
@@ -37,7 +54,10 @@ GtfsCalendarRule:
           format: uri
           type: string
     monday:
-      type: boolean
+      description: 'Same as GTFS `monday`'
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Boolean
     name:
       description: 'The name of this item.'
       type: Property
@@ -47,8 +67,12 @@ GtfsCalendarRule:
         anyOf: *gtfscalendarrule_-_properties_-_owner_-_items_-_anyof
       type: Property
     saturday:
-      type: boolean
+      description: 'Same as GTFS `saturday`'
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Boolean
     seeAlso:
+      description: 'list of uri pointing to additional resources about the item'
       oneOf:
         - items:
             - format: uri
@@ -57,25 +81,41 @@ GtfsCalendarRule:
           type: array
         - format: uri
           type: string
+      type: Property
     source:
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'
       type: Property
     startDate:
+      description: "Start date of this rule in `YYYY-MM-DD` format. It can be obtained from the field `start_date` of [calendar.txt](https://developers.google.com/transit/gtfs/reference/#calendartxt)"
       format: date
-      type: string
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Date
     sunday:
-      type: boolean
+      description: 'Same as GTFS `sunday`'
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Boolean
     thursday:
-      type: boolean
+      description: 'Same as GTFS `thursday`'
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Boolean
     tuesday:
-      type: boolean
+      description: 'Same as GTFS `tuesday`'
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Boolean
     type:
-      description: 'NGSI Entity type'
+      description: 'NGSI Entity Type: It has to be GtfsCalendarRule'
       enum:
         - GtfsCalendarRule
-      type: string
+      type: Property
     wednesday:
-      type: boolean
+      description: 'Same as GTFS `wednesday`'
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Boolean
   required:
     - id
     - type
