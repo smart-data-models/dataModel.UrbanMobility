@@ -197,48 +197,79 @@ PublicTransportStop:
           type: object
       title: 'GeoJSON Geometry'
     name:
-      type: string
+      description: 'The name of this item.'
+      type: Property
     openingHoursSpecification:
+      description: 'A structured value providing information about the opening hours of a place or a certain service inside a place.'
       items:
         properties:
           closes:
-            pattern: "[0-9]{2}:[0-9]{2}"
+            format: time
             type: string
           dayOfWeek:
             enum:
-              - Friday
               - Monday
-              - PublicHolidays
-              - Saturday
-              - Sunday
-              - Thursday
               - Tuesday
               - Wednesday
+              - Thursday
+              - Friday
+              - Saturday
+              - Sunday
+              - PublicHolidays
             type: string
           opens:
-            pattern: "[0-9]{2}:[0-9]{2}"
+            format: time
+            type: string
+          validFrom:
+            format: date-time
+            type: string
+          validThrough:
+            format: date-time
             type: string
       minItems: 1
-      type: array
+      type: Property
     owner:
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
       items:
         anyOf: *publictransportstop_-_properties_-_owner_-_items_-_anyof
       type: Property
     peopleCount:
+      description: 'Estimation of people waiting in the stop'
       minimum: 0
-      type: integer
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Number.
     refPeopleCountDevice:
-      format: uri
-      type: string
+      anyOf:
+        - description: 'Property. Identifier format of any NGSI entity'
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+        - description: 'Property. Identifier format of any NGSI entity'
+          format: uri
+          type: string
+      description: 'Reference to the [Device](https://github.com/Fiware/dataModels/blob/master/specs/Device/Device/doc/spec.md) providing people count estimate.'
+      type: Property
     refPublicTransportRoute:
+      description: 'Public transport routes using this stop.'
       items:
-        format: uri
-        type: string
+        anyOf:
+          - description: 'Property. Identifier format of any NGSI entity'
+            maxLength: 256
+            minLength: 1
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+            type: string
+          - description: 'Property. Identifier format of any NGSI entity'
+            format: uri
+            type: string
       minItems: 1
-      type: array
+      type: Relationship
       uniqueItems: true
+      x-ngsi:
+        model: ' https://schema.org/URL'
     seeAlso:
+      description: 'list of uri pointing to additional resources about the item'
       oneOf:
         - items:
             - format: uri
@@ -247,14 +278,22 @@ PublicTransportStop:
           type: array
         - format: uri
           type: string
+      type: Property
     shortStopCode:
-      type: string
+      description: 'Shorter form of the identifier/code of the public transport stop'
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Text.
     source:
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'
       type: Property
     stopCode:
-      type: string
+      description: 'Identifier/code of the public transport stop'
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Text.
     transportationType:
+      description: "Types of public transport using this stop as defined in (https://developers.google.com/transit/gtfs/reference/#routestxt). Enum:'0, 1, 2, 3, 4, 5, 6, 7'"
       items:
         enum:
           - 0
@@ -266,21 +305,20 @@ PublicTransportStop:
           - 6
           - 7
         type: integer
-      type: array
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Number
     type:
-      description: 'NGSI Entity type'
+      description: 'NGSI Entity type. It has to be PublicTransportStop'
       enum:
         - PublicTransportStop
-      type: string
-    wheelchairAccessible:
+      type: Property
+    wheelChairAccessible:
+      description: "Same as GTFS `wheelchair_boarding`. Enum:'0, 1 ,2'. Reference in [GTFS](https://developers.google.com/transit/gtfs/reference/#stopstxt) "
       enum:
         - 0
         - 1
         - 2
-      type: integer
-  required:
-    - id
-    - type
-    - transportationType
-    - name
+      type: Property
+  required: []
   type: object
