@@ -5,7 +5,7 @@ Entity: GtfsCalendarDateRule
 
 ## List of properties  
 
-- `alternateName`: An alternative name for this item  - `appliesOn`:   - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `exceptionType`:   - `hasService`:   - `id`:   - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `seeAlso`:   - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: NGSI Entity type    
+- `alternateName`: An alternative name for this item  - `appliesOn`:  Date (in YYYY-MM-DD format) this rule applies to. It shall be obtained from the GTFS `date` field  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `exceptionType`: Same as GTFS `exception_type` field. Enum:'1, 2'  - `hasService`: Service to which this rule applies to. Derived from `service_id`  - `id`:   - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: NGSI Entity Type: It has to be GtfsCalendarDateRule    
 Required properties  
 - `appliesOn`  - `exceptionType`  - `hasService`  - `id`  - `type`    
 See [https://developers.google.com/transit/gtfs/reference/#calendar_datestxt](https://developers.google.com/transit/gtfs/reference/#calendar_datestxt)  
@@ -20,8 +20,11 @@ GtfsCalendarDateRule:
       description: 'An alternative name for this item'    
       type: Property    
     appliesOn:    
+      description: ' Date (in YYYY-MM-DD format) this rule applies to. It shall be obtained from the GTFS `date` field'    
       format: date    
-      type: string    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Date    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
       type: Property    
@@ -37,13 +40,27 @@ GtfsCalendarDateRule:
       description: 'A description of this item'    
       type: Property    
     exceptionType:    
+      description: 'Same as GTFS `exception_type` field. Enum:''1, 2'''    
       enum:    
         - 1    
         - 2    
-      type: string    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     hasService:    
-      format: uri    
-      type: string    
+      anyOf:    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'Service to which this rule applies to. Derived from `service_id`'    
+      type: Relationship    
+      x-ngsi:    
+        model: https://schema.org/URL    
     id:    
       anyOf: &gtfscalendardaterule_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -63,6 +80,7 @@ GtfsCalendarDateRule:
         anyOf: *gtfscalendardaterule_-_properties_-_owner_-_items_-_anyof    
       type: Property    
     seeAlso:    
+      description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
             - format: uri    
@@ -71,14 +89,15 @@ GtfsCalendarDateRule:
           type: array    
         - format: uri    
           type: string    
+      type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
       type: Property    
     type:    
-      description: 'NGSI Entity type'    
+      description: 'NGSI Entity Type: It has to be GtfsCalendarDateRule'    
       enum:    
         - GtfsCalendarDateRule    
-      type: string    
+      type: Property    
   required:    
     - id    
     - type    
