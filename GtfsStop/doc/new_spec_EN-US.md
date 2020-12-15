@@ -5,7 +5,7 @@ Entity: GtfsStop
 
 ## List of properties  
 
-- `address`: The mailing address.  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided.  - `code`:   - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`:   - `hasParentStation`:   - `id`:   - `location`:   - `name`:   - `operatedBy`:   - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `page`:   - `seeAlso`:   - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: NGSI Entity type  - `wheelChairAccessible`:   - `zoneCode`:     
+- `address`: The mailing address.  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided.  - `code`: Same as GTFS `stop_code`  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `hasParentStation`: Same as GTFS `parent_station`.  - `hasService`: Service to which this rule applies to. Derived from `service_id`  - `hasStop`: It shall point to an Entity of Type GtfsStop  - `hasTrip`: Trip associated to this Entity. It shall point to an Entity of Type GtfsTrip  - `id`:   - `location`:   - `name`: The name of this item.  - `operatedBy`: Agency that operates this stop. List of Relationships. They shall point to an Entity of Type GtfsAgency  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `page`: Same as GTFS `stop_url`  - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `stop_desc`: Same as GTFS `stop_desc`.  - `type`: NGSI Entity type. It has to be GtfsStop  - `wheelChairAccessible`: Same as GTFS `wheelchair_boarding`. Enum:'0, 1 ,2'. Reference in [GTFS](https://developers.google.com/transit/gtfs/reference/#stopstxt)   - `zoneCode`: Transport zone to which this stop belongs to. Same as GTFS `zone_id`    
 Required properties  
 - `id`  - `location`  - `name`  - `type`    
 See [https://developers.google.com/transit/gtfs/reference/#stopstxt](https://developers.google.com/transit/gtfs/reference/#stopstxt). It represents a GTFS `stop` which `location_type` shall be equal to `0`.  
@@ -41,7 +41,10 @@ GtfsStop:
       description: 'The geographic area where a service or offered item is provided.'    
       type: Property    
     code:    
-      type: string    
+      description: 'Same as GTFS `stop_code`'    
+      type: Property    
+      x-ngsi:    
+        model: http://schema.org/Text    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
       type: Property    
@@ -54,12 +57,62 @@ GtfsStop:
       format: date-time    
       type: Property    
     description:    
-      type: string    
+      description: 'A description of this item'    
+      type: Property    
     hasParentStation:    
-      format: uri    
-      type: string    
+      anyOf:    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'Same as GTFS `parent_station`.'    
+      type: Relationship    
+    hasService:    
+      anyOf:    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'Service to which this rule applies to. Derived from `service_id`'    
+      type: Relationship    
+      x-ngsi:    
+        model: https://schema.org/URL    
+    hasStop:    
+      anyOf:    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'It shall point to an Entity of Type GtfsStop'    
+      type: Relationship    
+    hasTrip:    
+      anyOf:    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'Trip associated to this Entity. It shall point to an Entity of Type GtfsTrip'    
+      type: Relationship    
+      x-ngsi:    
+        model: https://schema.org/URL    
     id:    
-      anyOf: &gtfsstop_-_properties_-_operatedby_-_items_-_anyof    
+      anyOf: &gtfsstop_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
           maxLength: 256    
           minLength: 1    
@@ -216,22 +269,38 @@ GtfsStop:
           type: object    
       title: 'GeoJSON Geometry'    
     name:    
-      type: string    
+      description: 'The name of this item.'    
+      type: Property    
     operatedBy:    
+      description: 'Agency that operates this stop. List of Relationships. They shall point to an Entity of Type GtfsAgency'    
       items:    
-        anyOf: *gtfsstop_-_properties_-_operatedby_-_items_-_anyof    
+        anyOf:    
+          - description: 'Property. Identifier format of any NGSI entity'    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+          - description: 'Property. Identifier format of any NGSI entity'    
+            format: uri    
+            type: string    
       minItems: 0    
-      type: array    
+      type: Relationship    
       uniqueItems: true    
+      x-ngsi:    
+        model: https://schema.org/URL    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
-        anyOf: *gtfsstop_-_properties_-_operatedby_-_items_-_anyof    
+        anyOf: *gtfsstop_-_properties_-_owner_-_items_-_anyof    
       type: Property    
     page:    
+      description: 'Same as GTFS `stop_url`'    
       format: uri    
-      type: string    
+      type: Property    
+      x-ngsi:    
+        model: http://schema.org/URL    
     seeAlso:    
+      description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
             - format: uri    
@@ -240,22 +309,30 @@ GtfsStop:
           type: array    
         - format: uri    
           type: string    
+      type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
       type: Property    
+    stop_desc:    
+      description: 'Same as GTFS `stop_desc`.'    
+      type: Property    
     type:    
-      description: 'NGSI Entity type'    
+      description: 'NGSI Entity type. It has to be GtfsStop'    
       enum:    
         - GtfsStop    
-      type: string    
+      type: Property    
     wheelChairAccessible:    
+      description: "Same as GTFS `wheelchair_boarding`. Enum:'0, 1 ,2'. Reference in [GTFS](https://developers.google.com/transit/gtfs/reference/#stopstxt) "    
       enum:    
         - 0    
         - 1    
         - 2    
-      type: string    
+      type: Property    
     zoneCode:    
-      type: string    
+      description: 'Transport zone to which this stop belongs to. Same as GTFS `zone_id`'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
   required:    
     - id    
     - type    
