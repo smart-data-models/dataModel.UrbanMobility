@@ -27,7 +27,7 @@
           "description": "Property. Same as GTFS `exception_type` field. Model:'https://schema.org/Text'. Enum:'1, 2'"
         },
         "hasService": {
-          "$ref": "https://smart-data-models.github.io/data-Model.UrbanMobility/gtfs-schema.json#/definitions/GTFS-Stop-Commons/properties/hasService"
+          "$ref": "https://smart-data-models.github.io/dataModel.UrbanMobility/gtfs-schema.json#/definitions/GTFS-Stop-Commons/properties/hasService"
         }
       }
     }
