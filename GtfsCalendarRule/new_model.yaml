@@ -53,6 +53,8 @@ GtfsCalendarRule:
         - description: 'Property. Identifier format of any NGSI entity'
           format: uri
           type: string
+      description: 'Unique identifier of the entity'
+      type: Property
     monday:
       description: 'Same as GTFS `monday`'
       type: Property
@@ -65,6 +67,7 @@ GtfsCalendarRule:
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
       items:
         anyOf: *gtfscalendarrule_-_properties_-_owner_-_items_-_anyof
+        description: 'Property. Unique identifier of the entity'
       type: Property
     saturday:
       description: 'Same as GTFS `saturday`'
