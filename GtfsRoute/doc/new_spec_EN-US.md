@@ -5,7 +5,7 @@ Entity: GtfsRoute
 
 ## List of properties  
 
-- `alternateName`: An alternative name for this item  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `id`:   - `name`: The name of this item.  - `operatedBy`: Agency that operates this route. It shall point to an Entity of Type GtfsAgency  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `page`: Same as GTFS `stop_url`  - `routeColor`: Same as GTFS `route_color`. See [GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt)  - `routeSortOrder`: Same as GTFS `route_sort_order`  - `routeTextColor`: Same as GTFS `route_text_color`. See [GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt)  - `routeType`: Same as GTFS `route_type`. allowed values those allowed for `route_type` as prescribed by [GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt). Enum:'0, 1, 2, 3, 4, 5, 6, 7'  - `seeAlso`: list of uri pointing to additional resources about the item  - `shortName`: Same as GTFS `route_short_name`  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: NGSI Entity type. It has to be GtfsRoute    
+- `alternateName`: An alternative name for this item  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `id`: Unique identifier of the entity  - `name`: The name of this item.  - `operatedBy`: Agency that operates this route. It shall point to an Entity of Type GtfsAgency  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `page`: Same as GTFS `stop_url`  - `routeColor`: Same as GTFS `route_color`. See [GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt)  - `routeSortOrder`: Same as GTFS `route_sort_order`  - `routeTextColor`: Same as GTFS `route_text_color`. See [GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt)  - `routeType`: Same as GTFS `route_type`. allowed values those allowed for `route_type` as prescribed by [GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt). Enum:'0, 1, 2, 3, 4, 5, 6, 7'  - `seeAlso`: list of uri pointing to additional resources about the item  - `shortName`: Same as GTFS `route_short_name`  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: NGSI Entity type. It has to be GtfsRoute    
 Required properties  
 - `id`  - `type`    
 See [https://developers.google.com/transit/gtfs/reference/#routestxt](https://developers.google.com/transit/gtfs/reference/#routestxt)  
@@ -43,6 +43,8 @@ GtfsRoute:
         - description: 'Property. Identifier format of any NGSI entity'    
           format: uri    
           type: string    
+      description: 'Unique identifier of the entity'    
+      type: Property    
     name:    
       description: 'The name of this item.'    
       type: Property    
@@ -64,6 +66,7 @@ GtfsRoute:
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *gtfsroute_-_properties_-_owner_-_items_-_anyof    
+        description: 'Property. Unique identifier of the entity'    
       type: Property    
     page:    
       description: 'Same as GTFS `stop_url`'    
