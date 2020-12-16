@@ -5,7 +5,7 @@ Entity: GtfsStopTime
 
 ## List of properties  
 
-- `alternateName`: An alternative name for this item  - `arrivalTime`: Same as GTFS `arrival_time`  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `departureTime`: Same as GTFS `departure_time`  - `description`: A description of this item  - `distanceTravelled`: Same as GTFS `shape_dist_traveled`  - `dropOffType`: Same as GTFS `drop_off_type`. Enum:'0, 1, 2, 3'  - `hasStop`: Same as GTFS `stop_id`. It shall point to an Entity of type GtfsStop  - `hasTrip`: Trip associated to this Entity. It shall point to an Entity of Type GtfsTrip  - `id`:   - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `pickupType`: Same as GTFS `pickup_type`. Enum:'0, 1, 2, 3'   - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `stopHeadsign`: Same as GTFS `stop_headsign`  - `stopSequence`: Same as GTFS `stop_sequence`. Starting with `1`.  - `timepoint`: Same as GTFS `timepoint`. Enum:'0, 1'  - `type`: NGSI Entity type. It has to be GtfsStopTime    
+- `alternateName`: An alternative name for this item  - `arrivalTime`: Same as GTFS `arrival_time`  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `departureTime`: Same as GTFS `departure_time`  - `description`: A description of this item  - `distanceTravelled`: Same as GTFS `shape_dist_traveled`  - `dropOffType`: Same as GTFS `drop_off_type`. Enum:'0, 1, 2, 3'  - `hasStop`: Same as GTFS `stop_id`. It shall point to an Entity of type GtfsStop  - `hasTrip`: Trip associated to this Entity. It shall point to an Entity of Type GtfsTrip  - `id`: Unique identifier of the entity  - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `pickupType`: Same as GTFS `pickup_type`. Enum:'0, 1, 2, 3'   - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `stopHeadsign`: Same as GTFS `stop_headsign`  - `stopSequence`: Same as GTFS `stop_sequence`. Starting with `1`.  - `timepoint`: Same as GTFS `timepoint`. Enum:'0, 1'  - `type`: NGSI Entity type. It has to be GtfsStopTime    
 Required properties  
 - `arrivalTime`  - `departureTime`  - `hasStop`  - `hasTrip`  - `id`  - `stopSequence`  - `type`    
 See [https://developers.google.com/transit/gtfs/reference/#stop_timestxt](https://developers.google.com/transit/gtfs/reference/#stop_timestxt)  
@@ -100,6 +100,8 @@ GtfsStopTime:
         - description: 'Property. Identifier format of any NGSI entity'    
           format: uri    
           type: string    
+      description: 'Unique identifier of the entity'    
+      type: Property    
     name:    
       description: 'The name of this item.'    
       type: Property    
@@ -107,6 +109,7 @@ GtfsStopTime:
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *gtfsstoptime_-_properties_-_owner_-_items_-_anyof    
+        description: 'Property. Unique identifier of the entity'    
       type: Property    
     pickupType:    
       default: 0    
