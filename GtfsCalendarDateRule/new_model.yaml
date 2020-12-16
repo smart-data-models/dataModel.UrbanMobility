@@ -56,6 +56,8 @@ GtfsCalendarDateRule:
         - description: 'Property. Identifier format of any NGSI entity'
           format: uri
           type: string
+      description: 'Unique identifier of the entity'
+      type: Property
     name:
       description: 'The name of this item.'
       type: Property
@@ -63,6 +65,7 @@ GtfsCalendarDateRule:
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
       items:
         anyOf: *gtfscalendardaterule_-_properties_-_owner_-_items_-_anyof
+        description: 'Property. Unique identifier of the entity'
       type: Property
     seeAlso:
       description: 'list of uri pointing to additional resources about the item'
