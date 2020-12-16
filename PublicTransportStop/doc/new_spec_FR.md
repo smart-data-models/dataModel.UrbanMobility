@@ -1,11 +1,14 @@
 Entité : PublicTransportStop  
 ============================  
-Cette spécification est une **version temporelle**. Elle est générée automatiquement à partir des propriétés documentées décrites dans le schema.json condensé dans le fichier `model.yaml`. Un fichier temporaire `nouveau_modèle.yaml` a été créé dans chaque modèle de données pour éviter d'avoir un impact sur les scripts existants. Ainsi, la spécification sera incomplète tant que le fichier schema.json n'est pas mis à jour au nouveau format (documentation des propriétés). Une fois mis à jour, le fichier `model.yaml` (`nouveau_model.yaml`) doit être mis à jour également (automatiquement) . Plus d'informations dans ce [lien](https://github.com/smart-data-models/data-models/blob/master/specs/warning_message_new_spec.md). Tant qu'il s'agit d'un format provisoire, tout [feedback est le bienvenu dans ce formulaire](https://smartdatamodels.org/index.php/submit-an-issue-2/) en choisissant l'option "Feedback sur la nouvelle spécification".  
+[Licence ouverte](https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/PublicTransportStop/LICENSE.md)  
 Description globale : **Un arrêt de transport public générique**  
 
 ## Liste des biens  
 
-- `address`: L'adresse postale.  - `alternateName`: Un autre nom pour cet article  - `areaServed`: La zone géographique où un service ou un article offert est fourni.  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `description`: Une description de cet article  - `id`:   - `location`:   - `name`:   - `openingHoursSpecification`:   - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `peopleCount`:   - `refPeopleCountDevice`:   - `refPublicTransportRoute`:   - `seeAlso`:   - `shortStopCode`:   - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `stopCode`:   - `transportationType`:   - `type`: NGSI Type d'entité  - `wheelchairAccessible`:   ## Modèle de données description des biens  
+- `address`: L'adresse postale.  - `alternateName`: Un autre nom pour cet article  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `description`: Une description de cet article  - `id`: Identifiant unique de l'entité  - `location`:   - `name`: Le nom de cet article.  - `openingHoursSpecification`: Une valeur structurée fournissant des informations sur les heures d'ouverture d'un lieu ou d'un certain service à l'intérieur d'un lieu.  - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `peopleCount`: Estimation du nombre de personnes en attente à l'arrêt  - `refPeopleCountDevice`: Référence au [dispositif] (https://github.com/Fiware/dataModels/blob/master/specs/Device/Device/doc/spec.md) qui fournit une estimation du nombre de personnes.  - `refPublicTransportRoute`: Les itinéraires de transport public utilisant cet arrêt.  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur le sujet  - `shortStopCode`: Forme plus courte de l'identificateur/code de l'arrêt de transport public  - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `stopCode`: Identificateur/code de l'arrêt de transport public  - `transportationType`: Types de transport public utilisant cet arrêt, tels que définis dans (https://developers.google.com/transit/gtfs/reference/#routestxt). Enumération : "0, 1, 2, 3, 4, 5, 6, 7".  - `type`: Type d'entité NGSI. Il doit s'agir de PublicTransportStop  - `wheelChairAccessible`: Même chose que GTFS `wheelchair_boarding`. Enumération : "0, 1 ,2". Référence dans [GTFS](https://developers.google.com/transit/gtfs/reference/#stopstxt)    
+Propriétés requises  
+Modèle générique d'un arrêt de transport public. Il adopte certaines définitions de la GTFS, mais il n'a pas besoin d'être lié à des données GTFS supplémentaires.  
+## Modèle de données description des biens  
 Classement par ordre alphabétique (cliquez pour plus de détails)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
@@ -16,26 +19,35 @@ PublicTransportStop:
       description: 'The mailing address.'    
       properties:    
         addressCountry:    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         addressLocality:    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''    
           type: string    
         addressRegion:    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''    
           type: string    
         areaServed:    
+          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''    
           type: string    
         postOfficeBoxNumber:    
+          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         postalCode:    
+          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         streetAddress:    
+          description: 'Property. The street address. Model:''https://schema.org/Text'''    
           type: string    
       type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
       type: Property    
     areaServed:    
-      description: 'The geographic area where a service or offered item is provided.'    
+      description: 'The geographic area where a service or offered item is provided'    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
       type: Property    
@@ -60,6 +72,8 @@ PublicTransportStop:
         - description: 'Property. Identifier format of any NGSI entity'    
           format: uri    
           type: string    
+      description: 'Unique identifier of the entity'    
+      type: Property    
     location:    
       $id: https://geojson.org/schema/Geometry.json    
       $schema: "http://json-schema.org/draft-07/schema#"    
@@ -208,48 +222,80 @@ PublicTransportStop:
           type: object    
       title: 'GeoJSON Geometry'    
     name:    
-      type: string    
+      description: 'The name of this item.'    
+      type: Property    
     openingHoursSpecification:    
+      description: 'A structured value providing information about the opening hours of a place or a certain service inside a place.'    
       items:    
         properties:    
           closes:    
-            pattern: "[0-9]{2}:[0-9]{2}"    
+            format: time    
             type: string    
           dayOfWeek:    
             enum:    
-              - Friday    
               - Monday    
-              - PublicHolidays    
-              - Saturday    
-              - Sunday    
-              - Thursday    
               - Tuesday    
               - Wednesday    
+              - Thursday    
+              - Friday    
+              - Saturday    
+              - Sunday    
+              - PublicHolidays    
             type: string    
           opens:    
-            pattern: "[0-9]{2}:[0-9]{2}"    
+            format: time    
+            type: string    
+          validFrom:    
+            format: date-time    
+            type: string    
+          validThrough:    
+            format: date-time    
             type: string    
       minItems: 1    
-      type: array    
+      type: Property    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *publictransportstop_-_properties_-_owner_-_items_-_anyof    
+        description: 'Property. Unique identifier of the entity'    
       type: Property    
     peopleCount:    
+      description: 'Estimation of people waiting in the stop'    
       minimum: 0    
-      type: integer    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number.    
     refPeopleCountDevice:    
-      format: uri    
-      type: string    
+      anyOf:    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'Reference to the [Device](https://github.com/Fiware/dataModels/blob/master/specs/Device/Device/doc/spec.md) providing people count estimate.'    
+      type: Property    
     refPublicTransportRoute:    
+      description: 'Public transport routes using this stop.'    
       items:    
-        format: uri    
-        type: string    
+        anyOf:    
+          - description: 'Property. Identifier format of any NGSI entity'    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+          - description: 'Property. Identifier format of any NGSI entity'    
+            format: uri    
+            type: string    
       minItems: 1    
-      type: array    
+      type: Relationship    
       uniqueItems: true    
+      x-ngsi:    
+        model: ' https://schema.org/URL'    
     seeAlso:    
+      description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
             - format: uri    
@@ -258,14 +304,22 @@ PublicTransportStop:
           type: array    
         - format: uri    
           type: string    
+      type: Property    
     shortStopCode:    
-      type: string    
+      description: 'Shorter form of the identifier/code of the public transport stop'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text.    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
       type: Property    
     stopCode:    
-      type: string    
+      description: 'Identifier/code of the public transport stop'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text.    
     transportationType:    
+      description: "Types of public transport using this stop as defined in (https://developers.google.com/transit/gtfs/reference/#routestxt). Enum:'0, 1, 2, 3, 4, 5, 6, 7'"    
       items:    
         enum:    
           - 0    
@@ -277,23 +331,22 @@ PublicTransportStop:
           - 6    
           - 7    
         type: integer    
-      type: array    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
     type:    
-      description: 'NGSI Entity type'    
+      description: 'NGSI Entity type. It has to be PublicTransportStop'    
       enum:    
         - PublicTransportStop    
-      type: string    
-    wheelchairAccessible:    
+      type: Property    
+    wheelChairAccessible:    
+      description: "Same as GTFS `wheelchair_boarding`. Enum:'0, 1 ,2'. Reference in [GTFS](https://developers.google.com/transit/gtfs/reference/#stopstxt) "    
       enum:    
         - 0    
         - 1    
         - 2    
-      type: integer    
-  required:    
-    - id    
-    - type    
-    - transportationType    
-    - name    
+      type: Property    
+  required: []    
   type: object    
 ```  
 </details>    
@@ -364,7 +417,7 @@ PublicTransportStop:
 }  
 ```  
 #### PublicTransportStop NGSI V2 normalisé Exemple  
-Voici un exemple de PublicTransportStop au format JSON tel que normalisé. Il est compatible avec NGSI V2 lorsqu'il utilise "options=valeurs clés" et renvoie les données de contexte d'une entité individuelle.  
+Voici un exemple de PublicTransportStop au format JSON tel que normalisé. Il est compatible avec NGSI V2 lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
   "id": "urn:ngsi-ld:PublicTransportStop:santander:busStop:463",  
@@ -515,7 +568,7 @@ PublicTransportStop:
 }  
 ```  
 #### PublicTransportStop NGSI-LD valeurs clés Exemple  
-Voici un exemple de PublicTransportStop au format JSON-LD comme valeurs clés. Il est compatible avec le format JSON-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
+Voici un exemple de PublicTransportStop au format JSON-LD comme valeurs clés. Il est compatible avec le format NGSI-LD lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
   "@context": [  
