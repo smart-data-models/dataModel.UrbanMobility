@@ -28,6 +28,8 @@ GtfsRoute:
         - description: 'Property. Identifier format of any NGSI entity'
           format: uri
           type: string
+      description: 'Unique identifier of the entity'
+      type: Property
     name:
       description: 'The name of this item.'
       type: Property
@@ -49,6 +51,7 @@ GtfsRoute:
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
       items:
         anyOf: *gtfsroute_-_properties_-_owner_-_items_-_anyof
+        description: 'Property. Unique identifier of the entity'
       type: Property
     page:
       description: 'Same as GTFS `stop_url`'
