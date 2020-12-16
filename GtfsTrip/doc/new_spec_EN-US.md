@@ -5,7 +5,7 @@ Entity: GtfsTrip
 
 ## List of properties  
 
-- `alternateName`: An alternative name for this item  - `bikesAllowed`: Same as GTFS `bikes_allowed`. Enum:'0, 1, 2'. See [GTFS](https://developers.google.com/transit/gtfs/reference/#tripstxt)  - `block`: Same as GTFS `block_id`  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `direction`: Same as GTFS `direction_id`. Enum:'0, 1'  - `hasRoute`: Same as `route_id`. It shall point to an Entity of type GtfsRoute  - `hasService`: Same as GTFS `service_id`. It shall point to an Entity of type GtfsService  - `hasShape`: Same as GTFS `shape_id`. It shall point to an Entity of type GtfsShape  - `headSign`: Same as GTFS `trip_headsign`  - `id`:   - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `seeAlso`: list of uri pointing to additional resources about the item  - `shortName`: Same as GTFS `trip_short_name`  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: NGSI Entity type. It has to be GtfsTrip  - `wheelChairAccessible`: Same as GTFS `wheelchair_accessible`. Enum:'0, 1, 2'    
+- `alternateName`: An alternative name for this item  - `bikesAllowed`: Same as GTFS `bikes_allowed`. Enum:'0, 1, 2'. See [GTFS](https://developers.google.com/transit/gtfs/reference/#tripstxt)  - `block`: Same as GTFS `block_id`  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `direction`: Same as GTFS `direction_id`. Enum:'0, 1'  - `hasRoute`: Same as `route_id`. It shall point to an Entity of type GtfsRoute  - `hasService`: Same as GTFS `service_id`. It shall point to an Entity of type GtfsService  - `hasShape`: Same as GTFS `shape_id`. It shall point to an Entity of type GtfsShape  - `headSign`: Same as GTFS `trip_headsign`  - `id`: Unique identifier of the entity  - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `seeAlso`: list of uri pointing to additional resources about the item  - `shortName`: Same as GTFS `trip_short_name`  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: NGSI Entity type. It has to be GtfsTrip  - `wheelChairAccessible`: Same as GTFS `wheelchair_accessible`. Enum:'0, 1, 2'    
 Required properties  
 - `hasRoute`  - `hasService`  - `id`  - `type`    
 See [https://developers.google.com/transit/gtfs/reference/#tripstxt](https://developers.google.com/transit/gtfs/reference/#tripstxt)  
@@ -112,6 +112,8 @@ GtfsTrip:
         - description: 'Property. Identifier format of any NGSI entity'    
           format: uri    
           type: string    
+      description: 'Unique identifier of the entity'    
+      type: Property    
     name:    
       description: 'The name of this item.'    
       type: Property    
@@ -119,6 +121,7 @@ GtfsTrip:
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *gtfstrip_-_properties_-_owner_-_items_-_anyof    
+        description: 'Property. Unique identifier of the entity'    
       type: Property    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
