@@ -5,7 +5,7 @@ Entity: GtfsCalendarRule
 
 ## List of properties  
 
-- `alternateName`: An alternative name for this item  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `endDate`: End date of this rule in `YYYY-MM-DD` format. It can be obtained from the field `end_date` of [calendar.txt](https://developers.google.com/transit/gtfs/reference/#calendartxt)  - `friday`: Same as GTFS `friday`  - `hasService`: Service to which this rule applies to. Derived from `service_id`  - `id`:   - `monday`: Same as GTFS `monday`  - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `saturday`: Same as GTFS `saturday`  - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `startDate`: Start date of this rule in `YYYY-MM-DD` format. It can be obtained from the field `start_date` of [calendar.txt](https://developers.google.com/transit/gtfs/reference/#calendartxt)  - `sunday`: Same as GTFS `sunday`  - `thursday`: Same as GTFS `thursday`  - `tuesday`: Same as GTFS `tuesday`  - `type`: NGSI Entity Type: It has to be GtfsCalendarRule  - `wednesday`: Same as GTFS `wednesday`    
+- `alternateName`: An alternative name for this item  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `endDate`: End date of this rule in `YYYY-MM-DD` format. It can be obtained from the field `end_date` of [calendar.txt](https://developers.google.com/transit/gtfs/reference/#calendartxt)  - `friday`: Same as GTFS `friday`  - `hasService`: Service to which this rule applies to. Derived from `service_id`  - `id`: Unique identifier of the entity  - `monday`: Same as GTFS `monday`  - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `saturday`: Same as GTFS `saturday`  - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `startDate`: Start date of this rule in `YYYY-MM-DD` format. It can be obtained from the field `start_date` of [calendar.txt](https://developers.google.com/transit/gtfs/reference/#calendartxt)  - `sunday`: Same as GTFS `sunday`  - `thursday`: Same as GTFS `thursday`  - `tuesday`: Same as GTFS `tuesday`  - `type`: NGSI Entity Type: It has to be GtfsCalendarRule  - `wednesday`: Same as GTFS `wednesday`    
 Required properties  
 - `endDate`  - `friday`  - `hasService`  - `id`  - `monday`  - `saturday`  - `startDate`  - `sunday`  - `thursday`  - `tuesday`  - `type`  - `wednesday`    
 See [https://developers.google.com/transit/gtfs/reference/#calendartxt](https://developers.google.com/transit/gtfs/reference/#calendartxt)  
@@ -68,6 +68,8 @@ GtfsCalendarRule:
         - description: 'Property. Identifier format of any NGSI entity'    
           format: uri    
           type: string    
+      description: 'Unique identifier of the entity'    
+      type: Property    
     monday:    
       description: 'Same as GTFS `monday`'    
       type: Property    
@@ -80,6 +82,7 @@ GtfsCalendarRule:
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *gtfscalendarrule_-_properties_-_owner_-_items_-_anyof    
+        description: 'Property. Unique identifier of the entity'    
       type: Property    
     saturday:    
       description: 'Same as GTFS `saturday`'    
