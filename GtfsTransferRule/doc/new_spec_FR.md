@@ -141,7 +141,7 @@ GtfsTransferRule:
 }  
 ```  
 #### GtfsTransferRule NGSI V2 normalisé Exemple  
-Voici un exemple de règle de transfert Gtfs au format JSON normalisé. Cette règle est compatible avec la version 2 du NGSI lorsqu'elle n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
+Voici un exemple de règle de transfert Gtfs au format JSON normalisé. Elle est compatible avec NGSI V2 lorsqu'elle n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
   "id": "urn:ngsi-ld:GtfsTransferRule:Malaga:Linea1_Linea5",  
