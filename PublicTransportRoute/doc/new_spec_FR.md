@@ -473,7 +473,7 @@ PublicTransportRoute:
   }  
 }  
 ```  
-#### PublicTransportRoute NGSI-LD Exemple de valeurs clés  
+#### PublicTransportRoute NGSI-LD exemple de valeurs clés  
 Voici un exemple d'itinéraire de transport public en format JSON-LD comme valeurs clés. Il est compatible avec le format NGSI-LD lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
