@@ -33,7 +33,7 @@
         },
         "exactTimes": {
           "type": "boolean",
-          "description": "Property. Same as GTFS `exact_times` but encoded as a Boolean: `false`: Frequency-based trips are not exactly scheduled. `true`: Frequency-based trips are exactly scheduled. Model:'https://schema.org/Boolean'"
+          "description": "Property. Same as GTFS `exact_times` but encoded as a Boolean; `false`: Frequency-based trips are not exactly scheduled. `true`: Frequency-based trips are exactly scheduled. Model:'https://schema.org/Boolean'"
         },
         "hasTrip": {
           "$ref": "https://smart-data-models.github.io/dataModel.UrbanMobility/gtfs-schema.json#/definitions/GTFS-Stop-Commons/properties/hasTrip"

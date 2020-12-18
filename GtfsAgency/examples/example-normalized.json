@@ -1,7 +1,7 @@
 {
   "id": "urn:ngsi-ld:GtfsAgency:Malaga_EMT",
   "type": "GtfsAgency",
-  "name": {
+  "agencyName": {
     "value": "Empresa Malague\u00f1a de Transportes"
   },
   "language": {
