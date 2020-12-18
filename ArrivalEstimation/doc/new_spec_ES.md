@@ -1,13 +1,18 @@
 Entidad: ArrivalEstimation  
 ==========================  
-Esta especificación es una **versión temporal**. Se genera automáticamente a partir de las propiedades documentadas descritas en el schema.json condensadas en el archivo `model.yaml`. Se ha creado un archivo temporal `nuevo_modelo.yaml` en cada modelo de datos para evitar el impacto en los scripts existentes. Por lo tanto, la especificación estará incompleta mientras el schema.json no se actualice al nuevo formato (documentando las propiedades). Una vez actualizado el `modelo.yaml` (`nuevo_modelo.yaml`) necesita ser actualizado también (automáticamente) . Más información en este [link](https://github.com/smart-data-models/data-models/blob/master/specs/warning_message_new_spec.md). Mientras sea un formato provisional cualquier [feedback es bienvenido en este formulario](https://smartdatamodels.org/index.php/submit-an-issue-2/) eligiendo la opción `Feedback on the new specification`.  
+[Licencia abierta](https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/ArrivalEstimation/LICENSE.md)  
 Descripción global: **Estimación de llegada**  
 
 ## Lista de propiedades  
 
-`alternateName`: Un nombre alternativo para este artículo  `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  `dateCreated`: Sello de tiempo de creación de la entidad. Normalmente será asignado por la plataforma de almacenamiento.  `dateModified`: Sello de tiempo de la última modificación de la entidad. Normalmente será asignado por la plataforma de almacenamiento.  `description`: Una descripción de este artículo  `hasStop`:   `hasTrip`:   `headsign`:   `id`:   `name`: El nombre de este artículo.  `owner`: Una lista que contiene una secuencia de caracteres codificados JSON que hace referencia a los Ids únicos de los propietarios  `remainingDistance`:   `remainingTime`:   `seeAlso`:   `source`: Una secuencia de caracteres que da como URL la fuente original de los datos de la entidad. Se recomienda que sea el nombre de dominio completamente calificado del proveedor de la fuente, o la URL del objeto fuente.  `type`: NGSI Tipo de entidad  ## Modelo de datos Descripción de las propiedades  
-Ordenados alfabéticamente  
-```yaml  
+- `alternateName`: Un nombre alternativo para este artículo  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Sello de tiempo de creación de la entidad. Normalmente será asignado por la plataforma de almacenamiento.  - `dateModified`: Sello de tiempo de la última modificación de la entidad. Normalmente será asignado por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `hasStop`: Apuntará a una entidad de tipo GtfsStop  - `hasTrip`: Viaje asociado a esta Entidad. Apuntará a una Entidad de tipo GtfsTrip  - `headSign`: Contendrá el texto que aparece en un cartel que identifica el destino del viaje a los pasajeros  - `id`: Identificador único de la entidad  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificados JSON que hace referencia a los Ids únicos de los propietarios  - `remainingDistance`: Contendrá la distancia restante (en metros) de llegada para el viaje que se dirige a la parada en cuestión  - `remainingTime`: Contendrá el tiempo restante de llegada para el viaje que se dirige a la parada en cuestión. El tiempo restante se codificará como una duración ISO8601. Por ejemplo, "TP8M5S".  - `seeAlso`: lista de uri que apunta a recursos adicionales sobre el tema  - `source`: Una secuencia de caracteres que da como URL la fuente original de los datos de la entidad. Se recomienda que sea el nombre de dominio completamente calificado del proveedor de la fuente, o la URL del objeto fuente.  - `type`: Tipo de entidad NGSI: Tiene que ser ArrivalEstimation    
+Propiedades requeridas  
+- `hasStop`  - `hasTrip`  - `headSign`  - `id`  - `remainingTime`  - `type`    
+Este tipo de entidad captura la hora estimada de llegada de un vehículo de transporte público que llega a una parada en particular, mientras el vehículo está atendiendo una ruta determinada.  
+## Modelo de datos Descripción de las propiedades  
+Ordenados alfabéticamente (haga clic para ver los detalles)  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 ArrivalEstimation:    
   description: 'Arrival Estimation'    
   properties:    
@@ -29,13 +34,36 @@ ArrivalEstimation:
       description: 'A description of this item'    
       type: Property    
     hasStop:    
-      format: uri    
-      type: string    
+      anyOf:    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'It shall point to an Entity of Type GtfsStop'    
+      type: Relationship    
     hasTrip:    
-      format: uri    
-      type: string    
-    headsign:    
-      type: string    
+      anyOf:    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'Trip associated to this Entity. It shall point to an Entity of Type GtfsTrip'    
+      type: Relationship    
+      x-ngsi:    
+        model: https://schema.org/URL    
+    headSign:    
+      description: 'It shall contain the text that appears on a sign that identifies the trip''s destination to passengers'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text.    
     id:    
       anyOf: &arrivalestimation_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -46,6 +74,8 @@ ArrivalEstimation:
         - description: 'Property. Identifier format of any NGSI entity'    
           format: uri    
           type: string    
+      description: 'Unique identifier of the entity'    
+      type: Property    
     name:    
       description: 'The name of this item.'    
       type: Property    
@@ -53,14 +83,21 @@ ArrivalEstimation:
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *arrivalestimation_-_properties_-_owner_-_items_-_anyof    
+        description: 'Property. Unique identifier of the entity'    
       type: Property    
     remainingDistance:    
+      description: 'It shall contain the remaining distance (in meters) of arrival for the trip heading to the concerned stop'    
       minValue: 0    
-      type: number    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: Meters    
     remainingTime:    
+      description: 'It shall contain the remaining time of arrival for the trip heading to the concerned stop. Remaining time shall be encoded as a ISO8601 duration. Ex. `PT8M5S`.'    
       pattern: ^P(?=\w*\d)(?:\d+Y|Y)?(?:\d+M|M)?(?:\d+W|W)?(?:\d+D|D)?(?:T(?:\d+H|H)?(?:\d+M|M)?(?:\d+(?:\?.\d{1,2})?S|S)?)?$    
-      type: string    
+      type: Property    
     seeAlso:    
+      description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
             - format: uri    
@@ -69,14 +106,15 @@ ArrivalEstimation:
           type: array    
         - format: uri    
           type: string    
+      type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
       type: Property    
     type:    
-      description: 'NGSI Entity type'    
+      description: 'NGSI Entity Type: It has to be ArrivalEstimation'    
       enum:    
         - ArrivalEstimation    
-      type: string    
+      type: Property    
   required:    
     - id    
     - type    
@@ -86,6 +124,9 @@ ArrivalEstimation:
     - headSign    
   type: object    
 ```  
+</details>    
+## Ejemplo de cargas útiles  
+#### ArrivalEstimation NGSI V2 key-values Example  
 Aquí hay un ejemplo de un ArrivalEstimation en formato JSON como valores clave. Esto es compatible con NGSI V2 cuando se utiliza "opciones=valores-clave" y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
@@ -98,7 +139,8 @@ ArrivalEstimation:
   "headSign": "Plaza Italia"  
 }  
 ```  
-Aquí hay un ejemplo de una ArrivalEstimation en formato JSON como normalizado. Esto es compatible con NGSI V2 cuando se utiliza "opciones=valores clave" y devuelve los datos de contexto de una entidad individual.  
+#### ArrivalEstimation NGSI V2 normalizado Ejemplo  
+Aquí hay un ejemplo de una ArrivalEstimation en formato JSON como normalizado. Es compatible con NGSI V2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
   "id": "urn:ngsi-ld:ArrivalEstimation:L5C1_Stop74_1",  
@@ -122,7 +164,8 @@ ArrivalEstimation:
   }  
 }  
 ```  
-Aquí hay un ejemplo de un ArrivalEstimation en formato JSON-LD como valores clave. Esto es compatible con NGSI-LD cuando no se usan opciones y devuelve los datos de contexto de una entidad individual.  
+#### ArrivalEstimation NGSI-LD key-values Example  
+Aquí hay un ejemplo de un ArrivalEstimation en formato JSON-LD como valores clave. Esto es compatible con NGSI-LD cuando se utiliza "opciones=valores-clave" y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context",  
               "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
@@ -134,6 +177,7 @@ ArrivalEstimation:
  "remainingTime": "PT8M5S",  
  "type": "ArrivalEstimation"}  
 ```  
+#### ArrivalEstimation NGSI-LD normalizado Ejemplo  
 Aquí hay un ejemplo de una ArrivalEstimation en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  

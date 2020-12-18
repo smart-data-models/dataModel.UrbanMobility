@@ -1,13 +1,18 @@
 Entidad: PublicTransportRoute  
 =============================  
-Esta especificación es una **versión temporal**. Se genera automáticamente a partir de las propiedades documentadas descritas en el schema.json condensadas en el archivo `model.yaml`. Se ha creado un archivo temporal `nuevo_modelo.yaml` en cada modelo de datos para evitar el impacto en los scripts existentes. Por lo tanto, la especificación estará incompleta mientras el schema.json no se actualice al nuevo formato (documentando las propiedades). Una vez actualizado el `modelo.yaml` (`nuevo_modelo.yaml`) necesita ser actualizado también (automáticamente) . Más información en este [link](https://github.com/smart-data-models/data-models/blob/master/specs/warning_message_new_spec.md). Mientras sea un formato provisional cualquier [feedback es bienvenido en este formulario](https://smartdatamodels.org/index.php/submit-an-issue-2/) eligiendo la opción `Feedback on the new specification`.  
+[Licencia abierta](https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/PublicTransportRoute/LICENSE.md)  
 Descripción global: **Una ruta de transporte público genérica**  
 
 ## Lista de propiedades  
 
-`address`: La dirección postal.  `alternateName`: Un nombre alternativo para este artículo  `areaServed`: La zona geográfica donde se presta un servicio o se ofrece un artículo.  `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  `dateCreated`: Sello de tiempo de creación de la entidad. Normalmente será asignado por la plataforma de almacenamiento.  `dateModified`: Sello de tiempo de la última modificación de la entidad. Normalmente será asignado por la plataforma de almacenamiento.  `description`: Una descripción de este artículo  `id`:   `location`:   `name`:   `owner`: Una lista que contiene una secuencia de caracteres codificados JSON que hace referencia a los Ids únicos de los propietarios  `routeCode`:   `routeColor`:   `routeSegments`:   `routeTextColor`:   `schedule`:   `seeAlso`:   `shortRouteCode`:   `source`: Una secuencia de caracteres que da como URL la fuente original de los datos de la entidad. Se recomienda que sea el nombre de dominio completamente calificado del proveedor de la fuente, o la URL del objeto fuente.  `transportationType`:   `type`: NGSI Tipo de entidad  ## Modelo de datos Descripción de las propiedades  
-Ordenados alfabéticamente  
-```yaml  
+- `address`: La dirección postal.  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Sello de tiempo de creación de la entidad. Normalmente será asignado por la plataforma de almacenamiento.  - `dateModified`: Sello de tiempo de la última modificación de la entidad. Normalmente será asignado por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `id`: Identificador único de la entidad  - `location`:   - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificados JSON que hace referencia a los Ids únicos de los propietarios  - `routeCode`: ID o código de la ruta (por ejemplo, 'HT5200104000')  - `routeColor`: El color asignado a la ruta en el texto  - `routeSegments`: Segmentos de esta ruta definidos por su nombre y paradas.  - `routeTextColor`: El color asignado a la ruta en hexadecimal  - `schedule`: Las horas de trabajo de esta ruta  - `seeAlso`: lista de uri que apunta a recursos adicionales sobre el tema  - `shortRouteCode`: Forma más corta de la identificación/código de la ruta (por ejemplo, "5200104000")  - `source`: Una secuencia de caracteres que da como URL la fuente original de los datos de la entidad. Se recomienda que sea el nombre de dominio completamente calificado del proveedor de la fuente, o la URL del objeto fuente.  - `transportationType`: Tipos de transporte público que utilizan esta parada según se define en (https://developers.google.com/transit/gtfs/reference/#routestxt). Enum:'0, 1, 2, 3, 4, 5, 6, 7'.  - `type`: Tipo de entidad NGSI. Tiene que ser PublicTransportRoute    
+Propiedades requeridas  
+- `id`  - `transportationType`  - `type`    
+Modelo genérico para la ruta de transporte público. Adopta algunas definiciones del GTFS, pero no es necesario vincularlo con datos adicionales del GTFS. Una ruta es un viaje, ofrecido por un servicio de transporte público, que pasa por un conjunto de paradas.  
+## Modelo de datos Descripción de las propiedades  
+Ordenados alfabéticamente (haga clic para ver los detalles)  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 PublicTransportRoute:    
   description: 'A generic public transport route'    
   properties:    
@@ -15,26 +20,35 @@ PublicTransportRoute:
       description: 'The mailing address.'    
       properties:    
         addressCountry:    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         addressLocality:    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''    
           type: string    
         addressRegion:    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''    
           type: string    
         areaServed:    
+          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''    
           type: string    
         postOfficeBoxNumber:    
+          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         postalCode:    
+          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         streetAddress:    
+          description: 'Property. The street address. Model:''https://schema.org/Text'''    
           type: string    
       type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
       type: Property    
     areaServed:    
-      description: 'The geographic area where a service or offered item is provided.'    
+      description: 'The geographic area where a service or offered item is provided'    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
       type: Property    
@@ -59,6 +73,8 @@ PublicTransportRoute:
         - description: 'Property. Identifier format of any NGSI entity'    
           format: uri    
           type: string    
+      description: 'Unique identifier of the entity'    
+      type: Property    
     location:    
       $id: https://geojson.org/schema/Geometry.json    
       $schema: "http://json-schema.org/draft-07/schema#"    
@@ -207,18 +223,27 @@ PublicTransportRoute:
           type: object    
       title: 'GeoJSON Geometry'    
     name:    
-      type: string    
+      description: 'The name of this item.'    
+      type: Property    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *publictransportroute_-_properties_-_owner_-_items_-_anyof    
+        description: 'Property. Unique identifier of the entity'    
       type: Property    
     routeCode:    
-      type: string    
+      description: 'ID or code of the route (e.g. ‘HT5200104000’)'    
+      type: Property    
+      x-ngsi:    
+        model: ' https://schema.org/Text.'    
     routeColor:    
+      description: 'Color assigned to route in text'    
       pattern: "^#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$"    
-      type: string    
+      type: Property    
+      x-ngsi:    
+        model: ' https://schema.org/color.'    
     routeSegments:    
+      description: 'Segments of this route defined by their name and stops.'    
       items:    
         properties:    
           refPublicTransportStops:    
@@ -232,10 +257,14 @@ PublicTransportRoute:
           - segmentName    
           - refPublicTransportStops    
         type: object    
-      type: array    
+      type: Property    
     routeTextColor:    
-      type: string    
+      description: 'Color assigned to route in hexadecimal'    
+      type: Property    
+      x-ngsi:    
+        model: ' https://schema.org/color.'    
     schedule:    
+      description: 'Working hours of this route'    
       items:    
         properties:    
           closes:    
@@ -256,8 +285,11 @@ PublicTransportRoute:
             pattern: "[0-9]{2}:[0-9]{2}"    
             type: string    
       minItems: 1    
-      type: array    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/OpeningHoursSpecification.    
     seeAlso:    
+      description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
             - format: uri    
@@ -266,12 +298,17 @@ PublicTransportRoute:
           type: array    
         - format: uri    
           type: string    
+      type: Property    
     shortRouteCode:    
-      type: string    
+      description: 'Shorter form of the ID/code of the route (e.g. ‘5200104000’’)'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text.    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
       type: Property    
     transportationType:    
+      description: "Types of public transport using this stop as defined in (https://developers.google.com/transit/gtfs/reference/#routestxt). Enum:'0, 1, 2, 3, 4, 5, 6, 7'"    
       enum:    
         - 0    
         - 1    
@@ -281,18 +318,23 @@ PublicTransportRoute:
         - 5    
         - 6    
         - 7    
-      type: integer    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
     type:    
-      description: 'NGSI Entity type'    
+      description: 'NGSI Entity type. It has to be PublicTransportRoute'    
       enum:    
         - PublicTransportRoute    
-      type: string    
+      type: Property    
   required:    
     - id    
     - type    
     - transportationType    
   type: object    
 ```  
+</details>    
+## Ejemplo de cargas útiles  
+#### PublicTransportRoute NGSI V2 key-values Example  
 Aquí hay un ejemplo de una Ruta de Transporte Público en formato JSON como valores clave. Es compatible con NGSI V2 cuando se utiliza "opciones=valores-clave" y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
@@ -356,7 +398,8 @@ PublicTransportRoute:
   ]  
 }  
 ```  
-Aquí hay un ejemplo de una Ruta de Transporte Público en formato JSON como normalizado. Es compatible con NGSI V2 cuando se utiliza `opciones=valores clave` y devuelve los datos de contexto de una entidad individual.  
+#### PublicTransportRoute NGSI V2 normalizado Ejemplo  
+Aquí hay un ejemplo de una Ruta de Transporte Público en formato JSON como normalizado. Es compatible con NGSI V2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
   "id": "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N3",  
@@ -430,7 +473,8 @@ PublicTransportRoute:
   }  
 }  
 ```  
-Aquí hay un ejemplo de una Ruta de Transporte Público en formato JSON-LD como valores clave. Es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+#### PublicTransportRoute NGSI-LD key-values Example  
+Aquí hay un ejemplo de una Ruta de Transporte Público en formato JSON-LD como valores clave. Esto es compatible con NGSI-LD cuando se utiliza "opciones=valores-clave" y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
   "@context": [  
@@ -503,6 +547,7 @@ PublicTransportRoute:
   }  
 }  
 ```  
+#### PublicTransportRoute NGSI-LD normalizado Ejemplo  
 He aquí un ejemplo de una Ruta de Transporte Público en formato JSON-LD normalizado. Es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
