@@ -354,7 +354,7 @@ GtfsStation:
 </details>    
 ## Exemples de charges utiles  
 #### GtfsStation NGSI V2 valeurs clés Exemple  
-Voici un exemple d'une GtfsStation au format JSON comme valeurs clés. Elle est compatible avec NGSI V2 lorsqu'elle utilise `options=keyValues` et renvoie les données de contexte d'une entité individuelle.  
+Voici un exemple de GtfsStation au format JSON comme valeurs clés. Elle est compatible avec NGSI V2 lorsqu'elle utilise `options=keyValues` et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
   "id": "urn:ngsi-ld:GtfsStation:Madrid:est_90_21",  
@@ -423,7 +423,7 @@ GtfsStation:
  "type": "GtfsStation"}  
 ```  
 #### GtfsStation NGSI-LD normalisée Exemple  
-Voici un exemple d'une GtfsStation au format JSON-LD normalisé. Elle est compatible avec le format NGSI-LD lorsqu'elle n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
+Voici un exemple de GtfsStation au format JSON-LD normalisé. Elle est compatible avec le format NGSI-LD lorsqu'elle n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
     "id": "urn:ngsi-ld:GtfsStation:Madrid:est_90_21",  
