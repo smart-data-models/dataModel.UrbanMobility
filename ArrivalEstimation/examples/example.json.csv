@@ -1,2 +1,2 @@
-"id_", "type_", "hasStop_", "hasTrip_", "remainingTime_", "remainingDistance_", "headSign_"
+"id_", "type_", "hasStop__0_", "hasTrip_", "remainingTime_", "remainingDistance_", "headSign_"
 "urn:ngsi-ld:ArrivalEstimation:L5C1_Stop74_1", "ArrivalEstimation", "urn:ngsi-ld:GtfsStop:tus:74", "urn:ngsi-ld:GtfsTrip:tus:5C1", "PT8M5S", "1200", "Plaza Italia"
