@@ -97,13 +97,13 @@
         "openingHoursSpecification": {
           "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/DateTime-Commons/properties/openingHoursSpecification"
         }
-      },
-      "required": [
-        "id",
-        "type",
-        "transportationType",
-        "name"
-      ]
+      }
     }
+  ],
+  "required": [
+    "id",
+    "type",
+    "transportationType",
+    "name"
   ]
 }
