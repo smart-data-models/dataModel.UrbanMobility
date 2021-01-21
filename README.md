@@ -11,7 +11,7 @@ The following entity types are available:
 
 - [GtfsCalendarDateRule](https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/GtfsCalendarDateRule/README.md). GTFS Calendar Date Rule
 
-- [GtfsCalendarRule](https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/GtfsCalendarRule/README.md). GTFS Calendar Rule
+- [GtfsCalendarRule](https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/GtfsCalendarRule/README.md). Smart Data Models. GTFS Calendar Rule
 
 - [GtfsFrequency](https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/GtfsFrequency/README.md). GTFS Frequency
 
