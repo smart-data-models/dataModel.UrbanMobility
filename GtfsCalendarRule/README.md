@@ -2,7 +2,7 @@
 
 ## Description 
 
-GTFS Calendar Rule
+Smart Data Models. GTFS Calendar Rule
 ### Specification
 
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsCalendarRule/swagger.yaml)
