@@ -52,7 +52,7 @@
     ]
   },
   "schedule": {
-    "type": "Property"
+    "type": "Property",
     "value": [
       {
         "validFrom": "2018-01-24",
