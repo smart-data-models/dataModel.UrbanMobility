@@ -1,0 +1,2 @@
+"@context__0_", "@context__1_", "endDate_", "friday_", "hasService_", "id_", "monday_", "name_", "saturday_", "startDate_", "sunday_", "thursday_", "tuesday_", "type_", "wednesday_"
+"https://schema.lab.fiware.org/ld/context", "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld", "2019-01-01", "True", "urn:ngsi-ld:GtfsService:Madrid:Hospital_1", "urn:ngsi-ld:CalendarRule:Madrid:Rule1267", "True", "Rule Hospital Service 1", "False", "2018-01-01", "False", "True", "True", "GtfsCalendarRule", "True"
