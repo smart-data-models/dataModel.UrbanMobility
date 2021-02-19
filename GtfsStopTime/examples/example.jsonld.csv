@@ -1,0 +1,2 @@
+"@context__0_", "@context__1_", "arrivalTime_", "departureTime_", "distanceTravelled_", "hasStop_", "hasTrip_", "id_", "stopSequence_", "type_"
+"https://schema.lab.fiware.org/ld/context", "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld", "07:04:24", "07:04:24", "759", "urn:ngsi-ld:GtfsStop:Madrid:EMT:737", "urn:ngsi-ld:GtfsTrip:Madrid:EMT:FE0010011", "urn:ngsi-ld:GtfsStopTime:Spain:Madrid:EMT:FE0010011_737", "4", "GtfsStopTime"
