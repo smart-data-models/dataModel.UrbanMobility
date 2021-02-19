@@ -1,0 +1,2 @@
+"@context__0_", "@context__1_", "description_", "id_", "name_", "operatedBy_", "type_"
+"https://schema.lab.fiware.org/ld/context", "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld", "Laborables", "urn:ngsi-ld:Service:Malaga:LAB", "LAB", "urn:ngsi-ld:GtfsAgency:Malaga_EMT", "GtfsService"
