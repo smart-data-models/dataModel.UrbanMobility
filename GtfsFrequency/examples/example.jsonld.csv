@@ -1,0 +1,2 @@
+"@context__0_", "@context__1_", "description_", "endTime_", "hasTrip_", "headwaySeconds_", "id_", "name_", "startTime_", "type_"
+"https://schema.lab.fiware.org/ld/context", "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld", "Cada 10 minutos", "10:25:00", "urn:ngsi-ld:GtfsTrip:Spain:Malaga:1", "600", "urn:ngsi-ld:GtfsFrequency:Malaga:Linea1", "Laborables", "07:00:00", "GtfsFrequency"
