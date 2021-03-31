@@ -1,8 +1,24 @@
-{"@context": ["https://schema.lab.fiware.org/ld/context",
-              "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],
- "appliesOn": "2018-03-19",
- "exceptionType": "1",
- "hasService": "urn:ngsi-ld:GtfsService:Malaga:FairArea_1",
- "id": "urn:ngsi-ld:CalendarDateRule:Malaga:Rule67",
- "name": "Rule Fair Area",
- "type": "GtfsCalendarDateRule"}
+{
+  "id": "urn:ngsi-ld:CalendarDateRule:Malaga:Rule67",
+  "type": "GtfsCalendarDateRule",
+  "name": {
+    "type": "Property",
+    "value": "Rule Fair Area"
+  },
+  "exceptionType": {
+    "type": "Property",
+    "value": "1"
+  },
+  "hasService": {
+    "type": "Relationship",
+    "object": "urn:ngsi-ld:GtfsService:Malaga:FairArea_1"
+  },
+  "appliesOn": {
+    "type": "Property",
+    "value": "2018-03-19"
+  },
+  "@context": [
+    "https://smartdatamodels.org/context.jsonld",
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+  ]
+}
