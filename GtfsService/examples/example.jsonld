@@ -1,7 +1,20 @@
-{"@context": ["https://schema.lab.fiware.org/ld/context",
-              "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],
- "description": "Laborables",
- "id": "urn:ngsi-ld:Service:Malaga:LAB",
- "name": "LAB",
- "operatedBy": "urn:ngsi-ld:GtfsAgency:Malaga_EMT",
- "type": "GtfsService"}
+{
+  "id": "urn:ngsi-ld:Service:Malaga:LAB",
+  "type": "GtfsService",
+  "operatedBy": {
+    "type": "Relationship",
+    "object": "urn:ngsi-ld:GtfsAgency:Malaga_EMT"
+  },
+  "name": {
+    "type": "Property",
+    "value": "LAB"
+  },
+  "description": {
+    "type": "Property",
+    "value": "Laborables"
+  },
+  "@context": [
+    "https://smartdatamodels.org/context.jsonld",
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+  ]
+}
