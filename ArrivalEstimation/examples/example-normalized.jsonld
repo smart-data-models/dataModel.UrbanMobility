@@ -1,28 +1,13 @@
 {
-    "id": "urn:ngsi-ld:ArrivalEstimation:L5C1_Stop74_1",
-    "type": "ArrivalEstimation",
-    "hasTrip": {
-        "type": "Relationship",
-        "object": "urn:ngsi-ld:GtfsTrip:tus:5C1"
-    },
-    "headSign": {
-        "type": "Property",
-        "value": "Plaza Italia"
-    },
-    "remainingTime": {
-        "type": "Property",
-        "value": "PT8M5S"
-    },
-    "hasStop": {
-        "type": "Relationship",
-        "object": "urn:ngsi-ld:GtfsStop:tus:74"
-    },
-    "remainingDistance": {
-        "type": "Property",
-        "value": 1200
-    },
-    "@context": [
-        "https://schema.lab.fiware.org/ld/context",
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
-    ]
+  "@context": [
+    "https://smartdatamodels.org/context.jsonld",
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+  ],
+  "hasStop": "urn:ngsi-ld:GtfsStop:tus:74",
+  "hasTrip": "urn:ngsi-ld:GtfsTrip:tus:5C1",
+  "headSign": "Plaza Italia",
+  "id": "urn:ngsi-ld:ArrivalEstimation:L5C1_Stop74_1",
+  "remainingDistance": 1200,
+  "remainingTime": "PT8M5S",
+  "type": "ArrivalEstimation"
 }
