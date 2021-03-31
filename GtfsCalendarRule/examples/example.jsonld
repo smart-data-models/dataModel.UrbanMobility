@@ -1,15 +1,58 @@
-{"@context": ["https://schema.lab.fiware.org/ld/context",
-              "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],
- "endDate": "2019-01-01",
- "friday": true,
- "hasService": "urn:ngsi-ld:GtfsService:Madrid:Hospital_1",
- "id": "urn:ngsi-ld:CalendarRule:Madrid:Rule1267",
- "monday": true,
- "name": "Rule Hospital Service 1",
- "saturday": false,
- "startDate": "2018-01-01",
- "sunday": false,
- "thursday": true,
- "tuesday": true,
- "type": "GtfsCalendarRule",
- "wednesday": true}
+{
+  "id": "urn:ngsi-ld:CalendarRule:Madrid:Rule1267",
+  "type": "GtfsCalendarRule",
+  "startDate": {
+    "type": "Property",
+    "value": {
+      "@type": "Date",
+      "@value": "2018-01-01"
+    }
+  },
+  "endDate": {
+    "type": "Property",
+    "value": {
+      "@type": "Date",
+      "@value": "2019-01-01"
+    }
+  },
+  "name": {
+    "type": "Property",
+    "value": "Rule Hospital Service 1"
+  },
+  "monday": {
+    "type": "Property",
+    "value": true
+  },
+  "tuesday": {
+    "type": "Property",
+    "value": true
+  },
+  "friday": {
+    "type": "Property",
+    "value": true
+  },
+  "wednesday": {
+    "type": "Property",
+    "value": true
+  },
+  "thursday": {
+    "type": "Property",
+    "value": true
+  },
+  "sunday": {
+    "type": "Property",
+    "value": false
+  },
+  "hasService": {
+    "type": "Relationship",
+    "object": "urn:ngsi-ld:GtfsService:Madrid:Hospital_1"
+  },
+  "saturday": {
+    "type": "Property",
+    "value": false
+  },
+  "@context": [
+    "https://smartdatamodels.org/context.jsonld",
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+  ]
+}
