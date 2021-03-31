@@ -1,9 +1,28 @@
-{"@context": ["https://schema.lab.fiware.org/ld/context",
-              "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],
- "direction": 0,
- "hasRoute": "urn:ngsi-ld:GtfsRoute:Spain:Malaga:1",
- "hasService": "urn:ngsi-ld:GtfsService:Malaga_LAB",
- "hasShape": "urn:ngsi-ld:GtfsShape:Shape01",
- "headSign": "San Andrés",
- "id": "urn:ngsi-ld:GtfsTrip:Spain:Malaga:1",
- "type": "GtfsTrip"}
+{
+  "id": "urn:ngsi-ld:GtfsTrip:Spain:Malaga:1",
+  "type": "GtfsTrip",
+  "direction": {
+    "type": "Property",
+    "value": 0
+  },
+  "headSign": {
+    "type": "Property",
+    "value": "San Andr\u00e9s"
+  },
+  "hasRoute": {
+    "type": "Relationship",
+    "object": "urn:ngsi-ld:GtfsRoute:Spain:Malaga:1"
+  },
+  "hasService": {
+    "type": "Relationship",
+    "object": "urn:ngsi-ld:GtfsService:Malaga_LAB"
+  },
+  "hasShape": {
+    "type": "Relationship",
+    "object": "urn:ngsi-ld:GtfsShape:Shape01"
+  },
+  "@context": [
+    "https://smartdatamodels.org/context.jsonld",
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+  ]
+}
