@@ -1,9 +1,28 @@
-{"@context": ["https://schema.lab.fiware.org/ld/context",
-              "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],
- "id": "urn:ngsi-ld:GtfsAgency:Malaga_EMT",
- "language": "ES",
- "agencyName": "Empresa Malagueña de Transportes",
- "page": "http://www.emtmalaga.es/",
- "source": "http://datosabiertos.malaga.eu/dataset/lineas-y-horarios-bus-google-transit/resource/24e86888-b91e-45bf-a48c-09855832fd52",
- "timezone": "Europe/Madrid",
- "type": "GtfsAgency"}
+{
+  "id": "urn:ngsi-ld:GtfsAgency:Malaga_EMT",
+  "type": "GtfsAgency",
+  "agencyName": {
+    "type": "Property",
+    "value": "Empresa Malague\u00f1a de Transportes"
+  },
+  "language": {
+    "type": "Property",
+    "value": "ES"
+  },
+  "page": {
+    "type": "Property",
+    "value": "http://www.emtmalaga.es/"
+  },
+  "source": {
+    "type": "Property",
+    "value": "http://datosabiertos.malaga.eu/dataset/lineas-y-horarios-bus-google-transit/resource/24e86888-b91e-45bf-a48c-09855832fd52"
+  },
+  "timezone": {
+    "type": "Property",
+    "value": "Europe/Madrid"
+  },
+  "@context": [
+    "https://smartdatamodels.org/context.jsonld",
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+  ]
+}
