@@ -1,8 +1,30 @@
-{"@context": ["https://schema.lab.fiware.org/ld/context",
-              "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],
- "code": "101",
- "id": "urn:ngsi-ld:GtfsStop:Malaga_101",
- "location": {"coordinates": [-4.424393, 36.716872], "type": "Point"},
- "name": "Alameda Principal Sur",
- "operatedBy": "urn:ngsi-ld:GtfsAgency:Malaga_EMT",
- "type": "GtfsStop"}
+{
+  "id": "urn:ngsi-ld:GtfsStop:Malaga_101",
+  "type": "GtfsStop",
+  "code": {
+    "type": "Property",
+    "value": "101"
+  },
+  "operatedBy": {
+    "type": "Relationship",
+    "object": "urn:ngsi-ld:GtfsAgency:Malaga_EMT"
+  },
+  "location": {
+    "type": "GeoProperty",
+    "value": {
+      "type": "Point",
+      "coordinates": [
+        -4.424393,
+        36.716872
+      ]
+    }
+  },
+  "name": {
+    "type": "Property",
+    "value": "Alameda Principal Sur"
+  },
+  "@context": [
+    "https://smartdatamodels.org/context.jsonld",
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+  ]
+}
