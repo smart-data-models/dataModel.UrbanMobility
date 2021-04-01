@@ -1,2 +1,2 @@
-"id_", "type_", "operatedBy__type_", "operatedBy__object_", "name__type_", "name__value_", "description__type_", "description__value_", "@context__0_", "@context__1_"
-"urn:ngsi-ld:Service:Malaga:LAB", "GtfsService", "Relationship", "urn:ngsi-ld:GtfsAgency:Malaga_EMT", "Property", "LAB", "Property", "Laborables", "https://schema.lab.fiware.org/ld/context", "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+"@context__0_", "@context__1_", "description_", "id_", "name_", "operatedBy_", "type_"
+"https://smartdatamodels.org/context.jsonld", "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld", "Laborables", "urn:ngsi-ld:Service:Malaga:LAB", "LAB", "urn:ngsi-ld:GtfsAgency:Malaga_EMT", "GtfsService"
