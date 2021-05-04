@@ -5,17 +5,17 @@ GtfsAgency:
       description: 'The country. For example, Spain'
       type: Property
       x-ngsi:
-        model: https://schema.org/Text
+        model: https://schema.org/addressCountry
     addressLocality:
       description: 'The locality in which the street address is, and which is in the region'
       type: Property
       x-ngsi:
-        model: https://schema.org/Text
+        model: https://schema.org/addressLocality
     addressRegion:
       description: 'The region in which the locality is, and which is in the country'
       type: Property
       x-ngsi:
-        model: https://schema.org/Text
+        model: https://schema.org/addressRegion
     agencyName:
       description: 'Same as GTFS `agency_name`'
       type: Property
@@ -28,7 +28,7 @@ GtfsAgency:
       description: 'The geographic area where a service or offered item is provided'
       type: Property
       x-ngsi:
-        model: https://schema.org/Text
+        model: https://schema.org/areaServed
     dataProvider:
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'
       type: Property
@@ -87,21 +87,21 @@ GtfsAgency:
       x-ngsi:
         model: https://schema.org/Text
     postOfficeBoxNumber:
-      description: 'The post office box number for PO box addresses. For example, Spain'
+      description: 'The post office box number for PO box addresses. For example, 03578'
       type: Property
       x-ngsi:
-        model: https://schema.org/Text
+        model: https://schema.org/postOfficeBoxNumber
     postalCode:
-      description: 'The postal code. For example, Spain'
+      description: 'The postal code. For example, 24004'
       type: Property
       x-ngsi:
-        model: https://schema.org/Text
+        model: https://schema.org/https://schema.org/postalCode
     seeAlso:
       description: 'list of uri pointing to additional resources about the item'
       oneOf:
         - items:
-            - format: uri
-              type: string
+            format: uri
+            type: string
           minItems: 1
           type: array
         - format: uri
@@ -114,7 +114,7 @@ GtfsAgency:
       description: 'The street address'
       type: Property
       x-ngsi:
-        model: https://schema.org/Text
+        model: https://schema.org/streetAddress
     timezone:
       description: "Same as GTFS `agency_timezone`. See [GTFS](https://developers.google.com/transit/gtfs/reference/#agencytxt)"
       type: Property
