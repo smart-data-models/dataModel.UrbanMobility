@@ -1,52 +1,54 @@
 {
-  "$schema": "http://json-schema.org/schema#",
-  "$schemaVersion": "0.0",
-  "$id": "https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsFrequency/schema.json",
-  "title": "Smart Data Models. GTFS Schema - Frequency",
-  "description": "GTFS Frequency",
-  "type": "object",
-  "allOf": [
-    {
-      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
-    },
-    {
-      "properties": {
-        "type": {
-          "type": "string",
-          "enum": ["GtfsFrequency"],
-          "description": "Property. NGSI Entity type. It has to be GtfsFrequency"
+    "$schema": "http://json-schema.org/schema#",
+    "$schemaVersion": "0.0.1",
+    "$id": "https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsFrequency/schema.json",
+    "title": "Smart Data Models. GTFS Schema - Frequency",
+    "description": "GTFS Frequency",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
         },
-        "startTime": {
-          "type": "string",
-          "pattern": "^([0-3][0-9]|4[0-7]):[0-5][0-9]:[0-5][0-9]$",
-          "description": "Property. Same as GTFS `start_time`. Model:'https://schema.org/Text'"
-        },
-        "endTime": {
-          "type": "string",
-          "pattern": "^([0-3][0-9]|4[0-7]):[0-5][0-9]:[0-5][0-9]$",
-          "description": "Property. Same as GTFS `end_time`. Model:'https://schema.org/Text'"
-        },
-        "headwaySeconds": {
-          "type": "integer",
-          "minValue": 1,
-          "description": "Property. Same as GTFS `headway_secs`. Model:'https://schema.org/Number'"
-        },
-        "exactTimes": {
-          "type": "boolean",
-          "description": "Property. Same as GTFS `exact_times` but encoded as a Boolean; `false`: Frequency-based trips are not exactly scheduled. `true`: Frequency-based trips are exactly scheduled. Model:'https://schema.org/Boolean'"
-        },
-        "hasTrip": {
-          "$ref": "https://smart-data-models.github.io/dataModel.UrbanMobility/gtfs-schema.json#/definitions/GTFS-Stop-Commons/properties/hasTrip"
+        {
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "GtfsFrequency"
+                    ],
+                    "description": "Property. NGSI Entity type. It has to be GtfsFrequency"
+                },
+                "startTime": {
+                    "type": "string",
+                    "pattern": "^([0-3][0-9]|4[0-7]):[0-5][0-9]:[0-5][0-9]$",
+                    "description": "Property. Same as GTFS `start_time`. Model:'https://schema.org/Text'"
+                },
+                "endTime": {
+                    "type": "string",
+                    "pattern": "^([0-3][0-9]|4[0-7]):[0-5][0-9]:[0-5][0-9]$",
+                    "description": "Property. Same as GTFS `end_time`. Model:'https://schema.org/Text'"
+                },
+                "headwaySeconds": {
+                    "type": "integer",
+                    "minValue": 1,
+                    "description": "Property. Same as GTFS `headway_secs`. Model:'https://schema.org/Number'"
+                },
+                "exactTimes": {
+                    "type": "boolean",
+                    "description": "Property. Same as GTFS `exact_times` but encoded as a Boolean; `false`: Frequency-based trips are not exactly scheduled. `true`: Frequency-based trips are exactly scheduled. Model:'https://schema.org/Boolean'"
+                },
+                "hasTrip": {
+                    "$ref": "https://smart-data-models.github.io/dataModel.UrbanMobility/gtfs-schema.json#/definitions/GTFS-Stop-Commons/properties/hasTrip"
+                }
+            }
         }
-      }
-    }
-  ],
-  "required": [
-    "id",
-    "type",
-    "hasTrip",
-    "startTime",
-    "endTime",
-    "headwaySeconds"
-  ]
+    ],
+    "required": [
+        "id",
+        "type",
+        "hasTrip",
+        "startTime",
+        "endTime",
+        "headwaySeconds"
+    ]
 }
