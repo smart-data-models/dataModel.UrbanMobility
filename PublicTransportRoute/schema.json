@@ -1,115 +1,116 @@
 {
-  "$schema": "http://json-schema.org/schema#",
-  "$id": "https://smart-data-models.github.io/dataModel.UrbanMobility/PublicTransportRoute/schema.json",
-  "title": "SynchroniCity - Urban mobility PublicTransportRoute schema",
-  "description": "A generic public transport route",
-  "type": "object",
-  "allOf": [
-    {
-      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
-    },
-    {
-      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
-    },
-    {
-      "properties": {
-        "type": {
-          "type": "string",
-          "enum": [
-            "PublicTransportRoute"
-          ],
-          "description": "Property. NGSI Entity type. It has to be PublicTransportRoute"
+    "$schema": "http://json-schema.org/schema#",
+    "$id": "https://smart-data-models.github.io/dataModel.UrbanMobility/PublicTransportRoute/schema.json",
+    "title": "SynchroniCity - Urban mobility PublicTransportRoute schema",
+    "description": "A generic public transport route",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
         },
-        "routeCode": {
-          "type": "string",
-          "description": "Property. ID or code of the route (e.g. ‘HT5200104000’).  Model:'https://schema.org/Text'."
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
         },
-        "shortRouteCode": {
-          "type": "string",
-          "description": "Property. Shorter form of the ID/code of the route (e.g. ‘5200104000’’). Model:'https://schema.org/Text'."
-        },
-        "transportationType": {
-          "type": "integer",
-          "enum": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7
-          ],
-          "description": "Property. Types of public transport using this stop as defined in (https://developers.google.com/transit/gtfs/reference/#routestxt). Model:'https://schema.org/Number'. Enum:'0, 1, 2, 3, 4, 5, 6, 7'"
-        },
-        "routeColor": {
-          "type": "string",
-          "pattern": "^#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$",
-          "description": "Property. Color assigned to route in text.  Model:'https://schema.org/color'."
-        },
-        "routeTextColor": {
-          "type": "string",
-          "description": "Property. Color assigned to route in hexadecimal.  Model:'https://schema.org/color'."
-        },
-        "routeSegments": {
-          "type": "array",
-          "description": "Property. Segments of this route defined by their name and stops.",
-          "items": {
-            "type": "object",
+        {
             "properties": {
-              "segmentName": {
-                "type": "string"
-              },
-              "refPublicTransportStops": {
-                "type": "array",
-                "items": {
-                  "type": "string",
-                  "format": "uri"
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "PublicTransportRoute"
+                    ],
+                    "description": "Property. NGSI Entity type. It has to be PublicTransportRoute"
+                },
+                "routeCode": {
+                    "type": "string",
+                    "description": "Property. ID or code of the route (e.g. \u2018HT5200104000\u2019).  Model:'https://schema.org/Text'."
+                },
+                "shortRouteCode": {
+                    "type": "string",
+                    "description": "Property. Shorter form of the ID/code of the route (e.g. \u20185200104000\u2019\u2019). Model:'https://schema.org/Text'."
+                },
+                "transportationType": {
+                    "type": "integer",
+                    "enum": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7
+                    ],
+                    "description": "Property. Types of public transport using this stop as defined in (https://developers.google.com/transit/gtfs/reference/#routestxt). Model:'https://schema.org/Number'. Enum:'0, 1, 2, 3, 4, 5, 6, 7'"
+                },
+                "routeColor": {
+                    "type": "string",
+                    "pattern": "^#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$",
+                    "description": "Property. Color assigned to route in text.  Model:'https://schema.org/color'."
+                },
+                "routeTextColor": {
+                    "type": "string",
+                    "description": "Property. Color assigned to route in hexadecimal.  Model:'https://schema.org/color'."
+                },
+                "routeSegments": {
+                    "type": "array",
+                    "description": "Property. Segments of this route defined by their name and stops.",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "segmentName": {
+                                "type": "string"
+                            },
+                            "refPublicTransportStops": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        },
+                        "required": [
+                            "segmentName",
+                            "refPublicTransportStops"
+                        ]
+                    }
+                },
+                "schedule": {
+                    "type": "array",
+                    "description": "Property. Working hours of this route. Model:'https://schema.org/OpeningHoursSpecification'.",
+                    "items": {
+                        "properties": {
+                            "opens": {
+                                "type": "string",
+                                "pattern": "[0-9]{2}:[0-9]{2}"
+                            },
+                            "closes": {
+                                "type": "string",
+                                "pattern": "[0-9]{2}:[0-9]{2}"
+                            },
+                            "dayOfWeek": {
+                                "type": "string",
+                                "enum": [
+                                    "Friday",
+                                    "Monday",
+                                    "PublicHolidays",
+                                    "Saturday",
+                                    "Sunday",
+                                    "Thursday",
+                                    "Tuesday",
+                                    "Wednesday"
+                                ]
+                            }
+                        }
+                    },
+                    "minItems": 1
                 }
-              }
-            },
-            "required": [
-              "segmentName",
-              "refPublicTransportStops"
-            ]
-          }
-        },
-        "schedule": {
-          "type": "array",
-          "description": "Property. Working hours of this route. Model:'https://schema.org/OpeningHoursSpecification'.",
-          "items": {
-            "properties": {
-              "opens": {
-                "type": "string",
-                "pattern": "[0-9]{2}:[0-9]{2}"
-              },
-              "closes": {
-                "type": "string",
-                "pattern": "[0-9]{2}:[0-9]{2}"
-              },
-              "dayOfWeek": {
-                "type": "string",
-                "enum": [
-                  "Friday",
-                  "Monday",
-                  "PublicHolidays",
-                  "Saturday",
-                  "Sunday",
-                  "Thursday",
-                  "Tuesday",
-                  "Wednesday"
-                ]
-              }
             }
-          },
-          "minItems": 1
         }
-      }
-    }
-  ],
-  "required": [
-    "id",
-    "type",
-    "transportationType"
-  ]
+    ],
+    "required": [
+        "id",
+        "type",
+        "transportationType"
+    ],
+    "$schemaVersion": "0.0.1"
 }
