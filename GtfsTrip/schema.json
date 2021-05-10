@@ -1,120 +1,120 @@
 {
-  "$schema": "http://json-schema.org/schema#",
-  "$schemaVersion": "0.0",
-  "$id": "https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsTrip/schema.json",
-  "title": "Smart Data models. GTFS Schema - Trip",
-  "description": "GTFS Trip",
-  "type": "object",
-  "allOf": [
-    {
-      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
-    },
-    {
-      "properties": {
-        "type": {
-          "type": "string",
-          "enum": [
-            "GtfsTrip"
-          ],
-          "description": "Property. NGSI Entity type. It has to be GtfsTrip"
+    "$schema": "http://json-schema.org/schema#",
+    "$schemaVersion": "0.0.1",
+    "$id": "https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsTrip/schema.json",
+    "title": "Smart Data models. GTFS Schema - Trip",
+    "description": "GTFS Trip",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
         },
-        "shortName": {
-          "type": "string",
-          "description": "Property. Same as GTFS `trip_short_name`. Model:'https://schema.org/Text'."
-        },
-        "headSign": {
-          "type": "string",
-          "description": "Property. Same as GTFS `trip_headsign`. Model:'https://schema.org/Text'."
-        },
-        "hasRoute": {
-          "type": "string",
-          "anyOf": [
-            {
-              "type": "string",
-              "minLength": 1,
-              "maxLength": 256,
-              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
-              "description": "Property. Identifier format of any NGSI entity"
-            },
-            {
-              "type": "string",
-              "format": "uri",
-              "description": "Property. Identifier format of any NGSI entity"
+        {
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "GtfsTrip"
+                    ],
+                    "description": "Property. NGSI Entity type. It has to be GtfsTrip"
+                },
+                "shortName": {
+                    "type": "string",
+                    "description": "Property. Same as GTFS `trip_short_name`. Model:'https://schema.org/Text'."
+                },
+                "headSign": {
+                    "type": "string",
+                    "description": "Property. Same as GTFS `trip_headsign`. Model:'https://schema.org/Text'."
+                },
+                "hasRoute": {
+                    "type": "string",
+                    "anyOf": [
+                        {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 256,
+                            "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+                            "description": "Property. Identifier format of any NGSI entity"
+                        },
+                        {
+                            "type": "string",
+                            "format": "uri",
+                            "description": "Property. Identifier format of any NGSI entity"
+                        }
+                    ],
+                    "description": "Relationship. Same as `route_id`. It shall point to an Entity of type GtfsRoute. Model:'http://schema.org/URL'"
+                },
+                "hasShape": {
+                    "anyOf": [
+                        {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 256,
+                            "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+                            "description": "Property. Identifier format of any NGSI entity"
+                        },
+                        {
+                            "type": "string",
+                            "format": "uri",
+                            "description": "Property. Identifier format of any NGSI entity"
+                        }
+                    ],
+                    "description": "Relationship. Same as GTFS `shape_id`. It shall point to an Entity of type GtfsShape. Model:'http://schema.org/URL'"
+                },
+                "block": {
+                    "type": "string",
+                    "description": "Property. Same as GTFS `block_id`. Model:'https://schema.org/Text'."
+                },
+                "hasService": {
+                    "anyOf": [
+                        {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 256,
+                            "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+                            "description": "Property. Identifier format of any NGSI entity"
+                        },
+                        {
+                            "type": "string",
+                            "format": "uri",
+                            "description": "Property. Identifier format of any NGSI entity"
+                        }
+                    ],
+                    "description": "Relationship. Same as GTFS `service_id`. It shall point to an Entity of type GtfsService. Model:'http://schema.org/URL'"
+                },
+                "direction": {
+                    "type": "number",
+                    "enum": [
+                        0,
+                        1
+                    ],
+                    "description": "Property. Same as GTFS `direction_id`. Model:'https://schema.org/Number'. Enum:'0, 1'"
+                },
+                "wheelChairAccessible": {
+                    "type": "number",
+                    "enum": [
+                        0,
+                        1,
+                        2
+                    ],
+                    "description": "Property. Same as GTFS `wheelchair_accessible`. Model:'https://schema.org/Number'. Enum:'0, 1, 2'"
+                },
+                "bikesAllowed": {
+                    "type": "number",
+                    "enum": [
+                        0,
+                        1,
+                        2
+                    ],
+                    "description": "Property. Same as GTFS `bikes_allowed`. Model:'https://schema.org/Number'. Enum:'0, 1, 2'. See [GTFS](https://developers.google.com/transit/gtfs/reference/#tripstxt)"
+                }
             }
-          ],
-          "description": "Relationship. Same as `route_id`. It shall point to an Entity of type GtfsRoute. Model:'http://schema.org/URL'"
-        },
-        "hasShape": {
-          "anyOf": [
-            {
-              "type": "string",
-              "minLength": 1,
-              "maxLength": 256,
-              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
-              "description": "Property. Identifier format of any NGSI entity"
-            },
-            {
-              "type": "string",
-              "format": "uri",
-              "description": "Property. Identifier format of any NGSI entity"
-            }
-          ],
-          "description": "Relationship. Same as GTFS `shape_id`. It shall point to an Entity of type GtfsShape. Model:'http://schema.org/URL'"
-        },
-        "block": {
-          "type": "string",
-          "description": "Property. Same as GTFS `block_id`. Model:'https://schema.org/Text'."
-        },
-        "hasService": {
-          "anyOf": [
-            {
-              "type": "string",
-              "minLength": 1,
-              "maxLength": 256,
-              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
-              "description": "Property. Identifier format of any NGSI entity"
-            },
-            {
-              "type": "string",
-              "format": "uri",
-              "description": "Property. Identifier format of any NGSI entity"
-            }
-          ],
-          "description": "Relationship. Same as GTFS `service_id`. It shall point to an Entity of type GtfsService. Model:'http://schema.org/URL'"
-        },
-        "direction": {
-          "type": "number",
-          "enum": [
-            0,
-            1
-          ],
-          "description": "Property. Same as GTFS `direction_id`. Model:'https://schema.org/Number'. Enum:'0, 1'"
-        },
-        "wheelChairAccessible": {
-          "type": "number",
-          "enum": [
-            0,
-            1,
-            2
-          ],
-          "description": "Property. Same as GTFS `wheelchair_accessible`. Model:'https://schema.org/Number'. Enum:'0, 1, 2'"
-        },
-        "bikesAllowed": {
-          "type": "number",
-          "enum": [
-            0,
-            1,
-            2
-          ],
-          "description": "Property. Same as GTFS `bikes_allowed`. Model:'https://schema.org/Number'. Enum:'0, 1, 2'. See [GTFS](https://developers.google.com/transit/gtfs/reference/#tripstxt)"
         }
-      }
-    }
-  ],
-  "required": [
-    "id",
-    "type",
-    "hasRoute",
-    "hasService"
-  ]
+    ],
+    "required": [
+        "id",
+        "type",
+        "hasRoute",
+        "hasService"
+    ]
 }
