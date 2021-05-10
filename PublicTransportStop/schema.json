@@ -1,109 +1,109 @@
 {
-  "$schema": "http://json-schema.org/schema#",
-  "$schemaVersion": "0.0",
-  "$id": "https://smart-data-models.github.io/dataModel.UrbanMobility/PublicTransportStop/schema.json",
-  "title": "Urban mobility PublicTransportStop schema",
-  "description": "A generic public transport stop",
-  "type": "object",
-  "allOf": [
-    {
-      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
-    },
-    {
-      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
-    },
-    {
-      "properties": {
-        "type": {
-          "type": "string",
-          "enum": [
-            "PublicTransportStop"
-          ],
-          "description": "Property. NGSI Entity type. It has to be PublicTransportStop"
+    "$schema": "http://json-schema.org/schema#",
+    "$schemaVersion": "0.0.1",
+    "$id": "https://smart-data-models.github.io/dataModel.UrbanMobility/PublicTransportStop/schema.json",
+    "title": "Urban mobility PublicTransportStop schema",
+    "description": "A generic public transport stop",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
         },
-        "stopCode": {
-          "type": "string",
-          "description": "Property. Identifier/code of the public transport stop. Model:'https://schema.org/Text'."
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
         },
-        "shortStopCode": {
-          "type": "string",
-          "description": "Property. Shorter form of the identifier/code of the public transport stop. Model:'https://schema.org/Text'."
-        },
-        "wheelChairAccessible": {
-          "$ref": "https://smart-data-models.github.io/dataModel.UrbanMobility/gtfs-schema.json#/definitions/GTFS-Stop-Commons/properties/wheelChairAccessible"
-        },
-        "transportationType": {
-          "type": "array",
-          "description": "Property. Types of public transport using this stop as defined in (https://developers.google.com/transit/gtfs/reference/#routestxt). Model:'https://schema.org/Number'. Enum:'0, 1, 2, 3, 4, 5, 6, 7'",
-          "items": {
-            "type": "integer",
-            "enum": [
-              0,
-              1,
-              2,
-              3,
-              4,
-              5,
-              6,
-              7
-            ]
-          }
-        },
-        "refPublicTransportRoute": {
-          "type": "array",
-          "description": "Relationship.  Model:'https://schema.org/URL'. Public transport routes using this stop.",
-          "items": {
-            "anyOf": [
-              {
-                "type": "string",
-                "minLength": 1,
-                "maxLength": 256,
-                "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
-                "description": "Property. Identifier format of any NGSI entity"
-              },
-              {
-                "type": "string",
-                "format": "uri",
-                "description": "Property. Identifier format of any NGSI entity"
-              }
-            ]
-          },
-          "minItems": 1,
-          "uniqueItems": true
-        },
-        "peopleCount": {
-          "type": "integer",
-          "minimum": 0,
-          "description": "Property. Estimation of people waiting in the stop. Model:'https://schema.org/Number'."
-        },
-        "refPeopleCountDevice": {
-          "type": "string",
-          "description": "Property. Reference to the [Device](https://github.com/Fiware/dataModels/blob/master/specs/Device/Device/doc/spec.md) providing people count estimate.",
-          "anyOf": [
-            {
-              "type": "string",
-              "minLength": 1,
-              "maxLength": 256,
-              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
-              "description": "Property. Identifier format of any NGSI entity"
-            },
-            {
-              "type": "string",
-              "format": "uri",
-              "description": "Property. Identifier format of any NGSI entity"
+        {
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "PublicTransportStop"
+                    ],
+                    "description": "Property. NGSI Entity type. It has to be PublicTransportStop"
+                },
+                "stopCode": {
+                    "type": "string",
+                    "description": "Property. Identifier/code of the public transport stop. Model:'https://schema.org/Text'."
+                },
+                "shortStopCode": {
+                    "type": "string",
+                    "description": "Property. Shorter form of the identifier/code of the public transport stop. Model:'https://schema.org/Text'."
+                },
+                "wheelChairAccessible": {
+                    "$ref": "https://smart-data-models.github.io/dataModel.UrbanMobility/gtfs-schema.json#/definitions/GTFS-Stop-Commons/properties/wheelChairAccessible"
+                },
+                "transportationType": {
+                    "type": "array",
+                    "description": "Property. Types of public transport using this stop as defined in (https://developers.google.com/transit/gtfs/reference/#routestxt). Model:'https://schema.org/Number'. Enum:'0, 1, 2, 3, 4, 5, 6, 7'",
+                    "items": {
+                        "type": "integer",
+                        "enum": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4,
+                            5,
+                            6,
+                            7
+                        ]
+                    }
+                },
+                "refPublicTransportRoute": {
+                    "type": "array",
+                    "description": "Relationship.  Model:'https://schema.org/URL'. Public transport routes using this stop.",
+                    "items": {
+                        "anyOf": [
+                            {
+                                "type": "string",
+                                "minLength": 1,
+                                "maxLength": 256,
+                                "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+                                "description": "Property. Identifier format of any NGSI entity"
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri",
+                                "description": "Property. Identifier format of any NGSI entity"
+                            }
+                        ]
+                    },
+                    "minItems": 1,
+                    "uniqueItems": true
+                },
+                "peopleCount": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "description": "Property. Estimation of people waiting in the stop. Model:'https://schema.org/Number'."
+                },
+                "refPeopleCountDevice": {
+                    "type": "string",
+                    "description": "Property. Reference to the [Device](https://github.com/Fiware/dataModels/blob/master/specs/Device/Device/doc/spec.md) providing people count estimate.",
+                    "anyOf": [
+                        {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 256,
+                            "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+                            "description": "Property. Identifier format of any NGSI entity"
+                        },
+                        {
+                            "type": "string",
+                            "format": "uri",
+                            "description": "Property. Identifier format of any NGSI entity"
+                        }
+                    ]
+                },
+                "openingHoursSpecification": {
+                    "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/DateTime-Commons/properties/openingHoursSpecification"
+                }
             }
-          ]
-        },
-        "openingHoursSpecification": {
-          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/DateTime-Commons/properties/openingHoursSpecification"
         }
-      }
-    }
-  ],
-  "required": [
-    "id",
-    "type",
-    "transportationType",
-    "name"
-  ]
+    ],
+    "required": [
+        "id",
+        "type",
+        "transportationType",
+        "name"
+    ]
 }
