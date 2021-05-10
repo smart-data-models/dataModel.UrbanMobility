@@ -1,29 +1,36 @@
 {
-  "$schema": "http://json-schema.org/schema#",
-  "$schemaVersion": "0.0",
-  "$id": "https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsAccessPoint/schema.json",
-  "title": "Smart Data Models. GTFS Schema",
-  "description": "GTFS Access Point",
-  "type": "object",
-  "allOf": [
-    {
-      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
-    },
-    {
-      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
-    },
-    {
-      "$ref": "https://smart-data-models.github.io/dataModel.UrbanMobility/gtfs-schema.json#/definitions/GTFS-Stop-Commons"
-    },
-    {
-      "properties": {
-        "type": {
-          "type": "string",
-          "enum": ["GtfsAccessPoint"],
-          "description": "Property. NGSI Entity Type: It has to be GtfsAccessPoint"
+    "$schema": "http://json-schema.org/schema#",
+    "$schemaVersion": "0.0.1",
+    "$id": "https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsAccessPoint/schema.json",
+    "title": "Smart Data Models. GTFS Schema",
+    "description": "GTFS Access Point",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+        },
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+        },
+        {
+            "$ref": "https://smart-data-models.github.io/dataModel.UrbanMobility/gtfs-schema.json#/definitions/GTFS-Stop-Commons"
+        },
+        {
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "GtfsAccessPoint"
+                    ],
+                    "description": "Property. NGSI Entity Type: It has to be GtfsAccessPoint"
+                }
+            }
         }
-      }
-    }
-  ],
-  "required": ["id", "type", "name", "location"]
+    ],
+    "required": [
+        "id",
+        "type",
+        "name",
+        "location"
+    ]
 }
