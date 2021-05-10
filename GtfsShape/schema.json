@@ -1,49 +1,49 @@
 {
-  "$schema": "http://json-schema.org/schema#",
-  "$schemaVersion": "0.0",
-  "$id": "https://smart-data-models.github.io/data-models/specs/UrbanMobility/GtfsShape/schema.json",
-  "title": "Smart Data Models. GTFS Schema",
-  "description": "GTFS Shape",
-  "type": "object",
-  "allOf": [
-    {
-      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
-    },
-    {
-      "properties": {
-        "type": {
-          "type": "string",
-          "enum": [
-            "GtfsShape"
-          ],
-          "description": "Property. NGSI Entity type. It has to be GtfsShape"
+    "$schema": "http://json-schema.org/schema#",
+    "$schemaVersion": "0.0.1",
+    "$id": "https://smart-data-models.github.io/data-models/specs/UrbanMobility/GtfsShape/schema.json",
+    "title": "Smart Data Models. GTFS Schema",
+    "description": "GTFS Shape",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
         },
-        "distanceTravelled": {
-          "type": "array",
-          "description": "Property. An array of the distance travelled when reaching each of the points that make the `LineString` or `MultiLineString` that represents this shape. It shall match the same number of elements as the corresponding `LineString` or `MultiLineString`.",
-          "items": {
-            "type": "number",
-            "minimum": 0
-          },
-          "minItems": 1
-        },
-        "location": {
-          "oneOf": [
-            {
-              "$ref": "http://geojson.org/schema/LineString.json"
-            },
-            {
-              "$ref": "http://geojson.org/schema/MultiLineString.json"
+        {
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "GtfsShape"
+                    ],
+                    "description": "Property. NGSI Entity type. It has to be GtfsShape"
+                },
+                "distanceTravelled": {
+                    "type": "array",
+                    "description": "Property. An array of the distance travelled when reaching each of the points that make the `LineString` or `MultiLineString` that represents this shape. It shall match the same number of elements as the corresponding `LineString` or `MultiLineString`.",
+                    "items": {
+                        "type": "number",
+                        "minimum": 0
+                    },
+                    "minItems": 1
+                },
+                "location": {
+                    "oneOf": [
+                        {
+                            "$ref": "http://geojson.org/schema/LineString.json"
+                        },
+                        {
+                            "$ref": "http://geojson.org/schema/MultiLineString.json"
+                        }
+                    ],
+                    "description": "Geoproperty. The geographical shape associated to this entity encoded as GeoJSON `LineString` or `MultiLineString`. The coordinates shall be obtained from the `shapes.txt` feed file as per the value of `shape_id`, `shape_pt_lat`, `shape_pt_lon`, `shape_pt_sequence`."
+                }
             }
-          ],
-          "description": "Geoproperty. The geographical shape associated to this entity encoded as GeoJSON `LineString` or `MultiLineString`. The coordinates shall be obtained from the `shapes.txt` feed file as per the value of `shape_id`, `shape_pt_lat`, `shape_pt_lon`, `shape_pt_sequence`."
         }
-      }
-    }
-  ],
-  "required": [
-    "id",
-    "type",
-    "location"
-  ]
+    ],
+    "required": [
+        "id",
+        "type",
+        "location"
+    ]
 }
