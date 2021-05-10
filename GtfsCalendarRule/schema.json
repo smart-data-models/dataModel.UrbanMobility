@@ -1,77 +1,79 @@
 {
-  "$schema": "http://json-schema.org/schema#",
-  "$schemaVersion": "0.0",
-  "$id": "https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsCalendarRule/schema.json",
-  "title": "Smart Data Models. GTFS Schema",
-  "description": "Smart Data Models. GTFS Calendar Rule",
-  "type": "object",
-  "allOf": [
-    {
-      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
-    },
-    {
-      "properties": {
-        "type": {
-          "type": "string",
-          "enum": ["GtfsCalendarRule"],
-          "description": "Property. NGSI Entity Type: It has to be GtfsCalendarRule"
+    "$schema": "http://json-schema.org/schema#",
+    "$schemaVersion": "0.0.1",
+    "$id": "https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsCalendarRule/schema.json",
+    "title": "Smart Data Models. GTFS Schema",
+    "description": "Smart Data Models. GTFS Calendar Rule",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
         },
-        "hasService": {
-          "$ref": "https://smart-data-models.github.io/dataModel.UrbanMobility/gtfs-schema.json#/definitions/GTFS-Stop-Commons/properties/hasService"
-        },
-        "monday": {
-          "type": "boolean",
-          "description": "Property. Same as GTFS `monday`. Model:'https://schema.org/Boolean'"
-        },
-        "tuesday": {
-          "type": "boolean",
-          "description": "Property. Same as GTFS `tuesday`. Model:'https://schema.org/Boolean'"
-        },
-        "wednesday": {
-          "type": "boolean",
-          "description": "Property. Same as GTFS `wednesday`. Model:'https://schema.org/Boolean'"
-        },
-        "thursday": {
-          "type": "boolean",
-          "description": "Property. Same as GTFS `thursday`. Model:'https://schema.org/Boolean'"
-        },
-        "friday": {
-          "type": "boolean",
-          "description": "Property. Same as GTFS `friday`. Model:'https://schema.org/Boolean'"
-        },
-        "saturday": {
-          "type": "boolean",
-          "description": "Property. Same as GTFS `saturday`. Model:'https://schema.org/Boolean'"
-        },
-        "sunday": {
-          "type": "boolean",
-          "description": "Property. Same as GTFS `sunday`. Model:'https://schema.org/Boolean'"
-        },
-        "startDate": {
-          "type": "string",
-          "format": "date",
-          "description": "Property. Start date of this rule in `YYYY-MM-DD` format. It can be obtained from the field `start_date` of [calendar.txt](https://developers.google.com/transit/gtfs/reference/#calendartxt). Model:'https://schema.org/Date'"
-        },
-        "endDate": {
-          "type": "string",
-          "format": "date",
-          "description": "Property. End date of this rule in `YYYY-MM-DD` format. It can be obtained from the field `end_date` of [calendar.txt](https://developers.google.com/transit/gtfs/reference/#calendartxt). Model:'https://schema.org/Boolean'"
+        {
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "GtfsCalendarRule"
+                    ],
+                    "description": "Property. NGSI Entity Type: It has to be GtfsCalendarRule"
+                },
+                "hasService": {
+                    "$ref": "https://smart-data-models.github.io/dataModel.UrbanMobility/gtfs-schema.json#/definitions/GTFS-Stop-Commons/properties/hasService"
+                },
+                "monday": {
+                    "type": "boolean",
+                    "description": "Property. Same as GTFS `monday`. Model:'https://schema.org/Boolean'"
+                },
+                "tuesday": {
+                    "type": "boolean",
+                    "description": "Property. Same as GTFS `tuesday`. Model:'https://schema.org/Boolean'"
+                },
+                "wednesday": {
+                    "type": "boolean",
+                    "description": "Property. Same as GTFS `wednesday`. Model:'https://schema.org/Boolean'"
+                },
+                "thursday": {
+                    "type": "boolean",
+                    "description": "Property. Same as GTFS `thursday`. Model:'https://schema.org/Boolean'"
+                },
+                "friday": {
+                    "type": "boolean",
+                    "description": "Property. Same as GTFS `friday`. Model:'https://schema.org/Boolean'"
+                },
+                "saturday": {
+                    "type": "boolean",
+                    "description": "Property. Same as GTFS `saturday`. Model:'https://schema.org/Boolean'"
+                },
+                "sunday": {
+                    "type": "boolean",
+                    "description": "Property. Same as GTFS `sunday`. Model:'https://schema.org/Boolean'"
+                },
+                "startDate": {
+                    "type": "string",
+                    "format": "date",
+                    "description": "Property. Start date of this rule in `YYYY-MM-DD` format. It can be obtained from the field `start_date` of [calendar.txt](https://developers.google.com/transit/gtfs/reference/#calendartxt). Model:'https://schema.org/Date'"
+                },
+                "endDate": {
+                    "type": "string",
+                    "format": "date",
+                    "description": "Property. End date of this rule in `YYYY-MM-DD` format. It can be obtained from the field `end_date` of [calendar.txt](https://developers.google.com/transit/gtfs/reference/#calendartxt). Model:'https://schema.org/Boolean'"
+                }
+            }
         }
-      }
-    }
-  ],
-  "required": [
-    "id",
-    "type",
-    "hasService",
-    "monday",
-    "tuesday",
-    "wednesday",
-    "thursday",
-    "friday",
-    "saturday",
-    "sunday",
-    "startDate",
-    "endDate"
-  ]
+    ],
+    "required": [
+        "id",
+        "type",
+        "hasService",
+        "monday",
+        "tuesday",
+        "wednesday",
+        "thursday",
+        "friday",
+        "saturday",
+        "sunday",
+        "startDate",
+        "endDate"
+    ]
 }
