@@ -1,57 +1,57 @@
 {
-  "$schema": "http://json-schema.org/schema#",
-  "$schemaVersion": "0.0",
-  "$id": "https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsStation/schema.json",
-  "title": "Smart Data Models. GTFS Schema - Station",
-  "description": "GTFS Station",
-  "type": "object",
-  "allOf": [
-    {
-      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
-    },
-    {
-      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
-    },
-    {
-      "$ref": "https://smart-data-models.github.io/dataModel.UrbanMobility/gtfs-schema.json#/definitions/GTFS-Stop-Commons"
-    },
-    {
-      "properties": {
-        "type": {
-          "type": "string",
-          "enum": [
-            "GtfsStation"
-          ],
-          "description": "Property. NGSI Entity type. It has to be GtfsStation"
+    "$schema": "http://json-schema.org/schema#",
+    "$schemaVersion": "0.0.1",
+    "$id": "https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsStation/schema.json",
+    "title": "Smart Data Models. GTFS Schema - Station",
+    "description": "GTFS Station",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
         },
-        "hasAccessPoint": {
-          "type": "array",
-          "description": "Relationship. Model:'https://schema.org/URL'. It shall point to another Entity(ies) of type GtfsAccessPoint",
-          "items": {
-            "anyOf": [
-              {
-                "type": "string",
-                "minLength": 1,
-                "maxLength": 256,
-                "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
-                "description": "Property. Identifier format of any NGSI entity"
-              },
-              {
-                "type": "string",
-                "format": "uri",
-                "description": "Property. Identifier format of any NGSI entity"
-              }
-            ]
-          }
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+        },
+        {
+            "$ref": "https://smart-data-models.github.io/dataModel.UrbanMobility/gtfs-schema.json#/definitions/GTFS-Stop-Commons"
+        },
+        {
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "GtfsStation"
+                    ],
+                    "description": "Property. NGSI Entity type. It has to be GtfsStation"
+                },
+                "hasAccessPoint": {
+                    "type": "array",
+                    "description": "Relationship. Model:'https://schema.org/URL'. It shall point to another Entity(ies) of type GtfsAccessPoint",
+                    "items": {
+                        "anyOf": [
+                            {
+                                "type": "string",
+                                "minLength": 1,
+                                "maxLength": 256,
+                                "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+                                "description": "Property. Identifier format of any NGSI entity"
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri",
+                                "description": "Property. Identifier format of any NGSI entity"
+                            }
+                        ]
+                    }
+                }
+            }
         }
-      }
-    }
-  ],
-  "required": [
-    "id",
-    "type",
-    "name",
-    "location",
-    "hasStop"
-  ]
+    ],
+    "required": [
+        "id",
+        "type",
+        "name",
+        "location",
+        "hasStop"
+    ]
 }
