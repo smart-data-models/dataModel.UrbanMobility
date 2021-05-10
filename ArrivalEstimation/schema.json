@@ -1,52 +1,52 @@
 {
-  "$schema": "http://json-schema.org/schema#",
-  "$schemaVersion": "0.0",
-  "$id": "https://smart-data-models.github.io/dataModel.UrbanMobility/ArrivalEstimation/schema.json",
-  "title": "NGSI GTFS Schema",
-  "description": "Arrival Estimation",
-  "type": "object",
-  "allOf": [
-    {
-      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
-    },
-    {
-      "properties": {
-        "type": {
-          "type": "string",
-          "enum": [
-            "ArrivalEstimation"
-          ],
-          "description": "Property. NGSI Entity Type: It has to be ArrivalEstimation"
+    "$schema": "http://json-schema.org/schema#",
+    "$schemaVersion": "0.0.1",
+    "$id": "https://smart-data-models.github.io/dataModel.UrbanMobility/ArrivalEstimation/schema.json",
+    "title": "NGSI GTFS Schema",
+    "description": "Arrival Estimation",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
         },
-        "hasTrip": {
-          "$ref": "https://smart-data-models.github.io/dataModel.UrbanMobility/gtfs-schema.json#/definitions/GTFS-Stop-Commons/properties/hasTrip"
-        },
-        "remainingTime": {
-          "type": "string",
-          "pattern": "^P(?=\\w*\\d)(?:\\d+Y|Y)?(?:\\d+M|M)?(?:\\d+W|W)?(?:\\d+D|D)?(?:T(?:\\d+H|H)?(?:\\d+M|M)?(?:\\d+(?:\\?.\\d{1,2})?S|S)?)?$",
-          "description": "Property. It shall contain the remaining time of arrival for the trip heading to the concerned stop. Remaining time shall be encoded as a ISO8601 duration. Ex. `PT8M5S`."
-        },
-        "remainingDistance": {
-          "type": "number",
-          "minValue": 0,
-          "description": "Property. It shall contain the remaining distance (in meters) of arrival for the trip heading to the concerned stop. Model:'https://schema.org/Number'. Units:'Meters'"
-        },
-        "headSign": {
-          "type": "string",
-          "description": "Property. It shall contain the text that appears on a sign that identifies the trip's destination to passengers. Model:'https://schema.org/Text'."
-        },
-        "hasStop": {
-          "$ref": "https://smart-data-models.github.io/dataModel.UrbanMobility/gtfs-schema.json#/definitions/GTFS-Stop-Commons/properties/hasStop"
+        {
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "ArrivalEstimation"
+                    ],
+                    "description": "Property. NGSI Entity Type: It has to be ArrivalEstimation"
+                },
+                "hasTrip": {
+                    "$ref": "https://smart-data-models.github.io/dataModel.UrbanMobility/gtfs-schema.json#/definitions/GTFS-Stop-Commons/properties/hasTrip"
+                },
+                "remainingTime": {
+                    "type": "string",
+                    "pattern": "^P(?=\\w*\\d)(?:\\d+Y|Y)?(?:\\d+M|M)?(?:\\d+W|W)?(?:\\d+D|D)?(?:T(?:\\d+H|H)?(?:\\d+M|M)?(?:\\d+(?:\\?.\\d{1,2})?S|S)?)?$",
+                    "description": "Property. It shall contain the remaining time of arrival for the trip heading to the concerned stop. Remaining time shall be encoded as a ISO8601 duration. Ex. `PT8M5S`."
+                },
+                "remainingDistance": {
+                    "type": "number",
+                    "minValue": 0,
+                    "description": "Property. It shall contain the remaining distance (in meters) of arrival for the trip heading to the concerned stop. Model:'https://schema.org/Number'. Units:'Meters'"
+                },
+                "headSign": {
+                    "type": "string",
+                    "description": "Property. It shall contain the text that appears on a sign that identifies the trip's destination to passengers. Model:'https://schema.org/Text'."
+                },
+                "hasStop": {
+                    "$ref": "https://smart-data-models.github.io/dataModel.UrbanMobility/gtfs-schema.json#/definitions/GTFS-Stop-Commons/properties/hasStop"
+                }
+            }
         }
-      }
-    }
-  ],
-  "required": [
-    "id",
-    "type",
-    "hasStop",
-    "hasTrip",
-    "remainingTime",
-    "headSign"
-  ]
+    ],
+    "required": [
+        "id",
+        "type",
+        "hasStop",
+        "hasTrip",
+        "remainingTime",
+        "headSign"
+    ]
 }
