@@ -1,47 +1,47 @@
 {
-  "$schema": "http://json-schema.org/schema#",
-  "$schemaVersion": "0.0",
-  "$id": "https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsService/schema.json",
-  "title": "Smart Data Models. GTFS Schema",
-  "description": "GTFS Service",
-  "type": "object",
-  "allOf": [
-    {
-      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
-    },
-    {
-      "properties": {
-        "type": {
-          "type": "string",
-          "enum": [
-            "GtfsService"
-          ],
-          "description": "Property. NGSI Entity type. It has to be GtfsService"
+    "$schema": "http://json-schema.org/schema#",
+    "$schemaVersion": "0.0.1",
+    "$id": "https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsService/schema.json",
+    "title": "Smart Data Models. GTFS Schema",
+    "description": "GTFS Service",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
         },
-        "operatedBy": {
-          "anyOf": [
-            {
-              "type": "string",
-              "minLength": 1,
-              "maxLength": 256,
-              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
-              "description": "Property. Identifier format of any NGSI entity"
-            },
-            {
-              "type": "string",
-              "format": "uri",
-              "description": "Property. Identifier format of any NGSI entity"
+        {
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "GtfsService"
+                    ],
+                    "description": "Property. NGSI Entity type. It has to be GtfsService"
+                },
+                "operatedBy": {
+                    "anyOf": [
+                        {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 256,
+                            "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+                            "description": "Property. Identifier format of any NGSI entity"
+                        },
+                        {
+                            "type": "string",
+                            "format": "uri",
+                            "description": "Property. Identifier format of any NGSI entity"
+                        }
+                    ],
+                    "description": "Relationship. Agency that operates this service. It shall point to an Entity of Type GtfsAgency"
+                }
             }
-          ],
-          "description": "Relationship. Agency that operates this service. It shall point to an Entity of Type GtfsAgency"
         }
-      }
-    }
-  ],
-  "required": [
-    "id",
-    "type",
-    "name",
-    "operatedBy"
-  ]
+    ],
+    "required": [
+        "id",
+        "type",
+        "name",
+        "operatedBy"
+    ]
 }
