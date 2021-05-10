@@ -1,36 +1,47 @@
 {
-  "$schema": "http://json-schema.org/schema#",
-  "$schemaVersion": "0.0",
-  "$id": "https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsCalendarDateRule/schema.json",
-  "title": "Smart Data Models. GTFS Schema",
-  "description": "GTFS Calendar Date Rule",
-  "type": "object",
-  "allOf": [
-    {
-      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
-    },
-    {
-      "properties": {
-        "type": {
-          "type": "string",
-          "enum": ["GtfsCalendarDateRule"],
-          "description": "Property. NGSI Entity Type: It has to be GtfsCalendarDateRule"
+    "$schema": "http://json-schema.org/schema#",
+    "$schemaVersion": "0.0.1",
+    "$id": "https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsCalendarDateRule/schema.json",
+    "title": "Smart Data Models. GTFS Schema",
+    "description": "GTFS Calendar Date Rule",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
         },
-        "appliesOn": {
-          "type": "string",
-          "format": "date",
-          "description": "Property.  Date (in YYYY-MM-DD format) this rule applies to. It shall be obtained from the GTFS `date` field. Model:'https://schema.org/Date'"
-        },
-        "exceptionType": {
-          "type": "string",
-          "enum": ["1", "2"],
-          "description": "Property. Same as GTFS `exception_type` field. Model:'https://schema.org/Text'. Enum:'1, 2'"
-        },
-        "hasService": {
-          "$ref": "https://smart-data-models.github.io/dataModel.UrbanMobility/gtfs-schema.json#/definitions/GTFS-Stop-Commons/properties/hasService"
+        {
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "GtfsCalendarDateRule"
+                    ],
+                    "description": "Property. NGSI Entity Type: It has to be GtfsCalendarDateRule"
+                },
+                "appliesOn": {
+                    "type": "string",
+                    "format": "date",
+                    "description": "Property.  Date (in YYYY-MM-DD format) this rule applies to. It shall be obtained from the GTFS `date` field. Model:'https://schema.org/Date'"
+                },
+                "exceptionType": {
+                    "type": "string",
+                    "enum": [
+                        "1",
+                        "2"
+                    ],
+                    "description": "Property. Same as GTFS `exception_type` field. Model:'https://schema.org/Text'. Enum:'1, 2'"
+                },
+                "hasService": {
+                    "$ref": "https://smart-data-models.github.io/dataModel.UrbanMobility/gtfs-schema.json#/definitions/GTFS-Stop-Commons/properties/hasService"
+                }
+            }
         }
-      }
-    }
-  ],
-  "required": ["id", "type", "hasService", "appliesOn", "exceptionType"]
+    ],
+    "required": [
+        "id",
+        "type",
+        "hasService",
+        "appliesOn",
+        "exceptionType"
+    ]
 }
