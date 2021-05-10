@@ -1,108 +1,108 @@
 {
-  "$schema": "http://json-schema.org/schema#",
-  "$schemaVersion": "0.0",
-  "$id": "https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsStopTime/schema.json",
-  "title": "Smat Data Models GTFS Schema - StopTime",
-  "description": "GTFS Stop Time",
-  "type": "object",
-  "allOf": [
-    {
-      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
-    },
-    {
-      "properties": {
-        "type": {
-          "type": "string",
-          "enum": [
-            "GtfsStopTime"
-          ],
-          "description": "Property. NGSI Entity type. It has to be GtfsStopTime"
+    "$schema": "http://json-schema.org/schema#",
+    "$schemaVersion": "0.0.1",
+    "$id": "https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsStopTime/schema.json",
+    "title": "Smat Data Models GTFS Schema - StopTime",
+    "description": "GTFS Stop Time",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
         },
-        "hasStop": {
-          "anyOf": [
-            {
-              "type": "string",
-              "minLength": 1,
-              "maxLength": 256,
-              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
-              "description": "Property. Identifier format of any NGSI entity"
-            },
-            {
-              "type": "string",
-              "format": "uri",
-              "description": "Property. Identifier format of any NGSI entity"
+        {
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "GtfsStopTime"
+                    ],
+                    "description": "Property. NGSI Entity type. It has to be GtfsStopTime"
+                },
+                "hasStop": {
+                    "anyOf": [
+                        {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 256,
+                            "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+                            "description": "Property. Identifier format of any NGSI entity"
+                        },
+                        {
+                            "type": "string",
+                            "format": "uri",
+                            "description": "Property. Identifier format of any NGSI entity"
+                        }
+                    ],
+                    "description": "Relationship. Same as GTFS `stop_id`. It shall point to an Entity of type GtfsStop. Model:'http://schema.org/URL'"
+                },
+                "hasTrip": {
+                    "$ref": "https://smart-data-models.github.io/dataModel.UrbanMobility/gtfs-schema.json#/definitions/GTFS-Stop-Commons/properties/hasTrip"
+                },
+                "arrivalTime": {
+                    "type": "string",
+                    "pattern": "^([0-3][0-9]|4[0-7]):[0-5][0-9]:[0-5][0-9]$",
+                    "description": "Property. Same as GTFS `arrival_time`. Model:'https://schema.org/Text'"
+                },
+                "departureTime": {
+                    "type": "string",
+                    "pattern": "^([0-3][0-9]|4[0-7]):[0-5][0-9]:[0-5][0-9]$",
+                    "description": "Property. Same as GTFS `departure_time`. Model:'https://schema.org/Text'"
+                },
+                "stopSequence": {
+                    "type": "integer",
+                    "minValue": 1,
+                    "description": "Property. Same as GTFS `stop_sequence`. Model:'https://schema.org/Integer'. Starting with `1`."
+                },
+                "distanceTravelled": {
+                    "type": "number",
+                    "minValue": 0,
+                    "description": "Property. Same as GTFS `shape_dist_traveled`. Model:'https://schema.org/Number'"
+                },
+                "pickupType": {
+                    "type": "string",
+                    "default": "0",
+                    "enum": [
+                        "0",
+                        "1",
+                        "2",
+                        "3"
+                    ],
+                    "description": "Property. Same as GTFS `pickup_type`. Model:'https://schema.org/Text'. Enum:'0, 1, 2, 3' "
+                },
+                "stopHeadsign": {
+                    "type": "string",
+                    "description": "Property. Same as GTFS `stop_headsign`. Model:'https://schema.org/Text'."
+                },
+                "dropOffType": {
+                    "type": "string",
+                    "default": "0",
+                    "enum": [
+                        "0",
+                        "1",
+                        "2",
+                        "3"
+                    ],
+                    "description": "Property. Same as GTFS `drop_off_type`. Model:'https://schema.org/Text'. Enum:'0, 1, 2, 3'"
+                },
+                "timepoint": {
+                    "type": "string",
+                    "default": "1",
+                    "enum": [
+                        "0",
+                        "1"
+                    ],
+                    "description": "Property. Same as GTFS `timepoint`. Model:'https://schema.org/Text'. Enum:'0, 1'"
+                }
             }
-          ],
-          "description": "Relationship. Same as GTFS `stop_id`. It shall point to an Entity of type GtfsStop. Model:'http://schema.org/URL'"
-        },
-        "hasTrip": {
-          "$ref": "https://smart-data-models.github.io/dataModel.UrbanMobility/gtfs-schema.json#/definitions/GTFS-Stop-Commons/properties/hasTrip"
-        },
-        "arrivalTime": {
-          "type": "string",
-          "pattern": "^([0-3][0-9]|4[0-7]):[0-5][0-9]:[0-5][0-9]$",
-          "description": "Property. Same as GTFS `arrival_time`. Model:'https://schema.org/Text'"
-        },
-        "departureTime": {
-          "type": "string",
-          "pattern": "^([0-3][0-9]|4[0-7]):[0-5][0-9]:[0-5][0-9]$",
-          "description": "Property. Same as GTFS `departure_time`. Model:'https://schema.org/Text'"
-        },
-        "stopSequence": {
-          "type": "integer",
-          "minValue": 1,
-          "description": "Property. Same as GTFS `stop_sequence`. Model:'https://schema.org/Integer'. Starting with `1`."
-        },
-        "distanceTravelled": {
-          "type": "number",
-          "minValue": 0,
-          "description": "Property. Same as GTFS `shape_dist_traveled`. Model:'https://schema.org/Number'"
-        },
-        "pickupType": {
-          "type": "string",
-          "default": "0",
-          "enum": [
-            "0",
-            "1",
-            "2",
-            "3"
-          ],
-          "description": "Property. Same as GTFS `pickup_type`. Model:'https://schema.org/Text'. Enum:'0, 1, 2, 3' "
-        },
-        "stopHeadsign": {
-          "type": "string",
-          "description": "Property. Same as GTFS `stop_headsign`. Model:'https://schema.org/Text'."
-        },
-        "dropOffType": {
-          "type": "string",
-          "default": "0",
-          "enum": [
-            "0",
-            "1",
-            "2",
-            "3"
-          ],
-          "description": "Property. Same as GTFS `drop_off_type`. Model:'https://schema.org/Text'. Enum:'0, 1, 2, 3'"
-        },
-        "timepoint": {
-          "type": "string",
-          "default": "1",
-          "enum": [
-            "0",
-            "1"
-          ],
-          "description": "Property. Same as GTFS `timepoint`. Model:'https://schema.org/Text'. Enum:'0, 1'"
         }
-      }
-    }
-  ],
-  "required": [
-    "id",
-    "type",
-    "arrivalTime",
-    "departureTime",
-    "hasStop",
-    "hasTrip",
-    "stopSequence"
-  ]
+    ],
+    "required": [
+        "id",
+        "type",
+        "arrivalTime",
+        "departureTime",
+        "hasStop",
+        "hasTrip",
+        "stopSequence"
+    ]
 }
