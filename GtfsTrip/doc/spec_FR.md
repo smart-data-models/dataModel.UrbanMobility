@@ -1,16 +1,17 @@
 Entité : GtfsTrip  
 =================  
-[Licence ouverte](https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/GtfsTrip/LICENSE.md)  
-Description globale : **Voyage GTFS**  
+[Licence ouverte] (https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/GtfsTrip/LICENSE.md)  
+[document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+Description globale : **GTFS Trip**  
 
-## Liste des biens  
+## Liste des propriétés  
 
-- `alternateName`: Un autre nom pour cet article  - `bikesAllowed`: Même chose que GTFS `bikes_allowed`. Enumération : "0, 1, 2". Voir [GTFS](https://developers.google.com/transit/gtfs/reference/#tripstxt)  - `block`: Même chose que GTFS `block_id`.  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `description`: Une description de cet article  - `direction`: Même chose que GTFS `direction_id`. Enum : '0, 1'.  - `hasRoute`: Même chose que `route_id`. Il doit pointer vers une entité de type GtfsRoute  - `hasService`: Même chose que le GTFS `service_id`. Il doit pointer vers une entité de type GtfsService  - `hasShape`: Même chose que GTFS `shape_id`. Il doit pointer vers une entité de type GtfsShape  - `headSign`: Identique à GTFS `trip_headsign`.  - `id`: Identifiant unique de l'entité  - `name`: Le nom de cet article.  - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur le sujet  - `shortName`: Même chose que GTFS `trip_short_name`.  - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `type`: Type d'entité NGSI. Il doit s'agir de GtfsTrip  - `wheelChairAccessible`: Même chose que pour GTFS "accessible aux fauteuils roulants". Enumération : "0, 1, 2    
+- `alternateName`: Un nom alternatif pour cet élément  - `bikesAllowed`: Identique à GTFS `bikes_allowed`. Enum : '0, 1, 2'. Voir [GTFS](https://developers.google.com/transit/gtfs/reference/#tripstxt)  - `block`: Identique à GTFS `block_id`.  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `direction`: Identique à GTFS `direction_id`. Enum : "0, 1  - `hasRoute`: Identique à `route_id`. Il doit pointer vers une entité de type GtfsRoute.  - `hasService`: Identique à GTFS `service_id`. Il doit pointer vers une Entité de type GtfsService  - `hasShape`: Identique à GTFS `shape_id`. Il doit pointer vers une entité de type GtfsShape.  - `headSign`: Identique à GTFS `trip_headsign`.  - `id`: Identifiant unique de l'entité  - `name`: Le nom de cet élément.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `shortName`: Identique au GTFS `trip_short_name`.  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `type`: Type d'entité NGSI. Il doit être GtfsTrip  - `wheelChairAccessible`: Identique à GTFS `wheelchair_accessible`. Enum : "0, 1, 2".    
 Propriétés requises  
 - `hasRoute`  - `hasService`  - `id`  - `type`    
 Voir [https://developers.google.com/transit/gtfs/reference/#tripstxt](https://developers.google.com/transit/gtfs/reference/#tripstxt)  
-## Modèle de données description des biens  
-Classement par ordre alphabétique (cliquez pour plus de détails)  
+## Description des propriétés du modèle de données  
+Classés par ordre alphabétique (cliquez pour plus de détails)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 GtfsTrip:    
@@ -127,8 +128,8 @@ GtfsTrip:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
@@ -165,8 +166,8 @@ GtfsTrip:
 ```  
 </details>    
 ## Exemples de charges utiles  
-#### GtfsTrip NGSI V2 valeurs clés Exemple  
-Voici un exemple de GtfsTrip au format JSON comme valeurs clés. Il est compatible avec NGSI V2 lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
+#### Exemple de valeurs-clés GtfsTrip NGSI-v2  
+Voici un exemple de GtfsTrip au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-v2 en utilisant `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
   "id": "urn:ngsi-ld:GtfsTrip:Spain:Malaga:1",  
@@ -178,8 +179,8 @@ GtfsTrip:
   "hasShape": "urn:ngsi-ld:GtfsShape:Shape01"  
 }  
 ```  
-#### GtfsTrip NGSI V2 normalisé Exemple  
-Voici un exemple de GtfsTrip au format JSON tel que normalisé. Ce format est compatible avec la version 2 du NGSI lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
+#### GtfsTrip NGSI-v2 normalisé Exemple  
+Voici un exemple d'un GtfsTrip au format JSON-LD tel que normalisé. Il est compatible avec NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
   "id": "urn:ngsi-ld:GtfsTrip:Spain:Malaga:1",  
@@ -204,48 +205,52 @@ GtfsTrip:
   }  
 }  
 ```  
-#### GtfsTrip NGSI-LD valeurs clés Exemple  
-Voici un exemple de GtfsTrip au format JSON-LD comme valeurs clés. Il est compatible avec le format NGSI-LD lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
-```json  
-{"@context": ["https://schema.lab.fiware.org/ld/context",  
-              "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
- "direction": 0,  
- "hasRoute": "urn:ngsi-ld:GtfsRoute:Spain:Malaga:1",  
- "hasService": "urn:ngsi-ld:GtfsService:Malaga_LAB",  
- "hasShape": "urn:ngsi-ld:GtfsShape:Shape01",  
- "headSign": "San AndrÃ©s",  
- "id": "urn:ngsi-ld:GtfsTrip:Spain:Malaga:1",  
- "type": "GtfsTrip"}  
-```  
-#### GtfsTrip NGSI-LD normalisé Exemple  
-Voici un exemple de GtfsTrip au format JSON-LD tel que normalisé. Il est compatible avec le format NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
+#### GtfsTrip NGSI-LD valeurs-clés Exemple  
+Voici un exemple de GtfsTrip au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-LD en utilisant `options=keyValues` et retourne les données contextuelles d'une entité individuelle.  
 ```json  
 {  
-    "id": "urn:ngsi-ld:GtfsTrip:Spain:Malaga:1",  
-    "type": "GtfsTrip",  
-    "direction": {  
-        "type": "Property",  
-        "value": 0  
-    },  
-    "headSign": {  
-        "type": "Property",  
-        "value": "San AndrÃ©s"  
-    },  
-    "hasRoute": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:GtfsRoute:Spain:Malaga:1"  
-    },  
-    "hasService": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:GtfsService:Malaga_LAB"  
-    },  
-    "hasShape": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:GtfsShape:Shape01"  
-    },  
-    "@context": [  
-        "https://schema.lab.fiware.org/ld/context",  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-    ]  
+  "id": "urn:ngsi-ld:GtfsTrip:Spain:Malaga:1",  
+  "type": "GtfsTrip",  
+  "direction": {  
+    "type": "Property",  
+    "value": 0  
+  },  
+  "headSign": {  
+    "type": "Property",  
+    "value": "San Andr\u00e9s"  
+  },  
+  "hasRoute": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:GtfsRoute:Spain:Malaga:1"  
+  },  
+  "hasService": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:GtfsService:Malaga_LAB"  
+  },  
+  "hasShape": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:GtfsShape:Shape01"  
+  },  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ]  
+}  
+```  
+#### GtfsTrip NGSI-LD normalisé Exemple  
+Voici un exemple d'un GtfsTrip au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+```json  
+{  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ],  
+  "direction": 0,  
+  "hasRoute": "urn:ngsi-ld:GtfsRoute:Spain:Malaga:1",  
+  "hasService": "urn:ngsi-ld:GtfsService:Malaga_LAB",  
+  "hasShape": "urn:ngsi-ld:GtfsShape:Shape01",  
+  "headSign": "San Andr\u00e9s",  
+  "id": "urn:ngsi-ld:GtfsTrip:Spain:Malaga:1",  
+  "type": "GtfsTrip"  
 }  
 ```  
