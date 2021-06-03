@@ -24,11 +24,6 @@ GtfsAgency:
     alternateName:
       description: 'An alternative name for this item'
       type: Property
-    areaServed:
-      description: 'The geographic area where a service or offered item is provided'
-      type: Property
-      x-ngsi:
-        model: https://schema.org/areaServed
     dataProvider:
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'
       type: Property
