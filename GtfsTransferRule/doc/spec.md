@@ -1,6 +1,7 @@
 Entity: GtfsTransferRule  
 ========================  
 [Open License](https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/GtfsTransferRule/LICENSE.md)  
+[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Global description: **GTFS Transfer Rule**  
 
 ## List of properties  
@@ -92,8 +93,8 @@ GtfsTransferRule:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
@@ -127,8 +128,8 @@ GtfsTransferRule:
 ```  
 </details>    
 ## Example payloads    
-#### GtfsTransferRule NGSI V2 key-values Example    
-Here is an example of a GtfsTransferRule in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
+#### GtfsTransferRule NGSI-v2 key-values Example    
+Here is an example of a GtfsTransferRule in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "urn:ngsi-ld:GtfsTransferRule:Malaga:Linea1_Linea5",  
@@ -140,8 +141,8 @@ GtfsTransferRule:
   "minimumTransferTime": 10  
 }  
 ```  
-#### GtfsTransferRule NGSI V2 normalized Example    
-Here is an example of a GtfsTransferRule in JSON format as normalized. This is compatible with NGSI V2 when not using options and returns the context data of an individual entity.  
+#### GtfsTransferRule NGSI-v2 normalized Example    
+Here is an example of a GtfsTransferRule in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "urn:ngsi-ld:GtfsTransferRule:Malaga:Linea1_Linea5",  
@@ -168,45 +169,49 @@ GtfsTransferRule:
 #### GtfsTransferRule NGSI-LD key-values Example    
 Here is an example of a GtfsTransferRule in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
-{"@context": ["https://schema.lab.fiware.org/ld/context",  
-              "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
- "hasDestination": "urn:ngsi-ld:GtfsStop:Malaga_508",  
- "hasOrigin": "urn:ngsi-ld:GtfsStop:Malaga_101",  
- "id": "urn:ngsi-ld:GtfsTransferRule:Malaga:Linea1_Linea5",  
- "minimumTransferTime": 10,  
- "name": "L1_L5",  
- "transferType": "0",  
- "type": "GtfsTransferRule"}  
+{  
+  "id": "urn:ngsi-ld:GtfsTransferRule:Malaga:Linea1_Linea5",  
+  "type": "GtfsTransferRule",  
+  "transferType": {  
+    "type": "Property",  
+    "value": "0"  
+  },  
+  "minimumTransferTime": {  
+    "type": "Property",  
+    "value": 10  
+  },  
+  "hasDestination": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:GtfsStop:Malaga_508"  
+  },  
+  "hasOrigin": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:GtfsStop:Malaga_101"  
+  },  
+  "name": {  
+    "type": "Property",  
+    "value": "L1_L5"  
+  },  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ]  
+}  
 ```  
 #### GtfsTransferRule NGSI-LD normalized Example    
 Here is an example of a GtfsTransferRule in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
-    "id": "urn:ngsi-ld:GtfsTransferRule:Malaga:Linea1_Linea5",  
-    "type": "GtfsTransferRule",  
-    "transferType": {  
-        "type": "Property",  
-        "value": "0"  
-    },  
-    "minimumTransferTime": {  
-        "type": "Property",  
-        "value": 10  
-    },  
-    "hasDestination": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:GtfsStop:Malaga_508"  
-    },  
-    "hasOrigin": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:GtfsStop:Malaga_101"  
-    },  
-    "name": {  
-        "type": "Property",  
-        "value": "L1_L5"  
-    },  
-    "@context": [  
-        "https://schema.lab.fiware.org/ld/context",  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-    ]  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ],  
+  "hasDestination": "urn:ngsi-ld:GtfsStop:Malaga_508",  
+  "hasOrigin": "urn:ngsi-ld:GtfsStop:Malaga_101",  
+  "id": "urn:ngsi-ld:GtfsTransferRule:Malaga:Linea1_Linea5",  
+  "minimumTransferTime": 10,  
+  "name": "L1_L5",  
+  "transferType": "0",  
+  "type": "GtfsTransferRule"  
 }  
 ```  
