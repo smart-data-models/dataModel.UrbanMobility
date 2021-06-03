@@ -1,16 +1,17 @@
 Entité : GtfsShape  
 ==================  
-[Licence ouverte](https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/GtfsShape/LICENSE.md)  
-Description globale : **Forme du GTFS  
+[Licence ouverte] (https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/GtfsShape/LICENSE.md)  
+[document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+Description globale : **FormeGTFS**  
 
-## Liste des biens  
+## Liste des propriétés  
 
-- `alternateName`: Un autre nom pour cet article  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `description`: Une description de cet article  - `distanceTravelled`: Un tableau de la distance parcourue en atteignant chacun des points qui forment la "chaîne de lignes" ou la "chaîne de lignes multiples" qui représente cette forme. Il doit correspondre au même nombre d'éléments que la "Chaîne de lignes" ou la "Chaîne multi-lignes" correspondante.  - `id`: Identifiant unique de l'entité  - `location`: La forme géographique associée à cette entité codée comme GeoJSON "LineString" ou "MultiLineString". Les coordonnées doivent être obtenues à partir du fichier feed `shapes.txt` selon la valeur de `shape_id`, `shape_pt_lat`, `shape_pt_lon`, `shape_pt_sequence`.  - `name`: Le nom de cet article.  - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur le sujet  - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `type`: Type d'entité NGSI. Il doit être GtfsShape    
+- `alternateName`: Un nom alternatif pour cet élément  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `distanceTravelled`: Un tableau de la distance parcourue pour atteindre chacun des points qui composent la `LineString` ou la `MultiLineString` qui représente cette forme. Il doit correspondre au même nombre d'éléments que la `LineString` ou la `MultiLineString` correspondante.  - `id`: Identifiant unique de l'entité  - `location`: La forme géographique associée à cette entité, encodée en tant que `LineString` ou `MultiLineString` GeoJSON. Les coordonnées sont obtenues à partir du fichier d'alimentation `shapes.txt` selon la valeur de `shape_id`, `shape_pt_lat`, `shape_pt_lon`, `shape_pt_sequence`.  - `name`: Le nom de cet élément.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `type`: Type d'entité NGSI. Il doit être GtfsShape.    
 Propriétés requises  
 - `id`  - `location`  - `type`    
 Voir [https://developers.google.com/transit/gtfs/reference/#shapestxt](https://developers.google.com/transit/gtfs/reference/#shapestxt). Il représente une "forme" GTFS.  
-## Modèle de données description des biens  
-Classement par ordre alphabétique (cliquez pour plus de détails)  
+## Description des propriétés du modèle de données  
+Classés par ordre alphabétique (cliquez pour plus de détails)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 GtfsShape:    
@@ -121,8 +122,8 @@ GtfsShape:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
@@ -144,8 +145,8 @@ GtfsShape:
 ```  
 </details>    
 ## Exemples de charges utiles  
-#### GtfsShape NGSI V2 valeurs clés Exemple  
-Voici un exemple de GtfsShape au format JSON comme valeurs clés. Il est compatible avec NGSI V2 lorsque l'on utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
+#### Exemple de valeurs clés GtfsShape NGSI-v2  
+Voici un exemple de GtfsShape au format JSON-LD comme valeurs-clés. Ceci est compatible avec NGSI-v2 quand on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
   "id": "urn:ngsi-ld:GtfsShape:101",  
@@ -161,8 +162,8 @@ GtfsShape:
   }  
 }  
 ```  
-#### GtfsShape NGSI V2 normalisé Exemple  
-Voici un exemple de GtfsShape au format JSON tel que normalisé. Il est compatible avec NGSI V2 lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
+#### GtfsShape NGSI-v2 normalisé Exemple  
+Voici un exemple de GtfsShape au format JSON-LD tel que normalisé. Ce format est compatible avec la NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
   "id": "urn:ngsi-ld:GtfsShape:101",  
@@ -181,52 +182,72 @@ GtfsShape:
   }  
 }  
 ```  
-#### GtfsShape NGSI-LD valeurs clés Exemple  
-Voici un exemple de GtfsShape au format JSON-LD comme valeurs clés. Il est compatible avec le format NGSI-LD lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
-```json  
-{"@context": ["https://schema.lab.fiware.org/ld/context",  
-              "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
- "id": "urn:ngsi-ld:GtfsShape:101",  
- "location": {"coordinates": [[-4.421394, 36.73826],  
-                              [-4.421428, 36.73825],  
-                              [-4.421505, 36.738186],  
-                              [-4.421525, 36.738033]],  
-              "type": "LineString"},  
- "type": "GtfsShape"}  
-```  
-#### GtfsShape NGSI-LD normalisé Exemple  
-Voici un exemple de GtfsShape au format JSON-LD tel que normalisé. Il est compatible avec le format NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
+#### Exemple de valeurs clés GtfsShape NGSI-LD  
+Voici un exemple de GtfsShape au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-LD en utilisant `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
-    "id": "urn:ngsi-ld:GtfsShape:101",  
-    "type": "GtfsShape",  
-    "location": {  
-        "type": "GeoProperty",  
-        "value": {  
-            "type": "LineString",  
-            "coordinates": [  
-                [  
-                    -4.421394,  
-                    36.73826  
-                ],  
-                [  
-                    -4.421428,  
-                    36.73825  
-                ],  
-                [  
-                    -4.421505,  
-                    36.738186  
-                ],  
-                [  
-                    -4.421525,  
-                    36.738033  
-                ]  
-            ]  
-        }  
-    },  
-    "@context": [  
-        "https://schema.lab.fiware.org/ld/context",  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-    ]  
+  "id": "urn:ngsi-ld:GtfsShape:101",  
+  "type": "GtfsShape",  
+  "location": {  
+    "type": "GeoProperty",  
+    "value": {  
+      "type": "LineString",  
+      "coordinates": [  
+        [  
+          -4.421394,  
+          36.73826  
+        ],  
+        [  
+          -4.421428,  
+          36.73825  
+        ],  
+        [  
+          -4.421505,  
+          36.738186  
+        ],  
+        [  
+          -4.421525,  
+          36.738033  
+        ]  
+      ]  
+    }  
+  },  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ]  
+}  
+```  
+#### GtfsShape NGSI-LD normalisé Exemple  
+Voici un exemple de GtfsShape au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+```json  
+{  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ],  
+  "id": "urn:ngsi-ld:GtfsShape:101",  
+  "location": {  
+    "coordinates": [  
+      [  
+        -4.421394,  
+        36.73826  
+      ],  
+      [  
+        -4.421428,  
+        36.73825  
+      ],  
+      [  
+        -4.421505,  
+        36.738186  
+      ],  
+      [  
+        -4.421525,  
+        36.738033  
+      ]  
+    ],  
+    "type": "LineString"  
+  },  
+  "type": "GtfsShape"  
 }  
 ```  
