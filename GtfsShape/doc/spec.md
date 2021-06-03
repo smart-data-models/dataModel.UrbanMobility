@@ -1,6 +1,7 @@
 Entity: GtfsShape  
 =================  
 [Open License](https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/GtfsShape/LICENSE.md)  
+[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Global description: **GTFS Shape**  
 
 ## List of properties  
@@ -121,8 +122,8 @@ GtfsShape:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
@@ -144,8 +145,8 @@ GtfsShape:
 ```  
 </details>    
 ## Example payloads    
-#### GtfsShape NGSI V2 key-values Example    
-Here is an example of a GtfsShape in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
+#### GtfsShape NGSI-v2 key-values Example    
+Here is an example of a GtfsShape in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "urn:ngsi-ld:GtfsShape:101",  
@@ -161,8 +162,8 @@ GtfsShape:
   }  
 }  
 ```  
-#### GtfsShape NGSI V2 normalized Example    
-Here is an example of a GtfsShape in JSON format as normalized. This is compatible with NGSI V2 when not using options and returns the context data of an individual entity.  
+#### GtfsShape NGSI-v2 normalized Example    
+Here is an example of a GtfsShape in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "urn:ngsi-ld:GtfsShape:101",  
@@ -184,49 +185,69 @@ GtfsShape:
 #### GtfsShape NGSI-LD key-values Example    
 Here is an example of a GtfsShape in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
-{"@context": ["https://schema.lab.fiware.org/ld/context",  
-              "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
- "id": "urn:ngsi-ld:GtfsShape:101",  
- "location": {"coordinates": [[-4.421394, 36.73826],  
-                              [-4.421428, 36.73825],  
-                              [-4.421505, 36.738186],  
-                              [-4.421525, 36.738033]],  
-              "type": "LineString"},  
- "type": "GtfsShape"}  
+{  
+  "id": "urn:ngsi-ld:GtfsShape:101",  
+  "type": "GtfsShape",  
+  "location": {  
+    "type": "GeoProperty",  
+    "value": {  
+      "type": "LineString",  
+      "coordinates": [  
+        [  
+          -4.421394,  
+          36.73826  
+        ],  
+        [  
+          -4.421428,  
+          36.73825  
+        ],  
+        [  
+          -4.421505,  
+          36.738186  
+        ],  
+        [  
+          -4.421525,  
+          36.738033  
+        ]  
+      ]  
+    }  
+  },  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ]  
+}  
 ```  
 #### GtfsShape NGSI-LD normalized Example    
 Here is an example of a GtfsShape in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
-    "id": "urn:ngsi-ld:GtfsShape:101",  
-    "type": "GtfsShape",  
-    "location": {  
-        "type": "GeoProperty",  
-        "value": {  
-            "type": "LineString",  
-            "coordinates": [  
-                [  
-                    -4.421394,  
-                    36.73826  
-                ],  
-                [  
-                    -4.421428,  
-                    36.73825  
-                ],  
-                [  
-                    -4.421505,  
-                    36.738186  
-                ],  
-                [  
-                    -4.421525,  
-                    36.738033  
-                ]  
-            ]  
-        }  
-    },  
-    "@context": [  
-        "https://schema.lab.fiware.org/ld/context",  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-    ]  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ],  
+  "id": "urn:ngsi-ld:GtfsShape:101",  
+  "location": {  
+    "coordinates": [  
+      [  
+        -4.421394,  
+        36.73826  
+      ],  
+      [  
+        -4.421428,  
+        36.73825  
+      ],  
+      [  
+        -4.421505,  
+        36.738186  
+      ],  
+      [  
+        -4.421525,  
+        36.738033  
+      ]  
+    ],  
+    "type": "LineString"  
+  },  
+  "type": "GtfsShape"  
 }  
 ```  
