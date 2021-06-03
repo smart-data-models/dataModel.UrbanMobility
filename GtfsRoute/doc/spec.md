@@ -1,6 +1,7 @@
 Entity: GtfsRoute  
 =================  
 [Open License](https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/GtfsRoute/LICENSE.md)  
+[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Global description: **GTFS Route**  
 
 ## List of properties  
@@ -108,8 +109,8 @@ GtfsRoute:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
@@ -135,8 +136,8 @@ GtfsRoute:
 ```  
 </details>    
 ## Example payloads    
-#### GtfsRoute NGSI V2 key-values Example    
-Here is an example of a GtfsRoute in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
+#### GtfsRoute NGSI-v2 key-values Example    
+Here is an example of a GtfsRoute in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "urn:ngsi-ld:GtfsRoute:Spain:Malaga:1",  
@@ -148,8 +149,8 @@ GtfsRoute:
   "operatedBy": "urn:ngsi-ld:GtfsAgency:Malaga_EMT"  
 }  
 ```  
-#### GtfsRoute NGSI V2 normalized Example    
-Here is an example of a GtfsRoute in JSON format as normalized. This is compatible with NGSI V2 when not using options and returns the context data of an individual entity.  
+#### GtfsRoute NGSI-v2 normalized Example    
+Here is an example of a GtfsRoute in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "urn:ngsi-ld:GtfsRoute:Spain:Malaga:1",  
@@ -175,45 +176,49 @@ GtfsRoute:
 #### GtfsRoute NGSI-LD key-values Example    
 Here is an example of a GtfsRoute in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
-{"@context": ["https://schema.lab.fiware.org/ld/context",  
-              "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
- "id": "urn:ngsi-ld:GtfsRoute:Spain:Malaga:1",  
- "name": "Parque del Sur _ Alameda Principal _ San AndrÃ©s",  
- "operatedBy": "urn:ngsi-ld:GtfsAgency:Malaga_EMT",  
- "page": "http://www.emtmalaga.es/emt-mobile/informacionLinea.html",  
- "routeType": "3",  
- "shortName": "1",  
- "type": "GtfsRoute"}  
+{  
+  "id": "urn:ngsi-ld:GtfsRoute:Spain:Malaga:1",  
+  "type": "GtfsRoute",  
+  "name": {  
+    "type": "Property",  
+    "value": "Parque del Sur _ Alameda Principal _ San Andr\u00e9s"  
+  },  
+  "shortName": {  
+    "type": "Property",  
+    "value": "1"  
+  },  
+  "page": {  
+    "type": "Property",  
+    "value": "http://www.emtmalaga.es/emt-mobile/informacionLinea.html"  
+  },  
+  "routeType": {  
+    "type": "Property",  
+    "value": "3"  
+  },  
+  "operatedBy": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:GtfsAgency:Malaga_EMT"  
+  },  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ]  
+}  
 ```  
 #### GtfsRoute NGSI-LD normalized Example    
 Here is an example of a GtfsRoute in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
-    "id": "urn:ngsi-ld:GtfsRoute:Spain:Malaga:1",  
-    "type": "GtfsRoute",  
-    "name": {  
-        "type": "Property",  
-        "value": "Parque del Sur _ Alameda Principal _ San AndrÃ©s"  
-    },  
-    "shortName": {  
-        "type": "Property",  
-        "value": "1"  
-    },  
-    "page": {  
-        "type": "Property",  
-        "value": "http://www.emtmalaga.es/emt-mobile/informacionLinea.html"  
-    },  
-    "routeType": {  
-        "type": "Property",  
-        "value": "3"  
-    },  
-    "operatedBy": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:GtfsAgency:Malaga_EMT"  
-    },  
-    "@context": [  
-        "https://schema.lab.fiware.org/ld/context",  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-    ]  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ],  
+  "id": "urn:ngsi-ld:GtfsRoute:Spain:Malaga:1",  
+  "name": "Parque del Sur _ Alameda Principal _ San Andr\u00e9s",  
+  "operatedBy": "urn:ngsi-ld:GtfsAgency:Malaga_EMT",  
+  "page": "http://www.emtmalaga.es/emt-mobile/informacionLinea.html",  
+  "routeType": "3",  
+  "shortName": "1",  
+  "type": "GtfsRoute"  
 }  
 ```  
