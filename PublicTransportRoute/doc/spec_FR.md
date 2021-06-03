@@ -1,46 +1,49 @@
 Entité : PublicTransportRoute  
 =============================  
-[Licence ouverte](https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/PublicTransportRoute/LICENSE.md)  
-Description globale : **Un itinéraire générique de transport public**  
+[Licence ouverte] (https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/PublicTransportRoute/LICENSE.md)  
+[document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+Description globale : **Une route générique de transport public**  
 
-## Liste des biens  
+## Liste des propriétés  
 
-- `address`: L'adresse postale.  - `alternateName`: Un autre nom pour cet article  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `description`: Une description de cet article  - `id`: Identifiant unique de l'entité  - `location`:   - `name`: Le nom de cet article.  - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `routeCode`: ID ou code de l'itinéraire (par exemple "HT5200104000")  - `routeColor`: Couleur attribuée à l'itinéraire dans le texte  - `routeSegments`: Des segments de cet itinéraire définis par leur nom et leurs arrêts.  - `routeTextColor`: Couleur attribuée à l'itinéraire en hexadécimal  - `schedule`: Horaires de travail de cet itinéraire  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur le sujet  - `shortRouteCode`: Une forme plus courte de l'ID/code de l'itinéraire (par exemple "5200104000")  - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `transportationType`: Types de transport public utilisant cet arrêt, tels que définis dans (https://developers.google.com/transit/gtfs/reference/#routestxt). Enumération : "0, 1, 2, 3, 4, 5, 6, 7".  - `type`: Type d'entité NGSI. Il doit s'agir de PublicTransportRoute    
+- `address`: L'adresse postale  - `alternateName`: Un nom alternatif pour cet élément  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `id`: Identifiant unique de l'entité  - `location`:   - `name`: Le nom de cet élément.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `routeCode`: ID ou code de l'itinéraire (par exemple, "HT5200104000").  - `routeColor`: Couleur attribuée à la route dans le texte  - `routeSegments`: Segments de cet itinéraire définis par leur nom et leurs arrêts.  - `routeTextColor`: Couleur attribuée à la route en hexadécimal  - `schedule`: Heures de travail de cet itinéraire  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `shortRouteCode`: Forme abrégée de l'ID/code de l'itinéraire (par exemple, '5200104000'')  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `transportationType`: Types de transports publics utilisant cet arrêt, tels que définis dans (https://developers.google.com/transit/gtfs/reference/#routestxt). Enum : "0, 1, 2, 3, 4, 5, 6, 7".  - `type`: Type d'entité NGSI. Il doit s'agir de PublicTransportRoute.    
 Propriétés requises  
 - `id`  - `transportationType`  - `type`    
-Modèle générique d'itinéraire de transport public. Il adopte certaines définitions de la GTFS, mais il n'a pas besoin d'être lié à des données GTFS supplémentaires. Un itinéraire est un trajet, proposé par un service de transport public, qui passe par une série d'arrêts.  
-## Modèle de données description des biens  
-Classement par ordre alphabétique (cliquez pour plus de détails)  
+Modèle générique d'itinéraire de transport public. Il adopte certaines définitions du GTFS, mais il n'a pas besoin d'être lié à des données supplémentaires du GTFS. Un itinéraire est un trajet, proposé par un service de transport public, qui passe par un ensemble d'arrêts.  
+## Description des propriétés du modèle de données  
+Classés par ordre alphabétique (cliquez pour plus de détails)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 PublicTransportRoute:    
   description: 'A generic public transport route'    
   properties:    
     address:    
-      description: 'The mailing address.'    
+      description: 'The mailing address'    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
           type: string    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
           type: string    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
         areaServed:    
-          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''    
+          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/areaServed'''    
           type: string    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
         postalCode:    
-          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
           type: string    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/Text'''    
+          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/address    
     alternateName:    
       description: 'An alternative name for this item'    
       type: Property    
@@ -292,8 +295,8 @@ PublicTransportRoute:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
@@ -334,8 +337,8 @@ PublicTransportRoute:
 ```  
 </details>    
 ## Exemples de charges utiles  
-#### PublicTransportRoute NGSI V2 Exemple de valeurs clés  
-Voici un exemple d'itinéraire de transport public en format JSON comme valeurs clés. Il est compatible avec NGSI V2 lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
+#### PublicTransportRoute Valeurs-clés NGSI-v2 Exemple  
+Voici un exemple de PublicTransportRoute au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-v2 lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
   "id": "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N3",  
@@ -398,8 +401,8 @@ PublicTransportRoute:
   ]  
 }  
 ```  
-#### PublicTransportRoute NGSI V2 normalisée Exemple  
-Voici un exemple d'une route de transport public au format JSON normalisé. Il est compatible avec la version 2 du NGSI lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
+#### PublicTransportRoute NGSI-v2 normalisé Exemple  
+Voici un exemple de PublicTransportRoute au format JSON-LD tel que normalisé. Ce format est compatible avec la NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
   "id": "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N3",  
@@ -473,82 +476,8 @@ PublicTransportRoute:
   }  
 }  
 ```  
-#### PublicTransportRoute NGSI-LD exemple de valeurs clés  
-Voici un exemple d'itinéraire de transport public en format JSON-LD comme valeurs clés. Il est compatible avec le format NGSI-LD lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
-```json  
-{  
-  "@context": [  
-    "https://smart-data-models.github.io/data-models/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "id": "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N3",  
-  "type": "PublicTransportRoute",  
-  "source": "https://api.smartsantander.eu/",  
-  "dataProvider": "http://www.smartsantander.eu/",  
-  "entityVersion": 2.0,  
-  "routeCode": {  
-    "type": "Property",  
-    "value": "5200103000"  
-  },  
-  "shortRouteCode": {  
-    "type": "Property",  
-    "value": "N3"  
-  },  
-  "name": {  
-    "type": "Property",  
-    "value": "PEÑACASTILLO-PLAZA DE ITALIA "  
-  },  
-  "transportationType": {  
-    "type": "Property",  
-    "value": 3  
-  },  
-  "routeColor": {  
-    "type": "Property",  
-    "value": "#ff0000"  
-  },  
-  "routeTextColor": {  
-    "type": "Property",  
-    "value": "RED"  
-  },  
-  "routeSegments": {  
-    "type": "Property",  
-    "value": [  
-      {  
-        "segmentName": "PEÑACASTILLO-PLAZA DE ITALIA:1",  
-        "refPublicTransportStops": [  
-          "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:311",  
-          "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:129"  
-        ]  
-      },  
-      {  
-        "segmentName": "PEÑACASTILLO-PLAZA DE ITALIA:2",  
-        "refPublicTransportStops": [  
-          "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:130",  
-          "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:131"  
-        ]  
-      }  
-    ]  
-  },  
-  "schedule": {  
-    "type": "Property"  
-    "value": [  
-      {  
-        "validFrom": "2018-01-24",  
-        "validThrough": "2018-05-25",  
-        "opens": "09:00",  
-        "closes": "23:00"  
-      },  
-      {  
-        "dayOfWeek": "Sunday",  
-        "opens": "09:00",  
-        "closes": "14:00"  
-      }  
-    ]  
-  }  
-}  
-```  
-#### PublicTransportRoute NGSI-LD normalisée Exemple  
-Voici un exemple d'une route de transport public au format JSON-LD, telle que normalisée. Il est compatible avec le format JSON-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
+#### PublicTransportRoute Valeurs-clés NGSI-LD Exemple  
+Voici un exemple de PublicTransportRoute au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-LD lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
   "id": "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N3",  
@@ -571,7 +500,7 @@ PublicTransportRoute:
   },  
   "name": {  
     "type": "Text",  
-    "value": "PEÑACASTILLO-PLAZA DE ITALIA"  
+    "value": "PE\u00d1ACASTILLO-PLAZA DE ITALIA"  
   },  
   "transportationType": {  
     "type": "Number",  
@@ -589,14 +518,14 @@ PublicTransportRoute:
     "type": "StructuredValue",  
     "value": [  
       {  
-        "segmentName": "PEÑACASTILLO-PLAZA DE ITALIA:1",  
+        "segmentName": "PE\u00d1ACASTILLO-PLAZA DE ITALIA:1",  
         "refPublicTransportStops": [  
           "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:311",  
           "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:129"  
         ]  
       },  
       {  
-        "segmentName": "PEÑACASTILLO-PLAZA DE ITALIA:2",  
+        "segmentName": "PE\u00d1ACASTILLO-PLAZA DE ITALIA:2",  
         "refPublicTransportStops": [  
           "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:130",  
           "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:131"  
@@ -624,5 +553,79 @@ PublicTransportRoute:
     "https://smart-data-models.github.io/data-models/context.jsonld",  
     "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
   ]  
+}  
+```  
+#### PublicTransportRoute NGSI-LD normalisé Exemple  
+Voici un exemple de PublicTransportRoute au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+```json  
+{  
+  "@context": [  
+    "https://smart-data-models.github.io/data-models/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ],  
+  "id": "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N3",  
+  "type": "PublicTransportRoute",  
+  "source": "https://api.smartsantander.eu/",  
+  "dataProvider": "http://www.smartsantander.eu/",  
+  "entityVersion": 2.0,  
+  "routeCode": {  
+    "type": "Property",  
+    "value": "5200103000"  
+  },  
+  "shortRouteCode": {  
+    "type": "Property",  
+    "value": "N3"  
+  },  
+  "name": {  
+    "type": "Property",  
+    "value": "PE\u00d1ACASTILLO-PLAZA DE ITALIA "  
+  },  
+  "transportationType": {  
+    "type": "Property",  
+    "value": 3  
+  },  
+  "routeColor": {  
+    "type": "Property",  
+    "value": "#ff0000"  
+  },  
+  "routeTextColor": {  
+    "type": "Property",  
+    "value": "RED"  
+  },  
+  "routeSegments": {  
+    "type": "Property",  
+    "value": [  
+      {  
+        "segmentName": "PE\u00d1ACASTILLO-PLAZA DE ITALIA:1",  
+        "refPublicTransportStops": [  
+          "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:311",  
+          "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:129"  
+        ]  
+      },  
+      {  
+        "segmentName": "PE\u00d1ACASTILLO-PLAZA DE ITALIA:2",  
+        "refPublicTransportStops": [  
+          "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:130",  
+          "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:131"  
+        ]  
+      }  
+    ]  
+  },  
+  "schedule": {  
+    "type": "Property",  
+    "value": [  
+      {  
+        "validFrom": "2018-01-24",  
+        "validThrough": "2018-05-25",  
+        "opens": "09:00",  
+        "closes": "23:00"  
+      },  
+      {  
+        "dayOfWeek": "Sunday",  
+        "opens": "09:00",  
+        "closes": "14:00"  
+      }  
+    ]  
+  }  
 }  
 ```  
