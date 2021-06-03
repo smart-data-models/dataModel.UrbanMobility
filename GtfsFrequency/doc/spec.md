@@ -1,11 +1,12 @@
 Entity: GtfsFrequency  
 =====================  
 [Open License](https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/GtfsFrequency/LICENSE.md)  
+[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Global description: **GTFS Frequency**  
 
 ## List of properties  
 
-- `alternateName`: An alternative name for this item  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `endTime`: Same as GTFS `end_time`  - `exactTimes`: Same as GTFS `exact_times` but encoded as a Boolean: `false`: Frequency-based trips are not exactly scheduled. `true`: Frequency-based trips are exactly scheduled  - `hasTrip`: Trip associated to this Entity. It shall point to an Entity of Type GtfsTrip  - `headwaySeconds`: Same as GTFS `headway_secs`  - `id`: Unique identifier of the entity  - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `startTime`: Same as GTFS `start_time`  - `type`: NGSI Entity type. It has to be GtfsFrequency    
+- `alternateName`: An alternative name for this item  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `endTime`: Same as GTFS `end_time`  - `exactTimes`: Same as GTFS `exact_times` but encoded as a Boolean; `false`: Frequency-based trips are not exactly scheduled. `true`: Frequency-based trips are exactly scheduled  - `hasTrip`: Trip associated to this Entity. It shall point to an Entity of Type GtfsTrip  - `headwaySeconds`: Same as GTFS `headway_secs`  - `id`: Unique identifier of the entity  - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `startTime`: Same as GTFS `start_time`  - `type`: NGSI Entity type. It has to be GtfsFrequency    
 Required properties  
 - `endTime`  - `hasTrip`  - `headwaySeconds`  - `id`  - `startTime`  - `type`    
 See [https://developers.google.com/transit/gtfs/reference/#frequenciestxt](https://developers.google.com/transit/gtfs/reference/#frequenciestxt)  
@@ -40,7 +41,7 @@ GtfsFrequency:
       x-ngsi:    
         model: https://schema.org/Text    
     exactTimes:    
-      description: 'Same as GTFS `exact_times` but encoded as a Boolean: `false`: Frequency-based trips are not exactly scheduled. `true`: Frequency-based trips are exactly scheduled'    
+      description: 'Same as GTFS `exact_times` but encoded as a Boolean; `false`: Frequency-based trips are not exactly scheduled. `true`: Frequency-based trips are exactly scheduled'    
       type: Property    
       x-ngsi:    
         model: https://schema.org/Boolean    
@@ -89,8 +90,8 @@ GtfsFrequency:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
@@ -121,8 +122,8 @@ GtfsFrequency:
 ```  
 </details>    
 ## Example payloads    
-#### GtfsFrequency NGSI V2 key-values Example    
-Here is an example of a GtfsFrequency in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
+#### GtfsFrequency NGSI-v2 key-values Example    
+Here is an example of a GtfsFrequency in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "urn:ngsi-ld:GtfsFrequency:Malaga:Linea1",  
@@ -135,8 +136,8 @@ GtfsFrequency:
   "headwaySeconds": 600  
 }  
 ```  
-#### GtfsFrequency NGSI V2 normalized Example    
-Here is an example of a GtfsFrequency in JSON format as normalized. This is compatible with NGSI V2 when not using options and returns the context data of an individual entity.  
+#### GtfsFrequency NGSI-v2 normalized Example    
+Here is an example of a GtfsFrequency in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "urn:ngsi-ld:GtfsFrequency:Malaga:Linea1",  
@@ -165,50 +166,54 @@ GtfsFrequency:
 #### GtfsFrequency NGSI-LD key-values Example    
 Here is an example of a GtfsFrequency in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
-{"@context": ["https://schema.lab.fiware.org/ld/context",  
-              "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
- "description": "Cada 10 minutos",  
- "endTime": "10:25:00",  
- "hasTrip": "urn:ngsi-ld:GtfsTrip:Spain:Malaga:1",  
- "headwaySeconds": 600,  
- "id": "urn:ngsi-ld:GtfsFrequency:Malaga:Linea1",  
- "name": "Laborables",  
- "startTime": "07:00:00",  
- "type": "GtfsFrequency"}  
+{  
+  "id": "urn:ngsi-ld:GtfsFrequency:Malaga:Linea1",  
+  "type": "GtfsFrequency",  
+  "description": {  
+    "type": "Property",  
+    "value": "Cada 10 minutos"  
+  },  
+  "hasTrip": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:GtfsTrip:Spain:Malaga:1"  
+  },  
+  "headwaySeconds": {  
+    "type": "Property",  
+    "value": 600  
+  },  
+  "startTime": {  
+    "type": "Property",  
+    "value": "07:00:00"  
+  },  
+  "endTime": {  
+    "type": "Property",  
+    "value": "10:25:00"  
+  },  
+  "name": {  
+    "type": "Property",  
+    "value": "Laborables"  
+  },  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ]  
+}  
 ```  
 #### GtfsFrequency NGSI-LD normalized Example    
 Here is an example of a GtfsFrequency in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
-    "id": "urn:ngsi-ld:GtfsFrequency:Malaga:Linea1",  
-    "type": "GtfsFrequency",  
-    "description": {  
-        "type": "Property",  
-        "value": "Cada 10 minutos"  
-    },  
-    "hasTrip": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:GtfsTrip:Spain:Malaga:1"  
-    },  
-    "headwaySeconds": {  
-        "type": "Property",  
-        "value": 600  
-    },  
-    "startTime": {  
-        "type": "Property",  
-        "value": "07:00:00"  
-    },  
-    "endTime": {  
-        "type": "Property",  
-        "value": "10:25:00"  
-    },  
-    "name": {  
-        "type": "Property",  
-        "value": "Laborables"  
-    },  
-    "@context": [  
-        "https://schema.lab.fiware.org/ld/context",  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-    ]  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ],  
+  "description": "Cada 10 minutos",  
+  "endTime": "10:25:00",  
+  "hasTrip": "urn:ngsi-ld:GtfsTrip:Spain:Malaga:1",  
+  "headwaySeconds": 600,  
+  "id": "urn:ngsi-ld:GtfsFrequency:Malaga:Linea1",  
+  "name": "Laborables",  
+  "startTime": "07:00:00",  
+  "type": "GtfsFrequency"  
 }  
 ```  
