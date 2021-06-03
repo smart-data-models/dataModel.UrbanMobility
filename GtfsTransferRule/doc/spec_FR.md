@@ -1,16 +1,17 @@
 Entité : GtfsTransferRule  
 =========================  
-[Licence ouverte](https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/GtfsTransferRule/LICENSE.md)  
-Description globale : **Règle de transfert de la GTFS**  
+[Licence ouverte] (https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/GtfsTransferRule/LICENSE.md)  
+[document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+Description globale : **Règle de transfert GTFS**  
 
-## Liste des biens  
+## Liste des propriétés  
 
-- `alternateName`: Un autre nom pour cet article  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `description`: Une description de cet article  - `hasDestination`: Voyage associé à cette entité. Il doit pointer vers une Entité de type GtfsStop ou GtfsStation  - `hasOrigin`: Voyage associé à cette entité. Il doit pointer vers une Entité de type GtfsStop ou GtfsStation  - `id`: Identifiant unique de l'entité  - `minimumTransferTime`: Même chose que GTFS `min_transfer_time`. Unité : "secondes".  - `name`: Le nom de cet article.  - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur le sujet  - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `transferType`: Même chose que le GTFS `transfer_type`. Enum : "0, 1, 2, 3  - `type`: Type d'entité NGSI. Il doit s'agir de GtfsTransferRule    
+- `alternateName`: Un nom alternatif pour cet élément  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `hasDestination`: Voyage associé à cette Entité. Il doit pointer vers une Entité de type GtfsStop ou GtfsStation.  - `hasOrigin`: Voyage associé à cette Entité. Il doit pointer vers une Entité de type GtfsStop ou GtfsStation.  - `id`: Identifiant unique de l'entité  - `minimumTransferTime`: Identique au `min_transfer_time` de GTFS. Unité : 'secondes'.  - `name`: Le nom de cet élément.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `transferType`: Identique à GTFS `transfer_type`. Enum : "0, 1, 2, 3".  - `type`: Type d'entité NGSI. Il doit être GtfsTransferRule.    
 Propriétés requises  
 - `hasDestination`  - `hasOrigin`  - `id`  - `transferType`  - `type`    
 Voir [https://developers.google.com/transit/gtfs/reference/#transferstxt](https://developers.google.com/transit/gtfs/reference/#transferstxt)  
-## Modèle de données description des biens  
-Classement par ordre alphabétique (cliquez pour plus de détails)  
+## Description des propriétés du modèle de données  
+Classés par ordre alphabétique (cliquez pour plus de détails)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 GtfsTransferRule:    
@@ -92,8 +93,8 @@ GtfsTransferRule:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
@@ -127,8 +128,8 @@ GtfsTransferRule:
 ```  
 </details>    
 ## Exemples de charges utiles  
-#### GtfsTransferRule NGSI V2 key-values Exemple  
-Voici un exemple de GtfsTransferRule au format JSON comme valeurs clés. Elle est compatible avec NGSI V2 lorsqu'elle utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
+#### GtfsTransferRule Valeurs-clés NGSI-v2 Exemple  
+Voici un exemple de GtfsTransferRule au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-v2 en utilisant `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
   "id": "urn:ngsi-ld:GtfsTransferRule:Malaga:Linea1_Linea5",  
@@ -140,8 +141,8 @@ GtfsTransferRule:
   "minimumTransferTime": 10  
 }  
 ```  
-#### GtfsTransferRule NGSI V2 normalisé Exemple  
-Voici un exemple de règle de transfert Gtfs au format JSON normalisé. Elle est compatible avec NGSI V2 lorsqu'elle n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
+#### GtfsTransferRule NGSI-v2 normalisée Exemple  
+Voici un exemple de GtfsTransferRule au format JSON-LD tel que normalisé. Cette règle est compatible avec la NGSI-v2 lorsqu'elle n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
   "id": "urn:ngsi-ld:GtfsTransferRule:Malaga:Linea1_Linea5",  
@@ -165,48 +166,52 @@ GtfsTransferRule:
   }  
 }  
 ```  
-#### GtfsTransferRule NGSI-LD key-values Example  
-Voici un exemple de GtfsTransferRule au format JSON-LD comme valeurs clés. Il est compatible avec le format NGSI-LD lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
-```json  
-{"@context": ["https://schema.lab.fiware.org/ld/context",  
-              "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
- "hasDestination": "urn:ngsi-ld:GtfsStop:Malaga_508",  
- "hasOrigin": "urn:ngsi-ld:GtfsStop:Malaga_101",  
- "id": "urn:ngsi-ld:GtfsTransferRule:Malaga:Linea1_Linea5",  
- "minimumTransferTime": 10,  
- "name": "L1_L5",  
- "transferType": "0",  
- "type": "GtfsTransferRule"}  
-```  
-#### GtfsTransferRule NGSI-LD normalisé Exemple  
-Voici un exemple de règle de transfert Gtfs au format JSON-LD, telle que normalisée. Elle est compatible avec le format NGSI-LD lorsqu'elle n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
+#### GtfsTransferRule Valeurs-clés NGSI-LD Exemple  
+Voici un exemple de GtfsTransferRule au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-LD quand on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
-    "id": "urn:ngsi-ld:GtfsTransferRule:Malaga:Linea1_Linea5",  
-    "type": "GtfsTransferRule",  
-    "transferType": {  
-        "type": "Property",  
-        "value": "0"  
-    },  
-    "minimumTransferTime": {  
-        "type": "Property",  
-        "value": 10  
-    },  
-    "hasDestination": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:GtfsStop:Malaga_508"  
-    },  
-    "hasOrigin": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:GtfsStop:Malaga_101"  
-    },  
-    "name": {  
-        "type": "Property",  
-        "value": "L1_L5"  
-    },  
-    "@context": [  
-        "https://schema.lab.fiware.org/ld/context",  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-    ]  
+  "id": "urn:ngsi-ld:GtfsTransferRule:Malaga:Linea1_Linea5",  
+  "type": "GtfsTransferRule",  
+  "transferType": {  
+    "type": "Property",  
+    "value": "0"  
+  },  
+  "minimumTransferTime": {  
+    "type": "Property",  
+    "value": 10  
+  },  
+  "hasDestination": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:GtfsStop:Malaga_508"  
+  },  
+  "hasOrigin": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:GtfsStop:Malaga_101"  
+  },  
+  "name": {  
+    "type": "Property",  
+    "value": "L1_L5"  
+  },  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ]  
+}  
+```  
+#### GtfsTransferRule NGSI-LD normalisé Exemple  
+Voici un exemple de GtfsTransferRule au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+```json  
+{  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ],  
+  "hasDestination": "urn:ngsi-ld:GtfsStop:Malaga_508",  
+  "hasOrigin": "urn:ngsi-ld:GtfsStop:Malaga_101",  
+  "id": "urn:ngsi-ld:GtfsTransferRule:Malaga:Linea1_Linea5",  
+  "minimumTransferTime": 10,  
+  "name": "L1_L5",  
+  "transferType": "0",  
+  "type": "GtfsTransferRule"  
 }  
 ```  
