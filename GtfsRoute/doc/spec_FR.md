@@ -1,16 +1,17 @@
 Entité : GtfsRoute  
 ==================  
-[Licence ouverte](https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/GtfsRoute/LICENSE.md)  
-Description globale : **Route GTFS**  
+[Licence ouverte] (https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/GtfsRoute/LICENSE.md)  
+[document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+Description globale : **RouteGTFS**  
 
-## Liste des biens  
+## Liste des propriétés  
 
-- `alternateName`: Un autre nom pour cet article  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `description`: Une description de cet article  - `id`: Identifiant unique de l'entité  - `name`: Le nom de cet article.  - `operatedBy`: Agence qui exploite cette route. Elle doit indiquer une entité de type GtfsAgency  - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `page`: Même chose que GTFS `stop_url`.  - `routeColor`: Même chose que GTFS `route_color`. Voir [GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt)  - `routeSortOrder`: Même chose que GTFS `route_sort_order`.  - `routeTextColor`: Même chose que GTFS `route_text_color`. Voir [GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt)  - `routeType`: Identique à GTFS `route_type`. Valeurs autorisées celles autorisées pour `route_type` comme prescrit par [GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt). Enumération : "0, 1, 2, 3, 4, 5, 6, 7  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur le sujet  - `shortName`: Même chose que GTFS `route_short_name`.  - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `type`: Type d'entité NGSI. Il doit s'agir de GtfsRoute    
+- `alternateName`: Un nom alternatif pour cet élément  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `id`: Identifiant unique de l'entité  - `name`: Le nom de cet élément.  - `operatedBy`: Agence qui exploite cette route. Il doit pointer vers une entité de type GtfsAgency.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `page`: Identique à GTFS `stop_url`.  - `routeColor`: Identique à GTFS `route_color`. Voir [GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt)  - `routeSortOrder`: Identique à GTFS `route_sort_order`.  - `routeTextColor`: Identique à GTFS `route_text_color`. Voir [GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt)  - `routeType`: Identique à GTFS `route_type`. Valeurs autorisées : celles autorisées pour `route_type` comme prescrit par [GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt). Enum : "0, 1, 2, 3, 4, 5, 6, 7".  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `shortName`: Même que GTFS `route_short_name`.  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `type`: Type d'entité NGSI. Il doit être GtfsRoute    
 Propriétés requises  
 - `id`  - `type`    
 Voir [https://developers.google.com/transit/gtfs/reference/#routestxt](https://developers.google.com/transit/gtfs/reference/#routestxt)  
-## Modèle de données description des biens  
-Classement par ordre alphabétique (cliquez pour plus de détails)  
+## Description des propriétés du modèle de données  
+Classés par ordre alphabétique (cliquez pour plus de détails)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 GtfsRoute:    
@@ -108,8 +109,8 @@ GtfsRoute:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
@@ -135,8 +136,8 @@ GtfsRoute:
 ```  
 </details>    
 ## Exemples de charges utiles  
-#### GtfsRoute NGSI V2 valeurs clés Exemple  
-Voici un exemple de GtfsRoute au format JSON comme valeurs clés. Il est compatible avec NGSI V2 lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
+#### GtfsRoute Exemple de valeurs-clés NGSI-v2  
+Voici un exemple de GtfsRoute au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-v2 en utilisant `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
   "id": "urn:ngsi-ld:GtfsRoute:Spain:Malaga:1",  
@@ -148,8 +149,8 @@ GtfsRoute:
   "operatedBy": "urn:ngsi-ld:GtfsAgency:Malaga_EMT"  
 }  
 ```  
-#### GtfsRoute NGSI V2 normalisée Exemple  
-Voici un exemple de GtfsRoute au format JSON normalisé. Il est compatible avec NGSI V2 lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
+#### GtfsRoute NGSI-v2 normalisé Exemple  
+Voici un exemple de GtfsRoute au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
   "id": "urn:ngsi-ld:GtfsRoute:Spain:Malaga:1",  
@@ -172,48 +173,52 @@ GtfsRoute:
   }  
 }  
 ```  
-#### GtfsRoute NGSI-LD valeurs clés Exemple  
-Voici un exemple de GtfsRoute au format JSON-LD comme valeurs clés. Il est compatible avec le format NGSI-LD lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
-```json  
-{"@context": ["https://schema.lab.fiware.org/ld/context",  
-              "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
- "id": "urn:ngsi-ld:GtfsRoute:Spain:Malaga:1",  
- "name": "Parque del Sur _ Alameda Principal _ San AndrÃ©s",  
- "operatedBy": "urn:ngsi-ld:GtfsAgency:Malaga_EMT",  
- "page": "http://www.emtmalaga.es/emt-mobile/informacionLinea.html",  
- "routeType": "3",  
- "shortName": "1",  
- "type": "GtfsRoute"}  
-```  
-#### GtfsRoute NGSI-LD normalisée Exemple  
-Voici un exemple de GtfsRoute au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
+#### GtfsRoute NGSI-LD valeurs-clés Exemple  
+Voici un exemple de GtfsRoute au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-LD quand on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
-    "id": "urn:ngsi-ld:GtfsRoute:Spain:Malaga:1",  
-    "type": "GtfsRoute",  
-    "name": {  
-        "type": "Property",  
-        "value": "Parque del Sur _ Alameda Principal _ San AndrÃ©s"  
-    },  
-    "shortName": {  
-        "type": "Property",  
-        "value": "1"  
-    },  
-    "page": {  
-        "type": "Property",  
-        "value": "http://www.emtmalaga.es/emt-mobile/informacionLinea.html"  
-    },  
-    "routeType": {  
-        "type": "Property",  
-        "value": "3"  
-    },  
-    "operatedBy": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:GtfsAgency:Malaga_EMT"  
-    },  
-    "@context": [  
-        "https://schema.lab.fiware.org/ld/context",  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-    ]  
+  "id": "urn:ngsi-ld:GtfsRoute:Spain:Malaga:1",  
+  "type": "GtfsRoute",  
+  "name": {  
+    "type": "Property",  
+    "value": "Parque del Sur _ Alameda Principal _ San Andr\u00e9s"  
+  },  
+  "shortName": {  
+    "type": "Property",  
+    "value": "1"  
+  },  
+  "page": {  
+    "type": "Property",  
+    "value": "http://www.emtmalaga.es/emt-mobile/informacionLinea.html"  
+  },  
+  "routeType": {  
+    "type": "Property",  
+    "value": "3"  
+  },  
+  "operatedBy": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:GtfsAgency:Malaga_EMT"  
+  },  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ]  
+}  
+```  
+#### GtfsRoute NGSI-LD normalisé Exemple  
+Voici un exemple de GtfsRoute au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+```json  
+{  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ],  
+  "id": "urn:ngsi-ld:GtfsRoute:Spain:Malaga:1",  
+  "name": "Parque del Sur _ Alameda Principal _ San Andr\u00e9s",  
+  "operatedBy": "urn:ngsi-ld:GtfsAgency:Malaga_EMT",  
+  "page": "http://www.emtmalaga.es/emt-mobile/informacionLinea.html",  
+  "routeType": "3",  
+  "shortName": "1",  
+  "type": "GtfsRoute"  
 }  
 ```  
