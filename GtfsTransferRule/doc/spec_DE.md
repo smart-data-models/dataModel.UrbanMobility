@@ -1,11 +1,12 @@
 Entität: GtfsTransferRule  
 =========================  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/GtfsTransferRule/LICENSE.md)  
+[Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Globale Beschreibung: **GTFS-Übertragungsregel**  
 
 ## Liste der Eigenschaften  
 
-- `alternateName`: Ein alternativer Name für diesen Artikel  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `hasDestination`: Fahrt, die mit diesem Entity verbunden ist. Es muss auf ein Entity vom Typ GtfsStop oder GtfsStation zeigen  - `hasOrigin`: Fahrt, die mit diesem Entity verbunden ist. Es muss auf ein Entity vom Typ GtfsStop oder GtfsStation zeigen  - `id`: Eindeutiger Bezeichner der Entität  - `minimumTransferTime`: Dasselbe wie GTFS `min_transfer_time`. Einheit:'Sekunden'  - `name`: Der Name dieses Elements.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `transferType`: Dasselbe wie GTFS `transfer_type`. Enum:'0, 1, 2, 3'  - `type`: NGSI Entity-Typ. Es muss GtfsTransferRule sein    
+- `alternateName`: Ein alternativer Name für diesen Artikel  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `hasDestination`: Fahrt, die mit diesem Entity verbunden ist. Es muss auf ein Entity vom Typ GtfsStop oder GtfsStation zeigen  - `hasOrigin`: Fahrt, die mit diesem Entity verbunden ist. Es muss auf ein Entity vom Typ GtfsStop oder GtfsStation zeigen  - `id`: Eindeutiger Bezeichner der Entität  - `minimumTransferTime`: Dasselbe wie GTFS `min_transfer_time`. Einheit:'Sekunden'  - `name`: Der Name dieses Elements.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `transferType`: Dasselbe wie GTFS `transfer_type`. Enum:'0, 1, 2, 3'.  - `type`: NGSI Entity-Typ. Es muss GtfsTransferRule sein    
 Erforderliche Eigenschaften  
 - `hasDestination`  - `hasOrigin`  - `id`  - `transferType`  - `type`    
 Siehe [https://developers.google.com/transit/gtfs/reference/#transferstxt](https://developers.google.com/transit/gtfs/reference/#transferstxt)  
@@ -92,8 +93,8 @@ GtfsTransferRule:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
