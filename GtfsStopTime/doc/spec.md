@@ -1,6 +1,7 @@
 Entity: GtfsStopTime  
 ====================  
 [Open License](https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/GtfsStopTime/LICENSE.md)  
+[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Global description: **GTFS Stop Time**  
 
 ## List of properties  
@@ -126,8 +127,8 @@ GtfsStopTime:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
@@ -173,8 +174,8 @@ GtfsStopTime:
 ```  
 </details>    
 ## Example payloads    
-#### GtfsStopTime NGSI V2 key-values Example    
-Here is an example of a GtfsStopTime in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
+#### GtfsStopTime NGSI-v2 key-values Example    
+Here is an example of a GtfsStopTime in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "urn:ngsi-ld:GtfsStopTime:Spain:Madrid:EMT:FE0010011_737",  
@@ -187,8 +188,8 @@ GtfsStopTime:
   "departureTime": "07:04:24"  
 }  
 ```  
-#### GtfsStopTime NGSI V2 normalized Example    
-Here is an example of a GtfsStopTime in JSON format as normalized. This is compatible with NGSI V2 when not using options and returns the context data of an individual entity.  
+#### GtfsStopTime NGSI-v2 normalized Example    
+Here is an example of a GtfsStopTime in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "urn:ngsi-ld:GtfsStopTime:Spain:Madrid:EMT:FE0010011_737",  
@@ -218,50 +219,54 @@ GtfsStopTime:
 #### GtfsStopTime NGSI-LD key-values Example    
 Here is an example of a GtfsStopTime in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
-{"@context": ["https://schema.lab.fiware.org/ld/context",  
-              "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
- "arrivalTime": "07:04:24",  
- "departureTime": "07:04:24",  
- "distanceTravelled": 759,  
- "hasStop": "urn:ngsi-ld:GtfsStop:Madrid:EMT:737",  
- "hasTrip": "urn:ngsi-ld:GtfsTrip:Madrid:EMT:FE0010011",  
- "id": "urn:ngsi-ld:GtfsStopTime:Spain:Madrid:EMT:FE0010011_737",  
- "stopSequence": 4,  
- "type": "GtfsStopTime"}  
+{  
+  "id": "urn:ngsi-ld:GtfsStopTime:Spain:Madrid:EMT:FE0010011_737",  
+  "type": "GtfsStopTime",  
+  "departureTime": {  
+    "type": "Property",  
+    "value": "07:04:24"  
+  },  
+  "hasTrip": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:GtfsTrip:Madrid:EMT:FE0010011"  
+  },  
+  "stopSequence": {  
+    "type": "Property",  
+    "value": 4  
+  },  
+  "distanceTravelled": {  
+    "type": "Property",  
+    "value": 759  
+  },  
+  "arrivalTime": {  
+    "type": "Property",  
+    "value": "07:04:24"  
+  },  
+  "hasStop": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:GtfsStop:Madrid:EMT:737"  
+  },  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ]  
+}  
 ```  
 #### GtfsStopTime NGSI-LD normalized Example    
 Here is an example of a GtfsStopTime in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
-    "id": "urn:ngsi-ld:GtfsStopTime:Spain:Madrid:EMT:FE0010011_737",  
-    "type": "GtfsStopTime",  
-    "departureTime": {  
-        "type": "Property",  
-        "value": "07:04:24"  
-    },  
-    "hasTrip": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:GtfsTrip:Madrid:EMT:FE0010011"  
-    },  
-    "stopSequence": {  
-        "type": "Property",  
-        "value": 4  
-    },  
-    "distanceTravelled": {  
-        "type": "Property",  
-        "value": 759  
-    },  
-    "arrivalTime": {  
-        "type": "Property",  
-        "value": "07:04:24"  
-    },  
-    "hasStop": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:GtfsStop:Madrid:EMT:737"  
-    },  
-    "@context": [  
-        "https://schema.lab.fiware.org/ld/context",  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-    ]  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ],  
+  "arrivalTime": "07:04:24",  
+  "departureTime": "07:04:24",  
+  "distanceTravelled": 759,  
+  "hasStop": "urn:ngsi-ld:GtfsStop:Madrid:EMT:737",  
+  "hasTrip": "urn:ngsi-ld:GtfsTrip:Madrid:EMT:FE0010011",  
+  "id": "urn:ngsi-ld:GtfsStopTime:Spain:Madrid:EMT:FE0010011_737",  
+  "stopSequence": 4,  
+  "type": "GtfsStopTime"  
 }  
 ```  
