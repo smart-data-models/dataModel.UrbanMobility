@@ -1,6 +1,7 @@
 Entity: ArrivalEstimation  
 =========================  
 [Open License](https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/ArrivalEstimation/LICENSE.md)  
+[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Global description: **Arrival Estimation**  
 
 ## List of properties  
@@ -34,16 +35,17 @@ ArrivalEstimation:
       description: 'A description of this item'    
       type: Property    
     hasStop:    
-      anyOf:    
-        - description: 'Property. Identifier format of any NGSI entity'    
-          maxLength: 256    
-          minLength: 1    
-          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
-          type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
-          format: uri    
-          type: string    
       description: 'It shall point to an Entity of Type GtfsStop'    
+      items:    
+        anyOf:    
+          - description: 'Property. Identifier format of any NGSI entity'    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+          - description: 'Property. Identifier format of any NGSI entity'    
+            format: uri    
+            type: string    
       type: Relationship    
     hasTrip:    
       anyOf:    
@@ -100,8 +102,8 @@ ArrivalEstimation:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
@@ -126,21 +128,21 @@ ArrivalEstimation:
 ```  
 </details>    
 ## Example payloads    
-#### ArrivalEstimation NGSI V2 key-values Example    
-Here is an example of a ArrivalEstimation in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
+#### ArrivalEstimation NGSI-v2 key-values Example    
+Here is an example of a ArrivalEstimation in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "urn:ngsi-ld:ArrivalEstimation:L5C1_Stop74_1",  
   "type": "ArrivalEstimation",  
-  "hasStop": "urn:ngsi-ld:GtfsStop:tus:74",  
+  "hasStop": ["urn:ngsi-ld:GtfsStop:tus:74"],  
   "hasTrip": "urn:ngsi-ld:GtfsTrip:tus:5C1",  
   "remainingTime": "PT8M5S",  
   "remainingDistance": 1200,  
   "headSign": "Plaza Italia"  
 }  
 ```  
-#### ArrivalEstimation NGSI V2 normalized Example    
-Here is an example of a ArrivalEstimation in JSON format as normalized. This is compatible with NGSI V2 when not using options and returns the context data of an individual entity.  
+#### ArrivalEstimation NGSI-v2 normalized Example    
+Here is an example of a ArrivalEstimation in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "urn:ngsi-ld:ArrivalEstimation:L5C1_Stop74_1",  
@@ -167,45 +169,49 @@ ArrivalEstimation:
 #### ArrivalEstimation NGSI-LD key-values Example    
 Here is an example of a ArrivalEstimation in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
-{"@context": ["https://schema.lab.fiware.org/ld/context",  
-              "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
- "hasStop": "urn:ngsi-ld:GtfsStop:tus:74",  
- "hasTrip": "urn:ngsi-ld:GtfsTrip:tus:5C1",  
- "headSign": "Plaza Italia",  
- "id": "urn:ngsi-ld:ArrivalEstimation:L5C1_Stop74_1",  
- "remainingDistance": 1200,  
- "remainingTime": "PT8M5S",  
- "type": "ArrivalEstimation"}  
+{  
+  "id": "urn:ngsi-ld:ArrivalEstimation:L5C1_Stop74_1",  
+  "type": "ArrivalEstimation",  
+  "hasTrip": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:GtfsTrip:tus:5C1"  
+  },  
+  "headSign": {  
+    "type": "Property",  
+    "value": "Plaza Italia"  
+  },  
+  "remainingTime": {  
+    "type": "Property",  
+    "value": "PT8M5S"  
+  },  
+  "hasStop": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:GtfsStop:tus:74"  
+  },  
+  "remainingDistance": {  
+    "type": "Property",  
+    "value": 1200  
+  },  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ]  
+}  
 ```  
 #### ArrivalEstimation NGSI-LD normalized Example    
 Here is an example of a ArrivalEstimation in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
-    "id": "urn:ngsi-ld:ArrivalEstimation:L5C1_Stop74_1",  
-    "type": "ArrivalEstimation",  
-    "hasTrip": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:GtfsTrip:tus:5C1"  
-    },  
-    "headSign": {  
-        "type": "Property",  
-        "value": "Plaza Italia"  
-    },  
-    "remainingTime": {  
-        "type": "Property",  
-        "value": "PT8M5S"  
-    },  
-    "hasStop": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:GtfsStop:tus:74"  
-    },  
-    "remainingDistance": {  
-        "type": "Property",  
-        "value": 1200  
-    },  
-    "@context": [  
-        "https://schema.lab.fiware.org/ld/context",  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-    ]  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ],  
+  "hasStop": "urn:ngsi-ld:GtfsStop:tus:74",  
+  "hasTrip": "urn:ngsi-ld:GtfsTrip:tus:5C1",  
+  "headSign": "Plaza Italia",  
+  "id": "urn:ngsi-ld:ArrivalEstimation:L5C1_Stop74_1",  
+  "remainingDistance": 1200,  
+  "remainingTime": "PT8M5S",  
+  "type": "ArrivalEstimation"  
 }  
 ```  
