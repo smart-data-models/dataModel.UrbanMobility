@@ -1,11 +1,12 @@
 Entität: GtfsAgency  
 ===================  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/GtfsAgency/LICENSE.md)  
+[Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Globale Beschreibung: **GTFS Agentur**  
 
 ## Liste der Eigenschaften  
 
-- `addressCountry`: Das Land. Zum Beispiel, Spanien  - `addressLocality`: Die Ortschaft, in der sich die Straßenadresse befindet, und die in der Region  - `addressRegion`: Die Region, in der sich die Ortschaft befindet, und die auf dem Land liegt  - `agencyName`: Gleich wie GTFS `agency_name`  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `entitySource`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entity-Daten als URL angibt. Sie muss auf die URL des ursprünglichen GTFS-Feeds verweisen, der zur Erzeugung dieses Entitys verwendet wurde  - `id`: Eindeutiger Bezeichner der Entität  - `language`: Dasselbe wie GTFS `agency_language`. Siehe [GTFS](https://developers.google.com/transit/gtfs/reference/#agencytxt)  - `name`: Der Name dieses Elements.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `page`: Gleich wie GTFS `stop_url`  - `phone`: Gleich wie GFTS `agency_phone`  - `postOfficeBoxNumber`: Die Postfachnummer für Postfachadressen. Zum Beispiel, Spanien  - `postalCode`: Die Postleitzahl. Zum Beispiel, Spanien  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `streetAddress`: Die Straßenadresse  - `timezone`: Dasselbe wie GTFS `agency_timezone`. Siehe [GTFS](https://developers.google.com/transit/gtfs/reference/#agencytxt)  - `type`: NGSI-Entitätstyp: Es muss GtfsAgency sein    
+- `addressCountry`: Das Land. Zum Beispiel, Spanien  - `addressLocality`: Die Ortschaft, in der sich die Straßenadresse befindet, und die in der Region  - `addressRegion`: Die Region, in der sich die Ortschaft befindet, und die auf dem Land liegt  - `agencyName`: Gleich wie GTFS `agency_name`  - `alternateName`: Ein alternativer Name für diesen Artikel  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `entitySource`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entity-Daten als URL angibt. Sie muss auf die URL des ursprünglichen GTFS-Feeds verweisen, der zur Erzeugung dieses Entity verwendet wurde  - `id`: Eindeutiger Bezeichner der Entität  - `language`: Dasselbe wie GTFS `agency_language`. Siehe [GTFS](https://developers.google.com/transit/gtfs/reference/#agencytxt)  - `name`: Der Name dieses Elements.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `page`: Gleich wie GTFS `stop_url`  - `phone`: Gleich wie GFTS `agency_phone`  - `postOfficeBoxNumber`: Die Postfachnummer für Postfachadressen. Zum Beispiel: 03578  - `postalCode`: Die Postleitzahl. Zum Beispiel, 24004  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `streetAddress`: Die Straßenadresse  - `timezone`: Dasselbe wie GTFS `agency_timezone`. Siehe [GTFS](https://developers.google.com/transit/gtfs/reference/#agencytxt)  - `type`: NGSI-Entitätstyp: Es muss GtfsAgency sein    
 Erforderliche Eigenschaften  
 - `agencyName`  - `id`  - `source`  - `type`    
 Siehe [https://developers.google.com/transit/gtfs/reference/#agencytxt](https://developers.google.com/transit/gtfs/reference/#agencytxt)  
@@ -20,17 +21,17 @@ GtfsAgency:
       description: 'The country. For example, Spain'    
       type: Property    
       x-ngsi:    
-        model: https://schema.org/Text    
+        model: https://schema.org/addressCountry    
     addressLocality:    
       description: 'The locality in which the street address is, and which is in the region'    
       type: Property    
       x-ngsi:    
-        model: https://schema.org/Text    
+        model: https://schema.org/addressLocality    
     addressRegion:    
       description: 'The region in which the locality is, and which is in the country'    
       type: Property    
       x-ngsi:    
-        model: https://schema.org/Text    
+        model: https://schema.org/addressRegion    
     agencyName:    
       description: 'Same as GTFS `agency_name`'    
       type: Property    
@@ -39,11 +40,6 @@ GtfsAgency:
     alternateName:    
       description: 'An alternative name for this item'    
       type: Property    
-    areaServed:    
-      description: 'The geographic area where a service or offered item is provided'    
-      type: Property    
-      x-ngsi:    
-        model: https://schema.org/Text    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
       type: Property    
@@ -102,21 +98,21 @@ GtfsAgency:
       x-ngsi:    
         model: https://schema.org/Text    
     postOfficeBoxNumber:    
-      description: 'The post office box number for PO box addresses. For example, Spain'    
+      description: 'The post office box number for PO box addresses. For example, 03578'    
       type: Property    
       x-ngsi:    
-        model: https://schema.org/Text    
+        model: https://schema.org/postOfficeBoxNumber    
     postalCode:    
-      description: 'The postal code. For example, Spain'    
+      description: 'The postal code. For example, 24004'    
       type: Property    
       x-ngsi:    
-        model: https://schema.org/Text    
+        model: https://schema.org/https://schema.org/postalCode    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
@@ -129,7 +125,7 @@ GtfsAgency:
       description: 'The street address'    
       type: Property    
       x-ngsi:    
-        model: https://schema.org/Text    
+        model: https://schema.org/streetAddress    
     timezone:    
       description: "Same as GTFS `agency_timezone`. See [GTFS](https://developers.google.com/transit/gtfs/reference/#agencytxt)"    
       type: Property    
