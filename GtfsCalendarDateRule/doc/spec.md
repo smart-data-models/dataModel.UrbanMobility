@@ -1,6 +1,7 @@
 Entity: GtfsCalendarDateRule  
 ============================  
 [Open License](https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/GtfsCalendarDateRule/LICENSE.md)  
+[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Global description: **GTFS Calendar Date Rule**  
 
 ## List of properties  
@@ -86,8 +87,8 @@ GtfsCalendarDateRule:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
@@ -111,8 +112,8 @@ GtfsCalendarDateRule:
 ```  
 </details>    
 ## Example payloads    
-#### GtfsCalendarDateRule NGSI V2 key-values Example    
-Here is an example of a GtfsCalendarDateRule in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
+#### GtfsCalendarDateRule NGSI-v2 key-values Example    
+Here is an example of a GtfsCalendarDateRule in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "urn:ngsi-ld:CalendarDateRule:Malaga:Rule67",  
@@ -123,8 +124,8 @@ GtfsCalendarDateRule:
   "exceptionType": "1"  
 }  
 ```  
-#### GtfsCalendarDateRule NGSI V2 normalized Example    
-Here is an example of a GtfsCalendarDateRule in JSON format as normalized. This is compatible with NGSI V2 when not using options and returns the context data of an individual entity.  
+#### GtfsCalendarDateRule NGSI-v2 normalized Example    
+Here is an example of a GtfsCalendarDateRule in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "urn:ngsi-ld:CalendarDateRule:Malaga:Rule67",  
@@ -147,40 +148,44 @@ GtfsCalendarDateRule:
 #### GtfsCalendarDateRule NGSI-LD key-values Example    
 Here is an example of a GtfsCalendarDateRule in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
-{"@context": ["https://schema.lab.fiware.org/ld/context",  
-              "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
- "appliesOn": "2018-03-19",  
- "exceptionType": "1",  
- "hasService": "urn:ngsi-ld:GtfsService:Malaga:FairArea_1",  
- "id": "urn:ngsi-ld:CalendarDateRule:Malaga:Rule67",  
- "name": "Rule Fair Area",  
- "type": "GtfsCalendarDateRule"}  
+{  
+  "id": "urn:ngsi-ld:CalendarDateRule:Malaga:Rule67",  
+  "type": "GtfsCalendarDateRule",  
+  "name": {  
+    "type": "Property",  
+    "value": "Rule Fair Area"  
+  },  
+  "exceptionType": {  
+    "type": "Property",  
+    "value": "1"  
+  },  
+  "hasService": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:GtfsService:Malaga:FairArea_1"  
+  },  
+  "appliesOn": {  
+    "type": "Property",  
+    "value": "2018-03-19"  
+  },  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ]  
+}  
 ```  
 #### GtfsCalendarDateRule NGSI-LD normalized Example    
 Here is an example of a GtfsCalendarDateRule in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
-    "id": "urn:ngsi-ld:CalendarDateRule:Malaga:Rule67",  
-    "type": "GtfsCalendarDateRule",  
-    "name": {  
-        "type": "Property",  
-        "value": "Rule Fair Area"  
-    },  
-    "exceptionType": {  
-        "type": "Property",  
-        "value": "1"  
-    },  
-    "hasService": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:GtfsService:Malaga:FairArea_1"  
-    },  
-    "appliesOn": {  
-        "type": "Property",  
-        "value": "2018-03-19"  
-    },  
-    "@context": [  
-        "https://schema.lab.fiware.org/ld/context",  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-    ]  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ],  
+  "appliesOn": "2018-03-19",  
+  "exceptionType": "1",  
+  "hasService": "urn:ngsi-ld:GtfsService:Malaga:FairArea_1",  
+  "id": "urn:ngsi-ld:CalendarDateRule:Malaga:Rule67",  
+  "name": "Rule Fair Area",  
+  "type": "GtfsCalendarDateRule"  
 }  
 ```  
