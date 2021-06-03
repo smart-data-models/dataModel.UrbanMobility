@@ -1,6 +1,7 @@
 Entity: GtfsCalendarRule  
 ========================  
 [Open License](https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/GtfsCalendarRule/LICENSE.md)  
+[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Global description: **Smart Data Models. GTFS Calendar Rule**  
 
 ## List of properties  
@@ -93,8 +94,8 @@ GtfsCalendarRule:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
@@ -151,8 +152,8 @@ GtfsCalendarRule:
 ```  
 </details>    
 ## Example payloads    
-#### GtfsCalendarRule NGSI V2 key-values Example    
-Here is an example of a GtfsCalendarRule in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
+#### GtfsCalendarRule NGSI-v2 key-values Example    
+Here is an example of a GtfsCalendarRule in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "urn:ngsi-ld:CalendarRule:Madrid:Rule1267",  
@@ -170,46 +171,54 @@ GtfsCalendarRule:
   "endDate": "2019-01-01"  
 }  
 ```  
-#### GtfsCalendarRule NGSI V2 normalized Example    
-Here is an example of a GtfsCalendarRule in JSON format as normalized. This is compatible with NGSI V2 when not using options and returns the context data of an individual entity.  
+#### GtfsCalendarRule NGSI-v2 normalized Example    
+Here is an example of a GtfsCalendarRule in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "urn:ngsi-ld:CalendarRule:Madrid:Rule1267",  
   "type": "GtfsCalendarRule",  
   "startDate": {  
-    "type": "Date",  
+    "type": "Property",  
     "value": "2018-01-01"  
   },  
   "endDate": {  
-    "type": "Date",  
+    "type": "Property",  
     "value": "2019-01-01"  
   },  
   "name": {  
+    "type": "Property",  
     "value": "Rule Hospital Service 1"  
   },  
   "monday": {  
+    "type": "Property",  
     "value": true  
   },  
   "tuesday": {  
+    "type": "Property",  
     "value": true  
   },  
   "friday": {  
+    "type": "Property",  
     "value": true  
   },  
   "wednesday": {  
+    "type": "Property",  
     "value": true  
   },  
   "thursday": {  
+    "type": "Property",  
     "value": true  
   },  
   "sunday": {  
+    "type": "Property",  
     "value": false  
   },  
   "hasService": {  
     "type": "Relationship",  
-    "value": "urn:ngsi-ld:GtfsService:Madrid:Hospital_1"  
+    "object": "urn:ngsi-ld:GtfsService:Madrid:Hospital_1"  
   },  
   "saturday": {  
+    "type": "Property",  
     "value": false  
   }  
 }  
@@ -217,81 +226,85 @@ GtfsCalendarRule:
 #### GtfsCalendarRule NGSI-LD key-values Example    
 Here is an example of a GtfsCalendarRule in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
-{"@context": ["https://schema.lab.fiware.org/ld/context",  
-              "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
- "endDate": {"@type": "Date", "@value": "2019-01-01"},  
- "friday": True,  
- "hasService": "urn:ngsi-ld:GtfsService:Madrid:Hospital_1",  
- "id": "urn:ngsi-ld:CalendarRule:Madrid:Rule1267",  
- "monday": True,  
- "name": "Rule Hospital Service 1",  
- "saturday": False,  
- "startDate": {"@type": "Date", "@value": "2018-01-01"},  
- "sunday": False,  
- "thursday": True,  
- "tuesday": True,  
- "type": "GtfsCalendarRule",  
- "wednesday": True}  
+{  
+  "id": "urn:ngsi-ld:CalendarRule:Madrid:Rule1267",  
+  "type": "GtfsCalendarRule",  
+  "startDate": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "Date",  
+      "@value": "2018-01-01"  
+    }  
+  },  
+  "endDate": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "Date",  
+      "@value": "2019-01-01"  
+    }  
+  },  
+  "name": {  
+    "type": "Property",  
+    "value": "Rule Hospital Service 1"  
+  },  
+  "monday": {  
+    "type": "Property",  
+    "value": true  
+  },  
+  "tuesday": {  
+    "type": "Property",  
+    "value": true  
+  },  
+  "friday": {  
+    "type": "Property",  
+    "value": true  
+  },  
+  "wednesday": {  
+    "type": "Property",  
+    "value": true  
+  },  
+  "thursday": {  
+    "type": "Property",  
+    "value": true  
+  },  
+  "sunday": {  
+    "type": "Property",  
+    "value": false  
+  },  
+  "hasService": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:GtfsService:Madrid:Hospital_1"  
+  },  
+  "saturday": {  
+    "type": "Property",  
+    "value": false  
+  },  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ]  
+}  
 ```  
 #### GtfsCalendarRule NGSI-LD normalized Example    
 Here is an example of a GtfsCalendarRule in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
-    "id": "urn:ngsi-ld:CalendarRule:Madrid:Rule1267",  
-    "type": "GtfsCalendarRule",  
-    "startDate": {  
-        "type": "Property",  
-        "value": {  
-            "@type": "Date",  
-            "@value": "2018-01-01"  
-        }  
-    },  
-    "endDate": {  
-        "type": "Property",  
-        "value": {  
-            "@type": "Date",  
-            "@value": "2019-01-01"  
-        }  
-    },  
-    "name": {  
-        "type": "Property",  
-        "value": "Rule Hospital Service 1"  
-    },  
-    "monday": {  
-        "type": "Property",  
-        "value": true  
-    },  
-    "tuesday": {  
-        "type": "Property",  
-        "value": true  
-    },  
-    "friday": {  
-        "type": "Property",  
-        "value": true  
-    },  
-    "wednesday": {  
-        "type": "Property",  
-        "value": true  
-    },  
-    "thursday": {  
-        "type": "Property",  
-        "value": true  
-    },  
-    "sunday": {  
-        "type": "Property",  
-        "value": false  
-    },  
-    "hasService": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:GtfsService:Madrid:Hospital_1"  
-    },  
-    "saturday": {  
-        "type": "Property",  
-        "value": false  
-    },  
-    "@context": [  
-        "https://schema.lab.fiware.org/ld/context",  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-    ]  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ],  
+  "endDate": "2019-01-01",  
+  "friday": true,  
+  "hasService": "urn:ngsi-ld:GtfsService:Madrid:Hospital_1",  
+  "id": "urn:ngsi-ld:CalendarRule:Madrid:Rule1267",  
+  "monday": true,  
+  "name": "Rule Hospital Service 1",  
+  "saturday": false,  
+  "startDate": "2018-01-01",  
+  "sunday": false,  
+  "thursday": true,  
+  "tuesday": true,  
+  "type": "GtfsCalendarRule",  
+  "wednesday": true  
 }  
 ```  
