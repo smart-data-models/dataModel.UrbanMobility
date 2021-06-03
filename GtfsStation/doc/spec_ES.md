@@ -1,15 +1,16 @@
 Entidad: GtfsStation  
 ====================  
 [Licencia abierta](https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/GtfsStation/LICENSE.md)  
+[documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Descripción global: **Estación GTFS**  
 
 ## Lista de propiedades  
 
-- `address`: La dirección postal.  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `code`: Igual que el código de parada de GTFS.  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Sello de tiempo de creación de la entidad. Normalmente será asignado por la plataforma de almacenamiento.  - `dateModified`: Sello de tiempo de la última modificación de la entidad. Esta será normalmente asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `hasAccessPoint`: Apuntará a otra(s) Entidad(es) de tipo GtfsAccessPoint  - `hasParentStation`: Lo mismo que la "estación_paterna" de GTFS.  - `hasService`: Servicio al que se aplica esta regla. Derivado de `service_id`  - `hasStop`: Apuntará a una entidad de tipo GtfsStop  - `hasTrip`: Viaje asociado a esta Entidad. Apuntará a una Entidad de tipo GtfsTrip  - `id`: Identificador único de la entidad  - `location`:   - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificados JSON que hace referencia a los Ids únicos de los propietarios  - `page`: Igual que GTFS `stop_url`  - `seeAlso`: lista de uri que apunta a recursos adicionales sobre el tema  - `source`: Una secuencia de caracteres que da como URL la fuente original de los datos de la entidad. Se recomienda que sea el nombre de dominio completamente calificado del proveedor de la fuente, o la URL del objeto fuente.  - `stop_desc`: Igual que GTFS `stop_desc`.  - `type`: Tipo de entidad NGSI. Tiene que ser GtfsStation  - `wheelChairAccessible`: Lo mismo que el GTFS "wheelchair_boarding". Enum:'0, 1 ,2'. Referencia en [GTFS](https://developers.google.com/transit/gtfs/reference/#stopstxt)  - `zoneCode`: Zona de transporte a la que pertenece esta parada. Igual que la "zona_id" del GTFS    
+- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `code`: Igual que GTFS `stop_code`.  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `hasAccessPoint`: Apuntará a otra(s) entidad(es) de tipo GtfsAccessPoint  - `hasParentStation`: Igual que GTFS `parent_station`.  - `hasService`: Servicio al que se aplica esta regla. Derivada de `service_id`.  - `hasStop`: Apuntará a una entidad de tipo GtfsStop  - `hasTrip`: Viaje asociado a esta Entidad. Apuntará a una entidad de tipo GtfsTrip  - `id`: Identificador único de la entidad  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `page`: Igual que GTFS `stop_url`  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `stop_desc`: Igual que GTFS `stop_desc`.  - `type`: Tipo de entidad NGSI. Tiene que ser GtfsStation  - `wheelChairAccessible`: Igual que GTFS `wheelchair_boarding`. Enum:'0, 1 ,2'. Referencia en [GTFS](https://developers.google.com/transit/gtfs/reference/#stopstxt)  - `zoneCode`: Zona de transporte a la que pertenece esta parada. Igual que GTFS `zone_id`.    
 Propiedades requeridas  
 - `hasStop`  - `id`  - `location`  - `name`  - `type`    
-Véase [https://developers.google.com/transit/gtfs/reference/#stopstxt](https://developers.google.com/transit/gtfs/reference/#stopstxt).   Es un "stop" del GTFS cuyo "tipo_de_localización" es igual a "1".  
-## Modelo de datos Descripción de las propiedades  
+Véase [https://developers.google.com/transit/gtfs/reference/#stopstxt](https://developers.google.com/transit/gtfs/reference/#stopstxt).   Es un `stop` GTFS cuyo `location_type` es igual a `1`.  
+## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
@@ -17,30 +18,29 @@ GtfsStation:
   description: 'GTFS Station'    
   properties:    
     address:    
-      description: 'The mailing address.'    
+      description: 'The mailing address'    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
           type: string    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
           type: string    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''    
-          type: string    
-        areaServed:    
-          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
         postalCode:    
-          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
           type: string    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/Text'''    
+          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/address    
     alternateName:    
       description: 'An alternative name for this item'    
       type: Property    
@@ -110,16 +110,17 @@ GtfsStation:
       x-ngsi:    
         model: https://schema.org/URL    
     hasStop:    
-      anyOf:    
-        - description: 'Property. Identifier format of any NGSI entity'    
-          maxLength: 256    
-          minLength: 1    
-          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
-          type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
-          format: uri    
-          type: string    
       description: 'It shall point to an Entity of Type GtfsStop'    
+      items:    
+        anyOf:    
+          - description: 'Property. Identifier format of any NGSI entity'    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+          - description: 'Property. Identifier format of any NGSI entity'    
+            format: uri    
+            type: string    
       type: Relationship    
     hasTrip:    
       anyOf:    
@@ -148,10 +149,10 @@ GtfsStation:
       description: 'Unique identifier of the entity'    
       type: Property    
     location:    
-      $id: https://geojson.org/schema/Geometry.json    
-      $schema: "http://json-schema.org/draft-07/schema#"    
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Point'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -171,7 +172,8 @@ GtfsStation:
             - coordinates    
           title: 'GeoJSON Point'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. LineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -194,7 +196,8 @@ GtfsStation:
             - coordinates    
           title: 'GeoJSON LineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Polygon'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -219,7 +222,8 @@ GtfsStation:
             - coordinates    
           title: 'GeoJSON Polygon'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -241,7 +245,8 @@ GtfsStation:
             - coordinates    
           title: 'GeoJSON MultiPoint'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -266,7 +271,8 @@ GtfsStation:
             - coordinates    
           title: 'GeoJSON MultiLineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -293,7 +299,7 @@ GtfsStation:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      title: 'GeoJSON Geometry'    
+      type: Geoproperty    
     name:    
       description: 'The name of this item.'    
       type: Property    
@@ -313,8 +319,8 @@ GtfsStation:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
@@ -352,9 +358,9 @@ GtfsStation:
   type: object    
 ```  
 </details>    
-## Ejemplo de cargas útiles  
-#### Ejemplo de valores clave de la estación GtfsStation NGSI V2  
-Aquí hay un ejemplo de una GtfsStation en formato JSON como valores clave. Es compatible con NGSI V2 cuando se utiliza `opciones=valores-clave` y devuelve los datos de contexto de una entidad individual.  
+## Ejemplo de carga útil  
+#### GtfsStation NGSI-v2 key-values Ejemplo  
+Aquí hay un ejemplo de un GtfsStation en formato JSON-LD como valores-clave. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
   "id": "urn:ngsi-ld:GtfsStation:Madrid:est_90_21",  
@@ -373,8 +379,8 @@ GtfsStation:
   "hasStop": ["urn:ngsi-ld:GtfsStop:Madrid_par_4_1"]  
 }  
 ```  
-#### GtfsStation NGSI V2 normalizado Ejemplo  
-Aquí hay un ejemplo de una GtfsStation en formato JSON como normalizada. Es compatible con NGSI V2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+#### GtfsStation NGSI-v2 normalizado Ejemplo  
+Aquí hay un ejemplo de una GtfsStation en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
   "id": "urn:ngsi-ld:GtfsStation:Madrid:est_90_21",  
@@ -406,64 +412,78 @@ GtfsStation:
   }  
 }  
 ```  
-#### GtfsStation NGSI-LD key-values Example  
-Aquí hay un ejemplo de una GtfsStation en formato JSON-LD como valores clave. Esto es compatible con NGSI-LD cuando se utiliza "opciones=valores-clave" y devuelve los datos de contexto de una entidad individual.  
-```json  
-{"@context": ["https://schema.lab.fiware.org/ld/context",  
-              "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
- "address": {"addressCountry": "ES",  
-             "addressLocality": "Madrid",  
-             "streetAddress": "Paseo de la Castellana 189",  
-             "type": "PostalAddress"},  
- "code": "21",  
- "hasStop": ["urn:ngsi-ld:GtfsStop:Madrid_par_4_1"],  
- "id": "urn:ngsi-ld:GtfsStation:Madrid:est_90_21",  
- "location": {"coordinates": [-3.6892, 40.4669], "type": "Point"},  
- "name": "Intercambiador de Plaza de Castilla",  
- "type": "GtfsStation"}  
-```  
-#### GtfsStation NGSI-LD normalizado Ejemplo  
-Aquí hay un ejemplo de una GtfsStation en formato JSON-LD normalizado. Es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+#### GtfsStation NGSI-LD key-values Ejemplo  
+Aquí hay un ejemplo de un GtfsStation en formato JSON-LD como valores-clave. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
-    "id": "urn:ngsi-ld:GtfsStation:Madrid:est_90_21",  
-    "type": "GtfsStation",  
-    "code": {  
-        "type": "Property",  
-        "value": "21"  
-    },  
-    "name": {  
-        "type": "Property",  
-        "value": "Intercambiador de Plaza de Castilla"  
-    },  
-    "hasStop": {  
-        "type": "Relationship",  
-        "object": [  
-            "urn:ngsi-ld:GtfsStop:Madrid_par_4_1"  
-        ]  
-    },  
-    "location": {  
-        "type": "GeoProperty",  
-        "value": {  
-            "type": "Point",  
-            "coordinates": [  
-                -3.6892,  
-                40.4669  
-            ]  
-        }  
-    },  
-    "address": {  
-        "type": "Property",  
-        "value": {  
-            "addressLocality": "Madrid",  
-            "addressCountry": "ES",  
-            "streetAddress": "Paseo de la Castellana 189",  
-            "type": "PostalAddress"  
-        }  
-    },  
-    "@context": [  
-        "https://schema.lab.fiware.org/ld/context",  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  "id": "urn:ngsi-ld:GtfsStation:Madrid:est_90_21",  
+  "type": "GtfsStation",  
+  "code": {  
+    "type": "Property",  
+    "value": "21"  
+  },  
+  "name": {  
+    "type": "Property",  
+    "value": "Intercambiador de Plaza de Castilla"  
+  },  
+  "hasStop": {  
+    "type": "Relationship",  
+    "object": [  
+      "urn:ngsi-ld:GtfsStop:Madrid_par_4_1"  
     ]  
+  },  
+  "location": {  
+    "type": "GeoProperty",  
+    "value": {  
+      "type": "Point",  
+      "coordinates": [  
+        -3.6892,  
+        40.4669  
+      ]  
+    }  
+  },  
+  "address": {  
+    "type": "Property",  
+    "value": {  
+      "addressLocality": "Madrid",  
+      "addressCountry": "ES",  
+      "streetAddress": "Paseo de la Castellana 189",  
+      "type": "PostalAddress"  
+    }  
+  },  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ]  
+}  
+```  
+#### GtfsStation NGSI-LD normalizado Ejemplo  
+Aquí hay un ejemplo de una GtfsStation en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+```json  
+{  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ],  
+  "address": {  
+    "addressCountry": "ES",  
+    "addressLocality": "Madrid",  
+    "streetAddress": "Paseo de la Castellana 189",  
+    "type": "PostalAddress"  
+  },  
+  "code": "21",  
+  "hasStop": [  
+    "urn:ngsi-ld:GtfsStop:Madrid_par_4_1"  
+  ],  
+  "id": "urn:ngsi-ld:GtfsStation:Madrid:est_90_21",  
+  "location": {  
+    "coordinates": [  
+      -3.6892,  
+      40.4669  
+    ],  
+    "type": "Point"  
+  },  
+  "name": "Intercambiador de Plaza de Castilla",  
+  "type": "GtfsStation"  
 }  
 ```  
