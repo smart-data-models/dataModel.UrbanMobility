@@ -1,0 +1,160 @@
+{
+  "id": "urn:ngsi-ld:PublicTransportStop:santander:busStop:463",
+  "type": "Feature",
+  "geometry": {
+    "type": "geo:json",
+    "value": {
+      "type": "Point",
+      "coordinates": [
+        -3.804648385,
+        43.478053126
+      ]
+    }
+  },
+  "properties": {
+    "type": "PublicTransportStop",
+    "source": {
+      "type": "Text",
+      "value": "https://api.smartsantander.eu/"
+    },
+    "dataProvider": {
+      "type": "Text",
+      "value": "http://www.smartsantander.eu/"
+    },
+    "address": {
+      "type": "StructuredValue",
+      "value": {
+        "streetAddress": "C/ La Pereda 14",
+        "addressLocality": "Santander",
+        "addressRegion": "Cantabria",
+        "addressCountry": "Spain"
+      }
+    },
+    "location": {
+      "type": "geo:json",
+      "value": {
+        "type": "Point",
+        "coordinates": [
+          -3.804648385,
+          43.478053126
+        ]
+      }
+    },
+    "stopCode": {
+      "type": "Text",
+      "value": "la_pereda_463"
+    },
+    "shortStopCode": {
+      "type": "Text",
+      "value": "463"
+    },
+    "name": {
+      "type": "Text",
+      "value": "La Pereda 14"
+    },
+    "wheelchairAccessible": {
+      "type": "Number",
+      "value": 0
+    },
+    "transportationType": {
+      "type": "StructuredValue",
+      "value": [
+        3
+      ]
+    },
+    "refPublicTransportRoute": {
+      "type": "StructuredValue",
+      "value": [
+        "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N3",
+        "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N4"
+      ]
+    },
+    "peopleCount": {
+      "type": "Number",
+      "value": 0
+    },
+    "refPeopleCountDevice": {
+      "type": "Text",
+      "value": "urn:ngsi-ld:PorpleCountDecice:santander:463"
+    },
+    "openingHoursSpecification": {
+      "type": "StructuredValue",
+      "value": [
+        {
+          "opens": {
+            "type": "string",
+            "value": "00:01"
+          },
+          "closes": {
+            "type": "string",
+            "value": "23:59"
+          },
+          "dayOfWeek": {
+            "type": "string",
+            "value": "Friday"
+          }
+        },
+        {
+          "opens": {
+            "type": "string",
+            "value": "00:01"
+          },
+          "closes": {
+            "type": "string",
+            "value": "23:59"
+          },
+          "dayOfWeek": {
+            "type": "string",
+            "value": "Monday"
+          }
+        },
+        {
+          "opens": {
+            "type": "string",
+            "value": "00:01"
+          },
+          "closes": {
+            "type": "string",
+            "value": "23:59"
+          },
+          "dayOfWeek": {
+            "type": "string",
+            "value": "Tuesday"
+          }
+        },
+        {
+          "opens": {
+            "type": "string",
+            "value": "00:01"
+          },
+          "closes": {
+            "type": "string",
+            "value": "23:59"
+          },
+          "dayOfWeek": {
+            "type": "string",
+            "value": "Thursday"
+          }
+        },
+        {
+          "opens": {
+            "type": "string",
+            "value": "00:01"
+          },
+          "closes": {
+            "type": "string",
+            "value": "23:59"
+          },
+          "dayOfWeek": {
+            "type": "string",
+            "value": "Wednesday"
+          }
+        }
+      ]
+    },
+    "@context": [
+      "https://smart-data-models.github.io/data-models/context.jsonld",
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ]
+  }
+}
