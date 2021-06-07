@@ -1,0 +1,129 @@
+{
+    "@id": "dtmi:com:ngsi-ld:GtfsTransferRule;0",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "comment": "Smart Data Models. GTFS Schema - TransferRule adapted to DTDL from smartdatamodels.org. Source: https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/GtfsTransferRule/schema.json",
+    "description": "GTFS Transfer Rule",
+    "displayName": "GtfsTransferRule",
+    "contents": [
+        {
+            "name": "alternateName",
+            "writable": true,
+            "displayName": "alternateName",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "An alternative name for this item"
+        },
+        {
+            "name": "dataProvider",
+            "writable": true,
+            "displayName": "dataProvider",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters identifying the provider of the harmonised data entity."
+        },
+        {
+            "name": "dateCreated",
+            "writable": true,
+            "displayName": "dateCreated",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Entity creation timestamp. This will usually be allocated by the storage platform."
+        },
+        {
+            "name": "dateModified",
+            "writable": true,
+            "displayName": "dateModified",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Timestamp of the last modification of the entity. This will usually be allocated by the storage platform."
+        },
+        {
+            "name": "description",
+            "writable": true,
+            "displayName": "description",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A description of this item"
+        },
+        {
+            "name": "hasDestination",
+            "writable": true,
+            "displayName": "hasDestination"
+        },
+        {
+            "name": "hasOrigin",
+            "writable": true,
+            "displayName": "hasOrigin"
+        },
+        {
+            "name": "minimumTransferTime",
+            "writable": true,
+            "displayName": "minimumTransferTime",
+            "@type": "Property",
+            "schema": "integer",
+            "comment": "Same as GTFS `min_transfer_time`. Unit:'seconds'"
+        },
+        {
+            "name": "name",
+            "writable": true,
+            "displayName": "name",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The name of this item."
+        },
+        {
+            "name": "seeAlso",
+            "writable": true,
+            "displayName": "seeAlso"
+        },
+        {
+            "name": "source",
+            "writable": true,
+            "displayName": "source",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object."
+        },
+        {
+            "@type": "Telemetry",
+            "name": "owner",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)",
+            "displayName": "owner"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "transferType",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": 0,
+                        "displayName": 0,
+                        "enumValue": 1
+                    },
+                    {
+                        "name": 1,
+                        "displayName": 1,
+                        "enumValue": 2
+                    },
+                    {
+                        "name": 2,
+                        "displayName": 2,
+                        "enumValue": 3
+                    },
+                    {
+                        "name": 3,
+                        "displayName": 3,
+                        "enumValue": 4
+                    }
+                ]
+            }
+        }
+    ]
+}
