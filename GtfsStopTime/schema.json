@@ -4,5 +4,6 @@
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsStopTime/schema.json",
     "title": "Smat Data Models GTFS Schema - StopTime",
-    "description": "GTFS Stop Time"
+    "description": "GTFS Stop Time",
+    "type": "object"
 }
