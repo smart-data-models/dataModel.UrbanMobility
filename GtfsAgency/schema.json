@@ -4,5 +4,6 @@
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModels.UrbanMobility/GtfsAgency/schema.json",
     "title": "Smart Data Models. GTFS Schema - Agency",
-    "description": "GTFS Agency"
+    "description": "GTFS Agency",
+    "type": "object"
 }
