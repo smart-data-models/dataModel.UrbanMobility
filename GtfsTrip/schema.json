@@ -3,5 +3,6 @@
     "$schemaVersion": "0.0.1",
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsTrip/schema.json",
-    "title": "Smart Data models. GTFS Schema - Trip"
+    "title": "Smart Data models. GTFS Schema - Trip",
+    "description": "GTFS Trip"
 }
