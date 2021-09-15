@@ -3,5 +3,6 @@
     "$schemaVersion": "0.0.1",
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsFrequency/schema.json",
-    "title": "Smart Data Models. GTFS Schema - Frequency"
+    "title": "Smart Data Models. GTFS Schema - Frequency",
+    "description": "GTFS Frequency"
 }
