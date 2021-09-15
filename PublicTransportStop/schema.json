@@ -4,5 +4,6 @@
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.UrbanMobility/PublicTransportStop/schema.json",
     "title": "Urban mobility PublicTransportStop schema",
-    "description": "A generic public transport stop"
+    "description": "A generic public transport stop",
+    "type": "object"
 }
