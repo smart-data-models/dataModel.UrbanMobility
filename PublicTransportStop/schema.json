@@ -100,5 +100,11 @@
                 }
             }
         }
+    ],
+    "required": [
+        "id",
+        "type",
+        "transportationType",
+        "name"
     ]
 }
