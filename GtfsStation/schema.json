@@ -3,5 +3,6 @@
     "$schemaVersion": "0.0.1",
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsStation/schema.json",
-    "title": "Smart Data Models. GTFS Schema - Station"
+    "title": "Smart Data Models. GTFS Schema - Station",
+    "description": "GTFS Station"
 }
