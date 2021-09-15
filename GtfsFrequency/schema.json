@@ -43,5 +43,13 @@
                 }
             }
         }
+    ],
+    "required": [
+        "id",
+        "type",
+        "hasTrip",
+        "startTime",
+        "endTime",
+        "headwaySeconds"
     ]
 }
