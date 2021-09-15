@@ -3,5 +3,6 @@
     "$schemaVersion": "0.0.1",
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.UrbanMobility/ArrivalEstimation/schema.json",
-    "title": "NGSI GTFS Schema"
+    "title": "NGSI GTFS Schema",
+    "description": "Arrival Estimation"
 }
