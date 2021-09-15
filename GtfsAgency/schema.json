@@ -48,5 +48,11 @@
                 }
             }
         }
+    ],
+    "required": [
+        "id",
+        "type",
+        "agencyName",
+        "source"
     ]
 }
