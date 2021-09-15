@@ -47,5 +47,12 @@
                 }
             }
         }
+    ],
+    "required": [
+        "id",
+        "type",
+        "name",
+        "location",
+        "hasStop"
     ]
 }
