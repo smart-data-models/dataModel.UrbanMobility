@@ -70,5 +70,12 @@
                 }
             }
         }
+    ],
+    "required": [
+        "id",
+        "type",
+        "hasOrigin",
+        "hasDestination",
+        "transferType"
     ]
 }
