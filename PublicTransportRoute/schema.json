@@ -112,5 +112,6 @@
         "id",
         "type",
         "transportationType"
-    ]
+    ],
+    "$schemaVersion": "0.0.1"
 }
