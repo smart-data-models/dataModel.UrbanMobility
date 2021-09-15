@@ -2,5 +2,6 @@
     "$schema": "http://json-schema.org/schema#",
     "$schemaVersion": "0.0.1",
     "modelTags": "",
-    "$id": "https://smart-data-models.github.io/data-models/specs/UrbanMobility/GtfsRoute/schema.json"
+    "$id": "https://smart-data-models.github.io/data-models/specs/UrbanMobility/GtfsRoute/schema.json",
+    "title": "Smart Data Models. GTFS Schema - Route"
 }
