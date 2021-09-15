@@ -4,5 +4,6 @@
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsTransferRule/schema.json",
     "title": "Smart Data Models. GTFS Schema - TransferRule",
-    "description": "GTFS Transfer Rule"
+    "description": "GTFS Transfer Rule",
+    "type": "object"
 }
