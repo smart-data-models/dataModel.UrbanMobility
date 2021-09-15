@@ -111,5 +111,11 @@
                 }
             }
         }
+    ],
+    "required": [
+        "id",
+        "type",
+        "hasRoute",
+        "hasService"
     ]
 }
