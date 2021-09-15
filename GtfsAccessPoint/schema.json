@@ -4,5 +4,6 @@
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsAccessPoint/schema.json",
     "title": "Smart Data Models. GTFS Schema",
-    "description": "GTFS Access Point"
+    "description": "GTFS Access Point",
+    "type": "object"
 }
