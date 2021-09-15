@@ -96,5 +96,14 @@
                 }
             }
         }
+    ],
+    "required": [
+        "id",
+        "type",
+        "arrivalTime",
+        "departureTime",
+        "hasStop",
+        "hasTrip",
+        "stopSequence"
     ]
 }
