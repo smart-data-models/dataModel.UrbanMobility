@@ -41,5 +41,13 @@
                 }
             }
         }
+    ],
+    "required": [
+        "id",
+        "type",
+        "hasStop",
+        "hasTrip",
+        "remainingTime",
+        "headSign"
     ]
 }
