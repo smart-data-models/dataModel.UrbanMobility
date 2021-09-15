@@ -62,5 +62,19 @@
                 }
             }
         }
+    ],
+    "required": [
+        "id",
+        "type",
+        "hasService",
+        "monday",
+        "tuesday",
+        "wednesday",
+        "thursday",
+        "friday",
+        "saturday",
+        "sunday",
+        "startDate",
+        "endDate"
     ]
 }
