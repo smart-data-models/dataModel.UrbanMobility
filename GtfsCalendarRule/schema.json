@@ -3,5 +3,6 @@
     "$schemaVersion": "0.0.1",
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsCalendarRule/schema.json",
-    "title": "Smart Data Models. GTFS Schema"
+    "title": "Smart Data Models. GTFS Schema",
+    "description": "Smart Data Models. GTFS Calendar Rule"
 }
