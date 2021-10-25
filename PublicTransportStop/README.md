@@ -6,7 +6,7 @@ Version: 0.0.1
 A generic public transport stop
 ### Specification
 
-Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/PublicTransportStop/swagger.yaml)
+Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/PublicTransportStop/swagger.yaml)
 
 Link to the [specification](https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/PublicTransportStop/doc/spec.md)
 
