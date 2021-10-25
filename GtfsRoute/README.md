@@ -6,7 +6,7 @@ Version: 0.0.1
 GTFS Route
 ### Specification
 
-Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/GtfsRoute/swagger.yaml)
+Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/GtfsRoute/swagger.yaml)
 
 Link to the [specification](https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/GtfsRoute/doc/spec.md)
 
