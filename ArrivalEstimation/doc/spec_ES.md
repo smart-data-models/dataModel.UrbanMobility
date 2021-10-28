@@ -6,7 +6,7 @@ Entidad: ArrivalEstimation
 
 ## Lista de propiedades  
 
-- `alternateName`: Un nombre alternativo para este artículo  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `hasStop`: Apuntará a una entidad de tipo GtfsStop  - `hasTrip`: Viaje asociado a esta Entidad. Apuntará a una entidad de tipo GtfsTrip  - `headSign`: Contendrá el texto que aparece en un cartel que identifica el destino del viaje a los pasajeros  - `id`: Identificador único de la entidad  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `remainingDistance`: Contendrá la distancia restante (en metros) de llegada para el viaje en dirección a la parada en cuestión  - `remainingTime`: Contendrá el tiempo restante de llegada para el viaje que se dirige a la parada en cuestión. El tiempo restante se codificará como una duración ISO8601. Ej. `PT8M5S`.  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `type`: Tipo de entidad NGSI: Tiene que ser ArrivalEstimation    
+- `alternateName`: Un nombre alternativo para este artículo  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `hasStop`: Apuntará a una entidad de tipo GtfsStop  - `hasTrip`: Viaje asociado a esta Entidad. Apuntará a una entidad de tipo GtfsTrip  - `headSign`: Contendrá el texto que aparece en un cartel que identifica el destino del viaje a los pasajeros  - `id`: Identificador único de la entidad  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `remainingDistance`: Contendrá la distancia restante (en metros) de llegada para el viaje en dirección a la parada en cuestión  - `remainingTime`: Contendrá el tiempo restante de llegada para el viaje que se dirige a la parada en cuestión. El tiempo restante se codificará como una duración ISO8601. Ej. `PT8M5S`.  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen, o la URL del objeto de origen.  - `type`: Tipo de entidad NGSI: Tiene que ser ArrivalEstimation    
 Propiedades requeridas  
 - `hasStop`  - `hasTrip`  - `headSign`  - `id`  - `remainingTime`  - `type`    
 Este tipo de entidad recoge la hora estimada de llegada de un vehículo de transporte público a una parada concreta, mientras el vehículo presta servicio en una ruta determinada.  
@@ -19,21 +19,31 @@ ArrivalEstimation:
   properties:    
     alternateName:    
       description: 'An alternative name for this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateCreated:    
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     description:    
       description: 'A description of this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     hasStop:    
       description: 'It shall point to an Entity of Type GtfsStop'    
       items:    
@@ -46,7 +56,9 @@ ArrivalEstimation:
           - description: 'Property. Identifier format of any NGSI entity'    
             format: uri    
             type: string    
-      type: Relationship    
+      type: array    
+      x-ngsi:    
+        type: Relationship    
     hasTrip:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -58,14 +70,15 @@ ArrivalEstimation:
           format: uri    
           type: string    
       description: 'Trip associated to this Entity. It shall point to an Entity of Type GtfsTrip'    
-      type: Relationship    
       x-ngsi:    
         model: https://schema.org/URL    
+        type: Relationship    
     headSign:    
       description: 'It shall contain the text that appears on a sign that identifies the trip''s destination to passengers'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text.    
+        type: Property    
     id:    
       anyOf: &arrivalestimation_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -77,27 +90,35 @@ ArrivalEstimation:
           format: uri    
           type: string    
       description: 'Unique identifier of the entity'    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     name:    
       description: 'The name of this item.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *arrivalestimation_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     remainingDistance:    
       description: 'It shall contain the remaining distance (in meters) of arrival for the trip heading to the concerned stop'    
       minValue: 0    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
         units: Meters    
     remainingTime:    
       description: 'It shall contain the remaining time of arrival for the trip heading to the concerned stop. Remaining time shall be encoded as a ISO8601 duration. Ex. `PT8M5S`.'    
       pattern: ^P(?=\w*\d)(?:\d+Y|Y)?(?:\d+M|M)?(?:\d+W|W)?(?:\d+D|D)?(?:T(?:\d+H|H)?(?:\d+M|M)?(?:\d+(?:\?.\d{1,2})?S|S)?)?$    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
@@ -108,15 +129,20 @@ ArrivalEstimation:
           type: array    
         - format: uri    
           type: string    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     type:    
       description: 'NGSI Entity Type: It has to be ArrivalEstimation'    
       enum:    
         - ArrivalEstimation    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
   required:    
     - id    
     - type    
