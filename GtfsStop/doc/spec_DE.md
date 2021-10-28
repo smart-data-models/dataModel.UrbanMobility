@@ -6,10 +6,10 @@ Entität: GtfsStop
 
 ## Liste der Eigenschaften  
 
-- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `code`: Gleich wie GTFS `stop_code`  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `hasParentStation`: Gleich wie GTFS `parent_station`.  - `hasService`: Dienst, für den diese Regel gilt. Abgeleitet von `service_id`  - `hasStop`: Es muss auf ein Entity vom Typ GtfsStop zeigen  - `hasTrip`: Trip, der zu diesem Entity gehört. Es muss auf ein Entity vom Typ GtfsTrip zeigen  - `id`: Eindeutiger Bezeichner der Entität  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Elements.  - `operatedBy`: Agentur, die diese Haltestelle betreibt. Liste der Beziehungen. Sie müssen auf eine Entität des Typs GtfsAgency zeigen  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `page`: Gleich wie GTFS `stop_url`  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `stop_desc`: Gleich wie GTFS `stop_desc`.  - `type`: NGSI Entity-Typ. Es muss GtfsStop sein  - `wheelChairAccessible`: Gleich wie GTFS `Rollstuhl_Einsteigen`. Enum:'0, 1 ,2'. Referenz in [GTFS](https://developers.google.com/transit/gtfs/reference/#stopstxt)  - `zoneCode`: Transportzone, zu der diese Haltestelle gehört. Gleich wie GTFS `zone_id`    
+- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `code`: Gleich wie GTFS "stop_code  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `hasParentStation`: Wie GTFS `parent_station`.  - `hasService`: Dienst, für den diese Regel gilt. Abgeleitet von `service_id`  - `hasStop`: Sie muss auf eine Entität des Typs GtfsStop verweisen.  - `hasTrip`: Reise, die mit dieser Entität verbunden ist. Sie muss auf eine Entität des Typs GtfsTrip zeigen.  - `id`: Eindeutiger Bezeichner der Entität  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Artikels.  - `operatedBy`: Agentur, die diese Haltestelle betreibt. Liste der Beziehungen. Sie müssen auf eine Entität des Typs GtfsAgency verweisen  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `page`: Gleich wie GTFS `stop_url`  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `stop_desc`: Gleich wie GTFS `stop_desc`.  - `type`: NGSI-Entitätstyp. Es muss GtfsStop sein.  - `wheelChairAccessible`: Gleich wie GTFS `Rollstuhl_Einsteigen`. Enum:'0, 1 ,2'. Verweis in [GTFS](https://developers.google.com/transit/gtfs/reference/#stopstxt)  - `zoneCode`: Transportzone, zu der diese Haltestelle gehört. Gleich wie GTFS `zone_id`    
 Erforderliche Eigenschaften  
 - `id`  - `location`  - `name`  - `type`    
-Siehe [https://developers.google.com/transit/gtfs/reference/#stopstxt](https://developers.google.com/transit/gtfs/reference/#stopstxt). Er repräsentiert einen GTFS-"Stop", dessen "location_type" gleich "0" sein muss.  
+Siehe [https://developers.google.com/transit/gtfs/reference/#stopstxt](https://developers.google.com/transit/gtfs/reference/#stopstxt). Er repräsentiert einen GTFS "stop", dessen "location_type" gleich "0" sein muss.  
 ## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
 <details><summary><strong>full yaml details</strong></summary>    
@@ -38,36 +38,49 @@ GtfsStop:
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
-      type: Property    
+      type: object    
       x-ngsi:    
         model: https://schema.org/address    
+        type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     areaServed:    
       description: 'The geographic area where a service or offered item is provided'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     code:    
       description: 'Same as GTFS `stop_code`'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: http://schema.org/Text    
+        type: Property    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateCreated:    
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     description:    
       description: 'A description of this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     hasParentStation:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -79,7 +92,8 @@ GtfsStop:
           format: uri    
           type: string    
       description: 'Same as GTFS `parent_station`.'    
-      type: Relationship    
+      x-ngsi:    
+        type: Relationship    
     hasService:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -91,9 +105,10 @@ GtfsStop:
           format: uri    
           type: string    
       description: 'Service to which this rule applies to. Derived from `service_id`'    
-      type: Relationship    
+      type: string    
       x-ngsi:    
         model: https://schema.org/URL    
+        type: Relationship    
     hasStop:    
       description: 'It shall point to an Entity of Type GtfsStop'    
       items:    
@@ -106,7 +121,9 @@ GtfsStop:
           - description: 'Property. Identifier format of any NGSI entity'    
             format: uri    
             type: string    
-      type: Relationship    
+      type: array    
+      x-ngsi:    
+        type: Relationship    
     hasTrip:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -118,9 +135,9 @@ GtfsStop:
           format: uri    
           type: string    
       description: 'Trip associated to this Entity. It shall point to an Entity of Type GtfsTrip'    
-      type: Relationship    
       x-ngsi:    
         model: https://schema.org/URL    
+        type: Relationship    
     id:    
       anyOf: &gtfsstop_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -132,7 +149,8 @@ GtfsStop:
           format: uri    
           type: string    
       description: 'Unique identifier of the entity'    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
@@ -284,10 +302,13 @@ GtfsStop:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      type: Geoproperty    
+      x-ngsi:    
+        type: Geoproperty    
     name:    
       description: 'The name of this item.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     operatedBy:    
       description: 'Agency that operates this stop. List of Relationships. They shall point to an Entity of Type GtfsAgency'    
       items:    
@@ -301,22 +322,26 @@ GtfsStop:
             format: uri    
             type: string    
       minItems: 0    
-      type: Relationship    
+      type: array    
       uniqueItems: true    
       x-ngsi:    
         model: https://schema.org/URL    
+        type: Relationship    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *gtfsstop_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     page:    
       description: 'Same as GTFS `stop_url`'    
       format: uri    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: http://schema.org/URL    
+        type: Property    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
@@ -327,30 +352,40 @@ GtfsStop:
           type: array    
         - format: uri    
           type: string    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     stop_desc:    
       description: 'Same as GTFS `stop_desc`.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     type:    
       description: 'NGSI Entity type. It has to be GtfsStop'    
       enum:    
         - GtfsStop    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     wheelChairAccessible:    
       description: "Same as GTFS `wheelchair_boarding`. Enum:'0, 1 ,2'. Reference in [GTFS](https://developers.google.com/transit/gtfs/reference/#stopstxt) "    
       enum:    
         - 0    
         - 1    
         - 2    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     zoneCode:    
       description: 'Transport zone to which this stop belongs to. Same as GTFS `zone_id`'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
   required:    
     - id    
     - type    
@@ -361,7 +396,7 @@ GtfsStop:
 </details>    
 ## Beispiel-Nutzlasten  
 #### GtfsStop NGSI-v2 key-values Beispiel  
-Hier ist ein Beispiel für einen GtfsStop im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-v2 bei Verwendung von `options=keyValues` und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für einen GtfsStop im JSON-LD-Format als Schlüsselwerte. Dies ist kompatibel mit NGSI-v2, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "urn:ngsi-ld:GtfsStop:Malaga_101",  
@@ -376,7 +411,7 @@ GtfsStop:
 }  
 ```  
 #### GtfsStop NGSI-v2 normalisiert Beispiel  
-Hier ist ein Beispiel für einen GtfsStop im JSON-LD-Format wie normalisiert. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für einen GtfsStop im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "urn:ngsi-ld:GtfsStop:Malaga_101",  
@@ -401,7 +436,7 @@ GtfsStop:
 }  
 ```  
 #### GtfsStop NGSI-LD key-values Beispiel  
-Hier ist ein Beispiel für einen GtfsStop im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-LD bei Verwendung von `options=keyValues` und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für einen GtfsStop im JSON-LD-Format als Schlüsselwerte. Dies ist kompatibel mit NGSI-LD, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "urn:ngsi-ld:GtfsStop:Malaga_101",  
@@ -435,7 +470,7 @@ GtfsStop:
 }  
 ```  
 #### GtfsStop NGSI-LD normalisiert Beispiel  
-Hier ist ein Beispiel für einen GtfsStop im JSON-LD-Format wie normalisiert. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für einen GtfsStop im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "@context": [  
