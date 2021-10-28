@@ -6,7 +6,7 @@ Entité : GtfsRoute
 
 ## Liste des propriétés  
 
-- `alternateName`: Un nom alternatif pour cet élément  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `id`: Identifiant unique de l'entité  - `name`: Le nom de cet élément.  - `operatedBy`: Agence qui exploite cette route. Il doit pointer vers une entité de type GtfsAgency.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `page`: Identique à GTFS `stop_url`.  - `routeColor`: Identique à GTFS `route_color`. Voir [GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt)  - `routeSortOrder`: Identique à GTFS `route_sort_order`.  - `routeTextColor`: Identique à GTFS `route_text_color`. Voir [GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt)  - `routeType`: Identique à GTFS `route_type`. Valeurs autorisées : celles autorisées pour `route_type` comme prescrit par [GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt). Enum : "0, 1, 2, 3, 4, 5, 6, 7".  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `shortName`: Même que GTFS `route_short_name`.  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `type`: Type d'entité NGSI. Il doit être GtfsRoute    
+- `alternateName`: Un nom alternatif pour cet élément  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `id`: Identifiant unique de l'entité  - `name`: Le nom de cet élément.  - `operatedBy`: Agence qui exploite cette route. Il doit pointer vers une entité de type GtfsAgency.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `page`: Identique à GTFS `stop_url`.  - `routeColor`: Identique à GTFS `route_color`. Voir [GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt)  - `routeSortOrder`: Identique à GTFS `route_sort_order`.  - `routeTextColor`: Identique à GTFS `route_text_color`. Voir [GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt)  - `routeType`: Identique à GTFS `route_type`. Valeurs autorisées : celles autorisées pour `route_type` comme prescrit par [GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt). Enum : "0, 1, 2, 3, 4, 5, 6, 7".  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `shortName`: Identique à GTFS `route_short_name`.  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `type`: Type d'entité NGSI. Il doit être GtfsRoute    
 Propriétés requises  
 - `id`  - `type`    
 Voir [https://developers.google.com/transit/gtfs/reference/#routestxt](https://developers.google.com/transit/gtfs/reference/#routestxt)  
@@ -19,21 +19,31 @@ GtfsRoute:
   properties:    
     alternateName:    
       description: 'An alternative name for this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateCreated:    
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     description:    
       description: 'A description of this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     id:    
       anyOf: &gtfsroute_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -45,10 +55,13 @@ GtfsRoute:
           format: uri    
           type: string    
       description: 'Unique identifier of the entity'    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     name:    
       description: 'The name of this item.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     operatedBy:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -60,37 +73,43 @@ GtfsRoute:
           format: uri    
           type: string    
       description: 'Agency that operates this route. It shall point to an Entity of Type GtfsAgency'    
-      type: Relationship    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Relationship    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *gtfsroute_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     page:    
       description: 'Same as GTFS `stop_url`'    
       format: uri    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: http://schema.org/URL    
+        type: Property    
     routeColor:    
       description: "Same as GTFS `route_color`. See [GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt)"    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     routeSortOrder:    
       description: 'Same as GTFS `route_sort_order`'    
       minimum: 0    
-      type: Property    
+      type: integer    
       x-ngsi:    
         model: https://schema.org/Number.    
+        type: Property    
     routeTextColor:    
       description: "Same as GTFS `route_text_color`. See [GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt)"    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     routeType:    
       description: "Same as GTFS `route_type`. allowed values those allowed for `route_type` as prescribed by [GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt). Enum:'0, 1, 2, 3, 4, 5, 6, 7'"    
       enum:    
@@ -102,9 +121,10 @@ GtfsRoute:
         - 5    
         - 6    
         - 7    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
@@ -115,20 +135,26 @@ GtfsRoute:
           type: array    
         - format: uri    
           type: string    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     shortName:    
       description: 'Same as GTFS `route_short_name`'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text.    
+        type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     type:    
       description: 'NGSI Entity type. It has to be GtfsRoute'    
       enum:    
         - GtfsRoute    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
   required:    
     - id    
     - type    
