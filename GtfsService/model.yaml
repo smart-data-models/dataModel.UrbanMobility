@@ -97,3 +97,9 @@ GtfsService:
     - name
     - operatedBy
   type: object
+  x-derived-from: ""
+  x-disclaimer: 'copyleft (c) 2021 Contributors to Smart Data Models Program'
+  x-license-url: https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/GtfsService/LICENSE.md
+  x-model-schema: https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsService/schema.json
+  x-model-tags: ""
+  x-version: 0.0.1
