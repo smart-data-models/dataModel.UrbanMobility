@@ -6,7 +6,7 @@ Entité : PublicTransportRoute
 
 ## Liste des propriétés  
 
-- `address`: L'adresse postale  - `alternateName`: Un nom alternatif pour cet élément  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `id`: Identifiant unique de l'entité  - `location`:   - `name`: Le nom de cet élément.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `routeCode`: ID ou code de l'itinéraire (par exemple, "HT5200104000").  - `routeColor`: Couleur attribuée à la route dans le texte  - `routeSegments`: Segments de cet itinéraire définis par leur nom et leurs arrêts.  - `routeTextColor`: Couleur attribuée à la route en hexadécimal  - `schedule`: Heures de travail de cet itinéraire  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `shortRouteCode`: Forme abrégée de l'ID/code de l'itinéraire (par exemple, '5200104000'')  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `transportationType`: Types de transports publics utilisant cet arrêt, tels que définis dans (https://developers.google.com/transit/gtfs/reference/#routestxt). Enum : "0, 1, 2, 3, 4, 5, 6, 7".  - `type`: Type d'entité NGSI. Il doit s'agir de PublicTransportRoute.    
+- `address`: L'adresse postale  - `alternateName`: Un nom alternatif pour cet élément  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `id`: Identifiant unique de l'entité  - `location`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `name`: Le nom de cet élément.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `routeCode`: ID ou code de l'itinéraire (par exemple, "HT5200104000").  - `routeColor`: Couleur attribuée à la route dans le texte  - `routeSegments`: Segments de cet itinéraire définis par leur nom et leurs arrêts.  - `routeTextColor`: Couleur attribuée à la route en hexadécimal  - `schedule`: Heures de travail de cet itinéraire  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `shortRouteCode`: Forme abrégée de l'ID/code de l'itinéraire (par exemple, '5200104000'')  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `transportationType`: Types de transports publics utilisant cet arrêt, tels que définis dans (https://developers.google.com/transit/gtfs/reference/#routestxt). Enum : "0, 1, 2, 3, 4, 5, 6, 7".  - `type`: Type d'entité NGSI. Il doit s'agir de PublicTransportRoute.    
 Propriétés requises  
 - `id`  - `transportationType`  - `type`    
 Modèle générique d'itinéraire de transport public. Il adopte certaines définitions du GTFS, mais il n'a pas besoin d'être lié à des données supplémentaires du GTFS. Un itinéraire est un trajet, proposé par un service de transport public, qui passe par un ensemble d'arrêts.  
@@ -29,9 +29,6 @@ PublicTransportRoute:
         addressRegion:    
           description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
-        areaServed:    
-          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/areaServed'''    
-          type: string    
         postOfficeBoxNumber:    
           description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
@@ -41,31 +38,43 @@ PublicTransportRoute:
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
-      type: Property    
+      type: object    
       x-ngsi:    
         model: https://schema.org/address    
+        type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     areaServed:    
       description: 'The geographic area where a service or offered item is provided'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateCreated:    
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     description:    
       description: 'A description of this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     id:    
       anyOf: &publictransportroute_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -77,12 +86,13 @@ PublicTransportRoute:
           format: uri    
           type: string    
       description: 'Unique identifier of the entity'    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     location:    
-      $id: https://geojson.org/schema/Geometry.json    
-      $schema: "http://json-schema.org/draft-07/schema#"    
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Point'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -102,7 +112,8 @@ PublicTransportRoute:
             - coordinates    
           title: 'GeoJSON Point'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. LineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -125,7 +136,8 @@ PublicTransportRoute:
             - coordinates    
           title: 'GeoJSON LineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Polygon'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -150,7 +162,8 @@ PublicTransportRoute:
             - coordinates    
           title: 'GeoJSON Polygon'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -172,7 +185,8 @@ PublicTransportRoute:
             - coordinates    
           title: 'GeoJSON MultiPoint'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -197,7 +211,8 @@ PublicTransportRoute:
             - coordinates    
           title: 'GeoJSON MultiLineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -224,27 +239,34 @@ PublicTransportRoute:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      title: 'GeoJSON Geometry'    
+      x-ngsi:    
+        type: Geoproperty    
     name:    
       description: 'The name of this item.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *publictransportroute_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     routeCode:    
       description: 'ID or code of the route (e.g. ‘HT5200104000’)'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: ' https://schema.org/Text.'    
+        type: Property    
     routeColor:    
       description: 'Color assigned to route in text'    
       pattern: "^#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$"    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: ' https://schema.org/color.'    
+        type: Property    
     routeSegments:    
       description: 'Segments of this route defined by their name and stops.'    
       items:    
@@ -260,12 +282,15 @@ PublicTransportRoute:
           - segmentName    
           - refPublicTransportStops    
         type: object    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     routeTextColor:    
       description: 'Color assigned to route in hexadecimal'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: ' https://schema.org/color.'    
+        type: Property    
     schedule:    
       description: 'Working hours of this route'    
       items:    
@@ -288,9 +313,10 @@ PublicTransportRoute:
             pattern: "[0-9]{2}:[0-9]{2}"    
             type: string    
       minItems: 1    
-      type: Property    
+      type: array    
       x-ngsi:    
         model: https://schema.org/OpeningHoursSpecification.    
+        type: Property    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
@@ -301,15 +327,19 @@ PublicTransportRoute:
           type: array    
         - format: uri    
           type: string    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     shortRouteCode:    
       description: 'Shorter form of the ID/code of the route (e.g. ‘5200104000’’)'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text.    
+        type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     transportationType:    
       description: "Types of public transport using this stop as defined in (https://developers.google.com/transit/gtfs/reference/#routestxt). Enum:'0, 1, 2, 3, 4, 5, 6, 7'"    
       enum:    
@@ -321,14 +351,17 @@ PublicTransportRoute:
         - 5    
         - 6    
         - 7    
-      type: Property    
+      type: integer    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
     type:    
       description: 'NGSI Entity type. It has to be PublicTransportRoute'    
       enum:    
         - PublicTransportRoute    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
   required:    
     - id    
     - type    
@@ -401,7 +434,7 @@ PublicTransportRoute:
   ]  
 }  
 ```  
-#### PublicTransportRoute NGSI-v2 normalisé Exemple  
+#### PublicTransportRoute NGSI-v2 normalisée Exemple  
 Voici un exemple de PublicTransportRoute au format JSON-LD tel que normalisé. Ce format est compatible avec la NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  

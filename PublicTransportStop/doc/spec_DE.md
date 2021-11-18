@@ -2,11 +2,11 @@ Entität: PublicTransportStop
 ============================  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/PublicTransportStop/LICENSE.md)  
 [Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Globale Beschreibung: **Eine generische Haltestelle für öffentliche Verkehrsmittel**  
+Globale Beschreibung: **Eine allgemeine Haltestelle für öffentliche Verkehrsmittel**  
 
 ## Liste der Eigenschaften  
 
-- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `id`: Eindeutiger Bezeichner der Entität  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Elements.  - `openingHoursSpecification`: Ein strukturierter Wert, der Informationen über die Öffnungszeiten eines Ortes oder einen bestimmten Dienst innerhalb eines Ortes liefert  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `peopleCount`: Schätzung der an der Haltestelle wartenden Personen  - `refPeopleCountDevice`: Verweis auf das [Gerät](https://github.com/Fiware/dataModels/blob/master/specs/Device/Device/doc/spec.md), das eine Schätzung der Personenzahl liefert.  - `refPublicTransportRoute`: Linien des öffentlichen Verkehrs, die diese Haltestelle benutzen.  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `shortStopCode`: Kurzform der Kennung/des Codes der Haltestelle des öffentlichen Verkehrs  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `stopCode`: Kennung/Code der Haltestelle des öffentlichen Verkehrsmittels  - `transportationType`: Arten von öffentlichen Verkehrsmitteln, die diese Haltestelle benutzen, wie in (https://developers.google.com/transit/gtfs/reference/#routestxt) definiert. Enum:'0, 1, 2, 3, 4, 5, 6, 7'  - `type`: NGSI Entity-Typ. Es muss PublicTransportStop sein  - `wheelChairAccessible`: Gleich wie GTFS `Rollstuhl_Einsteigen`. Enum:'0, 1 ,2'. Referenz in [GTFS](https://developers.google.com/transit/gtfs/reference/#stopstxt)    
+- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `id`: Eindeutiger Bezeichner der Entität  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Artikels.  - `openingHoursSpecification`: Ein strukturierter Wert, der Informationen über die Öffnungszeiten eines Ortes oder einer bestimmten Dienstleistung an einem Ort liefert  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `peopleCount`: Schätzung der an der Haltestelle wartenden Personen  - `refPeopleCountDevice`: Verweis auf das [Gerät](https://github.com/Fiware/dataModels/blob/master/specs/Device/Device/doc/spec.md), das eine Schätzung der Personenzahl liefert.  - `refPublicTransportRoute`: Öffentliche Verkehrsmittel, die diese Haltestelle anfahren.  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `shortStopCode`: Kurzform der Kennung/des Codes der Haltestelle des öffentlichen Verkehrs  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `stopCode`: Kennung/Code der Haltestelle des öffentlichen Verkehrsmittels  - `transportationType`: Arten von öffentlichen Verkehrsmitteln, die diese Haltestelle benutzen, wie in (https://developers.google.com/transit/gtfs/reference/#routestxt) definiert. Enum:'0, 1, 2, 3, 4, 5, 6, 7'  - `type`: NGSI-Entitätstyp. Es muss PublicTransportStop sein.  - `wheelChairAccessible`: Gleich wie GTFS `Rollstuhl_Einsteigen`. Enum:'0, 1 ,2'. Verweis in [GTFS](https://developers.google.com/transit/gtfs/reference/#stopstxt)    
 Erforderliche Eigenschaften  
 - `id`  - `name`  - `transportationType`  - `type`    
 Generisches Modell für eine Haltestelle des öffentlichen Verkehrs. Es übernimmt einige GTFS-Definitionen, muss aber nicht mit zusätzlichen GTFS-Daten verknüpft werden.  
@@ -38,31 +38,43 @@ PublicTransportStop:
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
-      type: Property    
+      type: object    
       x-ngsi:    
         model: https://schema.org/address    
+        type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     areaServed:    
       description: 'The geographic area where a service or offered item is provided'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateCreated:    
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     description:    
       description: 'A description of this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     id:    
       anyOf: &publictransportstop_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -74,7 +86,8 @@ PublicTransportStop:
           format: uri    
           type: string    
       description: 'Unique identifier of the entity'    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
@@ -226,10 +239,13 @@ PublicTransportStop:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      type: Geoproperty    
+      x-ngsi:    
+        type: Geoproperty    
     name:    
       description: 'The name of this item.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     openingHoursSpecification:    
       description: 'A structured value providing information about the opening hours of a place or a certain service inside a place'    
       items:    
@@ -258,21 +274,25 @@ PublicTransportStop:
             format: date-time    
             type: string    
       minItems: 1    
-      type: Property    
+      type: array    
       x-ngsi:    
         model: https://schema.org/openingHoursSpecification    
+        type: Property    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *publictransportstop_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     peopleCount:    
       description: 'Estimation of people waiting in the stop'    
       minimum: 0    
-      type: Property    
+      type: integer    
       x-ngsi:    
         model: https://schema.org/Number.    
+        type: Property    
     refPeopleCountDevice:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -284,7 +304,9 @@ PublicTransportStop:
           format: uri    
           type: string    
       description: 'Reference to the [Device](https://github.com/Fiware/dataModels/blob/master/specs/Device/Device/doc/spec.md) providing people count estimate.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     refPublicTransportRoute:    
       description: 'Public transport routes using this stop.'    
       items:    
@@ -298,10 +320,11 @@ PublicTransportStop:
             format: uri    
             type: string    
       minItems: 1    
-      type: Relationship    
+      type: array    
       uniqueItems: true    
       x-ngsi:    
         model: ' https://schema.org/URL'    
+        type: Relationship    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
@@ -312,20 +335,25 @@ PublicTransportStop:
           type: array    
         - format: uri    
           type: string    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     shortStopCode:    
       description: 'Shorter form of the identifier/code of the public transport stop'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text.    
+        type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     stopCode:    
       description: 'Identifier/code of the public transport stop'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text.    
+        type: Property    
     transportationType:    
       description: "Types of public transport using this stop as defined in (https://developers.google.com/transit/gtfs/reference/#routestxt). Enum:'0, 1, 2, 3, 4, 5, 6, 7'"    
       items:    
@@ -339,21 +367,26 @@ PublicTransportStop:
           - 6    
           - 7    
         type: integer    
-      type: Property    
+      type: array    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
     type:    
       description: 'NGSI Entity type. It has to be PublicTransportStop'    
       enum:    
         - PublicTransportStop    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     wheelChairAccessible:    
       description: "Same as GTFS `wheelchair_boarding`. Enum:'0, 1 ,2'. Reference in [GTFS](https://developers.google.com/transit/gtfs/reference/#stopstxt) "    
       enum:    
         - 0    
         - 1    
         - 2    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
   required:    
     - id    
     - type    
@@ -364,7 +397,7 @@ PublicTransportStop:
 </details>    
 ## Beispiel-Nutzlasten  
 #### PublicTransportStop NGSI-v2 key-values Beispiel  
-Hier ist ein Beispiel für einen PublicTransportStop im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-v2 bei Verwendung von `options=keyValues` und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für eine PublicTransportStop im JSON-LD-Format als Schlüsselwerte. Dies ist kompatibel mit NGSI-v2, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "urn:ngsi-ld:PublicTransportStop:santander:busStop:463",  
@@ -429,7 +462,7 @@ PublicTransportStop:
 }  
 ```  
 #### PublicTransportStop NGSI-v2 normalisiert Beispiel  
-Hier ist ein Beispiel für eine PublicTransportStop im JSON-LD-Format wie normalisiert. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für eine PublicTransportStop im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "urn:ngsi-ld:PublicTransportStop:santander:busStop:463",  
@@ -580,7 +613,7 @@ PublicTransportStop:
 }  
 ```  
 #### PublicTransportStop NGSI-LD key-values Beispiel  
-Hier ist ein Beispiel für einen PublicTransportStop im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-LD bei Verwendung von `options=keyValues` und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für eine PublicTransportStop im JSON-LD-Format als Schlüsselwerte. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "urn:ngsi-ld:PublicTransportStop:santander:busStop:463",  
@@ -731,7 +764,7 @@ PublicTransportStop:
 }  
 ```  
 #### PublicTransportStop NGSI-LD normalisiert Beispiel  
-Hier ist ein Beispiel für eine PublicTransportStop im JSON-LD-Format wie normalisiert. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für eine PublicTransportStop im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "@context": [  

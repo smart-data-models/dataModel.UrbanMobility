@@ -6,7 +6,7 @@ Entidad: GtfsAccessPoint
 
 ## Lista de propiedades  
 
-- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `code`: Igual que GTFS `stop_code`.  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `hasParentStation`: Igual que GTFS `parent_station`.  - `hasService`: Servicio al que se aplica esta regla. Derivado de `service_id`.  - `hasStop`: Apuntará a una entidad de tipo GtfsStop  - `hasTrip`: Viaje asociado a esta Entidad. Apuntará a una entidad de tipo GtfsTrip  - `id`: Identificador único de la entidad  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `page`: Igual que GTFS `stop_url`  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `stop_desc`: Igual que GTFS `stop_desc`.  - `type`: Tipo de entidad NGSI: Tiene que ser GtfsAccessPoint  - `wheelChairAccessible`: Igual que GTFS `wheelchair_boarding`. Enum:'0, 1 ,2'. Referencia en [GTFS](https://developers.google.com/transit/gtfs/reference/#stopstxt)  - `zoneCode`: Zona de transporte a la que pertenece esta parada. Igual que GTFS `zone_id`.    
+- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `code`: Igual que GTFS `stop_code`.  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `hasParentStation`: Igual que GTFS `parent_station`.  - `hasService`: Servicio al que se aplica esta regla. Derivado de `service_id`.  - `hasStop`: Apuntará a una entidad de tipo GtfsStop  - `hasTrip`: Viaje asociado a esta Entidad. Apuntará a una entidad de tipo GtfsTrip  - `id`: Identificador único de la entidad  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `page`: Igual que GTFS `stop_url`  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen, o la URL del objeto de origen.  - `stop_desc`: Igual que GTFS `stop_desc`.  - `type`: Tipo de entidad NGSI: Tiene que ser GtfsAccessPoint  - `wheelChairAccessible`: Igual que GTFS `wheelchair_boarding`. Enum:'0, 1 ,2'. Referencia en [GTFS](https://developers.google.com/transit/gtfs/reference/#stopstxt)  - `zoneCode`: Zona de transporte a la que pertenece esta parada. Igual que GTFS `zone_id`.    
 Propiedades requeridas  
 - `id`  - `location`  - `name`  - `type`    
 Véase [https://developers.google.com/transit/gtfs/reference/#stopstxt](https://developers.google.com/transit/gtfs/reference/#stopstxt). Es un `stop` GTFS cuyo `location_type` es igual a `2`.  
@@ -38,36 +38,49 @@ GtfsAccessPoint:
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
-      type: Property    
+      type: object    
       x-ngsi:    
         model: https://schema.org/address    
+        type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     areaServed:    
       description: 'The geographic area where a service or offered item is provided'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     code:    
       description: 'Same as GTFS `stop_code`'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: http://schema.org/Text    
+        type: Property    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateCreated:    
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     description:    
       description: 'A description of this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     hasParentStation:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -79,7 +92,8 @@ GtfsAccessPoint:
           format: uri    
           type: string    
       description: 'Same as GTFS `parent_station`.'    
-      type: Relationship    
+      x-ngsi:    
+        type: Relationship    
     hasService:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -91,9 +105,10 @@ GtfsAccessPoint:
           format: uri    
           type: string    
       description: 'Service to which this rule applies to. Derived from `service_id`'    
-      type: Relationship    
+      type: string    
       x-ngsi:    
         model: https://schema.org/URL    
+        type: Relationship    
     hasStop:    
       description: 'It shall point to an Entity of Type GtfsStop'    
       items:    
@@ -106,7 +121,9 @@ GtfsAccessPoint:
           - description: 'Property. Identifier format of any NGSI entity'    
             format: uri    
             type: string    
-      type: Relationship    
+      type: array    
+      x-ngsi:    
+        type: Relationship    
     hasTrip:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -118,9 +135,9 @@ GtfsAccessPoint:
           format: uri    
           type: string    
       description: 'Trip associated to this Entity. It shall point to an Entity of Type GtfsTrip'    
-      type: Relationship    
       x-ngsi:    
         model: https://schema.org/URL    
+        type: Relationship    
     id:    
       anyOf: &gtfsaccesspoint_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -132,7 +149,8 @@ GtfsAccessPoint:
           format: uri    
           type: string    
       description: 'Unique identifier of the entity'    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
@@ -284,22 +302,28 @@ GtfsAccessPoint:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      type: Geoproperty    
+      x-ngsi:    
+        type: Geoproperty    
     name:    
       description: 'The name of this item.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *gtfsaccesspoint_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     page:    
       description: 'Same as GTFS `stop_url`'    
       format: uri    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: http://schema.org/URL    
+        type: Property    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
@@ -310,30 +334,40 @@ GtfsAccessPoint:
           type: array    
         - format: uri    
           type: string    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     stop_desc:    
       description: 'Same as GTFS `stop_desc`.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     type:    
       description: 'NGSI Entity Type: It has to be GtfsAccessPoint'    
       enum:    
         - GtfsAccessPoint    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     wheelChairAccessible:    
       description: "Same as GTFS `wheelchair_boarding`. Enum:'0, 1 ,2'. Reference in [GTFS](https://developers.google.com/transit/gtfs/reference/#stopstxt) "    
       enum:    
         - 0    
         - 1    
         - 2    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     zoneCode:    
       description: 'Transport zone to which this stop belongs to. Same as GTFS `zone_id`'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
   required:    
     - id    
     - type    
@@ -364,7 +398,7 @@ GtfsAccessPoint:
 }  
 ```  
 #### GtfsAccessPoint NGSI-v2 normalizado Ejemplo  
-Aquí hay un ejemplo de un GtfsAccessPoint en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+Este es un ejemplo de un GtfsAccessPoint en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
   "id": "urn:ngsi-ld:AccessPoint:Madrid:acc_4_1_3",  

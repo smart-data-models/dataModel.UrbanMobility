@@ -43,6 +43,7 @@
         "minimumTransferTime": "https://smartdatamodels.org/dataModel.UrbanMobility/minimumTransferTime",
         "monday": "https://smartdatamodels.org/dataModel.UrbanMobility/monday",
         "name": "https://smartdatamodels.org/name",
+        "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
         "openingHoursSpecification": "https://smartdatamodels.org/openingHoursSpecification",
         "operatedBy": "https://smartdatamodels.org/dataModel.UrbanMobility/operatedBy",
         "owner": "https://smartdatamodels.org/owner",

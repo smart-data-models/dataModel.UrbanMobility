@@ -2,11 +2,11 @@ Entität: GtfsFrequency
 ======================  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/GtfsFrequency/LICENSE.md)  
 [Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Globale Beschreibung: **GTFS Frequenz**  
+Globale Beschreibung: **GTFS-Frequenz**  
 
 ## Liste der Eigenschaften  
 
-- `alternateName`: Ein alternativer Name für diesen Artikel  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `endTime`: Gleich wie GTFS `end_time`  - `exactTimes`: Wie GTFS `exact_times`, aber als Boolean kodiert; `false`: Frequenzbasierte Fahrten werden nicht exakt geplant. true": Frequenzbasierte Fahrten sind exakt geplant  - `hasTrip`: Trip, der zu diesem Entity gehört. Es muss auf ein Entity vom Typ GtfsTrip zeigen  - `headwaySeconds`: Gleich wie GTFS `headway_secs`  - `id`: Eindeutiger Bezeichner der Entität  - `name`: Der Name dieses Elements.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `startTime`: Gleich wie GTFS `start_time`  - `type`: NGSI Entity-Typ. Es muss GtfsFrequency sein    
+- `alternateName`: Ein alternativer Name für diesen Artikel  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `endTime`: Gleich wie GTFS `end_time`  - `exactTimes`: Wie GTFS `exact_times`, aber kodiert als Boolean; `false`: Frequenzabhängige Fahrten werden nicht exakt geplant. wahr": Frequenzabhängige Fahrten werden genau geplant.  - `hasTrip`: Reise, die mit dieser Entität verbunden ist. Sie muss auf eine Entität des Typs GtfsTrip zeigen.  - `headwaySeconds`: Gleich wie GTFS "headway_secs  - `id`: Eindeutiger Bezeichner der Entität  - `name`: Der Name dieses Artikels.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `startTime`: Wie GTFS "start_time  - `type`: NGSI-Entitätstyp. Es muss GtfsFrequency sein    
 Erforderliche Eigenschaften  
 - `endTime`  - `hasTrip`  - `headwaySeconds`  - `id`  - `startTime`  - `type`    
 Siehe [https://developers.google.com/transit/gtfs/reference/#frequenciestxt](https://developers.google.com/transit/gtfs/reference/#frequenciestxt)  
@@ -19,32 +19,44 @@ GtfsFrequency:
   properties:    
     alternateName:    
       description: 'An alternative name for this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateCreated:    
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     description:    
       description: 'A description of this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     endTime:    
       description: 'Same as GTFS `end_time`'    
       pattern: ^([0-3][0-9]|4[0-7]):[0-5][0-9]:[0-5][0-9]$    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     exactTimes:    
       description: 'Same as GTFS `exact_times` but encoded as a Boolean; `false`: Frequency-based trips are not exactly scheduled. `true`: Frequency-based trips are exactly scheduled'    
-      type: Property    
+      type: boolean    
       x-ngsi:    
         model: https://schema.org/Boolean    
+        type: Property    
     hasTrip:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -56,15 +68,16 @@ GtfsFrequency:
           format: uri    
           type: string    
       description: 'Trip associated to this Entity. It shall point to an Entity of Type GtfsTrip'    
-      type: Relationship    
       x-ngsi:    
         model: https://schema.org/URL    
+        type: Relationship    
     headwaySeconds:    
       description: 'Same as GTFS `headway_secs`'    
       minValue: 1    
-      type: Property    
+      type: integer    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
     id:    
       anyOf: &gtfsfrequency_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -76,16 +89,21 @@ GtfsFrequency:
           format: uri    
           type: string    
       description: 'Unique identifier of the entity'    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     name:    
       description: 'The name of this item.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *gtfsfrequency_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
@@ -96,21 +114,27 @@ GtfsFrequency:
           type: array    
         - format: uri    
           type: string    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     startTime:    
       description: 'Same as GTFS `start_time`'    
       pattern: ^([0-3][0-9]|4[0-7]):[0-5][0-9]:[0-5][0-9]$    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     type:    
       description: 'NGSI Entity type. It has to be GtfsFrequency'    
       enum:    
         - GtfsFrequency    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
   required:    
     - id    
     - type    
@@ -122,8 +146,8 @@ GtfsFrequency:
 ```  
 </details>    
 ## Beispiel-Nutzlasten  
-#### GtfsFrequency NGSI-v2 Schlüsselwerte Beispiel  
-Hier ist ein Beispiel für eine GtfsFrequency im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-v2 bei Verwendung von `options=keyValues` und liefert die Kontextdaten einer einzelnen Entität.  
+#### GtfsFrequency NGSI-v2 key-values Beispiel  
+Hier ist ein Beispiel für eine GtfsFrequency im JSON-LD-Format als Schlüsselwerte. Dies ist kompatibel mit NGSI-v2, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "urn:ngsi-ld:GtfsFrequency:Malaga:Linea1",  
@@ -137,7 +161,7 @@ GtfsFrequency:
 }  
 ```  
 #### GtfsFrequency NGSI-v2 normalisiert Beispiel  
-Hier ist ein Beispiel für eine GtfsFrequency im JSON-LD-Format wie normalisiert. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für eine GtfsFrequency im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "urn:ngsi-ld:GtfsFrequency:Malaga:Linea1",  
@@ -164,7 +188,7 @@ GtfsFrequency:
 }  
 ```  
 #### GtfsFrequency NGSI-LD Schlüsselwerte Beispiel  
-Hier ist ein Beispiel für eine GtfsFrequency im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-LD bei Verwendung von `options=keyValues` und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für eine GtfsFrequency im JSON-LD-Format als Schlüsselwerte. Dies ist kompatibel mit NGSI-LD, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "urn:ngsi-ld:GtfsFrequency:Malaga:Linea1",  
@@ -200,7 +224,7 @@ GtfsFrequency:
 }  
 ```  
 #### GtfsFrequency NGSI-LD normalisiert Beispiel  
-Hier ist ein Beispiel für eine GtfsFrequency im JSON-LD-Format wie normalisiert. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für eine GtfsFrequency im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "@context": [  
