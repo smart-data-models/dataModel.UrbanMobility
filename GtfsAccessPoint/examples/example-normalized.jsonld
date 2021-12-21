@@ -1,23 +1,22 @@
 {
-  "@context": [
-    "https://smartdatamodels.org/context.jsonld",
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
-  ],
-  "address": {
-    "addressCountry": "ES",
-    "addressLocality": "Madrid",
-    "streetAddress": "Calle de Bravo Murillo 377",
-    "type": "PostalAddress"
-  },
-  "hasParentStation": "urn:ngsi-ld:GtfsStation:Madrid:est_90_21",
-  "id": "urn:ngsi-ld:AccessPoint:Madrid:acc_4_1_3",
-  "location": {
-    "coordinates": [
-      -3.69036,
-      40.46629
-    ],
-    "type": "Point"
-  },
-  "name": "Bravo Murillo",
-  "type": "GtfsAccessPoint"
+    "id": "urn:ngsi-ld:AccessPoint:Madrid:acc_4_1_3",
+    "type": "GtfsAccessPoint",
+    "address": {
+        "addressCountry": "ES",
+        "addressLocality": "Madrid",
+        "streetAddress": "Calle de Bravo Murillo 377",
+        "type": "PostalAddress"
+    },
+    "hasParentStation": "urn:ngsi-ld:GtfsStation:Madrid:est_90_21",
+    "location": {
+        "coordinates": [
+            -3.69036,
+            40.46629
+        ],
+        "type": "Point"
+    },
+    "name": "Bravo Murillo",
+    "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ]
 }
