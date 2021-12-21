@@ -1,11 +1,10 @@
 {
-  "@context": [
-    "https://smartdatamodels.org/context.jsonld",
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
-  ],
-  "description": "Laborables",
-  "id": "urn:ngsi-ld:Service:Malaga:LAB",
-  "name": "LAB",
-  "operatedBy": "urn:ngsi-ld:GtfsAgency:Malaga_EMT",
-  "type": "GtfsService"
+    "id": "urn:ngsi-ld:Service:Malaga:LAB",
+    "type": "GtfsService",
+    "description": "Laborables",
+    "name": "LAB",
+    "operatedBy": "urn:ngsi-ld:GtfsAgency:Malaga_EMT",
+    "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ]
 }
