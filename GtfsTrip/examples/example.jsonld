@@ -1,28 +1,28 @@
 {
-  "id": "urn:ngsi-ld:GtfsTrip:Spain:Malaga:1",
-  "type": "GtfsTrip",
-  "direction": {
-    "type": "Property",
-    "value": 0
-  },
-  "headSign": {
-    "type": "Property",
-    "value": "San Andr\u00e9s"
-  },
-  "hasRoute": {
-    "type": "Relationship",
-    "object": "urn:ngsi-ld:GtfsRoute:Spain:Malaga:1"
-  },
-  "hasService": {
-    "type": "Relationship",
-    "object": "urn:ngsi-ld:GtfsService:Malaga_LAB"
-  },
-  "hasShape": {
-    "type": "Relationship",
-    "object": "urn:ngsi-ld:GtfsShape:Shape01"
-  },
-  "@context": [
-    "https://smartdatamodels.org/context.jsonld",
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
-  ]
+    "id": "urn:ngsi-ld:GtfsTrip:Spain:Malaga:1",
+    "type": "GtfsTrip",
+    "direction": {
+        "type": "Property",
+        "value": 0
+    },
+    "hasRoute": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:GtfsRoute:Spain:Malaga:1"
+    },
+    "hasService": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:GtfsService:Malaga_LAB"
+    },
+    "hasShape": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:GtfsShape:Shape01"
+    },
+    "headSign": {
+        "type": "Property",
+        "value": "San Andr\u00e9s"
+    },
+    "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"
+    ]
 }
