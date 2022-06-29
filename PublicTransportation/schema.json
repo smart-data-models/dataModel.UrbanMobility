@@ -1,0 +1,69 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "modelTags": ",
+  "$schemaVersion": "0.0.1",
+  "$id": "https://smart-data-models.github.io/dataModel.UrbanMobility/PublicTransportation/schema.json",
+  "title": "SynchroniCity - Urban mobility PublicTransportation schema",
+  "description": "A generic public transport route",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+    },
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "PublicTransportation"
+          ],
+          "description": "Property. NGSI Entity type. It has to be PublicTransportation"
+        },
+        "contractingAuthority": {
+          "type": "string",
+          "description": "Property. Name of the contracting authority of the public transportation"
+        },
+        "contractingCompany": {
+          "type": "string",
+          "description": "Property. Name of the contracting company responsible for the exploitation of the service"
+        },
+        "installationMode": {
+          "type": "string",
+          "description": "Property. Location relative to the ground reference"
+        },
+        "locationGTFS": {
+          "type": "string",
+          "description": "Property. Location of all stations from a GTFS file. Possibly replaced by location XXX"
+        },
+        "locationType": {
+          "type": "string",
+          "description": "Property. Type of location of the public transportation stations"
+        },
+        "frequency": {
+          "type": "number",
+          "description": "Property. Frequency of public transportation per hour"
+        },
+        "serviceHours": {
+          "type": "number",
+          "description": "Property. Number of hours of service per day"
+        },
+        "serviceStart": {
+          "type": "string",
+          "format": "date",
+          "description": "Property. Service start time"
+        },
+        "serviceEnd": {
+          "type": "string",
+          "format": "date",
+          "description": "Property. Service end time"
+        },
+        "wheelChairAccessible": {
+          "type": "boolean",
+          "description": "Property. PMR accessible or not"
+        }
+        
+        
+        
