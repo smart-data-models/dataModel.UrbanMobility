@@ -1,19 +1,18 @@
 {
-  "@context": [
-    "https://smartdatamodels.org/context.jsonld",
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
-  ],
-  "endDate": "2019-01-01",
-  "friday": true,
-  "hasService": "urn:ngsi-ld:GtfsService:Madrid:Hospital_1",
-  "id": "urn:ngsi-ld:CalendarRule:Madrid:Rule1267",
-  "monday": true,
-  "name": "Rule Hospital Service 1",
-  "saturday": false,
-  "startDate": "2018-01-01",
-  "sunday": false,
-  "thursday": true,
-  "tuesday": true,
-  "type": "GtfsCalendarRule",
-  "wednesday": true
+    "id": "urn:ngsi-ld:CalendarRule:Madrid:Rule1267",
+    "type": "GtfsCalendarRule",
+    "endDate": "2019-01-01",
+    "friday": true,
+    "hasService": "urn:ngsi-ld:GtfsService:Madrid:Hospital_1",
+    "monday": true,
+    "name": "Rule Hospital Service 1",
+    "saturday": false,
+    "startDate": "2018-01-01",
+    "sunday": false,
+    "thursday": true,
+    "tuesday": true,
+    "wednesday": true,
+    "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ]
 }

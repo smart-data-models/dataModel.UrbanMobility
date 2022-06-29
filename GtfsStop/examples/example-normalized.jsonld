@@ -1,18 +1,17 @@
 {
-  "@context": [
-    "https://smartdatamodels.org/context.jsonld",
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
-  ],
-  "code": "101",
-  "id": "urn:ngsi-ld:GtfsStop:Malaga_101",
-  "location": {
-    "coordinates": [
-      -4.424393,
-      36.716872
-    ],
-    "type": "Point"
-  },
-  "name": "Alameda Principal Sur",
-  "operatedBy": "urn:ngsi-ld:GtfsAgency:Malaga_EMT",
-  "type": "GtfsStop"
+    "id": "urn:ngsi-ld:GtfsStop:Malaga_101",
+    "type": "GtfsStop",
+    "code": "101",
+    "location": {
+        "coordinates": [
+            -4.424393,
+            36.716872
+        ],
+        "type": "Point"
+    },
+    "name": "Alameda Principal Sur",
+    "operatedBy": "urn:ngsi-ld:GtfsAgency:Malaga_EMT",
+    "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ]
 }
