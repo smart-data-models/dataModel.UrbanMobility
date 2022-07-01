@@ -4,6 +4,7 @@
   "$id": "https://smart-data-models.github.io/dataModel.UrbanMobility/TransitManagement/schema.json",
   "title": "Smart Data Models - TransitManagement data Model",
   "description": "A public transit system Data Model",
+  "$schemaVersion": "0.0.1",
   "type": "object",
   "allOf": [
     {
