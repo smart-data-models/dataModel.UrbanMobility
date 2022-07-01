@@ -1,0 +1,1139 @@
+{
+    "@id": "dtmi:com:ngsi-ld:TransitManagement;0",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "comment": "Smart Data Models - TransitManagement data Model adapted to DTDL from smartdatamodels.org. Source: https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/TransitManagement/schema.json",
+    "description": "A public transit system Data Model",
+    "displayName": "TransitManagement",
+    "contents": [
+        {
+            "name": "ac_available",
+            "writable": true,
+            "displayName": "ac_available",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Describes the presence of air conditioning option in the vehicle corresponding to this observation."
+        },
+        {
+            "name": "actual_trip_end_time",
+            "writable": true,
+            "displayName": "actual_trip_end_time",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "This field specifies the time at which service or trip corresponding to this observation is scheduled to end."
+        },
+        {
+            "name": "actual_trip_start_time",
+            "writable": true,
+            "displayName": "actual_trip_start_time",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "This field specifies the time at which service actually began.  This is SameAs: absolute 'time'(StopTimeEvent) in the 'arrival' field of the stop_time_update (StopTimeUpdate) message of the GTFS Realtime message-TripUpdate (https://developers.google.com/transit/gtfs-realtime/reference#message-tripupdate)"
+        },
+        {
+            "name": "agency_fare_url",
+            "writable": true,
+            "displayName": "agency_fare_url",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "URL of a web page that contains the details of the fares and also could allow to purchase tickets for that agency online. SameAs: 'agency_fare_url' field from GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)"
+        },
+        {
+            "name": "agency_id",
+            "writable": true,
+            "displayName": "agency_id",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "ID that uniquely identifies a transit agency. A transit feed may represent data from more than one agency. The agency_id is dataset unique. This field is optional for transit feeds that only contain data for a single agency. SameAs: 'agency_id' field from GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)"
+        },
+        {
+            "name": "agency_lang",
+            "writable": true,
+            "displayName": "agency_lang",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Contains a two-letter ISO 639-1 code for the primary language used by this transit agency. The language code is case-insensitive (both en and EN are accepted). SameAs: 'agency_lang' field from GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)"
+        },
+        {
+            "name": "agency_name",
+            "writable": true,
+            "displayName": "agency_name",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The agency_name field contains the full name of the transit agency. SameAs: 'agency_name' field from GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)"
+        },
+        {
+            "name": "agency_timezone",
+            "writable": true,
+            "displayName": "agency_timezone",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Timezone field contains the timezone where the transit agency is located. SameAs: 'agency_timezone' field from GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)"
+        },
+        {
+            "name": "agency_url",
+            "writable": true,
+            "displayName": "agency_url",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The agency_url field contains the URL of the transit agency. SameAs: 'agency_url' field from GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)"
+        },
+        {
+            "name": "alternateName",
+            "writable": true,
+            "displayName": "alternateName",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "An alternative name for this item"
+        },
+        {
+            "name": "areaServed",
+            "writable": true,
+            "displayName": "areaServed",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The geographic area where a service or offered item is provided"
+        },
+        {
+            "name": "arrival_time",
+            "writable": true,
+            "displayName": "arrival_time",
+            "@type": "Property",
+            "schema": "time",
+            "comment": "Specifies the arrival time at a specific stop for a specific trip on a route. Times must be eight digits in HH:MM:SS format (HH:MM:SS is also accepted, if the hour begins with 0). Note: Trips that span multiple dates will have stop times greater than 24:00:00. For example, if a trip begins at 10:30:00 p.m. and ends at 2:15:00 a.m. on the following day, the stop times would be 22:30:00 and 26:15:00. Entering those stop times as 22:30:00 and 02:15:00 would not produce the desired results. SameAs: 'arrival_tim"
+        },
+        {
+            "name": "bearing",
+            "writable": true,
+            "displayName": "bearing",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Gives the vehicle GPS angle measured in a clockwise direction from the True North. SameAs 'bearing' field from GTFS Realtime message-Position(https://developers.google.com/transit/gtfs-realtime/reference#message-position)"
+        },
+        {
+            "name": "current_status",
+            "writable": true,
+            "displayName": "current_status",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Describes the status of the vehicle w.r.t the stop corresponding to this observation ENUM: [INCOMING_AT, STOPPED_AT, IN_TRANSIT_TO]. SameAs:'current_status' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)"
+        },
+        {
+            "name": "current_stop_sequence",
+            "writable": true,
+            "displayName": "current_stop_sequence",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Gives the stop sequence index of the current stop. This is determined by considering current_status, if current_status is missing IN_TRANSIT_TO is assumed. SameAs:'current_stop_sequence' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)"
+        },
+        {
+            "name": "dataDescriptor",
+            "writable": true,
+            "displayName": "dataDescriptor",
+            "@type": "Relationship",
+            "comment": "URI pointing to the data-descriptor entity"
+        },
+        {
+            "name": "dataProvider",
+            "writable": true,
+            "displayName": "dataProvider",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters identifying the provider of the harmonised data entity."
+        },
+        {
+            "name": "dateCreated",
+            "writable": true,
+            "displayName": "dateCreated",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Entity creation timestamp. This will usually be allocated by the storage platform."
+        },
+        {
+            "name": "dateModified",
+            "writable": true,
+            "displayName": "dateModified",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Timestamp of the last modification of the entity. This will usually be allocated by the storage platform."
+        },
+        {
+            "name": "departure_time",
+            "writable": true,
+            "displayName": "departure_time",
+            "@type": "Property",
+            "schema": "time",
+            "comment": "Specifies the departure time from a specific stop for a specific trip on a route. Times must be eight digits in HH:MM:SS format (HH:MM:SS is also accepted, if the hour begins with 0). \nNote: Trips that span multiple dates will have stop times greater than 24:00:00. For example, if a trip begins at 10:30:00 p.m. and ends at 2:15:00 a.m. on the following day, the stop times would be 22:30:00 and 26:15:00. Entering those stop times as 22:30:00 and 02:15:00 would not produce the desired results. SameAs: 'depart"
+        },
+        {
+            "name": "depot_id",
+            "writable": true,
+            "displayName": "depot_id",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Describes the unique id of the bus depot corresponding to this observation."
+        },
+        {
+            "name": "depot_name",
+            "writable": true,
+            "displayName": "depot_name",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Describes the depot name of the bus depot corresponding to this observation."
+        },
+        {
+            "name": "description",
+            "writable": true,
+            "displayName": "description",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A description of this item"
+        },
+        {
+            "name": "direction_id",
+            "writable": true,
+            "displayName": "direction_id",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Indicates the direction of travel of the vehicle corresponding to this observation, can be referenced from the GTFS static feed trips.txt. SameAs: 'direction_id' field from GTFS Realtime message-TripDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)"
+        },
+        {
+            "name": "entity_id",
+            "writable": true,
+            "displayName": "entity_id",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Feed unique ID for the entity corressponding to this observation.SameAs:'entity_id' field from GTFS Realtime message-FeedEntity(https://developers.google.com/transit/gtfs-realtime/reference#message-feedentity)"
+        },
+        {
+            "name": "last_stop_arrival_time",
+            "writable": true,
+            "displayName": "last_stop_arrival_time",
+            "@type": "Property",
+            "schema": "time",
+            "comment": "Specifies the arrival time at the previous stop for a specific trip on a route. Times must be eight digits in HH:MM:SS format (H:MM:SS is also accepted, if the hour begins with 0). \nNote: Trips that span multiple dates will have stop times greater than 24:00:00. For example, if a trip begins at 10:30:00 p.m. and ends at 2:15:00 a.m. on the following day, the stop times would be 22:30:00 and 26:15:00. Entering those stop times as 22:30:00 and 02:15:00 would not produce the desired results. This is SameAs: ab"
+        },
+        {
+            "name": "last_stop_id",
+            "writable": true,
+            "displayName": "last_stop_id",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Stop ID/Stop name of the previous bus stop corresponding to the bus in this observation. SameAs: 'stop_id' field from GTFS Realtime message-VehiclePosition (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)"
+        },
+        {
+            "name": "last_tracked_time",
+            "writable": true,
+            "displayName": "last_tracked_time",
+            "@type": "Property",
+            "schema": "time",
+            "comment": "Gives the time at which the vehicle was last tracked."
+        },
+        {
+            "name": "license_plate",
+            "writable": true,
+            "displayName": "license_plate",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Gives the License Plate number of the vehicle. SameAs: 'license_plate' field from GTFS Realtime message-VehicleDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)"
+        },
+        {
+            "name": "name",
+            "writable": true,
+            "displayName": "name",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The name of this item."
+        },
+        {
+            "name": "observationDateTime",
+            "writable": true,
+            "displayName": "observationDateTime",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Last reported time of observation."
+        },
+        {
+            "name": "route_color",
+            "writable": true,
+            "displayName": "route_color",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "If assigned, this field defines a color that corresponds to a route. The color must be provided as a six-character hexadecimal number, for example, 00FFFF. If no color is specified, the default route color is white (FFFFFF). SameAs: 'route_color' field from GTFS Static Field definitions-routes.txt (https://developers.google.com/transit/gtfs/reference#routestxt)"
+        },
+        {
+            "name": "route_desc",
+            "writable": true,
+            "displayName": "route_desc",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Description of the route. This can include the entire route details including to and from destination and timing information in a text description form. SameAs: 'route_desc' field from GTFS Static Field definitions-routes.txt (https://developers.google.com/transit/gtfs/reference#routestxt)"
+        },
+        {
+            "name": "route_id",
+            "writable": true,
+            "displayName": "route_id",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Route ID assigned to the route on which the bus/vehicle corresponding to the bus in this observation is currently plying on. SameAs: 'route_id' field from GTFS Realtime message-TripDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)"
+        },
+        {
+            "name": "route_long_name",
+            "writable": true,
+            "displayName": "route_long_name",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Full name of a route. This name is more descriptive than the routeShortName and often includes the route's destination or stop. This mostly includes the to and from destination names of the route. SameAs: 'route_long_name' field from GTFS Static Field definitions-routes.txt (https://developers.google.com/transit/gtfs/reference#routestxt)"
+        },
+        {
+            "name": "route_short_name",
+            "writable": true,
+            "displayName": "route_short_name",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Short name of a route. This will often be the transit vehicle's board name like '402D',  or 'Green' that riders use to identify a route. SameAs: 'route_short_name' field from GTFS Static Field definitions-routes.txt (https://developers.google.com/transit/gtfs/reference#routestxt)"
+        },
+        {
+            "name": "route_text_color",
+            "writable": true,
+            "displayName": "route_text_color",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "This field can be used to specify a legible color to use for text drawn against a background of route_color. The color must be provided as a six-character hexadecimal number, for example, FFD700. If no color is specified, the default text color is black (000000). SameAs: 'route_text_color' field from GTFS Static Field definitions-routes.txt (https://developers.google.com/transit/gtfs/reference#routestxt)"
+        },
+        {
+            "name": "route_type",
+            "writable": true,
+            "displayName": "route_type",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Number indicating the type of transport-1 - Subway, Metro. Any underground rail system within a metropolitan area.2 - Rail. Used for intercity or long-distance travel.3 - Bus. Used for short- and long-distance bus routes. SameAs: 'route_type' field from GTFS Static Field definitions-routes.txt (https://developers.google.com/transit/gtfs/reference#routestxt)"
+        },
+        {
+            "name": "route_url",
+            "writable": true,
+            "displayName": "route_url",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Contains the URL of a web page about that particular route and is different from the agency_url. SameAs: 'route_url' field from GTFS Static Field definitions-routes.txt (https://developers.google.com/transit/gtfs/reference#routestxt)"
+        },
+        {
+            "name": "schedule_relationship",
+            "writable": true,
+            "displayName": "schedule_relationship",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Describes if the Route/Trip has been scheduled. SameAs: 'schedule_relationship' field from enumScheduleRelationship (https://developers.google.com/transit/gtfs-realtime/reference#enum-schedulerelationship-2)"
+        },
+        {
+            "name": "seating_capacity",
+            "writable": true,
+            "displayName": "seating_capacity",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Describes the passenger seating capacity of the vehicle corresponding to this observation."
+        },
+        {
+            "name": "seeAlso",
+            "writable": true,
+            "displayName": "seeAlso"
+        },
+        {
+            "name": "source",
+            "writable": true,
+            "displayName": "source",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object."
+        },
+        {
+            "name": "speed",
+            "writable": true,
+            "displayName": "speed",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Gives the Speed  of the vehicle. SameAs 'speed' field from GTFS Realtime message-Position(https://developers.google.com/transit/gtfs-realtime/reference#message-position)"
+        },
+        {
+            "name": "standing_capacity",
+            "writable": true,
+            "displayName": "standing_capacity",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Describes the passenger standing capacity of the vehicle corresponding to this observation."
+        },
+        {
+            "name": "start_date",
+            "writable": true,
+            "displayName": "start_date",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Describes the initial scheduled date of the trip corresponding to the vehicle this observation. An example format for this field - YYYYMMDD. SameAs: 'start_date' field from GTFS Realtime message-TripDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)"
+        },
+        {
+            "name": "start_time",
+            "writable": true,
+            "displayName": "start_time",
+            "@type": "Property",
+            "schema": "time",
+            "comment": "Describes the initial scheduled start time of the trip corresponding to the vehicle this observation. An example format for this field - 11:15:35 or 25:15:35. SameAs: 'start_time' field from GTFS Realtime message-TripDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)"
+        },
+        {
+            "name": "stop_code",
+            "writable": true,
+            "displayName": "stop_code",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "This field contains short text or a number that uniquely identifies the stop for passengers. Can be same as stop_id if it is for public. SameAs: 'stop_code' field from GTFS Static Field definitions-stops.txt (https://developers.google.com/transit/gtfs/reference#stopstxt)"
+        },
+        {
+            "name": "stop_desc",
+            "writable": true,
+            "displayName": "stop_desc",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "This field contains a description of a stop. SameAs: 'stop_desc' field from GTFS Static Field definitions-stops.txt (https://developers.google.com/transit/gtfs/reference#stopstxt)"
+        },
+        {
+            "name": "stop_headsign",
+            "writable": true,
+            "displayName": "stop_headsign",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "This field contains the text that appears on a sign that identifies the trip\u2019s destination to passengers. SameAs: 'stop_headsign' field from GTFS Static Field definitions-stop_times.txt (https://developers.google.com/transit/gtfs/reference#stop_timestxt)"
+        },
+        {
+            "name": "stop_id",
+            "writable": true,
+            "displayName": "stop_id",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Stop ID/Stop name of the bus stops corresponding to the bus in this observation. SameAs: 'stop_id' field from GTFS Realtime message-Vehicleposition (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)"
+        },
+        {
+            "name": "stop_name",
+            "writable": true,
+            "displayName": "stop_name",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Describes the name of the Bus Stop. SameAs: 'stop_name' field from GTFS Static Field definitions-stops.txt (https://developers.google.com/transit/gtfs/reference#stopstxt)"
+        },
+        {
+            "name": "stop_sequence",
+            "writable": true,
+            "displayName": "stop_sequence",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Indicates the stop sequence of the vehicle corresponding to this observation, can be referenced from the GTFS static feed stop_times.txt. SameAs: 'stop_sequence' field from GTFS Realtime message-StopTimeUpdate (https://developers.google.com/transit/gtfs-realtime/reference#message-stoptimeupdate)"
+        },
+        {
+            "name": "stop_url",
+            "writable": true,
+            "displayName": "stop_url",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "This field contains the URL of a web page about a particular stop and is different from the agency_url and the route_url fields. SameAs: 'stop_url' field from GTFS Static Field definitions-stops.txt (https://developers.google.com/transit/gtfs/reference#stopstxt)"
+        },
+        {
+            "name": "timestamp",
+            "writable": true,
+            "displayName": "timestamp",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Last reported time of observation from the vehicle. SameAs: 'timestamp' field from GTFS Realtime message-Vehicleposition (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)"
+        },
+        {
+            "name": "travelDistance",
+            "writable": true,
+            "displayName": "travelDistance",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "The distance between the origin bus stop and the destination bus stop or the total distance travelled corresponding to this observation."
+        },
+        {
+            "name": "travelTime",
+            "writable": true,
+            "displayName": "travelTime",
+            "@type": "Property",
+            "schema": "time",
+            "comment": "The time taken to travel between the origin bus stop and the destination bus stop corresponding to this observation in HH:MM:SS format(HH:MM:SS is also accepted, if the hour begins with 0)."
+        },
+        {
+            "name": "tripDirection",
+            "writable": true,
+            "displayName": "tripDirection",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Gives the direction in which the vehicle is travelling in ENUM[UP,DN]"
+        },
+        {
+            "name": "trip_delay",
+            "writable": true,
+            "displayName": "trip_delay",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "This can be positive and negative in seconds and shows how much the vehicle deviates from the planned one. SameAs: 'delay' field from GTFS Realtime message-StopTimeEvent (https://developers.google.com/transit/gtfs-realtime/reference#message-stoptimeevent)"
+        },
+        {
+            "name": "trip_direction",
+            "writable": true,
+            "displayName": "trip_direction",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Gives the direction in which the vehicle is travelling. SameAs: 'direction_id' field from GTFS Realtime message-TripDescriptor but is represented in the form of an ENUM[UP,DN] in place of [0,1] as seen in 'direction_id' (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)."
+        },
+        {
+            "name": "trip_id",
+            "writable": true,
+            "displayName": "trip_id",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Trip ID/Trip name allotted to the bus corresponding to this observation, in consideration to the time of the day and the direction of the trip on the given routeId. SameAs: 'trip_id' field from GTFS Realtime message-TripDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)"
+        },
+        {
+            "name": "uncertainty",
+            "writable": true,
+            "displayName": "uncertainty",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "If uncertainty is omitted, it is interpreted as unknown. To specify a completely certain prediction, set its uncertainty to 0.SameAs: 'uncertainty' field from GTFS Realtime message-StopTimeEvent (https://developers.google.com/transit/gtfs-realtime/reference#message-stoptimeevent)"
+        },
+        {
+            "name": "vehicle_id",
+            "writable": true,
+            "displayName": "vehicle_id",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Unique ID assigned to the vehicle corresponding to this observation, used in internal system identification. SameAs: 'id' field from GTFS Realtime message-VehicleDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)"
+        },
+        {
+            "name": "vehicle_label",
+            "writable": true,
+            "displayName": "vehicle_label",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "User visible label, i.e., something that must be shown to the passenger to help identify the correct vehicle. SameAs: 'label' field from GTFS Realtime message-VehicleDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "owner",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)",
+            "displayName": "owner"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "routeStopSequence",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "Gives the stop IDs/stop codes or station IDs/station codes in the right sequence for the route or line corresponding to this observation.",
+            "displayName": "routeStopSequence"
+        },
+        {
+            "@type": "object",
+            "name": "address",
+            "comment": "The mailing address",
+            "displayName": "address",
+            "fields": [
+                {
+                    "name": "addressCountry",
+                    "schema": "string"
+                },
+                {
+                    "name": "addressLocality",
+                    "schema": "string"
+                },
+                {
+                    "name": "addressRegion",
+                    "schema": "string"
+                },
+                {
+                    "name": "postOfficeBoxNumber",
+                    "schema": "string"
+                },
+                {
+                    "name": "postalCode",
+                    "schema": "string"
+                },
+                {
+                    "name": "streetAddress",
+                    "schema": "string"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "arrival",
+            "comment": "If schedule_relationship is empty or SCHEDULED, either arrival or departure must be provided within a StopTimeUpdate. SameAs: 'arrival' field from GTFS Realtime message-StopTimeUpdate (https://developers.google.com/transit/gtfs-realtime/reference#message-stoptimeupdate)",
+            "displayName": "arrival",
+            "fields": [
+                {
+                    "name": "uncertainty",
+                    "schema": "long"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "departure",
+            "comment": "If schedule_relationship is empty or SCHEDULED, either arrival or departure must be provided within a StopTimeUpdate. SameAs: 'departure' field from GTFS Realtime message-StopTimeUpdate (https://developers.google.com/transit/gtfs-realtime/reference#message-stoptimeupdate)",
+            "displayName": "departure",
+            "fields": [
+                {
+                    "name": "uncertainty",
+                    "schema": "long"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "deviceInfo",
+            "comment": "Information about the device associated with the observations.",
+            "displayName": "deviceInfo",
+            "fields": [
+                {
+                    "name": "deviceBatteryStatus",
+                    "schema": "string"
+                },
+                {
+                    "name": "deviceID",
+                    "schema": "string"
+                },
+                {
+                    "name": "deviceModel",
+                    "schema": "object"
+                },
+                {
+                    "name": "deviceName",
+                    "schema": "string"
+                },
+                {
+                    "name": "deviceSimNumber",
+                    "schema": "string"
+                },
+                {
+                    "name": "measurand",
+                    "schema": "string"
+                },
+                {
+                    "name": "rfID",
+                    "schema": "string"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "position",
+            "comment": "Describes the current position of the vehicle corresponding to this observation. SameAs:'position' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)",
+            "displayName": "position",
+            "fields": [
+                {
+                    "name": "bearing",
+                    "schema": "long"
+                },
+                {
+                    "name": "latitude",
+                    "schema": "long"
+                },
+                {
+                    "name": "longitude",
+                    "schema": "long"
+                },
+                {
+                    "name": "odometer",
+                    "schema": "long"
+                },
+                {
+                    "name": "speed",
+                    "schema": "long"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "stop_sequence_detail",
+            "comment": "Describes the stop sequence for a trip in the designated route made by the public transit vehicle.SameAs: 'stop_sequence' field from GTFS Static Field definitions-stop_times.txt (https://developers.google.com/transit/gtfs/reference#stop_timestxt)",
+            "displayName": "stop_sequence_detail",
+            "fields": [
+                {
+                    "name": "stop_id",
+                    "schema": "string"
+                },
+                {
+                    "name": "stop_sequence",
+                    "schema": "long"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "stop_time_update",
+            "comment": "Additional information on the vehicle that is serving this trip.",
+            "displayName": "stop_time_update",
+            "fields": [
+                {
+                    "name": "arrival",
+                    "schema": "object"
+                },
+                {
+                    "name": "departure",
+                    "schema": "object"
+                },
+                {
+                    "name": "schedule_relationship",
+                    "schema": "enum"
+                },
+                {
+                    "name": "stop_id",
+                    "schema": "string"
+                },
+                {
+                    "name": "stop_sequence",
+                    "schema": "long"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "trip",
+            "comment": "Describes the trip the vehicle corresponding to this observation is making. SameAs:'trip' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)(https://developers.google.com/transit/gtfs-realtime/reference#message-tripupdate)",
+            "displayName": "trip",
+            "fields": [
+                {
+                    "name": "direction_id",
+                    "schema": "long"
+                },
+                {
+                    "name": "route_id",
+                    "schema": "string"
+                },
+                {
+                    "name": "schedule_relationship",
+                    "schema": "string"
+                },
+                {
+                    "name": "start_date",
+                    "schema": "string"
+                },
+                {
+                    "name": "start_time",
+                    "schema": "string"
+                },
+                {
+                    "name": "trip_id",
+                    "schema": "string"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "tripDetails",
+            "comment": "A descriptor of realtime update on the schedule of a vehicle along a trip.",
+            "displayName": "tripDetails",
+            "fields": [
+                {
+                    "name": "arrival_time",
+                    "schema": "time"
+                },
+                {
+                    "name": "departure_time",
+                    "schema": "time"
+                },
+                {
+                    "name": "stop_headsign",
+                    "schema": "string"
+                },
+                {
+                    "name": "stop_id",
+                    "schema": "string"
+                },
+                {
+                    "name": "stop_sequence",
+                    "schema": "long"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "trip_details",
+            "comment": "A descriptor of realtime update on the schedule of a vehicle along a trip.",
+            "displayName": "trip_details",
+            "fields": []
+        },
+        {
+            "@type": "object",
+            "name": "trip_update",
+            "comment": "Describes the trip information like delay, departures, etc., for a trip made by the vehicle corresponding to this observation.SameAs:'trip_update' field from GTFS Realtime message-FeedEntity(https://developers.google.com/transit/gtfs-realtime/reference#message-feedentity).",
+            "displayName": "trip_update",
+            "fields": [
+                {
+                    "name": "stop_time_update",
+                    "schema": "object"
+                },
+                {
+                    "name": "timestamp",
+                    "schema": "dateTime"
+                },
+                {
+                    "name": "trip",
+                    "schema": "object"
+                },
+                {
+                    "name": "vehicleDesc",
+                    "schema": "object"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "vehicleDesc",
+            "comment": "Describes the additional information of the vehicle corresponding to this observation. SameAs:'vehicle' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)/(https://developers.google.com/transit/gtfs-realtime/reference#message-tripupdate)",
+            "displayName": "vehicleDesc",
+            "fields": [
+                {
+                    "name": "license_plate",
+                    "schema": "string"
+                },
+                {
+                    "name": "vehicle_id",
+                    "schema": "string"
+                },
+                {
+                    "name": "vehicle_label",
+                    "schema": "string"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "vehicle_position",
+            "comment": "Describes the realtime position of the vehicle corresponding to this observation. SameAs:'vehicle' field from GTFS Realtime message-FeedEntity(https://developers.google.com/transit/gtfs-realtime/reference#message-feedentity)",
+            "displayName": "vehicle_position",
+            "fields": [
+                {
+                    "name": "current_status",
+                    "schema": "string"
+                },
+                {
+                    "name": "current_stop_sequence",
+                    "schema": "long"
+                },
+                {
+                    "name": "position",
+                    "schema": "object"
+                },
+                {
+                    "name": "stop_id",
+                    "schema": "string"
+                },
+                {
+                    "name": "timestamp",
+                    "schema": "dateTime"
+                },
+                {
+                    "name": "trip",
+                    "schema": "object"
+                },
+                {
+                    "name": "vehicleDesc",
+                    "schema": "object"
+                }
+            ]
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_Point",
+            "schema": "point"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_LineString",
+            "schema": "lineString"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_Polygon",
+            "schema": "polygon"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiPoint",
+            "schema": "multiPoint"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiLineString",
+            "schema": "multiLineString"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiPolygon",
+            "schema": "multiPolygon"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "vehicleType",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "agriculturalVehicle",
+                        "displayName": "agriculturalVehicle",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "ambulance",
+                        "displayName": "ambulance",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "anyVehicle",
+                        "displayName": "anyVehicle",
+                        "enumValue": 3
+                    },
+                    {
+                        "name": "articulatedVehicle",
+                        "displayName": "articulatedVehicle",
+                        "enumValue": 4
+                    },
+                    {
+                        "name": "autorickshaw",
+                        "displayName": "autorickshaw",
+                        "enumValue": 5
+                    },
+                    {
+                        "name": "bicycle",
+                        "displayName": "bicycle",
+                        "enumValue": 6
+                    },
+                    {
+                        "name": "binTrolley",
+                        "displayName": "binTrolley",
+                        "enumValue": 7
+                    },
+                    {
+                        "name": "BRT mini bus\u00b7",
+                        "displayName": "BRT mini bus\u00b7",
+                        "enumValue": 8
+                    },
+                    {
+                        "name": "BRT bus",
+                        "displayName": "BRT bus",
+                        "enumValue": 9
+                    },
+                    {
+                        "name": "bus",
+                        "displayName": "bus",
+                        "enumValue": 10
+                    },
+                    {
+                        "name": "car",
+                        "displayName": "car",
+                        "enumValue": 11
+                    },
+                    {
+                        "name": "caravan",
+                        "displayName": "caravan",
+                        "enumValue": 12
+                    },
+                    {
+                        "name": "carOrLightVehicle",
+                        "displayName": "carOrLightVehicle",
+                        "enumValue": 13
+                    },
+                    {
+                        "name": "carWithCaravan",
+                        "displayName": "carWithCaravan",
+                        "enumValue": 14
+                    },
+                    {
+                        "name": "carWithTrailer",
+                        "displayName": "carWithTrailer",
+                        "enumValue": 15
+                    },
+                    {
+                        "name": "cleaningTrolley",
+                        "displayName": "cleaningTrolley",
+                        "enumValue": 16
+                    },
+                    {
+                        "name": "compactor",
+                        "displayName": "compactor",
+                        "enumValue": 17
+                    },
+                    {
+                        "name": "constructionOrMaintenanceVehicle",
+                        "displayName": "constructionOrMaintenanceVehicle",
+                        "enumValue": 18
+                    },
+                    {
+                        "name": "dumper",
+                        "displayName": "dumper",
+                        "enumValue": 19
+                    },
+                    {
+                        "name": "e-moped",
+                        "displayName": "e-moped",
+                        "enumValue": 20
+                    },
+                    {
+                        "name": "e-scooter",
+                        "displayName": "e-scooter",
+                        "enumValue": 21
+                    },
+                    {
+                        "name": "e-motorcycle",
+                        "displayName": "e-motorcycle",
+                        "enumValue": 22
+                    },
+                    {
+                        "name": "fireTender",
+                        "displayName": "fireTender",
+                        "enumValue": 23
+                    },
+                    {
+                        "name": "fourWheelDrive",
+                        "displayName": "fourWheelDrive",
+                        "enumValue": 24
+                    },
+                    {
+                        "name": "highSidedVehicle",
+                        "displayName": "highSidedVehicle",
+                        "enumValue": 25
+                    },
+                    {
+                        "name": "hopper",
+                        "displayName": "hopper",
+                        "enumValue": 26
+                    },
+                    {
+                        "name": "lorry",
+                        "displayName": "lorry",
+                        "enumValue": 27
+                    },
+                    {
+                        "name": "minibus",
+                        "displayName": "minibus",
+                        "enumValue": 28
+                    },
+                    {
+                        "name": "moped",
+                        "displayName": "moped",
+                        "enumValue": 29
+                    },
+                    {
+                        "name": "motorcycle",
+                        "displayName": "motorcycle",
+                        "enumValue": 30
+                    },
+                    {
+                        "name": "motorcycleWithSideCar",
+                        "displayName": "motorcycleWithSideCar",
+                        "enumValue": 31
+                    },
+                    {
+                        "name": "motorscooter",
+                        "displayName": "motorscooter",
+                        "enumValue": 32
+                    },
+                    {
+                        "name": "policeVan",
+                        "displayName": "policeVan",
+                        "enumValue": 33
+                    },
+                    {
+                        "name": "publicMotor",
+                        "displayName": "publicMotor",
+                        "enumValue": 34
+                    },
+                    {
+                        "name": "sweepingMachine",
+                        "displayName": "sweepingMachine",
+                        "enumValue": 35
+                    },
+                    {
+                        "name": "tanker",
+                        "displayName": "tanker",
+                        "enumValue": 36
+                    },
+                    {
+                        "name": "tempo",
+                        "displayName": "tempo",
+                        "enumValue": 37
+                    },
+                    {
+                        "name": "threeWheeledVehicle",
+                        "displayName": "threeWheeledVehicle",
+                        "enumValue": 38
+                    },
+                    {
+                        "name": "tipper",
+                        "displayName": "tipper",
+                        "enumValue": 39
+                    },
+                    {
+                        "name": "trailer",
+                        "displayName": "trailer",
+                        "enumValue": 40
+                    },
+                    {
+                        "name": "tram",
+                        "displayName": "tram",
+                        "enumValue": 41
+                    },
+                    {
+                        "name": "trolley",
+                        "displayName": "trolley",
+                        "enumValue": 42
+                    },
+                    {
+                        "name": "twoWheeledVehicle",
+                        "displayName": "twoWheeledVehicle",
+                        "enumValue": 43
+                    },
+                    {
+                        "name": "van",
+                        "displayName": "van",
+                        "enumValue": 44
+                    },
+                    {
+                        "name": "vehicleWithoutCatalyticConverter",
+                        "displayName": "vehicleWithoutCatalyticConverter",
+                        "enumValue": 45
+                    },
+                    {
+                        "name": "vehicleWithCaravan",
+                        "displayName": "vehicleWithCaravan",
+                        "enumValue": 46
+                    },
+                    {
+                        "name": "vehicleWithTrailer",
+                        "displayName": "vehicleWithTrailer",
+                        "enumValue": 47
+                    },
+                    {
+                        "name": "withEvenNumberedRegistrationPlates",
+                        "displayName": "withEvenNumberedRegistrationPlates",
+                        "enumValue": 48
+                    },
+                    {
+                        "name": "withOddNumberedRegistrationPlates",
+                        "displayName": "withOddNumberedRegistrationPlates",
+                        "enumValue": 49
+                    },
+                    {
+                        "name": "other",
+                        "displayName": "other",
+                        "enumValue": 50
+                    }
+                ]
+            }
+        }
+    ]
+}
