@@ -1,9 +1,9 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "modelTags": ",
-  "$schemaVersion": "0.0.1",
+  "modelTags": "",
+  "$schemaVersion": "0.0.2",
   "$id": "https://smart-data-models.github.io/dataModel.UrbanMobility/PublicTransportation/schema.json",
-  "title": "SynchroniCity - Urban mobility PublicTransportation schema",
+  "title": "Smart Data Models - Urban mobility PublicTransportation schema",
   "description": "A generic public transport route",
   "type": "object",
   "allOf": [
@@ -44,26 +44,66 @@
         },
         "frequency": {
           "type": "number",
-          "description": "Property. Frequency of public transportation per hour"
+          "description": "Property. Frequency of public transportation per hour. Units:'times/hour'"
         },
         "serviceHours": {
           "type": "number",
-          "description": "Property. Number of hours of service per day"
+          "description": "Property. Number of hours of service per day. Units:'Hours service / day'"
         },
         "serviceStart": {
           "type": "string",
-          "format": "date",
+          "format": "time",
           "description": "Property. Service start time"
         },
         "serviceEnd": {
           "type": "string",
-          "format": "date",
+          "format": "timee",
           "description": "Property. Service end time"
         },
         "wheelChairAccessible": {
           "type": "boolean",
           "description": "Property. PMR accessible or not"
+        },
+        "url": {
+          "$ref": "https://raw.githubusercontent.com/smart-data-models/data-models/master/common-schema.json#/Contact-Commons/contactPoint/url"
+        },
+        "telephone": {
+          "$ref": "https://raw.githubusercontent.com/smart-data-models/data-models/master/common-schema.json#/Contact-Commons/contactPoint/telephone"
+        },
+        "pricingAverage": {
+          "type": "number",
+          "description": "Property. Average price of public transportation"
+        },
+        "numberTrips": {
+          "type": "string",
+          "description": "Property. Number of daily public transportation trips"
+        },
+        "numberStations": {
+          "type": "string",
+          "description": "Property. Number of public stations"
+        },
+        "stopCode": {
+          "type": "string",
+          "description": "Property. Identifier/code of the public transport stops"
+        },
+        "typesTransportation": {
+          "type": "string",
+          "description": "Property. List of public transportation available"
+        },
+        "routes": {
+          "type": "string",
+          "description": "Property. List of routes covered with public transportation"
         }
+      }
+    }
+  ],
+  "required": [
+    "id",
+    "type"
+  ]
+}
+
+
         
         
         
