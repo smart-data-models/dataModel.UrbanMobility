@@ -1,17 +1,19 @@
-エンティティPublicTransportRoute  
-==========================  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティ公共交通機関ルート  
+===============  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/PublicTransportRoute/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな説明。**一般的な公共交通機関のルート**。  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+グローバルな記述です。**一般的な公共交通機関のルート**  
+バージョン: 0.0.1  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `address`: 郵送先住所  - `alternateName`: このアイテムの別称  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `id`: エンティティのユニークな識別子  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `name`: このアイテムの名前です。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `routeCode`: 路線のIDまたはコード（例：「HT5200104000」）。  - `routeColor`: テキストのルートに割り当てられた色  - `routeSegments`: このルートのセグメントは、その名前と停留所によって定義されています。  - `routeTextColor`: ルートに割り当てられた色を16進数で表示  - `schedule`: このルートの労働時間  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `shortRouteCode`: 路線のID/コードの短縮形(例：「5200104000」)  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `transportationType`: (https://developers.google.com/transit/gtfs/reference/#routestxt)で定義された、この停留所を利用する公共交通機関の種類。列挙:'0, 1, 2, 3, 4, 5, 6, 7'  - `type`: NGSIのEntityタイプ。これはPublicTransportRouteでなければならない。    
-必須項目  
+- `address`: 郵送先住所  - `alternateName`: この項目の別称  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `id`: エンティティの一意な識別子  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name`: このアイテムの名称です。  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリスト  - `routeCode`: 経路のIDまたはコード（例：HT5200104000）  - `routeColor`: テキスト中のルートに割り当てられた色  - `routeSegments`: このルートの区間は、名前と停留所で定義されています。  - `routeTextColor`: ルートに割り当てられた色（16進数  - `schedule`: 本航路の勤務時間  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `shortRouteCode`: 経路のID/コードの短縮形（例：5200104000）  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `transportationType`: (https://developers.google.com/transit/gtfs/reference/#routestxt)で定義される、この停留所を利用する公共交通機関の種類。Enum:'0, 1, 2, 3, 4, 5, 6, 7'.  - `type`: NGSI Entity タイプ。これは PublicTransportRoute でなければならない。    
+必要なプロパティ  
 - `id`  - `transportationType`  - `type`    
-公共交通機関のルートの汎用モデル。GTFSの定義の一部を採用していますが、GTFSの追加データとリンクする必要はありません。ルートとは、ある公共交通機関が提供する、一連の停留所を通過する旅路のことです。  
-## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます  
+公共交通機関の経路の一般的なモデル。GTFS の定義を一部採用しているが、追加の GTFS データとリンクする必要はない。ルートとは、ある公共交通機関が提供する、一連の停留所を経由する旅程のことである。  
+## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 PublicTransportRoute:    
@@ -255,7 +257,7 @@ PublicTransportRoute:
       x-ngsi:    
         type: Property    
     routeCode:    
-      description: 'ID or code of the route (e.g. ‘HT5200104000’)'    
+      description: 'ID or code of the route (e.g. HT5200104000)'    
       type: string    
       x-ngsi:    
         model: ' https://schema.org/Text.'    
@@ -278,9 +280,6 @@ PublicTransportRoute:
             type: array    
           segmentName:    
             type: string    
-        required:    
-          - segmentName    
-          - refPublicTransportStops    
         type: object    
       type: array    
       x-ngsi:    
@@ -330,7 +329,7 @@ PublicTransportRoute:
       x-ngsi:    
         type: Property    
     shortRouteCode:    
-      description: 'Shorter form of the ID/code of the route (e.g. ‘5200104000’’)'    
+      description: 'Shorter form of the ID/code of the route (e.g. 5200104000)'    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text.    
@@ -367,11 +366,17 @@ PublicTransportRoute:
     - type    
     - transportationType    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/PublicTransportRoute/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.UrbanMobility/PublicTransportRoute/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.1    
 ```  
 </details>    
 ## ペイロードの例  
-#### PublicTransportRoute NGSI-v2 のキーバリューの例。  
-ここではPublicTransportRouteをkey-valuesとしてJSON-LD形式にした例を紹介します。これは`options=keyValues`を使った場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### PublicTransportRoute NGSI-v2 key-value の例。  
+以下は、PublicTransportRouteをJSON-LD形式でkey-valuesにした例である。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N3",  
@@ -434,8 +439,8 @@ PublicTransportRoute:
   ]  
 }  
 ```  
-#### PublicTransportRoute NGSI-v2 正規化された例。  
-ここでは、PublicTransportRouteを正規化したJSON-LD形式の例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### PublicTransportRoute NGSI-v2 正規化例  
+以下は、PublicTransportRoute を JSON-LD 形式で正規化した例である。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N3",  
@@ -509,158 +514,158 @@ PublicTransportRoute:
   }  
 }  
 ```  
-#### PublicTransportRoute NGSI-LDのキーバリューの例。  
-ここではPublicTransportRouteをkey-valuesとしてJSON-LD形式にした例を紹介します。これは`options=keyValues`を使った場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### PublicTransportRoute NGSI-LD キー値例  
+以下は、PublicTransportRouteをJSON-LD形式でkey-valuesにした例である。これは `options=keyValues` を使用した場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータが返される。  
 ```json  
 {  
-  "id": "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N3",  
-  "type": "PublicTransportRoute",  
-  "source": {  
-    "type": "Text",  
-    "value": "https://api.smartsantander.eu/"  
-  },  
-  "dataProvider": {  
-    "type": "Text",  
-    "value": "http://www.smartsantander.eu/"  
-  },  
-  "routeCode": {  
-    "type": "Text",  
-    "value": "5200103000"  
-  },  
-  "shortRouteCode": {  
-    "type": "Text",  
-    "value": "N3"  
-  },  
-  "name": {  
-    "type": "Text",  
-    "value": "PE\u00d1ACASTILLO-PLAZA DE ITALIA"  
-  },  
-  "transportationType": {  
-    "type": "Number",  
-    "value": 3  
-  },  
-  "routeColor": {  
-    "type": "Text",  
-    "value": "#ff0000"  
-  },  
-  "routeTextColor": {  
-    "type": "Text",  
-    "value": "RED"  
-  },  
-  "routeSegments": {  
-    "type": "StructuredValue",  
-    "value": [  
-      {  
-        "segmentName": "PE\u00d1ACASTILLO-PLAZA DE ITALIA:1",  
-        "refPublicTransportStops": [  
-          "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:311",  
-          "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:129"  
+    "id": "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N3",  
+    "type": "PublicTransportRoute",  
+    "dataProvider": {  
+        "type": "Text",  
+        "value": "http://www.smartsantander.eu/"  
+    },  
+    "name": {  
+        "type": "Text",  
+        "value": "PE\u00d1ACASTILLO-PLAZA DE ITALIA"  
+    },  
+    "routeCode": {  
+        "type": "Text",  
+        "value": "5200103000"  
+    },  
+    "routeColor": {  
+        "type": "Text",  
+        "value": "#ff0000"  
+    },  
+    "routeSegments": {  
+        "type": "StructuredValue",  
+        "value": [  
+            {  
+                "segmentName": "PE\u00d1ACASTILLO-PLAZA DE ITALIA:1",  
+                "refPublicTransportStops": [  
+                    "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:311",  
+                    "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:129"  
+                ]  
+            },  
+            {  
+                "segmentName": "PE\u00d1ACASTILLO-PLAZA DE ITALIA:2",  
+                "refPublicTransportStops": [  
+                    "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:130",  
+                    "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:131"  
+                ]  
+            }  
         ]  
-      },  
-      {  
-        "segmentName": "PE\u00d1ACASTILLO-PLAZA DE ITALIA:2",  
-        "refPublicTransportStops": [  
-          "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:130",  
-          "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:131"  
+    },  
+    "routeTextColor": {  
+        "type": "Text",  
+        "value": "RED"  
+    },  
+    "schedule": {  
+        "type": "StructuredValue",  
+        "value": [  
+            {  
+                "validFrom": "2018-01-24",  
+                "validThrough": "2018-05-25",  
+                "opens": "09:00",  
+                "closes": "23:00"  
+            },  
+            {  
+                "dayOfWeek": "Sunday",  
+                "opens": "09:00",  
+                "closes": "14:00"  
+            }  
         ]  
-      }  
+    },  
+    "shortRouteCode": {  
+        "type": "Text",  
+        "value": "N3"  
+    },  
+    "source": {  
+        "type": "Text",  
+        "value": "https://api.smartsantander.eu/"  
+    },  
+    "transportationType": {  
+        "type": "Number",  
+        "value": 3  
+    },  
+    "@context": [  
+        "https://smart-data-models.github.io/data-models/context.jsonld",  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
     ]  
-  },  
-  "schedule": {  
-    "type": "StructuredValue",  
-    "value": [  
-      {  
-        "validFrom": "2018-01-24",  
-        "validThrough": "2018-05-25",  
-        "opens": "09:00",  
-        "closes": "23:00"  
-      },  
-      {  
-        "dayOfWeek": "Sunday",  
-        "opens": "09:00",  
-        "closes": "14:00"  
-      }  
-    ]  
-  },  
-  "@context": [  
-    "https://smart-data-models.github.io/data-models/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
 }  
 ```  
-#### PublicTransportRoute NGSI-LDの正規化例  
-ここでは、PublicTransportRouteを正規化したJSON-LD形式の例を示します。これはオプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### PublicTransportRoute NGSI-LD 正規化例  
+以下は、PublicTransportRoute を JSON-LD 形式で正規化した例である。これはオプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
-  "@context": [  
-    "https://smart-data-models.github.io/data-models/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "id": "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N3",  
-  "type": "PublicTransportRoute",  
-  "source": "https://api.smartsantander.eu/",  
-  "dataProvider": "http://www.smartsantander.eu/",  
-  "entityVersion": 2.0,  
-  "routeCode": {  
-    "type": "Property",  
-    "value": "5200103000"  
-  },  
-  "shortRouteCode": {  
-    "type": "Property",  
-    "value": "N3"  
-  },  
-  "name": {  
-    "type": "Property",  
-    "value": "PE\u00d1ACASTILLO-PLAZA DE ITALIA "  
-  },  
-  "transportationType": {  
-    "type": "Property",  
-    "value": 3  
-  },  
-  "routeColor": {  
-    "type": "Property",  
-    "value": "#ff0000"  
-  },  
-  "routeTextColor": {  
-    "type": "Property",  
-    "value": "RED"  
-  },  
-  "routeSegments": {  
-    "type": "Property",  
-    "value": [  
-      {  
-        "segmentName": "PE\u00d1ACASTILLO-PLAZA DE ITALIA:1",  
-        "refPublicTransportStops": [  
-          "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:311",  
-          "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:129"  
+    "id": "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N3",  
+    "type": "PublicTransportRoute",  
+    "dataProvider": "http://www.smartsantander.eu/",  
+    "entityVersion": 2.0,  
+    "name": {  
+        "type": "Property",  
+        "value": "PE\u00d1ACASTILLO-PLAZA DE ITALIA "  
+    },  
+    "routeCode": {  
+        "type": "Property",  
+        "value": "5200103000"  
+    },  
+    "routeColor": {  
+        "type": "Property",  
+        "value": "#ff0000"  
+    },  
+    "routeSegments": {  
+        "type": "Property",  
+        "value": [  
+            {  
+                "segmentName": "PE\u00d1ACASTILLO-PLAZA DE ITALIA:1",  
+                "refPublicTransportStops": [  
+                    "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:311",  
+                    "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:129"  
+                ]  
+            },  
+            {  
+                "segmentName": "PE\u00d1ACASTILLO-PLAZA DE ITALIA:2",  
+                "refPublicTransportStops": [  
+                    "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:130",  
+                    "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:131"  
+                ]  
+            }  
         ]  
-      },  
-      {  
-        "segmentName": "PE\u00d1ACASTILLO-PLAZA DE ITALIA:2",  
-        "refPublicTransportStops": [  
-          "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:130",  
-          "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:131"  
+    },  
+    "routeTextColor": {  
+        "type": "Property",  
+        "value": "RED"  
+    },  
+    "schedule": {  
+        "type": "Property",  
+        "value": [  
+            {  
+                "validFrom": "2018-01-24",  
+                "validThrough": "2018-05-25",  
+                "opens": "09:00",  
+                "closes": "23:00"  
+            },  
+            {  
+                "dayOfWeek": "Sunday",  
+                "opens": "09:00",  
+                "closes": "14:00"  
+            }  
         ]  
-      }  
+    },  
+    "shortRouteCode": {  
+        "type": "Property",  
+        "value": "N3"  
+    },  
+    "source": "https://api.smartsantander.eu/",  
+    "transportationType": {  
+        "type": "Property",  
+        "value": 3  
+    },  
+    "@context": [  
+        "https://smart-data-models.github.io/data-models/context.jsonld",  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
     ]  
-  },  
-  "schedule": {  
-    "type": "Property",  
-    "value": [  
-      {  
-        "validFrom": "2018-01-24",  
-        "validThrough": "2018-05-25",  
-        "opens": "09:00",  
-        "closes": "23:00"  
-      },  
-      {  
-        "dayOfWeek": "Sunday",  
-        "opens": "09:00",  
-        "closes": "14:00"  
-      }  
-    ]  
-  }  
 }  
 ```  
-
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
