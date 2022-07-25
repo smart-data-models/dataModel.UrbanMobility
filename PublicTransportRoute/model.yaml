@@ -239,7 +239,7 @@ PublicTransportRoute:
       x-ngsi:
         type: Property
     routeCode:
-      description: 'ID or code of the route (e.g. ‘HT5200104000’)'
+      description: 'ID or code of the route (e.g. HT5200104000)'
       type: string
       x-ngsi:
         model: ' https://schema.org/Text.'
@@ -262,9 +262,6 @@ PublicTransportRoute:
             type: array
           segmentName:
             type: string
-        required:
-          - segmentName
-          - refPublicTransportStops
         type: object
       type: array
       x-ngsi:
@@ -314,7 +311,7 @@ PublicTransportRoute:
       x-ngsi:
         type: Property
     shortRouteCode:
-      description: 'Shorter form of the ID/code of the route (e.g. ‘5200104000’’)'
+      description: 'Shorter form of the ID/code of the route (e.g. 5200104000)'
       type: string
       x-ngsi:
         model: https://schema.org/Text.
