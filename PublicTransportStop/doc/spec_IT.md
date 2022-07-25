@@ -1,16 +1,18 @@
-Entità: PublicTransportStop  
-===========================  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entità: Fermata del trasporto pubblico  
+======================================  
 [Licenza aperta](https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/PublicTransportStop/LICENSE.md)  
 [documento generato automaticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Descrizione globale: **Una generica fermata del trasporto pubblico**  
+versione: 0.0.1  
 
 ## Elenco delle proprietà  
 
-- `address`: L'indirizzo postale  - `alternateName`: Un nome alternativo per questa voce  - `areaServed`: L'area geografica in cui viene fornito un servizio o un articolo offerto  - `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated`: Timestamp di creazione dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `dateModified`: Timestamp dell'ultima modifica dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `description`: Una descrizione di questo articolo  - `id`: Identificatore unico dell'entità  - `location`: Riferimento Geojson all'elemento. Può essere Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name`: Il nome di questo articolo.  - `openingHoursSpecification`: Un valore strutturato che fornisce informazioni sugli orari di apertura di un luogo o di un certo servizio all'interno di un luogo  - `owner`: Una lista contenente una sequenza di caratteri codificata in JSON che si riferisce agli ID unici dei proprietari  - `peopleCount`: Stima delle persone in attesa nella fermata  - `refPeopleCountDevice`: Riferimento al [Dispositivo](https://github.com/Fiware/dataModels/blob/master/specs/Device/Device/doc/spec.md) che fornisce la stima del numero di persone.  - `refPublicTransportRoute`: Linee di trasporto pubblico che utilizzano questa fermata.  - `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `shortStopCode`: Forma abbreviata dell'identificatore/codice della fermata del trasporto pubblico  - `source`: Una sequenza di caratteri che dà la fonte originale dei dati dell'entità come URL. Si raccomanda di essere il nome di dominio completamente qualificato del fornitore di origine, o l'URL dell'oggetto di origine.  - `stopCode`: Identificatore/codice della fermata del trasporto pubblico  - `transportationType`: Tipi di trasporto pubblico che utilizzano questa fermata come definito in (https://developers.google.com/transit/gtfs/reference/#routestxt). Enum:'0, 1, 2, 3, 4, 5, 6, 7'  - `type`: Tipo di entità NGSI. Deve essere PublicTransportStop  - `wheelChairAccessible`: Uguale a GTFS `wheelchair_boarding`. Enum:'0, 1 ,2'. Riferimento in [GTFS](https://developers.google.com/transit/gtfs/reference/#stopstxt)    
+- `address`: L'indirizzo postale  - `alternateName`: Un nome alternativo per questa voce  - `areaServed`: L'area geografica in cui viene fornito il servizio o l'articolo offerto.  - `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `dateModified`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `description`: Descrizione dell'articolo  - `id`: Identificatore univoco dell'entità  - `location`: Riferimento geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  - `name`: Il nome di questo elemento.  - `openingHoursSpecification`: Un valore strutturato che fornisce informazioni sugli orari di apertura di un luogo o di un determinato servizio all'interno di un luogo.  - `owner`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `peopleCount`: Stima delle persone in attesa nella fermata  - `refPeopleCountDevice`: Riferimento al [Dispositivo](https://github.com/Fiware/dataModels/blob/master/specs/Device/Device/doc/spec.md) che fornisce una stima del numero di persone.  - `refPublicTransportRoute`: Percorsi di trasporto pubblico che utilizzano questa fermata.  - `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `shortStopCode`: Forma abbreviata dell'identificativo/codice della fermata del trasporto pubblico.  - `source`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `stopCode`: Identificatore/codice della fermata del trasporto pubblico  - `transportationType`: Tipi di trasporto pubblico che utilizzano questa fermata, come definito in (https://developers.google.com/transit/gtfs/reference/#routestxt). Enum:'0, 1, 2, 3, 4, 5, 6, 7'  - `type`: Tipo di entità NGSI. Deve essere PublicTransportStop  - `wheelChairAccessible`: Uguale a GTFS `salita_a_sedia`. Enum:'0, 1 ,2'. Riferimento in [GTFS](https://developers.google.com/transit/gtfs/reference/#stopstxt)    
 Proprietà richieste  
 - `id`  - `name`  - `transportationType`  - `type`    
-Modello generico per una fermata del trasporto pubblico. Adotta alcune definizioni GTFS, ma non ha bisogno di essere collegato a dati GTFS aggiuntivi.  
-## Descrizione del modello di dati delle proprietà  
+Modello generico per una fermata del trasporto pubblico. Adotta alcune definizioni GTFS, ma non ha bisogno di essere collegato ad altri dati GTFS.  
+## Modello di dati descrizione delle proprietà  
 Ordinati in ordine alfabetico (clicca per i dettagli)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
@@ -252,26 +254,56 @@ PublicTransportStop:
         properties:    
           closes:    
             format: time    
+            pattern: ^(2[0-3]|[01][0-9]):?([0-5][0-9]):?([0-5][0-9])(\.[0-9]*)?(Z|[+-](?:2[0-3]|[01][0-9])(?::?(?:[0-5][0-9]))?)$    
             type: string    
           dayOfWeek:    
-            enum:    
-              - Monday    
-              - Tuesday    
-              - Wednesday    
-              - Thursday    
-              - Friday    
-              - Saturday    
-              - Sunday    
-              - PublicHolidays    
+            anyOf:    
+              - description: 'Property. Array of days of the week.'    
+                enum:    
+                  - Monday    
+                  - Tuesday    
+                  - Wednesday    
+                  - Thursday    
+                  - Friday    
+                  - Saturday    
+                  - Sunday    
+                  - PublicHolidays    
+                type: string    
+              - description: 'Property. Array of days of the week.'    
+                enum:    
+                  - https://schema.org/Monday    
+                  - https://schema.org/Tuesday    
+                  - https://schema.org/Wednesday    
+                  - https://schema.org/Thursday    
+                  - https://schema.org/Friday    
+                  - https://schema.org/Saturday    
+                  - https://schema.org/Sunday    
+                  - https://schema.org/PublicHolidays    
+                type: string    
+            description: 'Property. Model:''http://schema.org/dayOfWeek''. The day of the week for which these opening hours are valid. URLs from GoodRelations (http://purl.org/goodrelations/v1) are used (for Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday plus a special entry for PublicHolidays).'    
             type: string    
           opens:    
             format: time    
+            pattern: ^(2[0-3]|[01][0-9]):?([0-5][0-9]):?([0-5][0-9])(\.[0-9]*)?(Z|[+-](?:2[0-3]|[01][0-9])(?::?(?:[0-5][0-9]))?)$    
             type: string    
           validFrom:    
-            format: date-time    
-            type: string    
+            anyOf:    
+              - description: 'Property. Model:''http://schema.org/Date.'    
+                format: date    
+                type: string    
+              - description: 'Property. Model:''http://schema.org/DateTime.'    
+                format: date-time    
+                type: string    
+            description: 'Property. The date when the item becomes valid. A date value in the form CCYY-MM-DD or a combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] in ISO 8601 date format.'    
           validThrough:    
-            format: date-time    
+            anyOf:    
+              - description: 'Property. Model:''http://schema.org/Date.'    
+                format: date    
+                type: string    
+              - description: 'Property. Model:''http://schema.org/DateTime.'    
+                format: date-time    
+                type: string    
+            description: 'Property. The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours. A date value in the form CCYY-MM-DD or a combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] in ISO 8601 date format.'    
             type: string    
       minItems: 1    
       type: array    
@@ -393,11 +425,17 @@ PublicTransportStop:
     - transportationType    
     - name    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/PublicTransportStop/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.UrbanMobility/PublicTransportStop/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.1    
 ```  
 </details>    
-## Esempio di payloads  
-#### PublicTransportStop NGSI-v2 valori chiave Esempio  
-Ecco un esempio di un PublicTransportStop in formato JSON-LD come valori chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+## Esempi di payload  
+#### PublicTransportStop Valori chiave NGSI-v2 Esempio  
+Ecco un esempio di un PublicTransportStop in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
   "id": "urn:ngsi-ld:PublicTransportStop:santander:busStop:463",  
@@ -462,7 +500,7 @@ PublicTransportStop:
 }  
 ```  
 #### PublicTransportStop NGSI-v2 normalizzato Esempio  
-Ecco un esempio di un PublicTransportStop in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
+Ecco un esempio di un PublicTransportStop in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non si utilizzano opzioni e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
   "id": "urn:ngsi-ld:PublicTransportStop:santander:busStop:463",  
@@ -613,224 +651,224 @@ PublicTransportStop:
 }  
 ```  
 #### PublicTransportStop Valori chiave NGSI-LD Esempio  
-Ecco un esempio di un PublicTransportStop in formato JSON-LD come key-values. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+Ecco un esempio di un PublicTransportStop in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:PublicTransportStop:santander:busStop:463",  
-  "type": "PublicTransportStop",  
-  "source": {  
-    "type": "Text",  
-    "value": "https://api.smartsantander.eu/"  
-  },  
-  "dataProvider": {  
-    "type": "Text",  
-    "value": "http://www.smartsantander.eu/"  
-  },  
-  "address": {  
-    "type": "StructuredValue",  
-    "value": {  
-      "streetAddress": "C/ La Pereda 14",  
-      "addressLocality": "Santander",  
-      "addressRegion": "Cantabria",  
-      "addressCountry": "Spain"  
-    }  
-  },  
-  "location": {  
-    "type": "geo:json",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        -3.804648385,  
-        43.478053126  
-      ]  
-    }  
-  },  
-  "stopCode": {  
-    "type": "Text",  
-    "value": "la_pereda_463"  
-  },  
-  "shortStopCode": {  
-    "type": "Text",  
-    "value": "463"  
-  },  
-  "name": {  
-    "type": "Text",  
-    "value": "La Pereda 14"  
-  },  
-  "wheelchairAccessible": {  
-    "type": "Number",  
-    "value": 0  
-  },  
-  "transportationType": {  
-    "type": "StructuredValue",  
-    "value": [  
-      3  
+    "id": "urn:ngsi-ld:PublicTransportStop:santander:busStop:463",  
+    "type": "PublicTransportStop",  
+    "address": {  
+        "type": "StructuredValue",  
+        "value": {  
+            "streetAddress": "C/ La Pereda 14",  
+            "addressLocality": "Santander",  
+            "addressRegion": "Cantabria",  
+            "addressCountry": "Spain"  
+        }  
+    },  
+    "dataProvider": {  
+        "type": "Text",  
+        "value": "http://www.smartsantander.eu/"  
+    },  
+    "location": {  
+        "type": "geo:json",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                -3.804648385,  
+                43.478053126  
+            ]  
+        }  
+    },  
+    "name": {  
+        "type": "Text",  
+        "value": "La Pereda 14"  
+    },  
+    "openingHoursSpecification": {  
+        "type": "StructuredValue",  
+        "value": [  
+            {  
+                "opens": {  
+                    "type": "string",  
+                    "value": "00:01"  
+                },  
+                "closes": {  
+                    "type": "string",  
+                    "value": "23:59"  
+                },  
+                "dayOfWeek": {  
+                    "type": "string",  
+                    "value": "Friday"  
+                }  
+            },  
+            {  
+                "opens": {  
+                    "type": "string",  
+                    "value": "00:01"  
+                },  
+                "closes": {  
+                    "type": "string",  
+                    "value": "23:59"  
+                },  
+                "dayOfWeek": {  
+                    "type": "string",  
+                    "value": "Monday"  
+                }  
+            },  
+            {  
+                "opens": {  
+                    "type": "string",  
+                    "value": "00:01"  
+                },  
+                "closes": {  
+                    "type": "string",  
+                    "value": "23:59"  
+                },  
+                "dayOfWeek": {  
+                    "type": "string",  
+                    "value": "Tuesday"  
+                }  
+            },  
+            {  
+                "opens": {  
+                    "type": "string",  
+                    "value": "00:01"  
+                },  
+                "closes": {  
+                    "type": "string",  
+                    "value": "23:59"  
+                },  
+                "dayOfWeek": {  
+                    "type": "string",  
+                    "value": "Thursday"  
+                }  
+            },  
+            {  
+                "opens": {  
+                    "type": "string",  
+                    "value": "00:01"  
+                },  
+                "closes": {  
+                    "type": "string",  
+                    "value": "23:59"  
+                },  
+                "dayOfWeek": {  
+                    "type": "string",  
+                    "value": "Wednesday"  
+                }  
+            }  
+        ]  
+    },  
+    "peopleCount": {  
+        "type": "Number",  
+        "value": 0  
+    },  
+    "refPeopleCountDevice": {  
+        "type": "Text",  
+        "value": "urn:ngsi-ld:PorpleCountDecice:santander:463"  
+    },  
+    "refPublicTransportRoute": {  
+        "type": "StructuredValue",  
+        "value": [  
+            "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N3",  
+            "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N4"  
+        ]  
+    },  
+    "shortStopCode": {  
+        "type": "Text",  
+        "value": "463"  
+    },  
+    "source": {  
+        "type": "Text",  
+        "value": "https://api.smartsantander.eu/"  
+    },  
+    "stopCode": {  
+        "type": "Text",  
+        "value": "la_pereda_463"  
+    },  
+    "transportationType": {  
+        "type": "StructuredValue",  
+        "value": [  
+            3  
+        ]  
+    },  
+    "wheelchairAccessible": {  
+        "type": "Number",  
+        "value": 0  
+    },  
+    "@context": [  
+        "https://smart-data-models.github.io/data-models/context.jsonld",  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
     ]  
-  },  
-  "refPublicTransportRoute": {  
-    "type": "StructuredValue",  
-    "value": [  
-      "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N3",  
-      "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N4"  
-    ]  
-  },  
-  "peopleCount": {  
-    "type": "Number",  
-    "value": 0  
-  },  
-  "refPeopleCountDevice": {  
-    "type": "Text",  
-    "value": "urn:ngsi-ld:PorpleCountDecice:santander:463"  
-  },  
-  "openingHoursSpecification": {  
-    "type": "StructuredValue",  
-    "value": [  
-      {  
-        "opens": {  
-          "type": "string",  
-          "value": "00:01"  
-        },  
-        "closes": {  
-          "type": "string",  
-          "value": "23:59"  
-        },  
-        "dayOfWeek": {  
-          "type": "string",  
-          "value": "Friday"  
-        }  
-      },  
-      {  
-        "opens": {  
-          "type": "string",  
-          "value": "00:01"  
-        },  
-        "closes": {  
-          "type": "string",  
-          "value": "23:59"  
-        },  
-        "dayOfWeek": {  
-          "type": "string",  
-          "value": "Monday"  
-        }  
-      },  
-      {  
-        "opens": {  
-          "type": "string",  
-          "value": "00:01"  
-        },  
-        "closes": {  
-          "type": "string",  
-          "value": "23:59"  
-        },  
-        "dayOfWeek": {  
-          "type": "string",  
-          "value": "Tuesday"  
-        }  
-      },  
-      {  
-        "opens": {  
-          "type": "string",  
-          "value": "00:01"  
-        },  
-        "closes": {  
-          "type": "string",  
-          "value": "23:59"  
-        },  
-        "dayOfWeek": {  
-          "type": "string",  
-          "value": "Thursday"  
-        }  
-      },  
-      {  
-        "opens": {  
-          "type": "string",  
-          "value": "00:01"  
-        },  
-        "closes": {  
-          "type": "string",  
-          "value": "23:59"  
-        },  
-        "dayOfWeek": {  
-          "type": "string",  
-          "value": "Wednesday"  
-        }  
-      }  
-    ]  
-  },  
-  "@context": [  
-    "https://smart-data-models.github.io/data-models/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
 }  
 ```  
-#### PublicTransportStop NGSI-LD normalizzato Esempio  
-Ecco un esempio di un PublicTransportStop in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
+#### PublicTransportStop Esempio normalizzato NGSI-LD  
+Ecco un esempio di un PublicTransportStop in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non si utilizzano opzioni e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
-  "@context": [  
-    "https://smart-data-models.github.io/data-models/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "id": "urn:ngsi-ld:PublicTransportStop:santander:busStop:463",  
-  "type": "PublicTransportStop",  
-  "dateModified": "2018-09-25T08:32:26.00Z",  
-  "source": "https://api.smartsantander.eu/",  
-  "dataProvider": "http://www.smartsantander.eu/",  
-  "entityVersion": 2.0,  
-  "address": {  
-    "streetAddress": "C/ La Pereda 14",  
-    "addressLocality": "Santander",  
-    "addressRegion": "Cantabria",  
-    "addressCountry": "Spain"  
-  },  
-  "location": {  
-    "type": "Point",  
-    "coordinates": [  
-      -3.804648385,  
-      43.478053126  
+    "id": "urn:ngsi-ld:PublicTransportStop:santander:busStop:463",  
+    "type": "PublicTransportStop",  
+    "address": {  
+        "streetAddress": "C/ La Pereda 14",  
+        "addressLocality": "Santander",  
+        "addressRegion": "Cantabria",  
+        "addressCountry": "Spain"  
+    },  
+    "dataProvider": "http://www.smartsantander.eu/",  
+    "dateModified": "2018-09-25T08:32:26.00Z",  
+    "entityVersion": 2.0,  
+    "location": {  
+        "type": "Point",  
+        "coordinates": [  
+            -3.804648385,  
+            43.478053126  
+        ]  
+    },  
+    "name": "La Pereda 14",  
+    "openingHoursSpecification": [  
+        {  
+            "opens": "00:01",  
+            "closes": "23:59",  
+            "dayOfWeek": "Monday"  
+        },  
+        {  
+            "opens": "00:01",  
+            "closes": "23:59",  
+            "dayOfWeek": "Tuesday"  
+        },  
+        {  
+            "opens": "00:01",  
+            "closes": "23:59",  
+            "dayOfWeek": "Wednesday"  
+        },  
+        {  
+            "opens": "00:01",  
+            "closes": "23:59",  
+            "dayOfWeek": "Thursday"  
+        },  
+        {  
+            "opens": "00:01",  
+            "closes": "23:59",  
+            "dayOfWeek": "Friday"  
+        }  
+    ],  
+    "peopleCount": 0,  
+    "refPeopleCountDevice": "urn:ngsi-ld:PorpleCountDecice:santander:463",  
+    "refPublicTransportRoute": [  
+        "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N3",  
+        "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N4"  
+    ],  
+    "shortStopCode": "463",  
+    "source": "https://api.smartsantander.eu/",  
+    "stopCode": "la_pereda_463",  
+    "transportationType": [  
+        3  
+    ],  
+    "wheelchairAccessible": 0,  
+    "@context": [  
+        "https://smart-data-models.github.io/data-models/context.jsonld",  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
     ]  
-  },  
-  "stopCode": "la_pereda_463",  
-  "shortStopCode": "463",  
-  "name": "La Pereda 14",  
-  "wheelchairAccessible": 0,  
-  "transportationType": [  
-    3  
-  ],  
-  "refPublicTransportRoute": [  
-    "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N3",  
-    "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N4"  
-  ],  
-  "peopleCount": 0,  
-  "refPeopleCountDevice": "urn:ngsi-ld:PorpleCountDecice:santander:463",  
-  "openingHoursSpecification": [  
-    {  
-      "opens": "00:01",  
-      "closes": "23:59",  
-      "dayOfWeek": "Monday"  
-    },  
-    {  
-      "opens": "00:01",  
-      "closes": "23:59",  
-      "dayOfWeek": "Tuesday"  
-    },  
-    {  
-      "opens": "00:01",  
-      "closes": "23:59",  
-      "dayOfWeek": "Wednesday"  
-    },  
-    {  
-      "opens": "00:01",  
-      "closes": "23:59",  
-      "dayOfWeek": "Thursday"  
-    },  
-    {  
-      "opens": "00:01",  
-      "closes": "23:59",  
-      "dayOfWeek": "Friday"  
-    }  
-  ]  
 }  
 ```  
-
-Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per avere una risposta su come trattare le unità di grandezza
+Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per ottenere una risposta su come gestire le unità di grandezza.  
