@@ -8,7 +8,7 @@
 
 ## プロパティ一覧  
 
-- `address`: 郵送先住所  - `alternateName`: この項目の別称  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `id`: エンティティの一意な識別子  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name`: このアイテムの名称です。  - `openingHoursSpecification`: 場所の営業時間や場所内の特定のサービスに関する情報を提供する構造化された値  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `peopleCount`: 停車中の待ち人数の推定  - `refPeopleCountDevice`: デバイス](https://github.com/Fiware/dataModels/blob/master/specs/Device/Device/doc/spec.md)が提供する人数の推定値への言及。  - `refPublicTransportRoute`: この停留所を利用する公共交通機関のルート  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `shortStopCode`: 公共交通機関の停留所の識別子／コードの短縮形  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `stopCode`: 公共交通機関の停車駅の識別子／コード  - `transportationType`: (https://developers.google.com/transit/gtfs/reference/#routestxt)で定義される、この停留所を利用する公共交通機関の種類。Enum:'0, 1, 2, 3, 4, 5, 6, 7'。  - `type`: NGSI Entity タイプ。これは PublicTransportStop でなければならない。  - `wheelChairAccessible`: GTFS の `wheelchair_boarding` と同じ。Enum:'0, 1 ,2'.GTFS](https://developers.google.com/transit/gtfs/reference/#stopstxt)で参照。    
+- `address`: 郵送先住所  - `alternateName`: この項目の別称  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `id`: エンティティの一意な識別子  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name`: このアイテムの名称です。  - `openingHoursSpecification`: ある場所の営業時間や、ある場所の中の特定のサービスに関する情報を提供する構造化された値  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `peopleCount`: 停車中の待ち人数の推定  - `refPeopleCountDevice`: デバイス](https://github.com/Fiware/dataModels/blob/master/specs/Device/Device/doc/spec.md)が提供する人数の推定値への言及。  - `refPublicTransportRoute`: この停留所を利用する公共交通機関のルート  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `shortStopCode`: 公共交通機関の停留所の識別子／コードの短縮形  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `stopCode`: 公共交通機関の停車駅の識別子／コード  - `transportationType`: (https://developers.google.com/transit/gtfs/reference/#routestxt)で定義される、この停留所を利用する公共交通機関の種類。Enum:'0, 1, 2, 3, 4, 5, 6, 7'.  - `type`: NGSI Entity タイプ。これは PublicTransportStop でなければならない。  - `wheelChairAccessible`: GTFS の `wheelchair_boarding` と同じ。Enum:'0, 1 ,2'.GTFS](https://developers.google.com/transit/gtfs/reference/#stopstxt)で参照。    
 必要なプロパティ  
 - `id`  - `name`  - `transportationType`  - `type`    
 公共交通機関の停留所の一般的なモデル。GTFSの定義を一部採用しているが、GTFSの追加データとリンクする必要はない。  
@@ -305,6 +305,7 @@ PublicTransportStop:
                 type: string    
             description: 'Property. The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours. A date value in the form CCYY-MM-DD or a combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] in ISO 8601 date format.'    
             type: string    
+        type: object    
       minItems: 1    
       type: array    
       x-ngsi:    
@@ -650,7 +651,7 @@ PublicTransportStop:
   }  
 }  
 ```  
-#### PublicTransportStop NGSI-LD key-value の例  
+#### PublicTransportStop NGSI-LD キー値例  
 以下は、PublicTransportStopをJSON-LD形式でkey-valuesにした例である。これは `options=keyValues` を使用した場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータが返される。  
 ```json  
 {  
