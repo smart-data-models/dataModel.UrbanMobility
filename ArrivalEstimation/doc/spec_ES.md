@@ -1,15 +1,17 @@
-Entidad: ArrivalEstimation  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entidad: ArrivalEstimation  
 ==========================  
 [Licencia abierta](https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/ArrivalEstimation/LICENSE.md)  
 [documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Descripción global: **Estimación de la llegada**  
+versión: 0.0.2  
 
 ## Lista de propiedades  
 
-- `alternateName`: Un nombre alternativo para este artículo  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `hasStop`: Apuntará a una entidad de tipo GtfsStop  - `hasTrip`: Viaje asociado a esta Entidad. Apuntará a una entidad de tipo GtfsTrip  - `headSign`: Contendrá el texto que aparece en un cartel que identifica el destino del viaje a los pasajeros  - `id`: Identificador único de la entidad  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `remainingDistance`: Contendrá la distancia restante (en metros) de llegada para el viaje en dirección a la parada en cuestión  - `remainingTime`: Contendrá el tiempo restante de llegada para el viaje que se dirige a la parada en cuestión. El tiempo restante se codificará como una duración ISO8601. Ej. `PT8M5S`.  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen, o la URL del objeto de origen.  - `type`: Tipo de entidad NGSI: Tiene que ser ArrivalEstimation    
+- `alternateName`: Un nombre alternativo para este artículo  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `hasStop`: Apuntará a una entidad de tipo GtfsStop  - `hasTrip`: Viaje asociado a esta Entidad. Apuntará a una entidad de tipo GtfsTrip  - `headSign`: Deberá contener el texto que aparece en un cartel que identifica el destino del viaje a los pasajeros  - `id`: Identificador único de la entidad  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `remainingDistance`: Contendrá la distancia restante (en metros) de llegada para el viaje en dirección a la parada en cuestión  - `remainingTime`: Contendrá el tiempo restante de llegada para el viaje que se dirige a la parada en cuestión. El tiempo restante se codificará como una duración ISO8601. Ej. `PT8M5S`.  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `type`: Tipo de entidad NGSI: Tiene que ser ArrivalEstimation. Enum:'ArrivalEstimation'    
 Propiedades requeridas  
 - `hasStop`  - `hasTrip`  - `headSign`  - `id`  - `remainingTime`  - `type`    
-Este tipo de entidad recoge la hora estimada de llegada de un vehículo de transporte público a una parada concreta, mientras el vehículo presta servicio en una ruta determinada.  
+Este tipo de entidad recoge la hora estimada de llegada de un vehículo de transporte público a una parada concreta, mientras el vehículo está prestando servicio en una ruta determinada.  
 ## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
 <details><summary><strong>full yaml details</strong></summary>    
@@ -137,7 +139,7 @@ ArrivalEstimation:
       x-ngsi:    
         type: Property    
     type:    
-      description: 'NGSI Entity Type: It has to be ArrivalEstimation'    
+      description: 'NGSI Entity Type: It has to be ArrivalEstimation. Enum:''ArrivalEstimation'''    
       enum:    
         - ArrivalEstimation    
       type: string    
@@ -151,6 +153,12 @@ ArrivalEstimation:
     - remainingTime    
     - headSign    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/ArrivalEstimation/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.UrbanMobility/ArrivalEstimation/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.2    
 ```  
 </details>    
 ## Ejemplo de carga útil  
@@ -196,50 +204,48 @@ ArrivalEstimation:
 Aquí hay un ejemplo de un ArrivalEstimation en formato JSON-LD como valores-clave. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:ArrivalEstimation:L5C1_Stop74_1",  
-  "type": "ArrivalEstimation",  
-  "hasTrip": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:GtfsTrip:tus:5C1"  
-  },  
-  "headSign": {  
-    "type": "Property",  
-    "value": "Plaza Italia"  
-  },  
-  "remainingTime": {  
-    "type": "Property",  
-    "value": "PT8M5S"  
-  },  
-  "hasStop": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:GtfsStop:tus:74"  
-  },  
-  "remainingDistance": {  
-    "type": "Property",  
-    "value": 1200  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:ArrivalEstimation:L5C1_Stop74_1",  
+    "type": "ArrivalEstimation",  
+    "hasStop": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:GtfsStop:tus:74"  
+    },  
+    "hasTrip": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:GtfsTrip:tus:5C1"  
+    },  
+    "headSign": {  
+        "type": "Property",  
+        "value": "Plaza Italia"  
+    },  
+    "remainingDistance": {  
+        "type": "Property",  
+        "value": 1200  
+    },  
+    "remainingTime": {  
+        "type": "Property",  
+        "value": "PT8M5S"  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
+    ]  
 }  
 ```  
 #### ArrivalEstimation NGSI-LD normalizado Ejemplo  
 Aquí hay un ejemplo de un ArrivalEstimation en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "hasStop": "urn:ngsi-ld:GtfsStop:tus:74",  
-  "hasTrip": "urn:ngsi-ld:GtfsTrip:tus:5C1",  
-  "headSign": "Plaza Italia",  
-  "id": "urn:ngsi-ld:ArrivalEstimation:L5C1_Stop74_1",  
-  "remainingDistance": 1200,  
-  "remainingTime": "PT8M5S",  
-  "type": "ArrivalEstimation"  
+    "id": "urn:ngsi-ld:ArrivalEstimation:L5C1_Stop74_1",  
+    "type": "ArrivalEstimation",  
+    "hasStop": "urn:ngsi-ld:GtfsStop:tus:74",  
+    "hasTrip": "urn:ngsi-ld:GtfsTrip:tus:5C1",  
+    "headSign": "Plaza Italia",  
+    "remainingDistance": 1200,  
+    "remainingTime": "PT8M5S",  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+    ]  
 }  
 ```  
-
-Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud
+Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud  
