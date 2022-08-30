@@ -8,7 +8,7 @@
 
 ## プロパティ一覧  
 
-- `address`: 郵送先住所  - `alternateName`: この項目の別称  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `id`: エンティティの一意な識別子  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name`: このアイテムの名称です。  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリスト  - `routeCode`: 経路のIDまたはコード（例：HT5200104000）  - `routeColor`: テキスト中のルートに割り当てられた色  - `routeSegments`: このルートの区間は、名前と停留所で定義されています。  - `routeTextColor`: ルートに割り当てられた色（16進数  - `schedule`: 本航路の勤務時間  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `shortRouteCode`: 経路のID/コードの短縮形（例：5200104000）  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `transportationType`: (https://developers.google.com/transit/gtfs/reference/#routestxt)で定義される、この停留所を利用する公共交通機関の種類。Enum:'0, 1, 2, 3, 4, 5, 6, 7'.  - `type`: NGSI Entity タイプ。これは PublicTransportRoute でなければならない。    
+- `address`: 郵送先住所  - `alternateName`: この項目の別称  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `id`: エンティティの一意な識別子  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name`: このアイテムの名称です。  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `routeCode`: 経路のIDまたはコード（例：HT5200104000）  - `routeColor`: テキスト中のルートに割り当てられた色  - `routeSegments`: このルートの区間は、名前と停留所で定義されています。  - `routeTextColor`: ルートに割り当てられた色（16進数  - `schedule`: 本航路の勤務時間  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `shortRouteCode`: 経路のID/コードの短縮形（例：5200104000）  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `transportationType`: (https://developers.google.com/transit/gtfs/reference/#routestxt)で定義される、この停留所を利用する公共交通機関の種類。Enum:'0, 1, 2, 3, 4, 5, 6, 7'.  - `type`: NGSI Entity タイプ。これは PublicTransportRoute でなければならない。    
 必要なプロパティ  
 - `id`  - `transportationType`  - `type`    
 公共交通機関の経路の一般的なモデル。GTFS の定義を一部採用しているが、追加の GTFS データとリンクする必要はない。ルートとは、ある公共交通機関が提供する、一連の停留所を経由する旅程のことである。  
@@ -311,6 +311,7 @@ PublicTransportRoute:
           opens:    
             pattern: "[0-9]{2}:[0-9]{2}"    
             type: string    
+        type: object    
       minItems: 1    
       type: array    
       x-ngsi:    
@@ -367,7 +368,7 @@ PublicTransportRoute:
     - transportationType    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/PublicTransportRoute/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.UrbanMobility/PublicTransportRoute/schema.json    
   x-model-tags: ""    
