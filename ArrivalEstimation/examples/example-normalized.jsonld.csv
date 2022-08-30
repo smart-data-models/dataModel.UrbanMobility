@@ -1,2 +1,2 @@
-"@context__0_", "@context__1_", "hasStop_", "hasTrip_", "headSign_", "id_", "remainingDistance_", "remainingTime_", "type_"
-"https://smartdatamodels.org/context.jsonld", "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld", "urn:ngsi-ld:GtfsStop:tus:74", "urn:ngsi-ld:GtfsTrip:tus:5C1", "Plaza Italia", "urn:ngsi-ld:ArrivalEstimation:L5C1_Stop74_1", "1200", "PT8M5S", "ArrivalEstimation"
+"id_", "type_", "hasStop_", "hasTrip_", "headSign_", "remainingDistance_", "remainingTime_", "@context__0_"
+"urn:ngsi-ld:ArrivalEstimation:L5C1_Stop74_1", "ArrivalEstimation", "urn:ngsi-ld:GtfsStop:tus:74", "urn:ngsi-ld:GtfsTrip:tus:5C1", "Plaza Italia", "1200", "PT8M5S", "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
