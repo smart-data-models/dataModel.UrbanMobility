@@ -1,16 +1,18 @@
-Entità: GtfsCalendarDateRule  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entità: GtfsCalendarDateRule  
 ============================  
 [Licenza aperta](https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/GtfsCalendarDateRule/LICENSE.md)  
 [documento generato automaticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Descrizione globale: **Regola della data del calendario GTFS**  
+Descrizione globale: **Regola data calendario GTFS**  
+versione: 0.0.2  
 
 ## Elenco delle proprietà  
 
-- `alternateName`: Un nome alternativo per questa voce  - `appliesOn`:  Data (nel formato YYYY-MM-DD) a cui si applica questa regola. Deve essere ottenuto dal campo GTFS `date`.  - `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated`: Timestamp di creazione dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `dateModified`: Timestamp dell'ultima modifica dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `description`: Una descrizione di questo articolo  - `exceptionType`: Uguale al campo GTFS `exception_type`. Enum:'1, 2'.  - `hasService`: Servizio a cui si applica questa regola. Derivato da `service_id`.  - `id`: Identificatore unico dell'entità  - `name`: Il nome di questo articolo.  - `owner`: Una lista contenente una sequenza di caratteri codificata in JSON che si riferisce agli ID unici dei proprietari  - `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source`: Una sequenza di caratteri che dà la fonte originale dei dati dell'entità come URL. Si raccomanda di essere il nome di dominio completamente qualificato del fornitore di origine, o l'URL dell'oggetto di origine.  - `type`: Tipo di entità NGSI: Deve essere GtfsCalendarDateRule    
+- `alternateName`: Un nome alternativo per questa voce  - `appliesOn`:  Data (nel formato AAAA-MM-GG) a cui si applica la regola. Deve essere ottenuta dal campo GTFS `date`.  - `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `dateModified`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `description`: Descrizione dell'articolo  - `exceptionType`: Come il campo `exception_type' di GTFS. Enum:'1, 2'  - `hasService`: Servizio a cui si applica questa regola. Derivato da `service_id  - `id`: Identificatore univoco dell'entità  - `name`: Il nome di questo elemento.  - `owner`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `type`: Tipo di entità NGSI: Deve essere GtfsCalendarDateRule. Enum:'GtfsCalendarDateRule'    
 Proprietà richieste  
 - `appliesOn`  - `exceptionType`  - `hasService`  - `id`  - `type`    
 Vedere [https://developers.google.com/transit/gtfs/reference/#calendar_datestxt](https://developers.google.com/transit/gtfs/reference/#calendar_datestxt)  
-## Descrizione del modello di dati delle proprietà  
+## Modello di dati descrizione delle proprietà  
 Ordinati in ordine alfabetico (clicca per i dettagli)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
@@ -119,7 +121,7 @@ GtfsCalendarDateRule:
       x-ngsi:    
         type: Property    
     type:    
-      description: 'NGSI Entity Type: It has to be GtfsCalendarDateRule'    
+      description: 'NGSI Entity Type: It has to be GtfsCalendarDateRule. Enum:''GtfsCalendarDateRule'''    
       enum:    
         - GtfsCalendarDateRule    
       type: string    
@@ -133,16 +135,16 @@ GtfsCalendarDateRule:
     - exceptionType    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/GtfsCalendarDateRule/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsCalendarDateRule/schema.json    
   x-model-tags: ""    
-  x-version: 0.0.1    
+  x-version: 0.0.2    
 ```  
 </details>    
-## Esempio di payloads  
-#### GtfsCalendarDateRule NGSI-v2 valori chiave Esempio  
-Ecco un esempio di una GtfsCalendarDateRule in formato JSON-LD come valori chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+## Esempi di payload  
+#### GtfsCalendarDateRule Valori chiave NGSI-v2 Esempio  
+Ecco un esempio di GtfsCalendarDateRule in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
   "id": "urn:ngsi-ld:CalendarDateRule:Malaga:Rule67",  
@@ -154,7 +156,7 @@ GtfsCalendarDateRule:
 }  
 ```  
 #### GtfsCalendarDateRule NGSI-v2 normalizzato Esempio  
-Ecco un esempio di un GtfsCalendarDateRule in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
+Ecco un esempio di GtfsCalendarDateRule in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non si utilizzano opzioni e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
   "id": "urn:ngsi-ld:CalendarDateRule:Malaga:Rule67",  
@@ -174,49 +176,47 @@ GtfsCalendarDateRule:
   }  
 }  
 ```  
-#### GtfsCalendarDateRule NGSI-LD valori-chiave Esempio  
-Ecco un esempio di una GtfsCalendarDateRule in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+#### GtfsCalendarDateRule Valori chiave NGSI-LD Esempio  
+Ecco un esempio di GtfsCalendarDateRule in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:CalendarDateRule:Malaga:Rule67",  
-  "type": "GtfsCalendarDateRule",  
-  "name": {  
-    "type": "Property",  
-    "value": "Rule Fair Area"  
-  },  
-  "exceptionType": {  
-    "type": "Property",  
-    "value": "1"  
-  },  
-  "hasService": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:GtfsService:Malaga:FairArea_1"  
-  },  
-  "appliesOn": {  
-    "type": "Property",  
-    "value": "2018-03-19"  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:CalendarDateRule:Malaga:Rule67",  
+    "type": "GtfsCalendarDateRule",  
+    "appliesOn": {  
+        "type": "Property",  
+        "value": "2018-03-19"  
+    },  
+    "exceptionType": {  
+        "type": "Property",  
+        "value": "1"  
+    },  
+    "hasService": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:GtfsService:Malaga:FairArea_1"  
+    },  
+    "name": {  
+        "type": "Property",  
+        "value": "Rule Fair Area"  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
+    ]  
 }  
 ```  
-#### GtfsCalendarDateRule NGSI-LD normalizzato Esempio  
-Ecco un esempio di un GtfsCalendarDateRule in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
+#### GtfsCalendarDateRule Esempio normalizzato NGSI-LD  
+Ecco un esempio di GtfsCalendarDateRule in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non si utilizzano opzioni e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "appliesOn": "2018-03-19",  
-  "exceptionType": "1",  
-  "hasService": "urn:ngsi-ld:GtfsService:Malaga:FairArea_1",  
-  "id": "urn:ngsi-ld:CalendarDateRule:Malaga:Rule67",  
-  "name": "Rule Fair Area",  
-  "type": "GtfsCalendarDateRule"  
+    "id": "urn:ngsi-ld:CalendarDateRule:Malaga:Rule67",  
+    "type": "GtfsCalendarDateRule",  
+    "appliesOn": "2018-03-19",  
+    "exceptionType": "1",  
+    "hasService": "urn:ngsi-ld:GtfsService:Malaga:FairArea_1",  
+    "name": "Rule Fair Area",  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+    ]  
 }  
 ```  
-
-Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per avere una risposta su come trattare le unità di grandezza
+Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per ottenere una risposta su come gestire le unità di grandezza.  
