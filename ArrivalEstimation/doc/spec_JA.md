@@ -1,17 +1,19 @@
-エンティティアライバルエスティメーション  
-====================  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティ到着予測  
+==========  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/ArrivalEstimation/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな記述です。**到着予定時刻**の表示  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+グローバルな記述です。**到着予測**」。  
+バージョン: 0.0.2  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `alternateName`: このアイテムの別称  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `hasStop`: タイプGtfsStopのEntityを指していること。  - `hasTrip`: このEntityに関連付けられたTrip。GtfsTripタイプのEntityを指すものとする。  - `headSign`: 旅の目的地を乗客に知らせる標識に表示される文字を含むこと。  - `id`: エンティティのユニークな識別子  - `name`: このアイテムの名前です。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `remainingDistance`: 当該停留所に向かう旅行の到着までの残りの距離（メートル）が含まれていること。  - `remainingTime`: 当該停留所に向かう旅行の到着までの残り時間を含むものとする。残り時間は、ISO8601のデュレーションとしてエンコードしなければならない。例：`PT8M5S`.  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: NGSI Entity Typeです。ArrivalEstimationでなければなりません。    
-必須項目  
+- `alternateName`: この項目の別称  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `hasStop`: GtfsStop 型のエンティティを指すものとする。  - `hasTrip`: このEntityに関連付けられたTrip。GtfsTrip 型の Entity を指すものとする。  - `headSign`: 旅客に対して旅行の目的地を示す標識に表示される文章を含むこと。  - `id`: エンティティの一意な識別子  - `name`: このアイテムの名称です。  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `remainingDistance`: 当該停留所に向かう旅行の残り到着距離（メートル）を記載すること。  - `remainingTime`: (2)残り時間 (3)残り時間：当該停留所に向かう旅行の残り時間を含む。残り時間は ISO8601 のデュレーションとしてエンコードされなければならない。例：`PT8M5S`。  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: NGSI Entity Typeです。ArrivalEstimationでなければならない。Enum:'ArrivalEstimation'（到着予測）。    
+必要なプロパティ  
 - `hasStop`  - `hasTrip`  - `headSign`  - `id`  - `remainingTime`  - `type`    
-このエンティティタイプは、公共交通機関の車両が特定のルートでサービスを提供している間に、特定の停留所に到着する推定到着時間を記録します。  
-## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます  
+このエンティティタイプは、公共交通機関が特定のルートを運行している間に、特定の停留所に到着する予定時刻を取得する。  
+## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 ArrivalEstimation:    
@@ -137,7 +139,7 @@ ArrivalEstimation:
       x-ngsi:    
         type: Property    
     type:    
-      description: 'NGSI Entity Type: It has to be ArrivalEstimation'    
+      description: 'NGSI Entity Type: It has to be ArrivalEstimation. Enum:''ArrivalEstimation'''    
       enum:    
         - ArrivalEstimation    
       type: string    
@@ -151,11 +153,17 @@ ArrivalEstimation:
     - remainingTime    
     - headSign    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/ArrivalEstimation/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.UrbanMobility/ArrivalEstimation/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.2    
 ```  
 </details>    
 ## ペイロードの例  
-#### ArrivalEstimation NGSI-v2 key-valuesの例。  
-ArrivalEstimationをkey-valuesとしてJSON-LD形式で出力した例です。これは`options=keyValues`を使った場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### ArrivalEstimation NGSI-v2 key-value 例  
+以下は、ArrivalEstimationをJSON-LD形式でkey-valuesにした例である。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータが返される。  
 ```json  
 {  
   "id": "urn:ngsi-ld:ArrivalEstimation:L5C1_Stop74_1",  
@@ -167,8 +175,8 @@ ArrivalEstimation:
   "headSign": "Plaza Italia"  
 }  
 ```  
-#### ArrivalEstimation NGSI-v2の正規化例  
-ここでは、正規化されたJSON-LD形式のArrivalEstimationの例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### 到着推定 NGSI-v2 正規化例  
+以下は、ArrivalEstimation を JSON-LD 形式で正規化した例である。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "urn:ngsi-ld:ArrivalEstimation:L5C1_Stop74_1",  
@@ -192,54 +200,52 @@ ArrivalEstimation:
   }  
 }  
 ```  
-#### ArrivalEstimation NGSI-LD key-valuesの例。  
-ArrivalEstimationをkey-valuesとしてJSON-LD形式で出力した例です。これは`options=keyValues`を使用した場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### 到着予測 NGSI-LD キー値例  
+以下は、ArrivalEstimationをJSON-LD形式でkey-valuesにした例である。これは、`options=keyValues`を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返す。  
 ```json  
 {  
-  "id": "urn:ngsi-ld:ArrivalEstimation:L5C1_Stop74_1",  
-  "type": "ArrivalEstimation",  
-  "hasTrip": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:GtfsTrip:tus:5C1"  
-  },  
-  "headSign": {  
-    "type": "Property",  
-    "value": "Plaza Italia"  
-  },  
-  "remainingTime": {  
-    "type": "Property",  
-    "value": "PT8M5S"  
-  },  
-  "hasStop": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:GtfsStop:tus:74"  
-  },  
-  "remainingDistance": {  
-    "type": "Property",  
-    "value": 1200  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:ArrivalEstimation:L5C1_Stop74_1",  
+    "type": "ArrivalEstimation",  
+    "hasStop": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:GtfsStop:tus:74"  
+    },  
+    "hasTrip": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:GtfsTrip:tus:5C1"  
+    },  
+    "headSign": {  
+        "type": "Property",  
+        "value": "Plaza Italia"  
+    },  
+    "remainingDistance": {  
+        "type": "Property",  
+        "value": 1200  
+    },  
+    "remainingTime": {  
+        "type": "Property",  
+        "value": "PT8M5S"  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
+    ]  
 }  
 ```  
-#### ArrivalEstimation NGSI-LDの正規化例  
-ここでは、正規化されたJSON-LD形式のArrivalEstimationの例を示します。これはオプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### 到着予測 NGSI-LD 正規化例  
+以下は、ArrivalEstimation を JSON-LD 形式で正規化した例である。これはオプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "hasStop": "urn:ngsi-ld:GtfsStop:tus:74",  
-  "hasTrip": "urn:ngsi-ld:GtfsTrip:tus:5C1",  
-  "headSign": "Plaza Italia",  
-  "id": "urn:ngsi-ld:ArrivalEstimation:L5C1_Stop74_1",  
-  "remainingDistance": 1200,  
-  "remainingTime": "PT8M5S",  
-  "type": "ArrivalEstimation"  
+    "id": "urn:ngsi-ld:ArrivalEstimation:L5C1_Stop74_1",  
+    "type": "ArrivalEstimation",  
+    "hasStop": "urn:ngsi-ld:GtfsStop:tus:74",  
+    "hasTrip": "urn:ngsi-ld:GtfsTrip:tus:5C1",  
+    "headSign": "Plaza Italia",  
+    "remainingDistance": 1200,  
+    "remainingTime": "PT8M5S",  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+    ]  
 }  
 ```  
-
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
