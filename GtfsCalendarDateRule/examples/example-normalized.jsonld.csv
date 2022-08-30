@@ -1,2 +1,2 @@
-"@context__0_", "@context__1_", "appliesOn_", "exceptionType_", "hasService_", "id_", "name_", "type_"
-"https://smartdatamodels.org/context.jsonld", "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld", "2018-03-19", "1", "urn:ngsi-ld:GtfsService:Malaga:FairArea_1", "urn:ngsi-ld:CalendarDateRule:Malaga:Rule67", "Rule Fair Area", "GtfsCalendarDateRule"
+"id_", "type_", "appliesOn_", "exceptionType_", "hasService_", "name_", "@context__0_"
+"urn:ngsi-ld:CalendarDateRule:Malaga:Rule67", "GtfsCalendarDateRule", "2018-03-19", "1", "urn:ngsi-ld:GtfsService:Malaga:FairArea_1", "Rule Fair Area", "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
