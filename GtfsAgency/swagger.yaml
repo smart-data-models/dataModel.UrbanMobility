@@ -1,5 +1,5 @@
 ---
-# Copyleft (c) 2021 Contributors to Smart Data Models initiative
+# Copyleft (c) 2022 Contributors to Smart Data Models initiative
 # 
 
 
@@ -11,7 +11,7 @@ info:
   description:  |
     GTFS Agency
   title: GtfsAgency
-  version: "1.0.0"
+  version: "0.0.2"
 openapi: "3.0.0"
 
 paths: 

@@ -1,12 +1,14 @@
-Entidad: GtfsAgency  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entidad: GtfsAgency  
 ===================  
 [Licencia abierta](https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/GtfsAgency/LICENSE.md)  
 [documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Descripción global: **Agencia GTFS**  
+versión: 0.0.2  
 
 ## Lista de propiedades  
 
-- `addressCountry`: El país. Por ejemplo, España  - `addressLocality`: La localidad en la que se encuentra la dirección, y que está en la región  - `addressRegion`: La región en la que se encuentra la localidad, y que está en el país  - `agencyName`: Igual que GTFS `nombre_de_agencia`.  - `alternateName`: Un nombre alternativo para este artículo  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `entitySource`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Deberá apuntar a la URL de la fuente GTFS original utilizada para generar esta Entidad.  - `id`: Identificador único de la entidad  - `language`: Igual que GTFS `agency_language`. Véase [GTFS](https://developers.google.com/transit/gtfs/reference/#agencytxt)  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `page`: Igual que GTFS `stop_url`  - `phone`: Igual que el GFTS `agency_phone`.  - `postOfficeBoxNumber`: El número del apartado de correos para las direcciones de los apartados postales. Por ejemplo, 03578  - `postalCode`: El código postal. Por ejemplo, 24004  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `streetAddress`: La dirección de la calle  - `timezone`: Igual que GTFS `agency_timezone`. Véase [GTFS](https://developers.google.com/transit/gtfs/reference/#agencytxt)  - `type`: Tipo de entidad NGSI: Tiene que ser GtfsAgency    
+- `addressCountry`: El país. Por ejemplo, España  - `addressLocality`: La localidad en la que se encuentra la dirección, y que está en la región  - `addressRegion`: La región en la que se encuentra la localidad, y que está en el país  - `agencyName`: Igual que GTFS `nombre_de_agencia`.  - `alternateName`: Un nombre alternativo para este artículo  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `entitySource`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Deberá apuntar a la URL de la fuente GTFS original utilizada para generar esta Entidad.  - `id`: Identificador único de la entidad  - `language`: Igual que GTFS `agency_language`. Véase [GTFS](https://developers.google.com/transit/gtfs/reference/#agencytxt)  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `page`: Igual que GTFS `stop_url`  - `phone`: Igual que el GFTS `agency_phone`.  - `postOfficeBoxNumber`: El número del apartado de correos para las direcciones de los apartados postales. Por ejemplo, 03578  - `postalCode`: El código postal. Por ejemplo, 24004  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `streetAddress`: La dirección de la calle  - `timezone`: Igual que GTFS `agency_timezone`. Véase [GTFS](https://developers.google.com/transit/gtfs/reference/#agencytxt)  - `type`: Tipo de entidad NGSI: Tiene que ser GtfsAgency. Enum:'GtfsAgency'    
 Propiedades requeridas  
 - `agencyName`  - `id`  - `source`  - `type`    
 Véase [https://developers.google.com/transit/gtfs/reference/#agencytxt](https://developers.google.com/transit/gtfs/reference/#agencytxt)  
@@ -162,7 +164,7 @@ GtfsAgency:
         model: https://schema.org/Text    
         type: Property    
     type:    
-      description: 'NGSI Entity Type: It has to be GtfsAgency'    
+      description: 'NGSI Entity Type: It has to be GtfsAgency. Enum:''GtfsAgency'''    
       enum:    
         - GtfsAgency    
       type: string    
@@ -174,6 +176,12 @@ GtfsAgency:
     - agencyName    
     - source    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/GtfsAgency/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModels.UrbanMobility/GtfsAgency/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.2    
 ```  
 </details>    
 ## Ejemplo de carga útil  
@@ -191,7 +199,7 @@ GtfsAgency:
 }  
 ```  
 #### GtfsAgency NGSI-v2 normalizado Ejemplo  
-Este es un ejemplo de un GtfsAgency en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+Aquí hay un ejemplo de un GtfsAgency en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
   "id": "urn:ngsi-ld:GtfsAgency:Malaga_EMT",  
@@ -217,50 +225,48 @@ GtfsAgency:
 Aquí hay un ejemplo de un GtfsAgency en formato JSON-LD como valores-clave. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:GtfsAgency:Malaga_EMT",  
-  "type": "GtfsAgency",  
-  "agencyName": {  
-    "type": "Property",  
-    "value": "Empresa Malague\u00f1a de Transportes"  
-  },  
-  "language": {  
-    "type": "Property",  
-    "value": "ES"  
-  },  
-  "page": {  
-    "type": "Property",  
-    "value": "http://www.emtmalaga.es/"  
-  },  
-  "source": {  
-    "type": "Property",  
-    "value": "http://datosabiertos.malaga.eu/dataset/lineas-y-horarios-bus-google-transit/resource/24e86888-b91e-45bf-a48c-09855832fd52"  
-  },  
-  "timezone": {  
-    "type": "Property",  
-    "value": "Europe/Madrid"  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:GtfsAgency:Malaga_EMT",  
+    "type": "GtfsAgency",  
+    "agencyName": {  
+        "type": "Property",  
+        "value": "Empresa Malague\u00f1a de Transportes"  
+    },  
+    "language": {  
+        "type": "Property",  
+        "value": "ES"  
+    },  
+    "page": {  
+        "type": "Property",  
+        "value": "http://www.emtmalaga.es/"  
+    },  
+    "source": {  
+        "type": "Property",  
+        "value": "http://datosabiertos.malaga.eu/dataset/lineas-y-horarios-bus-google-transit/resource/24e86888-b91e-45bf-a48c-09855832fd52"  
+    },  
+    "timezone": {  
+        "type": "Property",  
+        "value": "Europe/Madrid"  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
+    ]  
 }  
 ```  
 #### GtfsAgency NGSI-LD normalizado Ejemplo  
 Este es un ejemplo de un GtfsAgency en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "id": "urn:ngsi-ld:GtfsAgency:Malaga_EMT",  
-  "language": "ES",  
-  "agencyName": "Empresa Malague\u00f1a de Transportes",  
-  "page": "http://www.emtmalaga.es/",  
-  "source": "http://datosabiertos.malaga.eu/dataset/lineas-y-horarios-bus-google-transit/resource/24e86888-b91e-45bf-a48c-09855832fd52",  
-  "timezone": "Europe/Madrid",  
-  "type": "GtfsAgency"  
+    "id": "urn:ngsi-ld:GtfsAgency:Malaga_EMT",  
+    "type": "GtfsAgency",  
+    "agencyName": "Empresa Malague\u00f1a de Transportes",  
+    "language": "ES",  
+    "page": "http://www.emtmalaga.es/",  
+    "source": "http://datosabiertos.malaga.eu/dataset/lineas-y-horarios-bus-google-transit/resource/24e86888-b91e-45bf-a48c-09855832fd52",  
+    "timezone": "Europe/Madrid",  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+    ]  
 }  
 ```  
-
-Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud
+Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud  

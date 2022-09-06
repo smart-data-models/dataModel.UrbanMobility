@@ -763,7 +763,20 @@
             "name": "trip_details",
             "comment": "A descriptor of realtime update on the schedule of a vehicle along a trip.",
             "displayName": "trip_details",
-            "fields": []
+            "fields": [
+                {
+                    "name": "bearing",
+                    "schema": "long"
+                },
+                {
+                    "name": "odometer",
+                    "schema": "long"
+                },
+                {
+                    "name": "speed",
+                    "schema": "long"
+                }
+            ]
         },
         {
             "@type": "object",

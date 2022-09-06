@@ -1,17 +1,19 @@
-エンティティGtfsCalendarRule  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティGtfsCalendarRule  
 ======================  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/GtfsCalendarRule/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな説明。**スマートデータモデル。GTFSのカレンダールール**について  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+グローバルな記述。**スマートデータモデル。GTFS カレンダールール**。  
+バージョン: 0.0.1  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `alternateName`: このアイテムの別称  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `endDate`: このルールの終了日を `YYYY-MM-DD` 形式で表します。これは[calendar.txt](https://developers.google.com/transit/gtfs/reference/#calendartxt)のフィールド`end_date`から取得できます。  - `friday`: GTFSの「金曜日」と同じです。  - `hasService`: このルールが適用されるサービスservice_id`から派生したものです。  - `id`: エンティティのユニークな識別子  - `monday`: GTFSと同じ `monday` です。  - `name`: このアイテムの名前です。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `saturday`: GTFSと同じ `saturday` です。  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `startDate`: このルールの開始日を `YYYY-MM-DD` 形式で表します。これは、[calendar.txt](https://developers.google.com/transit/gtfs/reference/#calendartxt)のフィールド `start_date` から取得できます。  - `sunday`: GTFSの`sunday`と同じ  - `thursday`: GTFS `thursday`と同じ  - `tuesday`: GTFSと同じ `tuesday` です。  - `type`: NGSI Entity Typeです。GtfsCalendarRuleである必要があります。  - `wednesday`: GTFSと同じ `wednesday` です。    
-必須項目  
+- `alternateName`: この項目の別称  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `endDate`: このルールの終了日を `YYYY-MM-DD` フォーマットで指定します。カレンダー.txt](https://developers.google.com/transit/gtfs/reference/#calendartxt)のフィールド `end_date` から取得することができる。  - `friday`: GTFS `friday` と同じ。  - `hasService`: このルールが適用されるサービス。service_id` から派生したものです。  - `id`: エンティティの一意な識別子  - `monday`: GTFS `monday` と同じ。  - `name`: このアイテムの名称です。  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `saturday`: GTFS `saturday` と同じ。  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `startDate`: このルールの開始日を `YYYY-MM-DD` フォーマットで指定する。この日付は [calendar.txt](https://developers.google.com/transit/gtfs/reference/#calendartxt) のフィールド `start_date` から取得できます。  - `sunday`: GTFS `sunday` と同じ。  - `thursday`: GTFS `thursday` と同じ。  - `tuesday`: GTFS `tuesday` と同じ。  - `type`: NGSI エンティティタイプ。GtfsCalendarRuleである必要があります。  - `wednesday`: GTFS `wednesday` と同じ。    
+必要なプロパティ  
 - `endDate`  - `friday`  - `hasService`  - `id`  - `monday`  - `saturday`  - `startDate`  - `sunday`  - `thursday`  - `tuesday`  - `type`  - `wednesday`    
-https://developers.google.com/transit/gtfs/reference/#calendartxt](https://developers.google.com/transit/gtfs/reference/#calendartxt)をご覧ください。  
-## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます  
+参照[https://developers.google.com/transit/gtfs/reference/#calendartxt](https://developers.google.com/transit/gtfs/reference/#calendartxt)  
+## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 GtfsCalendarRule:    
@@ -179,11 +181,17 @@ GtfsCalendarRule:
     - startDate    
     - endDate    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/GtfsCalendarRule/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsCalendarRule/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.1    
 ```  
 </details>    
 ## ペイロードの例  
-#### GtfsCalendarRule NGSI-v2 key-values の例。  
-GtfsCalendarRuleをkey-valuesとしてJSON-LD形式で記述した例を示します。これは、`options=keyValues`を使った場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### GtfsCalendarRule NGSI-v2 key-value 例  
+GtfsCalendarRuleをJSON-LD形式でkey-valuesにした例です。これは、`options=keyValues`を使用した場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "urn:ngsi-ld:CalendarRule:Madrid:Rule1267",  
@@ -201,8 +209,8 @@ GtfsCalendarRule:
   "endDate": "2019-01-01"  
 }  
 ```  
-#### GtfsCalendarRule NGSI-v2規格化例  
-正規化されたJSON-LD形式のGtfsCalendarRuleの例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### GtfsCalendarRule NGSI-v2 正規化例  
+GtfsCalendarRuleをJSON-LD形式で正規化した例です。これはオプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "urn:ngsi-ld:CalendarRule:Madrid:Rule1267",  
@@ -253,90 +261,88 @@ GtfsCalendarRule:
   }  
 }  
 ```  
-#### GtfsCalendarRule NGSI-LD のキーバリューの例。  
-GtfsCalendarRuleをkey-valuesとしてJSON-LD形式で記述した例です。これは、`options=keyValues`を使った場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### GtfsCalendarRule NGSI-LD キーバリュー例  
+GtfsCalendarRuleをJSON-LD形式でkey-valuesにした例です。これは、`options=keyValues`を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
-  "id": "urn:ngsi-ld:CalendarRule:Madrid:Rule1267",  
-  "type": "GtfsCalendarRule",  
-  "startDate": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "Date",  
-      "@value": "2018-01-01"  
-    }  
-  },  
-  "endDate": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "Date",  
-      "@value": "2019-01-01"  
-    }  
-  },  
-  "name": {  
-    "type": "Property",  
-    "value": "Rule Hospital Service 1"  
-  },  
-  "monday": {  
-    "type": "Property",  
-    "value": true  
-  },  
-  "tuesday": {  
-    "type": "Property",  
-    "value": true  
-  },  
-  "friday": {  
-    "type": "Property",  
-    "value": true  
-  },  
-  "wednesday": {  
-    "type": "Property",  
-    "value": true  
-  },  
-  "thursday": {  
-    "type": "Property",  
-    "value": true  
-  },  
-  "sunday": {  
-    "type": "Property",  
-    "value": false  
-  },  
-  "hasService": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:GtfsService:Madrid:Hospital_1"  
-  },  
-  "saturday": {  
-    "type": "Property",  
-    "value": false  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:CalendarRule:Madrid:Rule1267",  
+    "type": "GtfsCalendarRule",  
+    "endDate": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "Date",  
+            "@value": "2019-01-01"  
+        }  
+    },  
+    "friday": {  
+        "type": "Property",  
+        "value": true  
+    },  
+    "hasService": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:GtfsService:Madrid:Hospital_1"  
+    },  
+    "monday": {  
+        "type": "Property",  
+        "value": true  
+    },  
+    "name": {  
+        "type": "Property",  
+        "value": "Rule Hospital Service 1"  
+    },  
+    "saturday": {  
+        "type": "Property",  
+        "value": false  
+    },  
+    "startDate": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "Date",  
+            "@value": "2018-01-01"  
+        }  
+    },  
+    "sunday": {  
+        "type": "Property",  
+        "value": false  
+    },  
+    "thursday": {  
+        "type": "Property",  
+        "value": true  
+    },  
+    "tuesday": {  
+        "type": "Property",  
+        "value": true  
+    },  
+    "wednesday": {  
+        "type": "Property",  
+        "value": true  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
+    ]  
 }  
 ```  
-#### GtfsCalendarRule NGSI-LD 正規化された例。  
-正規化されたJSON-LD形式のGtfsCalendarRuleの例を示します。これは、オプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### GtfsCalendarRule NGSI-LD 正規化例  
+GtfsCalendarRuleをJSON-LD形式で正規化した例です。これはオプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "endDate": "2019-01-01",  
-  "friday": true,  
-  "hasService": "urn:ngsi-ld:GtfsService:Madrid:Hospital_1",  
-  "id": "urn:ngsi-ld:CalendarRule:Madrid:Rule1267",  
-  "monday": true,  
-  "name": "Rule Hospital Service 1",  
-  "saturday": false,  
-  "startDate": "2018-01-01",  
-  "sunday": false,  
-  "thursday": true,  
-  "tuesday": true,  
-  "type": "GtfsCalendarRule",  
-  "wednesday": true  
+    "id": "urn:ngsi-ld:CalendarRule:Madrid:Rule1267",  
+    "type": "GtfsCalendarRule",  
+    "endDate": "2019-01-01",  
+    "friday": true,  
+    "hasService": "urn:ngsi-ld:GtfsService:Madrid:Hospital_1",  
+    "monday": true,  
+    "name": "Rule Hospital Service 1",  
+    "saturday": false,  
+    "startDate": "2018-01-01",  
+    "sunday": false,  
+    "thursday": true,  
+    "tuesday": true,  
+    "wednesday": true,  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+    ]  
 }  
 ```  
-
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  

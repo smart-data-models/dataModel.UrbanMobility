@@ -121,7 +121,7 @@ ArrivalEstimation:
       x-ngsi:
         type: Property
     type:
-      description: 'NGSI Entity Type: It has to be ArrivalEstimation'
+      description: 'NGSI Entity Type: It has to be ArrivalEstimation. Enum:''ArrivalEstimation'''
       enum:
         - ArrivalEstimation
       type: string
@@ -136,8 +136,8 @@ ArrivalEstimation:
     - headSign
   type: object
   x-derived-from: ""
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
   x-license-url: https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/ArrivalEstimation/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.UrbanMobility/ArrivalEstimation/schema.json
   x-model-tags: ""
-  x-version: 0.0.1
+  x-version: 0.0.2
