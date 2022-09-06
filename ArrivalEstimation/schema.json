@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$schemaVersion": "0.0.2",
+  "$schemaVersion": "0.0.3",
   "modelTags": "",
   "$id": "https://smart-data-models.github.io/dataModel.UrbanMobility/ArrivalEstimation/schema.json",
   "title": "NGSI GTFS Schema",
@@ -29,7 +29,7 @@
         },
         "remainingDistance": {
           "type": "number",
-          "minValue": 0,
+          "minimum": 0,
           "description": "Property. It shall contain the remaining distance (in meters) of arrival for the trip heading to the concerned stop. Model:'https://schema.org/Number'. Units:'Meters'"
         },
         "headSign": {
