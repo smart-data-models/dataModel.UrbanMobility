@@ -44,7 +44,7 @@ GtfsStopTime:
         type: Property
     distanceTravelled:
       description: 'Same as GTFS `shape_dist_traveled`'
-      minValue: 0
+      minimum: 0
       type: number
       x-ngsi:
         model: https://schema.org/Number
@@ -152,7 +152,7 @@ GtfsStopTime:
         type: Property
     stopSequence:
       description: 'Same as GTFS `stop_sequence`. Starting with `1`.'
-      minValue: 1
+      minimum: 1
       type: integer
       x-ngsi:
         model: https://schema.org/Integer
@@ -184,8 +184,8 @@ GtfsStopTime:
     - stopSequence
   type: object
   x-derived-from: ""
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
   x-license-url: https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/GtfsStopTime/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsStopTime/schema.json
   x-model-tags: ""
-  x-version: 0.0.1
+  x-version: 0.0.2
