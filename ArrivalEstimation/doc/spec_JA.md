@@ -4,7 +4,7 @@
 [オープンライセンス](https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/ArrivalEstimation/LICENSE.md)  
 [ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 グローバルな記述です。**到着予測**」。  
-バージョン: 0.0.2  
+バージョン: 0.0.3  
 
 ## プロパティ一覧  
 
@@ -109,7 +109,7 @@ ArrivalEstimation:
         type: Property    
     remainingDistance:    
       description: 'It shall contain the remaining distance (in meters) of arrival for the trip heading to the concerned stop'    
-      minValue: 0    
+      minimum: 0    
       type: number    
       x-ngsi:    
         model: https://schema.org/Number    
@@ -158,7 +158,7 @@ ArrivalEstimation:
   x-license-url: https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/ArrivalEstimation/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.UrbanMobility/ArrivalEstimation/schema.json    
   x-model-tags: ""    
-  x-version: 0.0.2    
+  x-version: 0.0.3    
 ```  
 </details>    
 ## ペイロードの例  
