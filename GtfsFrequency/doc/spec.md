@@ -1,8 +1,10 @@
-Entity: GtfsFrequency  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entity: GtfsFrequency  
 =====================  
 [Open License](https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/GtfsFrequency/LICENSE.md)  
 [document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Global description: **GTFS Frequency**  
+version: 0.0.2  
 
 ## List of properties  
 
@@ -73,7 +75,7 @@ GtfsFrequency:
         type: Relationship    
     headwaySeconds:    
       description: 'Same as GTFS `headway_secs`'    
-      minValue: 1    
+      minimum: 1    
       type: integer    
       x-ngsi:    
         model: https://schema.org/Number    
@@ -143,6 +145,12 @@ GtfsFrequency:
     - endTime    
     - headwaySeconds    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/GtfsFrequency/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsFrequency/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.2    
 ```  
 </details>    
 ## Example payloads    
@@ -191,55 +199,53 @@ GtfsFrequency:
 Here is an example of a GtfsFrequency in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:GtfsFrequency:Malaga:Linea1",  
-  "type": "GtfsFrequency",  
-  "description": {  
-    "type": "Property",  
-    "value": "Cada 10 minutos"  
-  },  
-  "hasTrip": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:GtfsTrip:Spain:Malaga:1"  
-  },  
-  "headwaySeconds": {  
-    "type": "Property",  
-    "value": 600  
-  },  
-  "startTime": {  
-    "type": "Property",  
-    "value": "07:00:00"  
-  },  
-  "endTime": {  
-    "type": "Property",  
-    "value": "10:25:00"  
-  },  
-  "name": {  
-    "type": "Property",  
-    "value": "Laborables"  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:GtfsFrequency:Malaga:Linea1",  
+    "type": "GtfsFrequency",  
+    "description": {  
+        "type": "Property",  
+        "value": "Cada 10 minutos"  
+    },  
+    "endTime": {  
+        "type": "Property",  
+        "value": "10:25:00"  
+    },  
+    "hasTrip": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:GtfsTrip:Spain:Malaga:1"  
+    },  
+    "headwaySeconds": {  
+        "type": "Property",  
+        "value": 600  
+    },  
+    "name": {  
+        "type": "Property",  
+        "value": "Laborables"  
+    },  
+    "startTime": {  
+        "type": "Property",  
+        "value": "07:00:00"  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
+    ]  
 }  
 ```  
 #### GtfsFrequency NGSI-LD normalized Example    
 Here is an example of a GtfsFrequency in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "description": "Cada 10 minutos",  
-  "endTime": "10:25:00",  
-  "hasTrip": "urn:ngsi-ld:GtfsTrip:Spain:Malaga:1",  
-  "headwaySeconds": 600,  
-  "id": "urn:ngsi-ld:GtfsFrequency:Malaga:Linea1",  
-  "name": "Laborables",  
-  "startTime": "07:00:00",  
-  "type": "GtfsFrequency"  
+    "id": "urn:ngsi-ld:GtfsFrequency:Malaga:Linea1",  
+    "type": "GtfsFrequency",  
+    "description": "Cada 10 minutos",  
+    "endTime": "10:25:00",  
+    "hasTrip": "urn:ngsi-ld:GtfsTrip:Spain:Malaga:1",  
+    "headwaySeconds": 600,  
+    "name": "Laborables",  
+    "startTime": "07:00:00",  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+    ]  
 }  
 ```  
-
-See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units
+See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units  
