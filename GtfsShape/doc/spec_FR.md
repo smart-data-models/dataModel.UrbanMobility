@@ -1,12 +1,14 @@
-Entité : GtfsShape  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entité : GtfsShape  
 ==================  
 [Licence ouverte] (https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/GtfsShape/LICENSE.md)  
 [document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Description globale : **FormeGTFS**  
+version : 0.0.2  
 
 ## Liste des propriétés  
 
-- `alternateName`: Un nom alternatif pour cet élément  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `distanceTravelled`: Un tableau de la distance parcourue pour atteindre chacun des points qui composent la `LineString` ou la `MultiLineString` qui représente cette forme. Il doit correspondre au même nombre d'éléments que la `LineString` ou la `MultiLineString` correspondante.  - `id`: Identifiant unique de l'entité  - `location`: La forme géographique associée à cette entité, encodée en tant que `LineString` ou `MultiLineString` GeoJSON. Les coordonnées sont obtenues à partir du fichier d'alimentation `shapes.txt` selon la valeur de `shape_id`, `shape_pt_lat`, `shape_pt_lon`, `shape_pt_sequence`.  - `name`: Le nom de cet élément.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `type`: Type d'entité NGSI. Il doit être GtfsShape.    
+- `address`: L'adresse postale  - `alternateName`: Un nom alternatif pour cet élément  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `distanceTravelled`: Un tableau de la distance parcourue pour atteindre chacun des points qui composent la `LineString` ou la `MultiLineString` qui représente cette forme. Il doit correspondre au même nombre d'éléments que la `LineString` ou la `MultiLineString` correspondante.  - `id`: Identifiant unique de l'entité  - `location`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `name`: Le nom de cet élément.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'article  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `type`: Type d'entité NGSI. Il doit être GtfsShape.    
 Propriétés requises  
 - `id`  - `location`  - `type`    
 Voir [https://developers.google.com/transit/gtfs/reference/#shapestxt](https://developers.google.com/transit/gtfs/reference/#shapestxt). Il représente une "forme" GTFS.  
@@ -17,10 +19,41 @@ Entité : GtfsShape
 GtfsShape:    
   description: 'GTFS Shape'    
   properties:    
+    address:    
+      description: 'The mailing address'    
+      properties:    
+        addressCountry:    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
+          type: string    
+        addressLocality:    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
+          type: string    
+        addressRegion:    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
+          type: string    
+        postOfficeBoxNumber:    
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
+          type: string    
+        postalCode:    
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
+          type: string    
+        streetAddress:    
+          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
+          type: string    
+      type: object    
+      x-ngsi:    
+        model: https://schema.org/address    
+        type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
       type: string    
       x-ngsi:    
+        type: Property    
+    areaServed:    
+      description: 'The geographic area where a service or offered item is provided'    
+      type: string    
+      x-ngsi:    
+        model: https://schema.org/Text    
         type: Property    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
@@ -67,10 +100,30 @@ GtfsShape:
       x-ngsi:    
         type: Property    
     location:    
-      description: 'The geographical shape associated to this entity encoded as GeoJSON `LineString` or `MultiLineString`. The coordinates shall be obtained from the `shapes.txt` feed file as per the value of `shape_id`, `shape_pt_lat`, `shape_pt_lon`, `shape_pt_sequence`.'    
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - $id: https://geojson.org/schema/LineString.json    
-          $schema: "http://json-schema.org/draft-07/schema#"    
+        - description: 'Geoproperty. Geojson reference to the item. Point'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                type: number    
+              minItems: 2    
+              type: array    
+            type:    
+              enum:    
+                - Point    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON Point'    
+          type: object    
+        - description: 'Geoproperty. Geojson reference to the item. LineString'    
           properties:    
             bbox:    
               items:    
@@ -94,8 +147,56 @@ GtfsShape:
             - coordinates    
           title: 'GeoJSON LineString'    
           type: object    
-        - $id: https://geojson.org/schema/MultiLineString.json    
-          $schema: "http://json-schema.org/draft-07/schema#"    
+        - description: 'Geoproperty. Geojson reference to the item. Polygon'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    type: number    
+                  minItems: 2    
+                  type: array    
+                minItems: 4    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - Polygon    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON Polygon'    
+          type: object    
+        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  type: number    
+                minItems: 2    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiPoint    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON MultiPoint'    
+          type: object    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
           properties:    
             bbox:    
               items:    
@@ -120,6 +221,34 @@ GtfsShape:
             - type    
             - coordinates    
           title: 'GeoJSON MultiLineString'    
+          type: object    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    items:    
+                      type: number    
+                    minItems: 2    
+                    type: array    
+                  minItems: 4    
+                  type: array    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiPolygon    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON MultiPolygon'    
           type: object    
       x-ngsi:    
         type: Geoproperty    
@@ -165,6 +294,12 @@ GtfsShape:
     - type    
     - location    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/GtfsShape/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/data-models/specs/UrbanMobility/GtfsShape/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.2    
 ```  
 </details>    
 ## Exemples de charges utiles  
@@ -206,73 +341,71 @@ GtfsShape:
 }  
 ```  
 #### Exemple de valeurs clés GtfsShape NGSI-LD  
-Voici un exemple de GtfsShape au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-LD en utilisant `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+Voici un exemple de GtfsShape au format JSON-LD comme valeurs-clés. Ceci est compatible avec NGSI-LD en utilisant `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:GtfsShape:101",  
-  "type": "GtfsShape",  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "LineString",  
-      "coordinates": [  
-        [  
-          -4.421394,  
-          36.73826  
-        ],  
-        [  
-          -4.421428,  
-          36.73825  
-        ],  
-        [  
-          -4.421505,  
-          36.738186  
-        ],  
-        [  
-          -4.421525,  
-          36.738033  
-        ]  
-      ]  
-    }  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:GtfsShape:101",  
+    "type": "GtfsShape",  
+    "location": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "LineString",  
+            "coordinates": [  
+                [  
+                    -4.421394,  
+                    36.73826  
+                ],  
+                [  
+                    -4.421428,  
+                    36.73825  
+                ],  
+                [  
+                    -4.421505,  
+                    36.738186  
+                ],  
+                [  
+                    -4.421525,  
+                    36.738033  
+                ]  
+            ]  
+        }  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
+    ]  
 }  
 ```  
 #### GtfsShape NGSI-LD normalisé Exemple  
 Voici un exemple de GtfsShape au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "id": "urn:ngsi-ld:GtfsShape:101",  
-  "location": {  
-    "coordinates": [  
-      [  
-        -4.421394,  
-        36.73826  
-      ],  
-      [  
-        -4.421428,  
-        36.73825  
-      ],  
-      [  
-        -4.421505,  
-        36.738186  
-      ],  
-      [  
-        -4.421525,  
-        36.738033  
-      ]  
-    ],  
-    "type": "LineString"  
-  },  
-  "type": "GtfsShape"  
+    "id": "urn:ngsi-ld:GtfsShape:101",  
+    "type": "GtfsShape",  
+    "location": {  
+        "coordinates": [  
+            [  
+                -4.421394,  
+                36.73826  
+            ],  
+            [  
+                -4.421428,  
+                36.73825  
+            ],  
+            [  
+                -4.421505,  
+                36.738186  
+            ],  
+            [  
+                -4.421525,  
+                36.738033  
+            ]  
+        ],  
+        "type": "LineString"  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+    ]  
 }  
 ```  
-
-Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude.
+Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude.  
