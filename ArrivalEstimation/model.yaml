@@ -91,7 +91,7 @@ ArrivalEstimation:
         type: Property
     remainingDistance:
       description: 'It shall contain the remaining distance (in meters) of arrival for the trip heading to the concerned stop'
-      minValue: 0
+      minimum: 0
       type: number
       x-ngsi:
         model: https://schema.org/Number
@@ -140,4 +140,4 @@ ArrivalEstimation:
   x-license-url: https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/ArrivalEstimation/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.UrbanMobility/ArrivalEstimation/schema.json
   x-model-tags: ""
-  x-version: 0.0.2
+  x-version: 0.0.3

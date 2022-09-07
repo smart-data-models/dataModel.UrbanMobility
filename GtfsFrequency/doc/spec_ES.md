@@ -1,12 +1,14 @@
-Entidad: GtfsFrequency  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entidad: GtfsFrequency  
 ======================  
 [Licencia abierta](https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/GtfsFrequency/LICENSE.md)  
 [documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Descripción global: **Frecuencia GTFS**  
+versión: 0.0.2  
 
 ## Lista de propiedades  
 
-- `alternateName`: Un nombre alternativo para este artículo  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `endTime`: Igual que el GTFS `end_time`.  - `exactTimes`: Igual que GTFS `exact_times` pero codificado como un booleano; `false`: Los viajes basados en la frecuencia no se programan exactamente. `true`: Los viajes basados en la frecuencia se programan exactamente  - `hasTrip`: Viaje asociado a esta Entidad. Apuntará a una entidad de tipo GtfsTrip  - `headwaySeconds`: Igual que GTFS `headway_secs`  - `id`: Identificador único de la entidad  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen, o la URL del objeto de origen.  - `startTime`: Igual que el GTFS `start_time`.  - `type`: Tipo de entidad NGSI. Tiene que ser GtfsFrequency    
+- `alternateName`: Un nombre alternativo para este artículo  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `endTime`: Igual que el GTFS `end_time`.  - `exactTimes`: Igual que GTFS `exact_times` pero codificado como un booleano; `false`: Los viajes basados en la frecuencia no se programan exactamente. `true`: Los viajes basados en la frecuencia se programan exactamente  - `hasTrip`: Viaje asociado a esta Entidad. Apuntará a una entidad de tipo GtfsTrip  - `headwaySeconds`: Igual que GTFS `headway_secs`  - `id`: Identificador único de la entidad  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `startTime`: Igual que el GTFS `start_time`.  - `type`: Tipo de entidad NGSI. Tiene que ser GtfsFrequency    
 Propiedades requeridas  
 - `endTime`  - `hasTrip`  - `headwaySeconds`  - `id`  - `startTime`  - `type`    
 Véase [https://developers.google.com/transit/gtfs/reference/#frequenciestxt](https://developers.google.com/transit/gtfs/reference/#frequenciestxt)  
@@ -73,7 +75,7 @@ GtfsFrequency:
         type: Relationship    
     headwaySeconds:    
       description: 'Same as GTFS `headway_secs`'    
-      minValue: 1    
+      minimum: 1    
       type: integer    
       x-ngsi:    
         model: https://schema.org/Number    
@@ -143,6 +145,12 @@ GtfsFrequency:
     - endTime    
     - headwaySeconds    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/GtfsFrequency/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsFrequency/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.2    
 ```  
 </details>    
 ## Ejemplo de carga útil  
@@ -191,55 +199,53 @@ GtfsFrequency:
 Aquí hay un ejemplo de un GtfsFrequency en formato JSON-LD como valores-clave. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:GtfsFrequency:Malaga:Linea1",  
-  "type": "GtfsFrequency",  
-  "description": {  
-    "type": "Property",  
-    "value": "Cada 10 minutos"  
-  },  
-  "hasTrip": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:GtfsTrip:Spain:Malaga:1"  
-  },  
-  "headwaySeconds": {  
-    "type": "Property",  
-    "value": 600  
-  },  
-  "startTime": {  
-    "type": "Property",  
-    "value": "07:00:00"  
-  },  
-  "endTime": {  
-    "type": "Property",  
-    "value": "10:25:00"  
-  },  
-  "name": {  
-    "type": "Property",  
-    "value": "Laborables"  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:GtfsFrequency:Malaga:Linea1",  
+    "type": "GtfsFrequency",  
+    "description": {  
+        "type": "Property",  
+        "value": "Cada 10 minutos"  
+    },  
+    "endTime": {  
+        "type": "Property",  
+        "value": "10:25:00"  
+    },  
+    "hasTrip": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:GtfsTrip:Spain:Malaga:1"  
+    },  
+    "headwaySeconds": {  
+        "type": "Property",  
+        "value": 600  
+    },  
+    "name": {  
+        "type": "Property",  
+        "value": "Laborables"  
+    },  
+    "startTime": {  
+        "type": "Property",  
+        "value": "07:00:00"  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
+    ]  
 }  
 ```  
 #### GtfsFrequency NGSI-LD normalizado Ejemplo  
 Este es un ejemplo de GtfsFrequency en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "description": "Cada 10 minutos",  
-  "endTime": "10:25:00",  
-  "hasTrip": "urn:ngsi-ld:GtfsTrip:Spain:Malaga:1",  
-  "headwaySeconds": 600,  
-  "id": "urn:ngsi-ld:GtfsFrequency:Malaga:Linea1",  
-  "name": "Laborables",  
-  "startTime": "07:00:00",  
-  "type": "GtfsFrequency"  
+    "id": "urn:ngsi-ld:GtfsFrequency:Malaga:Linea1",  
+    "type": "GtfsFrequency",  
+    "description": "Cada 10 minutos",  
+    "endTime": "10:25:00",  
+    "hasTrip": "urn:ngsi-ld:GtfsTrip:Spain:Malaga:1",  
+    "headwaySeconds": 600,  
+    "name": "Laborables",  
+    "startTime": "07:00:00",  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+    ]  
 }  
 ```  
-
-Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud
+Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud  

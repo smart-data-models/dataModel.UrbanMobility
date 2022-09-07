@@ -1,2 +1,2 @@
-"@context__0_", "@context__1_", "hasDestination_", "hasOrigin_", "id_", "minimumTransferTime_", "name_", "transferType_", "type_"
-"https://smartdatamodels.org/context.jsonld", "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld", "urn:ngsi-ld:GtfsStop:Malaga_508", "urn:ngsi-ld:GtfsStop:Malaga_101", "urn:ngsi-ld:GtfsTransferRule:Malaga:Linea1_Linea5", "10", "L1_L5", "0", "GtfsTransferRule"
+"id_", "type_", "hasDestination_", "hasOrigin_", "minimumTransferTime_", "name_", "transferType_", "@context__0_"
+"urn:ngsi-ld:GtfsTransferRule:Malaga:Linea1_Linea5", "GtfsTransferRule", "urn:ngsi-ld:GtfsStop:Malaga_508", "urn:ngsi-ld:GtfsStop:Malaga_101", "10", "L1_L5", "0", "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"

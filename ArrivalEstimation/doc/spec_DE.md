@@ -4,11 +4,11 @@
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/ArrivalEstimation/LICENSE.md)  
 [Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Globale Beschreibung: **Ankunftseinschätzung**  
-Version: 0.0.2  
+Version: 0.0.3  
 
 ## Liste der Eigenschaften  
 
-- `alternateName`: Ein alternativer Name für diesen Artikel  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `hasStop`: Sie muss auf eine Entität des Typs GtfsStop verweisen.  - `hasTrip`: Reise, die mit dieser Entität verbunden ist. Sie muss auf eine Entität des Typs GtfsTrip zeigen.  - `headSign`: Sie muss den Text enthalten, der auf einem Schild erscheint, das den Fahrgästen das Reiseziel angibt  - `id`: Eindeutiger Bezeichner der Entität  - `name`: Der Name dieses Artikels.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `remainingDistance`: Sie muss die verbleibende Entfernung (in Metern) bis zur Ankunft an der betreffenden Haltestelle enthalten  - `remainingTime`: Sie muss die verbleibende Ankunftszeit für die Fahrt zur betreffenden Haltestelle enthalten. Die verbleibende Zeit ist als ISO8601-Dauer zu kodieren. Bsp. "PT8M5S".  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Es wird empfohlen, den voll qualifizierten Domänennamen des Quellanbieters oder die URL des Quellobjekts zu verwenden.  - `type`: NGSI-Entitätstyp: Es muss "ArrivalEstimation" sein. Enum:'ArrivalEstimation' (Ankunftsschätzung)    
+- `alternateName`: Ein alternativer Name für diesen Artikel  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `hasStop`: Er muss auf eine Entität des Typs GtfsStop verweisen.  - `hasTrip`: Reise, die mit dieser Entität verbunden ist. Sie muss auf eine Entität des Typs GtfsTrip zeigen.  - `headSign`: Sie muss den Text enthalten, der auf einem Schild erscheint, das den Fahrgästen das Reiseziel angibt  - `id`: Eindeutiger Bezeichner der Entität  - `name`: Der Name dieses Artikels.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `remainingDistance`: Sie muss die verbleibende Entfernung (in Metern) bis zur Ankunft an der betreffenden Haltestelle enthalten  - `remainingTime`: Sie muss die verbleibende Ankunftszeit für die Fahrt zur betreffenden Haltestelle enthalten. Die verbleibende Zeit ist als ISO8601-Dauer zu kodieren. Bsp. "PT8M5S".  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Es wird empfohlen, den voll qualifizierten Domänennamen des Quellanbieters oder die URL des Quellobjekts zu verwenden.  - `type`: NGSI-Entitätstyp: Es muss "ArrivalEstimation" sein. Enum:'ArrivalEstimation' (Ankunftsschätzung)    
 Erforderliche Eigenschaften  
 - `hasStop`  - `hasTrip`  - `headSign`  - `id`  - `remainingTime`  - `type`    
 Dieser Entitätstyp erfasst die geschätzte Ankunftszeit eines öffentlichen Verkehrsmittels, das eine bestimmte Haltestelle erreicht, während das Fahrzeug eine bestimmte Strecke bedient.  
@@ -109,7 +109,7 @@ ArrivalEstimation:
         type: Property    
     remainingDistance:    
       description: 'It shall contain the remaining distance (in meters) of arrival for the trip heading to the concerned stop'    
-      minValue: 0    
+      minimum: 0    
       type: number    
       x-ngsi:    
         model: https://schema.org/Number    
@@ -158,7 +158,7 @@ ArrivalEstimation:
   x-license-url: https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/ArrivalEstimation/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.UrbanMobility/ArrivalEstimation/schema.json    
   x-model-tags: ""    
-  x-version: 0.0.2    
+  x-version: 0.0.3    
 ```  
 </details>    
 ## Beispiel-Nutzlasten  

@@ -1,17 +1,19 @@
-エンティティGtfsStopTime  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティGtfsStopTime  
 ==================  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/GtfsStopTime/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな記述。**GTFS停止時間**について  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+グローバルな記述です。**GTFSの停止時間**。  
+バージョン: 0.0.2  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `alternateName`: このアイテムの別称  - `arrivalTime`: GTFSの`arrival_time`と同じです。  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `departureTime`: GTFSの`departure_time`と同じです。  - `description`: このアイテムの説明  - `distanceTravelled`: GTFSの `shape_dist_traveled` と同じです。  - `dropOffType`: GTFSの`drop_off_type`と同じです。イナム:'0, 1, 2, 3'  - `hasStop`: GTFSの`stop_id`と同じです。GtfsStopタイプのEntityを指します。  - `hasTrip`: このEntityに関連付けられたTrip。GtfsTripタイプのEntityを指すものとする。  - `id`: エンティティのユニークな識別子  - `name`: このアイテムの名前です。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `pickupType`: GTFSの`pickup_type`と同じです。イナム:'0, 1, 2, 3'  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `stopHeadsign`: GTFS の `stop_headsign` と同じです。  - `stopSequence`: GTFSの`stop_sequence`と同じです。1」で始まります。  - `timepoint`: GTFSの`timepoint`と同じです。列挙:'0, 1'  - `type`: NGSI エンティティタイプ。GtfsStopTimeでなければならない。    
-必須項目  
+- `alternateName`: この項目の別称  - `arrivalTime`: GTFSの`arrival_time`と同じ。  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `departureTime`: GTFSの `departure_time` と同じ。  - `description`: このアイテムの説明  - `distanceTravelled`: GTFS の `shape_dist_traveled` と同じ。  - `dropOffType`: GTFS の `drop_off_type` と同じ。Enum:'0, 1, 2, 3'.  - `hasStop`: GTFS の `stop_id` と同じ。GtfsStop型のEntityを指す。  - `hasTrip`: このEntityに関連付けられたTrip。GtfsTrip 型の Entity を指すものとする。  - `id`: エンティティの一意な識別子  - `name`: このアイテムの名称です。  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `pickupType`: GTFS の `pickup_type` と同じ。Enum:'0, 1, 2, 3'.  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `stopHeadsign`: GTFSの `stop_headsign` と同じ。  - `stopSequence`: GTFS の `stop_sequence` と同じです。1` から始まる。  - `timepoint`: GTFS の `timepoint` と同じです。Enum:'0, 1'  - `type`: NGSI エンティティタイプ。GtfsStopTimeでなければならない。    
+必要なプロパティ  
 - `arrivalTime`  - `departureTime`  - `hasStop`  - `hasTrip`  - `id`  - `stopSequence`  - `type`    
-https://developers.google.com/transit/gtfs/reference/#stop_timestxt](https://developers.google.com/transit/gtfs/reference/#stop_timestxt)をご覧ください。  
-## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます  
+参照[https://developers.google.com/transit/gtfs/reference/#stop_timestxt](https://developers.google.com/transit/gtfs/reference/#stop_timestxt)  
+## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 GtfsStopTime:    
@@ -60,7 +62,7 @@ GtfsStopTime:
         type: Property    
     distanceTravelled:    
       description: 'Same as GTFS `shape_dist_traveled`'    
-      minValue: 0    
+      minimum: 0    
       type: number    
       x-ngsi:    
         model: https://schema.org/Number    
@@ -168,7 +170,7 @@ GtfsStopTime:
         type: Property    
     stopSequence:    
       description: 'Same as GTFS `stop_sequence`. Starting with `1`.'    
-      minValue: 1    
+      minimum: 1    
       type: integer    
       x-ngsi:    
         model: https://schema.org/Integer    
@@ -199,11 +201,17 @@ GtfsStopTime:
     - hasTrip    
     - stopSequence    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/GtfsStopTime/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsStopTime/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.2    
 ```  
 </details>    
 ## ペイロードの例  
-#### GtfsStopTime NGSI-v2 のキーバリューの例。  
-GtfsStopTimeをkey-valuesとしてJSON-LD形式で記述した例を示します。これは、`options=keyValues`を使った場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### GtfsStopTime NGSI-v2 key-value 例  
+以下は、GtfsStopTimeをJSON-LD形式でkey-valuesとした例である。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "urn:ngsi-ld:GtfsStopTime:Spain:Madrid:EMT:FE0010011_737",  
@@ -216,8 +224,8 @@ GtfsStopTime:
   "departureTime": "07:04:24"  
 }  
 ```  
-#### GtfsStopTime NGSI-v2規格化例  
-正規化されたJSON-LD形式のGtfsStopTimeの例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### GtfsStopTime NGSI-v2 正規化例  
+GtfsStopTime を JSON-LD 形式で正規化した例を示す。これはオプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "urn:ngsi-ld:GtfsStopTime:Spain:Madrid:EMT:FE0010011_737",  
@@ -244,59 +252,57 @@ GtfsStopTime:
   }  
 }  
 ```  
-#### GtfsStopTime NGSI-LD のキーバリューの例  
-GtfsStopTimeをkey-valuesとしてJSON-LD形式で出力した例です。これは、`options=keyValues`を使った場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### GtfsStopTime NGSI-LD キー値例  
+ここでは、GtfsStopTimeをJSON-LD形式でkey-valuesとした例を示します。これは、`options=keyValues`を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
-  "id": "urn:ngsi-ld:GtfsStopTime:Spain:Madrid:EMT:FE0010011_737",  
-  "type": "GtfsStopTime",  
-  "departureTime": {  
-    "type": "Property",  
-    "value": "07:04:24"  
-  },  
-  "hasTrip": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:GtfsTrip:Madrid:EMT:FE0010011"  
-  },  
-  "stopSequence": {  
-    "type": "Property",  
-    "value": 4  
-  },  
-  "distanceTravelled": {  
-    "type": "Property",  
-    "value": 759  
-  },  
-  "arrivalTime": {  
-    "type": "Property",  
-    "value": "07:04:24"  
-  },  
-  "hasStop": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:GtfsStop:Madrid:EMT:737"  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:GtfsStopTime:Spain:Madrid:EMT:FE0010011_737",  
+    "type": "GtfsStopTime",  
+    "arrivalTime": {  
+        "type": "Property",  
+        "value": "07:04:24"  
+    },  
+    "departureTime": {  
+        "type": "Property",  
+        "value": "07:04:24"  
+    },  
+    "distanceTravelled": {  
+        "type": "Property",  
+        "value": 759  
+    },  
+    "hasStop": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:GtfsStop:Madrid:EMT:737"  
+    },  
+    "hasTrip": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:GtfsTrip:Madrid:EMT:FE0010011"  
+    },  
+    "stopSequence": {  
+        "type": "Property",  
+        "value": 4  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
+    ]  
 }  
 ```  
-#### GtfsStopTime NGSI-LDの正規化例  
-正規化されたJSON-LD形式のGtfsStopTimeの例を示します。これは、オプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### GtfsStopTime NGSI-LD 正規化例  
+GtfsStopTime を JSON-LD 形式で正規化した例を示す。これはオプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "arrivalTime": "07:04:24",  
-  "departureTime": "07:04:24",  
-  "distanceTravelled": 759,  
-  "hasStop": "urn:ngsi-ld:GtfsStop:Madrid:EMT:737",  
-  "hasTrip": "urn:ngsi-ld:GtfsTrip:Madrid:EMT:FE0010011",  
-  "id": "urn:ngsi-ld:GtfsStopTime:Spain:Madrid:EMT:FE0010011_737",  
-  "stopSequence": 4,  
-  "type": "GtfsStopTime"  
+    "id": "urn:ngsi-ld:GtfsStopTime:Spain:Madrid:EMT:FE0010011_737",  
+    "type": "GtfsStopTime",  
+    "arrivalTime": "07:04:24",  
+    "departureTime": "07:04:24",  
+    "distanceTravelled": 759,  
+    "hasStop": "urn:ngsi-ld:GtfsStop:Madrid:EMT:737",  
+    "hasTrip": "urn:ngsi-ld:GtfsTrip:Madrid:EMT:FE0010011",  
+    "stopSequence": 4,  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+    ]  
 }  
 ```  
-
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
