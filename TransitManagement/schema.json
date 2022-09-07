@@ -4,7 +4,7 @@
   "$id": "https://smart-data-models.github.io/dataModel.UrbanMobility/TransitManagement/schema.json",
   "title": "Smart Data Models - TransitManagement data Model",
   "description": "A public transit system Data Model",
-  "$schemaVersion": "0.0.2",
+  "$schemaVersion": "0.0.3",
   "type": "object",
   "allOf": [
     {
@@ -103,7 +103,7 @@
         },
         "position": {
           "type": "object",
-          "description": "Property. Describes the current position of the vehicle corresponding to this observation. SameAs:'position' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)",
+          "description": "Property. Describes the current position of the vehicle corresponding to this observation. SameAs: position field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition). Model:'https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition'",
           "properties": {
             "latitude": {
               "type": "number",
