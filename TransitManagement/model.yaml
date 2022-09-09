@@ -455,7 +455,7 @@ TransitManagement:
       x-ngsi:
         type: Property
     position:
-      description: "Describes the current position of the vehicle corresponding to this observation. SameAs:'position' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)"
+      description: "Describes the current position of the vehicle corresponding to this observation. SameAs: position field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)"
       properties:
         bearing:
           description: 'Property. Bearing, in degrees, clockwise from True North, i.e., 0 is North and 90 is East. This can be the compass bearing, or the direction towards the next stop or intermediate location. This should not be deduced from the sequence of previous positions, which clients can compute from previous data'
@@ -474,6 +474,7 @@ TransitManagement:
           type: number
       type: object
       x-ngsi:
+        model: "https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition"
         type: Property
     routeStopSequence:
       description: 'Gives the stop IDs/stop codes or station IDs/station codes in the right sequence for the route or line corresponding to this observation.'
@@ -985,4 +986,4 @@ TransitManagement:
   x-license-url: https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/TransitManagement/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.UrbanMobility/TransitManagement/schema.json
   x-model-tags: IUDX
-  x-version: 0.0.2
+  x-version: 0.0.3
