@@ -4,7 +4,7 @@
 [オープンライセンス](https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/GtfsTransferRule/LICENSE.md)  
 [ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 グローバルな記述です。**GTFS転送ルール**  
-バージョン: 0.0.1  
+バージョン: 0.0.3  
 
 ## プロパティ一覧  
 
@@ -89,7 +89,7 @@ GtfsTransferRule:
         type: Property    
     minimumTransferTime:    
       description: 'Same as GTFS `min_transfer_time`. Unit:''seconds'''    
-      minValue: 1    
+      minimum: 1    
       type: integer    
       x-ngsi:    
         model: https://schema.org/Integer    
@@ -154,11 +154,11 @@ GtfsTransferRule:
   x-license-url: https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/GtfsTransferRule/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsTransferRule/schema.json    
   x-model-tags: ""    
-  x-version: 0.0.1    
+  x-version: 0.0.3    
 ```  
 </details>    
 ## ペイロードの例  
-#### GtfsTransferRule NGSI-v2 key-value 例  
+#### GtfsTransferRule NGSI-v2 key-value の例．  
 GtfsTransferRuleをJSON-LD形式でkey-valuesにした例です。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
