@@ -5,6 +5,7 @@
     "name": "LAB",
     "operatedBy": "urn:ngsi-ld:GtfsAgency:Malaga_EMT",
     "@context": [
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"
     ]
 }
