@@ -1,6 +1,6 @@
 {
 	"id": "https://smart-data-models.github.io/IUDX/TransitManagement/schema.json",
-	"@context": "iudx:TransitManagement",
+	"@context": ["iudx:TransitManagement"],
 	"type": "TransitManagement",
 	"vehicleType":"hopper",
 	"trip_delay":11968,
