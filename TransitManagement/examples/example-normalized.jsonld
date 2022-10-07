@@ -244,6 +244,6 @@
       "@type": "date-time",
       "@value": "2021-10-28T08:13:22+05:30"
     }
-  }
+  },
   "@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"]
 }
