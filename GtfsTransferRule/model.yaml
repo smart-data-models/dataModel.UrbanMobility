@@ -72,7 +72,7 @@ GtfsTransferRule:
     minimumTransferTime:
       description: 'Same as GTFS `min_transfer_time`. Unit:''seconds'''
       minimum: 1
-      type: integer
+      type: number
       x-ngsi:
         model: https://schema.org/Integer
         type: Property
