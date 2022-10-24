@@ -1,17 +1,32 @@
-Entità: GtfsRoute  
-=================  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entità: GtfsRoute  
+=================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Licenza aperta](https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/GtfsRoute/LICENSE.md)  
 [documento generato automaticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Descrizione globale: **GTFS Route**  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+Descrizione globale: **Rotta GTFS**  
+versione: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Elenco delle proprietà  
 
-- `alternateName`: Un nome alternativo per questa voce  - `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated`: Timestamp di creazione dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `dateModified`: Timestamp dell'ultima modifica dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `description`: Una descrizione di questo articolo  - `id`: Identificatore unico dell'entità  - `name`: Il nome di questo articolo.  - `operatedBy`: Agenzia che gestisce questa rotta. Deve puntare a un'entità di tipo GtfsAgency  - `owner`: Una lista contenente una sequenza di caratteri codificata in JSON che si riferisce agli ID unici dei proprietari  - `page`: Come GTFS `stop_url`.  - `routeColor`: Uguale a GTFS `route_color`. Vedi [GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt)  - `routeSortOrder`: Come GTFS `route_sort_order`.  - `routeTextColor`: Uguale a GTFS `route_text_color`. Vedere [GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt)  - `routeType`: Uguale a GTFS `route_type`. valori ammessi quelli consentiti per `route_type` come prescritto da [GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt). Enum:'0, 1, 2, 3, 4, 5, 6, 7'  - `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `shortName`: Come GTFS `route_short_name`.  - `source`: Una sequenza di caratteri che dà la fonte originale dei dati dell'entità come URL. Si raccomanda di essere il nome di dominio completamente qualificato del fornitore di origine, o l'URL dell'oggetto di origine.  - `type`: Tipo di entità NGSI. Deve essere GtfsRoute    
+<sup><sub>[*] Se non c'è un tipo in un attributo è perché potrebbe avere diversi tipi o diversi formati/modelli</sub></sup>.  
+- `alternateName[string]`: Un nome alternativo per questa voce  - `dataProvider[string]`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated[string]`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `dateModified[string]`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `description[string]`: Descrizione dell'articolo  - `id[*]`: Identificatore univoco dell'entità  - `name[string]`: Il nome di questo elemento.  - `operatedBy[*]`: Agenzia che gestisce questo percorso. Deve puntare a un'entità di tipo GtfsAgency.  . Model: [https://schema.org/Text](https://schema.org/Text)- `owner[array]`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `page[string]`: Uguale a GTFS `stop_url`  . Model: [http://schema.org/URL](http://schema.org/URL)- `routeColor[string]`: Uguale a `colore_di_percorso` di GTFS. Vedere [GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt)  . Model: [https://schema.org/Text](https://schema.org/Text)- `routeSortOrder[integer]`: Uguale a GTFS `route_sort_order`  . Model: [https://schema.org/Number.](https://schema.org/Number.)- `routeTextColor[string]`: Come il `colore_testo_di_viaggio` di GTFS. Vedere [GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt)  . Model: [https://schema.org/Text](https://schema.org/Text)- `routeType[string]`: Come GTFS `route_type`. valori ammessi quelli ammessi per `route_type` come prescritto da [GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt). Enum:'0, 1, 2, 3, 4, 5, 6, 7'  . Model: [https://schema.org/Text](https://schema.org/Text)- `seeAlso[*]`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `shortName[string]`: Come GTFS `nome_di_rotta_corto`  . Model: [https://schema.org/Text.](https://schema.org/Text.)- `source[string]`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `type[string]`: Tipo di entità NGSI. Deve essere GtfsRoute  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Proprietà richieste  
-- `id`  - `type`    
+- `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
 Vedere [https://developers.google.com/transit/gtfs/reference/#routestxt](https://developers.google.com/transit/gtfs/reference/#routestxt)  
-## Descrizione del modello di dati delle proprietà  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## Modello di dati descrizione delle proprietà  
 Ordinati in ordine alfabetico (clicca per i dettagli)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 GtfsRoute:    
@@ -159,11 +174,22 @@ GtfsRoute:
     - id    
     - type    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/GtfsRoute/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/data-models/specs/UrbanMobility/GtfsRoute/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.1    
 ```  
 </details>    
-## Esempio di payloads  
-#### GtfsRoute NGSI-v2 valori chiave Esempio  
-Ecco un esempio di un GtfsRoute in formato JSON-LD come key-values. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
+## Esempi di payload  
+#### GtfsRoute NGSI-v2 valori-chiave Esempio  
+Ecco un esempio di GtfsRoute in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:GtfsRoute:Spain:Malaga:1",  
@@ -175,8 +201,10 @@ GtfsRoute:
   "operatedBy": "urn:ngsi-ld:GtfsAgency:Malaga_EMT"  
 }  
 ```  
+</details>  
 #### GtfsRoute NGSI-v2 normalizzato Esempio  
-Ecco un esempio di un GtfsRoute in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
+Ecco un esempio di GtfsRoute in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non si usano opzioni e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:GtfsRoute:Spain:Malaga:1",  
@@ -199,54 +227,65 @@ GtfsRoute:
   }  
 }  
 ```  
-#### GtfsRoute NGSI-LD valori-chiave Esempio  
-Ecco un esempio di un GtfsRoute in formato JSON-LD come key-values. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+</details>  
+#### GtfsRoute Valori chiave NGSI-LD Esempio  
+Ecco un esempio di GtfsRoute in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:GtfsRoute:Spain:Malaga:1",  
-  "type": "GtfsRoute",  
-  "name": {  
-    "type": "Property",  
-    "value": "Parque del Sur _ Alameda Principal _ San Andr\u00e9s"  
-  },  
-  "shortName": {  
-    "type": "Property",  
-    "value": "1"  
-  },  
-  "page": {  
-    "type": "Property",  
-    "value": "http://www.emtmalaga.es/emt-mobile/informacionLinea.html"  
-  },  
-  "routeType": {  
-    "type": "Property",  
-    "value": "3"  
-  },  
-  "operatedBy": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:GtfsAgency:Malaga_EMT"  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:GtfsRoute:Spain:Malaga:1",  
+    "type": "GtfsRoute",  
+    "name": {  
+        "type": "Property",  
+        "value": "Parque del Sur _ Alameda Principal _ San Andr\u00e9s"  
+    },  
+    "operatedBy": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:GtfsAgency:Malaga_EMT"  
+    },  
+    "page": {  
+        "type": "Property",  
+        "value": "http://www.emtmalaga.es/emt-mobile/informacionLinea.html"  
+    },  
+    "routeType": {  
+        "type": "Property",  
+        "value": "3"  
+    },  
+    "shortName": {  
+        "type": "Property",  
+        "value": "1"  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
+    ]  
 }  
 ```  
+</details>  
 #### GtfsRoute NGSI-LD normalizzato Esempio  
-Ecco un esempio di un GtfsRoute in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
+Ecco un esempio di GtfsRoute in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non si usano opzioni e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "id": "urn:ngsi-ld:GtfsRoute:Spain:Malaga:1",  
-  "name": "Parque del Sur _ Alameda Principal _ San Andr\u00e9s",  
-  "operatedBy": "urn:ngsi-ld:GtfsAgency:Malaga_EMT",  
-  "page": "http://www.emtmalaga.es/emt-mobile/informacionLinea.html",  
-  "routeType": "3",  
-  "shortName": "1",  
-  "type": "GtfsRoute"  
+    "id": "urn:ngsi-ld:GtfsRoute:Spain:Malaga:1",  
+    "type": "GtfsRoute",  
+    "name": "Parque del Sur _ Alameda Principal _ San Andr\u00e9s",  
+    "operatedBy": "urn:ngsi-ld:GtfsAgency:Malaga_EMT",  
+    "page": "http://www.emtmalaga.es/emt-mobile/informacionLinea.html",  
+    "routeType": "3",  
+    "shortName": "1",  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
+    ]  
 }  
 ```  
-
-Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per avere una risposta su come trattare le unità di grandezza
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per ottenere una risposta su come gestire le unità di grandezza.  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
