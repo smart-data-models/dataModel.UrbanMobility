@@ -1,17 +1,32 @@
-エンティティGtfsAccessPoint  
-=====================  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティGtfsAccessPoint  
+=====================<!-- /10-Header -->  
+<!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/GtfsAccessPoint/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな説明。**GTFSアクセスポイント**について  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+グローバルな記述です。**GTFSアクセスポイント  
+バージョン: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `address`: 郵送先住所  - `alternateName`: このアイテムの別称  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `code`: GTFSの`stop_code`と同じです。  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `hasParentStation`: GTFSの `parent_station` と同じです。  - `hasService`: このルールが適用されるサービスservice_id`から派生したものです。  - `hasStop`: タイプGtfsStopのEntityを指していること。  - `hasTrip`: このEntityに関連付けられたTrip。GtfsTripタイプのEntityを指すものとする。  - `id`: エンティティのユニークな識別子  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `name`: このアイテムの名前です。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `page`: GTFSの`stop_url`と同じです。  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `stop_desc`: GTFSの`stop_desc`と同じです。  - `type`: NGSI Entity Typeです。GtfsAccessPointである必要があります。  - `wheelChairAccessible`: GTFSの `wheelchair_boarding` と同じです。Enum:'0, 1 ,2'.GTFS](https://developers.google.com/transit/gtfs/reference/#stopstxt)にて参照。  - `zoneCode`: このストップが所属するトランスポートゾーンGTFSの`zone_id`と同じです。    
-必須項目  
-- `id`  - `location`  - `name`  - `type`    
-https://developers.google.com/transit/gtfs/reference/#stopstxt](https://developers.google.com/transit/gtfs/reference/#stopstxt)をご覧ください。これは、GTFSの`stop`で、`location_type`が`2`に等しいものです。  
-## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます  
+<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: この項目の別称  - `areaServed[string]`: サービスまたは提供品が提供される地理的な地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `code[string]`: GTFSの `stop_code` と同じ。  . Model: [http://schema.org/Text](http://schema.org/Text)- `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このアイテムの説明  - `hasParentStation[*]`: GTFSの`parent_station`と同じです。  - `hasService[string]`: このルールが適用されるサービス。service_id` から派生したものです。  . Model: [https://schema.org/URL](https://schema.org/URL)- `hasStop[array]`: GtfsStop 型のエンティティを指すものとする。  - `hasTrip[*]`: このEntityに関連付けられたTrip。GtfsTrip 型の Entity を指すものとする。  . Model: [https://schema.org/URL](https://schema.org/URL)- `id[*]`: エンティティの一意な識別子  - `location[*]`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name[string]`: このアイテムの名称です。  - `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `page[string]`: GTFSの `stop_url` と同じ。  . Model: [http://schema.org/URL](http://schema.org/URL)- `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `stop_desc[string]`: GTFS の `stop_desc` と同じである。  - `type[string]`: NGSI エンティティタイプ。GtfsAccessPointである必要があります。  - `wheelChairAccessible[string]`: GTFS の `wheelchair_boarding` と同じ。Enum:'0, 1 ,2'.GTFS](https://developers.google.com/transit/gtfs/reference/#stopstxt)で参照。  - `zoneCode[string]`: このストップが属するトランスポートゾーン。GTFSの `zone_id` と同じ。  . Model: [https://schema.org/Text](https://schema.org/Text)<!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
+必要なプロパティ  
+- `id`  - `location`  - `name`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+https://developers.google.com/transit/gtfs/reference/#stopstxt](https://developers.google.com/transit/gtfs/reference/#stopstxt) を参照してください。これは GTFS の `stop` であり、 `location_type` は `2` に等しい。  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 GtfsAccessPoint:    
@@ -374,11 +389,22 @@ GtfsAccessPoint:
     - name    
     - location    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/GtfsAccessPoint/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsAccessPoint/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## ペイロードの例  
-#### GtfsAccessPoint NGSI-v2 key-values 例  
-GtfsAccessPointをkey-valuesとしてJSON-LD形式で記述した例を示します。これは、`options=keyValues`を使った場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### GtfsAccessPoint NGSI-v2 key-value の例。  
+ここでは、GtfsAccessPointをJSON-LD形式でkey-valuesとした例を示します。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:AccessPoint:Madrid:acc_4_1_3",  
@@ -397,8 +423,10 @@ GtfsAccessPoint:
   "hasParentStation": "urn:ngsi-ld:Gtfstation:Madrid:est_90_21"  
 }  
 ```  
+</details>  
 #### GtfsAccessPoint NGSI-v2 正規化例  
-GtfsAccessPointをJSON-LD形式で正規化した例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+GtfsAccessPoint を JSON-LD 形式で正規化した例を示します。これはオプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:AccessPoint:Madrid:acc_4_1_3",  
@@ -428,71 +456,82 @@ GtfsAccessPoint:
   }  
 }  
 ```  
-#### GtfsAccessPoint NGSI-LD のキーバリューの例。  
-GtfsAccessPointをkey-valuesとしてJSON-LD形式で記述した例を示します。これは、`options=keyValues`を使った場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### GtfsAccessPoint NGSI-LD キー値例  
+GtfsAccessPointをJSON-LD形式でkey-valuesとした例です。これは、`options=keyValues`を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:AccessPoint:Madrid:acc_4_1_3",  
-  "type": "GtfsAccessPoint",  
-  "name": {  
-    "type": "Property",  
-    "value": "Bravo Murillo"  
-  },  
-  "hasParentStation": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:GtfsStation:Madrid:est_90_21"  
-  },  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        -3.69036,  
-        40.46629  
-      ]  
-    }  
-  },  
-  "address": {  
-    "type": "Property",  
-    "value": {  
-      "addressLocality": "Madrid",  
-      "addressCountry": "ES",  
-      "streetAddress": "Calle de Bravo Murillo 377",  
-      "type": "PostalAddress"  
-    }  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:AccessPoint:Madrid:acc_4_1_3",  
+    "type": "GtfsAccessPoint",  
+    "address": {  
+        "type": "Property",  
+        "value": {  
+            "addressLocality": "Madrid",  
+            "addressCountry": "ES",  
+            "streetAddress": "Calle de Bravo Murillo 377",  
+            "type": "PostalAddress"  
+        }  
+    },  
+    "hasParentStation": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:GtfsStation:Madrid:est_90_21"  
+    },  
+    "location": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                -3.69036,  
+                40.46629  
+            ]  
+        }  
+    },  
+    "name": {  
+        "type": "Property",  
+        "value": "Bravo Murillo"  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
+    ]  
 }  
 ```  
-#### GtfsAccessPoint NGSI-LDの正規化例  
-GtfsAccessPointをJSON-LD形式で正規化した例を示します。これは、オプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### GtfsAccessPoint NGSI-LD 正規化例  
+GtfsAccessPoint を JSON-LD 形式で正規化した例を示します。これはオプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "address": {  
-    "addressCountry": "ES",  
-    "addressLocality": "Madrid",  
-    "streetAddress": "Calle de Bravo Murillo 377",  
-    "type": "PostalAddress"  
-  },  
-  "hasParentStation": "urn:ngsi-ld:GtfsStation:Madrid:est_90_21",  
-  "id": "urn:ngsi-ld:AccessPoint:Madrid:acc_4_1_3",  
-  "location": {  
-    "coordinates": [  
-      -3.69036,  
-      40.46629  
-    ],  
-    "type": "Point"  
-  },  
-  "name": "Bravo Murillo",  
-  "type": "GtfsAccessPoint"  
+    "id": "urn:ngsi-ld:AccessPoint:Madrid:acc_4_1_3",  
+    "type": "GtfsAccessPoint",  
+    "address": {  
+        "addressCountry": "ES",  
+        "addressLocality": "Madrid",  
+        "streetAddress": "Calle de Bravo Murillo 377",  
+        "type": "PostalAddress"  
+    },  
+    "hasParentStation": "urn:ngsi-ld:GtfsStation:Madrid:est_90_21",  
+    "location": {  
+        "coordinates": [  
+            -3.69036,  
+            40.46629  
+        ],  
+        "type": "Point"  
+    },  
+    "name": "Bravo Murillo",  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
+    ]  
 }  
 ```  
-
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
