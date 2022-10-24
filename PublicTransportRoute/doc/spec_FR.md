@@ -1,19 +1,32 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 Entité : PublicTransportRoute  
-=============================  
+=============================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Licence ouverte] (https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/PublicTransportRoute/LICENSE.md)  
 [document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Description globale : **Une route générique de transport public**  
 version : 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Liste des propriétés  
 
-- `address`: L'adresse postale  - `alternateName`: Un nom alternatif pour cet élément  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `id`: Identifiant unique de l'entité  - `location`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `name`: Le nom de cet élément.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `routeCode`: ID ou code de la route (par exemple HT5200104000)  - `routeColor`: Couleur attribuée à la route dans le texte  - `routeSegments`: Segments de cet itinéraire définis par leur nom et leurs arrêts.  - `routeTextColor`: Couleur attribuée à la route en hexadécimal  - `schedule`: Heures de travail de cet itinéraire  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'article  - `shortRouteCode`: Forme abrégée de l'ID/code de la route (par exemple 5200104000)  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `transportationType`: Types de transports publics utilisant cet arrêt, tels que définis dans (https://developers.google.com/transit/gtfs/reference/#routestxt). Enum : "0, 1, 2, 3, 4, 5, 6, 7".  - `type`: Type d'entité NGSI. Il doit s'agir de PublicTransportRoute.    
+<sup><sub>[*] S'il n'y a pas de type dans un attribut, c'est parce qu'il pourrait avoir plusieurs types ou différents formats/modèles</sub></sup>.  
+- `address[object]`: L'adresse postale  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Un nom alternatif pour cet élément  - `areaServed[string]`: La zone géographique où un service ou un article offert est fourni  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated[string]`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified[string]`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description[string]`: Une description de cet article  - `id[*]`: Identifiant unique de l'entité  - `location[*]`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `name[string]`: Le nom de cet élément.  - `owner[array]`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `routeCode[string]`: ID ou code de la route (par exemple HT5200104000)  . Model: [ https://schema.org/Text.]( https://schema.org/Text.)- `routeColor[string]`: Couleur attribuée à la route dans le texte  . Model: [ https://schema.org/color.]( https://schema.org/color.)- `routeSegments[array]`: Segments de cet itinéraire définis par leur nom et leurs arrêts.  - `routeTextColor[string]`: Couleur attribuée à la route en hexadécimal  . Model: [ https://schema.org/color.]( https://schema.org/color.)- `schedule[array]`: Heures de travail de cet itinéraire  . Model: [https://schema.org/OpeningHoursSpecification.](https://schema.org/OpeningHoursSpecification.)- `seeAlso[*]`: liste d'uri pointant vers des ressources supplémentaires sur l'article  - `shortRouteCode[string]`: Forme abrégée de l'ID/code de la route (par exemple 5200104000)  . Model: [https://schema.org/Text.](https://schema.org/Text.)- `source[string]`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `transportationType[integer]`: Types de transports publics utilisant cet arrêt, tels que définis dans (https://developers.google.com/transit/gtfs/reference/#routestxt). Enum : "0, 1, 2, 3, 4, 5, 6, 7".  . Model: [https://schema.org/Number](https://schema.org/Number)- `type[string]`: Type d'entité NGSI. Il doit s'agir de PublicTransportRoute.  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Propriétés requises  
-- `id`  - `transportationType`  - `type`    
+- `id`  - `transportationType`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
 Modèle générique d'itinéraire de transport public. Il adopte certaines définitions du GTFS, mais il n'a pas besoin d'être lié à des données supplémentaires du GTFS. Un itinéraire est un trajet, proposé par un service de transport public, qui passe par un ensemble d'arrêts.  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
 ## Description des propriétés du modèle de données  
 Classés par ordre alphabétique (cliquez pour plus de détails)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 PublicTransportRoute:    
@@ -375,9 +388,14 @@ PublicTransportRoute:
   x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Exemples de charges utiles  
 #### PublicTransportRoute Valeurs-clés NGSI-v2 Exemple  
 Voici un exemple de PublicTransportRoute au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-v2 lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N3",  
@@ -440,8 +458,10 @@ PublicTransportRoute:
   ]  
 }  
 ```  
+</details>  
 #### PublicTransportRoute NGSI-v2 normalisée Exemple  
 Voici un exemple de PublicTransportRoute au format JSON-LD tel que normalisé. Ce format est compatible avec la NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N3",  
@@ -515,8 +535,10 @@ PublicTransportRoute:
   }  
 }  
 ```  
+</details>  
 #### PublicTransportRoute Valeurs clés NGSI-LD Exemple  
 Voici un exemple de PublicTransportRoute au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-LD lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N3",  
@@ -595,8 +617,10 @@ PublicTransportRoute:
     ]  
 }  
 ```  
+</details>  
 #### PublicTransportRoute NGSI-LD normalisé Exemple  
 Voici un exemple de PublicTransportRoute au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N3",  
@@ -665,8 +689,17 @@ PublicTransportRoute:
     },  
     "@context": [  
         "https://smart-data-models.github.io/data-models/context.jsonld",  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
     ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude.  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
