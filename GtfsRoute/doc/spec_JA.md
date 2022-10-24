@@ -1,17 +1,32 @@
-エンティティGtfsRoute  
-===============  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティGtfsRoute  
+===============<!-- /10-Header -->  
+<!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/GtfsRoute/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな説明**GTFSルート**。  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+グローバルな説明**GTFS ルート**。  
+バージョン: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `alternateName`: このアイテムの別称  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `id`: エンティティのユニークな識別子  - `name`: このアイテムの名前です。  - `operatedBy`: このルートを運用する機関タイプGtfsAgencyのEntityを指すものとする。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `page`: GTFSの`stop_url`と同じです。  - `routeColor`: GTFSの `route_color` と同じです。GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt)を参照してください。  - `routeSortOrder`: GTFSの `route_sort_order` と同じです。  - `routeTextColor`: GTFSの `route_text_color` と同じです。GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt)を参照してください。  - `routeType`: GTFSの `route_type` と同じです。許容される値 [GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt)で規定されている `route_type` に許容される値です。イナム:'0, 1, 2, 3, 4, 5, 6, 7'  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `shortName`: GTFSの `route_short_name` と同じです。  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: NGSIのEntityタイプ。それはGtfsRouteでなければならない。    
-必須項目  
-- `id`  - `type`    
-https://developers.google.com/transit/gtfs/reference/#routestxt](https://developers.google.com/transit/gtfs/reference/#routestxt)をご覧ください。  
-## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます  
+<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `alternateName[string]`: この項目の別称  - `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このアイテムの説明  - `id[*]`: エンティティの一意な識別子  - `name[string]`: このアイテムの名称です。  - `operatedBy[*]`: この経路を運営する機関。タイプ GtfsAgency のエンティティを指し示すものとする。  . Model: [https://schema.org/Text](https://schema.org/Text)- `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `page[string]`: GTFSの `stop_url` と同じ。  . Model: [http://schema.org/URL](http://schema.org/URL)- `routeColor[string]`: GTFS の `route_color` と同じです。GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt) を参照。  . Model: [https://schema.org/Text](https://schema.org/Text)- `routeSortOrder[integer]`: GTFS の `route_sort_order` と同じ。  . Model: [https://schema.org/Number.](https://schema.org/Number.)- `routeTextColor[string]`: GTFS の `route_text_color` と同じです。GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt) を参照。  . Model: [https://schema.org/Text](https://schema.org/Text)- `routeType[string]`: GTFS の `route_type` と同じ。許容される値は [GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt) で規定されている `route_type` で許容されるものである。Enum:'0, 1, 2, 3, 4, 5, 6, 7'.  . Model: [https://schema.org/Text](https://schema.org/Text)- `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `shortName[string]`: GTFS の `route_short_name` と同じ。  . Model: [https://schema.org/Text.](https://schema.org/Text.)- `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type[string]`: NGSI エンティティタイプ。GtfsRouteである必要があります。  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
+必要なプロパティ  
+- `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+参照[https://developers.google.com/transit/gtfs/reference/#routestxt](https://developers.google.com/transit/gtfs/reference/#routestxt)  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 GtfsRoute:    
@@ -159,11 +174,22 @@ GtfsRoute:
     - id    
     - type    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/GtfsRoute/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/data-models/specs/UrbanMobility/GtfsRoute/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## ペイロードの例  
-#### GtfsRoute NGSI-v2 key-values の例。  
-GtfsRouteをkey-valuesとしてJSON-LD形式で記述した例を示します。これは`options=keyValues`を使用した場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### GtfsRoute NGSI-v2 key-value の例  
+ここでは、GtfsRouteをJSON-LD形式でkey-valueにした例を示します。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:GtfsRoute:Spain:Malaga:1",  
@@ -175,8 +201,10 @@ GtfsRoute:
   "operatedBy": "urn:ngsi-ld:GtfsAgency:Malaga_EMT"  
 }  
 ```  
-#### GtfsRoute NGSI-v2の正規化例  
-正規化されたJSON-LD形式のGtfsRouteの例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### GtfsRoute NGSI-v2 正規化例  
+GtfsRouteをJSON-LD形式で正規化した例を示します。これはオプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:GtfsRoute:Spain:Malaga:1",  
@@ -199,54 +227,65 @@ GtfsRoute:
   }  
 }  
 ```  
-#### GtfsRoute NGSI-LDのキーバリューの例  
-GtfsRouteをkey-valuesとしてJSON-LD形式で記述した例を示します。これは、`options=keyValues`を使った場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### GtfsRoute NGSI-LD キー値の例  
+ここでは、GtfsRouteをJSON-LD形式でkey-valuesとして出力した例を示します。これは、`options=keyValues`を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:GtfsRoute:Spain:Malaga:1",  
-  "type": "GtfsRoute",  
-  "name": {  
-    "type": "Property",  
-    "value": "Parque del Sur _ Alameda Principal _ San Andr\u00e9s"  
-  },  
-  "shortName": {  
-    "type": "Property",  
-    "value": "1"  
-  },  
-  "page": {  
-    "type": "Property",  
-    "value": "http://www.emtmalaga.es/emt-mobile/informacionLinea.html"  
-  },  
-  "routeType": {  
-    "type": "Property",  
-    "value": "3"  
-  },  
-  "operatedBy": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:GtfsAgency:Malaga_EMT"  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:GtfsRoute:Spain:Malaga:1",  
+    "type": "GtfsRoute",  
+    "name": {  
+        "type": "Property",  
+        "value": "Parque del Sur _ Alameda Principal _ San Andr\u00e9s"  
+    },  
+    "operatedBy": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:GtfsAgency:Malaga_EMT"  
+    },  
+    "page": {  
+        "type": "Property",  
+        "value": "http://www.emtmalaga.es/emt-mobile/informacionLinea.html"  
+    },  
+    "routeType": {  
+        "type": "Property",  
+        "value": "3"  
+    },  
+    "shortName": {  
+        "type": "Property",  
+        "value": "1"  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
+    ]  
 }  
 ```  
-#### GtfsRoute NGSI-LDの正規化例  
-正規化されたJSON-LD形式のGtfsRouteの例です。これは、オプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### GtfsRoute NGSI-LD 正規化例  
+GtfsRouteをJSON-LD形式で正規化した例を示します。これはオプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "id": "urn:ngsi-ld:GtfsRoute:Spain:Malaga:1",  
-  "name": "Parque del Sur _ Alameda Principal _ San Andr\u00e9s",  
-  "operatedBy": "urn:ngsi-ld:GtfsAgency:Malaga_EMT",  
-  "page": "http://www.emtmalaga.es/emt-mobile/informacionLinea.html",  
-  "routeType": "3",  
-  "shortName": "1",  
-  "type": "GtfsRoute"  
+    "id": "urn:ngsi-ld:GtfsRoute:Spain:Malaga:1",  
+    "type": "GtfsRoute",  
+    "name": "Parque del Sur _ Alameda Principal _ San Andr\u00e9s",  
+    "operatedBy": "urn:ngsi-ld:GtfsAgency:Malaga_EMT",  
+    "page": "http://www.emtmalaga.es/emt-mobile/informacionLinea.html",  
+    "routeType": "3",  
+    "shortName": "1",  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
+    ]  
 }  
 ```  
-
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
