@@ -1,19 +1,32 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 エンティティ到着予測  
-==========  
+==========<!-- /10-Header -->  
+<!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/ArrivalEstimation/LICENSE.md)  
 [ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 グローバルな記述です。**到着予測**」。  
 バージョン: 0.0.3  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## プロパティ一覧  
 
-- `alternateName`: この項目の別称  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `hasStop`: GtfsStop 型のエンティティを指すものとする。  - `hasTrip`: このEntityに関連付けられたTrip。GtfsTrip 型の Entity を指すものとする。  - `headSign`: 旅客に対して旅行の目的地を示す標識に表示される文章を含むこと。  - `id`: エンティティの一意な識別子  - `name`: このアイテムの名称です。  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `remainingDistance`: 当該停留所に向かう旅行の残り到着距離（メートル）を記載すること。  - `remainingTime`: (2)残り時間 (3)残り時間：当該停留所に向かう旅行の残り時間を含む。残り時間は ISO8601 のデュレーションとしてエンコードされなければならない。例：`PT8M5S`。  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: NGSI Entity Typeです。ArrivalEstimationでなければならない。Enum:'ArrivalEstimation'（到着予測）。    
+<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `alternateName[string]`: この項目の別称  - `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このアイテムの説明  - `hasStop[array]`: GtfsStop 型のエンティティを指すものとする。  - `hasTrip[*]`: このEntityに関連付けられたTrip。GtfsTrip 型の Entity を指すものとする。  . Model: [https://schema.org/URL](https://schema.org/URL)- `headSign[string]`: 旅客に対して旅行の目的地を示す標識に表示される文章を含むこと。  . Model: [https://schema.org/Text.](https://schema.org/Text.)- `id[*]`: エンティティの一意な識別子  - `name[string]`: このアイテムの名称です。  - `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリスト  - `remainingDistance[number]`: 当該停留所に向かう旅行の残り到着距離（メートル）を記載すること。  . Model: [https://schema.org/Number](https://schema.org/Number)- `remainingTime[string]`: (2)残り時間 (3)残り時間：当該停留所に向かう旅行の残り時間を含む。残り時間は ISO8601 のデュレーションとしてエンコードされなければならない。例：`PT8M5S`。  - `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type[string]`: NGSI Entity Typeです。ArrivalEstimationでなければならない。Enum:'ArrivalEstimation'（到着予測）。  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 必要なプロパティ  
-- `hasStop`  - `hasTrip`  - `headSign`  - `id`  - `remainingTime`  - `type`    
+- `hasStop`  - `hasTrip`  - `headSign`  - `id`  - `remainingTime`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
 このエンティティタイプは、公共交通機関が特定のルートを運行している間に、特定の停留所に到着する予定時刻を取得する。  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
 ## プロパティのデータモデル記述  
 アルファベット順に並びます（クリックで詳細へ）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 ArrivalEstimation:    
@@ -161,9 +174,14 @@ ArrivalEstimation:
   x-version: 0.0.3    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## ペイロードの例  
 #### ArrivalEstimation NGSI-v2 key-value 例  
 以下は、ArrivalEstimationをJSON-LD形式でkey-valuesにした例である。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータが返される。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:ArrivalEstimation:L5C1_Stop74_1",  
@@ -175,8 +193,10 @@ ArrivalEstimation:
   "headSign": "Plaza Italia"  
 }  
 ```  
+</details>  
 #### 到着推定 NGSI-v2 正規化例  
 以下は、ArrivalEstimation を JSON-LD 形式で正規化した例である。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:ArrivalEstimation:L5C1_Stop74_1",  
@@ -200,8 +220,10 @@ ArrivalEstimation:
   }  
 }  
 ```  
+</details>  
 #### 到着予測 NGSI-LD キー値例  
-以下は、ArrivalEstimationをJSON-LD形式でkey-valuesにした例である。これは、`options=keyValues`を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返す。  
+以下は、ArrivalEstimationをJSON-LD形式でkey-valuesにした例である。これは、`options=keyValues`を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:ArrivalEstimation:L5C1_Stop74_1",  
@@ -232,8 +254,10 @@ ArrivalEstimation:
     ]  
 }  
 ```  
+</details>  
 #### 到着予測 NGSI-LD 正規化例  
 以下は、ArrivalEstimation を JSON-LD 形式で正規化した例である。これはオプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:ArrivalEstimation:L5C1_Stop74_1",  
@@ -244,8 +268,17 @@ ArrivalEstimation:
     "remainingDistance": 1200,  
     "remainingTime": "PT8M5S",  
     "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
     ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
