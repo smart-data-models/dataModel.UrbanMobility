@@ -1,17 +1,32 @@
-Entität: GtfsStop  
-=================  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entität: GtfsStop  
+=================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/GtfsStop/LICENSE.md)  
 [Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Globale Beschreibung: **GTFS Stop**  
+Version: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Liste der Eigenschaften  
 
-- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `code`: Gleich wie GTFS "stop_code  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `hasParentStation`: Wie GTFS `parent_station`.  - `hasService`: Dienst, für den diese Regel gilt. Abgeleitet von `service_id`  - `hasStop`: Sie muss auf eine Entität des Typs GtfsStop verweisen.  - `hasTrip`: Reise, die mit dieser Entität verbunden ist. Sie muss auf eine Entität des Typs GtfsTrip zeigen.  - `id`: Eindeutiger Bezeichner der Entität  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Artikels.  - `operatedBy`: Agentur, die diese Haltestelle betreibt. Liste der Beziehungen. Sie müssen auf eine Entität des Typs GtfsAgency verweisen  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `page`: Gleich wie GTFS `stop_url`  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `stop_desc`: Gleich wie GTFS `stop_desc`.  - `type`: NGSI-Entitätstyp. Es muss GtfsStop sein.  - `wheelChairAccessible`: Gleich wie GTFS `Rollstuhl_Einsteigen`. Enum:'0, 1 ,2'. Verweis in [GTFS](https://developers.google.com/transit/gtfs/reference/#stopstxt)  - `zoneCode`: Transportzone, zu der diese Haltestelle gehört. Gleich wie GTFS `zone_id`    
+<sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, liegt das daran, dass es mehrere Typen oder unterschiedliche Formate/Muster haben kann</sub></sup>.  
+- `address[object]`: Die Postanschrift  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `code[string]`: Gleich wie GTFS "stop_code  . Model: [http://schema.org/Text](http://schema.org/Text)- `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated[string]`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified[string]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description[string]`: Eine Beschreibung dieses Artikels  - `hasParentStation[*]`: Wie GTFS `parent_station`.  - `hasService[string]`: Dienst, für den diese Regel gilt. Abgeleitet von `service_id`  . Model: [https://schema.org/URL](https://schema.org/URL)- `hasStop[array]`: Sie muss auf eine Entität des Typs GtfsStop verweisen.  - `hasTrip[*]`: Reise, die mit dieser Entität verbunden ist. Sie muss auf eine Entität des Typs GtfsTrip zeigen.  . Model: [https://schema.org/URL](https://schema.org/URL)- `id[*]`: Eindeutiger Bezeichner der Entität  - `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name[string]`: Der Name dieses Artikels.  - `operatedBy[array]`: Agentur, die diese Haltestelle betreibt. Liste der Beziehungen. Sie müssen auf eine Entität des Typs GtfsAgency verweisen  . Model: [https://schema.org/URL](https://schema.org/URL)- `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `page[string]`: Gleich wie GTFS `stop_url`  . Model: [http://schema.org/URL](http://schema.org/URL)- `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `stop_desc[string]`: Gleich wie GTFS `stop_desc`.  - `type[string]`: NGSI-Entitätstyp. Es muss GtfsStop sein.  - `wheelChairAccessible[string]`: Gleich wie GTFS `Rollstuhl_Einsteigen`. Enum:'0, 1 ,2'. Verweis in [GTFS](https://developers.google.com/transit/gtfs/reference/#stopstxt)  - `zoneCode[string]`: Transportzone, zu der diese Haltestelle gehört. Gleich wie GTFS `zone_id`  . Model: [https://schema.org/Text](https://schema.org/Text)<!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Erforderliche Eigenschaften  
-- `id`  - `location`  - `name`  - `type`    
+- `id`  - `location`  - `name`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
 Siehe [https://developers.google.com/transit/gtfs/reference/#stopstxt](https://developers.google.com/transit/gtfs/reference/#stopstxt). Er repräsentiert einen GTFS "stop", dessen "location_type" gleich "0" sein muss.  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
 ## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 GtfsStop:    
@@ -392,11 +407,22 @@ GtfsStop:
     - name    
     - location    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/GtfsStop/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsStop/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Beispiel-Nutzlasten  
 #### GtfsStop NGSI-v2 key-values Beispiel  
 Hier ist ein Beispiel für einen GtfsStop im JSON-LD-Format als Schlüsselwerte. Dies ist kompatibel mit NGSI-v2, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:GtfsStop:Malaga_101",  
@@ -410,8 +436,10 @@ GtfsStop:
   "operatedBy": ["urn:ngsi-ld:GtfsAgency:Malaga_EMT"]  
 }  
 ```  
+</details>  
 #### GtfsStop NGSI-v2 normalisiert Beispiel  
 Hier ist ein Beispiel für einen GtfsStop im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:GtfsStop:Malaga_101",  
@@ -435,61 +463,72 @@ GtfsStop:
   }  
 }  
 ```  
+</details>  
 #### GtfsStop NGSI-LD key-values Beispiel  
 Hier ist ein Beispiel für einen GtfsStop im JSON-LD-Format als Schlüsselwerte. Dies ist kompatibel mit NGSI-LD, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:GtfsStop:Malaga_101",  
-  "type": "GtfsStop",  
-  "code": {  
-    "type": "Property",  
-    "value": "101"  
-  },  
-  "operatedBy": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:GtfsAgency:Malaga_EMT"  
-  },  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        -4.424393,  
-        36.716872  
-      ]  
-    }  
-  },  
-  "name": {  
-    "type": "Property",  
-    "value": "Alameda Principal Sur"  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:GtfsStop:Malaga_101",  
+    "type": "GtfsStop",  
+    "code": {  
+        "type": "Property",  
+        "value": "101"  
+    },  
+    "location": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                -4.424393,  
+                36.716872  
+            ]  
+        }  
+    },  
+    "name": {  
+        "type": "Property",  
+        "value": "Alameda Principal Sur"  
+    },  
+    "operatedBy": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:GtfsAgency:Malaga_EMT"  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
+    ]  
 }  
 ```  
+</details>  
 #### GtfsStop NGSI-LD normalisiert Beispiel  
 Hier ist ein Beispiel für einen GtfsStop im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "code": "101",  
-  "id": "urn:ngsi-ld:GtfsStop:Malaga_101",  
-  "location": {  
-    "coordinates": [  
-      -4.424393,  
-      36.716872  
-    ],  
-    "type": "Point"  
-  },  
-  "name": "Alameda Principal Sur",  
-  "operatedBy": "urn:ngsi-ld:GtfsAgency:Malaga_EMT",  
-  "type": "GtfsStop"  
+    "id": "urn:ngsi-ld:GtfsStop:Malaga_101",  
+    "type": "GtfsStop",  
+    "code": "101",  
+    "location": {  
+        "coordinates": [  
+            -4.424393,  
+            36.716872  
+        ],  
+        "type": "Point"  
+    },  
+    "name": "Alameda Principal Sur",  
+    "operatedBy": "urn:ngsi-ld:GtfsAgency:Malaga_EMT",  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
+    ]  
 }  
 ```  
-
-Siehe [FAQ 10](https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+Siehe [FAQ 10] (https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
