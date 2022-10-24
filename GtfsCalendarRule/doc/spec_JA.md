@@ -1,19 +1,32 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 エンティティGtfsCalendarRule  
-======================  
+======================<!-- /10-Header -->  
+<!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/GtfsCalendarRule/LICENSE.md)  
 [ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 グローバルな記述。**スマートデータモデル。GTFS カレンダールール**。  
 バージョン: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## プロパティ一覧  
 
-- `alternateName`: この項目の別称  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `endDate`: このルールの終了日を `YYYY-MM-DD` フォーマットで指定します。カレンダー.txt](https://developers.google.com/transit/gtfs/reference/#calendartxt)のフィールド `end_date` から取得することができる。  - `friday`: GTFS `friday` と同じ。  - `hasService`: このルールが適用されるサービス。service_id` から派生したものです。  - `id`: エンティティの一意な識別子  - `monday`: GTFS `monday` と同じ。  - `name`: このアイテムの名称です。  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `saturday`: GTFS `saturday` と同じ。  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `startDate`: このルールの開始日を `YYYY-MM-DD` フォーマットで指定する。この日付は [calendar.txt](https://developers.google.com/transit/gtfs/reference/#calendartxt) のフィールド `start_date` から取得できます。  - `sunday`: GTFS `sunday` と同じ。  - `thursday`: GTFS `thursday` と同じ。  - `tuesday`: GTFS `tuesday` と同じ。  - `type`: NGSI エンティティタイプ。GtfsCalendarRuleである必要があります。  - `wednesday`: GTFS `wednesday` と同じ。    
+<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `alternateName[string]`: この項目の別称  - `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このアイテムの説明  - `endDate[string]`: このルールの終了日を `YYYY-MM-DD` フォーマットで指定します。カレンダー.txt](https://developers.google.com/transit/gtfs/reference/#calendartxt)のフィールド `end_date` から取得することができる。  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `friday[boolean]`: GTFS `friday` と同じ。  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `hasService[string]`: このルールが適用されるサービス。service_id` から派生したものです。  . Model: [https://schema.org/URL](https://schema.org/URL)- `id[*]`: エンティティの一意な識別子  - `monday[boolean]`: GTFS `monday` と同じ。  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `name[string]`: このアイテムの名称です。  - `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリスト  - `saturday[boolean]`: GTFS `saturday` と同じ。  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `startDate[string]`: このルールの開始日を `YYYY-MM-DD` フォーマットで指定する。この日付は [calendar.txt](https://developers.google.com/transit/gtfs/reference/#calendartxt) のフィールド `start_date` から取得できます。  . Model: [https://schema.org/Date](https://schema.org/Date)- `sunday[boolean]`: GTFS `sunday` と同じ。  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `thursday[boolean]`: GTFS `thursday` と同じ。  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `tuesday[boolean]`: GTFS `tuesday` と同じ。  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `type[string]`: NGSI エンティティタイプ。GtfsCalendarRuleである必要があります。  - `wednesday[boolean]`: GTFS `wednesday` と同じ。  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)<!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 必要なプロパティ  
-- `endDate`  - `friday`  - `hasService`  - `id`  - `monday`  - `saturday`  - `startDate`  - `sunday`  - `thursday`  - `tuesday`  - `type`  - `wednesday`    
+- `endDate`  - `friday`  - `hasService`  - `id`  - `monday`  - `saturday`  - `startDate`  - `sunday`  - `thursday`  - `tuesday`  - `type`  - `wednesday`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
 参照[https://developers.google.com/transit/gtfs/reference/#calendartxt](https://developers.google.com/transit/gtfs/reference/#calendartxt)  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
 ## プロパティのデータモデル記述  
 アルファベット順に並びます（クリックで詳細へ）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 GtfsCalendarRule:    
@@ -189,9 +202,14 @@ GtfsCalendarRule:
   x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## ペイロードの例  
 #### GtfsCalendarRule NGSI-v2 key-value 例  
 GtfsCalendarRuleをJSON-LD形式でkey-valuesにした例です。これは、`options=keyValues`を使用した場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:CalendarRule:Madrid:Rule1267",  
@@ -209,8 +227,10 @@ GtfsCalendarRule:
   "endDate": "2019-01-01"  
 }  
 ```  
+</details>  
 #### GtfsCalendarRule NGSI-v2 正規化例  
 GtfsCalendarRuleをJSON-LD形式で正規化した例です。これはオプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:CalendarRule:Madrid:Rule1267",  
@@ -261,8 +281,10 @@ GtfsCalendarRule:
   }  
 }  
 ```  
+</details>  
 #### GtfsCalendarRule NGSI-LD キーバリュー例  
 GtfsCalendarRuleをJSON-LD形式でkey-valuesにした例です。これは、`options=keyValues`を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:CalendarRule:Madrid:Rule1267",  
@@ -323,8 +345,10 @@ GtfsCalendarRule:
     ]  
 }  
 ```  
+</details>  
 #### GtfsCalendarRule NGSI-LD 正規化例  
 GtfsCalendarRuleをJSON-LD形式で正規化した例です。これはオプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:CalendarRule:Madrid:Rule1267",  
@@ -341,8 +365,17 @@ GtfsCalendarRule:
     "tuesday": true,  
     "wednesday": true,  
     "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
     ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
