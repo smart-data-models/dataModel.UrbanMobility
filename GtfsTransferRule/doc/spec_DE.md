@@ -1,19 +1,32 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 Entität: GtfsTransferRule  
-=========================  
+=========================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/GtfsTransferRule/LICENSE.md)  
 [Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Globale Beschreibung: **GTFS-Übertragungsregel**  
 Version: 0.0.3  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Liste der Eigenschaften  
 
-- `alternateName`: Ein alternativer Name für diesen Artikel  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `hasDestination`: Fahrt, die mit diesem Entity verbunden ist. Sie muss auf eine Entität des Typs GtfsStop oder GtfsStation zeigen.  - `hasOrigin`: Fahrt, die mit diesem Entity verbunden ist. Sie muss auf eine Entität des Typs GtfsStop oder GtfsStation zeigen.  - `id`: Eindeutiger Bezeichner der Entität  - `minimumTransferTime`: Gleich wie GTFS `min_transfer_time`. Einheit:'Sekunden'.  - `name`: Der Name dieses Artikels.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `transferType`: Dasselbe wie GTFS `transfer_type`. Enum:'0, 1, 2, 3'  - `type`: NGSI-Entitätstyp. Es muss GtfsTransferRule sein    
+<sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, liegt das daran, dass es mehrere Typen oder unterschiedliche Formate/Muster haben kann</sub></sup>.  
+- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated[string]`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified[string]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description[string]`: Eine Beschreibung dieses Artikels  - `hasDestination[*]`: Fahrt, die mit diesem Entity verbunden ist. Sie muss auf eine Entität des Typs GtfsStop oder GtfsStation zeigen.  . Model: [http://schema.org/URL](http://schema.org/URL)- `hasOrigin[*]`: Fahrt, die mit diesem Entity verbunden ist. Sie muss auf eine Entität des Typs GtfsStop oder GtfsStation zeigen.  . Model: [http://schema.org/URL](http://schema.org/URL)- `id[*]`: Eindeutiger Bezeichner der Entität  - `minimumTransferTime[number]`: Gleich wie GTFS `min_transfer_time`. Einheit:'Sekunden'.  . Model: [https://schema.org/Integer](https://schema.org/Integer)- `name[string]`: Der Name dieses Artikels.  - `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Es wird empfohlen, den voll qualifizierten Domänennamen des Quellanbieters oder die URL des Quellobjekts zu verwenden.  - `transferType[string]`: Dasselbe wie GTFS `transfer_type`. Enum:'0, 1, 2, 3'  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: NGSI-Entitätstyp. Es muss GtfsTransferRule sein  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Erforderliche Eigenschaften  
-- `hasDestination`  - `hasOrigin`  - `id`  - `transferType`  - `type`    
+- `hasDestination`  - `hasOrigin`  - `id`  - `transferType`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
 Siehe [https://developers.google.com/transit/gtfs/reference/#transferstxt](https://developers.google.com/transit/gtfs/reference/#transferstxt)  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
 ## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 GtfsTransferRule:    
@@ -90,7 +103,7 @@ GtfsTransferRule:
     minimumTransferTime:    
       description: 'Same as GTFS `min_transfer_time`. Unit:''seconds'''    
       minimum: 1    
-      type: integer    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Integer    
         type: Property    
@@ -157,9 +170,14 @@ GtfsTransferRule:
   x-version: 0.0.3    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Beispiel-Nutzlasten  
 #### GtfsTransferRule NGSI-v2 key-values Beispiel  
 Hier ist ein Beispiel für eine GtfsTransferRule im JSON-LD-Format als Schlüsselwerte. Dies ist kompatibel mit NGSI-v2, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:GtfsTransferRule:Malaga:Linea1_Linea5",  
@@ -171,8 +189,10 @@ GtfsTransferRule:
   "minimumTransferTime": 10  
 }  
 ```  
+</details>  
 #### GtfsTransferRule NGSI-v2 normalisiert Beispiel  
 Hier ist ein Beispiel für eine GtfsTransferRule im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:GtfsTransferRule:Malaga:Linea1_Linea5",  
@@ -196,8 +216,10 @@ GtfsTransferRule:
   }  
 }  
 ```  
+</details>  
 #### GtfsTransferRule NGSI-LD key-values Beispiel  
-Hier ist ein Beispiel für eine GtfsTransferRule im JSON-LD Format als Key-Values. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für eine GtfsTransferRule im JSON-LD-Format als Schlüsselwerte. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:GtfsTransferRule:Malaga:Linea1_Linea5",  
@@ -228,8 +250,10 @@ GtfsTransferRule:
     ]  
 }  
 ```  
+</details>  
 #### GtfsTransferRule NGSI-LD normalisiert Beispiel  
 Hier ist ein Beispiel für eine GtfsTransferRule im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:GtfsTransferRule:Malaga:Linea1_Linea5",  
@@ -240,8 +264,17 @@ GtfsTransferRule:
     "name": "L1_L5",  
     "transferType": "0",  
     "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
     ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 Siehe [FAQ 10] (https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
