@@ -1,17 +1,32 @@
-Entità: GtfsTrip  
-================  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entità: GtfsTrip  
+================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Licenza aperta](https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/GtfsTrip/LICENSE.md)  
 [documento generato automaticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Descrizione globale: Viaggio **GTFS**  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+Descrizione globale: **GTFS Trip**  
+versione: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Elenco delle proprietà  
 
-- `alternateName`: Un nome alternativo per questa voce  - `bikesAllowed`: Uguale a GTFS `bikes_allowed`. Enum:'0, 1, 2'. Vedi [GTFS](https://developers.google.com/transit/gtfs/reference/#tripstxt)  - `block`: Uguale a GTFS `block_id`.  - `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated`: Timestamp di creazione dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `dateModified`: Timestamp dell'ultima modifica dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `description`: Una descrizione di questo articolo  - `direction`: Uguale a GTFS `direction_id`. Enum:'0, 1'.  - `hasRoute`: Uguale a `route_id`. Deve puntare a un'entità di tipo GtfsRoute  - `hasService`: Uguale a GTFS `service_id`. Deve puntare a un'entità di tipo GtfsService  - `hasShape`: Uguale a GTFS `shape_id`. Deve puntare a un'entità di tipo GtfsShape  - `headSign`: Uguale a GTFS `trip_headsign`.  - `id`: Identificatore unico dell'entità  - `name`: Il nome di questo articolo.  - `owner`: Una lista contenente una sequenza di caratteri codificata in JSON che si riferisce agli ID unici dei proprietari  - `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `shortName`: Uguale a GTFS `trip_short_name`.  - `source`: Una sequenza di caratteri che dà la fonte originale dei dati dell'entità come URL. Si raccomanda di essere il nome di dominio completamente qualificato del fornitore di origine, o l'URL dell'oggetto di origine.  - `type`: Tipo di entità NGSI. Deve essere GtfsTrip  - `wheelChairAccessible`: Uguale a GTFS `wheelchair_accessible`. Enum:'0, 1, 2'.    
+<sup><sub>[*] Se non c'è un tipo in un attributo è perché potrebbe avere diversi tipi o diversi formati/modelli</sub></sup>.  
+- `alternateName[string]`: Un nome alternativo per questa voce  - `bikesAllowed[number]`: Come GTFS `bikes_allowed`. Enum:'0, 1, 2'. Vedere [GTFS](https://developers.google.com/transit/gtfs/reference/#tripstxt)  . Model: [https://schema.org/Number](https://schema.org/Number)- `block[string]`: Come il `block_id` di GTFS.  . Model: [https://schema.org/Text.](https://schema.org/Text.)- `dataProvider[string]`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated[string]`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `dateModified[string]`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `description[string]`: Descrizione dell'articolo  - `direction[number]`: Uguale a `direction_id' di GTFS. Enum:'0, 1'  . Model: [https://schema.org/Number](https://schema.org/Number)- `hasRoute[string]`: Uguale a `route_id`. Deve puntare a un'entità di tipo GtfsRoute.  . Model: [http://schema.org/URL](http://schema.org/URL)- `hasService[*]`: È uguale a `service_id` di GTFS. Deve puntare a un'entità di tipo GtfsService.  . Model: [http://schema.org/URL](http://schema.org/URL)- `hasShape[*]`: È uguale a `shape_id` di GTFS. Deve puntare a un'entità di tipo GtfsShape.  . Model: [http://schema.org/URL](http://schema.org/URL)- `headSign[string]`: Come il `trip_headsign` di GTFS  . Model: [https://schema.org/Text.](https://schema.org/Text.)- `id[*]`: Identificatore univoco dell'entità  - `name[string]`: Il nome di questo elemento.  - `owner[array]`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `seeAlso[*]`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `shortName[string]`: Stesso nome di GTFS `trip_short_name  . Model: [https://schema.org/Text.](https://schema.org/Text.)- `source[string]`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `type[string]`: Tipo di entità NGSI. Deve essere GtfsTrip  - `wheelChairAccessible[number]`: Come GTFS `wheelchair_accessible`. Enum:'0, 1, 2'  . Model: [https://schema.org/Number](https://schema.org/Number)<!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Proprietà richieste  
-- `hasRoute`  - `hasService`  - `id`  - `type`    
+- `hasRoute`  - `hasService`  - `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
 Vedere [https://developers.google.com/transit/gtfs/reference/#tripstxt](https://developers.google.com/transit/gtfs/reference/#tripstxt)  
-## Descrizione del modello di dati delle proprietà  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## Modello di dati descrizione delle proprietà  
 Ordinati in ordine alfabetico (clicca per i dettagli)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 GtfsTrip:    
@@ -190,11 +205,22 @@ GtfsTrip:
     - hasRoute    
     - hasService    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/GtfsTrip/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsTrip/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.1    
 ```  
 </details>    
-## Esempio di payloads  
-#### Esempio di valori chiave GtfsTrip NGSI-v2  
-Ecco un esempio di un GtfsTrip in formato JSON-LD come key-values. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
+## Esempi di payload  
+#### GtfsTrip NGSI-v2 valori-chiave Esempio  
+Ecco un esempio di GtfsTrip in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:GtfsTrip:Spain:Malaga:1",  
@@ -206,8 +232,10 @@ GtfsTrip:
   "hasShape": "urn:ngsi-ld:GtfsShape:Shape01"  
 }  
 ```  
+</details>  
 #### GtfsTrip NGSI-v2 normalizzato Esempio  
-Ecco un esempio di un GtfsTrip in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
+Ecco un esempio di GtfsTrip in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non si usano opzioni e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:GtfsTrip:Spain:Malaga:1",  
@@ -232,54 +260,65 @@ GtfsTrip:
   }  
 }  
 ```  
-#### GtfsTrip NGSI-LD valori chiave Esempio  
-Ecco un esempio di un GtfsTrip in formato JSON-LD come key-values. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+</details>  
+#### GtfsTrip Valori chiave NGSI-LD Esempio  
+Ecco un esempio di GtfsTrip in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:GtfsTrip:Spain:Malaga:1",  
-  "type": "GtfsTrip",  
-  "direction": {  
-    "type": "Property",  
-    "value": 0  
-  },  
-  "headSign": {  
-    "type": "Property",  
-    "value": "San Andr\u00e9s"  
-  },  
-  "hasRoute": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:GtfsRoute:Spain:Malaga:1"  
-  },  
-  "hasService": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:GtfsService:Malaga_LAB"  
-  },  
-  "hasShape": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:GtfsShape:Shape01"  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:GtfsTrip:Spain:Malaga:1",  
+    "type": "GtfsTrip",  
+    "direction": {  
+        "type": "Property",  
+        "value": 0  
+    },  
+    "hasRoute": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:GtfsRoute:Spain:Malaga:1"  
+    },  
+    "hasService": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:GtfsService:Malaga_LAB"  
+    },  
+    "hasShape": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:GtfsShape:Shape01"  
+    },  
+    "headSign": {  
+        "type": "Property",  
+        "value": "San Andr\u00e9s"  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
+    ]  
 }  
 ```  
+</details>  
 #### GtfsTrip NGSI-LD normalizzato Esempio  
-Ecco un esempio di un GtfsTrip in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
+Ecco un esempio di GtfsTrip in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non si usano opzioni e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "direction": 0,  
-  "hasRoute": "urn:ngsi-ld:GtfsRoute:Spain:Malaga:1",  
-  "hasService": "urn:ngsi-ld:GtfsService:Malaga_LAB",  
-  "hasShape": "urn:ngsi-ld:GtfsShape:Shape01",  
-  "headSign": "San Andr\u00e9s",  
-  "id": "urn:ngsi-ld:GtfsTrip:Spain:Malaga:1",  
-  "type": "GtfsTrip"  
+    "id": "urn:ngsi-ld:GtfsTrip:Spain:Malaga:1",  
+    "type": "GtfsTrip",  
+    "direction": 0,  
+    "hasRoute": "urn:ngsi-ld:GtfsRoute:Spain:Malaga:1",  
+    "hasService": "urn:ngsi-ld:GtfsService:Malaga_LAB",  
+    "hasShape": "urn:ngsi-ld:GtfsShape:Shape01",  
+    "headSign": "San Andr\u00e9s",  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
+    ]  
 }  
 ```  
-
-Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per avere una risposta su come trattare le unità di grandezza
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per ottenere una risposta su come gestire le unità di grandezza.  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
