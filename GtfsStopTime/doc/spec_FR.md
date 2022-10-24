@@ -1,19 +1,32 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 Entité : GtfsStopTime  
-=====================  
+=====================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Licence ouverte] (https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/GtfsStopTime/LICENSE.md)  
 [document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Description globale : **Heure d'arrêt du systèmeGTFS**  
 version : 0.0.2  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Liste des propriétés  
 
-- `alternateName`: Un nom alternatif pour cet élément  - `arrivalTime`: Identique à GTFS `arrival_time`.  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `departureTime`: Identique à GTFS `departure_time`.  - `description`: Une description de cet article  - `distanceTravelled`: Identique à GTFS `shape_dist_traveled`.  - `dropOffType`: Identique à GTFS `drop_off_type`. Enum : "0, 1, 2, 3".  - `hasStop`: Identique à GTFS `stop_id`. Il doit pointer vers une entité de type GtfsStop.  - `hasTrip`: Voyage associé à cette Entité. Il doit pointer vers une Entité de type GtfsTrip  - `id`: Identifiant unique de l'entité  - `name`: Le nom de cet élément.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `pickupType`: Identique à GTFS `pickup_type`. Enum : "0, 1, 2, 3".  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'article  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `stopHeadsign`: Identique à GTFS `stop_headsign`.  - `stopSequence`: Identique à GTFS `stop_sequence`. Commence par `1`.  - `timepoint`: Identique au `timepoint` de GTFS. Enum : "0, 1  - `type`: Type d'entité NGSI. Il doit être GtfsStopTime.    
+<sup><sub>[*] S'il n'y a pas de type dans un attribut, c'est parce qu'il pourrait avoir plusieurs types ou différents formats/modèles</sub></sup>.  
+- `alternateName[string]`: Un nom alternatif pour cet élément  - `arrivalTime[string]`: Identique à GTFS `arrival_time`.  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated[string]`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified[string]`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `departureTime[string]`: Identique à GTFS `departure_time`.  . Model: [https://schema.org/Text](https://schema.org/Text)- `description[string]`: Une description de cet article  - `distanceTravelled[number]`: Identique à GTFS `shape_dist_traveled`.  . Model: [https://schema.org/Number](https://schema.org/Number)- `dropOffType[string]`: Identique à GTFS `drop_off_type`. Enum : "0, 1, 2, 3".  . Model: [https://schema.org/Text](https://schema.org/Text)- `hasStop[*]`: Identique à GTFS `stop_id`. Il doit pointer vers une entité de type GtfsStop.  . Model: [http://schema.org/URL](http://schema.org/URL)- `hasTrip[*]`: Voyage associé à cette Entité. Il doit pointer vers une Entité de type GtfsTrip  . Model: [https://schema.org/URL](https://schema.org/URL)- `id[*]`: Identifiant unique de l'entité  - `name[string]`: Le nom de cet élément.  - `owner[array]`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `pickupType[string]`: Identique à GTFS `pickup_type`. Enum : "0, 1, 2, 3".  . Model: [https://schema.org/Text](https://schema.org/Text)- `seeAlso[*]`: liste d'uri pointant vers des ressources supplémentaires sur l'article  - `source[string]`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `stopHeadsign[string]`: Identique à GTFS `stop_headsign`.  . Model: [https://schema.org/Text.](https://schema.org/Text.)- `stopSequence[integer]`: Identique à GTFS `stop_sequence`. Commence par `1`.  . Model: [https://schema.org/Integer](https://schema.org/Integer)- `timepoint[string]`: Identique au `timepoint` de GTFS. Enum : "0, 1  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: Type d'entité NGSI. Il doit être GtfsStopTime.  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Propriétés requises  
-- `arrivalTime`  - `departureTime`  - `hasStop`  - `hasTrip`  - `id`  - `stopSequence`  - `type`    
+- `arrivalTime`  - `departureTime`  - `hasStop`  - `hasTrip`  - `id`  - `stopSequence`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
 Voir [https://developers.google.com/transit/gtfs/reference/#stop_timestxt](https://developers.google.com/transit/gtfs/reference/#stop_timestxt)  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
 ## Description des propriétés du modèle de données  
 Classés par ordre alphabétique (cliquez pour plus de détails)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 GtfsStopTime:    
@@ -209,9 +222,14 @@ GtfsStopTime:
   x-version: 0.0.2    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Exemples de charges utiles  
 #### GtfsStopTime Valeurs-clés NGSI-v2 Exemple  
 Voici un exemple de GtfsStopTime au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-v2 quand on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:GtfsStopTime:Spain:Madrid:EMT:FE0010011_737",  
@@ -224,8 +242,10 @@ GtfsStopTime:
   "departureTime": "07:04:24"  
 }  
 ```  
+</details>  
 #### GtfsStopTime NGSI-v2 normalisé Exemple  
 Voici un exemple de GtfsStopTime au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:GtfsStopTime:Spain:Madrid:EMT:FE0010011_737",  
@@ -252,8 +272,10 @@ GtfsStopTime:
   }  
 }  
 ```  
+</details>  
 #### GtfsStopTime Valeurs-clés NGSI-LD Exemple  
 Voici un exemple de GtfsStopTime au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-LD quand on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:GtfsStopTime:Spain:Madrid:EMT:FE0010011_737",  
@@ -288,8 +310,10 @@ GtfsStopTime:
     ]  
 }  
 ```  
+</details>  
 #### GtfsStopTime NGSI-LD normalisé Exemple  
 Voici un exemple de GtfsStopTime au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:GtfsStopTime:Spain:Madrid:EMT:FE0010011_737",  
@@ -301,8 +325,17 @@ GtfsStopTime:
     "hasTrip": "urn:ngsi-ld:GtfsTrip:Madrid:EMT:FE0010011",  
     "stopSequence": 4,  
     "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
     ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude.  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
