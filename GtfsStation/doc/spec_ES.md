@@ -1,17 +1,32 @@
-Entidad: GtfsStation  
-====================  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entidad: GtfsStation  
+====================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Licencia abierta](https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/GtfsStation/LICENSE.md)  
 [documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Descripción global: **Estación GTFS**  
+versión: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Lista de propiedades  
 
-- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `code`: Igual que GTFS `stop_code`.  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `hasAccessPoint`: Apuntará a otra(s) entidad(es) de tipo GtfsAccessPoint  - `hasParentStation`: Igual que GTFS `parent_station`.  - `hasService`: Servicio al que se aplica esta regla. Derivada de `service_id`.  - `hasStop`: Apuntará a una entidad de tipo GtfsStop  - `hasTrip`: Viaje asociado a esta Entidad. Apuntará a una entidad de tipo GtfsTrip  - `id`: Identificador único de la entidad  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `page`: Igual que GTFS `stop_url`  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `stop_desc`: Igual que GTFS `stop_desc`.  - `type`: Tipo de entidad NGSI. Tiene que ser GtfsStation  - `wheelChairAccessible`: Igual que GTFS `wheelchair_boarding`. Enum:'0, 1 ,2'. Referencia en [GTFS](https://developers.google.com/transit/gtfs/reference/#stopstxt)  - `zoneCode`: Zona de transporte a la que pertenece esta parada. Igual que GTFS `zone_id`.    
+<sup><sub>[*] Si no hay un tipo en un atributo es porque puede tener varios tipos o diferentes formatos/patrones</sub></sup>  
+- `address[object]`: La dirección postal  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Un nombre alternativo para este artículo  - `areaServed[string]`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  . Model: [https://schema.org/Text](https://schema.org/Text)- `code[string]`: Igual que GTFS `stop_code`  . Model: [http://schema.org/Text](http://schema.org/Text)- `dataProvider[string]`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated[string]`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified[string]`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description[string]`: Una descripción de este artículo  - `hasAccessPoint[array]`: Apuntará a otra(s) entidad(es) de tipo GtfsAccessPoint  . Model: [https://schema.org/URL](https://schema.org/URL)- `hasParentStation[*]`: Igual que GTFS `parent_station`.  - `hasService[string]`: Servicio al que se aplica esta regla. Derivado de `service_id`.  . Model: [https://schema.org/URL](https://schema.org/URL)- `hasStop[array]`: Apuntará a una entidad de tipo GtfsStop  - `hasTrip[*]`: Viaje asociado a esta Entidad. Apuntará a una entidad de tipo GtfsTrip  . Model: [https://schema.org/URL](https://schema.org/URL)- `id[*]`: Identificador único de la entidad  - `location[*]`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name[string]`: El nombre de este artículo.  - `owner[array]`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `page[string]`: Igual que el GTFS `stop_url`.  . Model: [http://schema.org/URL](http://schema.org/URL)- `seeAlso[*]`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source[string]`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `stop_desc[string]`: Igual que GTFS `stop_desc`.  - `type[string]`: Tipo de entidad NGSI. Tiene que ser GtfsStation  - `wheelChairAccessible[string]`: Igual que GTFS `wheelchair_boarding`. Enum:'0, 1 ,2'. Referencia en [GTFS](https://developers.google.com/transit/gtfs/reference/#stopstxt)  - `zoneCode[string]`: Zona de transporte a la que pertenece esta parada. Igual que GTFS `zone_id`.  . Model: [https://schema.org/Text](https://schema.org/Text)<!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Propiedades requeridas  
-- `hasStop`  - `id`  - `location`  - `name`  - `type`    
+- `hasStop`  - `id`  - `location`  - `name`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
 Véase [https://developers.google.com/transit/gtfs/reference/#stopstxt](https://developers.google.com/transit/gtfs/reference/#stopstxt).   Es un `stop` GTFS cuyo `location_type` es igual a `1`.  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
 ## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 GtfsStation:    
@@ -391,11 +406,22 @@ GtfsStation:
     - location    
     - hasStop    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/GtfsStation/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsStation/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Ejemplo de carga útil  
 #### GtfsStation NGSI-v2 key-values Ejemplo  
 Aquí hay un ejemplo de un GtfsStation en formato JSON-LD como valores-clave. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:GtfsStation:Madrid:est_90_21",  
@@ -414,8 +440,10 @@ GtfsStation:
   "hasStop": ["urn:ngsi-ld:GtfsStop:Madrid_par_4_1"]  
 }  
 ```  
+</details>  
 #### GtfsStation NGSI-v2 normalizado Ejemplo  
 Aquí hay un ejemplo de una GtfsStation en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:GtfsStation:Madrid:est_90_21",  
@@ -447,80 +475,91 @@ GtfsStation:
   }  
 }  
 ```  
+</details>  
 #### GtfsStation NGSI-LD key-values Ejemplo  
 Aquí hay un ejemplo de un GtfsStation en formato JSON-LD como valores-clave. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:GtfsStation:Madrid:est_90_21",  
-  "type": "GtfsStation",  
-  "code": {  
-    "type": "Property",  
-    "value": "21"  
-  },  
-  "name": {  
-    "type": "Property",  
-    "value": "Intercambiador de Plaza de Castilla"  
-  },  
-  "hasStop": {  
-    "type": "Relationship",  
-    "object": [  
-      "urn:ngsi-ld:GtfsStop:Madrid_par_4_1"  
+    "id": "urn:ngsi-ld:GtfsStation:Madrid:est_90_21",  
+    "type": "GtfsStation",  
+    "address": {  
+        "type": "Property",  
+        "value": {  
+            "addressLocality": "Madrid",  
+            "addressCountry": "ES",  
+            "streetAddress": "Paseo de la Castellana 189",  
+            "type": "PostalAddress"  
+        }  
+    },  
+    "code": {  
+        "type": "Property",  
+        "value": "21"  
+    },  
+    "hasStop": {  
+        "type": "Relationship",  
+        "object": [  
+            "urn:ngsi-ld:GtfsStop:Madrid_par_4_1"  
+        ]  
+    },  
+    "location": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                -3.6892,  
+                40.4669  
+            ]  
+        }  
+    },  
+    "name": {  
+        "type": "Property",  
+        "value": "Intercambiador de Plaza de Castilla"  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
     ]  
-  },  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        -3.6892,  
-        40.4669  
-      ]  
-    }  
-  },  
-  "address": {  
-    "type": "Property",  
-    "value": {  
-      "addressLocality": "Madrid",  
-      "addressCountry": "ES",  
-      "streetAddress": "Paseo de la Castellana 189",  
-      "type": "PostalAddress"  
-    }  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
 }  
 ```  
+</details>  
 #### GtfsStation NGSI-LD normalizado Ejemplo  
 Aquí hay un ejemplo de una GtfsStation en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "address": {  
-    "addressCountry": "ES",  
-    "addressLocality": "Madrid",  
-    "streetAddress": "Paseo de la Castellana 189",  
-    "type": "PostalAddress"  
-  },  
-  "code": "21",  
-  "hasStop": [  
-    "urn:ngsi-ld:GtfsStop:Madrid_par_4_1"  
-  ],  
-  "id": "urn:ngsi-ld:GtfsStation:Madrid:est_90_21",  
-  "location": {  
-    "coordinates": [  
-      -3.6892,  
-      40.4669  
+    "id": "urn:ngsi-ld:GtfsStation:Madrid:est_90_21",  
+    "type": "GtfsStation",  
+    "address": {  
+        "addressCountry": "ES",  
+        "addressLocality": "Madrid",  
+        "streetAddress": "Paseo de la Castellana 189",  
+        "type": "PostalAddress"  
+    },  
+    "code": "21",  
+    "hasStop": [  
+        "urn:ngsi-ld:GtfsStop:Madrid_par_4_1"  
     ],  
-    "type": "Point"  
-  },  
-  "name": "Intercambiador de Plaza de Castilla",  
-  "type": "GtfsStation"  
+    "location": {  
+        "coordinates": [  
+            -3.6892,  
+            40.4669  
+        ],  
+        "type": "Point"  
+    },  
+    "name": "Intercambiador de Plaza de Castilla",  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
+    ]  
 }  
 ```  
-
-Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
