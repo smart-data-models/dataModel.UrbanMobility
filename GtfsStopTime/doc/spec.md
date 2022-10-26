@@ -1,19 +1,32 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 Entity: GtfsStopTime  
-====================  
+====================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Open License](https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/GtfsStopTime/LICENSE.md)  
 [document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Global description: **GTFS Stop Time**  
 version: 0.0.2  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## List of properties  
 
-- `alternateName`: An alternative name for this item  - `arrivalTime`: Same as GTFS `arrival_time`  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `departureTime`: Same as GTFS `departure_time`  - `description`: A description of this item  - `distanceTravelled`: Same as GTFS `shape_dist_traveled`  - `dropOffType`: Same as GTFS `drop_off_type`. Enum:'0, 1, 2, 3'  - `hasStop`: Same as GTFS `stop_id`. It shall point to an Entity of type GtfsStop  - `hasTrip`: Trip associated to this Entity. It shall point to an Entity of Type GtfsTrip  - `id`: Unique identifier of the entity  - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `pickupType`: Same as GTFS `pickup_type`. Enum:'0, 1, 2, 3'   - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `stopHeadsign`: Same as GTFS `stop_headsign`  - `stopSequence`: Same as GTFS `stop_sequence`. Starting with `1`.  - `timepoint`: Same as GTFS `timepoint`. Enum:'0, 1'  - `type`: NGSI Entity type. It has to be GtfsStopTime    
+<sup><sub>[*] If there is not a type in an attribute is because it could have several types or different formats/patterns</sub></sup>  
+- `alternateName[string]`: An alternative name for this item  - `arrivalTime[string]`: Same as GTFS `arrival_time`  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated[string]`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified[string]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `departureTime[string]`: Same as GTFS `departure_time`  . Model: [https://schema.org/Text](https://schema.org/Text)- `description[string]`: A description of this item  - `distanceTravelled[number]`: Same as GTFS `shape_dist_traveled`  . Model: [https://schema.org/Number](https://schema.org/Number)- `dropOffType[string]`: Same as GTFS `drop_off_type`. Enum:'0, 1, 2, 3'  . Model: [https://schema.org/Text](https://schema.org/Text)- `hasStop[*]`: Same as GTFS `stop_id`. It shall point to an Entity of type GtfsStop  . Model: [http://schema.org/URL](http://schema.org/URL)- `hasTrip[*]`: Trip associated to this Entity. It shall point to an Entity of Type GtfsTrip  . Model: [https://schema.org/URL](https://schema.org/URL)- `id[*]`: Unique identifier of the entity  - `name[string]`: The name of this item.  - `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `pickupType[string]`: Same as GTFS `pickup_type`. Enum:'0, 1, 2, 3'   . Model: [https://schema.org/Text](https://schema.org/Text)- `seeAlso[*]`: list of uri pointing to additional resources about the item  - `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `stopHeadsign[string]`: Same as GTFS `stop_headsign`  . Model: [https://schema.org/Text.](https://schema.org/Text.)- `stopSequence[integer]`: Same as GTFS `stop_sequence`. Starting with `1`.  . Model: [https://schema.org/Integer](https://schema.org/Integer)- `timepoint[string]`: Same as GTFS `timepoint`. Enum:'0, 1'  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: NGSI Entity type. It has to be GtfsStopTime  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Required properties  
-- `arrivalTime`  - `departureTime`  - `hasStop`  - `hasTrip`  - `id`  - `stopSequence`  - `type`    
+- `arrivalTime`  - `departureTime`  - `hasStop`  - `hasTrip`  - `id`  - `stopSequence`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
 See [https://developers.google.com/transit/gtfs/reference/#stop_timestxt](https://developers.google.com/transit/gtfs/reference/#stop_timestxt)  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
 ## Data Model description of properties  
 Sorted alphabetically (click for details)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 GtfsStopTime:    
@@ -209,9 +222,14 @@ GtfsStopTime:
   x-version: 0.0.2    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Example payloads    
 #### GtfsStopTime NGSI-v2 key-values Example    
 Here is an example of a GtfsStopTime in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:GtfsStopTime:Spain:Madrid:EMT:FE0010011_737",  
@@ -224,8 +242,10 @@ GtfsStopTime:
   "departureTime": "07:04:24"  
 }  
 ```  
+</details>  
 #### GtfsStopTime NGSI-v2 normalized Example    
 Here is an example of a GtfsStopTime in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:GtfsStopTime:Spain:Madrid:EMT:FE0010011_737",  
@@ -252,8 +272,10 @@ GtfsStopTime:
   }  
 }  
 ```  
+</details>  
 #### GtfsStopTime NGSI-LD key-values Example    
 Here is an example of a GtfsStopTime in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:GtfsStopTime:Spain:Madrid:EMT:FE0010011_737",  
@@ -288,8 +310,10 @@ GtfsStopTime:
     ]  
 }  
 ```  
+</details>  
 #### GtfsStopTime NGSI-LD normalized Example    
 Here is an example of a GtfsStopTime in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:GtfsStopTime:Spain:Madrid:EMT:FE0010011_737",  
@@ -301,8 +325,17 @@ GtfsStopTime:
     "hasTrip": "urn:ngsi-ld:GtfsTrip:Madrid:EMT:FE0010011",  
     "stopSequence": 4,  
     "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
     ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
