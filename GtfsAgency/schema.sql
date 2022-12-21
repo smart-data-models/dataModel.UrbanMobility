@@ -1,0 +1,3 @@
+/* (Beta) Export of data model GtfsAgency of the subject dataModel.UrbanMobility for a postgreSQL database. Pending translation of enumerations and multityped attributes */
+CREATE TYPE GtfsAgency_type AS ENUM ('GtfsAgency');
+CREATE TABLE GtfsAgency (addressCountry text, addressLocality text, addressRegion text, agencyName text, alternateName text, dataProvider text, dateCreated timestamp, dateModified timestamp, description text, entitySource text, id text, language text, name text, owner json, page json, phone text, postOfficeBoxNumber text, postalCode text, seeAlso json, source text, streetAddress text, timezone text, type GtfsAgency_type);
