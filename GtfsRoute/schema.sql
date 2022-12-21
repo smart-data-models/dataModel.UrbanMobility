@@ -1,0 +1,3 @@
+/* (Beta) Export of data model GtfsRoute of the subject dataModel.UrbanMobility for a postgreSQL database. Pending translation of enumerations and multityped attributes */
+CREATE TYPE routeType_type AS ENUM (0, 1, 2, 3, 4, 5, 6, 7);CREATE TYPE GtfsRoute_type AS ENUM ('GtfsRoute');
+CREATE TABLE GtfsRoute (alternateName text, dataProvider text, dateCreated timestamp, dateModified timestamp, description text, id text, name text, operatedBy text, owner json, page json, routeColor text, routeSortOrder integer, routeTextColor text, routeType routeType_type, seeAlso json, shortName text, source text, type GtfsRoute_type);
