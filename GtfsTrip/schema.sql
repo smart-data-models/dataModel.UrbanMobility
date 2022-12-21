@@ -1,0 +1,3 @@
+/* (Beta) Export of data model GtfsTrip of the subject dataModel.UrbanMobility for a postgreSQL database. Pending translation of enumerations and multityped attributes */
+CREATE TYPE GtfsTrip_type AS ENUM ('GtfsTrip');
+CREATE TABLE GtfsTrip (alternateName text, bikesAllowed text, block text, dataProvider text, dateCreated timestamp, dateModified timestamp, description text, direction text, hasRoute text, hasService text, hasShape text, headSign text, id text, name text, owner json, seeAlso json, shortName text, source text, type GtfsTrip_type, wheelChairAccessible text);
