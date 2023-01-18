@@ -396,304 +396,304 @@ PublicTransportRoute:
 #### PublicTransportRoute NGSI-v2 key-value の例。  
 以下は、PublicTransportRouteをJSON-LD形式でkey-valuesにした例である。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 <details><summary><strong>show/hide example</strong></summary>    
-```json  
-{  
-  "id": "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N3",  
-  "type": "PublicTransportRoute",  
-  "source": "https://api.smartsantander.eu/",  
-  "dataProvider": "http://www.smartsantander.eu/",  
-  "routeCode": "5200103000",  
-  "shortRouteCode": "N3",  
-  "name": "PEÑACASTILLO-PLAZA DE ITALIA ",  
-  "transportationType": 3,  
-  "routeColor": "#ff0000",  
-  "routeTextColor": "RED",  
-  "routeSegments": [  
-    {  
-      "segmentName": "PEÑACASTILLO-PLAZA DE ITALIA:1",  
-      "refPublicTransportStops": [  
-        "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:311",  
-        "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:129"  
-      ]  
-    },  
-    {  
-      "segmentName": "PEÑACASTILLO-PLAZA DE ITALIA:2",  
-      "refPublicTransportStops": [  
-        "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:130",  
-        "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:131"  
-      ]  
-    }  
-  ],  
-  "schedule": [  
-    {  
-      "dayOfWeek": "Monday",  
-      "opens": "09:00",  
-      "closes": "23:00"  
-    },  
-    {  
-      "dayOfWeek": "Tuesday",  
-      "opens": "09:00",  
-      "closes": "23:00"  
-    },  
-    {  
-      "dayOfWeek": "Wednesday",  
-      "opens": "09:00",  
-      "closes": "23:00"  
-    },  
-    {  
-      "dayOfWeek": "Thursday",  
-      "opens": "09:00",  
-      "closes": "23:00"  
-    },  
-    {  
-      "dayOfWeek": "Friday",  
-      "opens": "09:00",  
-      "closes": "23:00"  
-    },  
-    {  
-      "dayOfWeek": "Sunday",  
-      "opens": "09:00",  
-      "closes": "14:00"  
-    }  
-  ]  
-}  
+```json
+{
+  "id": "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N3",
+  "type": "PublicTransportRoute",
+  "source": "https://api.smartsantander.eu/",
+  "dataProvider": "http://www.smartsantander.eu/",
+  "routeCode": "5200103000",
+  "shortRouteCode": "N3",
+  "name": "PEÑACASTILLO-PLAZA DE ITALIA ",
+  "transportationType": 3,
+  "routeColor": "#ff0000",
+  "routeTextColor": "RED",
+  "routeSegments": [
+    {
+      "segmentName": "PEÑACASTILLO-PLAZA DE ITALIA:1",
+      "refPublicTransportStops": [
+        "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:311",
+        "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:129"
+      ]
+    },
+    {
+      "segmentName": "PEÑACASTILLO-PLAZA DE ITALIA:2",
+      "refPublicTransportStops": [
+        "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:130",
+        "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:131"
+      ]
+    }
+  ],
+  "schedule": [
+    {
+      "dayOfWeek": "Monday",
+      "opens": "09:00",
+      "closes": "23:00"
+    },
+    {
+      "dayOfWeek": "Tuesday",
+      "opens": "09:00",
+      "closes": "23:00"
+    },
+    {
+      "dayOfWeek": "Wednesday",
+      "opens": "09:00",
+      "closes": "23:00"
+    },
+    {
+      "dayOfWeek": "Thursday",
+      "opens": "09:00",
+      "closes": "23:00"
+    },
+    {
+      "dayOfWeek": "Friday",
+      "opens": "09:00",
+      "closes": "23:00"
+    },
+    {
+      "dayOfWeek": "Sunday",
+      "opens": "09:00",
+      "closes": "14:00"
+    }
+  ]
+}
 ```  
 </details>  
 #### PublicTransportRoute NGSI-v2 正規化例  
 以下は、PublicTransportRoute を JSON-LD 形式で正規化した例である。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 <details><summary><strong>show/hide example</strong></summary>    
-```json  
-{  
-  "id": "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N3",  
-  "type": "PublicTransportRoute",  
-  "source": {  
-    "type": "Text",  
-    "value": "https://api.smartsantander.eu/"  
-  },  
-  "dataProvider": {  
-    "type": "Text",  
-    "value": "http://www.smartsantander.eu/"  
-  },  
-  "routeCode": {  
-    "type": "Text",  
-    "value": "5200103000"  
-  },  
-  "shortRouteCode": {  
-    "type": "Text",  
-    "value": "N3"  
-  },  
-  "name": {  
-    "type": "Text",  
-    "value": "PEÑACASTILLO-PLAZA DE ITALIA"  
-  },  
-  "transportationType": {  
-    "type": "Number",  
-    "value": 3  
-  },  
-  "routeColor": {  
-    "type": "Text",  
-    "value": "#ff0000"  
-  },  
-  "routeTextColor": {  
-    "type": "Text",  
-    "value": "RED"  
-  },  
-  "routeSegments": {  
-    "type": "StructuredValue",  
-    "value": [  
-      {  
-        "segmentName": "PEÑACASTILLO-PLAZA DE ITALIA:1",  
-        "refPublicTransportStops": [  
-          "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:311",  
-          "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:129"  
-        ]  
-      },  
-      {  
-        "segmentName": "PEÑACASTILLO-PLAZA DE ITALIA:2",  
-        "refPublicTransportStops": [  
-          "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:130",  
-          "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:131"  
-        ]  
-      }  
-    ]  
-  },  
-  "schedule": {  
-    "type": "StructuredValue",  
-    "value": [  
-      {  
-        "validFrom": "2018-01-24",  
-        "validThrough": "2018-05-25",  
-        "opens": "09:00",  
-        "closes": "23:00"  
-      },  
-      {  
-        "dayOfWeek": "Sunday",  
-        "opens": "09:00",  
-        "closes": "14:00"  
-      }  
-    ]  
-  }  
-}  
+```json
+{
+  "id": "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N3",
+  "type": "PublicTransportRoute",
+  "source": {
+    "type": "Text",
+    "value": "https://api.smartsantander.eu/"
+  },
+  "dataProvider": {
+    "type": "Text",
+    "value": "http://www.smartsantander.eu/"
+  },
+  "routeCode": {
+    "type": "Text",
+    "value": "5200103000"
+  },
+  "shortRouteCode": {
+    "type": "Text",
+    "value": "N3"
+  },
+  "name": {
+    "type": "Text",
+    "value": "PEÑACASTILLO-PLAZA DE ITALIA"
+  },
+  "transportationType": {
+    "type": "Number",
+    "value": 3
+  },
+  "routeColor": {
+    "type": "Text",
+    "value": "#ff0000"
+  },
+  "routeTextColor": {
+    "type": "Text",
+    "value": "RED"
+  },
+  "routeSegments": {
+    "type": "StructuredValue",
+    "value": [
+      {
+        "segmentName": "PEÑACASTILLO-PLAZA DE ITALIA:1",
+        "refPublicTransportStops": [
+          "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:311",
+          "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:129"
+        ]
+      },
+      {
+        "segmentName": "PEÑACASTILLO-PLAZA DE ITALIA:2",
+        "refPublicTransportStops": [
+          "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:130",
+          "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:131"
+        ]
+      }
+    ]
+  },
+  "schedule": {
+    "type": "StructuredValue",
+    "value": [
+      {
+        "validFrom": "2018-01-24",
+        "validThrough": "2018-05-25",
+        "opens": "09:00",
+        "closes": "23:00"
+      },
+      {
+        "dayOfWeek": "Sunday",
+        "opens": "09:00",
+        "closes": "14:00"
+      }
+    ]
+  }
+}
 ```  
 </details>  
 #### PublicTransportRoute NGSI-LD キー値例  
 以下は、PublicTransportRouteをJSON-LD形式でkey-valuesにした例である。これは `options=keyValues` を使用した場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータが返される。  
 <details><summary><strong>show/hide example</strong></summary>    
-```json  
-{  
-    "id": "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N3",  
-    "type": "PublicTransportRoute",  
-    "dataProvider": {  
-        "type": "Text",  
-        "value": "http://www.smartsantander.eu/"  
-    },  
-    "name": {  
-        "type": "Text",  
-        "value": "PE\u00d1ACASTILLO-PLAZA DE ITALIA"  
-    },  
-    "routeCode": {  
-        "type": "Text",  
-        "value": "5200103000"  
-    },  
-    "routeColor": {  
-        "type": "Text",  
-        "value": "#ff0000"  
-    },  
-    "routeSegments": {  
-        "type": "StructuredValue",  
-        "value": [  
-            {  
-                "segmentName": "PE\u00d1ACASTILLO-PLAZA DE ITALIA:1",  
-                "refPublicTransportStops": [  
-                    "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:311",  
-                    "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:129"  
-                ]  
-            },  
-            {  
-                "segmentName": "PE\u00d1ACASTILLO-PLAZA DE ITALIA:2",  
-                "refPublicTransportStops": [  
-                    "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:130",  
-                    "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:131"  
-                ]  
-            }  
-        ]  
-    },  
-    "routeTextColor": {  
-        "type": "Text",  
-        "value": "RED"  
-    },  
-    "schedule": {  
-        "type": "StructuredValue",  
-        "value": [  
-            {  
-                "validFrom": "2018-01-24",  
-                "validThrough": "2018-05-25",  
-                "opens": "09:00",  
-                "closes": "23:00"  
-            },  
-            {  
-                "dayOfWeek": "Sunday",  
-                "opens": "09:00",  
-                "closes": "14:00"  
-            }  
-        ]  
-    },  
-    "shortRouteCode": {  
-        "type": "Text",  
-        "value": "N3"  
-    },  
-    "source": {  
-        "type": "Text",  
-        "value": "https://api.smartsantander.eu/"  
-    },  
-    "transportationType": {  
-        "type": "Number",  
-        "value": 3  
-    },  
-    "@context": [  
-        "https://smart-data-models.github.io/data-models/context.jsonld",  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
-    ]  
-}  
+```json
+{
+    "id": "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N3",
+    "type": "PublicTransportRoute",
+    "dataProvider": {
+        "type": "Text",
+        "value": "http://www.smartsantander.eu/"
+    },
+    "name": {
+        "type": "Text",
+        "value": "PE\u00d1ACASTILLO-PLAZA DE ITALIA"
+    },
+    "routeCode": {
+        "type": "Text",
+        "value": "5200103000"
+    },
+    "routeColor": {
+        "type": "Text",
+        "value": "#ff0000"
+    },
+    "routeSegments": {
+        "type": "StructuredValue",
+        "value": [
+            {
+                "segmentName": "PE\u00d1ACASTILLO-PLAZA DE ITALIA:1",
+                "refPublicTransportStops": [
+                    "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:311",
+                    "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:129"
+                ]
+            },
+            {
+                "segmentName": "PE\u00d1ACASTILLO-PLAZA DE ITALIA:2",
+                "refPublicTransportStops": [
+                    "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:130",
+                    "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:131"
+                ]
+            }
+        ]
+    },
+    "routeTextColor": {
+        "type": "Text",
+        "value": "RED"
+    },
+    "schedule": {
+        "type": "StructuredValue",
+        "value": [
+            {
+                "validFrom": "2018-01-24",
+                "validThrough": "2018-05-25",
+                "opens": "09:00",
+                "closes": "23:00"
+            },
+            {
+                "dayOfWeek": "Sunday",
+                "opens": "09:00",
+                "closes": "14:00"
+            }
+        ]
+    },
+    "shortRouteCode": {
+        "type": "Text",
+        "value": "N3"
+    },
+    "source": {
+        "type": "Text",
+        "value": "https://api.smartsantander.eu/"
+    },
+    "transportationType": {
+        "type": "Number",
+        "value": 3
+    },
+    "@context": [
+        "https://smart-data-models.github.io/data-models/context.jsonld",
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"
+    ]
+}
 ```  
 </details>  
 #### PublicTransportRoute NGSI-LD 正規化例  
 以下は、PublicTransportRoute を JSON-LD 形式で正規化した例である。これはオプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 <details><summary><strong>show/hide example</strong></summary>    
-```json  
-{  
-    "id": "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N3",  
-    "type": "PublicTransportRoute",  
-    "dataProvider": "http://www.smartsantander.eu/",  
-    "entityVersion": 2.0,  
-    "name": {  
-        "type": "Property",  
-        "value": "PE\u00d1ACASTILLO-PLAZA DE ITALIA "  
-    },  
-    "routeCode": {  
-        "type": "Property",  
-        "value": "5200103000"  
-    },  
-    "routeColor": {  
-        "type": "Property",  
-        "value": "#ff0000"  
-    },  
-    "routeSegments": {  
-        "type": "Property",  
-        "value": [  
-            {  
-                "segmentName": "PE\u00d1ACASTILLO-PLAZA DE ITALIA:1",  
-                "refPublicTransportStops": [  
-                    "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:311",  
-                    "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:129"  
-                ]  
-            },  
-            {  
-                "segmentName": "PE\u00d1ACASTILLO-PLAZA DE ITALIA:2",  
-                "refPublicTransportStops": [  
-                    "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:130",  
-                    "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:131"  
-                ]  
-            }  
-        ]  
-    },  
-    "routeTextColor": {  
-        "type": "Property",  
-        "value": "RED"  
-    },  
-    "schedule": {  
-        "type": "Property",  
-        "value": [  
-            {  
-                "validFrom": "2018-01-24",  
-                "validThrough": "2018-05-25",  
-                "opens": "09:00",  
-                "closes": "23:00"  
-            },  
-            {  
-                "dayOfWeek": "Sunday",  
-                "opens": "09:00",  
-                "closes": "14:00"  
-            }  
-        ]  
-    },  
-    "shortRouteCode": {  
-        "type": "Property",  
-        "value": "N3"  
-    },  
-    "source": "https://api.smartsantander.eu/",  
-    "transportationType": {  
-        "type": "Property",  
-        "value": 3  
-    },  
-    "@context": [  
-        "https://smart-data-models.github.io/data-models/context.jsonld",  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
-    ]  
-}  
-```  
+```json
+{
+    "id": "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N3",
+    "type": "PublicTransportRoute",
+    "dataProvider": "http://www.smartsantander.eu/",
+    "entityVersion": 2.0,
+    "name": {
+        "type": "Property",
+        "value": "PE\u00d1ACASTILLO-PLAZA DE ITALIA "
+    },
+    "routeCode": {
+        "type": "Property",
+        "value": "5200103000"
+    },
+    "routeColor": {
+        "type": "Property",
+        "value": "#ff0000"
+    },
+    "routeSegments": {
+        "type": "Property",
+        "value": [
+            {
+                "segmentName": "PE\u00d1ACASTILLO-PLAZA DE ITALIA:1",
+                "refPublicTransportStops": [
+                    "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:311",
+                    "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:129"
+                ]
+            },
+            {
+                "segmentName": "PE\u00d1ACASTILLO-PLAZA DE ITALIA:2",
+                "refPublicTransportStops": [
+                    "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:130",
+                    "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:131"
+                ]
+            }
+        ]
+    },
+    "routeTextColor": {
+        "type": "Property",
+        "value": "RED"
+    },
+    "schedule": {
+        "type": "Property",
+        "value": [
+            {
+                "validFrom": "2018-01-24",
+                "validThrough": "2018-05-25",
+                "opens": "09:00",
+                "closes": "23:00"
+            },
+            {
+                "dayOfWeek": "Sunday",
+                "opens": "09:00",
+                "closes": "14:00"
+            }
+        ]
+    },
+    "shortRouteCode": {
+        "type": "Property",
+        "value": "N3"
+    },
+    "source": "https://api.smartsantander.eu/",
+    "transportationType": {
+        "type": "Property",
+        "value": 3
+    },
+    "@context": [
+        "https://smart-data-models.github.io/data-models/context.jsonld",
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"
+    ]
+}
+```
 </details><!-- /80-Examples -->  
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
