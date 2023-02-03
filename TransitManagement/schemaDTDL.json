@@ -7,6 +7,14 @@
     "displayName": "TransitManagement",
     "contents": [
         {
+            "name": "acAvailable",
+            "writable": true,
+            "displayName": "acAvailable",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Describes the presence of air conditioning option in the vehicle corresponding to this observation."
+        },
+        {
             "name": "ac_available",
             "writable": true,
             "displayName": "ac_available",
@@ -95,6 +103,14 @@
             "comment": "The geographic area where a service or offered item is provided"
         },
         {
+            "name": "arrivalUncertainty",
+            "writable": true,
+            "displayName": "arrivalUncertainty",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "If schedule_relationship is empty or SCHEDULED, either arrival or departure must be provided within a StopTimeUpdate. SameAs: 'arrival' field from GTFS Realtime message-StopTimeUpdate (https://developers.google.com/transit/gtfs-realtime/reference#message-stoptimeupdate)."
+        },
+        {
             "name": "arrival_time",
             "writable": true,
             "displayName": "arrival_time",
@@ -158,12 +174,36 @@
             "comment": "Timestamp of the last modification of the entity. This will usually be allocated by the storage platform."
         },
         {
+            "name": "departureUncertainty",
+            "writable": true,
+            "displayName": "departureUncertainty",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "If schedule_relationship is empty or SCHEDULED, either arrival or departure must be provided within a StopTimeUpdate. SameAs: 'departure' field from GTFS Realtime message-StopTimeUpdate (https://developers.google.com/transit/gtfs-realtime/reference#message-stoptimeupdate)."
+        },
+        {
             "name": "departure_time",
             "writable": true,
             "displayName": "departure_time",
             "@type": "Property",
             "schema": "time",
             "comment": "Specifies the departure time from a specific stop for a specific trip on a route. Times must be eight digits in HH:MM:SS format (HH:MM:SS is also accepted, if the hour begins with 0). \nNote: Trips that span multiple dates will have stop times greater than 24:00:00. For example, if a trip begins at 10:30:00 p.m. and ends at 2:15:00 a.m. on the following day, the stop times would be 22:30:00 and 26:15:00. Entering those stop times as 22:30:00 and 02:15:00 would not produce the desired results. SameAs: 'depart"
+        },
+        {
+            "name": "depotID",
+            "writable": true,
+            "displayName": "depotID",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Describes the unique id of the bus depot corresponding to this observation."
+        },
+        {
+            "name": "depotName",
+            "writable": true,
+            "displayName": "depotName",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Describes the depot name of the bus depot corresponding to this observation."
         },
         {
             "name": "depot_id",
@@ -203,7 +243,7 @@
             "displayName": "entity_id",
             "@type": "Property",
             "schema": "string",
-            "comment": "Feed unique ID for the entity corressponding to this observation.SameAs:'entity_id' field from GTFS Realtime message-FeedEntity(https://developers.google.com/transit/gtfs-realtime/reference#message-feedentity)"
+            "comment": "Feed unique ID for the entity corresponding to this observation.SameAs:'entity_id' field from GTFS Realtime message-FeedEntity(https://developers.google.com/transit/gtfs-realtime/reference#message-feedentity)"
         },
         {
             "name": "last_stop_arrival_time",
@@ -226,7 +266,7 @@
             "writable": true,
             "displayName": "last_tracked_time",
             "@type": "Property",
-            "schema": "time",
+            "schema": "dateTime",
             "comment": "Gives the time at which the vehicle was last tracked."
         },
         {
@@ -553,6 +593,10 @@
                     "schema": "string"
                 },
                 {
+                    "name": "district",
+                    "schema": "string"
+                },
+                {
                     "name": "postOfficeBoxNumber",
                     "schema": "string"
                 },
@@ -562,6 +606,50 @@
                 },
                 {
                     "name": "streetAddress",
+                    "schema": "string"
+                },
+                {
+                    "name": "streetNr",
+                    "schema": "string"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "agencyInfo",
+            "comment": "Agency information corresponding to this observation.",
+            "displayName": "agencyInfo",
+            "fields": [
+                {
+                    "name": "agency_email",
+                    "schema": "string"
+                },
+                {
+                    "name": "agency_fare_url",
+                    "schema": "string"
+                },
+                {
+                    "name": "agency_id",
+                    "schema": "string"
+                },
+                {
+                    "name": "agency_lang",
+                    "schema": "string"
+                },
+                {
+                    "name": "agency_name",
+                    "schema": "string"
+                },
+                {
+                    "name": "agency_phone",
+                    "schema": "string"
+                },
+                {
+                    "name": "agency_timezone",
+                    "schema": "string"
+                },
+                {
+                    "name": "agency_url",
                     "schema": "string"
                 }
             ]
@@ -651,6 +739,182 @@
                 {
                     "name": "speed",
                     "schema": "long"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "positionInfo",
+            "comment": "Describes the current position of the vehicle corresponding to this observation. SameAs:'position' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition).",
+            "displayName": "positionInfo",
+            "fields": [
+                {
+                    "name": "bearing",
+                    "schema": "long"
+                },
+                {
+                    "name": "odometer",
+                    "schema": "long"
+                },
+                {
+                    "name": "speed",
+                    "schema": "long"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "routeInfo",
+            "comment": "Updated sorted stop sequence for the trip made by the vehicle corresponding to this observation, not to be considered if schedule_realtionship is CANCELED. SameAs: 'stop_time_update' field from GTFS Realtime message-TripUpdate (https://developers.google.com/transit/gtfs-realtime/reference#message-tripupdate).",
+            "displayName": "routeInfo",
+            "fields": [
+                {
+                    "name": "route_color",
+                    "schema": "string"
+                },
+                {
+                    "name": "route_desc",
+                    "schema": "string"
+                },
+                {
+                    "name": "route_id",
+                    "schema": "string"
+                },
+                {
+                    "name": "route_long_name",
+                    "schema": "string"
+                },
+                {
+                    "name": "route_short_name",
+                    "schema": "string"
+                },
+                {
+                    "name": "route_text_color",
+                    "schema": "string"
+                },
+                {
+                    "name": "route_type",
+                    "schema": "long"
+                },
+                {
+                    "name": "route_url",
+                    "schema": "string"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "shapeInfo",
+            "comment": "Information about the path the vehicle corresponding to this observation travels along.",
+            "displayName": "shapeInfo",
+            "fields": [
+                {
+                    "name": "shape_dist_traveled",
+                    "schema": "long"
+                },
+                {
+                    "name": "shape_id",
+                    "schema": "string"
+                },
+                {
+                    "name": "shape_pt_sequence",
+                    "schema": "long"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "stopInfo",
+            "comment": "Information about the path the vehicle corresponding to this observation travels along.",
+            "displayName": "stopInfo",
+            "fields": [
+                {
+                    "name": "stop_code",
+                    "schema": "string"
+                },
+                {
+                    "name": "stop_desc",
+                    "schema": "string"
+                },
+                {
+                    "name": "stop_id",
+                    "schema": "string"
+                },
+                {
+                    "name": "stop_name",
+                    "schema": "string"
+                },
+                {
+                    "name": "stop_url",
+                    "schema": "string"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "stopTimeUpdateInfo",
+            "comment": "Updated sorted stop sequence for the trip made by the vehicle corresponding to this observation, not to be considered if schedule_realtionship is CANCELED. SameAs: 'stop_time_update' field from GTFS Realtime message-TripUpdate (https://developers.google.com/transit/gtfs-realtime/reference#message-tripupdate).",
+            "displayName": "stopTimeUpdateInfo",
+            "fields": [
+                {
+                    "name": "stopScheduleRelationship",
+                    "schema": "string"
+                },
+                {
+                    "name": "stop_id",
+                    "schema": "string"
+                },
+                {
+                    "name": "stop_sequence",
+                    "schema": "long"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "stopTimesInfo",
+            "comment": "A descriptor of realtime update on the schedule of a vehicle along a trip.",
+            "displayName": "stopTimesInfo",
+            "fields": [
+                {
+                    "name": "arrival_time",
+                    "schema": "time"
+                },
+                {
+                    "name": "continuous_drop_off",
+                    "schema": "long"
+                },
+                {
+                    "name": "continuous_pickup",
+                    "schema": "long"
+                },
+                {
+                    "name": "departure_time",
+                    "schema": "time"
+                },
+                {
+                    "name": "drop_off_type",
+                    "schema": "string"
+                },
+                {
+                    "name": "pickup_type",
+                    "schema": "string"
+                },
+                {
+                    "name": "stop_headsign",
+                    "schema": "string"
+                },
+                {
+                    "name": "stop_id",
+                    "schema": "string"
+                },
+                {
+                    "name": "stop_sequence",
+                    "schema": "long"
+                },
+                {
+                    "name": "trip_id",
+                    "schema": "string"
                 }
             ]
         },
@@ -760,6 +1024,38 @@
         },
         {
             "@type": "object",
+            "name": "tripInfo",
+            "comment": "Describes the trip the vehicle corresponding to this observation is making. SameAs:'trip' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition).",
+            "displayName": "tripInfo",
+            "fields": [
+                {
+                    "name": "route_id",
+                    "schema": "string"
+                },
+                {
+                    "name": "schedule_relationship",
+                    "schema": "string"
+                },
+                {
+                    "name": "start_date",
+                    "schema": "string"
+                },
+                {
+                    "name": "start_time",
+                    "schema": "time"
+                },
+                {
+                    "name": "trip_direction",
+                    "schema": "string"
+                },
+                {
+                    "name": "trip_id",
+                    "schema": "string"
+                }
+            ]
+        },
+        {
+            "@type": "object",
             "name": "trip_details",
             "comment": "A descriptor of realtime update on the schedule of a vehicle along a trip.",
             "displayName": "trip_details",
@@ -818,6 +1114,54 @@
                 },
                 {
                     "name": "vehicle_label",
+                    "schema": "string"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "vehicleInfo",
+            "comment": "Describes the additional information of the vehicle corresponding to this observation. SameAs:'vehicle' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)/(https://developers.google.com/transit/gtfs-realtime/reference#message-tripupdate)",
+            "displayName": "vehicleInfo",
+            "fields": [
+                {
+                    "name": "license_plate",
+                    "schema": "string"
+                },
+                {
+                    "name": "vehicleID",
+                    "schema": "string"
+                },
+                {
+                    "name": "vehicle_label",
+                    "schema": "string"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "vehiclePositionInfo",
+            "comment": "Describes the realtime position of the vehicle corresponding to this observation. SameAs:'vehicle' field from GTFS Realtime message-FeedEntity(https://developers.google.com/transit/gtfs-realtime/reference#message-feedentity)",
+            "displayName": "vehiclePositionInfo",
+            "fields": [
+                {
+                    "name": "congestion_level",
+                    "schema": "string"
+                },
+                {
+                    "name": "current_status",
+                    "schema": "string"
+                },
+                {
+                    "name": "current_stop_sequence",
+                    "schema": "long"
+                },
+                {
+                    "name": "occupancy_status",
+                    "schema": "string"
+                },
+                {
+                    "name": "stop_id",
                     "schema": "string"
                 }
             ]
