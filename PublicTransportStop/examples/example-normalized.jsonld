@@ -1,66 +1,99 @@
 {
-    "id": "urn:ngsi-ld:PublicTransportStop:santander:busStop:463",
-    "type": "PublicTransportStop",
-    "address": {
-        "streetAddress": "C/ La Pereda 14",
-        "addressLocality": "Santander",
-        "addressRegion": "Cantabria",
-        "addressCountry": "Spain"
-    },
-    "dataProvider": "http://www.smartsantander.eu/",
-    "dateModified": "2018-09-25T08:32:26.00Z",
-    "entityVersion": 2.0,
-    "location": {
-        "type": "Point",
-        "coordinates": [
-            -3.804648385,
-            43.478053126
-        ]
-    },
-    "name": "La Pereda 14",
-    "openingHoursSpecification": [
-        {
-            "opens": "00:01",
-            "closes": "23:59",
-            "dayOfWeek": "Monday"
-        },
-        {
-            "opens": "00:01",
-            "closes": "23:59",
-            "dayOfWeek": "Tuesday"
-        },
-        {
-            "opens": "00:01",
-            "closes": "23:59",
-            "dayOfWeek": "Wednesday"
-        },
-        {
-            "opens": "00:01",
-            "closes": "23:59",
-            "dayOfWeek": "Thursday"
-        },
-        {
-            "opens": "00:01",
-            "closes": "23:59",
-            "dayOfWeek": "Friday"
-        }
-    ],
-    "peopleCount": 0,
-    "refPeopleCountDevice": "urn:ngsi-ld:PorpleCountDecice:santander:463",
-    "refPublicTransportRoute": [
-        "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N3",
-        "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N4"
+  "id": "urn:ngsi-ld:PublicTransportStop:santander:busStop:463",
+  "type": "PublicTransportStop",
+  "address": {
+    "type": "Property",
+    "value": {
+      "streetAddress": "C/ La Pereda 14",
+      "addressLocality": "Santander",
+      "addressRegion": "Cantabria",
+      "addressCountry": "Spain"
+    }
+  },
+  "dataProvider": {
+    "type": "Property",
+    "value": "http://www.smartsantander.eu/"
+  },
+  "dateModified": {
+    "type": "Property",
+    "value": "2018-09-25T08:32:26.00Z"
+  },
+  "entityVersion": {
+    "type": "Property",
+    "value": 2.0
+  },
+  "location": {
+    "type": "GeoProperty",
+    "value": {
+      "type": "Point",
+      "coordinates": [
+        -3.804648385,
+        43.478053126
+      ]
+    }
+  },
+  "name": {
+    "type": "Property",
+    "value": "La Pereda 14"
+  },
+  "openingHoursSpecification": {
+    "type": "Property",
+    "value": [
+      {
+        "opens": "00:01",
+        "closes": "23:59",
+        "dayOfWeek": "Monday"
+      },
+      {
+        "opens": "00:01",
+        "closes": "23:59",
+        "dayOfWeek": "Tuesday"
+      },
+      {
+        "opens": "00:01",
+        "closes": "23:59",
+        "dayOfWeek": "Wednesday"
+      },
+      {
+        "opens": "00:01",
+        "closes": "23:59",
+        "dayOfWeek": "Thursday"
+      },
+      {
+        "opens": "00:01",
+        "closes": "23:59",
+        "dayOfWeek": "Friday"
+      }
+    ]
+  },
+  "peopleCount": {
+    "type": "Property",
+    "value": 0
+  },
+  "refPeopleCountDevice": {
+    "type": "Relationship",
+    "value": "urn:ngsi-ld:PorpleCountDecice:santander:463"
+  },
+  "refPublicTransportRoute": {
+    "type": "Property",
+    "value": [
+      "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N3",
+      "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N4"
     ],
     "shortStopCode": "463",
     "source": "https://api.smartsantander.eu/",
     "stopCode": "la_pereda_463",
     "transportationType": [
-        3
-    ],
-    "wheelchairAccessible": 0,
-    "@context": [
-        "https://smart-data-models.github.io/data-models/context.jsonld",
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"
+      3
     ]
+  },
+  "wheelchairAccessible": {
+    "type": "Property",
+    "value": 0
+  },
+  "@context": [
+    "https://smart-data-models.github.io/data-models/context.jsonld",
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"
+  ]
 }
