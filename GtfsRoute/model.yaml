@@ -1,75 +1,75 @@
 GtfsRoute:
-  description: 'GTFS Route'
+  description: GTFS Route
   properties:
     alternateName:
-      description: 'An alternative name for this item'
+      description: An alternative name for this item
       type: string
       x-ngsi:
         type: Property
     dataProvider:
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'
+      description: A sequence of characters identifying the provider of the harmonised data entity.
       type: string
       x-ngsi:
         type: Property
     dateCreated:
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'
+      description: Entity creation timestamp. This will usually be allocated by the storage platform.
       format: date-time
       type: string
       x-ngsi:
         type: Property
     dateModified:
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.
       format: date-time
       type: string
       x-ngsi:
         type: Property
     description:
-      description: 'A description of this item'
+      description: A description of this item
       type: string
       x-ngsi:
         type: Property
     id:
       anyOf: &gtfsroute_-_properties_-_owner_-_items_-_anyof
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           maxLength: 256
           minLength: 1
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
           type: string
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           format: uri
           type: string
-      description: 'Unique identifier of the entity'
+      description: Unique identifier of the entity
       x-ngsi:
         type: Property
     name:
-      description: 'The name of this item.'
+      description: The name of this item.
       type: string
       x-ngsi:
         type: Property
     operatedBy:
       anyOf:
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           maxLength: 256
           minLength: 1
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
           type: string
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           format: uri
           type: string
-      description: 'Agency that operates this route. It shall point to an Entity of Type GtfsAgency'
+      description: Agency that operates this route. It shall point to an Entity of Type GtfsAgency
       x-ngsi:
         model: https://schema.org/Text
         type: Relationship
     owner:
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)
       items:
         anyOf: *gtfsroute_-_properties_-_owner_-_items_-_anyof
-        description: 'Property. Unique identifier of the entity'
+        description: Property. Unique identifier of the entity
       type: array
       x-ngsi:
         type: Property
     page:
-      description: 'Same as GTFS `stop_url`'
+      description: Same as GTFS `stop_url`
       format: uri
       type: string
       x-ngsi:
@@ -82,9 +82,9 @@ GtfsRoute:
         model: https://schema.org/Text
         type: Property
     routeSortOrder:
-      description: 'Same as GTFS `route_sort_order`'
+      description: Same as GTFS `route_sort_order`
       minimum: 0
-      type: integer
+      type: number
       x-ngsi:
         model: https://schema.org/Number.
         type: Property
@@ -110,7 +110,7 @@ GtfsRoute:
         model: https://schema.org/Text
         type: Property
     seeAlso:
-      description: 'list of uri pointing to additional resources about the item'
+      description: list of uri pointing to additional resources about the item
       oneOf:
         - items:
             format: uri
@@ -122,7 +122,7 @@ GtfsRoute:
       x-ngsi:
         type: Property
     shortName:
-      description: 'Same as GTFS `route_short_name`'
+      description: Same as GTFS `route_short_name`
       type: string
       x-ngsi:
         model: https://schema.org/Text.
@@ -133,7 +133,7 @@ GtfsRoute:
       x-ngsi:
         type: Property
     type:
-      description: 'NGSI Entity type. It has to be GtfsRoute'
+      description: NGSI Entity type. It has to be GtfsRoute
       enum:
         - GtfsRoute
       type: string
@@ -144,7 +144,7 @@ GtfsRoute:
     - type
   type: object
   x-derived-from: ""
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
   x-license-url: https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/GtfsRoute/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/data-models/specs/UrbanMobility/GtfsRoute/schema.json
   x-model-tags: ""
