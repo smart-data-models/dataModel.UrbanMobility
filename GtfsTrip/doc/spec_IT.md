@@ -15,7 +15,7 @@
 ## Elenco delle proprietà  
 
 <sup><sub>[*] Se non c'è un tipo in un attributo è perché potrebbe avere diversi tipi o diversi formati/modelli</sub></sup>.  
-- `alternateName[string]`: Un nome alternativo per questa voce  - `bikesAllowed[number]`: Come GTFS `bikes_allowed`. Enum:'0, 1, 2'. Vedere [GTFS](https://developers.google.com/transit/gtfs/reference/#tripstxt)  . Model: [https://schema.org/Number](https://schema.org/Number)- `block[string]`: Come il `block_id` di GTFS.  . Model: [https://schema.org/Text.](https://schema.org/Text.)- `dataProvider[string]`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated[string]`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `dateModified[string]`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `description[string]`: Descrizione dell'articolo  - `direction[number]`: Uguale a `direction_id' di GTFS. Enum:'0, 1'  . Model: [https://schema.org/Number](https://schema.org/Number)- `hasRoute[string]`: Uguale a `route_id`. Deve puntare a un'entità di tipo GtfsRoute.  . Model: [http://schema.org/URL](http://schema.org/URL)- `hasService[*]`: È uguale a `service_id` di GTFS. Deve puntare a un'entità di tipo GtfsService.  . Model: [http://schema.org/URL](http://schema.org/URL)- `hasShape[*]`: È uguale a `shape_id` di GTFS. Deve puntare a un'entità di tipo GtfsShape.  . Model: [http://schema.org/URL](http://schema.org/URL)- `headSign[string]`: Come il `trip_headsign` di GTFS  . Model: [https://schema.org/Text.](https://schema.org/Text.)- `id[*]`: Identificatore univoco dell'entità  - `name[string]`: Il nome di questo elemento.  - `owner[array]`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `seeAlso[*]`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `shortName[string]`: Stesso nome di GTFS `trip_short_name  . Model: [https://schema.org/Text.](https://schema.org/Text.)- `source[string]`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `type[string]`: Tipo di entità NGSI. Deve essere GtfsTrip  - `wheelChairAccessible[number]`: Come GTFS `wheelchair_accessible`. Enum:'0, 1, 2'  . Model: [https://schema.org/Number](https://schema.org/Number)<!-- /30-PropertiesList -->  
+- `alternateName[string]`: Un nome alternativo per questa voce  - `bikesAllowed[number]`: Come GTFS `bikes_allowed`. Enum:'0, 1, 2'. Vedere [GTFS](https://developers.google.com/transit/gtfs/reference/#tripstxt)  . Model: [https://schema.org/Number](https://schema.org/Number)- `block[string]`: Come il `block_id` di GTFS.  . Model: [https://schema.org/Text.](https://schema.org/Text.)- `dataProvider[string]`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated[string]`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `dateModified[string]`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `description[string]`: Descrizione dell'articolo  - `direction[number]`: Uguale a `direction_id' di GTFS. Enum:'0, 1'  . Model: [https://schema.org/Number](https://schema.org/Number)- `hasRoute[string]`: Uguale a `route_id`. Deve puntare a un'entità di tipo GtfsRoute.  . Model: [http://schema.org/URL](http://schema.org/URL)- `hasService[*]`: È uguale a `service_id` di GTFS. Deve puntare a un'entità di tipo GtfsService.  . Model: [http://schema.org/URL](http://schema.org/URL)- `hasShape[*]`: È uguale a `shape_id` di GTFS. Deve puntare a un'entità di tipo GtfsShape.  . Model: [http://schema.org/URL](http://schema.org/URL)- `headSign[string]`: Come il `trip_headsign` di GTFS  . Model: [https://schema.org/Text.](https://schema.org/Text.)- `id[*]`: Identificatore univoco dell'entità  - `name[string]`: Il nome di questo elemento.  - `owner[array]`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `seeAlso[*]`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `shortName[string]`: Uguale a GTFS `trip_short_name`  . Model: [https://schema.org/Text.](https://schema.org/Text.)- `source[string]`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `type[string]`: Tipo di entità NGSI. Deve essere GtfsTrip  - `wheelChairAccessible[number]`: Come GTFS `wheelchair_accessible`. Enum:'0, 1, 2'  . Model: [https://schema.org/Number](https://schema.org/Number)<!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Proprietà richieste  
 - `hasRoute`  - `hasService`  - `id`  - `type`  <!-- /35-RequiredProperties -->  
@@ -30,10 +30,10 @@
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 GtfsTrip:    
-  description: 'GTFS Trip'    
+  description: GTFS Trip    
   properties:    
     alternateName:    
-      description: 'An alternative name for this item'    
+      description: An alternative name for this item    
       type: string    
       x-ngsi:    
         type: Property    
@@ -48,30 +48,30 @@ GtfsTrip:
         model: https://schema.org/Number    
         type: Property    
     block:    
-      description: 'Same as GTFS `block_id`'    
+      description: Same as GTFS `block_id`    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text.    
         type: Property    
     dataProvider:    
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
+      description: A sequence of characters identifying the provider of the harmonised data entity.    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform.    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     description:    
-      description: 'A description of this item'    
+      description: A description of this item    
       type: string    
       x-ngsi:    
         type: Property    
@@ -86,81 +86,81 @@ GtfsTrip:
         type: Property    
     hasRoute:    
       anyOf:    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Same as `route_id`. It shall point to an Entity of type GtfsRoute'    
+      description: Same as `route_id`. It shall point to an Entity of type GtfsRoute    
       type: string    
       x-ngsi:    
         model: http://schema.org/URL    
         type: Relationship    
     hasService:    
       anyOf:    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Same as GTFS `service_id`. It shall point to an Entity of type GtfsService'    
+      description: Same as GTFS `service_id`. It shall point to an Entity of type GtfsService    
       x-ngsi:    
         model: http://schema.org/URL    
         type: Relationship    
     hasShape:    
       anyOf:    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Same as GTFS `shape_id`. It shall point to an Entity of type GtfsShape'    
+      description: Same as GTFS `shape_id`. It shall point to an Entity of type GtfsShape    
       x-ngsi:    
         model: http://schema.org/URL    
         type: Relationship    
     headSign:    
-      description: 'Same as GTFS `trip_headsign`'    
+      description: Same as GTFS `trip_headsign`    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text.    
         type: Property    
     id:    
       anyOf: &gtfstrip_-_properties_-_owner_-_items_-_anyof    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Unique identifier of the entity'    
+      description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     name:    
-      description: 'The name of this item.'    
+      description: The name of this item.    
       type: string    
       x-ngsi:    
         type: Property    
     owner:    
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
         anyOf: *gtfstrip_-_properties_-_owner_-_items_-_anyof    
-        description: 'Property. Unique identifier of the entity'    
+        description: Property. Unique identifier of the entity    
       type: array    
       x-ngsi:    
         type: Property    
     seeAlso:    
-      description: 'list of uri pointing to additional resources about the item'    
+      description: list of uri pointing to additional resources about the item    
       oneOf:    
         - items:    
             format: uri    
@@ -172,7 +172,7 @@ GtfsTrip:
       x-ngsi:    
         type: Property    
     shortName:    
-      description: 'Same as GTFS `trip_short_name`'    
+      description: Same as GTFS `trip_short_name`    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text.    
@@ -183,7 +183,7 @@ GtfsTrip:
       x-ngsi:    
         type: Property    
     type:    
-      description: 'NGSI Entity type. It has to be GtfsTrip'    
+      description: NGSI Entity type. It has to be GtfsTrip    
       enum:    
         - GtfsTrip    
       type: string    
@@ -206,7 +206,7 @@ GtfsTrip:
     - hasService    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/GtfsTrip/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsTrip/schema.json    
   x-model-tags: ""    
@@ -241,21 +241,23 @@ GtfsTrip:
   "id": "urn:ngsi-ld:GtfsTrip:Spain:Malaga:1",  
   "type": "GtfsTrip",  
   "direction": {  
+     "type": "Number",  
     "value": 0  
   },  
   "headSign": {  
+    "type": "Text",  
     "value": "San Andr\u00e9s"  
   },  
   "hasRoute": {  
-    "type": "Relationship",  
+    "type": "URI",  
     "value": "urn:ngsi-ld:GtfsRoute:Spain:Malaga:1"  
   },  
   "hasService": {  
-    "type": "Relationship",  
+    "type": "URI",  
     "value": "urn:ngsi-ld:GtfsService:Malaga_LAB"  
   },  
   "hasShape": {  
-    "type": "Relationship",  
+    "type": "URI",  
     "value": "urn:ngsi-ld:GtfsShape:Shape01"  
   }  
 }  
@@ -263,6 +265,25 @@ GtfsTrip:
 </details>  
 #### GtfsTrip Valori chiave NGSI-LD Esempio  
 Ecco un esempio di GtfsTrip in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
+```json  
+{  
+    "id": "urn:ngsi-ld:GtfsTrip:Spain:Malaga:1",  
+    "type": "GtfsTrip",  
+    "direction": 0,  
+    "hasRoute": "urn:ngsi-ld:GtfsRoute:Spain:Malaga:1",  
+    "hasService": "urn:ngsi-ld:GtfsService:Malaga_LAB",  
+    "hasShape": "urn:ngsi-ld:GtfsShape:Shape01",  
+    "headSign": "San Andr\u00e9s",  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
+    ]  
+}  
+```  
+</details>  
+#### GtfsTrip NGSI-LD normalizzato Esempio  
+Ecco un esempio di GtfsTrip in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non si usano opzioni e restituisce i dati di contesto di una singola entità.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -288,25 +309,6 @@ GtfsTrip:
         "type": "Property",  
         "value": "San Andr\u00e9s"  
     },  
-    "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
-    ]  
-}  
-```  
-</details>  
-#### GtfsTrip NGSI-LD normalizzato Esempio  
-Ecco un esempio di GtfsTrip in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non si usano opzioni e restituisce i dati di contesto di una singola entità.  
-<details><summary><strong>show/hide example</strong></summary>    
-```json  
-{  
-    "id": "urn:ngsi-ld:GtfsTrip:Spain:Malaga:1",  
-    "type": "GtfsTrip",  
-    "direction": 0,  
-    "hasRoute": "urn:ngsi-ld:GtfsRoute:Spain:Malaga:1",  
-    "hasService": "urn:ngsi-ld:GtfsService:Malaga_LAB",  
-    "hasShape": "urn:ngsi-ld:GtfsShape:Shape01",  
-    "headSign": "San Andr\u00e9s",  
     "@context": [  
         "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
         "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
