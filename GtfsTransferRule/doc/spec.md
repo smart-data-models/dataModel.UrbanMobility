@@ -30,74 +30,74 @@
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 GtfsTransferRule:    
-  description: 'GTFS Transfer Rule'    
+  description: GTFS Transfer Rule    
   properties:    
     alternateName:    
-      description: 'An alternative name for this item'    
+      description: An alternative name for this item    
       type: string    
       x-ngsi:    
         type: Property    
     dataProvider:    
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
+      description: A sequence of characters identifying the provider of the harmonised data entity.    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform.    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     description:    
-      description: 'A description of this item'    
+      description: A description of this item    
       type: string    
       x-ngsi:    
         type: Property    
     hasDestination:    
       anyOf:    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Trip associated to this Entity. It shall point to an Entity of type GtfsStop or GtfsStation'    
+      description: Trip associated to this Entity. It shall point to an Entity of type GtfsStop or GtfsStation    
       x-ngsi:    
         model: http://schema.org/URL    
         type: Relationship    
     hasOrigin:    
       anyOf:    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Trip associated to this Entity. It shall point to an Entity of type GtfsStop or GtfsStation'    
+      description: Trip associated to this Entity. It shall point to an Entity of type GtfsStop or GtfsStation    
       x-ngsi:    
         model: http://schema.org/URL    
         type: Relationship    
     id:    
       anyOf: &gtfstransferrule_-_properties_-_owner_-_items_-_anyof    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Unique identifier of the entity'    
+      description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     minimumTransferTime:    
@@ -108,20 +108,20 @@ GtfsTransferRule:
         model: https://schema.org/Integer    
         type: Property    
     name:    
-      description: 'The name of this item.'    
+      description: The name of this item.    
       type: string    
       x-ngsi:    
         type: Property    
     owner:    
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
         anyOf: *gtfstransferrule_-_properties_-_owner_-_items_-_anyof    
-        description: 'Property. Unique identifier of the entity'    
+        description: Property. Unique identifier of the entity    
       type: array    
       x-ngsi:    
         type: Property    
     seeAlso:    
-      description: 'list of uri pointing to additional resources about the item'    
+      description: list of uri pointing to additional resources about the item    
       oneOf:    
         - items:    
             format: uri    
@@ -149,7 +149,7 @@ GtfsTransferRule:
         model: https://schema.org/Text    
         type: Property    
     type:    
-      description: 'NGSI Entity type. It has to be GtfsTransferRule'    
+      description: NGSI Entity type. It has to be GtfsTransferRule    
       enum:    
         - GtfsTransferRule    
       type: string    
@@ -198,17 +198,19 @@ GtfsTransferRule:
   "id": "urn:ngsi-ld:GtfsTransferRule:Malaga:Linea1_Linea5",  
   "type": "GtfsTransferRule",  
   "transferType": {  
+    "type": "Text",  
     "value": "0"  
   },  
   "minimumTransferTime": {  
+    "type": "Number",  
     "value": 10  
   },  
   "hasDestination": {  
-    "type": "Relationship",  
+    "type": "URI",  
     "value": "urn:ngsi-ld:GtfsStop:Malaga_508"  
   },  
   "hasOrigin": {  
-    "type": "Relationship",  
+    "type": "URI",  
     "value": "urn:ngsi-ld:GtfsStop:Malaga_101"  
   },  
   "name": {  
@@ -219,6 +221,25 @@ GtfsTransferRule:
 </details>  
 #### GtfsTransferRule NGSI-LD key-values Example    
 Here is an example of a GtfsTransferRule in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
+<details><summary><strong>show/hide example</strong></summary>    
+```json  
+{  
+    "id": "urn:ngsi-ld:GtfsTransferRule:Malaga:Linea1_Linea5",  
+    "type": "GtfsTransferRule",  
+    "hasDestination": "urn:ngsi-ld:GtfsStop:Malaga_508",  
+    "hasOrigin": "urn:ngsi-ld:GtfsStop:Malaga_101",  
+    "minimumTransferTime": 10,  
+    "name": "L1_L5",  
+    "transferType": "0",  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
+    ]  
+}  
+```  
+</details>  
+#### GtfsTransferRule NGSI-LD normalized Example    
+Here is an example of a GtfsTransferRule in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -244,25 +265,6 @@ GtfsTransferRule:
         "type": "Property",  
         "value": "0"  
     },  
-    "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
-    ]  
-}  
-```  
-</details>  
-#### GtfsTransferRule NGSI-LD normalized Example    
-Here is an example of a GtfsTransferRule in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
-<details><summary><strong>show/hide example</strong></summary>    
-```json  
-{  
-    "id": "urn:ngsi-ld:GtfsTransferRule:Malaga:Linea1_Linea5",  
-    "type": "GtfsTransferRule",  
-    "hasDestination": "urn:ngsi-ld:GtfsStop:Malaga_508",  
-    "hasOrigin": "urn:ngsi-ld:GtfsStop:Malaga_101",  
-    "minimumTransferTime": 10,  
-    "name": "L1_L5",  
-    "transferType": "0",  
     "@context": [  
         "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
         "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
