@@ -4,33 +4,33 @@
 ================<!-- /10-Header -->  
 <!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/GtfsAgency/LICENSE.md)  
-[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+[文書が自動的に生成されます](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-グローバルな説明**GTFS機関**。  
-バージョン: 0.0.2  
+グローバルな内容です：**GTFS Agency**  
+バージョン：0.0.2  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
 ## プロパティ一覧  
 
-<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
-- `addressCountry[string]`: 国のことです。例えば、スペイン  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)- `addressLocality[string]`: ストリートアドレスがある地域、地域内の  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)- `addressRegion[string]`: ロケールがある地域、国内にある地域  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)- `agencyName[string]`: GTFSの`agency_name`と同じ。  . Model: [https://schema.org/Text](https://schema.org/Text)- `alternateName[string]`: この項目の別称  - `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このアイテムの説明  - `entitySource[string]`: Entity データの元のソースを URL として示す一連の文字。これは、この Entity を生成するために使用されたオリジナルの GTFS フィードの URL を指すものとする。  . Model: [https://schema.org/URL](https://schema.org/URL)- `id[*]`: エンティティの一意な識別子  - `language[string]`: GTFSの `agency_language` と同じです。GTFS](https://developers.google.com/transit/gtfs/reference/#agencytxt)を参照。  . Model: [https://schema.org/Text](https://schema.org/Text)- `name[string]`: このアイテムの名称です。  - `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `page[string]`: GTFSの `stop_url` と同じ。  . Model: [http://schema.org/URL](http://schema.org/URL)- `phone[string]`: GFTSの`agency_phone`と同じ。  . Model: [https://schema.org/Text](https://schema.org/Text)- `postOfficeBoxNumber[string]`: 私書箱の住所の場合は、郵便番号。例：03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)- `postalCode[string]`: 郵便番号です。例：24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)- `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `streetAddress[string]`: ストリートアドレス  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)- `timezone[string]`: GTFSの `agency_timezone` と同じです。GTFS](https://developers.google.com/transit/gtfs/reference/#agencytxt)を参照。  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: NGSI Entity Type。GtfsAgencyである必要があります。Enum:'GtfsAgency' です。  <!-- /30-PropertiesList -->  
+<sup><sub>[*] 属性に型がない場合は、複数の型や異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `addressCountry[string]`: 国のことです。例えば、スペイン  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)- `addressLocality[string]`: ストリートアドレスがある地域は、どの地域か  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)- `addressRegion[string]`: ロケールがある地域は、どの国にあるのか  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)- `agencyName[string]`: GTFS の `agency_name` と同じ。  . Model: [https://schema.org/Text](https://schema.org/Text)- `alternateName[string]`: このアイテムの別称  - `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このアイテムの説明  - `district[string]`: 地区とは、国によっては地方自治体によって管理される行政区画の一種である。  - `entitySource[string]`: Entityデータの元のソースをURLで示す一連の文字列。このEntityを生成するために使用されたオリジナルのGTFSフィードのURLを指すものとする。  . Model: [https://schema.org/URL](https://schema.org/URL)- `id[*]`: エンティティの一意な識別子  - `language[string]`: GTFS の `agency_language` と同じ。GTFS](https://developers.google.com/transit/gtfs/reference/#agencytxt)を参照。  . Model: [https://schema.org/Text](https://schema.org/Text)- `name[string]`: この項目の名称です。  - `owner[array]`: 所有者の固有IDを参照するJSONエンコードされた文字列を含むリストです。  - `page[string]`: GTFS の `stop_url` と同じ。  . Model: [http://schema.org/URL](http://schema.org/URL)- `phone[string]`: GFTS の `agency_phone` と同じです。  . Model: [https://schema.org/Text](https://schema.org/Text)- `postOfficeBoxNumber[string]`: 私書箱の住所の場合は、郵便番号です。例：03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)- `postalCode[string]`: 郵便番号です。例：24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)- `seeAlso[*]`: アイテムに関する追加リソースを指す URI のリスト。  - `source[string]`: エンティティデータの元のソースをURLとして与える一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `streetAddress[string]`: ストリートアドレス  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)- `streetNr[string]`: 公道上の特定の物件を特定する番号。  - `timezone[string]`: GTFS の `agency_timezone` と同じである。GTFS](https://developers.google.com/transit/gtfs/reference/#agencytxt)を参照。  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: NGSI Entity Typeです：GtfsAgencyである必要があります。Enum:'GtfsAgency'です。  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
-必要なプロパティ  
+必須プロパティ  
 - `agencyName`  - `id`  - `source`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
 参照[https://developers.google.com/transit/gtfs/reference/#agencytxt](https://developers.google.com/transit/gtfs/reference/#agencytxt)  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
 ## プロパティのデータモデル記述  
-アルファベット順に並びます（クリックで詳細へ）  
+アルファベット順（クリックで詳細表示）  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 GtfsAgency:    
-  description: 'GTFS Agency'    
+  description: GTFS Agency    
   properties:    
     addressCountry:    
       description: 'The country. For example, Spain'    
@@ -51,40 +51,43 @@ GtfsAgency:
         model: https://schema.org/addressRegion    
         type: Property    
     agencyName:    
-      description: 'Same as GTFS `agency_name`'    
+      description: Same as GTFS `agency_name`    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     alternateName:    
-      description: 'An alternative name for this item'    
+      description: An alternative name for this item    
       type: string    
       x-ngsi:    
         type: Property    
     dataProvider:    
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
+      description: A sequence of characters identifying the provider of the harmonised data entity.    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform.    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     description:    
-      description: 'A description of this item'    
+      description: A description of this item    
       type: string    
       x-ngsi:    
         type: Property    
+    district:    
+      description: 'A district is a type of administrative division that, in some countries, is managed by the local government.'    
+      type: string    
     entitySource:    
-      description: 'A sequence of characters giving the original source of the Entity data as a URL. It shall point to the URL of the original GTFS feed used to generate this Entity'    
+      description: A sequence of characters giving the original source of the Entity data as a URL. It shall point to the URL of the original GTFS feed used to generate this Entity    
       format: uri    
       type: string    
       x-ngsi:    
@@ -92,15 +95,15 @@ GtfsAgency:
         type: Property    
     id:    
       anyOf: &gtfsagency_-_properties_-_owner_-_items_-_anyof    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Unique identifier of the entity'    
+      description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     language:    
@@ -110,27 +113,27 @@ GtfsAgency:
         model: https://schema.org/Text    
         type: Property    
     name:    
-      description: 'The name of this item.'    
+      description: The name of this item.    
       type: string    
       x-ngsi:    
         type: Property    
     owner:    
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
         anyOf: *gtfsagency_-_properties_-_owner_-_items_-_anyof    
-        description: 'Property. Unique identifier of the entity'    
+        description: Property. Unique identifier of the entity    
       type: array    
       x-ngsi:    
         type: Property    
     page:    
-      description: 'Same as GTFS `stop_url`'    
+      description: Same as GTFS `stop_url`    
       format: uri    
       type: string    
       x-ngsi:    
         model: http://schema.org/URL    
         type: Property    
     phone:    
-      description: 'Same as GFTS `agency_phone`'    
+      description: Same as GFTS `agency_phone`    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
@@ -148,7 +151,7 @@ GtfsAgency:
         model: https://schema.org/https://schema.org/postalCode    
         type: Property    
     seeAlso:    
-      description: 'list of uri pointing to additional resources about the item'    
+      description: list of uri pointing to additional resources about the item    
       oneOf:    
         - items:    
             format: uri    
@@ -165,11 +168,14 @@ GtfsAgency:
       x-ngsi:    
         type: Property    
     streetAddress:    
-      description: 'The street address'    
+      description: The street address    
       type: string    
       x-ngsi:    
         model: https://schema.org/streetAddress    
         type: Property    
+    streetNr:    
+      description: Number identifying a specific property on a public street.    
+      type: string    
     timezone:    
       description: "Same as GTFS `agency_timezone`. See [GTFS](https://developers.google.com/transit/gtfs/reference/#agencytxt)"    
       type: string    
@@ -202,8 +208,8 @@ GtfsAgency:
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
 ## ペイロードの例  
-#### GtfsAgency NGSI-v2 key-value の例。  
-ここでは、GtfsAgencyをJSON-LD形式でkey-valuesにした例を示します。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### GtfsAgency NGSI-v2 キーバリュー例  
+ここでは、GtfsAgencyをJSON-LD形式でkey-valuesとした例を示します。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -218,7 +224,7 @@ GtfsAgency:
 ```  
 </details>  
 #### GtfsAgency NGSI-v2 正規化例  
-GtfsAgency を JSON-LD 形式で正規化した例を示します。これはオプションを使用しない場合，NGSI-v2と互換性があり，個々のエンティティのコンテキストデータを返します。  
+ここでは、GtfsAgencyをJSON-LD形式で正規化した例を示します。これはオプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -243,7 +249,7 @@ GtfsAgency:
 ```  
 </details>  
 #### GtfsAgency NGSI-LD キー値例  
-ここでは、GtfsAgencyをJSON-LD形式でkey-valuesとして表した例を示します。これは、`options=keyValues`を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+ここでは、GtfsAgencyをJSON-LD形式でkey-valuesとした例を示します。これは、`options=keyValues`を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -277,7 +283,7 @@ GtfsAgency:
 ```  
 </details>  
 #### GtfsAgency NGSI-LD 正規化例  
-GtfsAgencyをJSON-LD形式で正規化した例です。これはオプションを使用しない場合のNGSI-LDと互換性があり，個々のエンティティのコンテキストデータを返します。  
+ここでは、GtfsAgencyをJSON-LD形式で正規化した例を示します。これはオプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  

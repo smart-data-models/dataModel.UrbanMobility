@@ -14,8 +14,8 @@
 
 ## Lista de propiedades  
 
-<sup><sub>[*] Si no hay un tipo en un atributo es porque puede tener varios tipos o diferentes formatos/patrones</sub></sup>  
-- `addressCountry[string]`: El país. Por ejemplo, España  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)- `addressLocality[string]`: La localidad en la que se encuentra la dirección, y que está en la región  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)- `addressRegion[string]`: La región en la que se encuentra la localidad, y que está en el país  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)- `agencyName[string]`: Igual que GTFS `nombre_de_agencia`.  . Model: [https://schema.org/Text](https://schema.org/Text)- `alternateName[string]`: Un nombre alternativo para este artículo  - `dataProvider[string]`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated[string]`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified[string]`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description[string]`: Una descripción de este artículo  - `entitySource[string]`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Deberá apuntar a la URL de la fuente GTFS original utilizada para generar esta Entidad.  . Model: [https://schema.org/URL](https://schema.org/URL)- `id[*]`: Identificador único de la entidad  - `language[string]`: Igual que GTFS `agency_language`. Véase [GTFS](https://developers.google.com/transit/gtfs/reference/#agencytxt)  . Model: [https://schema.org/Text](https://schema.org/Text)- `name[string]`: El nombre de este artículo.  - `owner[array]`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `page[string]`: Igual que el GTFS `stop_url`.  . Model: [http://schema.org/URL](http://schema.org/URL)- `phone[string]`: Igual que el GFTS `agency_phone`.  . Model: [https://schema.org/Text](https://schema.org/Text)- `postOfficeBoxNumber[string]`: El número del apartado de correos para las direcciones de los apartados postales. Por ejemplo, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)- `postalCode[string]`: El código postal. Por ejemplo, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)- `seeAlso[*]`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source[string]`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen, o la URL del objeto de origen.  - `streetAddress[string]`: La dirección de la calle  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)- `timezone[string]`: Igual que GTFS `agency_timezone`. Véase [GTFS](https://developers.google.com/transit/gtfs/reference/#agencytxt)  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: Tipo de entidad NGSI: Tiene que ser GtfsAgency. Enum:'GtfsAgency'  <!-- /30-PropertiesList -->  
+<sup><sub>[*] Si no hay un tipo en un atributo es porque puede tener varios tipos o diferentes formatos/patrones</sub></sup>.  
+- `addressCountry[string]`: El país. Por ejemplo, España  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)- `addressLocality[string]`: La localidad en la que se encuentra la dirección postal, y que está en la región  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)- `addressRegion[string]`: La región en la que se encuentra la localidad, y que está en el país  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)- `agencyName[string]`: Igual que GTFS `agency_name`.  . Model: [https://schema.org/Text](https://schema.org/Text)- `alternateName[string]`: Un nombre alternativo para este artículo  - `dataProvider[string]`: Secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated[string]`: Fecha de creación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `dateModified[string]`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description[string]`: Descripción de este artículo  - `district[string]`: Un distrito es un tipo de división administrativa que, en algunos países, gestiona el gobierno local.  - `entitySource[string]`: Secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Deberá apuntar a la URL de la fuente GTFS original utilizada para generar esta Entidad.  . Model: [https://schema.org/URL](https://schema.org/URL)- `id[*]`: Identificador único de la entidad  - `language[string]`: Igual que GTFS `agency_language`. Véase [GTFS](https://developers.google.com/transit/gtfs/reference/#agencytxt)  . Model: [https://schema.org/Text](https://schema.org/Text)- `name[string]`: El nombre de este artículo.  - `owner[array]`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios.  - `page[string]`: Igual que GTFS `stop_url`.  . Model: [http://schema.org/URL](http://schema.org/URL)- `phone[string]`: Igual que GFTS `agency_phone`.  . Model: [https://schema.org/Text](https://schema.org/Text)- `postOfficeBoxNumber[string]`: El número del apartado de correos para las direcciones de apartados postales. Por ejemplo, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)- `postalCode[string]`: El código postal. Por ejemplo, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)- `seeAlso[*]`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source[string]`: Secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `streetAddress[string]`: La dirección  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)- `streetNr[string]`: Número que identifica una propiedad específica en una vía pública.  - `timezone[string]`: Igual que GTFS `agency_timezone`. Véase [GTFS](https://developers.google.com/transit/gtfs/reference/#agencytxt)  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: Tipo de entidad NGSI: Debe ser GtfsAgency. Enum:'GtfsAgency'  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Propiedades requeridas  
 - `agencyName`  - `id`  - `source`  - `type`  <!-- /35-RequiredProperties -->  
@@ -23,14 +23,14 @@
 Véase [https://developers.google.com/transit/gtfs/reference/#agencytxt](https://developers.google.com/transit/gtfs/reference/#agencytxt)  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
-## Descripción del modelo de datos de las propiedades  
-Ordenados alfabéticamente (haga clic para ver los detalles)  
+## Descripción de las propiedades del modelo de datos  
+Ordenados alfabéticamente (pulse para más detalles)  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 GtfsAgency:    
-  description: 'GTFS Agency'    
+  description: GTFS Agency    
   properties:    
     addressCountry:    
       description: 'The country. For example, Spain'    
@@ -51,40 +51,43 @@ GtfsAgency:
         model: https://schema.org/addressRegion    
         type: Property    
     agencyName:    
-      description: 'Same as GTFS `agency_name`'    
+      description: Same as GTFS `agency_name`    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     alternateName:    
-      description: 'An alternative name for this item'    
+      description: An alternative name for this item    
       type: string    
       x-ngsi:    
         type: Property    
     dataProvider:    
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
+      description: A sequence of characters identifying the provider of the harmonised data entity.    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform.    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     description:    
-      description: 'A description of this item'    
+      description: A description of this item    
       type: string    
       x-ngsi:    
         type: Property    
+    district:    
+      description: 'A district is a type of administrative division that, in some countries, is managed by the local government.'    
+      type: string    
     entitySource:    
-      description: 'A sequence of characters giving the original source of the Entity data as a URL. It shall point to the URL of the original GTFS feed used to generate this Entity'    
+      description: A sequence of characters giving the original source of the Entity data as a URL. It shall point to the URL of the original GTFS feed used to generate this Entity    
       format: uri    
       type: string    
       x-ngsi:    
@@ -92,15 +95,15 @@ GtfsAgency:
         type: Property    
     id:    
       anyOf: &gtfsagency_-_properties_-_owner_-_items_-_anyof    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Unique identifier of the entity'    
+      description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     language:    
@@ -110,27 +113,27 @@ GtfsAgency:
         model: https://schema.org/Text    
         type: Property    
     name:    
-      description: 'The name of this item.'    
+      description: The name of this item.    
       type: string    
       x-ngsi:    
         type: Property    
     owner:    
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
         anyOf: *gtfsagency_-_properties_-_owner_-_items_-_anyof    
-        description: 'Property. Unique identifier of the entity'    
+        description: Property. Unique identifier of the entity    
       type: array    
       x-ngsi:    
         type: Property    
     page:    
-      description: 'Same as GTFS `stop_url`'    
+      description: Same as GTFS `stop_url`    
       format: uri    
       type: string    
       x-ngsi:    
         model: http://schema.org/URL    
         type: Property    
     phone:    
-      description: 'Same as GFTS `agency_phone`'    
+      description: Same as GFTS `agency_phone`    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
@@ -148,7 +151,7 @@ GtfsAgency:
         model: https://schema.org/https://schema.org/postalCode    
         type: Property    
     seeAlso:    
-      description: 'list of uri pointing to additional resources about the item'    
+      description: list of uri pointing to additional resources about the item    
       oneOf:    
         - items:    
             format: uri    
@@ -165,11 +168,14 @@ GtfsAgency:
       x-ngsi:    
         type: Property    
     streetAddress:    
-      description: 'The street address'    
+      description: The street address    
       type: string    
       x-ngsi:    
         model: https://schema.org/streetAddress    
         type: Property    
+    streetNr:    
+      description: Number identifying a specific property on a public street.    
+      type: string    
     timezone:    
       description: "Same as GTFS `agency_timezone`. See [GTFS](https://developers.google.com/transit/gtfs/reference/#agencytxt)"    
       type: string    
@@ -203,7 +209,7 @@ GtfsAgency:
 <!-- 80-Examples -->  
 ## Ejemplo de carga útil  
 #### GtfsAgency NGSI-v2 key-values Ejemplo  
-Aquí hay un ejemplo de un GtfsAgency en formato JSON-LD como valores-clave. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+Aquí hay un ejemplo de un GtfsAgency en formato JSON-LD como key-values. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -218,7 +224,7 @@ GtfsAgency:
 ```  
 </details>  
 #### GtfsAgency NGSI-v2 normalizado Ejemplo  
-Aquí hay un ejemplo de un GtfsAgency en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+He aquí un ejemplo de un GtfsAgency en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -243,7 +249,7 @@ GtfsAgency:
 ```  
 </details>  
 #### GtfsAgency NGSI-LD key-values Ejemplo  
-Aquí hay un ejemplo de un GtfsAgency en formato JSON-LD como valores-clave. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+Aquí hay un ejemplo de un GtfsAgency en formato JSON-LD como key-values. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -277,7 +283,7 @@ GtfsAgency:
 ```  
 </details>  
 #### GtfsAgency NGSI-LD normalizado Ejemplo  
-Este es un ejemplo de un GtfsAgency en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+He aquí un ejemplo de un GtfsAgency en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -298,7 +304,7 @@ GtfsAgency:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud  
+Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud.  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  
