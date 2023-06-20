@@ -2,13 +2,15 @@
   "id": "urn:ngsi-ld:GtfsStation:Madrid:est_90_21",
   "type": "GtfsStation",
   "code": {
+    "type": "Text",
     "value": "21"
   },
   "name": {
+    "type": "Text",
     "value": "Intercambiador de Plaza de Castilla"
   },
   "hasStop": {
-    "type": "Relationship",
+    "type": "URI",
     "value": ["urn:ngsi-ld:GtfsStop:Madrid_par_4_1"]
   },
   "location": {

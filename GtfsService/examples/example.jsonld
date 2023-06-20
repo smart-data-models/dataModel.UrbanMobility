@@ -1,18 +1,9 @@
 {
     "id": "urn:ngsi-ld:Service:Malaga:LAB",
     "type": "GtfsService",
-    "description": {
-        "type": "Property",
-        "value": "Laborables"
-    },
-    "name": {
-        "type": "Property",
-        "value": "LAB"
-    },
-    "operatedBy": {
-        "type": "Relationship",
-        "object": "urn:ngsi-ld:GtfsAgency:Malaga_EMT"
-    },
+    "description": "Laborables",
+    "name": "LAB",
+    "operatedBy": "urn:ngsi-ld:GtfsAgency:Malaga_EMT",
     "@context": [
         "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
         "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"

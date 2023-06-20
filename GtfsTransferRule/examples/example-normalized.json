@@ -2,17 +2,19 @@
   "id": "urn:ngsi-ld:GtfsTransferRule:Malaga:Linea1_Linea5",
   "type": "GtfsTransferRule",
   "transferType": {
+    "type": "Text",
     "value": "0"
   },
   "minimumTransferTime": {
+    "type": "Number",
     "value": 10
   },
   "hasDestination": {
-    "type": "Relationship",
+    "type": "URI",
     "value": "urn:ngsi-ld:GtfsStop:Malaga_508"
   },
   "hasOrigin": {
-    "type": "Relationship",
+    "type": "URI",
     "value": "urn:ngsi-ld:GtfsStop:Malaga_101"
   },
   "name": {

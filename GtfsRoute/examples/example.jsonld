@@ -1,26 +1,11 @@
 {
     "id": "urn:ngsi-ld:GtfsRoute:Spain:Malaga:1",
     "type": "GtfsRoute",
-    "name": {
-        "type": "Property",
-        "value": "Parque del Sur _ Alameda Principal _ San Andr\u00e9s"
-    },
-    "operatedBy": {
-        "type": "Relationship",
-        "object": "urn:ngsi-ld:GtfsAgency:Malaga_EMT"
-    },
-    "page": {
-        "type": "Property",
-        "value": "http://www.emtmalaga.es/emt-mobile/informacionLinea.html"
-    },
-    "routeType": {
-        "type": "Property",
-        "value": "3"
-    },
-    "shortName": {
-        "type": "Property",
-        "value": "1"
-    },
+    "name": "Parque del Sur _ Alameda Principal _ San Andr\u00e9s",
+    "operatedBy": "urn:ngsi-ld:GtfsAgency:Malaga_EMT",
+    "page": "http://www.emtmalaga.es/emt-mobile/informacionLinea.html",
+    "routeType": "3",
+    "shortName": "1",
     "@context": [
         "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
         "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"

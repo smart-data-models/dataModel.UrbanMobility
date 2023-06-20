@@ -2,10 +2,11 @@
   "id": "urn:ngsi-ld:GtfsStop:Malaga_101",
   "type": "GtfsStop",
   "code": {
+    "type": "Text",
     "value": "101"
   },
   "operatedBy": {
-    "type": "Relationship",
+    "type": "URI",
     "value": "urn:ngsi-ld:GtfsAgency:Malaga_EMT"
   },
   "location": {
@@ -16,6 +17,7 @@
     }
   },
   "name": {
+    "type": "Text",
     "value": "Alameda Principal Sur"
   }
 }

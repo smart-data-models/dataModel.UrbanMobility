@@ -1,2 +1,0 @@
-"@context__0_", "@context__1_", "id_", "name_", "operatedBy_", "page_", "routeType_", "shortName_", "type_"
-"https://smartdatamodels.org/context.jsonld", "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld", "urn:ngsi-ld:GtfsRoute:Spain:Malaga:1", "Parque del Sur _ Alameda Principal _ San Andrés", "urn:ngsi-ld:GtfsAgency:Malaga_EMT", "http://www.emtmalaga.es/emt-mobile/informacionLinea.html", "3", "1", "GtfsRoute"

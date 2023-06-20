@@ -1,2 +1,0 @@
-"id_", "type_", "operatedBy__type_", "operatedBy__value_", "name__value_", "description__value_"
-"urn:ngsi-ld:Service:Malaga:LAB", "GtfsService", "Relationship", "urn:ngsi-ld:GtfsAgency:Malaga_EMT", "LAB", "Laborables"

@@ -1,2 +1,0 @@
-"id_", "type_", "code_", "name_", "location__type_", "location__coordinates__0_", "location__coordinates__1_", "operatedBy__0_"
-"urn:ngsi-ld:GtfsStop:Malaga_101", "GtfsStop", "101", "Alameda Principal Sur", "Point", "-4.424393", "36.716872", "urn:ngsi-ld:GtfsAgency:Malaga_EMT"

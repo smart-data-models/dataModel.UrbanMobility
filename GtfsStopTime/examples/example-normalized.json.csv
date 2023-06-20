@@ -1,2 +1,0 @@
-"id_", "type_", "departureTime__value_", "hasTrip__type_", "hasTrip__value_", "stopSequence__value_", "distanceTravelled__value_", "arrivalTime__value_", "hasStop__type_", "hasStop__value_"
-"urn:ngsi-ld:GtfsStopTime:Spain:Madrid:EMT:FE0010011_737", "GtfsStopTime", "07:04:24", "Relationship", "urn:ngsi-ld:GtfsTrip:Madrid:EMT:FE0010011", "4", "759", "07:04:24", "Relationship", "urn:ngsi-ld:GtfsStop:Madrid:EMT:737"

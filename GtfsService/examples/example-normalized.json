@@ -2,13 +2,15 @@
   "id": "urn:ngsi-ld:Service:Malaga:LAB",
   "type": "GtfsService",
   "operatedBy": {
-    "type": "Relationship",
+    "type": "URI",
     "value": "urn:ngsi-ld:GtfsAgency:Malaga_EMT"
   },
   "name": {
+    "type": "Text",
     "value": "LAB"
   },
   "description": {
+    "type": "Text",
     "value": "Laborables"
   }
 }

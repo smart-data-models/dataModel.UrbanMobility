@@ -1,2 +1,0 @@
-"@context__0_", "@context__1_", "direction_", "hasRoute_", "hasService_", "hasShape_", "headSign_", "id_", "type_"
-"https://smartdatamodels.org/context.jsonld", "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld", "0", "urn:ngsi-ld:GtfsRoute:Spain:Malaga:1", "urn:ngsi-ld:GtfsService:Malaga_LAB", "urn:ngsi-ld:GtfsShape:Shape01", "San Andrés", "urn:ngsi-ld:GtfsTrip:Spain:Malaga:1", "GtfsTrip"

@@ -1,16 +1,28 @@
 {
     "id": "urn:ngsi-ld:GtfsStop:Malaga_101",
     "type": "GtfsStop",
-    "code": "101",
-    "location": {
-        "coordinates": [
-            -4.424393,
-            36.716872
-        ],
-        "type": "Point"
+    "code": {
+        "type": "Property",
+        "value": "101"
     },
-    "name": "Alameda Principal Sur",
-    "operatedBy": "urn:ngsi-ld:GtfsAgency:Malaga_EMT",
+    "location": {
+        "type": "GeoProperty",
+        "value": {
+            "type": "Point",
+            "coordinates": [
+                -4.424393,
+                36.716872
+            ]
+        }
+    },
+    "name": {
+        "type": "Property",
+        "value": "Alameda Principal Sur"
+    },
+    "operatedBy": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:GtfsAgency:Malaga_EMT"
+    },
     "@context": [
         "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
         "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"

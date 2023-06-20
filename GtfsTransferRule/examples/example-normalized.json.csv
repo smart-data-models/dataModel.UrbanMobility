@@ -1,2 +1,0 @@
-"id_", "type_", "transferType__value_", "minimumTransferTime__value_", "hasDestination__type_", "hasDestination__value_", "hasOrigin__type_", "hasOrigin__value_", "name__value_"
-"urn:ngsi-ld:GtfsTransferRule:Malaga:Linea1_Linea5", "GtfsTransferRule", "0", "10", "Relationship", "urn:ngsi-ld:GtfsStop:Malaga_508", "Relationship", "urn:ngsi-ld:GtfsStop:Malaga_101", "L1_L5"

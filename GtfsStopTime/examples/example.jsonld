@@ -1,30 +1,12 @@
 {
     "id": "urn:ngsi-ld:GtfsStopTime:Spain:Madrid:EMT:FE0010011_737",
     "type": "GtfsStopTime",
-    "arrivalTime": {
-        "type": "Property",
-        "value": "07:04:24"
-    },
-    "departureTime": {
-        "type": "Property",
-        "value": "07:04:24"
-    },
-    "distanceTravelled": {
-        "type": "Property",
-        "value": 759
-    },
-    "hasStop": {
-        "type": "Relationship",
-        "object": "urn:ngsi-ld:GtfsStop:Madrid:EMT:737"
-    },
-    "hasTrip": {
-        "type": "Relationship",
-        "object": "urn:ngsi-ld:GtfsTrip:Madrid:EMT:FE0010011"
-    },
-    "stopSequence": {
-        "type": "Property",
-        "value": 4
-    },
+    "arrivalTime": "07:04:24",
+    "departureTime": "07:04:24",
+    "distanceTravelled": 759,
+    "hasStop": "urn:ngsi-ld:GtfsStop:Madrid:EMT:737",
+    "hasTrip": "urn:ngsi-ld:GtfsTrip:Madrid:EMT:FE0010011",
+    "stopSequence": 4,
     "@context": [
         "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
         "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"

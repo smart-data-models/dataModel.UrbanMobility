@@ -65,5 +65,8 @@
   "ac_available": "yes",
   "seating_capacity": 70,
   "depot_id": "1",
-  "depot_name": "BHESTAN DEPOT"
+  "depot_name": "BHESTAN DEPOT",
+  "@context": [
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"
+  ]
 }

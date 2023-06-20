@@ -1,2 +1,0 @@
-"@context__0_", "@context__1_", "code_", "id_", "location__coordinates__0_", "location__coordinates__1_", "location__type_", "name_", "operatedBy_", "type_"
-"https://smartdatamodels.org/context.jsonld", "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld", "101", "urn:ngsi-ld:GtfsStop:Malaga_101", "-4.424393", "36.716872", "Point", "Alameda Principal Sur", "urn:ngsi-ld:GtfsAgency:Malaga_EMT", "GtfsStop"
