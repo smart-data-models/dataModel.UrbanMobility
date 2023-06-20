@@ -4,58 +4,58 @@
 ======================<!-- /10-Header -->  
 <!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/GtfsCalendarRule/LICENSE.md)  
-[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+[文書が自動的に生成されます](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-グローバルな記述。**スマートデータモデル。GTFS カレンダールール**。  
-バージョン: 0.0.1  
+グローバルな記述です：**Smart Data Models.GTFSのカレンダールール**について  
+バージョン：0.0.1  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
 ## プロパティ一覧  
 
-<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
-- `alternateName[string]`: この項目の別称  - `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このアイテムの説明  - `endDate[string]`: このルールの終了日を `YYYY-MM-DD` フォーマットで指定します。カレンダー.txt](https://developers.google.com/transit/gtfs/reference/#calendartxt)のフィールド `end_date` から取得することができる。  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `friday[boolean]`: GTFS `friday` と同じ。  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `hasService[string]`: このルールが適用されるサービス。service_id` から派生したものです。  . Model: [https://schema.org/URL](https://schema.org/URL)- `id[*]`: エンティティの一意な識別子  - `monday[boolean]`: GTFS `monday` と同じ。  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `name[string]`: このアイテムの名称です。  - `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリスト  - `saturday[boolean]`: GTFS `saturday` と同じ。  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `startDate[string]`: このルールの開始日を `YYYY-MM-DD` フォーマットで指定する。この日付は [calendar.txt](https://developers.google.com/transit/gtfs/reference/#calendartxt) のフィールド `start_date` から取得できます。  . Model: [https://schema.org/Date](https://schema.org/Date)- `sunday[boolean]`: GTFS `sunday` と同じ。  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `thursday[boolean]`: GTFS `thursday` と同じ。  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `tuesday[boolean]`: GTFS `tuesday` と同じ。  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `type[string]`: NGSI エンティティタイプ。GtfsCalendarRuleである必要があります。  - `wednesday[boolean]`: GTFS `wednesday` と同じ。  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)<!-- /30-PropertiesList -->  
+<sup><sub>[*] 属性に型がない場合は、複数の型や異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `alternateName[string]`: このアイテムの別称  - `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このアイテムの説明  - `endDate[string]`: このルールの終了日（`YYYY-MM-DD`形式）。これは [calendar.txt](https://developers.google.com/transit/gtfs/reference/#calendartxt) のフィールド `end_date` から取得することができる。  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `friday[boolean]`: GTFS `friday` と同じです。  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `hasService[string]`: このルールが適用されるサービス。service_id`から派生したものです。  . Model: [https://schema.org/URL](https://schema.org/URL)- `id[*]`: エンティティの一意な識別子  - `monday[boolean]`: GTFS `monday`と同じです。  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `name[string]`: この項目の名称です。  - `owner[array]`: 所有者の固有IDを参照するJSONエンコードされた文字列を含むリストです。  - `saturday[boolean]`: GTFS `saturday` と同じです。  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `seeAlso[*]`: アイテムに関する追加リソースを指す URI のリスト。  - `source[string]`: エンティティデータの元のソースをURLとして与える一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `startDate[string]`: このルールの開始日を `YYYY-MM-DD` フォーマットで指定する。これは [calendar.txt](https://developers.google.com/transit/gtfs/reference/#calendartxt) のフィールド `start_date` から取得することができる。  . Model: [https://schema.org/Date](https://schema.org/Date)- `sunday[boolean]`: GTFS `sunday` と同じです。  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `thursday[boolean]`: GTFS `thursday` と同じです。  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `tuesday[boolean]`: GTFS `tuesday`と同じ。  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `type[string]`: NGSI Entity Typeです：GtfsCalendarRuleである必要があります。  - `wednesday[boolean]`: GTFS `wednesday` と同じです。  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)<!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
-必要なプロパティ  
+必須プロパティ  
 - `endDate`  - `friday`  - `hasService`  - `id`  - `monday`  - `saturday`  - `startDate`  - `sunday`  - `thursday`  - `tuesday`  - `type`  - `wednesday`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
 参照[https://developers.google.com/transit/gtfs/reference/#calendartxt](https://developers.google.com/transit/gtfs/reference/#calendartxt)  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
 ## プロパティのデータモデル記述  
-アルファベット順に並びます（クリックで詳細へ）  
+アルファベット順（クリックで詳細表示）  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 GtfsCalendarRule:    
-  description: 'Smart Data Models. GTFS Calendar Rule'    
+  description: Smart Data Models. GTFS Calendar Rule    
   properties:    
     alternateName:    
-      description: 'An alternative name for this item'    
+      description: An alternative name for this item    
       type: string    
       x-ngsi:    
         type: Property    
     dataProvider:    
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
+      description: A sequence of characters identifying the provider of the harmonised data entity.    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform.    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     description:    
-      description: 'A description of this item'    
+      description: A description of this item    
       type: string    
       x-ngsi:    
         type: Property    
@@ -67,66 +67,66 @@ GtfsCalendarRule:
         model: https://schema.org/Boolean    
         type: Property    
     friday:    
-      description: 'Same as GTFS `friday`'    
+      description: Same as GTFS `friday`    
       type: boolean    
       x-ngsi:    
         model: https://schema.org/Boolean    
         type: Property    
     hasService:    
       anyOf:    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Service to which this rule applies to. Derived from `service_id`'    
+      description: Service to which this rule applies to. Derived from `service_id`    
       type: string    
       x-ngsi:    
         model: https://schema.org/URL    
         type: Relationship    
     id:    
       anyOf: &gtfscalendarrule_-_properties_-_owner_-_items_-_anyof    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Unique identifier of the entity'    
+      description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     monday:    
-      description: 'Same as GTFS `monday`'    
+      description: Same as GTFS `monday`    
       type: boolean    
       x-ngsi:    
         model: https://schema.org/Boolean    
         type: Property    
     name:    
-      description: 'The name of this item.'    
+      description: The name of this item.    
       type: string    
       x-ngsi:    
         type: Property    
     owner:    
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
         anyOf: *gtfscalendarrule_-_properties_-_owner_-_items_-_anyof    
-        description: 'Property. Unique identifier of the entity'    
+        description: Property. Unique identifier of the entity    
       type: array    
       x-ngsi:    
         type: Property    
     saturday:    
-      description: 'Same as GTFS `saturday`'    
+      description: Same as GTFS `saturday`    
       type: boolean    
       x-ngsi:    
         model: https://schema.org/Boolean    
         type: Property    
     seeAlso:    
-      description: 'list of uri pointing to additional resources about the item'    
+      description: list of uri pointing to additional resources about the item    
       oneOf:    
         - items:    
             format: uri    
@@ -150,19 +150,19 @@ GtfsCalendarRule:
         model: https://schema.org/Date    
         type: Property    
     sunday:    
-      description: 'Same as GTFS `sunday`'    
+      description: Same as GTFS `sunday`    
       type: boolean    
       x-ngsi:    
         model: https://schema.org/Boolean    
         type: Property    
     thursday:    
-      description: 'Same as GTFS `thursday`'    
+      description: Same as GTFS `thursday`    
       type: boolean    
       x-ngsi:    
         model: https://schema.org/Boolean    
         type: Property    
     tuesday:    
-      description: 'Same as GTFS `tuesday`'    
+      description: Same as GTFS `tuesday`    
       type: boolean    
       x-ngsi:    
         model: https://schema.org/Boolean    
@@ -175,7 +175,7 @@ GtfsCalendarRule:
       x-ngsi:    
         type: Property    
     wednesday:    
-      description: 'Same as GTFS `wednesday`'    
+      description: Same as GTFS `wednesday`    
       type: boolean    
       x-ngsi:    
         model: https://schema.org/Boolean    
@@ -207,8 +207,8 @@ GtfsCalendarRule:
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
 ## ペイロードの例  
-#### GtfsCalendarRule NGSI-v2 key-value 例  
-GtfsCalendarRuleをJSON-LD形式でkey-valuesにした例です。これは、`options=keyValues`を使用した場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### GtfsCalendarRule NGSI-v2 キーバリュー例  
+GtfsCalendarRuleをJSON-LD形式でkey-valuesとした例を示します。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -229,61 +229,86 @@ GtfsCalendarRule:
 ```  
 </details>  
 #### GtfsCalendarRule NGSI-v2 正規化例  
-GtfsCalendarRuleをJSON-LD形式で正規化した例です。これはオプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+ここでは、GtfsCalendarRuleをJSON-LDフォーマットで正規化した例を示します。これはオプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:CalendarRule:Madrid:Rule1267",  
   "type": "GtfsCalendarRule",  
   "startDate": {  
-    "type": "Property",  
+    "type": "Date",  
     "value": "2018-01-01"  
   },  
   "endDate": {  
-    "type": "Property",  
+    "type": "Date",  
     "value": "2019-01-01"  
   },  
   "name": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "Rule Hospital Service 1"  
   },  
   "monday": {  
-    "type": "Property",  
+    "type": "Boolean",  
     "value": true  
   },  
   "tuesday": {  
-    "type": "Property",  
+    "type": "Boolean",  
     "value": true  
   },  
   "friday": {  
-    "type": "Property",  
+    "type": "Boolean",  
     "value": true  
   },  
   "wednesday": {  
-    "type": "Property",  
+    "type": "Boolean",  
     "value": true  
   },  
   "thursday": {  
-    "type": "Property",  
+    "type": "Boolean",  
     "value": true  
   },  
   "sunday": {  
-    "type": "Property",  
+    "type": "Boolean",  
     "value": false  
   },  
   "hasService": {  
-    "type": "Relationship",  
+    "type": "URL",  
     "object": "urn:ngsi-ld:GtfsService:Madrid:Hospital_1"  
   },  
   "saturday": {  
-    "type": "Property",  
+    "type": "Boolean",  
     "value": false  
   }  
 }  
 ```  
 </details>  
 #### GtfsCalendarRule NGSI-LD キーバリュー例  
-GtfsCalendarRuleをJSON-LD形式でkey-valuesにした例です。これは、`options=keyValues`を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+GtfsCalendarRuleをJSON-LD形式でkey-valuesとした例を示します。これは、`options=keyValues`を用いた場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
+```json  
+{  
+    "id": "urn:ngsi-ld:CalendarRule:Madrid:Rule1267",  
+    "type": "GtfsCalendarRule",  
+    "endDate": "2019-01-01",  
+    "friday": true,  
+    "hasService": "urn:ngsi-ld:GtfsService:Madrid:Hospital_1",  
+    "monday": true,  
+    "name": "Rule Hospital Service 1",  
+    "saturday": false,  
+    "startDate": "2018-01-01",  
+    "sunday": false,  
+    "thursday": true,  
+    "tuesday": true,  
+    "wednesday": true,  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
+    ]  
+}  
+```  
+</details>  
+#### GtfsCalendarRule NGSI-LD 正規化例  
+ここでは、GtfsCalendarRuleをJSON-LD形式で正規化した例を示します。これはオプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -339,31 +364,6 @@ GtfsCalendarRule:
         "type": "Property",  
         "value": true  
     },  
-    "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
-    ]  
-}  
-```  
-</details>  
-#### GtfsCalendarRule NGSI-LD 正規化例  
-GtfsCalendarRuleをJSON-LD形式で正規化した例です。これはオプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
-<details><summary><strong>show/hide example</strong></summary>    
-```json  
-{  
-    "id": "urn:ngsi-ld:CalendarRule:Madrid:Rule1267",  
-    "type": "GtfsCalendarRule",  
-    "endDate": "2019-01-01",  
-    "friday": true,  
-    "hasService": "urn:ngsi-ld:GtfsService:Madrid:Hospital_1",  
-    "monday": true,  
-    "name": "Rule Hospital Service 1",  
-    "saturday": false,  
-    "startDate": "2018-01-01",  
-    "sunday": false,  
-    "thursday": true,  
-    "tuesday": true,  
-    "wednesday": true,  
     "@context": [  
         "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
         "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
