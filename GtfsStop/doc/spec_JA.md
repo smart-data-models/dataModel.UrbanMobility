@@ -4,36 +4,36 @@
 ==============<!-- /10-Header -->  
 <!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/GtfsStop/LICENSE.md)  
-[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+[文書が自動的に生成されます](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-グローバルな記述です。**GTFSの停止**。  
-バージョン: 0.0.1  
+グローバルな記述です：**GTFS停止**」と表示されます。  
+バージョン：0.0.1  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
 ## プロパティ一覧  
 
-<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
-- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: この項目の別称  - `areaServed[string]`: サービスまたは提供品が提供される地理的な地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `code[string]`: GTFSの `stop_code` と同じ。  . Model: [http://schema.org/Text](http://schema.org/Text)- `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このアイテムの説明  - `hasParentStation[*]`: GTFSの`parent_station`と同じです。  - `hasService[string]`: このルールが適用されるサービス。service_id` から派生したものです。  . Model: [https://schema.org/URL](https://schema.org/URL)- `hasStop[array]`: GtfsStop 型のエンティティを指すものとする。  - `hasTrip[*]`: このEntityに関連付けられたTrip。GtfsTrip 型の Entity を指すものとする。  . Model: [https://schema.org/URL](https://schema.org/URL)- `id[*]`: エンティティの一意な識別子  - `location[*]`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name[string]`: このアイテムの名称です。  - `operatedBy[array]`: この停留所を運営する機関リレーションシップのリスト。タイプ GtfsAgency のエンティティを指すものとする。  . Model: [https://schema.org/URL](https://schema.org/URL)- `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `page[string]`: GTFSの `stop_url` と同じ。  . Model: [http://schema.org/URL](http://schema.org/URL)- `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `stop_desc[string]`: GTFS の `stop_desc` と同じである。  - `type[string]`: NGSI エンティティタイプ。GtfsStopである必要があります。  - `wheelChairAccessible[string]`: GTFS の `wheelchair_boarding` と同じ。Enum:'0, 1 ,2'.GTFS](https://developers.google.com/transit/gtfs/reference/#stopstxt)で参照。  - `zoneCode[string]`: このストップが属するトランスポートゾーン。GTFSの `zone_id` と同じ。  . Model: [https://schema.org/Text](https://schema.org/Text)<!-- /30-PropertiesList -->  
+<sup><sub>[*] 属性に型がない場合は、複数の型や異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: このアイテムの別称  - `areaServed[string]`: サービスまたは提供されるアイテムが提供される地理的な地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `code[string]`: GTFS の `stop_code` と同じ。  . Model: [http://schema.org/Text](http://schema.org/Text)- `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このアイテムの説明  - `hasParentStation[*]`: GTFS の `parent_station` と同じです。  - `hasService[string]`: このルールが適用されるサービス。service_id`から派生したものです。  . Model: [https://schema.org/URL](https://schema.org/URL)- `hasStop[array]`: GtfsStop 型の Entity を指すものとする。  - `hasTrip[*]`: このEntityに関連するTrip。GtfsTrip型のEntityを指すものとする。  . Model: [https://schema.org/URL](https://schema.org/URL)- `id[*]`: エンティティの一意な識別子  - `location[*]`: アイテムへの Geojson 参照。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygon のいずれかである。  - `name[string]`: この項目の名称です。  - `operatedBy[array]`: この停留所を運営している機関です。リレーションシップのリスト。これらは、GtfsAgency型のEntityを指すものとする。  . Model: [https://schema.org/URL](https://schema.org/URL)- `owner[array]`: 所有者の固有IDを参照するJSONエンコードされた文字列を含むリストです。  - `page[string]`: GTFS の `stop_url` と同じ。  . Model: [http://schema.org/URL](http://schema.org/URL)- `seeAlso[*]`: アイテムに関する追加リソースを指す URI のリスト。  - `source[string]`: エンティティデータの元のソースをURLとして与える一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `stop_desc[string]`: GTFS の `stop_desc` と同じです。  - `type[string]`: NGSI Entityタイプ。GtfsStopである必要があります。  - `wheelChairAccessible[string]`: GTFS の `wheelchair_boarding` と同じ。Enum:'0, 1 ,2'.GTFS](https://developers.google.com/transit/gtfs/reference/#stopstxt)で参照。  - `zoneCode[string]`: このストップが属するトランスポートゾーン。GTFS の `zone_id` と同じです。  . Model: [https://schema.org/Text](https://schema.org/Text)<!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
-必要なプロパティ  
+必須プロパティ  
 - `id`  - `location`  - `name`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
-https://developers.google.com/transit/gtfs/reference/#stopstxt](https://developers.google.com/transit/gtfs/reference/#stopstxt) を参照。GTFS の `stop` を表し、 `location_type` は `0` に等しくなければならない。  
+https://developers.google.com/transit/gtfs/reference/#stopstxt](https://developers.google.com/transit/gtfs/reference/#stopstxt) を参照。GTFS の `stop` を表し、`location_type` は `0` に等しいものとする。  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
 ## プロパティのデータモデル記述  
-アルファベット順に並びます（クリックで詳細へ）  
+アルファベット順（クリックで詳細表示）  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 GtfsStop:    
-  description: 'GTFS Stop'    
+  description: GTFS Stop    
   properties:    
     address:    
-      description: 'The mailing address'    
+      description: The mailing address    
       properties:    
         addressCountry:    
           description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
@@ -44,6 +44,9 @@ GtfsStop:
         addressRegion:    
           description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
+        district:    
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government.'    
+          type: string    
         postOfficeBoxNumber:    
           description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
@@ -53,87 +56,90 @@ GtfsStop:
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
+        streetNr:    
+          description: Number identifying a specific property on a public street.    
+          type: string    
       type: object    
       x-ngsi:    
         model: https://schema.org/address    
         type: Property    
     alternateName:    
-      description: 'An alternative name for this item'    
+      description: An alternative name for this item    
       type: string    
       x-ngsi:    
         type: Property    
     areaServed:    
-      description: 'The geographic area where a service or offered item is provided'    
+      description: The geographic area where a service or offered item is provided    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     code:    
-      description: 'Same as GTFS `stop_code`'    
+      description: Same as GTFS `stop_code`    
       type: string    
       x-ngsi:    
         model: http://schema.org/Text    
         type: Property    
     dataProvider:    
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
+      description: A sequence of characters identifying the provider of the harmonised data entity.    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform.    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     description:    
-      description: 'A description of this item'    
+      description: A description of this item    
       type: string    
       x-ngsi:    
         type: Property    
     hasParentStation:    
       anyOf:    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Same as GTFS `parent_station`.'    
+      description: Same as GTFS `parent_station`.    
       x-ngsi:    
         type: Relationship    
     hasService:    
       anyOf:    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Service to which this rule applies to. Derived from `service_id`'    
+      description: Service to which this rule applies to. Derived from `service_id`    
       type: string    
       x-ngsi:    
         model: https://schema.org/URL    
         type: Relationship    
     hasStop:    
-      description: 'It shall point to an Entity of Type GtfsStop'    
+      description: It shall point to an Entity of Type GtfsStop    
       items:    
         anyOf:    
-          - description: 'Property. Identifier format of any NGSI entity'    
+          - description: Property. Identifier format of any NGSI entity    
             maxLength: 256    
             minLength: 1    
             pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
             type: string    
-          - description: 'Property. Identifier format of any NGSI entity'    
+          - description: Property. Identifier format of any NGSI entity    
             format: uri    
             type: string    
       type: array    
@@ -141,35 +147,35 @@ GtfsStop:
         type: Relationship    
     hasTrip:    
       anyOf:    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Trip associated to this Entity. It shall point to an Entity of Type GtfsTrip'    
+      description: Trip associated to this Entity. It shall point to an Entity of Type GtfsTrip    
       x-ngsi:    
         model: https://schema.org/URL    
         type: Relationship    
     id:    
       anyOf: &gtfsstop_-_properties_-_owner_-_items_-_anyof    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Unique identifier of the entity'    
+      description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - description: 'GeoProperty. Geojson reference to the item. Point'    
+        - description: GeoProperty. Geojson reference to the item. Point    
           properties:    
             bbox:    
               items:    
@@ -188,9 +194,9 @@ GtfsStop:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Point'    
+          title: GeoJSON Point    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. LineString'    
+        - description: GeoProperty. Geojson reference to the item. LineString    
           properties:    
             bbox:    
               items:    
@@ -212,9 +218,9 @@ GtfsStop:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON LineString'    
+          title: GeoJSON LineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. Polygon'    
+        - description: GeoProperty. Geojson reference to the item. Polygon    
           properties:    
             bbox:    
               items:    
@@ -238,9 +244,9 @@ GtfsStop:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Polygon'    
+          title: GeoJSON Polygon    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiPoint'    
+        - description: GeoProperty. Geojson reference to the item. MultiPoint    
           properties:    
             bbox:    
               items:    
@@ -261,9 +267,9 @@ GtfsStop:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPoint'    
+          title: GeoJSON MultiPoint    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+        - description: GeoProperty. Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -287,9 +293,9 @@ GtfsStop:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiLineString'    
+          title: GeoJSON MultiLineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+        - description: GeoProperty. Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -315,25 +321,25 @@ GtfsStop:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPolygon'    
+          title: GeoJSON MultiPolygon    
           type: object    
       x-ngsi:    
         type: GeoProperty    
     name:    
-      description: 'The name of this item.'    
+      description: The name of this item.    
       type: string    
       x-ngsi:    
         type: Property    
     operatedBy:    
-      description: 'Agency that operates this stop. List of Relationships. They shall point to an Entity of Type GtfsAgency'    
+      description: Agency that operates this stop. List of Relationships. They shall point to an Entity of Type GtfsAgency    
       items:    
         anyOf:    
-          - description: 'Property. Identifier format of any NGSI entity'    
+          - description: Property. Identifier format of any NGSI entity    
             maxLength: 256    
             minLength: 1    
             pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
             type: string    
-          - description: 'Property. Identifier format of any NGSI entity'    
+          - description: Property. Identifier format of any NGSI entity    
             format: uri    
             type: string    
       minItems: 0    
@@ -343,22 +349,22 @@ GtfsStop:
         model: https://schema.org/URL    
         type: Relationship    
     owner:    
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
         anyOf: *gtfsstop_-_properties_-_owner_-_items_-_anyof    
-        description: 'Property. Unique identifier of the entity'    
+        description: Property. Unique identifier of the entity    
       type: array    
       x-ngsi:    
         type: Property    
     page:    
-      description: 'Same as GTFS `stop_url`'    
+      description: Same as GTFS `stop_url`    
       format: uri    
       type: string    
       x-ngsi:    
         model: http://schema.org/URL    
         type: Property    
     seeAlso:    
-      description: 'list of uri pointing to additional resources about the item'    
+      description: list of uri pointing to additional resources about the item    
       oneOf:    
         - items:    
             format: uri    
@@ -375,12 +381,12 @@ GtfsStop:
       x-ngsi:    
         type: Property    
     stop_desc:    
-      description: 'Same as GTFS `stop_desc`.'    
+      description: Same as GTFS `stop_desc`.    
       type: string    
       x-ngsi:    
         type: Property    
     type:    
-      description: 'NGSI Entity type. It has to be GtfsStop'    
+      description: NGSI Entity type. It has to be GtfsStop    
       enum:    
         - GtfsStop    
       type: string    
@@ -396,7 +402,7 @@ GtfsStop:
       x-ngsi:    
         type: Property    
     zoneCode:    
-      description: 'Transport zone to which this stop belongs to. Same as GTFS `zone_id`'    
+      description: Transport zone to which this stop belongs to. Same as GTFS `zone_id`    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
@@ -408,7 +414,7 @@ GtfsStop:
     - location    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/GtfsStop/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsStop/schema.json    
   x-model-tags: ""    
@@ -420,8 +426,8 @@ GtfsStop:
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
 ## ペイロードの例  
-#### GtfsStop NGSI-v2 キー値の例  
-以下は、GtfsStopをJSON-LD形式でkey-valuesにした例である。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### GtfsStop NGSI-v2キーバリュー例  
+GtfsStopをJSON-LD形式でkey-valuesとした例を示します。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -431,24 +437,30 @@ GtfsStop:
   "name": "Alameda Principal Sur",  
   "location": {  
     "type": "Point",  
-    "coordinates": [-4.424393, 36.716872]  
+    "coordinates": [  
+      -4.424393,  
+      36.716872  
+    ]  
   },  
-  "operatedBy": ["urn:ngsi-ld:GtfsAgency:Malaga_EMT"]  
+  "operatedBy": [  
+    "urn:ngsi-ld:GtfsAgency:Malaga_EMT"  
+  ]  
 }  
 ```  
 </details>  
 #### GtfsStop NGSI-v2 正規化例  
-GtfsStop を JSON-LD 形式で正規化した例を示す。これはオプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+GtfsStopをJSON-LD形式で正規化した例を示します。オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返すことができます。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:GtfsStop:Malaga_101",  
   "type": "GtfsStop",  
   "code": {  
+    "type": "Text",  
     "value": "101"  
   },  
   "operatedBy": {  
-    "type": "Relationship",  
+    "type": "URI",  
     "value": "urn:ngsi-ld:GtfsAgency:Malaga_EMT"  
   },  
   "location": {  
@@ -459,13 +471,38 @@ GtfsStop:
     }  
   },  
   "name": {  
+    "type": "Text",  
     "value": "Alameda Principal Sur"  
   }  
 }  
 ```  
 </details>  
-#### GtfsStop NGSI-LD キー値の例  
-GtfsStopをJSON-LD形式でkey-valuesにした例です。これは、`options=keyValues`を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### GtfsStop NGSI-LD キー値例  
+GtfsStopをJSON-LD形式でkey-valuesとした例を示します。これは、`options=keyValues`を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
+```json  
+{  
+    "id": "urn:ngsi-ld:GtfsStop:Malaga_101",  
+    "type": "GtfsStop",  
+    "code": "101",  
+    "location": {  
+        "coordinates": [  
+            -4.424393,  
+            36.716872  
+        ],  
+        "type": "Point"  
+    },  
+    "name": "Alameda Principal Sur",  
+    "operatedBy": "urn:ngsi-ld:GtfsAgency:Malaga_EMT",  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
+    ]  
+}  
+```  
+</details>  
+#### GtfsStop NGSI-LD 正規化例  
+GtfsStopをJSON-LD形式で正規化した例を示します。オプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返すことができます。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -493,30 +530,6 @@ GtfsStop:
         "type": "Relationship",  
         "object": "urn:ngsi-ld:GtfsAgency:Malaga_EMT"  
     },  
-    "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
-    ]  
-}  
-```  
-</details>  
-#### GtfsStop NGSI-LD 正規化例  
-GtfsStop を正規化した JSON-LD 形式の例です。これはオプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
-<details><summary><strong>show/hide example</strong></summary>    
-```json  
-{  
-    "id": "urn:ngsi-ld:GtfsStop:Malaga_101",  
-    "type": "GtfsStop",  
-    "code": "101",  
-    "location": {  
-        "coordinates": [  
-            -4.424393,  
-            36.716872  
-        ],  
-        "type": "Point"  
-    },  
-    "name": "Alameda Principal Sur",  
-    "operatedBy": "urn:ngsi-ld:GtfsAgency:Malaga_EMT",  
     "@context": [  
         "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
         "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
