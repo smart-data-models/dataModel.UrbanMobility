@@ -14,8 +14,8 @@
 
 ## Liste der Eigenschaften  
 
-<sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, liegt das daran, dass es mehrere Typen oder unterschiedliche Formate/Muster haben kann</sub></sup>.  
-- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated[string]`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified[string]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description[string]`: Eine Beschreibung dieses Artikels  - `hasDestination[*]`: Fahrt, die mit diesem Entity verbunden ist. Sie muss auf eine Entität des Typs GtfsStop oder GtfsStation zeigen.  . Model: [http://schema.org/URL](http://schema.org/URL)- `hasOrigin[*]`: Fahrt, die mit diesem Entity verbunden ist. Sie muss auf eine Entität des Typs GtfsStop oder GtfsStation zeigen.  . Model: [http://schema.org/URL](http://schema.org/URL)- `id[*]`: Eindeutiger Bezeichner der Entität  - `minimumTransferTime[number]`: Gleich wie GTFS `min_transfer_time`. Einheit:'Sekunden'.  . Model: [https://schema.org/Integer](https://schema.org/Integer)- `name[string]`: Der Name dieses Artikels.  - `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Es wird empfohlen, den voll qualifizierten Domänennamen des Quellanbieters oder die URL des Quellobjekts zu verwenden.  - `transferType[string]`: Dasselbe wie GTFS `transfer_type`. Enum:'0, 1, 2, 3'  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: NGSI-Entitätstyp. Es muss GtfsTransferRule sein  <!-- /30-PropertiesList -->  
+<sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, kann es mehrere Typen oder verschiedene Formate/Muster haben</sub></sup>.  
+- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated[string]`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified[string]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description[string]`: Eine Beschreibung dieses Artikels  - `hasDestination[*]`: Fahrt, die mit diesem Entity verbunden ist. Sie muss auf eine Entität des Typs GtfsStop oder GtfsStation zeigen.  . Model: [http://schema.org/URL](http://schema.org/URL)- `hasOrigin[*]`: Fahrt, die mit diesem Entity verbunden ist. Sie muss auf eine Entität des Typs GtfsStop oder GtfsStation zeigen.  . Model: [http://schema.org/URL](http://schema.org/URL)- `id[*]`: Eindeutiger Bezeichner der Entität  - `minimumTransferTime[number]`: Gleich wie GTFS `min_transfer_time`. Einheit:'Sekunden'.  . Model: [https://schema.org/Integer](https://schema.org/Integer)- `name[string]`: Der Name dieses Artikels.  - `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `transferType[string]`: Dasselbe wie GTFS `transfer_type`. Enum:'0, 1, 2, 3'  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: NGSI-Entitätstyp. Es muss GtfsTransferRule sein  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Erforderliche Eigenschaften  
 - `hasDestination`  - `hasOrigin`  - `id`  - `transferType`  - `type`  <!-- /35-RequiredProperties -->  
@@ -30,74 +30,74 @@
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 GtfsTransferRule:    
-  description: 'GTFS Transfer Rule'    
+  description: GTFS Transfer Rule    
   properties:    
     alternateName:    
-      description: 'An alternative name for this item'    
+      description: An alternative name for this item    
       type: string    
       x-ngsi:    
         type: Property    
     dataProvider:    
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
+      description: A sequence of characters identifying the provider of the harmonised data entity.    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform.    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     description:    
-      description: 'A description of this item'    
+      description: A description of this item    
       type: string    
       x-ngsi:    
         type: Property    
     hasDestination:    
       anyOf:    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Trip associated to this Entity. It shall point to an Entity of type GtfsStop or GtfsStation'    
+      description: Trip associated to this Entity. It shall point to an Entity of type GtfsStop or GtfsStation    
       x-ngsi:    
         model: http://schema.org/URL    
         type: Relationship    
     hasOrigin:    
       anyOf:    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Trip associated to this Entity. It shall point to an Entity of type GtfsStop or GtfsStation'    
+      description: Trip associated to this Entity. It shall point to an Entity of type GtfsStop or GtfsStation    
       x-ngsi:    
         model: http://schema.org/URL    
         type: Relationship    
     id:    
       anyOf: &gtfstransferrule_-_properties_-_owner_-_items_-_anyof    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Unique identifier of the entity'    
+      description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     minimumTransferTime:    
@@ -108,20 +108,20 @@ GtfsTransferRule:
         model: https://schema.org/Integer    
         type: Property    
     name:    
-      description: 'The name of this item.'    
+      description: The name of this item.    
       type: string    
       x-ngsi:    
         type: Property    
     owner:    
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
         anyOf: *gtfstransferrule_-_properties_-_owner_-_items_-_anyof    
-        description: 'Property. Unique identifier of the entity'    
+        description: Property. Unique identifier of the entity    
       type: array    
       x-ngsi:    
         type: Property    
     seeAlso:    
-      description: 'list of uri pointing to additional resources about the item'    
+      description: list of uri pointing to additional resources about the item    
       oneOf:    
         - items:    
             format: uri    
@@ -149,7 +149,7 @@ GtfsTransferRule:
         model: https://schema.org/Text    
         type: Property    
     type:    
-      description: 'NGSI Entity type. It has to be GtfsTransferRule'    
+      description: NGSI Entity type. It has to be GtfsTransferRule    
       enum:    
         - GtfsTransferRule    
       type: string    
@@ -198,17 +198,19 @@ GtfsTransferRule:
   "id": "urn:ngsi-ld:GtfsTransferRule:Malaga:Linea1_Linea5",  
   "type": "GtfsTransferRule",  
   "transferType": {  
+    "type": "Text",  
     "value": "0"  
   },  
   "minimumTransferTime": {  
+    "type": "Number",  
     "value": 10  
   },  
   "hasDestination": {  
-    "type": "Relationship",  
+    "type": "URI",  
     "value": "urn:ngsi-ld:GtfsStop:Malaga_508"  
   },  
   "hasOrigin": {  
-    "type": "Relationship",  
+    "type": "URI",  
     "value": "urn:ngsi-ld:GtfsStop:Malaga_101"  
   },  
   "name": {  
@@ -218,7 +220,26 @@ GtfsTransferRule:
 ```  
 </details>  
 #### GtfsTransferRule NGSI-LD key-values Beispiel  
-Hier ist ein Beispiel für eine GtfsTransferRule im JSON-LD-Format als Schlüsselwerte. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für eine GtfsTransferRule im JSON-LD Format als Key-Values. Dies ist kompatibel mit NGSI-LD, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
+```json  
+{  
+    "id": "urn:ngsi-ld:GtfsTransferRule:Malaga:Linea1_Linea5",  
+    "type": "GtfsTransferRule",  
+    "hasDestination": "urn:ngsi-ld:GtfsStop:Malaga_508",  
+    "hasOrigin": "urn:ngsi-ld:GtfsStop:Malaga_101",  
+    "minimumTransferTime": 10,  
+    "name": "L1_L5",  
+    "transferType": "0",  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
+    ]  
+}  
+```  
+</details>  
+#### GtfsTransferRule NGSI-LD normalisiert Beispiel  
+Hier ist ein Beispiel für eine GtfsTransferRule im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -244,25 +265,6 @@ GtfsTransferRule:
         "type": "Property",  
         "value": "0"  
     },  
-    "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
-    ]  
-}  
-```  
-</details>  
-#### GtfsTransferRule NGSI-LD normalisiert Beispiel  
-Hier ist ein Beispiel für eine GtfsTransferRule im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
-<details><summary><strong>show/hide example</strong></summary>    
-```json  
-{  
-    "id": "urn:ngsi-ld:GtfsTransferRule:Malaga:Linea1_Linea5",  
-    "type": "GtfsTransferRule",  
-    "hasDestination": "urn:ngsi-ld:GtfsStop:Malaga_508",  
-    "hasOrigin": "urn:ngsi-ld:GtfsStop:Malaga_101",  
-    "minimumTransferTime": 10,  
-    "name": "L1_L5",  
-    "transferType": "0",  
     "@context": [  
         "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
         "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
