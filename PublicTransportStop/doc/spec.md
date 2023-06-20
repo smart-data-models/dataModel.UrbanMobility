@@ -15,7 +15,7 @@
 ## List of properties  
 
 <sup><sub>[*] If there is not a type in an attribute is because it could have several types or different formats/patterns</sub></sup>  
-- `address[object]`: The mailing address  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: An alternative name for this item  - `areaServed[string]`: The geographic area where a service or offered item is provided  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated[string]`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified[string]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description[string]`: A description of this item  - `id[*]`: Unique identifier of the entity  - `location[*]`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name[string]`: The name of this item.  - `openingHoursSpecification[array]`: A structured value providing information about the opening hours of a place or a certain service inside a place  . Model: [https://schema.org/openingHoursSpecification](https://schema.org/openingHoursSpecification)- `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `peopleCount[integer]`: Estimation of people waiting in the stop  . Model: [https://schema.org/Number.](https://schema.org/Number.)- `refPeopleCountDevice[string]`: Reference to the [Device](https://github.com/Fiware/dataModels/blob/master/specs/Device/Device/doc/spec.md) providing people count estimate.  - `refPublicTransportRoute[array]`: Public transport routes using this stop.  . Model: [ https://schema.org/URL]( https://schema.org/URL)- `seeAlso[*]`: list of uri pointing to additional resources about the item  - `shortStopCode[string]`: Shorter form of the identifier/code of the public transport stop  . Model: [https://schema.org/Text.](https://schema.org/Text.)- `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `stopCode[string]`: Identifier/code of the public transport stop  . Model: [https://schema.org/Text.](https://schema.org/Text.)- `transportationType[array]`: Types of public transport using this stop as defined in (https://developers.google.com/transit/gtfs/reference/#routestxt). Enum:'0, 1, 2, 3, 4, 5, 6, 7'  . Model: [https://schema.org/Number](https://schema.org/Number)- `type[string]`: NGSI Entity type. It has to be PublicTransportStop  - `wheelChairAccessible[string]`: Same as GTFS `wheelchair_boarding`. Enum:'0, 1 ,2'. Reference in [GTFS](https://developers.google.com/transit/gtfs/reference/#stopstxt)   <!-- /30-PropertiesList -->  
+- `address[object]`: The mailing address  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: An alternative name for this item  - `areaServed[string]`: The geographic area where a service or offered item is provided  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated[string]`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified[string]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description[string]`: A description of this item  - `id[*]`: Unique identifier of the entity  - `location[*]`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name[string]`: The name of this item.  - `openingHoursSpecification[array]`: A structured value providing information about the opening hours of a place or a certain service inside a place  . Model: [https://schema.org/openingHoursSpecification](https://schema.org/openingHoursSpecification)- `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `peopleCount[number]`: Estimation of people waiting in the stop  . Model: [https://schema.org/Number.](https://schema.org/Number.)- `refPeopleCountDevice[string]`: Reference to the [Device](https://github.com/Fiware/dataModels/blob/master/specs/Device/Device/doc/spec.md) providing people count estimate.  - `refPublicTransportRoute[array]`: Public transport routes using this stop.  . Model: [ https://schema.org/URL]( https://schema.org/URL)- `seeAlso[*]`: list of uri pointing to additional resources about the item  - `shortStopCode[string]`: Shorter form of the identifier/code of the public transport stop  . Model: [https://schema.org/Text.](https://schema.org/Text.)- `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `stopCode[string]`: Identifier/code of the public transport stop  . Model: [https://schema.org/Text.](https://schema.org/Text.)- `transportationType[array]`: Types of public transport using this stop as defined in (https://developers.google.com/transit/gtfs/reference/#routestxt). Enum:'0, 1, 2, 3, 4, 5, 6, 7'  . Model: [https://schema.org/Number](https://schema.org/Number)- `type[string]`: NGSI Entity type. It has to be PublicTransportStop  - `wheelChairAccessible[string]`: Same as GTFS `wheelchair_boarding`. Enum:'0, 1 ,2'. Reference in [GTFS](https://developers.google.com/transit/gtfs/reference/#stopstxt)   <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Required properties  
 - `id`  - `name`  - `transportationType`  - `type`  <!-- /35-RequiredProperties -->  
@@ -30,10 +30,10 @@
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 PublicTransportStop:    
-  description: 'A generic public transport stop'    
+  description: A generic public transport stop    
   properties:    
     address:    
-      description: 'The mailing address'    
+      description: The mailing address    
       properties:    
         addressCountry:    
           description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
@@ -44,6 +44,9 @@ PublicTransportStop:
         addressRegion:    
           description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
+        district:    
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government.'    
+          type: string    
         postOfficeBoxNumber:    
           description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
@@ -53,60 +56,63 @@ PublicTransportStop:
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
+        streetNr:    
+          description: Number identifying a specific property on a public street.    
+          type: string    
       type: object    
       x-ngsi:    
         model: https://schema.org/address    
         type: Property    
     alternateName:    
-      description: 'An alternative name for this item'    
+      description: An alternative name for this item    
       type: string    
       x-ngsi:    
         type: Property    
     areaServed:    
-      description: 'The geographic area where a service or offered item is provided'    
+      description: The geographic area where a service or offered item is provided    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     dataProvider:    
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
+      description: A sequence of characters identifying the provider of the harmonised data entity.    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform.    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     description:    
-      description: 'A description of this item'    
+      description: A description of this item    
       type: string    
       x-ngsi:    
         type: Property    
     id:    
       anyOf: &publictransportstop_-_properties_-_owner_-_items_-_anyof    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Unique identifier of the entity'    
+      description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - description: 'GeoProperty. Geojson reference to the item. Point'    
+        - description: GeoProperty. Geojson reference to the item. Point    
           properties:    
             bbox:    
               items:    
@@ -125,9 +131,9 @@ PublicTransportStop:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Point'    
+          title: GeoJSON Point    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. LineString'    
+        - description: GeoProperty. Geojson reference to the item. LineString    
           properties:    
             bbox:    
               items:    
@@ -149,9 +155,9 @@ PublicTransportStop:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON LineString'    
+          title: GeoJSON LineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. Polygon'    
+        - description: GeoProperty. Geojson reference to the item. Polygon    
           properties:    
             bbox:    
               items:    
@@ -175,9 +181,9 @@ PublicTransportStop:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Polygon'    
+          title: GeoJSON Polygon    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiPoint'    
+        - description: GeoProperty. Geojson reference to the item. MultiPoint    
           properties:    
             bbox:    
               items:    
@@ -198,9 +204,9 @@ PublicTransportStop:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPoint'    
+          title: GeoJSON MultiPoint    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+        - description: GeoProperty. Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -224,9 +230,9 @@ PublicTransportStop:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiLineString'    
+          title: GeoJSON MultiLineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+        - description: GeoProperty. Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -252,26 +258,25 @@ PublicTransportStop:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPolygon'    
+          title: GeoJSON MultiPolygon    
           type: object    
       x-ngsi:    
         type: GeoProperty    
     name:    
-      description: 'The name of this item.'    
+      description: The name of this item.    
       type: string    
       x-ngsi:    
         type: Property    
     openingHoursSpecification:    
-      description: 'A structured value providing information about the opening hours of a place or a certain service inside a place'    
+      description: A structured value providing information about the opening hours of a place or a certain service inside a place    
       items:    
         properties:    
           closes:    
             format: time    
-            pattern: ^(2[0-3]|[01][0-9]):?([0-5][0-9]):?([0-5][0-9])(\.[0-9]*)?(Z|[+-](?:2[0-3]|[01][0-9])(?::?(?:[0-5][0-9]))?)$    
             type: string    
           dayOfWeek:    
             anyOf:    
-              - description: 'Property. Array of days of the week.'    
+              - description: Property. Array of days of the week.    
                 enum:    
                   - Monday    
                   - Tuesday    
@@ -282,7 +287,7 @@ PublicTransportStop:
                   - Sunday    
                   - PublicHolidays    
                 type: string    
-              - description: 'Property. Array of days of the week.'    
+              - description: Property. Array of days of the week.    
                 enum:    
                   - https://schema.org/Monday    
                   - https://schema.org/Tuesday    
@@ -297,7 +302,6 @@ PublicTransportStop:
             type: string    
           opens:    
             format: time    
-            pattern: ^(2[0-3]|[01][0-9]):?([0-5][0-9]):?([0-5][0-9])(\.[0-9]*)?(Z|[+-](?:2[0-3]|[01][0-9])(?::?(?:[0-5][0-9]))?)$    
             type: string    
           validFrom:    
             anyOf:    
@@ -325,28 +329,28 @@ PublicTransportStop:
         model: https://schema.org/openingHoursSpecification    
         type: Property    
     owner:    
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
         anyOf: *publictransportstop_-_properties_-_owner_-_items_-_anyof    
-        description: 'Property. Unique identifier of the entity'    
+        description: Property. Unique identifier of the entity    
       type: array    
       x-ngsi:    
         type: Property    
     peopleCount:    
-      description: 'Estimation of people waiting in the stop'    
+      description: Estimation of people waiting in the stop    
       minimum: 0    
-      type: integer    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number.    
         type: Property    
     refPeopleCountDevice:    
       anyOf:    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           format: uri    
           type: string    
       description: 'Reference to the [Device](https://github.com/Fiware/dataModels/blob/master/specs/Device/Device/doc/spec.md) providing people count estimate.'    
@@ -354,15 +358,15 @@ PublicTransportStop:
       x-ngsi:    
         type: Property    
     refPublicTransportRoute:    
-      description: 'Public transport routes using this stop.'    
+      description: Public transport routes using this stop.    
       items:    
         anyOf:    
-          - description: 'Property. Identifier format of any NGSI entity'    
+          - description: Property. Identifier format of any NGSI entity    
             maxLength: 256    
             minLength: 1    
             pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
             type: string    
-          - description: 'Property. Identifier format of any NGSI entity'    
+          - description: Property. Identifier format of any NGSI entity    
             format: uri    
             type: string    
       minItems: 1    
@@ -372,7 +376,7 @@ PublicTransportStop:
         model: ' https://schema.org/URL'    
         type: Relationship    
     seeAlso:    
-      description: 'list of uri pointing to additional resources about the item'    
+      description: list of uri pointing to additional resources about the item    
       oneOf:    
         - items:    
             format: uri    
@@ -384,7 +388,7 @@ PublicTransportStop:
       x-ngsi:    
         type: Property    
     shortStopCode:    
-      description: 'Shorter form of the identifier/code of the public transport stop'    
+      description: Shorter form of the identifier/code of the public transport stop    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text.    
@@ -395,7 +399,7 @@ PublicTransportStop:
       x-ngsi:    
         type: Property    
     stopCode:    
-      description: 'Identifier/code of the public transport stop'    
+      description: Identifier/code of the public transport stop    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text.    
@@ -418,7 +422,7 @@ PublicTransportStop:
         model: https://schema.org/Number    
         type: Property    
     type:    
-      description: 'NGSI Entity type. It has to be PublicTransportStop'    
+      description: NGSI Entity type. It has to be PublicTransportStop    
       enum:    
         - PublicTransportStop    
       type: string    
@@ -440,7 +444,7 @@ PublicTransportStop:
     - name    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/PublicTransportStop/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.UrbanMobility/PublicTransportStop/schema.json    
   x-model-tags: ""    
@@ -455,450 +459,443 @@ PublicTransportStop:
 #### PublicTransportStop NGSI-v2 key-values Example    
 Here is an example of a PublicTransportStop in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
 <details><summary><strong>show/hide example</strong></summary>    
-```json
-{
-  "id": "urn:ngsi-ld:PublicTransportStop:santander:busStop:463",
-  "type": "PublicTransportStop",
-  "dateModified": "2018-09-25T08:32:26.00Z",
-  "source": "https://api.smartsantander.eu/",
-  "dataProvider": "http://www.smartsantander.eu/",
-  "address": {
-    "streetAddress": "C/ La Pereda 14",
-    "addressLocality": "Santander",
-    "addressRegion": "Cantabria",
-    "addressCountry": "Spain"
-  },
-  "location": {
-    "type": "Point",
-    "coordinates": [
-      -3.804648385,
-      43.478053126
-    ]
-  },
-  "stopCode": "la_pereda_463",
-  "shortStopCode": "463",
-  "name": "La Pereda 14",
-  "wheelchairAccessible": 0,
-  "transportationType": [
-    3
-  ],
-  "refPublicTransportRoute": [
-    "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N3",
-    "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N4"
-  ],
-  "peopleCount": 0,
-  "refPeopleCountDevice": "urn:ngsi-ld:PorpleCountDecice:santander:463",
- "openingHoursSpecification": 
-  [
-    {
-      "opens": "00:01",
-      "closes": "23:59",
-      "dayOfWeek": "Monday"
-    },
-    {
-      "opens": "00:01",
-      "closes": "23:59",
-      "dayOfWeek": "Tuesday"
-    },
-    {
-      "opens": "00:01",
-      "closes": "23:59",
-      "dayOfWeek": "Wednesday"
-    },
-    {
-      "opens": "00:01",
-      "closes": "23:59",
-      "dayOfWeek": "Thursday"
-    },
-    {
-      "opens": "00:01",
-      "closes": "23:59",
-      "dayOfWeek": "Friday"
-    }
-  ]
-}
-
+```json  
+{  
+  "id": "urn:ngsi-ld:PublicTransportStop:santander:busStop:463",  
+  "type": "PublicTransportStop",  
+  "dateModified": "2018-09-25T08:32:26.00Z",  
+  "source": "https://api.smartsantander.eu/",  
+  "dataProvider": "http://www.smartsantander.eu/",  
+  "address": {  
+    "streetAddress": "C/ La Pereda 14",  
+    "addressLocality": "Santander",  
+    "addressRegion": "Cantabria",  
+    "addressCountry": "Spain"  
+  },  
+  "location": {  
+    "type": "Point",  
+    "coordinates": [  
+      -3.804648385,  
+      43.478053126  
+    ]  
+  },  
+  "stopCode": "la_pereda_463",  
+  "shortStopCode": "463",  
+  "name": "La Pereda 14",  
+  "wheelchairAccessible": 0,  
+  "transportationType": [  
+    3  
+  ],  
+  "refPublicTransportRoute": [  
+    "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N3",  
+    "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N4"  
+  ],  
+  "peopleCount": 0,  
+  "refPeopleCountDevice": "urn:ngsi-ld:PorpleCountDecice:santander:463",  
+ "openingHoursSpecification":   
+  [  
+    {  
+      "opens": "00:01",  
+      "closes": "23:59",  
+      "dayOfWeek": "Monday"  
+    },  
+    {  
+      "opens": "00:01",  
+      "closes": "23:59",  
+      "dayOfWeek": "Tuesday"  
+    },  
+    {  
+      "opens": "00:01",  
+      "closes": "23:59",  
+      "dayOfWeek": "Wednesday"  
+    },  
+    {  
+      "opens": "00:01",  
+      "closes": "23:59",  
+      "dayOfWeek": "Thursday"  
+    },  
+    {  
+      "opens": "00:01",  
+      "closes": "23:59",  
+      "dayOfWeek": "Friday"  
+    }  
+  ]  
+}  
 ```  
 </details>  
 #### PublicTransportStop NGSI-v2 normalized Example    
 Here is an example of a PublicTransportStop in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
 <details><summary><strong>show/hide example</strong></summary>    
-```json
-{
-  "id": "urn:ngsi-ld:PublicTransportStop:santander:busStop:463",
-  "type": "PublicTransportStop",
-  "dateModified": {
-    "type": "ISO8601",
-    "value": "2018-09-25T08:32:26.00Z"
-  },
-  "source": {
-    "type": "Text",
-    "value": "https://api.smartsantander.eu/"
-  },
-  "dataProvider": {
-    "type": "Text",
-    "value": "http://www.smartsantander.eu/"
-  },
-  "address": {
-    "type": "StructuredValue",
-    "value": {
-      "streetAddress": "C/ La Pereda 14",
-      "addressLocality": "Santander",
-      "addressRegion": "Cantabria",
-      "addressCountry": "Spain"
-    }
-  },
-  "location": {
-    "type": "geo:json",
-    "value": {
-      "type": "Point",
-      "coordinates": [
-        -3.804648385,
-        43.478053126
-      ]
-    }
-  },
-  "stopCode": {
-    "type": "Text",
-    "value": "la_pereda_463"
-  },
-  "shortStopCode": {
-    "type": "Text",
-    "value": "463"
-  },
-  "name": {
-    "type": "Text",
-    "value": "La Pereda 14"
-  },
-  "wheelchairAccessible": {
-    "type": "Number",
-    "value": 0
-  },
-  "transportationType": {
-    "type": "StructuredValue",
-    "value": [
-      3
-    ]
-  },
-  "refPublicTransportRoute": {
-    "type": "StructuredValue",
-    "value": [
-      "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N3",
-      "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N4"
-    ]
-  },
-  "peopleCount": {
-    "type": "Number",
-    "value": 0
-  },
-  "refPeopleCountDevice": {
-    "type": "Text",
-    "value": "urn:ngsi-ld:PorpleCountDecice:santander:463"
-  },
-  "openingHoursSpecification": {
-    "type": "StructuredValue",
-    "value": [
-      {
-        "opens" : {
-          "type": "string", 
-          "value": "00:01"
-        },
-        "closes": {
-          "type": "string",
-          "value": "23:59"
-        },
-        "dayOfWeek":{
-          "type": "string",
-          "value": "Friday"
-        }
-      },
-      {
-        "opens" : {
-          "type": "string", 
-          "value": "00:01"
-        },
-        "closes": {
-          "type": "string",
-          "value": "23:59"
-        },
-        "dayOfWeek":{
-          "type": "string",
-          "value": "Monday"
-        }
-      },
-      {
-        "opens" : {
-          "type": "string", 
-          "value": "00:01"
-        },
-        "closes": {
-          "type": "string",
-          "value": "23:59"
-        },
-        "dayOfWeek":{
-          "type": "string",
-          "value": "Tuesday"
-        }
-      },
-      {
-        "opens" : {
-          "type": "string", 
-          "value": "00:01"
-        },
-        "closes": {
-          "type": "string",
-          "value": "23:59"
-        },
-        "dayOfWeek":{
-          "type": "string",
-          "value": "Thursday"
-        }
-      },
-      {
-        "opens" : {
-          "type": "string", 
-          "value": "00:01"
-        },
-        "closes": {
-          "type": "string",
-          "value": "23:59"
-        },
-        "dayOfWeek":{
-          "type": "string",
-          "value": "Wednesday"
-        }
-      }
+```json  
+{  
+  "id": "urn:ngsi-ld:PublicTransportStop:santander:busStop:463",  
+  "type": "PublicTransportStop",  
+  "dateModified": {  
+    "type": "ISO8601",  
+    "value": "2018-09-25T08:32:26.00Z"  
+  },  
+  "source": {  
+    "type": "Text",  
+    "value": "https://api.smartsantander.eu/"  
+  },  
+  "dataProvider": {  
+    "type": "Text",  
+    "value": "http://www.smartsantander.eu/"  
+  },  
+  "address": {  
+    "type": "StructuredValue",  
+    "value": {  
+      "streetAddress": "C/ La Pereda 14",  
+      "addressLocality": "Santander",  
+      "addressRegion": "Cantabria",  
+      "addressCountry": "Spain"  
+    }  
+  },  
+  "location": {  
+    "type": "geo:json",  
+    "value": {  
+      "type": "Point",  
+      "coordinates": [  
+        -3.804648385,  
+        43.478053126  
+      ]  
+    }  
+  },  
+  "stopCode": {  
+    "type": "Text",  
+    "value": "la_pereda_463"  
+  },  
+  "shortStopCode": {  
+    "type": "Text",  
+    "value": "463"  
+  },  
+  "name": {  
+    "type": "Text",  
+    "value": "La Pereda 14"  
+  },  
+  "wheelchairAccessible": {  
+    "type": "Number",  
+    "value": 0  
+  },  
+  "transportationType": {  
+    "type": "StructuredValue",  
+    "value": [  
+      3  
     ]  
-  }
-}
-
+  },  
+  "refPublicTransportRoute": {  
+    "type": "StructuredValue",  
+    "value": [  
+      "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N3",  
+      "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N4"  
+    ]  
+  },  
+  "peopleCount": {  
+    "type": "Number",  
+    "value": 0  
+  },  
+  "refPeopleCountDevice": {  
+    "type": "Text",  
+    "value": "urn:ngsi-ld:PorpleCountDecice:santander:463"  
+  },  
+  "openingHoursSpecification": {  
+    "type": "StructuredValue",  
+    "value": [  
+      {  
+        "opens" : {  
+          "type": "string",   
+          "value": "00:01"  
+        },  
+        "closes": {  
+          "type": "string",  
+          "value": "23:59"  
+        },  
+        "dayOfWeek":{  
+          "type": "string",  
+          "value": "Friday"  
+        }  
+      },  
+      {  
+        "opens" : {  
+          "type": "string",   
+          "value": "00:01"  
+        },  
+        "closes": {  
+          "type": "string",  
+          "value": "23:59"  
+        },  
+        "dayOfWeek":{  
+          "type": "string",  
+          "value": "Monday"  
+        }  
+      },  
+      {  
+        "opens" : {  
+          "type": "string",   
+          "value": "00:01"  
+        },  
+        "closes": {  
+          "type": "string",  
+          "value": "23:59"  
+        },  
+        "dayOfWeek":{  
+          "type": "string",  
+          "value": "Tuesday"  
+        }  
+      },  
+      {  
+        "opens" : {  
+          "type": "string",   
+          "value": "00:01"  
+        },  
+        "closes": {  
+          "type": "string",  
+          "value": "23:59"  
+        },  
+        "dayOfWeek":{  
+          "type": "string",  
+          "value": "Thursday"  
+        }  
+      },  
+      {  
+        "opens" : {  
+          "type": "string",   
+          "value": "00:01"  
+        },  
+        "closes": {  
+          "type": "string",  
+          "value": "23:59"  
+        },  
+        "dayOfWeek":{  
+          "type": "string",  
+          "value": "Wednesday"  
+        }  
+      }  
+    ]    
+  }  
+}  
 ```  
 </details>  
 #### PublicTransportStop NGSI-LD key-values Example    
 Here is an example of a PublicTransportStop in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 <details><summary><strong>show/hide example</strong></summary>    
-```json
-{
-    "id": "urn:ngsi-ld:PublicTransportStop:santander:busStop:463",
-    "type": "PublicTransportStop",
-    "address": {
-        "type": "StructuredValue",
-        "value": {
-            "streetAddress": "C/ La Pereda 14",
-            "addressLocality": "Santander",
-            "addressRegion": "Cantabria",
-            "addressCountry": "Spain"
-        }
-    },
-    "dataProvider": {
-        "type": "Text",
-        "value": "http://www.smartsantander.eu/"
-    },
-    "location": {
-        "type": "geo:json",
-        "value": {
-            "type": "Point",
-            "coordinates": [
-                -3.804648385,
-                43.478053126
-            ]
-        }
-    },
-    "name": {
-        "type": "Text",
-        "value": "La Pereda 14"
-    },
-    "openingHoursSpecification": {
-        "type": "StructuredValue",
-        "value": [
-            {
-                "opens": {
-                    "type": "string",
-                    "value": "00:01"
-                },
-                "closes": {
-                    "type": "string",
-                    "value": "23:59"
-                },
-                "dayOfWeek": {
-                    "type": "string",
-                    "value": "Friday"
-                }
-            },
-            {
-                "opens": {
-                    "type": "string",
-                    "value": "00:01"
-                },
-                "closes": {
-                    "type": "string",
-                    "value": "23:59"
-                },
-                "dayOfWeek": {
-                    "type": "string",
-                    "value": "Monday"
-                }
-            },
-            {
-                "opens": {
-                    "type": "string",
-                    "value": "00:01"
-                },
-                "closes": {
-                    "type": "string",
-                    "value": "23:59"
-                },
-                "dayOfWeek": {
-                    "type": "string",
-                    "value": "Tuesday"
-                }
-            },
-            {
-                "opens": {
-                    "type": "string",
-                    "value": "00:01"
-                },
-                "closes": {
-                    "type": "string",
-                    "value": "23:59"
-                },
-                "dayOfWeek": {
-                    "type": "string",
-                    "value": "Thursday"
-                }
-            },
-            {
-                "opens": {
-                    "type": "string",
-                    "value": "00:01"
-                },
-                "closes": {
-                    "type": "string",
-                    "value": "23:59"
-                },
-                "dayOfWeek": {
-                    "type": "string",
-                    "value": "Wednesday"
-                }
-            }
-        ]
-    },
-    "peopleCount": {
-        "type": "Number",
-        "value": 0
-    },
-    "refPeopleCountDevice": {
-        "type": "Text",
-        "value": "urn:ngsi-ld:PorpleCountDecice:santander:463"
-    },
-    "refPublicTransportRoute": {
-        "type": "StructuredValue",
-        "value": [
-            "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N3",
-            "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N4"
-        ]
-    },
-    "shortStopCode": {
-        "type": "Text",
-        "value": "463"
-    },
-    "source": {
-        "type": "Text",
-        "value": "https://api.smartsantander.eu/"
-    },
-    "stopCode": {
-        "type": "Text",
-        "value": "la_pereda_463"
-    },
-    "transportationType": {
-        "type": "StructuredValue",
-        "value": [
-            3
-        ]
-    },
-    "wheelchairAccessible": {
-        "type": "Number",
-        "value": 0
-    },
-    "@context": [
-        "https://smart-data-models.github.io/data-models/context.jsonld",
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"
-    ]
-}
+```json  
+{  
+  "id": "urn:ngsi-ld:PublicTransportStop:santander:busStop:463",  
+  "type": "PublicTransportStop",  
+  "address": {  
+    "streetAddress": "C/ La Pereda 14",  
+    "addressLocality": "Santander",  
+    "addressRegion": "Cantabria",  
+    "addressCountry": "Spain"  
+  },  
+  "dataProvider": "http://www.smartsantander.eu/",  
+  "location": {  
+    "type": "Point",  
+    "coordinates": [  
+      -3.804648385,  
+      43.478053126  
+    ]  
+  },  
+  "name": "La Pereda 14",  
+  "openingHoursSpecification": [  
+    {  
+      "opens": {  
+        "type": "string",  
+        "value": "00:01"  
+      },  
+      "closes": {  
+        "type": "string",  
+        "value": "23:59"  
+      },  
+      "dayOfWeek": {  
+        "type": "string",  
+        "value": "Friday"  
+      }  
+    },  
+    {  
+      "opens": {  
+        "type": "string",  
+        "value": "00:01"  
+      },  
+      "closes": {  
+        "type": "string",  
+        "value": "23:59"  
+      },  
+      "dayOfWeek": {  
+        "type": "string",  
+        "value": "Monday"  
+      }  
+    },  
+    {  
+      "opens": {  
+        "type": "string",  
+        "value": "00:01"  
+      },  
+      "closes": {  
+        "type": "string",  
+        "value": "23:59"  
+      },  
+      "dayOfWeek": {  
+        "type": "string",  
+        "value": "Tuesday"  
+      }  
+    },  
+    {  
+      "opens": {  
+        "type": "string",  
+        "value": "00:01"  
+      },  
+      "closes": {  
+        "type": "string",  
+        "value": "23:59"  
+      },  
+      "dayOfWeek": {  
+        "type": "string",  
+        "value": "Thursday"  
+      }  
+    },  
+    {  
+      "opens": {  
+        "type": "string",  
+        "value": "00:01"  
+      },  
+      "closes": {  
+        "type": "string",  
+        "value": "23:59"  
+      },  
+      "dayOfWeek": {  
+        "type": "string",  
+        "value": "Wednesday"  
+      }  
+    }  
+  ],  
+  "peopleCount": 0,  
+  "refPeopleCountDevice": "urn:ngsi-ld:PorpleCountDecice:santander:463",  
+  "refPublicTransportRoute": [  
+    "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N3",  
+    "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N4"  
+  ],  
+  "shortStopCode": "463",  
+  "source": "https://api.smartsantander.eu/",  
+  "stopCode": "la_pereda_463",  
+  "transportationType": [  
+    3  
+  ],  
+  "wheelchairAccessible": 0  
+  ,  
+  "@context": [  
+    "https://smart-data-models.github.io/data-models/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
+  ]  
+}  
 ```  
 </details>  
 #### PublicTransportStop NGSI-LD normalized Example    
 Here is an example of a PublicTransportStop in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 <details><summary><strong>show/hide example</strong></summary>    
-```json
-{
-    "id": "urn:ngsi-ld:PublicTransportStop:santander:busStop:463",
-    "type": "PublicTransportStop",
-    "address": {
-        "streetAddress": "C/ La Pereda 14",
-        "addressLocality": "Santander",
-        "addressRegion": "Cantabria",
-        "addressCountry": "Spain"
-    },
-    "dataProvider": "http://www.smartsantander.eu/",
-    "dateModified": "2018-09-25T08:32:26.00Z",
-    "entityVersion": 2.0,
-    "location": {
-        "type": "Point",
-        "coordinates": [
-            -3.804648385,
-            43.478053126
-        ]
-    },
-    "name": "La Pereda 14",
-    "openingHoursSpecification": [
-        {
-            "opens": "00:01",
-            "closes": "23:59",
-            "dayOfWeek": "Monday"
-        },
-        {
-            "opens": "00:01",
-            "closes": "23:59",
-            "dayOfWeek": "Tuesday"
-        },
-        {
-            "opens": "00:01",
-            "closes": "23:59",
-            "dayOfWeek": "Wednesday"
-        },
-        {
-            "opens": "00:01",
-            "closes": "23:59",
-            "dayOfWeek": "Thursday"
-        },
-        {
-            "opens": "00:01",
-            "closes": "23:59",
-            "dayOfWeek": "Friday"
-        }
-    ],
-    "peopleCount": 0,
-    "refPeopleCountDevice": "urn:ngsi-ld:PorpleCountDecice:santander:463",
-    "refPublicTransportRoute": [
-        "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N3",
-        "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N4"
-    ],
-    "shortStopCode": "463",
-    "source": "https://api.smartsantander.eu/",
-    "stopCode": "la_pereda_463",
-    "transportationType": [
-        3
-    ],
-    "wheelchairAccessible": 0,
-    "@context": [
-        "https://smart-data-models.github.io/data-models/context.jsonld",
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"
-    ]
-}
-```
+```json  
+{  
+  "id": "urn:ngsi-ld:PublicTransportStop:santander:busStop:463",  
+  "type": "PublicTransportStop",  
+  "address": {  
+    "type": "Property",  
+    "value": {  
+      "streetAddress": "C/ La Pereda 14",  
+      "addressLocality": "Santander",  
+      "addressRegion": "Cantabria",  
+      "addressCountry": "Spain"  
+    }  
+  },  
+  "dataProvider": {  
+    "type": "Property",  
+    "value": "http://www.smartsantander.eu/"  
+  },  
+  "dateModified": {  
+    "type": "Property",  
+    "value": "2018-09-25T08:32:26.00Z"  
+  },  
+  "entityVersion": {  
+    "type": "Property",  
+    "value": 2.0  
+  },  
+  "location": {  
+    "type": "GeoProperty",  
+    "value": {  
+      "type": "Point",  
+      "coordinates": [  
+        -3.804648385,  
+        43.478053126  
+      ]  
+    }  
+  },  
+  "name": {  
+    "type": "Property",  
+    "value": "La Pereda 14"  
+  },  
+  "openingHoursSpecification": {  
+    "type": "Property",  
+    "value": [  
+      {  
+        "opens": "00:01",  
+        "closes": "23:59",  
+        "dayOfWeek": "Monday"  
+      },  
+      {  
+        "opens": "00:01",  
+        "closes": "23:59",  
+        "dayOfWeek": "Tuesday"  
+      },  
+      {  
+        "opens": "00:01",  
+        "closes": "23:59",  
+        "dayOfWeek": "Wednesday"  
+      },  
+      {  
+        "opens": "00:01",  
+        "closes": "23:59",  
+        "dayOfWeek": "Thursday"  
+      },  
+      {  
+        "opens": "00:01",  
+        "closes": "23:59",  
+        "dayOfWeek": "Friday"  
+      }  
+    ]  
+  },  
+  "peopleCount": {  
+    "type": "Property",  
+    "value": 0  
+  },  
+  "refPeopleCountDevice": {  
+    "type": "Relationship",  
+    "value": "urn:ngsi-ld:PorpleCountDecice:santander:463"  
+  },  
+  "refPublicTransportRoute": {  
+    "type": "Property",  
+    "value": [  
+      "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N3",  
+      "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N4"  
+    ],  
+    "shortStopCode": "463",  
+    "source": "https://api.smartsantander.eu/",  
+    "stopCode": "la_pereda_463",  
+    "transportationType": [  
+      3  
+    ]  
+  },  
+  "wheelchairAccessible": {  
+    "type": "Property",  
+    "value": 0  
+  },  
+  "@context": [  
+    "https://smart-data-models.github.io/data-models/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
+  ]  
+}  
+```  
 </details><!-- /80-Examples -->  
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
