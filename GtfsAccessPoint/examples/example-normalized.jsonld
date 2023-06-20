@@ -2,20 +2,32 @@
     "id": "urn:ngsi-ld:AccessPoint:Madrid:acc_4_1_3",
     "type": "GtfsAccessPoint",
     "address": {
-        "addressCountry": "ES",
-        "addressLocality": "Madrid",
-        "streetAddress": "Calle de Bravo Murillo 377",
-        "type": "PostalAddress"
+        "type": "Property",
+        "value": {
+            "addressLocality": "Madrid",
+            "addressCountry": "ES",
+            "streetAddress": "Calle de Bravo Murillo 377",
+            "type": "PostalAddress"
+        }
     },
-    "hasParentStation": "urn:ngsi-ld:GtfsStation:Madrid:est_90_21",
+    "hasParentStation": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:GtfsStation:Madrid:est_90_21"
+    },
     "location": {
-        "coordinates": [
-            -3.69036,
-            40.46629
-        ],
-        "type": "Point"
+        "type": "GeoProperty",
+        "value": {
+            "type": "Point",
+            "coordinates": [
+                -3.69036,
+                40.46629
+            ]
+        }
     },
-    "name": "Bravo Murillo",
+    "name": {
+        "type": "Property",
+        "value": "Bravo Murillo"
+    },
     "@context": [
         "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
         "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"

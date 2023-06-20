@@ -2,10 +2,11 @@
   "id": "urn:ngsi-ld:AccessPoint:Madrid:acc_4_1_3",
   "type": "GtfsAccessPoint",
   "name": {
+    "type": "Text",
     "value": "Bravo Murillo"
   },
   "hasParentStation": {
-    "type": "Relationship",
+    "type": "URI",
     "value": "urn:ngsi-ld:GtfsStation:Madrid:est_90_21"
   },
   "location": {
