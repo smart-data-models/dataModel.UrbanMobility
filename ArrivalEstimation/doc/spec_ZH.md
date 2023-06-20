@@ -1,13 +1,13 @@
 <!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
-实体。抵达时间估计  
+实体：抵达时间估计  
 =========<!-- /10-Header -->  
 <!-- 15-License -->  
 [开放许可](https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/ArrivalEstimation/LICENSE.md)  
 [文件自动生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-全球描述。**到达估计**  
+全球描述：**到达估计**  
 版本：0.0.3  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
@@ -15,7 +15,7 @@
 ##属性列表  
 
 <sup><sub>[*] 如果一个属性中没有一个类型，是因为它可能有几种类型或不同的格式/模式</sub></sup>。  
-- `alternateName[string]`: 这个项目的一个替代名称  - `dataProvider[string]`: 一串识别统一数据实体提供者的字符。  - `dateCreated[string]`: 实体创建时间戳。这通常会由存储平台分配。  - `dateModified[string]`: 实体最后一次修改的时间戳。这通常会由存储平台分配。  - `description[string]`: 对这个项目的描述  - `hasStop[array]`: 它应指向一个GtfsStop类型的实体。  - `hasTrip[*]`: 与该实体相关的行程。它应指向一个GtfsTrip类型的实体。  . Model: [https://schema.org/URL](https://schema.org/URL)- `headSign[string]`: 它应包含出现在标志上的文字，向乘客说明旅行的目的地  . Model: [https://schema.org/Text.](https://schema.org/Text.)- `id[*]`: 实体的唯一标识符  - `name[string]`: 这个项目的名称。  - `owner[array]`: 一个包含JSON编码的字符序列的列表，引用所有者的唯一Ids。  - `remainingDistance[number]`: 它应包含到达相关站点的剩余距离（米）。  . Model: [https://schema.org/Number](https://schema.org/Number)- `remainingTime[string]`: 它应包含前往相关站点的行程的剩余到达时间。剩余时间应被编码为ISO8601持续时间。例如："PT8M5S"。  - `seeAlso[*]`: 指向有关该项目的其他资源的URI列表  - `source[string]`: 提供实体数据原始来源的一连串字符，作为一个URL。建议为源提供者的完全合格域名，或源对象的URL。  - `type[string]`: NGSI实体类型。它必须是ArrivalEstimation。Enum:'ArrivalEstimation'(到港时间)  <!-- /30-PropertiesList -->  
+- `alternateName[string]`: 这个项目的一个替代名称  - `dataProvider[string]`: 一串识别统一数据实体提供者的字符。  - `dateCreated[string]`: 实体创建时间戳。这通常会由存储平台分配。  - `dateModified[string]`: 实体最后一次修改的时间戳。这通常会由存储平台分配。  - `description[string]`: 对这个项目的描述  - `hasStop[array]`: 它应指向一个GtfsStop类型的实体。  - `hasTrip[*]`: 与该实体相关的行程。它应指向一个GtfsTrip类型的实体。  . Model: [https://schema.org/URL](https://schema.org/URL)- `headSign[string]`: 它应包含出现在标志上的文字，向乘客说明旅行的目的地  . Model: [https://schema.org/Text.](https://schema.org/Text.)- `id[*]`: 实体的唯一标识符  - `name[string]`: 这个项目的名称。  - `owner[array]`: 一个包含JSON编码的字符序列的列表，引用所有者的唯一Ids。  - `remainingDistance[number]`: 它应包含到达相关站点的剩余距离（米）。  . Model: [https://schema.org/Number](https://schema.org/Number)- `remainingTime[string]`: 它应包含前往相关站点的行程的剩余到达时间。剩余时间应被编码为ISO8601持续时间。例如："PT8M5S"。  - `seeAlso[*]`: 指向有关该项目的其他资源的URI列表  - `source[string]`: 提供实体数据原始来源的一连串字符，作为一个URL。建议为源提供者的完全合格域名，或源对象的URL。  - `type[string]`: NGSI实体类型：它必须是ArrivalEstimation。Enum:'ArrivalEstimation'(到港时间)  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 所需属性  
 - `hasStop`  - `hasTrip`  - `headSign`  - `id`  - `remainingTime`  - `type`  <!-- /35-RequiredProperties -->  
@@ -30,45 +30,45 @@
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 ArrivalEstimation:    
-  description: 'Arrival Estimation'    
+  description: Arrival Estimation    
   properties:    
     alternateName:    
-      description: 'An alternative name for this item'    
+      description: An alternative name for this item    
       type: string    
       x-ngsi:    
         type: Property    
     dataProvider:    
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
+      description: A sequence of characters identifying the provider of the harmonised data entity.    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform.    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     description:    
-      description: 'A description of this item'    
+      description: A description of this item    
       type: string    
       x-ngsi:    
         type: Property    
     hasStop:    
-      description: 'It shall point to an Entity of Type GtfsStop'    
+      description: It shall point to an Entity of Type GtfsStop    
       items:    
         anyOf:    
-          - description: 'Property. Identifier format of any NGSI entity'    
+          - description: Property. Identifier format of any NGSI entity    
             maxLength: 256    
             minLength: 1    
             pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
             type: string    
-          - description: 'Property. Identifier format of any NGSI entity'    
+          - description: Property. Identifier format of any NGSI entity    
             format: uri    
             type: string    
       type: array    
@@ -76,52 +76,52 @@ ArrivalEstimation:
         type: Relationship    
     hasTrip:    
       anyOf:    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Trip associated to this Entity. It shall point to an Entity of Type GtfsTrip'    
+      description: Trip associated to this Entity. It shall point to an Entity of Type GtfsTrip    
       x-ngsi:    
         model: https://schema.org/URL    
         type: Relationship    
     headSign:    
-      description: 'It shall contain the text that appears on a sign that identifies the trip''s destination to passengers'    
+      description: It shall contain the text that appears on a sign that identifies the trip's destination to passengers    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text.    
         type: Property    
     id:    
       anyOf: &arrivalestimation_-_properties_-_owner_-_items_-_anyof    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Unique identifier of the entity'    
+      description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     name:    
-      description: 'The name of this item.'    
+      description: The name of this item.    
       type: string    
       x-ngsi:    
         type: Property    
     owner:    
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
         anyOf: *arrivalestimation_-_properties_-_owner_-_items_-_anyof    
-        description: 'Property. Unique identifier of the entity'    
+        description: Property. Unique identifier of the entity    
       type: array    
       x-ngsi:    
         type: Property    
     remainingDistance:    
-      description: 'It shall contain the remaining distance (in meters) of arrival for the trip heading to the concerned stop'    
+      description: It shall contain the remaining distance (in meters) of arrival for the trip heading to the concerned stop    
       minimum: 0    
       type: number    
       x-ngsi:    
@@ -129,13 +129,13 @@ ArrivalEstimation:
         type: Property    
         units: Meters    
     remainingTime:    
-      description: 'It shall contain the remaining time of arrival for the trip heading to the concerned stop. Remaining time shall be encoded as a ISO8601 duration. Ex. `PT8M5S`.'    
+      description: It shall contain the remaining time of arrival for the trip heading to the concerned stop. Remaining time shall be encoded as a ISO8601 duration. Ex. `PT8M5S`.    
       pattern: ^P(?=\w*\d)(?:\d+Y|Y)?(?:\d+M|M)?(?:\d+W|W)?(?:\d+D|D)?(?:T(?:\d+H|H)?(?:\d+M|M)?(?:\d+(?:\?.\d{1,2})?S|S)?)?$    
       type: string    
       x-ngsi:    
         type: Property    
     seeAlso:    
-      description: 'list of uri pointing to additional resources about the item'    
+      description: list of uri pointing to additional resources about the item    
       oneOf:    
         - items:    
             format: uri    
