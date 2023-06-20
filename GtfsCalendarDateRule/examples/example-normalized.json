@@ -2,16 +2,19 @@
   "id": "urn:ngsi-ld:CalendarDateRule:Malaga:Rule67",
   "type": "GtfsCalendarDateRule",
   "name": {
+    "type": "Text",
     "value": "Rule Fair Area"
   },
   "exceptionType": {
+    "type": "Text",
     "value": "1"
   },
   "hasService": {
-    "type": "Relationship",
+    "type": "URL",
     "value": "urn:ngsi-ld:GtfsService:Malaga:FairArea_1"
   },
   "appliesOn": {
+    "type": "Date",
     "value": "2018-03-19"
   }
 }

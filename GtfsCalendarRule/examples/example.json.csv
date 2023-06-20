@@ -1,2 +1,0 @@
-"id_", "type_", "name_", "hasService_", "monday_", "tuesday_", "wednesday_", "thursday_", "friday_", "saturday_", "sunday_", "startDate_", "endDate_"
-"urn:ngsi-ld:CalendarRule:Madrid:Rule1267", "GtfsCalendarRule", "Rule Hospital Service 1", "urn:ngsi-ld:GtfsService:Madrid:Hospital_1", "True", "True", "True", "True", "True", "False", "False", "2018-01-01", "2019-01-01"

@@ -2,47 +2,47 @@
   "id": "urn:ngsi-ld:CalendarRule:Madrid:Rule1267",
   "type": "GtfsCalendarRule",
   "startDate": {
-    "type": "Property",
+    "type": "Date",
     "value": "2018-01-01"
   },
   "endDate": {
-    "type": "Property",
+    "type": "Date",
     "value": "2019-01-01"
   },
   "name": {
-    "type": "Property",
+    "type": "Text",
     "value": "Rule Hospital Service 1"
   },
   "monday": {
-    "type": "Property",
+    "type": "Boolean",
     "value": true
   },
   "tuesday": {
-    "type": "Property",
+    "type": "Boolean",
     "value": true
   },
   "friday": {
-    "type": "Property",
+    "type": "Boolean",
     "value": true
   },
   "wednesday": {
-    "type": "Property",
+    "type": "Boolean",
     "value": true
   },
   "thursday": {
-    "type": "Property",
+    "type": "Boolean",
     "value": true
   },
   "sunday": {
-    "type": "Property",
+    "type": "Boolean",
     "value": false
   },
   "hasService": {
-    "type": "Relationship",
+    "type": "URL",
     "object": "urn:ngsi-ld:GtfsService:Madrid:Hospital_1"
   },
   "saturday": {
-    "type": "Property",
+    "type": "Boolean",
     "value": false
   }
 }

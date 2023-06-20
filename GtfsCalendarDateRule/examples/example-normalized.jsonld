@@ -1,10 +1,22 @@
 {
     "id": "urn:ngsi-ld:CalendarDateRule:Malaga:Rule67",
     "type": "GtfsCalendarDateRule",
-    "appliesOn": "2018-03-19",
-    "exceptionType": "1",
-    "hasService": "urn:ngsi-ld:GtfsService:Malaga:FairArea_1",
-    "name": "Rule Fair Area",
+    "appliesOn": {
+        "type": "Property",
+        "value": "2018-03-19"
+    },
+    "exceptionType": {
+        "type": "Property",
+        "value": "1"
+    },
+    "hasService": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:GtfsService:Malaga:FairArea_1"
+    },
+    "name": {
+        "type": "Property",
+        "value": "Rule Fair Area"
+    },
     "@context": [
         "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
         "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"
