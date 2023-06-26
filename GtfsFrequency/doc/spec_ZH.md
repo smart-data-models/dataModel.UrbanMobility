@@ -246,36 +246,42 @@ GtfsFrequency:
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "urn:ngsi-ld:GtfsFrequency:Malaga:Linea1",  
-    "type": "GtfsFrequency",  
-    "description": {  
-        "type": "Property",  
-        "value": "Cada 10 minutos"  
-    },  
-    "endTime": {  
-        "type": "Property",  
-        "value": "10:25:00"  
-    },  
-    "hasTrip": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:GtfsTrip:Spain:Malaga:1"  
-    },  
-    "headwaySeconds": {  
-        "type": "Property",  
-        "value": 600  
-    },  
-    "name": {  
-        "type": "Property",  
-        "value": "Laborables"  
-    },  
-    "startTime": {  
-        "type": "Property",  
-        "value": "07:00:00"  
-    },  
-    "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
-    ]  
+  "id": "urn:ngsi-ld:GtfsFrequency:Malaga:Linea1",  
+  "type": "GtfsFrequency",  
+  "description": {  
+    "type": "Property",  
+    "value": "Cada 10 minutos"  
+  },  
+  "endTime": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "date-time",  
+      "@value": "10:25:00"  
+    }  
+  },  
+  "hasTrip": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:GtfsTrip:Spain:Malaga:1"  
+  },  
+  "headwaySeconds": {  
+    "type": "Property",  
+    "value": 600  
+  },  
+  "name": {  
+    "type": "Property",  
+    "value": "Laborables"  
+  },  
+  "startTime": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "date-time",  
+      "@value": "07:00:00"  
+    }  
+  },  
+  "@context": [  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
+  ]  
 }  
 ```  
 </details><!-- /80-Examples -->  
