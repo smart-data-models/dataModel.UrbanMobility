@@ -15,7 +15,7 @@
 ## Lista de propiedades  
 
 <sup><sub>[*] Si no hay un tipo en un atributo es porque puede tener varios tipos o diferentes formatos/patrones</sub></sup>.  
-- `alternateName[string]`: Un nombre alternativo para este artículo  - `dataProvider[string]`: Secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated[string]`: Fecha de creación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `dateModified[string]`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description[string]`: Descripción de este artículo  - `endTime[string]`: Igual que GTFS `end_time`.  . Model: [https://schema.org/Text](https://schema.org/Text)- `exactTimes[boolean]`: Igual que GTFS `exact_times` pero codificado como booleano; `false`: Los viajes basados en la frecuencia no se programan exactamente. verdadero`: Los viajes basados en la frecuencia se programan exactamente  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `hasTrip[*]`: Viaje asociado a esta Entidad. Apuntará a una entidad de tipo GtfsTrip  . Model: [https://schema.org/URL](https://schema.org/URL)- `headwaySeconds[number]`: Igual que GTFS `headway_secs`  . Model: [https://schema.org/Number](https://schema.org/Number)- `id[*]`: Identificador único de la entidad  - `name[string]`: El nombre de este artículo.  - `owner[array]`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios.  - `seeAlso[*]`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source[string]`: Secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `startTime[string]`: Igual que GTFS `start_time`.  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: Tipo de entidad NGSI. Tiene que ser GtfsFrequency  <!-- /30-PropertiesList -->  
+- `alternateName[string]`: Un nombre alternativo para este artículo  - `dataProvider[string]`: Secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated[string]`: Fecha de creación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `dateModified[string]`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description[string]`: Descripción de este artículo  - `endTime[string]`: Igual que GTFS `end_time`.  . Model: [https://schema.org/Text](https://schema.org/Text)- `exactTimes[boolean]`: Igual que GTFS `exact_times` pero codificado como un booleano; `false`: Los viajes basados en la frecuencia no se programan exactamente. verdadero`: Los viajes basados en la frecuencia se programan exactamente  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `hasTrip[*]`: Viaje asociado a esta Entidad. Apuntará a una entidad de tipo GtfsTrip  . Model: [https://schema.org/URL](https://schema.org/URL)- `headwaySeconds[number]`: Igual que GTFS `headway_secs`  . Model: [https://schema.org/Number](https://schema.org/Number)- `id[*]`: Identificador único de la entidad  - `name[string]`: El nombre de este artículo.  - `owner[array]`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios.  - `seeAlso[*]`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source[string]`: Secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `startTime[string]`: Igual que GTFS `start_time`.  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: Tipo de entidad NGSI. Tiene que ser GtfsFrequency  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Propiedades requeridas  
 - `endTime`  - `hasTrip`  - `headwaySeconds`  - `id`  - `startTime`  - `type`  <!-- /35-RequiredProperties -->  
@@ -246,36 +246,42 @@ GtfsFrequency:
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "urn:ngsi-ld:GtfsFrequency:Malaga:Linea1",  
-    "type": "GtfsFrequency",  
-    "description": {  
-        "type": "Property",  
-        "value": "Cada 10 minutos"  
-    },  
-    "endTime": {  
-        "type": "Property",  
-        "value": "10:25:00"  
-    },  
-    "hasTrip": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:GtfsTrip:Spain:Malaga:1"  
-    },  
-    "headwaySeconds": {  
-        "type": "Property",  
-        "value": 600  
-    },  
-    "name": {  
-        "type": "Property",  
-        "value": "Laborables"  
-    },  
-    "startTime": {  
-        "type": "Property",  
-        "value": "07:00:00"  
-    },  
-    "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
-    ]  
+  "id": "urn:ngsi-ld:GtfsFrequency:Malaga:Linea1",  
+  "type": "GtfsFrequency",  
+  "description": {  
+    "type": "Property",  
+    "value": "Cada 10 minutos"  
+  },  
+  "endTime": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "date-time",  
+      "@value": "10:25:00"  
+    }  
+  },  
+  "hasTrip": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:GtfsTrip:Spain:Malaga:1"  
+  },  
+  "headwaySeconds": {  
+    "type": "Property",  
+    "value": 600  
+  },  
+  "name": {  
+    "type": "Property",  
+    "value": "Laborables"  
+  },  
+  "startTime": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "date-time",  
+      "@value": "07:00:00"  
+    }  
+  },  
+  "@context": [  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
+  ]  
 }  
 ```  
 </details><!-- /80-Examples -->  
