@@ -1,0 +1,2 @@
+"id_", "type_", "description__type_", "description__value_", "hasTrip__type_", "hasTrip__value_", "headwaySeconds__type_", "headwaySeconds__value_", "startTime__type_", "startTime__value_", "endTime__type_", "endTime__value_", "name__type_", "name__value_"
+"urn:ngsi-ld:GtfsFrequency:Malaga:Linea1", "GtfsFrequency", "Text", "Cada 10 minutos", "URI", "urn:ngsi-ld:GtfsTrip:Spain:Malaga:1", "Number", "600", "Time", "07:00:00", "Time", "10:25:00", "Text", "Laborables"
