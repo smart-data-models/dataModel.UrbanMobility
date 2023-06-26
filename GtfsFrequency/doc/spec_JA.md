@@ -3,19 +3,19 @@
 エンティティGtfsFrequency  
 ===================<!-- /10-Header -->  
 <!-- 15-License -->  
-[オープンライセンス](https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/GtfsFrequency/LICENSE.md)  
-[文書が自動的に生成されます](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+[オープン・ライセンス](https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/GtfsFrequency/LICENSE.md)  
+[文書は自動的に生成される](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-グローバルな記述です：**GTFSの周波数**。  
-バージョン：0.0.2  
+グローバルな説明**GTFSの頻度**。  
+バージョン: 0.0.2  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
-## プロパティ一覧  
+## プロパティのリスト  
 
-<sup><sub>[*] 属性に型がない場合は、複数の型や異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
-- `alternateName[string]`: このアイテムの別称  - `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このアイテムの説明  - `endTime[string]`: GTFS の `end_time` と同じ。  . Model: [https://schema.org/Text](https://schema.org/Text)- `exactTimes[boolean]`: GTFS の `exact_times` と同じですが、ブール値 `false` としてエンコードされます：false`：頻度ベースのトリップは正確にスケジュールされていない。false`: 周波数ベースのトリップは正確にスケジュールされていない：頻度ベースのトリップは正確にスケジュールされている  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `hasTrip[*]`: このEntityに関連するTrip。GtfsTrip型のEntityを指すものとする。  . Model: [https://schema.org/URL](https://schema.org/URL)- `headwaySeconds[number]`: GTFS の `headway_secs` と同じ。  . Model: [https://schema.org/Number](https://schema.org/Number)- `id[*]`: エンティティの一意な識別子  - `name[string]`: この項目の名称です。  - `owner[array]`: 所有者の固有IDを参照するJSONエンコードされた文字列を含むリストです。  - `seeAlso[*]`: アイテムに関する追加リソースを指す URI のリスト。  - `source[string]`: エンティティデータの元のソースをURLとして与える一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `startTime[string]`: GTFS の `start_time` と同じ。  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: NGSI Entityタイプ。GtfsFrequencyである必要があります。  <!-- /30-PropertiesList -->  
+<sup><sub>[*] 属性に型がない場合は、複数の型があるか、異なるフォーマット/パターンがある可能性があるためです</sub></sup>。  
+- `alternateName[string]`: この項目の別名  - `dataProvider[string]`: ハーモナイズされたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終変更のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: この商品の説明  - `endTime[string]`: GTFS の `end_time` と同じ。  . Model: [https://schema.org/Text](https://schema.org/Text)- `exactTimes[boolean]`: GTFS の `exact_times` と同じだが、ブール値としてエンコードされる：false`：頻度ベースのトリップは正確にスケジュールされない。false`：頻度ベースのトリップは正確にスケジュールされない：true`：頻度ベースのトリップは正確にスケジュールされる  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `hasTrip[*]`: この Entity に関連付けられたトリップ。GtfsTrip型のEntityを指すものとする。  . Model: [https://schema.org/URL](https://schema.org/URL)- `headwaySeconds[number]`: GTFS の `headway_secs` と同じ。  . Model: [https://schema.org/Number](https://schema.org/Number)- `id[*]`: エンティティの一意識別子  - `name[string]`: このアイテムの名前。  - `owner[array]`: 所有者の固有IDを参照するJSONエンコードされた文字列を含むリスト。  - `seeAlso[*]`: アイテムに関する追加リソースを指すURIのリスト  - `source[string]`: エンティティ・データの元のソースを URL として示す一連の文字。ソース・プロバイダの完全修飾ドメイン名、またはソース・オブジェクトの URL を推奨します。  - `startTime[string]`: GTFS の `start_time` と同じ。  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: NGSIエンティティタイプ。GtfsFrequencyでなければならない。  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 必須プロパティ  
 - `endTime`  - `hasTrip`  - `headwaySeconds`  - `id`  - `startTime`  - `type`  <!-- /35-RequiredProperties -->  
@@ -171,8 +171,8 @@ GtfsFrequency:
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
 ## ペイロードの例  
-#### GtfsFrequency NGSI-v2 key-value 例．  
-GtfsFrequencyをJSON-LD形式でkey-valuesとした例を示します。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### GtfsFrequency NGSI-v2 キー値の例  
+以下はGtfsFrequencyをJSON-LD形式でkey-valuesとした例である。これはNGSI-v2と互換性があり、`options=keyValues`を使用すると、個々のエンティティのコンテキストデータを返す。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -188,7 +188,7 @@ GtfsFrequency:
 ```  
 </details>  
 #### GtfsFrequency NGSI-v2 正規化例  
-以下は、正規化されたJSON-LD形式のGtfsFrequencyの例である。オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+以下は、正規化された JSON-LD 形式の GtfsFrequency の例です。これはNGSI-v2と互換性があり、オプションを使用しない場合は、個々のエンティティのコンテキストデータを返します。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -221,8 +221,8 @@ GtfsFrequency:
 }  
 ```  
 </details>  
-#### GtfsFrequency NGSI-LD キー値例  
-GtfsFrequencyをJSON-LD形式でkey-valuesとした例を示します。これは、`options=keyValues`を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### GtfsFrequency NGSI-LD キー値の例  
+GtfsFrequencyをJSON-LD形式でkey-valuesとした例です。options=keyValues`を使うとNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返す。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -242,47 +242,53 @@ GtfsFrequency:
 ```  
 </details>  
 #### GtfsFrequency NGSI-LD 正規化例  
-GtfsFrequencyをJSON-LDフォーマットで正規化した例を示します。オプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返すことができます。  
+以下は、正規化された JSON-LD 形式の GtfsFrequency の例です。これは、オプションを使わない場合はNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "urn:ngsi-ld:GtfsFrequency:Malaga:Linea1",  
-    "type": "GtfsFrequency",  
-    "description": {  
-        "type": "Property",  
-        "value": "Cada 10 minutos"  
-    },  
-    "endTime": {  
-        "type": "Property",  
-        "value": "10:25:00"  
-    },  
-    "hasTrip": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:GtfsTrip:Spain:Malaga:1"  
-    },  
-    "headwaySeconds": {  
-        "type": "Property",  
-        "value": 600  
-    },  
-    "name": {  
-        "type": "Property",  
-        "value": "Laborables"  
-    },  
-    "startTime": {  
-        "type": "Property",  
-        "value": "07:00:00"  
-    },  
-    "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
-    ]  
+  "id": "urn:ngsi-ld:GtfsFrequency:Malaga:Linea1",  
+  "type": "GtfsFrequency",  
+  "description": {  
+    "type": "Property",  
+    "value": "Cada 10 minutos"  
+  },  
+  "endTime": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "date-time",  
+      "@value": "10:25:00"  
+    }  
+  },  
+  "hasTrip": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:GtfsTrip:Spain:Malaga:1"  
+  },  
+  "headwaySeconds": {  
+    "type": "Property",  
+    "value": 600  
+  },  
+  "name": {  
+    "type": "Property",  
+    "value": "Laborables"  
+  },  
+  "startTime": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "date-time",  
+      "@value": "07:00:00"  
+    }  
+  },  
+  "@context": [  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
+  ]  
 }  
 ```  
 </details><!-- /80-Examples -->  
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+マグニチュード単位の扱い方については、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照のこと。  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  
