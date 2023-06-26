@@ -202,7 +202,7 @@ GtfsRoute:
 }  
 ```  
 </details>  
-#### GtfsRoute NGSI-v2规范化示例  
+#### GtfsRoute NGSI-v2规范化实例  
 下面是一个规范化的JSON-LD格式的GtfsRoute的例子。当不使用选项时，这与NGSI-v2兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  

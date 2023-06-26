@@ -3,19 +3,19 @@
 エンティティGtfsRoute  
 ===============<!-- /10-Header -->  
 <!-- 15-License -->  
-[オープンライセンス](https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/GtfsRoute/LICENSE.md)  
-[文書が自動的に生成されます](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+[オープン・ライセンス](https://github.com/smart-data-models//dataModel.UrbanMobility/blob/master/GtfsRoute/LICENSE.md)  
+[文書は自動的に生成される](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-グローバルの説明です：**GTFSルート**。  
-バージョン：0.0.1  
+グローバルな説明**GTFSルート  
+バージョン: 0.0.1  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
-## プロパティ一覧  
+## プロパティのリスト  
 
-<sup><sub>[*] 属性に型がない場合は、複数の型や異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
-- `alternateName[string]`: このアイテムの別称  - `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このアイテムの説明  - `id[*]`: エンティティの一意な識別子  - `name[string]`: この項目の名称です。  - `operatedBy[*]`: このルートを運営するエージェンシー。タイプGtfsAgencyのEntityを指すものとする。  . Model: [https://schema.org/Text](https://schema.org/Text)- `owner[array]`: 所有者の固有IDを参照するJSONエンコードされた文字列を含むリストです。  - `page[string]`: GTFS の `stop_url` と同じ。  . Model: [http://schema.org/URL](http://schema.org/URL)- `routeColor[string]`: GTFS の `route_color` と同じである。GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt)を参照。  . Model: [https://schema.org/Text](https://schema.org/Text)- `routeSortOrder[number]`: GTFS の `route_sort_order` と同じ。  . Model: [https://schema.org/Number.](https://schema.org/Number.)- `routeTextColor[string]`: GTFS の `route_text_color` と同じである。GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt)を参照。  . Model: [https://schema.org/Text](https://schema.org/Text)- `routeType[string]`: GTFS `route_type` と同じ。許容値は [GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt) で規定されている `route_type` に許容される値である。列挙：'0, 1, 2, 3, 4, 5, 6, 7'  . Model: [https://schema.org/Text](https://schema.org/Text)- `seeAlso[*]`: アイテムに関する追加リソースを指す URI のリスト。  - `shortName[string]`: GTFS の `route_short_name` と同じ。  . Model: [https://schema.org/Text.](https://schema.org/Text.)- `source[string]`: エンティティデータの元のソースをURLとして与える一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type[string]`: NGSI Entityタイプ。GtfsRouteである必要があります。  <!-- /30-PropertiesList -->  
+<sup><sub>[*] 属性に型がない場合は、複数の型があるか、異なるフォーマット/パターンがある可能性があるためです</sub></sup>。  
+- `alternateName[string]`: この項目の別名  - `dataProvider[string]`: ハーモナイズされたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終変更のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: この商品の説明  - `id[*]`: エンティティの一意識別子  - `name[string]`: このアイテムの名前。  - `operatedBy[*]`: このルートを運営するエージェンシー。タイプ GtfsAgency のエンティティを指すものとする。  . Model: [https://schema.org/Text](https://schema.org/Text)- `owner[array]`: 所有者の固有IDを参照するJSONエンコードされた文字列を含むリスト。  - `page[string]`: GTFS の `stop_url` と同じ。  . Model: [http://schema.org/URL](http://schema.org/URL)- `routeColor[string]`: GTFS の `route_color` と同じ。GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt)を参照。  . Model: [https://schema.org/Text](https://schema.org/Text)- `routeSortOrder[number]`: GTFS の `route_sort_order` と同じ。  . Model: [https://schema.org/Number.](https://schema.org/Number.)- `routeTextColor[string]`: GTFS の `route_text_color` と同じ。GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt)を参照。  . Model: [https://schema.org/Text](https://schema.org/Text)- `routeType[string]`: GTFS `route_type` と同じ。許容される値は、[GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt) で規定されている `route_type` で許容される値。Enum:'0, 1, 2, 3, 4, 5, 6, 7'.  . Model: [https://schema.org/Text](https://schema.org/Text)- `seeAlso[*]`: アイテムに関する追加リソースを指すURIのリスト  - `shortName[string]`: GTFS の `route_short_name` と同じ。  . Model: [https://schema.org/Text.](https://schema.org/Text.)- `source[string]`: エンティティ・データの元のソースを URL として示す一連の文字。ソース・プロバイダの完全修飾ドメイン名、またはソース・オブジェクトの URL を推奨します。  - `type[string]`: NGSIエンティティタイプ。GtfsRouteでなければならない。  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 必須プロパティ  
 - `id`  - `type`  <!-- /35-RequiredProperties -->  
@@ -187,8 +187,8 @@ GtfsRoute:
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
 ## ペイロードの例  
-#### GtfsRoute NGSI-v2 キー値例  
-GtfsRouteをJSON-LD形式でkey-valuesとした例を示します。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### GtfsRoute NGSI-v2 キー値の例  
+JSON-LD形式のGtfsRouteのkey-valuesの例です。options=keyValues`を使うとNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返す。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -203,7 +203,7 @@ GtfsRoute:
 ```  
 </details>  
 #### GtfsRoute NGSI-v2 正規化例  
-ここでは、JSON-LD形式のGtfsRouteを正規化した例を示します。オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+以下は、正規化された JSON-LD 形式の GtfsRoute の例です。これはNGSI-v2と互換性があり、オプションを使用しない場合、個々のエンティティのコンテキストデータを返します。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -232,8 +232,8 @@ GtfsRoute:
 }  
 ```  
 </details>  
-#### GtfsRoute NGSI-LD キー値例  
-ここでは、GtfsRouteをJSON-LD形式でkey-valuesとした例を示します。これは、`options=keyValues`を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### GtfsRoute NGSI-LD キー値の例  
+GtfsRouteをJSON-LD形式でkey-valuesとした例です。options=keyValues`を使うとNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返す。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -252,7 +252,7 @@ GtfsRoute:
 ```  
 </details>  
 #### GtfsRoute NGSI-LD 正規化例  
-ここでは、GtfsRouteをJSON-LD形式で正規化した例を示します。これはオプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+正規化されたJSON-LD形式のGtfsRouteの例です。これは、オプションを使わない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -288,7 +288,7 @@ GtfsRoute:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+マグニチュード単位の扱い方については、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照のこと。  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  
