@@ -201,7 +201,7 @@
     "value": "http://charteredbike.in/surat/"
   },
   "routeStopSequence": {
-    "type": "array",
+    "type": "Property",
     "value": [
       "10",
       "1001",

@@ -22,8 +22,8 @@
     "value": "22:11:14"
   },
   "direction_id": {
-    "type": "Boolean",
-    "value": "false"
+    "type": "Number",
+    "value": 0
   },
   "schedule_relationship": {
     "type": "Text",

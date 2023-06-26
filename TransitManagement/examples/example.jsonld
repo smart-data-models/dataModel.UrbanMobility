@@ -35,7 +35,6 @@
   "travelDistance": 9.00174,
   "tripDirection": "DN",
   "trip_delay": 11968,
-  "@context": "iudx:TransitManagement",
   "route_long_name": "Baiyappanahalli to Mysuru Road",
   "bearing": 90,
   "stop_name": "DEVASHISH NAGAR MORA BHAGAL",
@@ -67,6 +66,7 @@
   "depot_id": "1",
   "depot_name": "BHESTAN DEPOT",
   "@context": [
+    "iudx:TransitManagement",
     "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"
   ]
 }

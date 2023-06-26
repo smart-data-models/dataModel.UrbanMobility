@@ -72,18 +72,30 @@
   },
   "refPeopleCountDevice": {
     "type": "Relationship",
-    "value": "urn:ngsi-ld:PorpleCountDecice:santander:463"
+    "object": "urn:ngsi-ld:PorpleCountDecice:santander:463"
   },
   "refPublicTransportRoute": {
     "type": "Property",
     "value": [
       "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N3",
       "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N4"
-    ],
-    "shortStopCode": "463",
-    "source": "https://api.smartsantander.eu/",
-    "stopCode": "la_pereda_463",
-    "transportationType": [
+    ]
+  },
+  "shortStopCode": {
+    "type": "Property",
+    "value": "463"
+  },
+  "source": {
+    "type": "Property",
+    "value": "https://api.smartsantander.eu/"
+  },
+  "stopCode": {
+    "type": "Property",
+    "value": "la_pereda_463"
+  },
+  "transportationType": {
+    "type": "Property",
+    "value": [
       3
     ]
   },
@@ -92,7 +104,6 @@
     "value": 0
   },
   "@context": [
-    "https://smart-data-models.github.io/data-models/context.jsonld",
     "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
     "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"
   ]
