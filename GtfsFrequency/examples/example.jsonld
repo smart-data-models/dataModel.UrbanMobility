@@ -1,14 +1,14 @@
 {
-    "id": "urn:ngsi-ld:GtfsFrequency:Malaga:Linea1",
-    "type": "GtfsFrequency",
-    "description": "Cada 10 minutos",
-    "endTime": "10:25:00",
-    "hasTrip": "urn:ngsi-ld:GtfsTrip:Spain:Malaga:1",
-    "headwaySeconds": 600,
-    "name": "Laborables",
-    "startTime": "07:00:00",
-    "@context": [
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"
-    ]
+  "id": "urn:ngsi-ld:GtfsFrequency:Malaga:Linea1",
+  "type": "GtfsFrequency",
+  "description": "Cada 10 minutos",
+  "endTime": "10:25:00",
+  "hasTrip": "urn:ngsi-ld:GtfsTrip:Spain:Malaga:1",
+  "headwaySeconds": 600,
+  "name": "Laborables",
+  "startTime": "07:00:00",
+  "@context": [
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"
+  ]
 }
