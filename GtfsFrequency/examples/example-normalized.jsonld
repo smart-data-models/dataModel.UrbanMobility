@@ -8,7 +8,7 @@
   "endTime": {
     "type": "Property",
     "value": {
-      "@type": "date-time",
+      "@type": "DateTime",
       "@value": "10:25:00"
     }
   },
