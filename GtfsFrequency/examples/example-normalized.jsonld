@@ -8,7 +8,7 @@
   "endTime": {
     "type": "Property",
     "value": {
-      "@type": "DateTime",
+      "@type": "Time",
       "@value": "10:25:00"
     }
   },
@@ -27,12 +27,11 @@
   "startTime": {
     "type": "Property",
     "value": {
-      "@type": "DateTime",
+      "@type": "Time",
       "@value": "07:00:00"
     }
   },
   "@context": [
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
     "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"
   ]
 }
