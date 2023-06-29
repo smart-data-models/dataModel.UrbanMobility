@@ -1,2 +1,0 @@
-"id_", "type_", "description_", "endTime_", "hasTrip_", "headwaySeconds_", "name_", "startTime_", "@context__0_", "@context__1_"
-"urn:ngsi-ld:GtfsFrequency:Malaga:Linea1", "GtfsFrequency", "Cada 10 minutos", "10:25:00", "urn:ngsi-ld:GtfsTrip:Spain:Malaga:1", "600", "Laborables", "07:00:00", "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld", "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"
