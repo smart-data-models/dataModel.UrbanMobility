@@ -9,7 +9,7 @@
     "type": "Property",
     "value": {
       "@type": "DateTime",
-      "@value": "10:25:00"
+      "@value": "2018-03-19T10:25:00Z"
     }
   },
   "hasTrip": {
@@ -28,7 +28,7 @@
     "type": "Property",
     "value": {
       "@type": "DateTime",
-      "@value": "07:00:00"
+      "@value": "2018-03-19T07:00:00Z"
     }
   },
   "@context": [
