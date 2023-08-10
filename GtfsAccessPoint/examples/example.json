@@ -12,5 +12,5 @@
     "addressLocality": "Madrid",
     "addressCountry": "ES"
   },
-  "hasParentStation": "urn:ngsi-ld:Gtfstation:Madrid:est_90_21"
+  "hasParentStation": "urn:ngsi-ld:GtfsStation:Madrid:est_90_21"
 }
