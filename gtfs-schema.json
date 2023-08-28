@@ -44,11 +44,11 @@
               "description": "Property. Identifier format of any NGSI entity"
             }
           ],
-          "description": "Relationship. Same as GTFS `parent_station`."
+          "description": "Relationship. Same as GTFS `parent_station`"
         },
         "stop_desc": {
           "type": "string",
-          "description": "Property. Same as GTFS `stop_desc`."
+          "description": "Property. Same as GTFS `stop_desc`"
         },
         "hasService": {
           "type": "string",
