@@ -47,7 +47,7 @@
                 "routeSortOrder": {
                     "type": "integer",
                     "minimum": 0,
-                    "description": "Property. Same as GTFS `route_sort_order`. Model:'https://schema.org/Number'."
+                    "description": "Property. Same as GTFS `route_sort_order`. Model:'https://schema.org/Number'"
                 },
                 "operatedBy": {
                     "anyOf": [
@@ -68,7 +68,7 @@
                 },
                 "shortName": {
                     "type": "string",
-                    "description": "Property. Same as GTFS `route_short_name`. Model:'https://schema.org/Text'."
+                    "description": "Property. Same as GTFS `route_short_name`. Model:'https://schema.org/Text'"
                 }
             }
         }
