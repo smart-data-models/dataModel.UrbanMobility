@@ -1,42 +1,42 @@
 {
-  "$schema": "http://json-schema.org/schema#",
-  "$schemaVersion": "0.0.2",
-  "modelTags": "",
-  "$id": "https://smart-data-models.github.io/data-models/specs/UrbanMobility/GtfsShape/schema.json",
-  "title": "Smart Data Models. GTFS Schema",
-  "description": "GTFS Shape",
-  "type": "object",
-  "allOf": [
-    {
-      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
-    },
-    {
-      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
-    },
-    {
-      "properties": {
-        "type": {
-          "type": "string",
-          "enum": [
-            "GtfsShape"
-          ],
-          "description": "Property. NGSI Entity type. It has to be GtfsShape"
+    "$schema": "http://json-schema.org/schema#",
+    "$schemaVersion": "0.0.2",
+    "modelTags": "",
+    "$id": "https://smart-data-models.github.io/data-models/specs/UrbanMobility/GtfsShape/schema.json",
+    "title": "Smart Data Models. GTFS Schema",
+    "description": "GTFS Shape",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
         },
-        "distanceTravelled": {
-          "type": "array",
-          "description": "Property. An array of the distance travelled when reaching each of the points that make the `LineString` or `MultiLineString` that represents this shape. It shall match the same number of elements as the corresponding `LineString` or `MultiLineString`.",
-          "items": {
-            "type": "number",
-            "minimum": 0
-          },
-          "minItems": 1
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+        },
+        {
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "GtfsShape"
+                    ],
+                    "description": "Property. NGSI Entity type. It has to be GtfsShape"
+                },
+                "distanceTravelled": {
+                    "type": "array",
+                    "description": "Property. An array of the distance travelled when reaching each of the points that make the `LineString` or `MultiLineString` that represents this shape. It shall match the same number of elements as the corresponding `LineString` or `MultiLineString`",
+                    "items": {
+                        "type": "number",
+                        "minimum": 0
+                    },
+                    "minItems": 1
+                }
+            }
         }
-      }
-    }
-  ],
-  "required": [
-    "id",
-    "type",
-    "location"
-  ]
+    ],
+    "required": [
+        "id",
+        "type",
+        "location"
+    ]
 }
