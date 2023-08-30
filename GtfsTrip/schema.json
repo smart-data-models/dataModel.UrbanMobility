@@ -21,11 +21,11 @@
                 },
                 "shortName": {
                     "type": "string",
-                    "description": "Property. Same as GTFS `trip_short_name`. Model:'https://schema.org/Text'."
+                    "description": "Property. Same as GTFS `trip_short_name`. Model:'https://schema.org/Text'"
                 },
                 "headSign": {
                     "type": "string",
-                    "description": "Property. Same as GTFS `trip_headsign`. Model:'https://schema.org/Text'."
+                    "description": "Property. Same as GTFS `trip_headsign`. Model:'https://schema.org/Text'"
                 },
                 "hasRoute": {
                     "type": "string",
@@ -64,7 +64,7 @@
                 },
                 "block": {
                     "type": "string",
-                    "description": "Property. Same as GTFS `block_id`. Model:'https://schema.org/Text'."
+                    "description": "Property. Same as GTFS `block_id`. Model:'https://schema.org/Text'"
                 },
                 "hasService": {
                     "anyOf": [
