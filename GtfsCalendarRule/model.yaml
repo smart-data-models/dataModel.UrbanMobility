@@ -1,56 +1,46 @@
 GtfsCalendarRule:
-
   description: Smart Data Models. GTFS Calendar Rule
-
   properties:
-
     alternateName:
       description: An alternative name for this item
       type: string
       x-ngsi:
         type: Property
-
     dataProvider:
       description: A sequence of characters identifying the provider of the harmonised data entity
       type: string
       x-ngsi:
         type: Property
-
     dateCreated:
       description: Entity creation timestamp. This will usually be allocated by the storage platform
       format: date-time
       type: string
       x-ngsi:
         type: Property
-
     dateModified:
       description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform
       format: date-time
       type: string
       x-ngsi:
         type: Property
-
     description:
       description: A description of this item
       type: string
       x-ngsi:
         type: Property
-
     endDate:
-      description: End date of this rule in `YYYY-MM-DD` format. It can be obtained from the field `end_date` of [calendar.txt](https://developers.google.com/transit/gtfs/reference/#calendartxt)
+      description: "End date of this rule in `YYYY-MM-DD` format. It can be obtained from the field `end_date` of [calendar.txt](https://developers.google.com/transit/gtfs/reference/#calendartxt)"
       format: date
       type: string
       x-ngsi:
         model: https://schema.org/Boolean
         type: Property
-
     friday:
       description: Same as GTFS `friday`
       type: boolean
       x-ngsi:
         model: https://schema.org/Boolean
         type: Property
-
     hasService:
       anyOf:
         - description: Identifier format of any NGSI entity
@@ -70,7 +60,6 @@ GtfsCalendarRule:
       x-ngsi:
         model: https://schema.org/URL
         type: Relationship
-
     id:
       anyOf:
         - description: Identifier format of any NGSI entity
@@ -88,20 +77,17 @@ GtfsCalendarRule:
       description: Unique identifier of the entity
       x-ngsi:
         type: Property
-
     monday:
       description: Same as GTFS `monday`
       type: boolean
       x-ngsi:
         model: https://schema.org/Boolean
         type: Property
-
     name:
       description: The name of this item
       type: string
       x-ngsi:
         type: Property
-
     owner:
       description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)
       items:
@@ -124,14 +110,12 @@ GtfsCalendarRule:
       type: array
       x-ngsi:
         type: Property
-
     saturday:
       description: Same as GTFS `saturday`
       type: boolean
       x-ngsi:
         model: https://schema.org/Boolean
         type: Property
-
     seeAlso:
       description: list of uri pointing to additional resources about the item
       oneOf:
@@ -144,42 +128,36 @@ GtfsCalendarRule:
           type: string
       x-ngsi:
         type: Property
-
     source:
-      description: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'
       type: string
       x-ngsi:
         type: Property
-
     startDate:
-      description: Start date of this rule in `YYYY-MM-DD` format. It can be obtained from the field `start_date` of [calendar.txt](https://developers.google.com/transit/gtfs/reference/#calendartxt)
+      description: "Start date of this rule in `YYYY-MM-DD` format. It can be obtained from the field `start_date` of [calendar.txt](https://developers.google.com/transit/gtfs/reference/#calendartxt)"
       format: date
       type: string
       x-ngsi:
         model: https://schema.org/Date
         type: Property
-
     sunday:
       description: Same as GTFS `sunday`
       type: boolean
       x-ngsi:
         model: https://schema.org/Boolean
         type: Property
-
     thursday:
       description: Same as GTFS `thursday`
       type: boolean
       x-ngsi:
         model: https://schema.org/Boolean
         type: Property
-
     tuesday:
       description: Same as GTFS `tuesday`
       type: boolean
       x-ngsi:
         model: https://schema.org/Boolean
         type: Property
-
     type:
       description: 'NGSI Entity Type: It has to be GtfsCalendarRule'
       enum:
@@ -187,14 +165,12 @@ GtfsCalendarRule:
       type: string
       x-ngsi:
         type: Property
-
     wednesday:
       description: Same as GTFS `wednesday`
       type: boolean
       x-ngsi:
         model: https://schema.org/Boolean
         type: Property
-
   required:
     - id
     - type
@@ -208,17 +184,10 @@ GtfsCalendarRule:
     - sunday
     - startDate
     - endDate
-
   type: object
-
-  x-derived-from: ''
-
-  x-disclaimer: Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program
-
+  x-derived-from: ""
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
   x-license-url: https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/GtfsCalendarRule/LICENSE.md
-
   x-model-schema: https://smart-data-models.github.io/dataModel.UrbanMobility/GtfsCalendarRule/schema.json
-
-  x-model-tags: ''
-
+  x-model-tags: ""
   x-version: 0.0.1
