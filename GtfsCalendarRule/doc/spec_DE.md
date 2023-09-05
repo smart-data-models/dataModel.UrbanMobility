@@ -15,7 +15,7 @@
 ## Liste der Eigenschaften  
 
 <sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, kann es mehrere Typen oder verschiedene Formate/Muster haben</sub></sup>.  
-- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated[string]`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified[string]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description[string]`: Eine Beschreibung dieses Artikels  - `endDate[string]`: Enddatum dieser Regel im Format `JJJJ-MM-TT`. Es kann aus dem Feld `end_date` von [calendar.txt](https://developers.google.com/transit/gtfs/reference/#calendartxt) entnommen werden.  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `friday[boolean]`: Wie GTFS `Freitag`  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `hasService[string]`: Dienst, für den diese Regel gilt. Abgeleitet von `service_id`  . Model: [https://schema.org/URL](https://schema.org/URL)- `id[*]`: Eindeutiger Bezeichner der Entität  - `monday[boolean]`: Dasselbe wie GTFS "Montag  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `name[string]`: Der Name dieses Artikels.  - `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `saturday[boolean]`: Wie GTFS `Samstag`  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Es wird empfohlen, den voll qualifizierten Domänennamen des Quellanbieters oder die URL des Quellobjekts zu verwenden.  - `startDate[string]`: Startdatum dieser Regel im Format `JJJJ-MM-TT`. Es kann aus dem Feld `start_date` von [calendar.txt](https://developers.google.com/transit/gtfs/reference/#calendartxt) entnommen werden.  . Model: [https://schema.org/Date](https://schema.org/Date)- `sunday[boolean]`: Wie GTFS `sunday`  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `thursday[boolean]`: Wie GTFS `Donnerstag`  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `tuesday[boolean]`: Dasselbe wie GTFS "Dienstag  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `type[string]`: NGSI-Entitätstyp: Es muss GtfsCalendarRule sein  - `wednesday[boolean]`: Dasselbe wie GTFS "Mittwoch  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)<!-- /30-PropertiesList -->  
+- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit  - `dateCreated[date-time]`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen  - `dateModified[date-time]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben  - `description[string]`: Eine Beschreibung dieses Artikels  - `endDate[date]`: Enddatum dieser Regel im Format `JJJJ-MM-TT`. Es kann aus dem Feld `end_date` von [calendar.txt](https://developers.google.com/transit/gtfs/reference/#calendartxt) entnommen werden.  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `friday[boolean]`: Wie GTFS `Freitag`  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `hasService[string]`: Dienst, für den diese Regel gilt. Abgeleitet von `service_id`  . Model: [https://schema.org/URL](https://schema.org/URL)- `id[*]`: Eindeutiger Bezeichner der Entität  - `monday[boolean]`: Wie GTFS `monday`  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `name[string]`: Der Name dieses Artikels  - `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `saturday[boolean]`: Wie GTFS `Samstag`  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `startDate[date]`: Startdatum dieser Regel im Format `JJJJ-MM-TT`. Es kann aus dem Feld `start_date` von [calendar.txt](https://developers.google.com/transit/gtfs/reference/#calendartxt) entnommen werden.  . Model: [https://schema.org/Date](https://schema.org/Date)- `sunday[boolean]`: Wie GTFS `sunday`  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `thursday[boolean]`: Wie GTFS `Donnerstag`  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `tuesday[boolean]`: Dasselbe wie GTFS "Dienstag  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `type[string]`: NGSI-Entitätstyp: Es muss GtfsCalendarRule sein  - `wednesday[boolean]`: Dasselbe wie GTFS "Mittwoch  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)<!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Erforderliche Eigenschaften  
 - `endDate`  - `friday`  - `hasService`  - `id`  - `monday`  - `saturday`  - `startDate`  - `sunday`  - `thursday`  - `tuesday`  - `type`  - `wednesday`  <!-- /35-RequiredProperties -->  
@@ -38,18 +38,18 @@ GtfsCalendarRule:
       x-ngsi:    
         type: Property    
     dataProvider:    
-      description: A sequence of characters identifying the provider of the harmonised data entity.    
+      description: A sequence of characters identifying the provider of the harmonised data entity    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: Entity creation timestamp. This will usually be allocated by the storage platform.    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
@@ -74,29 +74,37 @@ GtfsCalendarRule:
         type: Property    
     hasService:    
       anyOf:    
-        - description: Property. Identifier format of any NGSI entity    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: Property. Identifier format of any NGSI entity    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
+          x-ngsi:    
+            type: Property    
       description: Service to which this rule applies to. Derived from `service_id`    
       type: string    
       x-ngsi:    
         model: https://schema.org/URL    
         type: Relationship    
     id:    
-      anyOf: &gtfscalendarrule_-_properties_-_owner_-_items_-_anyof    
-        - description: Property. Identifier format of any NGSI entity    
+      anyOf:    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: Property. Identifier format of any NGSI entity    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
+          x-ngsi:    
+            type: Property    
       description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
@@ -107,15 +115,29 @@ GtfsCalendarRule:
         model: https://schema.org/Boolean    
         type: Property    
     name:    
-      description: The name of this item.    
+      description: The name of this item    
       type: string    
       x-ngsi:    
         type: Property    
     owner:    
       description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
-        anyOf: *gtfscalendarrule_-_properties_-_owner_-_items_-_anyof    
-        description: Property. Unique identifier of the entity    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Property    
@@ -138,7 +160,7 @@ GtfsCalendarRule:
       x-ngsi:    
         type: Property    
     source:    
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
       type: string    
       x-ngsi:    
         type: Property    
