@@ -15,7 +15,7 @@
 ## Liste des propriétés  
 
 <sup><sub>[*] S'il n'y a pas de type dans un attribut, c'est parce qu'il peut avoir plusieurs types ou différents formats/modèles</sub></sup>.  
-- `alternateName[string]`: Un nom alternatif pour ce poste  - `dataProvider[string]`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated[string]`: Date de création de l'entité. Celle-ci est généralement attribuée par la plate-forme de stockage.  - `dateModified[string]`: Date de la dernière modification de l'entité. Cette date est généralement attribuée par la plate-forme de stockage.  - `description[string]`: Une description de l'article  - `endTime[string]`: Identique à GTFS `end_time`  . Model: [https://schema.org/Text](https://schema.org/Text)- `exactTimes[boolean]`: Identique à GTFS `exact_times` mais encodé comme un booléen ; `false` : Les trajets basés sur la fréquence ne sont pas exactement programmés. `true` : Les trajets basés sur la fréquence sont exactement programmés  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `hasTrip[*]`: Voyage associé à cette entité. Il doit pointer vers une entité de type GtfsTrip.  . Model: [https://schema.org/URL](https://schema.org/URL)- `headwaySeconds[number]`: Identique à GTFS `headway_secs`  . Model: [https://schema.org/Number](https://schema.org/Number)- `id[*]`: Identifiant unique de l'entité  - `name[string]`: Le nom de cet élément.  - `owner[array]`: Une liste contenant une séquence de caractères encodés JSON référençant les identifiants uniques du ou des propriétaires.  - `seeAlso[*]`: liste d'uri pointant vers des ressources supplémentaires concernant l'élément  - `source[string]`: Séquence de caractères indiquant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source ou l'URL de l'objet source.  - `startTime[string]`: Identique à GTFS `start_time`  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: Type d'entité NGSI. Il doit s'agir de GtfsFrequency  <!-- /30-PropertiesList -->  
+- `alternateName[string]`: Un nom alternatif pour ce poste  - `dataProvider[string]`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées  - `dateCreated[date-time]`: Horodatage de la création de l'entité. Celle-ci est généralement attribuée par la plate-forme de stockage  - `dateModified[date-time]`: Date de la dernière modification de l'entité. Cette date est généralement attribuée par la plate-forme de stockage  - `description[string]`: Une description de l'article  - `endTime[string]`: Identique à GTFS `end_time`  . Model: [https://schema.org/Text](https://schema.org/Text)- `exactTimes[boolean]`: Identique à GTFS `exact_times` mais encodé comme un booléen ; `false` : Les trajets basés sur la fréquence ne sont pas exactement programmés. `true` : Les trajets basés sur la fréquence sont exactement programmés  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `hasTrip[*]`: Voyage associé à cette entité. Il doit pointer vers une entité de type GtfsTrip.  . Model: [https://schema.org/URL](https://schema.org/URL)- `headwaySeconds[number]`: Identique à GTFS `headway_secs`  . Model: [https://schema.org/Number](https://schema.org/Number)- `id[*]`: Identifiant unique de l'entité  - `name[string]`: Le nom de cet élément  - `owner[array]`: Une liste contenant une séquence de caractères encodés JSON référençant les identifiants uniques du ou des propriétaires.  - `seeAlso[*]`: liste d'uri pointant vers des ressources supplémentaires concernant l'élément  - `source[string]`: Séquence de caractères indiquant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source ou l'URL de l'objet source.  - `startTime[string]`: Identique à GTFS `start_time`  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: Type d'entité NGSI. Il doit s'agir de GtfsFrequency  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Propriétés requises  
 - `endTime`  - `hasTrip`  - `headwaySeconds`  - `id`  - `startTime`  - `type`  <!-- /35-RequiredProperties -->  
@@ -38,18 +38,18 @@ GtfsFrequency:
       x-ngsi:    
         type: Property    
     dataProvider:    
-      description: A sequence of characters identifying the provider of the harmonised data entity.    
+      description: A sequence of characters identifying the provider of the harmonised data entity    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: Entity creation timestamp. This will usually be allocated by the storage platform.    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
@@ -74,14 +74,18 @@ GtfsFrequency:
         type: Property    
     hasTrip:    
       anyOf:    
-        - description: Property. Identifier format of any NGSI entity    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: Property. Identifier format of any NGSI entity    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
+          x-ngsi:    
+            type: Property    
       description: Trip associated to this Entity. It shall point to an Entity of Type GtfsTrip    
       x-ngsi:    
         model: https://schema.org/URL    
@@ -94,28 +98,46 @@ GtfsFrequency:
         model: https://schema.org/Number    
         type: Property    
     id:    
-      anyOf: &gtfsfrequency_-_properties_-_owner_-_items_-_anyof    
-        - description: Property. Identifier format of any NGSI entity    
+      anyOf:    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: Property. Identifier format of any NGSI entity    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
+          x-ngsi:    
+            type: Property    
       description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     name:    
-      description: The name of this item.    
+      description: The name of this item    
       type: string    
       x-ngsi:    
         type: Property    
     owner:    
       description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
-        anyOf: *gtfsfrequency_-_properties_-_owner_-_items_-_anyof    
-        description: Property. Unique identifier of the entity    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Property    
@@ -132,7 +154,7 @@ GtfsFrequency:
       x-ngsi:    
         type: Property    
     source:    
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
       type: string    
       x-ngsi:    
         type: Property    
@@ -226,18 +248,18 @@ GtfsFrequency:
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "urn:ngsi-ld:GtfsFrequency:Malaga:Linea1",  
-    "type": "GtfsFrequency",  
-    "description": "Cada 10 minutos",  
-    "endTime": "10:25:00",  
-    "hasTrip": "urn:ngsi-ld:GtfsTrip:Spain:Malaga:1",  
-    "headwaySeconds": 600,  
-    "name": "Laborables",  
-    "startTime": "07:00:00",  
-    "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
-    ]  
+  "id": "urn:ngsi-ld:GtfsFrequency:Malaga:Linea1",  
+  "type": "GtfsFrequency",  
+  "description": "Cada 10 minutos",  
+  "endTime": "10:25:00",  
+  "hasTrip": "urn:ngsi-ld:GtfsTrip:Spain:Malaga:1",  
+  "headwaySeconds": 600,  
+  "name": "Laborables",  
+  "startTime": "07:00:00",  
+  "@context": [  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
+  ]  
 }  
 ```  
 </details>  
@@ -255,8 +277,8 @@ GtfsFrequency:
   "endTime": {  
     "type": "Property",  
     "value": {  
-      "@type": "date-time",  
-      "@value": "10:25:00"  
+      "@type": "DateTime",  
+      "@value": "2018-03-19T10:25:00Z"  
     }  
   },  
   "hasTrip": {  
@@ -274,12 +296,11 @@ GtfsFrequency:
   "startTime": {  
     "type": "Property",  
     "value": {  
-      "@type": "date-time",  
-      "@value": "07:00:00"  
+      "@type": "DateTime",  
+      "@value": "2018-03-19T07:00:00Z"  
     }  
   },  
   "@context": [  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
     "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
   ]  
 }  
