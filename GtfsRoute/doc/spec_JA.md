@@ -15,7 +15,7 @@
 ## プロパティのリスト  
 
 <sup><sub>[*] 属性に型がない場合は、複数の型があるか、異なるフォーマット/パターンがある可能性があるためです</sub></sup>。  
-- `alternateName[string]`: この項目の別名  - `dataProvider[string]`: ハーモナイズされたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終変更のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: この商品の説明  - `id[*]`: エンティティの一意識別子  - `name[string]`: このアイテムの名前。  - `operatedBy[*]`: このルートを運営するエージェンシー。タイプ GtfsAgency のエンティティを指すものとする。  . Model: [https://schema.org/Text](https://schema.org/Text)- `owner[array]`: 所有者の固有IDを参照するJSONエンコードされた文字列を含むリスト。  - `page[string]`: GTFS の `stop_url` と同じ。  . Model: [http://schema.org/URL](http://schema.org/URL)- `routeColor[string]`: GTFS の `route_color` と同じ。GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt)を参照。  . Model: [https://schema.org/Text](https://schema.org/Text)- `routeSortOrder[number]`: GTFS の `route_sort_order` と同じ。  . Model: [https://schema.org/Number.](https://schema.org/Number.)- `routeTextColor[string]`: GTFS の `route_text_color` と同じ。GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt)を参照。  . Model: [https://schema.org/Text](https://schema.org/Text)- `routeType[string]`: GTFS `route_type` と同じ。許容される値は、[GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt) で規定されている `route_type` で許容される値。Enum:'0, 1, 2, 3, 4, 5, 6, 7'.  . Model: [https://schema.org/Text](https://schema.org/Text)- `seeAlso[*]`: アイテムに関する追加リソースを指すURIのリスト  - `shortName[string]`: GTFS の `route_short_name` と同じ。  . Model: [https://schema.org/Text.](https://schema.org/Text.)- `source[string]`: エンティティ・データの元のソースを URL として示す一連の文字。ソース・プロバイダの完全修飾ドメイン名、またはソース・オブジェクトの URL を推奨します。  - `type[string]`: NGSIエンティティタイプ。GtfsRouteでなければならない。  <!-- /30-PropertiesList -->  
+- `alternateName[string]`: この項目の別名  - `dataProvider[string]`: ハーモナイズされたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated[date-time]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified[date-time]`: エンティティの最終変更のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: この商品の説明  - `id[*]`: エンティティの一意識別子  - `name[string]`: このアイテムの名前  - `operatedBy[*]`: このルートを運営するエージェンシー。タイプ GtfsAgency のエンティティを指すものとする。  . Model: [https://schema.org/Text](https://schema.org/Text)- `owner[array]`: 所有者の固有IDを参照するJSONエンコードされた文字列を含むリスト。  - `page[uri]`: GTFS の `stop_url` と同じ。  . Model: [http://schema.org/URL](http://schema.org/URL)- `routeColor[string]`: GTFS の `route_color` と同じ。GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt)を参照。  . Model: [https://schema.org/Text](https://schema.org/Text)- `routeSortOrder[number]`: GTFS の `route_sort_order` と同じ。  . Model: [https://schema.org/Number](https://schema.org/Number)- `routeTextColor[string]`: GTFS の `route_text_color` と同じ。GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt)を参照。  . Model: [https://schema.org/Text](https://schema.org/Text)- `routeType[string]`: GTFS `route_type` と同じ。許容される値は、[GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt) で規定されている `route_type` で許容される値。Enum:'0, 1, 2, 3, 4, 5, 6, 7'.  . Model: [https://schema.org/Text](https://schema.org/Text)- `seeAlso[*]`: アイテムに関する追加リソースを指すURIのリスト  - `shortName[string]`: GTFS の `route_short_name` と同じ。  . Model: [https://schema.org/Text](https://schema.org/Text)- `source[string]`: エンティティ・データの元のソースを URL として示す一連の文字。ソース・プロバイダの完全修飾ドメイン名、またはソース・オブジェクトの URL を推奨する。  - `type[string]`: NGSIエンティティタイプ。GtfsRouteでなければならない。  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 必須プロパティ  
 - `id`  - `type`  <!-- /35-RequiredProperties -->  
@@ -38,18 +38,18 @@ GtfsRoute:
       x-ngsi:    
         type: Property    
     dataProvider:    
-      description: A sequence of characters identifying the provider of the harmonised data entity.    
+      description: A sequence of characters identifying the provider of the harmonised data entity    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: Entity creation timestamp. This will usually be allocated by the storage platform.    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
@@ -60,33 +60,41 @@ GtfsRoute:
       x-ngsi:    
         type: Property    
     id:    
-      anyOf: &gtfsroute_-_properties_-_owner_-_items_-_anyof    
-        - description: Property. Identifier format of any NGSI entity    
+      anyOf:    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: Property. Identifier format of any NGSI entity    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
+          x-ngsi:    
+            type: Property    
       description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     name:    
-      description: The name of this item.    
+      description: The name of this item    
       type: string    
       x-ngsi:    
         type: Property    
     operatedBy:    
       anyOf:    
-        - description: Property. Identifier format of any NGSI entity    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: Property. Identifier format of any NGSI entity    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
+          x-ngsi:    
+            type: Property    
       description: Agency that operates this route. It shall point to an Entity of Type GtfsAgency    
       x-ngsi:    
         model: https://schema.org/Text    
@@ -94,8 +102,22 @@ GtfsRoute:
     owner:    
       description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
-        anyOf: *gtfsroute_-_properties_-_owner_-_items_-_anyof    
-        description: Property. Unique identifier of the entity    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Property    
@@ -117,7 +139,7 @@ GtfsRoute:
       minimum: 0    
       type: number    
       x-ngsi:    
-        model: https://schema.org/Number.    
+        model: https://schema.org/Number    
         type: Property    
     routeTextColor:    
       description: "Same as GTFS `route_text_color`. See [GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt)"    
@@ -156,10 +178,10 @@ GtfsRoute:
       description: Same as GTFS `route_short_name`    
       type: string    
       x-ngsi:    
-        model: https://schema.org/Text.    
+        model: https://schema.org/Text    
         type: Property    
     source:    
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
       type: string    
       x-ngsi:    
         type: Property    
@@ -252,7 +274,7 @@ GtfsRoute:
 ```  
 </details>  
 #### GtfsRoute NGSI-LD 正規化例  
-正規化されたJSON-LD形式のGtfsRouteの例です。これは、オプションを使わない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+以下は、正規化されたJSON-LD形式のGtfsRouteの例です。これは、オプションを使わない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -279,7 +301,6 @@ GtfsRoute:
         "value": "1"  
     },  
     "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
         "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
     ]  
 }  
