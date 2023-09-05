@@ -15,7 +15,7 @@
 ## List of properties  
 
 <sup><sub>[*] If there is not a type in an attribute is because it could have several types or different formats/patterns</sub></sup>  
-- `alternateName[string]`: An alternative name for this item  - `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated[string]`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified[string]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description[string]`: A description of this item  - `endDate[string]`: End date of this rule in `YYYY-MM-DD` format. It can be obtained from the field `end_date` of [calendar.txt](https://developers.google.com/transit/gtfs/reference/#calendartxt)  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `friday[boolean]`: Same as GTFS `friday`  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `hasService[string]`: Service to which this rule applies to. Derived from `service_id`  . Model: [https://schema.org/URL](https://schema.org/URL)- `id[*]`: Unique identifier of the entity  - `monday[boolean]`: Same as GTFS `monday`  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `name[string]`: The name of this item.  - `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `saturday[boolean]`: Same as GTFS `saturday`  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `seeAlso[*]`: list of uri pointing to additional resources about the item  - `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `startDate[string]`: Start date of this rule in `YYYY-MM-DD` format. It can be obtained from the field `start_date` of [calendar.txt](https://developers.google.com/transit/gtfs/reference/#calendartxt)  . Model: [https://schema.org/Date](https://schema.org/Date)- `sunday[boolean]`: Same as GTFS `sunday`  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `thursday[boolean]`: Same as GTFS `thursday`  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `tuesday[boolean]`: Same as GTFS `tuesday`  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `type[string]`: NGSI Entity Type: It has to be GtfsCalendarRule  - `wednesday[boolean]`: Same as GTFS `wednesday`  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)<!-- /30-PropertiesList -->  
+- `alternateName[string]`: An alternative name for this item  - `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity  - `dateCreated[date-time]`: Entity creation timestamp. This will usually be allocated by the storage platform  - `dateModified[date-time]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform  - `description[string]`: A description of this item  - `endDate[date]`: End date of this rule in `YYYY-MM-DD` format. It can be obtained from the field `end_date` of [calendar.txt](https://developers.google.com/transit/gtfs/reference/#calendartxt)  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `friday[boolean]`: Same as GTFS `friday`  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `hasService[string]`: Service to which this rule applies to. Derived from `service_id`  . Model: [https://schema.org/URL](https://schema.org/URL)- `id[*]`: Unique identifier of the entity  - `monday[boolean]`: Same as GTFS `monday`  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `name[string]`: The name of this item  - `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `saturday[boolean]`: Same as GTFS `saturday`  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `seeAlso[*]`: list of uri pointing to additional resources about the item  - `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object  - `startDate[date]`: Start date of this rule in `YYYY-MM-DD` format. It can be obtained from the field `start_date` of [calendar.txt](https://developers.google.com/transit/gtfs/reference/#calendartxt)  . Model: [https://schema.org/Date](https://schema.org/Date)- `sunday[boolean]`: Same as GTFS `sunday`  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `thursday[boolean]`: Same as GTFS `thursday`  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `tuesday[boolean]`: Same as GTFS `tuesday`  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `type[string]`: NGSI Entity Type: It has to be GtfsCalendarRule  - `wednesday[boolean]`: Same as GTFS `wednesday`  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)<!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Required properties  
 - `endDate`  - `friday`  - `hasService`  - `id`  - `monday`  - `saturday`  - `startDate`  - `sunday`  - `thursday`  - `tuesday`  - `type`  - `wednesday`  <!-- /35-RequiredProperties -->  
@@ -38,18 +38,18 @@ GtfsCalendarRule:
       x-ngsi:    
         type: Property    
     dataProvider:    
-      description: A sequence of characters identifying the provider of the harmonised data entity.    
+      description: A sequence of characters identifying the provider of the harmonised data entity    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: Entity creation timestamp. This will usually be allocated by the storage platform.    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
@@ -74,29 +74,37 @@ GtfsCalendarRule:
         type: Property    
     hasService:    
       anyOf:    
-        - description: Property. Identifier format of any NGSI entity    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: Property. Identifier format of any NGSI entity    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
+          x-ngsi:    
+            type: Property    
       description: Service to which this rule applies to. Derived from `service_id`    
       type: string    
       x-ngsi:    
         model: https://schema.org/URL    
         type: Relationship    
     id:    
-      anyOf: &gtfscalendarrule_-_properties_-_owner_-_items_-_anyof    
-        - description: Property. Identifier format of any NGSI entity    
+      anyOf:    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: Property. Identifier format of any NGSI entity    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
+          x-ngsi:    
+            type: Property    
       description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
@@ -107,15 +115,29 @@ GtfsCalendarRule:
         model: https://schema.org/Boolean    
         type: Property    
     name:    
-      description: The name of this item.    
+      description: The name of this item    
       type: string    
       x-ngsi:    
         type: Property    
     owner:    
       description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
-        anyOf: *gtfscalendarrule_-_properties_-_owner_-_items_-_anyof    
-        description: Property. Unique identifier of the entity    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Property    
@@ -138,7 +160,7 @@ GtfsCalendarRule:
       x-ngsi:    
         type: Property    
     source:    
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
       type: string    
       x-ngsi:    
         type: Property    
