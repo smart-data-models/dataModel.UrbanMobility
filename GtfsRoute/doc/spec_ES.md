@@ -15,7 +15,7 @@
 ## Lista de propiedades  
 
 <sup><sub>[*] Si no hay un tipo en un atributo es porque puede tener varios tipos o diferentes formatos/patrones</sub></sup>.  
-- `alternateName[string]`: Un nombre alternativo para este artículo  - `dataProvider[string]`: Secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated[string]`: Fecha de creación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `dateModified[string]`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description[string]`: Descripción de este artículo  - `id[*]`: Identificador único de la entidad  - `name[string]`: El nombre de este artículo.  - `operatedBy[*]`: Agencia que opera esta ruta. Apuntará a una Entidad de Tipo GtfsAgency  . Model: [https://schema.org/Text](https://schema.org/Text)- `owner[array]`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios.  - `page[string]`: Igual que GTFS `stop_url`.  . Model: [http://schema.org/URL](http://schema.org/URL)- `routeColor[string]`: Igual que GTFS `route_color`. Véase [GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt)  . Model: [https://schema.org/Text](https://schema.org/Text)- `routeSortOrder[number]`: Igual que GTFS `route_sort_order`.  . Model: [https://schema.org/Number.](https://schema.org/Number.)- `routeTextColor[string]`: Igual que GTFS `route_text_color`. Véase [GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt)  . Model: [https://schema.org/Text](https://schema.org/Text)- `routeType[string]`: Igual que GTFS `route_type`. Valores permitidos los permitidos para `route_type` según lo prescrito por [GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt). Enum:'0, 1, 2, 3, 4, 5, 6, 7'  . Model: [https://schema.org/Text](https://schema.org/Text)- `seeAlso[*]`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `shortName[string]`: Igual que GTFS `route_short_name`.  . Model: [https://schema.org/Text.](https://schema.org/Text.)- `source[string]`: Secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `type[string]`: Tipo de entidad NGSI. Tiene que ser GtfsRoute  <!-- /30-PropertiesList -->  
+- `alternateName[string]`: Un nombre alternativo para este artículo  - `dataProvider[string]`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada  - `dateCreated[date-time]`: Fecha de creación de la entidad. Normalmente será asignada por la plataforma de almacenamiento  - `dateModified[date-time]`: Marca de tiempo de la última modificación de la entidad. Suele ser asignada por la plataforma de almacenamiento  - `description[string]`: Descripción de este artículo  - `id[*]`: Identificador único de la entidad  - `name[string]`: El nombre de este artículo  - `operatedBy[*]`: Agencia que opera esta ruta. Apuntará a una Entidad de Tipo GtfsAgency  . Model: [https://schema.org/Text](https://schema.org/Text)- `owner[array]`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios.  - `page[uri]`: Igual que GTFS `stop_url`.  . Model: [http://schema.org/URL](http://schema.org/URL)- `routeColor[string]`: Igual que GTFS `route_color`. Véase [GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt)  . Model: [https://schema.org/Text](https://schema.org/Text)- `routeSortOrder[number]`: Igual que GTFS `route_sort_order`.  . Model: [https://schema.org/Number](https://schema.org/Number)- `routeTextColor[string]`: Igual que GTFS `route_text_color`. Véase [GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt)  . Model: [https://schema.org/Text](https://schema.org/Text)- `routeType[string]`: Igual que GTFS `route_type`. Valores permitidos los permitidos para `route_type` según lo prescrito por [GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt). Enum:'0, 1, 2, 3, 4, 5, 6, 7'  . Model: [https://schema.org/Text](https://schema.org/Text)- `seeAlso[*]`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `shortName[string]`: Igual que GTFS `route_short_name`.  . Model: [https://schema.org/Text](https://schema.org/Text)- `source[string]`: Secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `type[string]`: Tipo de entidad NGSI. Tiene que ser GtfsRoute  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Propiedades requeridas  
 - `id`  - `type`  <!-- /35-RequiredProperties -->  
@@ -38,18 +38,18 @@ GtfsRoute:
       x-ngsi:    
         type: Property    
     dataProvider:    
-      description: A sequence of characters identifying the provider of the harmonised data entity.    
+      description: A sequence of characters identifying the provider of the harmonised data entity    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: Entity creation timestamp. This will usually be allocated by the storage platform.    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
@@ -60,33 +60,41 @@ GtfsRoute:
       x-ngsi:    
         type: Property    
     id:    
-      anyOf: &gtfsroute_-_properties_-_owner_-_items_-_anyof    
-        - description: Property. Identifier format of any NGSI entity    
+      anyOf:    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: Property. Identifier format of any NGSI entity    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
+          x-ngsi:    
+            type: Property    
       description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     name:    
-      description: The name of this item.    
+      description: The name of this item    
       type: string    
       x-ngsi:    
         type: Property    
     operatedBy:    
       anyOf:    
-        - description: Property. Identifier format of any NGSI entity    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: Property. Identifier format of any NGSI entity    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
+          x-ngsi:    
+            type: Property    
       description: Agency that operates this route. It shall point to an Entity of Type GtfsAgency    
       x-ngsi:    
         model: https://schema.org/Text    
@@ -94,8 +102,22 @@ GtfsRoute:
     owner:    
       description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
-        anyOf: *gtfsroute_-_properties_-_owner_-_items_-_anyof    
-        description: Property. Unique identifier of the entity    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Property    
@@ -117,7 +139,7 @@ GtfsRoute:
       minimum: 0    
       type: number    
       x-ngsi:    
-        model: https://schema.org/Number.    
+        model: https://schema.org/Number    
         type: Property    
     routeTextColor:    
       description: "Same as GTFS `route_text_color`. See [GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt)"    
@@ -156,10 +178,10 @@ GtfsRoute:
       description: Same as GTFS `route_short_name`    
       type: string    
       x-ngsi:    
-        model: https://schema.org/Text.    
+        model: https://schema.org/Text    
         type: Property    
     source:    
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
       type: string    
       x-ngsi:    
         type: Property    
@@ -279,7 +301,6 @@ GtfsRoute:
         "value": "1"  
     },  
     "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
         "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
     ]  
 }  
