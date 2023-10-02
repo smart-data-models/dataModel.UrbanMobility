@@ -1,3 +1,3 @@
-/* (Beta) Export of data model GtfsCalendarDateRule of the subject dataModel.UrbanMobility for a postgreSQL database. Pending translation of enumerations and multityped attributes */
-CREATE TYPE exceptionType_type AS ENUM (1, 2);CREATE TYPE GtfsCalendarDateRule_type AS ENUM ('GtfsCalendarDateRule');
-CREATE TABLE GtfsCalendarDateRule (alternateName text, appliesOn date, dataProvider text, dateCreated timestamp, dateModified timestamp, description text, exceptionType exceptionType_type, hasService text, id text, name text, owner json, seeAlso json, source text, type GtfsCalendarDateRule_type);
+/* (Beta) Export of data model GtfsCalendarDateRule of the subject dataModel.UrbanMobility for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
+CREATE TYPE exceptionType_type AS ENUM ('1','2');CREATE TYPE GtfsCalendarDateRule_type AS ENUM ('GtfsCalendarDateRule');
+CREATE TABLE GtfsCalendarDateRule (alternateName TEXT, appliesOn DATE, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, exceptionType exceptionType_type, hasService TEXT, name TEXT, owner JSON, source TEXT, type GtfsCalendarDateRule_type);
