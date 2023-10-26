@@ -1,3 +1,3 @@
 /* (Beta) Export of data model GtfsTransferRule of the subject dataModel.UrbanMobility for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
 CREATE TYPE transferType_type AS ENUM ('0','1','2','3');CREATE TYPE GtfsTransferRule_type AS ENUM ('GtfsTransferRule');
-CREATE TABLE GtfsTransferRule (alternateName TEXT, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, minimumTransferTime NUMERIC, name TEXT, owner JSON, source TEXT, transferType transferType_type, type GtfsTransferRule_type);
+CREATE TABLE GtfsTransferRule (alternateName TEXT, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, id TEXT PRIMARY KEY, minimumTransferTime NUMERIC, name TEXT, owner JSON, seeAlso JSON, source TEXT, transferType transferType_type, type GtfsTransferRule_type);
