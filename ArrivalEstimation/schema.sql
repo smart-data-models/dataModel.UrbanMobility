@@ -1,3 +1,3 @@
 /* (Beta) Export of data model ArrivalEstimation of the subject dataModel.UrbanMobility for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
 CREATE TYPE ArrivalEstimation_type AS ENUM ('ArrivalEstimation');
-CREATE TABLE ArrivalEstimation (alternateName TEXT, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, hasStop JSON, headSign TEXT, name TEXT, owner JSON, remainingDistance NUMERIC, remainingTime TEXT, source TEXT, type ArrivalEstimation_type);
+CREATE TABLE ArrivalEstimation (alternateName TEXT, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, hasStop JSON, headSign TEXT, id TEXT PRIMARY KEY, name TEXT, owner JSON, remainingDistance NUMERIC, remainingTime TEXT, seeAlso JSON, source TEXT, type ArrivalEstimation_type);
