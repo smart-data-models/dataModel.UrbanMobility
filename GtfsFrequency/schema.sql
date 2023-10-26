@@ -1,3 +1,3 @@
 /* (Beta) Export of data model GtfsFrequency of the subject dataModel.UrbanMobility for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
 CREATE TYPE GtfsFrequency_type AS ENUM ('GtfsFrequency');
-CREATE TABLE GtfsFrequency (alternateName TEXT, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, endTime TEXT, exactTimes BOOLEAN, headwaySeconds NUMERIC, name TEXT, owner JSON, source TEXT, startTime TEXT, type GtfsFrequency_type);
+CREATE TABLE GtfsFrequency (alternateName TEXT, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, endTime TEXT, exactTimes BOOLEAN, headwaySeconds NUMERIC, id TEXT PRIMARY KEY, name TEXT, owner JSON, seeAlso JSON, source TEXT, startTime TEXT, type GtfsFrequency_type);
