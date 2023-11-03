@@ -1,0 +1,2 @@
+"id_", "type_", "description_", "name_", "operatedBy_", "@context__0_", "@context__1_"
+"urn:ngsi-ld:Service:Malaga:LAB", "GtfsService", "Laborables", "LAB", "urn:ngsi-ld:GtfsAgency:Malaga_EMT", "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld", "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"
