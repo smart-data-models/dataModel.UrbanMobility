@@ -1,2 +1,2 @@
 "id_", "type_", "name_", "location__type_", "location__coordinates__0_", "location__coordinates__1_", "address__type_", "address__streetAddress_", "address__addressLocality_", "address__addressCountry_", "hasParentStation_"
-"urn:ngsi-ld:AccessPoint:Madrid:acc_4_1_3", "GtfsAccessPoint", "Bravo Murillo", "Point", "-3.69036", "40.46629", "PostalAddress", "Calle de Bravo Murillo 377", "Madrid", "ES", "urn:ngsi-ld:Gtfstation:Madrid:est_90_21"
+"urn:ngsi-ld:AccessPoint:Madrid:acc_4_1_3", "GtfsAccessPoint", "Bravo Murillo", "Point", "-3.69036", "40.46629", "PostalAddress", "Calle de Bravo Murillo 377", "Madrid", "ES", "urn:ngsi-ld:GtfsStation:Madrid:est_90_21"
