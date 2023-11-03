@@ -1,0 +1,2 @@
+"id_", "type_", "arrivalTime_", "departureTime_", "distanceTravelled_", "hasStop_", "hasTrip_", "stopSequence_", "@context__0_", "@context__1_"
+"urn:ngsi-ld:GtfsStopTime:Spain:Madrid:EMT:FE0010011_737", "GtfsStopTime", "07:04:24", "07:04:24", "759", "urn:ngsi-ld:GtfsStop:Madrid:EMT:737", "urn:ngsi-ld:GtfsTrip:Madrid:EMT:FE0010011", "4", "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld", "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"
