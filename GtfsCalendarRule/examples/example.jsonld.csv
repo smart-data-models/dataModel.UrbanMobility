@@ -1,0 +1,2 @@
+"id_", "type_", "endDate_", "friday_", "hasService_", "monday_", "name_", "saturday_", "startDate_", "sunday_", "thursday_", "tuesday_", "wednesday_", "@context__0_", "@context__1_"
+"urn:ngsi-ld:CalendarRule:Madrid:Rule1267", "GtfsCalendarRule", "2019-01-01", "True", "urn:ngsi-ld:GtfsService:Madrid:Hospital_1", "True", "Rule Hospital Service 1", "False", "2018-01-01", "False", "True", "True", "True", "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld", "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"
