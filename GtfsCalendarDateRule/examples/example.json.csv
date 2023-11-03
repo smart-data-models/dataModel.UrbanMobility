@@ -1,0 +1,2 @@
+"id_", "type_", "name_", "hasService_", "appliesOn_", "exceptionType_"
+"urn:ngsi-ld:CalendarDateRule:Malaga:Rule67", "GtfsCalendarDateRule", "Rule Fair Area", "urn:ngsi-ld:GtfsService:Malaga:FairArea_1", "2018-03-19", "1"
