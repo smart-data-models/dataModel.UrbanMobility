@@ -1,0 +1,2 @@
+"id_", "type_", "code_", "location__coordinates__0_", "location__coordinates__1_", "location__type_", "name_", "operatedBy_", "@context__0_", "@context__1_"
+"urn:ngsi-ld:GtfsStop:Malaga_101", "GtfsStop", "101", "-4.424393", "36.716872", "Point", "Alameda Principal Sur", "urn:ngsi-ld:GtfsAgency:Malaga_EMT", "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld", "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"
