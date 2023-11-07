@@ -18,7 +18,7 @@
     "value": "BHESTAN DEPOT"
   },
   "travelTime": {
-    "type": "Time",
+    "type": "DateTime",
     "value": "22:11:14"
   },
   "direction_id": {
@@ -34,15 +34,15 @@
     "value": "52TC12"
   },
   "agency_fare_url": {
-    "type": "URL",
+    "type": "Text",
     "value": "http://charteredbike.in/surat/?page_id=1021"
   },
   "actual_trip_end_time": {
-    "type": "Date-Time",
+    "type": "DateTime",
     "value": "2021-10-28T08:24:22+05:30"
   },
   "last_tracked_time": {
-    "type": "Time",
+    "type": "DateTime",
     "value": "08:13:22"
   },
   "standing_capacity": {
@@ -50,7 +50,7 @@
     "value": 20
   },
   "last_stop_arrival_time": {
-    "type": "Text",
+    "type": "DateTime",
     "value": "13:30:12"
   },
   "agency_id": {
@@ -82,11 +82,11 @@
     "value": "A03"
   },
   "timestamp": {
-    "format": "Date-Time",
+    "type": "DateTime",
     "value": "2021-10-28T08:13:22+05:30"
   },
   "arrival_time": {
-    "type": "Time",
+    "type": "DateTime",
     "value": "22:00:28"
   },
   "route_long_name": {
@@ -119,7 +119,7 @@
   },
   "uncertainity": {
     "type": "Boolean",
-    "value": "false"
+    "value": false
   },
   "route_color": {
     "type": "Text",
@@ -130,7 +130,7 @@
     "value": 9.00174
   },
   "actual_trip_start_time": {
-    "type": "Date-Time",
+    "type": "DateTime",
     "value": "2021-10-28T07:46:51+05:30"
   },
   "bearing": {
@@ -142,7 +142,7 @@
     "value": 24
   },
   "start_date": {
-    "type": "Date",
+    "type": "DateTime",
     "value": "2022-03-01"
   },
   "current_stop_sequence": {
@@ -150,7 +150,7 @@
     "value": 1001
   },
   "start_time": {
-    "type": "Time",
+    "type": "DateTime",
     "value": "11:15:35"
   },
   "trip_id": {
@@ -174,7 +174,7 @@
     "value": "http://charteredbike.in/surat/"
   },
   "routeStopSequence": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       "10",
       "1001",
@@ -189,7 +189,7 @@
     "value": "DN"
   },
   "departure_time": {
-    "type": "Time",
+    "type": "DateTime",
     "value": "22:00:33"
   },
   "last_stop_id": {
@@ -209,7 +209,7 @@
     "value": "1"
   },
   "observationDateTime": {
-    "type": "Date-Time",
+    "type": "DateTime",
     "value": "2021-10-28T08:13:22+05:30"
   }
 }
