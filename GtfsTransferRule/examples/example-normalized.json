@@ -10,14 +10,15 @@
     "value": 10
   },
   "hasDestination": {
-    "type": "URI",
+    "type": "Text",
     "value": "urn:ngsi-ld:GtfsStop:Malaga_508"
   },
   "hasOrigin": {
-    "type": "URI",
+    "type": "Text",
     "value": "urn:ngsi-ld:GtfsStop:Malaga_101"
   },
   "name": {
+    "type": "Text",
     "value": "L1_L5"
   }
 }
