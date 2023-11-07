@@ -2,11 +2,11 @@
   "id": "urn:ngsi-ld:CalendarRule:Madrid:Rule1267",
   "type": "GtfsCalendarRule",
   "startDate": {
-    "type": "Date",
+    "type": "DateTime",
     "value": "2018-01-01"
   },
   "endDate": {
-    "type": "Date",
+    "type": "DateTime",
     "value": "2019-01-01"
   },
   "name": {
@@ -38,8 +38,8 @@
     "value": false
   },
   "hasService": {
-    "type": "URL",
-    "object": "urn:ngsi-ld:GtfsService:Madrid:Hospital_1"
+    "type": "Text",
+    "value": "urn:ngsi-ld:GtfsService:Madrid:Hospital_1"
   },
   "saturday": {
     "type": "Boolean",
