@@ -1,9 +1,8 @@
-
 {
   "id": "urn:ngsi-ld:ArrivalEstimation:L5C1_Stop74_1",
   "type": "ArrivalEstimation",
   "hasTrip": {
-    "type": "URL",
+    "type": "Text",
     "value": "urn:ngsi-ld:GtfsTrip:tus:5C1"
   },
   "headSign": {
@@ -15,11 +14,13 @@
     "value": "PT8M5S"
   },
   "hasStop": {
-    "type": "Text",
-    "value": "urn:ngsi-ld:GtfsStop:tus:74"
+    "type": "StructuredValue",
+    "value": [
+      "urn:ngsi-ld:GtfsStop:tus:74"
+    ]
   },
   "remainingDistance": {
-    "type": "Text",
+    "type": "Number",
     "value": 1200
   }
 }
