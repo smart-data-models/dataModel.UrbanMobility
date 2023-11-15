@@ -6,7 +6,7 @@
     "value": "Cada 10 minutos"
   },
   "hasTrip": {
-    "type": "URI",
+    "type": "Text",
     "value": "urn:ngsi-ld:GtfsTrip:Spain:Malaga:1"
   },
   "headwaySeconds": {
@@ -14,11 +14,11 @@
     "value": 600
   },
   "startTime": {
-    "type": "Time",
+    "type": "Text",
     "value": "07:00:00"
   },
   "endTime": {
-    "type": "Time",
+    "type": "Text",
     "value": "10:25:00"
   },
   "name": {
