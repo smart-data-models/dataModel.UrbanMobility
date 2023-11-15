@@ -2,11 +2,11 @@
   "id": "urn:ngsi-ld:GtfsStopTime:Spain:Madrid:EMT:FE0010011_737",
   "type": "GtfsStopTime",
   "departureTime": {
-    "type": "Time",
+    "type": "Text",
     "value": "07:04:24"
   },
   "hasTrip": {
-    "type": "URI",
+    "type": "Text",
     "value": "urn:ngsi-ld:GtfsTrip:Madrid:EMT:FE0010011"
   },
   "stopSequence": {
@@ -18,11 +18,11 @@
     "value": 759
   },
   "arrivalTime": {
-    "type": "Time",
+    "type": "Text",
     "value": "07:04:24"
   },
   "hasStop": {
-    "type": "URI",
+    "type": "Text",
     "value": "urn:ngsi-ld:GtfsStop:Madrid:EMT:737"
   }
 }
