@@ -6,14 +6,19 @@
     "value": "101"
   },
   "operatedBy": {
-    "type": "URI",
-    "value": "urn:ngsi-ld:GtfsAgency:Malaga_EMT"
+    "type": "StructuredValue",
+    "value": [
+      "urn:ngsi-ld:GtfsAgency:Malaga_EMT"
+    ]
   },
   "location": {
     "type": "geo:json",
     "value": {
       "type": "Point",
-      "coordinates": [-4.424393, 36.716872]
+      "coordinates": [
+        -4.424393,
+        36.716872
+      ]
     }
   },
   "name": {
