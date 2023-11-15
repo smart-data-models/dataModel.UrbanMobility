@@ -2,7 +2,7 @@
   "id": "urn:ngsi-ld:PublicTransportStop:santander:busStop:463",
   "type": "PublicTransportStop",
   "dateModified": {
-    "type": "ISO8601",
+    "type": "DateTime",
     "value": "2018-09-25T08:32:26.00Z"
   },
   "source": {
@@ -45,8 +45,8 @@
     "value": "La Pereda 14"
   },
   "wheelchairAccessible": {
-    "type": "Number",
-    "value": 0
+    "type": "Boolean",
+    "value": false
   },
   "transportationType": {
     "type": "StructuredValue",
@@ -62,8 +62,8 @@
     ]
   },
   "peopleCount": {
-    "type": "Number",
-    "value": 0
+    "type": "Boolean",
+    "value": false
   },
   "refPeopleCountDevice": {
     "type": "Text",
@@ -73,75 +73,30 @@
     "type": "StructuredValue",
     "value": [
       {
-        "opens" : {
-          "type": "string", 
-          "value": "00:01"
-        },
-        "closes": {
-          "type": "string",
-          "value": "23:59"
-        },
-        "dayOfWeek":{
-          "type": "string",
-          "value": "Friday"
-        }
+        "opens": "00:01",
+        "closes": "23:59",
+        "dayOfWeek": "Friday"
       },
       {
-        "opens" : {
-          "type": "string", 
-          "value": "00:01"
-        },
-        "closes": {
-          "type": "string",
-          "value": "23:59"
-        },
-        "dayOfWeek":{
-          "type": "string",
-          "value": "Monday"
-        }
+        "opens": "00:01",
+        "closes": "23:59",
+        "dayOfWeek": "Monday"
       },
       {
-        "opens" : {
-          "type": "string", 
-          "value": "00:01"
-        },
-        "closes": {
-          "type": "string",
-          "value": "23:59"
-        },
-        "dayOfWeek":{
-          "type": "string",
-          "value": "Tuesday"
-        }
+        "opens": "00:01",
+        "closes": "23:59",
+        "dayOfWeek": "Tuesday"
       },
       {
-        "opens" : {
-          "type": "string", 
-          "value": "00:01"
-        },
-        "closes": {
-          "type": "string",
-          "value": "23:59"
-        },
-        "dayOfWeek":{
-          "type": "string",
-          "value": "Thursday"
-        }
+        "opens": "00:01",
+        "closes": "23:59",
+        "dayOfWeek": "Thursday"
       },
       {
-        "opens" : {
-          "type": "string", 
-          "value": "00:01"
-        },
-        "closes": {
-          "type": "string",
-          "value": "23:59"
-        },
-        "dayOfWeek":{
-          "type": "string",
-          "value": "Wednesday"
-        }
+        "opens": "00:01",
+        "closes": "23:59",
+        "dayOfWeek": "Wednesday"
       }
-    ]  
+    ]
   }
 }
