@@ -30,8 +30,7 @@
   ],
   "peopleCount": 0,
   "refPeopleCountDevice": "urn:ngsi-ld:PorpleCountDecice:santander:463",
- "openingHoursSpecification": 
-  [
+  "openingHoursSpecification": [
     {
       "opens": "00:01",
       "closes": "23:59",
