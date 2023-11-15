@@ -10,7 +10,7 @@
     "value": "1"
   },
   "page": {
-    "type": "URL",
+    "type": "Text",
     "value": "http://www.emtmalaga.es/emt-mobile/informacionLinea.html"
   },
   "routeType": {
@@ -18,7 +18,7 @@
     "value": "3"
   },
   "operatedBy": {
-    "type": "URL",
+    "type": "Text",
     "value": "urn:ngsi-ld:GtfsAgency:Malaga_EMT"
   }
 }
