@@ -1,7 +1,7 @@
 {
   "id": "urn:ngsi-ld:GtfsAgency:Malaga_EMT",
   "type": "GtfsAgency",
-  "agencyName": "Empresa Malagueña de Transportes",
+  "agencyName": "Empresa Malague\u00f1a de Transportes",
   "page": "http://www.emtmalaga.es/",
   "timezone": "Europe/Madrid",
   "language": "ES",
