@@ -6,18 +6,21 @@
     "value": "Bravo Murillo"
   },
   "hasParentStation": {
-    "type": "URI",
+    "type": "Text",
     "value": "urn:ngsi-ld:GtfsStation:Madrid:est_90_21"
   },
   "location": {
     "type": "geo:json",
     "value": {
       "type": "Point",
-      "coordinates": [-3.69036, 40.46629]
+      "coordinates": [
+        -3.69036,
+        40.46629
+      ]
     }
   },
   "address": {
-    "type": "PostalAddress",
+    "type": "StructuredValue",
     "value": {
       "addressLocality": "Madrid",
       "addressCountry": "ES",
