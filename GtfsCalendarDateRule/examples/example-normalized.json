@@ -10,11 +10,11 @@
     "value": "1"
   },
   "hasService": {
-    "type": "URL",
+    "type": "Text",
     "value": "urn:ngsi-ld:GtfsService:Malaga:FairArea_1"
   },
   "appliesOn": {
-    "type": "Date",
+    "type": "DateTime",
     "value": "2018-03-19"
   }
 }
