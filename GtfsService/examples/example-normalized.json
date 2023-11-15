@@ -2,7 +2,7 @@
   "id": "urn:ngsi-ld:Service:Malaga:LAB",
   "type": "GtfsService",
   "operatedBy": {
-    "type": "URI",
+    "type": "Text",
     "value": "urn:ngsi-ld:GtfsAgency:Malaga_EMT"
   },
   "name": {
