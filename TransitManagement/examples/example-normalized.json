@@ -18,12 +18,12 @@
     "value": "BHESTAN DEPOT"
   },
   "travelTime": {
-    "type": "DateTime",
+    "type": "Text",
     "value": "22:11:14"
   },
   "direction_id": {
-    "type": "Number",
-    "value": 0
+    "type": "Boolean",
+    "value": false
   },
   "schedule_relationship": {
     "type": "Text",
@@ -42,7 +42,7 @@
     "value": "2021-10-28T08:24:22+05:30"
   },
   "last_tracked_time": {
-    "type": "DateTime",
+    "type": "Text",
     "value": "08:13:22"
   },
   "standing_capacity": {
@@ -50,7 +50,7 @@
     "value": 20
   },
   "last_stop_arrival_time": {
-    "type": "DateTime",
+    "type": "Text",
     "value": "13:30:12"
   },
   "agency_id": {
@@ -86,7 +86,7 @@
     "value": "2021-10-28T08:13:22+05:30"
   },
   "arrival_time": {
-    "type": "DateTime",
+    "type": "Text",
     "value": "22:00:28"
   },
   "route_long_name": {
@@ -150,7 +150,7 @@
     "value": 1001
   },
   "start_time": {
-    "type": "DateTime",
+    "type": "Text",
     "value": "11:15:35"
   },
   "trip_id": {
@@ -170,7 +170,7 @@
     "value": "DN"
   },
   "agency_url": {
-    "type": "URL",
+    "type": "Text",
     "value": "http://charteredbike.in/surat/"
   },
   "routeStopSequence": {
@@ -189,7 +189,7 @@
     "value": "DN"
   },
   "departure_time": {
-    "type": "DateTime",
+    "type": "Text",
     "value": "22:00:33"
   },
   "last_stop_id": {
