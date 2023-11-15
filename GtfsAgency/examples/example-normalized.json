@@ -10,11 +10,11 @@
     "value": "ES"
   },
   "page": {
-    "type": "URL",
+    "type": "Text",
     "value": "http://www.emtmalaga.es/"
   },
   "source": {
-    "type": "URL",
+    "type": "Text",
     "value": "http://datosabiertos.malaga.eu/dataset/lineas-y-horarios-bus-google-transit/resource/24e86888-b91e-45bf-a48c-09855832fd52"
   },
   "timezone": {
