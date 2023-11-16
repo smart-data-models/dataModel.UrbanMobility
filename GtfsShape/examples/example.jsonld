@@ -1,29 +1,29 @@
 {
-    "id": "urn:ngsi-ld:GtfsShape:101",
-    "type": "GtfsShape",
-    "location": {
-        "coordinates": [
-            [
-                -4.421394,
-                36.73826
-            ],
-            [
-                -4.421428,
-                36.73825
-            ],
-            [
-                -4.421505,
-                36.738186
-            ],
-            [
-                -4.421525,
-                36.738033
-            ]
-        ],
-        "type": "LineString"
-    },
-    "@context": [
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"
-    ]
+  "id": "urn:ngsi-ld:GtfsShape:101",
+  "type": "GtfsShape",
+  "location": {
+    "coordinates": [
+      [
+        -4.421394,
+        36.73826
+      ],
+      [
+        -4.421428,
+        36.73825
+      ],
+      [
+        -4.421505,
+        36.738186
+      ],
+      [
+        -4.421525,
+        36.738033
+      ]
+    ],
+    "type": "LineString"
+  },
+  "@context": [
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"
+  ]
 }
