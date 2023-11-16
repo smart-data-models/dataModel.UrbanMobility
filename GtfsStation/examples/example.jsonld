@@ -1,26 +1,26 @@
 {
-    "id": "urn:ngsi-ld:GtfsStation:Madrid:est_90_21",
-    "type": "GtfsStation",
-    "address": {
-        "addressCountry": "ES",
-        "addressLocality": "Madrid",
-        "streetAddress": "Paseo de la Castellana 189",
-        "type": "PostalAddress"
-    },
-    "code": "21",
-    "hasStop": [
-        "urn:ngsi-ld:GtfsStop:Madrid_par_4_1"
+  "id": "urn:ngsi-ld:GtfsStation:Madrid:est_90_21",
+  "type": "GtfsStation",
+  "address": {
+    "addressCountry": "ES",
+    "addressLocality": "Madrid",
+    "streetAddress": "Paseo de la Castellana 189",
+    "type": "PostalAddress"
+  },
+  "code": "21",
+  "hasStop": [
+    "urn:ngsi-ld:GtfsStop:Madrid_par_4_1"
+  ],
+  "location": {
+    "coordinates": [
+      -3.6892,
+      40.4669
     ],
-    "location": {
-        "coordinates": [
-            -3.6892,
-            40.4669
-        ],
-        "type": "Point"
-    },
-    "name": "Intercambiador de Plaza de Castilla",
-    "@context": [
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"
-    ]
+    "type": "Point"
+  },
+  "name": "Intercambiador de Plaza de Castilla",
+  "@context": [
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"
+  ]
 }
