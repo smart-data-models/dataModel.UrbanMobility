@@ -18,74 +18,29 @@
   "name": "La Pereda 14",
   "openingHoursSpecification": [
     {
-      "opens": {
-        "type": "string",
-        "value": "00:01"
-      },
-      "closes": {
-        "type": "string",
-        "value": "23:59"
-      },
-      "dayOfWeek": {
-        "type": "string",
-        "value": "Friday"
-      }
+      "opens": "00:01",
+      "closes": "23:59",
+      "dayOfWeek": "Friday"
     },
     {
-      "opens": {
-        "type": "string",
-        "value": "00:01"
-      },
-      "closes": {
-        "type": "string",
-        "value": "23:59"
-      },
-      "dayOfWeek": {
-        "type": "string",
-        "value": "Monday"
-      }
+      "opens": "00:01",
+      "closes": "23:59",
+      "dayOfWeek": "Monday"
     },
     {
-      "opens": {
-        "type": "string",
-        "value": "00:01"
-      },
-      "closes": {
-        "type": "string",
-        "value": "23:59"
-      },
-      "dayOfWeek": {
-        "type": "string",
-        "value": "Tuesday"
-      }
+      "opens": "00:01",
+      "closes": "23:59",
+      "dayOfWeek": "Tuesday"
     },
     {
-      "opens": {
-        "type": "string",
-        "value": "00:01"
-      },
-      "closes": {
-        "type": "string",
-        "value": "23:59"
-      },
-      "dayOfWeek": {
-        "type": "string",
-        "value": "Thursday"
-      }
+      "opens": "00:01",
+      "closes": "23:59",
+      "dayOfWeek": "Thursday"
     },
     {
-      "opens": {
-        "type": "string",
-        "value": "00:01"
-      },
-      "closes": {
-        "type": "string",
-        "value": "23:59"
-      },
-      "dayOfWeek": {
-        "type": "string",
-        "value": "Wednesday"
-      }
+      "opens": "00:01",
+      "closes": "23:59",
+      "dayOfWeek": "Wednesday"
     }
   ],
   "peopleCount": 0,
@@ -100,8 +55,7 @@
   "transportationType": [
     3
   ],
-  "wheelchairAccessible": 0
-  ,
+  "wheelchairAccessible": 0,
   "@context": [
     "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
     "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"
