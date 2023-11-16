@@ -1,13 +1,15 @@
 {
-    "id": "urn:ngsi-ld:ArrivalEstimation:L5C1_Stop74_1",
-    "type": "ArrivalEstimation",
-    "hasStop": "urn:ngsi-ld:GtfsStop:tus:74",
-    "hasTrip": "urn:ngsi-ld:GtfsTrip:tus:5C1",
-    "headSign": "Plaza Italia",
-    "remainingDistance": 1200,
-    "remainingTime": "PT8M5S",
-    "@context": [
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"
-    ]
+  "id": "urn:ngsi-ld:ArrivalEstimation:L5C1_Stop74_1",
+  "type": "ArrivalEstimation",
+  "hasStop": [
+    "urn:ngsi-ld:GtfsStop:tus:74"
+  ],
+  "hasTrip": "urn:ngsi-ld:GtfsTrip:tus:5C1",
+  "headSign": "Plaza Italia",
+  "remainingDistance": 1200,
+  "remainingTime": "PT8M5S",
+  "@context": [
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"
+  ]
 }
