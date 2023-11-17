@@ -1,2 +1,2 @@
 "id_", "type_", "name__type_", "name__value_", "exceptionType__type_", "exceptionType__value_", "hasService__type_", "hasService__value_", "appliesOn__type_", "appliesOn__value_"
-"urn:ngsi-ld:CalendarDateRule:Malaga:Rule67", "GtfsCalendarDateRule", "Text", "Rule Fair Area", "Text", "1", "URL", "urn:ngsi-ld:GtfsService:Malaga:FairArea_1", "Date", "2018-03-19"
+"urn:ngsi-ld:CalendarDateRule:Malaga:Rule67", "GtfsCalendarDateRule", "Text", "Rule Fair Area", "Text", "1", "Text", "urn:ngsi-ld:GtfsService:Malaga:FairArea_1", "DateTime", "2018-03-19"
