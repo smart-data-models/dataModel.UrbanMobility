@@ -1,2 +1,2 @@
-"id_", "type_", "hasStop_", "hasTrip_", "headSign_", "remainingDistance_", "remainingTime_", "@context__0_", "@context__1_"
+"id_", "type_", "hasStop__0_", "hasTrip_", "headSign_", "remainingDistance_", "remainingTime_", "@context__0_", "@context__1_"
 "urn:ngsi-ld:ArrivalEstimation:L5C1_Stop74_1", "ArrivalEstimation", "urn:ngsi-ld:GtfsStop:tus:74", "urn:ngsi-ld:GtfsTrip:tus:5C1", "Plaza Italia", "1200", "PT8M5S", "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld", "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"
