@@ -2,8 +2,8 @@
   "id": "urn:ngsi-ld:GtfsTrip:Spain:Malaga:1",
   "type": "GtfsTrip",
   "direction": {
-    "type": "Boolean",
-    "value": false
+    "type": "Number",
+    "value": 0
   },
   "headSign": {
     "type": "Text",
