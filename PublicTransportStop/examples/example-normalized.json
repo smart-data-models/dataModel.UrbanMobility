@@ -44,7 +44,7 @@
     "type": "Text",
     "value": "La Pereda 14"
   },
-  "wheelchairAccessible": {
+  "wheelChairAccessible": {
     "type": "Boolean",
     "value": false
   },
