@@ -21,7 +21,9 @@
     },
     "operatedBy": {
         "type": "Relationship",
-        "object": "urn:ngsi-ld:GtfsAgency:Malaga_EMT"
+        "object": [
+            "urn:ngsi-ld:GtfsAgency:Malaga_EMT"
+        ]
     },
     "@context": [
         "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
