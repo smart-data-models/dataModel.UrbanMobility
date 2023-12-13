@@ -4,7 +4,9 @@
     "type": "ArrivalEstimation",
     "hasStop": {
         "type": "Relationship",
-        "object": "urn:ngsi-ld:GtfsStop:tus:74"
+        "object": [
+            "urn:ngsi-ld:GtfsStop:tus:74"
+        ]
     },
     "hasTrip": {
         "type": "Relationship",
