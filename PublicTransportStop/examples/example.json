@@ -20,7 +20,7 @@
   "stopCode": "la_pereda_463",
   "shortStopCode": "463",
   "name": "La Pereda 14",
-  "wheelchairAccessible": 0,
+  "wheelChairAccessible": 0,
   "transportationType": [
     3
   ],
