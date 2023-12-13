@@ -99,7 +99,7 @@
       3
     ]
   },
-  "wheelchairAccessible": {
+  "wheelChairAccessible": {
     "type": "Property",
     "value": 0
   },
