@@ -408,7 +408,7 @@ TransitManagement:
       x-ngsi:
         type: Property
     last_stop_arrival_time:
-      description: "Specifies the arrival time at the previous stop for a specific trip on a route. Times must be eight digits in HH:MM:SS format (H:MM:SS is also accepted, if the hour begins with 0). \nNote: Trips that span multiple dates will have stop times greater than 24:00:00. For example, if a trip begins at 10:30:00 p.m. and ends at 2:15:00 a.m. on the following day, the stop times would be 22:30:00 and 26:15:00. Entering those stop times as 22:30:00 and 02:15:00 would not produce the desired results. This is SameAs: absolute 'time'(StopTimeEvent) in the 'arrival' field of the stop_time_update (StopTimeUpdate) message of the GTFS Realtime message-TripUpdate (https://developers.google.com/transit/gtfs-realtime/reference#message-tripupdate)"
+      description: "Specifies the arrival time at the previous stop for a specific trip on a route. Times must be eight digits in HH:MM:SS format (H:MM:SS is also accepted, if the hour begins with 0). Note: Trips that span multiple dates will have stop times greater than 24:00:00. For example, if a trip begins at 10:30:00 p.m. and ends at 2:15:00 a.m. on the following day, the stop times would be 22:30:00 and 26:15:00. Entering those stop times as 22:30:00 and 02:15:00 would not produce the desired results. This is SameAs: absolute 'time'(StopTimeEvent) in the 'arrival' field of the stop_time_update (StopTimeUpdate) message of the GTFS Realtime message-TripUpdate (https://developers.google.com/transit/gtfs-realtime/reference#message-tripupdate)"
       format: time
       type: string
       x-ngsi:
@@ -683,7 +683,7 @@ TransitManagement:
       x-ngsi:
         type: Property
     routeInfo:
-      description: "Updated sorted stop sequence for the trip made by the vehicle corresponding to this observation, not to be considered if schedule_realtionship is CANCELED. SameAs: 'stop_time_update' field from GTFS Realtime message-TripUpdate (https://developers.google.com/transit/gtfs-realtime/reference#message-tripupdate)"
+      description: "Updated sorted stop sequence for the trip made by the vehicle corresponding to this observation, not to be considered if schedule_relationship is 'CANCELED'. SameAs: 'stop_time_update' field from GTFS Realtime message-TripUpdate (https://developers.google.com/transit/gtfs-realtime/reference#message-tripupdate)"
       properties:
         route_color:
           description: "If assigned, this field defines a color that corresponds to a route. The color must be provided as a six-character hexadecimal number, for example, 00FFFF. If no color is specified, the default route color is white (FFFFFF). SameAs: 'route_color' field from GTFS Static Field definitions-routes.txt (https://developers.google.com/transit/gtfs/reference#routestxt)"
@@ -729,7 +729,7 @@ TransitManagement:
       x-ngsi:
         type: Property
     routeStopSequence:
-      description: Gives the stop IDs/stop codes or station IDs/station codes in the right sequence for the route or line corresponding to this observation
+      description: Gives the stop ids/stop codes or station ids/station codes in the right sequence for the route or line or trip corresponding to this observation
       items:
         type: string
       type: array
@@ -811,7 +811,7 @@ TransitManagement:
           x-ngsi:
             type: Property
         shape_pt_sequence:
-          description: 'Sequence in which the shape points connect to form the shape. Values must increase along the trip but do not need to be consecutive. Example: If the shape A_shp has three points in its definition, the shapes.txt file might contain these records to define the shape: shape_id,shape_pt_lat,shape_pt_lon,shape_pt_sequence A_shp,37.61956,-122.48161,0 A_shp,37.64430,-122.41070,6 A_shp,37.65863,-122.30839,11'
+          description: 'Sequence in which the shape points connect to form the shape. Values must increase along the trip but do not need to be consecutive. Example: If the shape ''A_shp'' has three points in its definition, the shapes.txt file might contain these records to define the shape: shape_id,shape_pt_lat,shape_pt_lon,shape_pt_sequence A_shp,37.61956,-122.48161,0 A_shp,37.64430,-122.41070,6 A_shp,37.65863,-122.30839,11'
           type: number
           x-ngsi:
             type: Property
@@ -825,6 +825,11 @@ TransitManagement:
         type: Property
     speed:
       description: "Gives the Speed  of the vehicle. SameAs 'speed' field from GTFS Realtime message-Position(https://developers.google.com/transit/gtfs-realtime/reference#message-position)"
+      type: number
+      x-ngsi:
+        type: Property
+    standingCapacity:
+      description: Describes the passenger standing capacity of the vehicle corresponding to this observation.
       type: number
       x-ngsi:
         type: Property
@@ -876,7 +881,7 @@ TransitManagement:
       x-ngsi:
         type: Property
     stopTimeUpdateInfo:
-      description: "Updated sorted stop sequence for the trip made by the vehicle corresponding to this observation, not to be considered if schedule_realtionship is CANCELED. SameAs: 'stop_time_update' field from GTFS Realtime message-TripUpdate (https://developers.google.com/transit/gtfs-realtime/reference#message-tripupdate)"
+      description: "Updated sorted stop sequence for the trip made by the vehicle corresponding to this observation, not to be considered if schedule_relationship is 'CANCELED'. SameAs: 'stop_time_update' field from GTFS Realtime message-TripUpdate (https://developers.google.com/transit/gtfs-realtime/reference#message-tripupdate)"
       properties:
         stopScheduleRelationship:
           description: "Describes the relationship between the static schedule and the stop. SameAs: 'schedule_relationship' field from GTFS Realtime message-StopTimeUpdate ENUM[SCHEDULED, SKIPPED, NO_DATA] (https://developers.google.com/transit/gtfs-realtime/reference#message-stoptimeupdate)"
@@ -1064,7 +1069,7 @@ TransitManagement:
       x-ngsi:
         type: Property
     travelTime:
-      description: 'The time taken to travel between the origin bus stop and the destination bus stop corresponding to this observation in HH:MM:SS format(HH:MM:SS is also accepted, if the hour begins with 0)'
+      description: 'The time taken to travel between the origin location and the destination location corresponding to this observation in HH:MM:SS format(HH:MM:SS is also accepted, if the hour begins with 0)'
       format: time
       type: string
       x-ngsi:
@@ -1391,6 +1396,63 @@ TransitManagement:
     vehiclePositionInfo:
       description: "Describes the realtime position of the vehicle corresponding to this observation. SameAs:'vehicle' field from GTFS Realtime message-FeedEntity(https://developers.google.com/transit/gtfs-realtime/reference#message-feedentity)"
       properties:
+        actual_trip_start_time:
+          description: "This field specifies the time at which service actually began. This is SameAs: absolute 'time'(StopTimeEvent) in the 'arrival' field of the stop_time_update (StopTimeUpdate) message of the GTFS Realtime message-TripUpdate (https://developers.google.com/transit/gtfs-realtime/reference#message-tripupdate)."
+          format: date-time
+          type: string
+          x-ngsi:
+            type: Property
+        agencyInfo:
+          description: Agency information corresponding to this observation.
+          properties:
+            agency_email:
+              description: "Email address actively monitored by the agency’s customer service department. SameAs: 'agency_email' field from GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)."
+              type: string
+              x-ngsi:
+                type: Property
+            agency_fare_url:
+              description: "URL of a web page that contains the details of the fares and also could allow to purchase tickets for that agency online. SameAs: 'agency_fare_url' field from GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)."
+              type: string
+              x-ngsi:
+                type: Property
+            agency_id:
+              description: "ID that uniquely identifies a transit agency. A transit feed may represent data from more than one agency. The agency_id is dataset unique. This field is optional for transit feeds that only contain data for a single agency. SameAs: 'agency_id' field from GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)."
+              type: string
+              x-ngsi:
+                type: Property
+            agency_lang:
+              description: "Contains a two-letter ISO 639-1 code for the primary language used by this transit agency. The language code is case-insensitive (both en and EN are accepted). SameAs: 'agency_lang' field from GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)."
+              type: string
+              x-ngsi:
+                type: Property
+            agency_name:
+              description: "The agency_name field contains the full name of the transit agency. SameAs: 'agency_name' field from GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)."
+              type: string
+              x-ngsi:
+                type: Property
+            agency_phone:
+              description: "A voice telephone number for the specified agency.SameAs: 'agency_phone' field from GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)."
+              type: string
+              x-ngsi:
+                type: Property
+            agency_timezone:
+              description: "Timezone field contains the timezone where the transit agency is located. SameAs: 'agency_timezone' field from GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)."
+              type: string
+              x-ngsi:
+                type: Property
+            agency_url:
+              description: "The agency_url field contains the URL of the transit agency. SameAs: 'agency_url' field from GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)."
+              type: string
+              x-ngsi:
+                type: Property
+          type: object
+          x-ngsi:
+            type: Property
+        arrivalUncertainty:
+          description: "If schedule_relationship is empty or SCHEDULED, either arrival or departure must be provided within a StopTimeUpdate. SameAs: 'arrival' field from GTFS Realtime message-StopTimeUpdate (https://developers.google.com/transit/gtfs-realtime/reference#message-stoptimeupdate)."
+          type: number
+          x-ngsi:
+            type: Property
         congestion_level:
           description: 'Describes the congestion level that is affecting this vehicle. ENUM [UNKNOWN_CONGESTION_LEVEL, RUNNING_SMOOTHLY, STOP_AND_GO, CONGESTION, SEVERE_CONGESTION]'
           type: string
@@ -1406,14 +1468,212 @@ TransitManagement:
           type: number
           x-ngsi:
             type: Property
+        departureUncertainty:
+          description: "If schedule_relationship is empty or SCHEDULED, either arrival or departure must be provided within a StopTimeUpdate. SameAs: 'departure' field from GTFS Realtime message-StopTimeUpdate (https://developers.google.com/transit/gtfs-realtime/reference#message-stoptimeupdate)."
+          type: number
+          x-ngsi:
+            type: Property
+        depotID:
+          description: Describes the unique id of the bus depot corresponding to this observation.
+          type: string
+          x-ngsi:
+            type: Property
+        depotName:
+          description: Describes the depot name of the bus depot corresponding to this observation.
+          type: string
+          x-ngsi:
+            type: Property
+        entity_id:
+          description: "Feed unique ID for the entity corresponding to this observation.SameAs:'entity_id' field from GTFS Realtime message-FeedEntity(https://developers.google.com/transit/gtfs-realtime/reference#message-feedentity)"
+          type: string
+          x-ngsi:
+            type: Property
         occupancy_status:
           description: 'The degree of passenger occupancy for the vehicle. ENUM [EMPTY, MANY_SEATS_AVAILABLE, FEW_SEATS_AVAILABLE, STANDING_ROOM_ONLY, CRUSHED_STANDING_ROOM_ONLY, FULL, NOT_ACCEPTING_PASSENGERS, NO_DATA_AVAILABLE, NOT_BOARDABLE]'
           type: string
           x-ngsi:
             type: Property
+        positionInfo:
+          description: "Describes the current position of the vehicle corresponding to this observation. SameAs:'position' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)."
+          properties:
+            bearing:
+              description: 'Bearing, in degrees, clockwise from True North, i.e., 0 is North and 90 is East. This can be the compass bearing, or the direction towards the next stop or intermediate location. This should not be deduced from the sequence of previous positions, which clients can compute from previous data'
+              type: number
+              x-ngsi:
+                type: Property
+            odometer:
+              description: Odometer value.
+              type: number
+              x-ngsi:
+                type: Property
+            speed:
+              description: Momentary speed measured by the vehicle.
+              type: number
+              x-ngsi:
+                type: Property
+          type: object
+          x-ngsi:
+            type: Property
+        route_id:
+          description: "Route ID assigned to the route on which the bus/vehicle corresponding to the bus in this observation is currently plying on. SameAs: 'route_id' field from GTFS Realtime message-TripDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)."
+          type: string
+          x-ngsi:
+            type: Property
+        stopInfo:
+          description: Information about the path the vehicle corresponding to this observation travels along.
+          properties:
+            stop_code:
+              description: "This field contains short text or a number that uniquely identifies the stop for passengers. Can be same as stop_id if it is for public. SameAs: 'stop_code' field from GTFS Static Field definitions-stops.txt (https://developers.google.com/transit/gtfs/reference#stopstxt)."
+              type: string
+              x-ngsi:
+                type: Property
+            stop_desc:
+              description: "This field contains a description of a stop. SameAs: 'stop_desc' field from GTFS Static Field definitions-stops.txt (https://developers.google.com/transit/gtfs/reference#stopstxt)."
+              type: string
+              x-ngsi:
+                type: Property
+            stop_id:
+              description: Unique ID assigned to the stop corresponding to this observation.
+              type: string
+              x-ngsi:
+                type: Property
+            stop_name:
+              description: "Describes the name of a stop or station. SameAs: 'stop_name' field from GTFS Static Field definitions-stops.txt (https://developers.google.com/transit/gtfs/reference#stopstxt)."
+              type: string
+              x-ngsi:
+                type: Property
+            stop_url:
+              description: "This field contains the URL of a web page about a particular stop and is different from the agency_url and the route_url fields. SameAs: 'stop_url' field from GTFS Static Field definitions-stops.txt (https://developers.google.com/transit/gtfs/reference#stopstxt)."
+              type: string
+              x-ngsi:
+                type: Property
+          type: object
+          x-ngsi:
+            type: Property
+        stopTimesInfo:
+          description: A descriptor of realtime update on the schedule of a vehicle along a trip.
+          properties:
+            arrival_time:
+              description: "Specifies the arrival time at a specific stop for a specific trip on a route. Times must be eight digits in HH:MM:SS format (HH:MM:SS is also accepted, if the hour begins with 0). Note: Trips that span multiple dates will have stop times greater than 24:00:00. For example, if a trip begins at 10:30:00 p.m. and ends at 2:15:00 a.m. on the following day, the stop times would be 22:30:00 and 26:15:00. Entering those stop times as 22:30:00 and 02:15:00 would not produce the desired results. SameAs: 'arrival_time' field from GTFS Static Field definitions-stop_times.txt (https://developers.google.com/transit/gtfs/reference#stop_timestxt)."
+              format: time
+              type: string
+              x-ngsi:
+                type: Property
+            continuous_drop_off:
+              description: "Indicates whether a rider can alight from the transit vehicle at any point along the vehicle’s travel path.SameAs: 'continuous_drop_off' field from GTFS Static Field definitions-stop_times.txt (https://developers.google.com/transit/gtfs/reference#stop_timestxt)."
+              type: number
+              x-ngsi:
+                type: Property
+            continuous_pickup:
+              description: "Indicates whether a rider can board the transit vehicle at any point along the vehicle’s travel path.SameAs: 'continuous_pickup' field from GTFS Static Field definitions-stop_times.txt (https://developers.google.com/transit/gtfs/reference#stop_timestxt)."
+              type: number
+              x-ngsi:
+                type: Property
+            departure_time:
+              description: "Specifies the departure time from a specific stop for a specific trip on a route. Times must be eight digits in HH:MM:SS format (HH:MM:SS is also accepted, if the hour begins with 0). Note: Trips that span multiple dates will have stop times greater than 24:00:00. For example, if a trip begins at 10:30:00 p.m. and ends at 2:15:00 a.m. on the following day, the stop times would be 22:30:00 and 26:15:00. Entering those stop times as 22:30:00 and 02:15:00 would not produce the desired results. SameAs: 'departure_time' field from GTFS Static Field definitions-stop_times.txt (https://developers.google.com/transit/gtfs/reference#stop_timestxt)."
+              format: time
+              type: string
+              x-ngsi:
+                type: Property
+            drop_off_type:
+              description: "Indicates drop off method. SameAs: 'drop_off_type' field from GTFS Static Field definitions-stop_times.txt (https://developers.google.com/transit/gtfs/reference#stop_timestxt)."
+              type: string
+              x-ngsi:
+                type: Property
+            pickup_type:
+              description: "Indicates pickup method.SameAs: 'pickup_type' field from GTFS Static Field definitions-stop_times.txt (https://developers.google.com/transit/gtfs/reference#stop_timestxt)."
+              type: string
+              x-ngsi:
+                type: Property
+            stop_headsign:
+              description: "This field contains the text that appears on a sign that identifies the trip’s destination to passengers. SameAs: 'stop_headsign' field from GTFS Static Field definitions-stop_times.txt (https://developers.google.com/transit/gtfs/reference#stop_timestxt)."
+              type: string
+              x-ngsi:
+                type: Property
+            stop_id:
+              description: Unique ID assigned to the stop corresponding to this observation.
+              type: string
+              x-ngsi:
+                type: Property
+            stop_sequence:
+              description: 'This field identifies the order of the stops for a particular trip. The values for stop_sequence must be non-negative integers, and they must increase along the trip. For example, the first stop on the trip could have a stop_sequence of 1, the second stop on the trip could have a stop_sequence of 23, the third stop could have a stop_sequence of 40, and so on.'
+              type: number
+              x-ngsi:
+                type: Property
+            trip_id:
+              description: 'Trip ID/Trip name allotted to the bus corresponding to this observation, in consideration to the time of the day and the direction of the trip on the given routeId.'
+              type: string
+              x-ngsi:
+                type: Property
+          type: object
+          x-ngsi:
+            type: Property
         stop_id:
           description: Unique ID assigned to the stop corresponding to this observation
           type: string
+          x-ngsi:
+            type: Property
+        travelDistance:
+          description: The distance between the origin location and the destination location or the total distance travelled corresponding to this observation.
+          type: number
+          x-ngsi:
+            type: Property
+        tripInfo:
+          description: "Describes the trip the vehicle corresponding to this observation is making. SameAs:'trip' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)."
+          properties:
+            route_id:
+              description: Route ID assigned to the route on which the bus/vehicle corresponding to the bus in this observation is currently plying on.
+              type: string
+              x-ngsi:
+                type: Property
+            schedule_relationship:
+              description: "Describes if the Route/Trip has been scheduled. SameAs: 'schedule_relationship' field from GTFS Realtime message-TripDescriptor ENUM[SCHEDULED, ADDED, UNSCHEDULED, CANCELED] (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)."
+              type: string
+              x-ngsi:
+                type: Property
+            start_date:
+              description: "Describes the initial scheduled date of the trip corresponding to the vehicle this observation. An example format for this field - YYYYMMDD. SameAs: 'start_date' field from GTFS Realtime message-TripDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)."
+              type: string
+              x-ngsi:
+                type: Property
+            start_time:
+              description: "Describes the initial scheduled start time of the trip corresponding to the vehicle this observation. An example format for this field - 11:15:35 or 25:15:35. SameAs: 'start_time' field from GTFS Realtime message-TripDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)."
+              format: time
+              type: string
+              x-ngsi:
+                type: Property
+            trip_direction:
+              description: "Indicates the direction of travel of the vehicle corresponding to this observation, can be referenced from the GTFS static feed trips.txt. SameAs: 'direction_id' field from GTFS Realtime message-TripDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)."
+              type: string
+              x-ngsi:
+                type: Property
+            trip_id:
+              description: 'Trip ID/Trip name allotted to the bus corresponding to this observation, in consideration to the time of the day and the direction of the trip on the given routeId.'
+              type: string
+              x-ngsi:
+                type: Property
+          type: object
+          x-ngsi:
+            type: Property
+        vehicleInfo:
+          description: "Describes the additional information of the vehicle corresponding to this observation. SameAs:'vehicle' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)/(https://developers.google.com/transit/gtfs-realtime/reference#message-tripupdate)"
+          properties:
+            license_plate:
+              description: "Gives the License Plate number of the vehice. SameAs: 'license_plate' field from GTFS Realtime message-VehicleDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)."
+              type: string
+              x-ngsi:
+                type: Property
+            vehicleID:
+              description: "Unique ID assigned to the vehicle corresponding to this observation, used in internal system identification. SameAs: 'id' field from GTFS Realtime message-VehicleDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)."
+              type: string
+              x-ngsi:
+                type: Property
+            vehicle_label:
+              description: "User visible label, i.e., something that must be shown to the passenger to help identify the correct vehicle. SameAs: 'label' field from GTFS Realtime message-VehicleDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)."
+              type: string
+              x-ngsi:
+                type: Property
+          type: object
           x-ngsi:
             type: Property
       type: object
@@ -1607,8 +1867,8 @@ TransitManagement:
     - type
   type: object
   x-derived-from: ""
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program'
   x-license-url: https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/TransitManagement/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.UrbanMobility/TransitManagement/schema.json
   x-model-tags: IUDX
-  x-version: 0.0.4
+  x-version: 0.1.0
