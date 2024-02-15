@@ -175,6 +175,7 @@
         "shortStopCode": "https://smartdatamodels.org/dataModel.UrbanMobility/shortStopCode",
         "source": "https://smartdatamodels.org/source",
         "speed": "https://smartdatamodels.org/dataModel.UrbanMobility/speed",
+        "standingCapacity": "https://smartdatamodels.org/dataModel.UrbanMobility/standingCapacity",
         "standing_capacity": "https://smartdatamodels.org/dataModel.UrbanMobility/standing_capacity",
         "startDate": "https://smartdatamodels.org/startDate",
         "startTime": "https://smartdatamodels.org/dataModel.UrbanMobility/startTime",
