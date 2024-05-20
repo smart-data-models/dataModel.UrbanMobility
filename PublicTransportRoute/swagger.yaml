@@ -9,9 +9,9 @@ components:
       $ref: "https://smart-data-models.github.io/dataModel.UrbanMobility/PublicTransportRoute/model.yaml#/PublicTransportRoute"
 info:
   description:  |
-    A generic public transport route
+    A generic public transport route data model
   title: PublicTransportRoute
-  version: "0.0.1"
+  version: "0.0.2"
 openapi: "3.0.0"
 
 paths: 
