@@ -22,13 +22,14 @@
 	- `postOfficeBoxNumber[string]`: The post office box number for PO box addresses. For example, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
 	- `postalCode[string]`: The postal code. For example, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: The street address  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+	- `streetNr[string]`: Number identifying a specific property on a public street    
 - `alternateName[string]`: An alternative name for this item  - `areaServed[string]`: The geographic area where a service or offered item is provided  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity  - `dateCreated[date-time]`: Entity creation timestamp. This will usually be allocated by the storage platform  - `dateModified[date-time]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform  - `description[string]`: A description of this item  - `id[*]`: Unique identifier of the entity  - `location[*]`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name[string]`: The name of this item  - `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `routeCode[string]`: ID or code of the route (e.g. HT5200104000)  . Model: [ https://schema.org/Text]( https://schema.org/Text)- `routeColor[string]`: Color assigned to route in text  . Model: [ https://schema.org/color]( https://schema.org/color)- `routeSegments[array]`: Segments of this route defined by their name and stops  - `routeTextColor[string]`: Color assigned to route in hexadecimal  . Model: [ https://schema.org/color]( https://schema.org/color)- `schedule[array]`: Working hours of this route  . Model: [https://schema.org/OpeningHoursSpecification](https://schema.org/OpeningHoursSpecification)- `seeAlso[*]`: list of uri pointing to additional resources about the item  - `shortRouteCode[string]`: Shorter form of the ID/code of the route (e.g. 5200104000)  . Model: [https://schema.org/Text](https://schema.org/Text)- `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object  - `transportationType[number]`: Types of public transport using this stop as defined in (https://developers.google.com/transit/gtfs/reference/#routestxt). Enum:'0, 1, 2, 3, 4, 5, 6, 7'  . Model: [https://schema.org/Number](https://schema.org/Number)- `type[string]`: NGSI Entity type. It has to be PublicTransportRoute  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Required properties  
 - `id`  - `transportationType`  - `type`  <!-- /35-RequiredProperties -->  
-<!-- 40-RequiredProperties -->  
+<!-- 40-NotesYaml -->  
 Generic model for public transport route. It adopts some GTFS definitions, but it does not need to be linked to additional GTFS data. A route is a journey, offered by one public transport service, that goes through a set of stops.  
-<!-- /40-RequiredProperties -->  
+<!-- /40-NotesYaml -->  
 <!-- 50-DataModelHeader -->  
 ## Data Model description of properties  
 Sorted alphabetically (click for details)  
@@ -37,7 +38,7 @@
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 PublicTransportRoute:    
-  description: A generic public transport route    
+  description: A generic public transport route data model    
   properties:    
     address:    
       description: The mailing address    
@@ -352,12 +353,18 @@ PublicTransportRoute:
       items:    
         properties:    
           refPublicTransportStops:    
+            description: relation to public transport stops    
             items:    
               format: uri    
               type: string    
             type: array    
+            x-ngsi:    
+              type: Relationship    
           segmentName:    
+            description: Name of the segment in route    
             type: string    
+            x-ngsi:    
+              type: Property    
         type: object    
       type: array    
       x-ngsi:    
@@ -373,9 +380,13 @@ PublicTransportRoute:
       items:    
         properties:    
           closes:    
+            description: Time for the end of the route    
             pattern: "[0-9]{2}:[0-9]{2}"    
             type: string    
+            x-ngsi:    
+              type: Property    
           dayOfWeek:    
+            description: Day of the week for the route schedule    
             enum:    
               - Friday    
               - Monday    
@@ -386,9 +397,14 @@ PublicTransportRoute:
               - Tuesday    
               - Wednesday    
             type: string    
+            x-ngsi:    
+              type: Property    
           opens:    
+            description: Time for the start of the route    
             pattern: "[0-9]{2}:[0-9]{2}"    
             type: string    
+            x-ngsi:    
+              type: Property    
         type: object    
       minItems: 1    
       type: array    
@@ -446,11 +462,11 @@ PublicTransportRoute:
     - transportationType    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2024 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.UrbanMobility/blob/master/PublicTransportRoute/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.UrbanMobility/PublicTransportRoute/schema.json    
-  x-model-tags: ""    
-  x-version: 0.0.1    
+  x-model-tags: SynchroniCity    
+  x-version: 0.0.2    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
@@ -469,20 +485,20 @@ PublicTransportRoute:
   "dataProvider": "http://www.smartsantander.eu/",  
   "routeCode": "5200103000",  
   "shortRouteCode": "N3",  
-  "name": "PEÑACASTILLO-PLAZA DE ITALIA",  
+  "name": "PE ACASTILLO-PLAZA DE ITALIA",  
   "transportationType": 3,  
   "routeColor": "#ff0000",  
   "routeTextColor": "RED",  
   "routeSegments": [  
     {  
-      "segmentName": "PEÑACASTILLO-PLAZA DE ITALIA:1",  
+      "segmentName": "PE ACASTILLO-PLAZA DE ITALIA:1",  
       "refPublicTransportStops": [  
         "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:311",  
         "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:129"  
       ]  
     },  
     {  
-      "segmentName": "PEÑACASTILLO-PLAZA DE ITALIA:2",  
+      "segmentName": "PE ACASTILLO-PLAZA DE ITALIA:2",  
       "refPublicTransportStops": [  
         "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:130",  
         "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:131"  
@@ -549,7 +565,7 @@ PublicTransportRoute:
   },  
   "name": {  
     "type": "Text",  
-    "value": "PEÑACASTILLO-PLAZA DE ITALIA"  
+    "value": "PE\u00d1ACASTILLO-PLAZA DE ITALIA"  
   },  
   "transportationType": {  
     "type": "Number",  
@@ -567,14 +583,14 @@ PublicTransportRoute:
     "type": "StructuredValue",  
     "value": [  
       {  
-        "segmentName": "PEÑACASTILLO-PLAZA DE ITALIA:1",  
+        "segmentName": "PE\u00d1ACASTILLO-PLAZA DE ITALIA:1",  
         "refPublicTransportStops": [  
           "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:311",  
           "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:129"  
         ]  
       },  
       {  
-        "segmentName": "PEÑACASTILLO-PLAZA DE ITALIA:2",  
+        "segmentName": "PE\u00d1ACASTILLO-PLAZA DE ITALIA:2",  
         "refPublicTransportStops": [  
           "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:130",  
           "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:131"  
@@ -609,49 +625,46 @@ PublicTransportRoute:
   "id": "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N3",  
   "type": "PublicTransportRoute",  
   "dataProvider": "http://www.smartsantander.eu/",  
-  "name": {  
-    "PE\u00d1ACASTILLO-PLAZA DE ITALIA",  
-    "routeCode": "5200103000",  
-    "routeColor": "#ff0000",  
-    "routeSegments": [  
-      {  
-        "segmentName": "PE\u00d1ACASTILLO-PLAZA DE ITALIA:1",  
-        "refPublicTransportStops": [  
-          "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:311",  
-          "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:129"  
-        ]  
-      },  
-      {  
-        "segmentName": "PE\u00d1ACASTILLO-PLAZA DE ITALIA:2",  
-        "refPublicTransportStops": [  
-          "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:130",  
-          "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:131"  
-        ]  
-      }  
-    ],  
-    "routeTextColor": "RED",  
-    "schedule": [  
-      {  
-        "validFrom": "2018-01-24",  
-        "validThrough": "2018-05-25",  
-        "opens": "09:00",  
-        "closes": "23:00"  
-      },  
-      {  
-        "dayOfWeek": "Sunday",  
-        "opens": "09:00",  
-        "closes": "14:00"  
-      }  
-    ],  
-    "shortRouteCode": "N3",  
-    "source": "https://api.smartsantander.eu/",  
-    "transportationType": 3,  
-    "@context": [  
-      "https://smart-data-models.github.io/data-models/context.jsonld",  
-      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
-      "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
-    ]  
-  }  
+  "name": "PE CASTILLO-PLAZA DE ITALIA",  
+  "routeCode": "5200103000",  
+  "routeColor": "#ff0000",  
+  "routeSegments": [  
+    {  
+      "segmentName": "PE ACASTILLO-PLAZA DE ITALIA:1",  
+      "refPublicTransportStops": [  
+        "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:311",  
+        "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:129"  
+      ]  
+    },  
+    {  
+      "segmentName": "PE ACASTILLO-PLAZA DE ITALIA:2",  
+      "refPublicTransportStops": [  
+        "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:130",  
+        "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:131"  
+      ]  
+    }  
+  ],  
+  "routeTextColor": "RED",  
+  "schedule": [  
+    {  
+      "validFrom": "2018-01-24",  
+      "validThrough": "2018-05-25",  
+      "opens": "09:00",  
+      "closes": "23:00"  
+    },  
+    {  
+      "dayOfWeek": "Sunday",  
+      "opens": "09:00",  
+      "closes": "14:00"  
+    }  
+  ],  
+  "shortRouteCode": "N3",  
+  "source": "https://api.smartsantander.eu/",  
+  "transportationType": 3,  
+  "@context": [  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
+  ]  
+}  
 ```  
 </details>  
 #### PublicTransportRoute NGSI-LD normalized Example    
@@ -665,7 +678,7 @@ PublicTransportRoute:
     "entityVersion": 2.0,  
     "name": {  
         "type": "Property",  
-        "value": "PE\u00d1ACASTILLO-PLAZA DE ITALIA "  
+        "value": "PE ACASTILLO-PLAZA DE ITALIA "  
     },  
     "routeCode": {  
         "type": "Property",  
@@ -679,14 +692,14 @@ PublicTransportRoute:
         "type": "Property",  
         "value": [  
             {  
-                "segmentName": "PE\u00d1ACASTILLO-PLAZA DE ITALIA:1",  
+                "segmentName": "PE ACASTILLO-PLAZA DE ITALIA:1",  
                 "refPublicTransportStops": [  
                     "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:311",  
                     "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:129"  
                 ]  
             },  
             {  
-                "segmentName": "PE\u00d1ACASTILLO-PLAZA DE ITALIA:2",  
+                "segmentName": "PE ACASTILLO-PLAZA DE ITALIA:2",  
                 "refPublicTransportStops": [  
                     "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:130",  
                     "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:131"  
@@ -724,8 +737,6 @@ PublicTransportRoute:
         "value": 3  
     },  
     "@context": [  
-        "https://smart-data-models.github.io/data-models/context.jsonld",  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
         "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"  
     ]  
 }  
