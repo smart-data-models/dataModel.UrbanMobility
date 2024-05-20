@@ -18,10 +18,6 @@
     "type": "Property",
     "value": "2018-09-25T08:32:26.00Z"
   },
-  "entityVersion": {
-    "type": "Property",
-    "value": 2.0
-  },
   "location": {
     "type": "GeoProperty",
     "value": {
