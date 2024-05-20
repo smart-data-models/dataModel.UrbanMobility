@@ -45,8 +45,8 @@
     "value": "La Pereda 14"
   },
   "wheelChairAccessible": {
-    "type": "Boolean",
-    "value": false
+    "type": "Text",
+    "value": "0"
   },
   "transportationType": {
     "type": "StructuredValue",
@@ -73,28 +73,28 @@
     "type": "StructuredValue",
     "value": [
       {
-        "opens": "00:01",
-        "closes": "23:59",
+        "opens": "00:01:00",
+        "closes": "23:59:00",
         "dayOfWeek": "Friday"
       },
       {
-        "opens": "00:01",
-        "closes": "23:59",
+        "opens": "00:01:00",
+        "closes": "23:59:00",
         "dayOfWeek": "Monday"
       },
       {
-        "opens": "00:01",
-        "closes": "23:59",
+        "opens": "00:01:00",
+        "closes": "23:59:00",
         "dayOfWeek": "Tuesday"
       },
       {
-        "opens": "00:01",
-        "closes": "23:59",
+        "opens": "00:01:00",
+        "closes": "23:59:00",
         "dayOfWeek": "Thursday"
       },
       {
-        "opens": "00:01",
-        "closes": "23:59",
+        "opens": "00:01:00",
+        "closes": "23:59:00",
         "dayOfWeek": "Wednesday"
       }
     ]

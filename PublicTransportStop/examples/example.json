@@ -20,7 +20,7 @@
   "stopCode": "la_pereda_463",
   "shortStopCode": "463",
   "name": "La Pereda 14",
-  "wheelChairAccessible": 0,
+  "wheelChairAccessible": "0",
   "transportationType": [
     3
   ],
@@ -32,28 +32,28 @@
   "refPeopleCountDevice": "urn:ngsi-ld:PorpleCountDecice:santander:463",
   "openingHoursSpecification": [
     {
-      "opens": "00:01",
-      "closes": "23:59",
+      "opens": "00:01:00",
+      "closes": "23:59:00",
       "dayOfWeek": "Monday"
     },
     {
-      "opens": "00:01",
-      "closes": "23:59",
+      "opens": "00:01:00",
+      "closes": "23:59:00",
       "dayOfWeek": "Tuesday"
     },
     {
-      "opens": "00:01",
-      "closes": "23:59",
+      "opens": "00:01:00",
+      "closes": "23:59:00",
       "dayOfWeek": "Wednesday"
     },
     {
-      "opens": "00:01",
-      "closes": "23:59",
+      "opens": "00:01:00",
+      "closes": "23:59:00",
       "dayOfWeek": "Thursday"
     },
     {
-      "opens": "00:01",
-      "closes": "23:59",
+      "opens": "00:01:00",
+      "closes": "23:59:00",
       "dayOfWeek": "Friday"
     }
   ]
