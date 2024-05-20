@@ -5,20 +5,20 @@
   "dataProvider": "http://www.smartsantander.eu/",
   "routeCode": "5200103000",
   "shortRouteCode": "N3",
-  "name": "PE\u00d1ACASTILLO-PLAZA DE ITALIA",
+  "name": "PE ACASTILLO-PLAZA DE ITALIA",
   "transportationType": 3,
   "routeColor": "#ff0000",
   "routeTextColor": "RED",
   "routeSegments": [
     {
-      "segmentName": "PE\u00d1ACASTILLO-PLAZA DE ITALIA:1",
+      "segmentName": "PE ACASTILLO-PLAZA DE ITALIA:1",
       "refPublicTransportStops": [
         "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:311",
         "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:129"
       ]
     },
     {
-      "segmentName": "PE\u00d1ACASTILLO-PLAZA DE ITALIA:2",
+      "segmentName": "PE ACASTILLO-PLAZA DE ITALIA:2",
       "refPublicTransportStops": [
         "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:130",
         "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:131"

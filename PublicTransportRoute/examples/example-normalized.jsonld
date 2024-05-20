@@ -5,7 +5,7 @@
     "entityVersion": 2.0,
     "name": {
         "type": "Property",
-        "value": "PE\u00d1ACASTILLO-PLAZA DE ITALIA "
+        "value": "PE ACASTILLO-PLAZA DE ITALIA "
     },
     "routeCode": {
         "type": "Property",
@@ -19,14 +19,14 @@
         "type": "Property",
         "value": [
             {
-                "segmentName": "PE\u00d1ACASTILLO-PLAZA DE ITALIA:1",
+                "segmentName": "PE ACASTILLO-PLAZA DE ITALIA:1",
                 "refPublicTransportStops": [
                     "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:311",
                     "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:129"
                 ]
             },
             {
-                "segmentName": "PE\u00d1ACASTILLO-PLAZA DE ITALIA:2",
+                "segmentName": "PE ACASTILLO-PLAZA DE ITALIA:2",
                 "refPublicTransportStops": [
                     "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:130",
                     "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:131"
@@ -64,8 +64,6 @@
         "value": 3
     },
     "@context": [
-        "https://smart-data-models.github.io/data-models/context.jsonld",
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
         "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"
     ]
 }

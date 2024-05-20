@@ -2,19 +2,19 @@
   "id": "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N3",
   "type": "PublicTransportRoute",
   "dataProvider": "http://www.smartsantander.eu/",
-  "name": "PE\u00d1ACASTILLO-PLAZA DE ITALIA",
+  "name": "PE CASTILLO-PLAZA DE ITALIA",
   "routeCode": "5200103000",
   "routeColor": "#ff0000",
   "routeSegments": [
     {
-      "segmentName": "PE\u00d1ACASTILLO-PLAZA DE ITALIA:1",
+      "segmentName": "PE ACASTILLO-PLAZA DE ITALIA:1",
       "refPublicTransportStops": [
         "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:311",
         "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:129"
       ]
     },
     {
-      "segmentName": "PE\u00d1ACASTILLO-PLAZA DE ITALIA:2",
+      "segmentName": "PE ACASTILLO-PLAZA DE ITALIA:2",
       "refPublicTransportStops": [
         "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:130",
         "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:131"
@@ -39,8 +39,6 @@
   "source": "https://api.smartsantander.eu/",
   "transportationType": 3,
   "@context": [
-    "https://smart-data-models.github.io/data-models/context.jsonld",
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
     "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"
   ]
 }
