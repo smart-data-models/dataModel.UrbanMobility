@@ -62,8 +62,8 @@
     ]
   },
   "peopleCount": {
-    "type": "Boolean",
-    "value": false
+    "type": "Number",
+    "value": 0
   },
   "refPeopleCountDevice": {
     "type": "Text",
