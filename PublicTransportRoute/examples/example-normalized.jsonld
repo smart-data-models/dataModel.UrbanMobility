@@ -64,7 +64,10 @@
     "type": "Property",
     "value": "N3"
   },
-  "source": "https://api.smartsantander.eu/",
+  "source": {
+    "type": "Property",
+    "value": "https://api.smartsantander.eu/"
+  },
   "transportationType": {
     "type": "Property",
     "value": 3
