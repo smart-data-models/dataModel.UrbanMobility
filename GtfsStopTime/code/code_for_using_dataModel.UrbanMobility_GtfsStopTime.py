@@ -24,31 +24,36 @@
 #         curl -X GET http://localhost:1026/ngsi-ld/v1/entities?local=true&limit=1000
 #         
 #         # now the python code you can use to insert some value in the context broker according to the data model
+#         # Version Warning! 
+#         # This code is designed to work with the version 0.8 of pysmartdatamodels or later
+#         # to work with earlier version you need to replace the import instruction for
+#         # from pysmartdatamodels import pysmartdatamodels as sdm
 #         
-from pysmartdatamodels import pysmartdatamodels as sdm
+#         
+import pysmartdatamodels as sdm
 import subprocess
 serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost. Edit to match your configuration
 dataModel = "GtfsStopTime"
 subject = "dataModel.UrbanMobility"
-arrivalTime = "{'type': 'Property', 'value': '07:04:24'}"
+arrivalTime = "07:04:24"
 attribute = "arrivalTime"
 value = arrivalTime
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-departureTime = "{'type': 'Property', 'value': '07:04:24'}"
+departureTime = "07:04:24"
 attribute = "departureTime"
 value = departureTime
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-distanceTravelled = {'type': 'Property', 'value': 759}
+distanceTravelled = 759
 attribute = "distanceTravelled"
 value = distanceTravelled
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-hasStop = "{'type': 'Relationship', 'object': 'urn:ngsi-ld:GtfsStop:Madrid:EMT:737'}"
+hasStop = "urn:ngsi-ld:GtfsStop:Madrid:EMT:737"
 attribute = "hasStop"
 value = hasStop
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
