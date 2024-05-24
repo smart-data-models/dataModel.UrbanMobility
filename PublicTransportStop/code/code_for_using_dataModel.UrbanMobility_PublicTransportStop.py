@@ -24,33 +24,38 @@
 #         curl -X GET http://localhost:1026/ngsi-ld/v1/entities?local=true&limit=1000
 #         
 #         # now the python code you can use to insert some value in the context broker according to the data model
+#         # Version Warning! 
+#         # This code is designed to work with the version 0.8 of pysmartdatamodels or later
+#         # to work with earlier version you need to replace the import instruction for
+#         # from pysmartdatamodels import pysmartdatamodels as sdm
 #         
-from pysmartdatamodels import pysmartdatamodels as sdm
+#         
+import pysmartdatamodels as sdm
 import subprocess
 serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost. Edit to match your configuration
 dataModel = "PublicTransportStop"
 subject = "dataModel.UrbanMobility"
-openingHoursSpecification = {'type': 'Property', 'value': [{'opens': '00:01', 'closes': '23:59', 'dayOfWeek': 'Monday'}, {'opens': '00:01', 'closes': '23:59', 'dayOfWeek': 'Tuesday'}, {'opens': '00:01', 'closes': '23:59', 'dayOfWeek': 'Wednesday'}, {'opens': '00:01', 'closes': '23:59', 'dayOfWeek': 'Thursday'}, {'opens': '00:01', 'closes': '23:59', 'dayOfWeek': 'Friday'}]}
-attribute = "openingHoursSpecification"
-value = openingHoursSpecification
+stopCode = "la_pereda_463"
+attribute = "stopCode"
+value = stopCode
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-peopleCount = {'type': 'Property', 'value': 0}
-attribute = "peopleCount"
-value = peopleCount
+shortStopCode = "463"
+attribute = "shortStopCode"
+value = shortStopCode
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-refPeopleCountDevice = "{'type': 'Relationship', 'object': 'urn:ngsi-ld:PorpleCountDecice:santander:463'}"
-attribute = "refPeopleCountDevice"
-value = refPeopleCountDevice
+wheelChairAccessible = "0"
+attribute = "wheelChairAccessible"
+value = wheelChairAccessible
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-refPublicTransportRoute = {'type': 'Property', 'value': ['urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N3', 'urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N4']}
-attribute = "refPublicTransportRoute"
-value = refPublicTransportRoute
+transportationType = [3]
+attribute = "transportationType"
+value = transportationType
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
