@@ -24,31 +24,36 @@
 #         curl -X GET http://localhost:1026/ngsi-ld/v1/entities?local=true&limit=1000
 #         
 #         # now the python code you can use to insert some value in the context broker according to the data model
+#         # Version Warning! 
+#         # This code is designed to work with the version 0.8 of pysmartdatamodels or later
+#         # to work with earlier version you need to replace the import instruction for
+#         # from pysmartdatamodels import pysmartdatamodels as sdm
 #         
-from pysmartdatamodels import pysmartdatamodels as sdm
+#         
+import pysmartdatamodels as sdm
 import subprocess
 serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost. Edit to match your configuration
 dataModel = "GtfsAgency"
 subject = "dataModel.UrbanMobility"
-agencyName = "{'type': 'Property', 'value': 'Empresa Malagueña de Transportes'}"
+agencyName = "Empresa Malagueña de Transportes"
 attribute = "agencyName"
 value = agencyName
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-language = "{'type': 'Property', 'value': 'ES'}"
+language = "ES"
 attribute = "language"
 value = language
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-page = "{'type': 'Property', 'value': 'http://www.emtmalaga.es/'}"
+page = "http://www.emtmalaga.es/"
 attribute = "page"
 value = page
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-timezone = "{'type': 'Property', 'value': 'Europe/Madrid'}"
+timezone = "Europe/Madrid"
 attribute = "timezone"
 value = timezone
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
