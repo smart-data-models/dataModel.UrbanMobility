@@ -24,31 +24,36 @@
 #         curl -X GET http://localhost:1026/ngsi-ld/v1/entities?local=true&limit=1000
 #         
 #         # now the python code you can use to insert some value in the context broker according to the data model
+#         # Version Warning! 
+#         # This code is designed to work with the version 0.8 of pysmartdatamodels or later
+#         # to work with earlier version you need to replace the import instruction for
+#         # from pysmartdatamodels import pysmartdatamodels as sdm
 #         
-from pysmartdatamodels import pysmartdatamodels as sdm
+#         
+import pysmartdatamodels as sdm
 import subprocess
 serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost. Edit to match your configuration
 dataModel = "ArrivalEstimation"
 subject = "dataModel.UrbanMobility"
-hasStop = {'type': 'Relationship', 'object': ['urn:ngsi-ld:GtfsStop:tus:74']}
+hasStop = ['urn:ngsi-ld:GtfsStop:tus:74']
 attribute = "hasStop"
 value = hasStop
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-hasTrip = "{'type': 'Relationship', 'object': 'urn:ngsi-ld:GtfsTrip:tus:5C1'}"
+hasTrip = "urn:ngsi-ld:GtfsTrip:tus:5C1"
 attribute = "hasTrip"
 value = hasTrip
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-headSign = "{'type': 'Property', 'value': 'Plaza Italia'}"
+headSign = "Plaza Italia"
 attribute = "headSign"
 value = headSign
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-remainingDistance = {'type': 'Property', 'value': 1200}
+remainingDistance = 1200
 attribute = "remainingDistance"
 value = remainingDistance
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
