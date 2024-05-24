@@ -24,31 +24,36 @@
 #         curl -X GET http://localhost:1026/ngsi-ld/v1/entities?local=true&limit=1000
 #         
 #         # now the python code you can use to insert some value in the context broker according to the data model
+#         # Version Warning! 
+#         # This code is designed to work with the version 0.8 of pysmartdatamodels or later
+#         # to work with earlier version you need to replace the import instruction for
+#         # from pysmartdatamodels import pysmartdatamodels as sdm
 #         
-from pysmartdatamodels import pysmartdatamodels as sdm
+#         
+import pysmartdatamodels as sdm
 import subprocess
 serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost. Edit to match your configuration
 dataModel = "GtfsTrip"
 subject = "dataModel.UrbanMobility"
-direction = {'type': 'Property', 'value': 0}
+direction = 0
 attribute = "direction"
 value = direction
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-hasRoute = "{'type': 'Relationship', 'object': 'urn:ngsi-ld:GtfsRoute:Spain:Malaga:1'}"
+hasRoute = "urn:ngsi-ld:GtfsRoute:Spain:Malaga:1"
 attribute = "hasRoute"
 value = hasRoute
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-hasService = "{'type': 'Relationship', 'object': 'urn:ngsi-ld:GtfsService:Malaga_LAB'}"
+hasService = "urn:ngsi-ld:GtfsService:Malaga_LAB"
 attribute = "hasService"
 value = hasService
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-hasShape = "{'type': 'Relationship', 'object': 'urn:ngsi-ld:GtfsShape:Shape01'}"
+hasShape = "urn:ngsi-ld:GtfsShape:Shape01"
 attribute = "hasShape"
 value = hasShape
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
