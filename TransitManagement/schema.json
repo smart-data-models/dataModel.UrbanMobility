@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "modelTags": "IUDX",
   "$id": "https://smart-data-models.github.io/dataModel.UrbanMobility/TransitManagement/schema.json",
   "title": "Smart Data Models - TransitManagement data Model",
@@ -843,7 +843,7 @@
                 },
                 "stop_headsign": {
                   "type": "string",
-                  "description": "Property. This field contains the text that appears on a sign that identifies the trip’s destination to passengers. SameAs: 'stop_headsign' field from GTFS Static Field definitions-stop_times.txt (https://developers.google.com/transit/gtfs/reference#stop_timestxt)."
+                  "description": "Property. This field contains the text that appears on a sign that identifies the trip\u2019s destination to passengers. SameAs: 'stop_headsign' field from GTFS Static Field definitions-stop_times.txt (https://developers.google.com/transit/gtfs/reference#stop_timestxt)."
                 },
                 "pickup_type": {
                   "type": "string",
@@ -856,7 +856,7 @@
                 },
                 "continuous_drop_off": {
                   "type": "number",
-                  "description": "Property. Indicates whether a rider can alight from the transit vehicle at any point along the vehicle’s travel path.SameAs: 'continuous_drop_off' field from GTFS Static Field definitions-stop_times.txt (https://developers.google.com/transit/gtfs/reference#stop_timestxt)."
+                  "description": "Property. Indicates whether a rider can alight from the transit vehicle at any point along the vehicle\u2019s travel path.SameAs: 'continuous_drop_off' field from GTFS Static Field definitions-stop_times.txt (https://developers.google.com/transit/gtfs/reference#stop_timestxt)."
                 },
                 "stop_id": {
                   "type": "string",
@@ -872,7 +872,7 @@
                 },
                 "continuous_pickup": {
                   "type": "number",
-                  "description": "Property. Indicates whether a rider can board the transit vehicle at any point along the vehicle’s travel path.SameAs: 'continuous_pickup' field from GTFS Static Field definitions-stop_times.txt (https://developers.google.com/transit/gtfs/reference#stop_timestxt)."
+                  "description": "Property. Indicates whether a rider can board the transit vehicle at any point along the vehicle\u2019s travel path.SameAs: 'continuous_pickup' field from GTFS Static Field definitions-stop_times.txt (https://developers.google.com/transit/gtfs/reference#stop_timestxt)."
                 },
                 "departure_time": {
                   "type": "string",
@@ -907,7 +907,7 @@
                 },
                 "agency_email": {
                   "type": "string",
-                  "description": "Property. Email address actively monitored by the agency’s customer service department. SameAs: 'agency_email' field from GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)."
+                  "description": "Property. Email address actively monitored by the agency\u2019s customer service department. SameAs: 'agency_email' field from GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)."
                 },
                 "agency_timezone": {
                   "type": "string",
