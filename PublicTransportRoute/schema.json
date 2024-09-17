@@ -1,10 +1,10 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$schemaVersion": "0.3.4",
-  "modelTags": "IUDX",
-  "$id": "https://smart-data-models.github.io/dataModel.Weather/WeatherObserved/schema.json",
-  "title": "Weather Observed schema - Smart Data Models",
-  "description": "An observation of weather conditions at a certain place and time. This data model has been developed in cooperation with mobile operators and the GSMA.",
+  "$schema": "http://json-schema.org/schema#",
+  "modelTags": "SynchroniCity",
+  "$schemaVersion": "0.0.2",
+  "$id": "https://smart-data-models.github.io/dataModel.UrbanMobility/PublicTransportRoute/schema.json",
+  "title": "SynchroniCity - Urban mobility PublicTransportRoute schema",
+  "description": "A generic public transport route data model",
   "type": "object",
   "allOf": [
     {
@@ -14,124 +14,99 @@
       "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
     },
     {
-      "$ref": "https://smart-data-models.github.io/dataModel.Weather/weather-schema.json#/definitions/Weather-Commons"
-    },
-    {
       "properties": {
         "type": {
           "type": "string",
           "enum": [
-            "WeatherObserved"
+            "PublicTransportRoute"
           ],
-          "description": "Property. NGSI Entity type. It has to be WeatherObserved"
+          "description": "Property. NGSI Entity type. It has to be PublicTransportRoute"
         },
-        "dateObserved": {
-          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/dateObserved"
-        },
-        "precipitation": {
-          "type": "number",
-          "minimum": 0,
-          "description": "Property. Model:'https://schema.org/Number'. Amount of water rain registered. Units:'Liters per square meter'. "
-        },
-        "solarRadiation": {
-          "type": "number",
-          "minimum": 0,
-          "description": "Property. Model:'https://schema.org/Number'. The solar radiation observed measured in Watts per square. Units:'w/m2'"
-        },
-        "directIrradiation": {
-          "type": "number",
-          "minimum": 0,
-          "description": "Property. Model:'https://schema.org/Number'. Direct irradiance is the part of the solar irradiance that directly reaches a surface. Units:'w/m2'"
-        },
-        "diffuseIrradiation": {
-          "type": "number",
-          "minimum": 0,
-          "description": "Property. Model:'https://schema.org/Number'. Diffuse irradiance is the part of the solar irradiance that is scattered by the atmosphere. Units:'w/m2'"
-        },
-        "pressureTendency": {
-          "oneOf": [
-            {
-              "type": "string",
-              "enum": [
-                "falling",
-                "raising",
-                "steady"
-              ]
-            },
-            {
-              "type": "number"
-            }
-          ],
-          "description": "Property. Enum:'falling, raising, steady'. Is the pressure rising or falling? It can be expressed in quantitative terms or qualitative terms"
-        },
-        "dewPoint": {
-          "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Units:'Celsius degrees'. The dew point encoded as a number. Observed temperature to which air must be cooled to become saturated with water vapor"
-        },
-        "refDevice": {
-          "anyOf": [
-            {
-              "type": "string",
-              "minLength": 1,
-              "maxLength": 256,
-              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
-              "description": "Property. Identifier format of any NGSI entity"
-            },
-            {
-              "type": "string",
-              "format": "uri",
-              "description": "Property. Identifier format of any NGSI entity"
-            }
-          ],
-          "description": "Relationship. Model:'https://schema.org/URL'. A reference to the device(s) which captured this observation"
-        },
-        "streamGauge": {
-          "type": "number",
-          "minimum": 0,
-          "description": "Property. Model:'https://schema.org/Number'. The water level surface elevation observed by Hydrometric measurement sensors, namely a [Stream Gauge](https://en.wikipedia.org/wiki/Stream_gauge) expressed in centimeters. Units:'centimeters'"
-        },
-        "snowHeight": {
-          "type": "number",
-          "minimum": 0,
-          "description": "Property. Model:'https://schema.org/Number'. The snow height observed by generic snow depth measurement sensors, expressed in centimeters. Units:'centimeters'"
-        },
-        "uVIndexMax": {
-          "type": "number",
-          "minimum": 0,
-          "description": "Property. Model:'https://schema.org/Number'. The maximum UV index for the period, based on the World Health Organization's UV Index measure. [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/) the values between 1 and 11 are the valid range for the index. The value 0 is for describing that no signal is detected so no value is stored"
-        },
-        "aqiMajorPollutant": {
+        "routeCode": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Major pollutant in the Air Quality Index (AQI)"
+          "description": "Property. ID or code of the route (e.g. HT5200104000).  Model:'https://schema.org/Text'"
         },
-        "aqiMajorPollutantForecast": {
+        "shortRouteCode": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Forecasted major air pollutant in the Air Quality Index (AQI) over a certain duration in future"
+          "description": "Property. Shorter form of the ID/code of the route (e.g. 5200104000). Model:'https://schema.org/Text'"
         },
-        "airTemperatureForecast": {
-          "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Forecasted value of air temperature over a certain duration in future"
+        "transportationType": {
+          "type": "integer",
+          "enum": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "description": "Property. Types of public transport using this stop as defined in (https://developers.google.com/transit/gtfs/reference/#routestxt). Model:'https://schema.org/Number'. Enum:'0, 1, 2, 3, 4, 5, 6, 7'"
         },
-        "precipitationForecast": {
-          "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Forecasted rainfall over a certain duration in future"
+        "routeColor": {
+          "type": "string",
+          "pattern": "^#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$",
+          "description": "Property. Color assigned to route in text.  Model:'https://schema.org/color'"
         },
-        "airQualityIndex": {
-          "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Air quality index is a number used to report the quality of the air on any given day"
+        "routeTextColor": {
+          "type": "string",
+          "description": "Property. Color assigned to route in hexadecimal.  Model:'https://schema.org/color'"
         },
-        "relativeHumidityForecast": {
-          "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Forecasted relative humidity (water vapour in air) over a certain duration in future"
+        "routeSegments": {
+          "type": "array",
+          "description": "Property. Segments of this route defined by their name and stops",
+          "items": {
+            "type": "object",
+            "properties": {
+              "segmentName": {
+                "type": "string",
+                "description": "Property. Name of the segment in route"
+              },
+              "refPublicTransportStops": {
+                "type": "array",
+                "description": "Relationship. relation to public transport stops",
+                "items": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              }
+            }
+          }
         },
-        "airQualityIndexForecast": {
-          "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Forecasted overall Air Quality Index (AQI) over a certain duration in future"
-        },
-        "airTemperatureTSA": {
-          "type": "object",
-          "description": "Property. Air temperature time series aggregation",
-          "$ref": "https://smart-data-models.github.io/dataModel.Environment/Environment-schema.json#/definitions/TimeSeriesAggregation"
+        "schedule": {
+          "type": "array",
+          "description": "Property. Working hours of this route. Model:'https://schema.org/OpeningHoursSpecification'",
+          "items": {
+            "type": "object",
+            "properties": {
+              "opens": {
+                "type": "string",
+                "pattern": "[0-9]{2}:[0-9]{2}",
+                "description": "Property. Time for the start of the route"
+              },
+              "closes": {
+                "type": "string",
+                "pattern": "[0-9]{2}:[0-9]{2}",
+                "description": "Property. Time for the end of the route"
+              },
+              "dayOfWeek": {
+                "type": "string",
+                "description": "Property. Day of the week for the route schedule",
+                "enum": [
+                  "Friday",
+                  "Monday",
+                  "PublicHolidays",
+                  "Saturday",
+                  "Sunday",
+                  "Thursday",
+                  "Tuesday",
+                  "Wednesday"
+                ]
+              }
+            }
+          },
+          "minItems": 1
         }
       }
     }
@@ -139,7 +114,6 @@
   "required": [
     "id",
     "type",
-    "dateObserved",
-    "location"
+    "transportationType"
   ]
 }
