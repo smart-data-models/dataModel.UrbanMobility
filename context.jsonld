@@ -44,7 +44,7 @@
         "arrival_time": "https://smartdatamodels.org/dataModel.UrbanMobility/arrival_time",
         "bbox": {
             "@container": "@list",
-            "@id": "geojson:bbox"
+            "@id": "https://purl.org/geojson/vocab#bbox"
         },
         "bearing": "https://smartdatamodels.org/dataModel.UrbanMobility/bearing",
         "bikesAllowed": "https://smartdatamodels.org/dataModel.UrbanMobility/bikesAllowed",
@@ -57,7 +57,7 @@
         "continuous_pickup": "https://smartdatamodels.org/dataModel.UrbanMobility/continuous_pickup",
         "coordinates": {
             "@container": "@list",
-            "@id": "geojson:coordinates"
+            "@id": "https://purl.org/geojson/vocab#coordinates"
         },
         "current_status": "https://smartdatamodels.org/dataModel.UrbanMobility/current_status",
         "current_stop_sequence": "https://smartdatamodels.org/dataModel.UrbanMobility/current_stop_sequence",
@@ -112,7 +112,7 @@
         "last_tracked_time": "https://smartdatamodels.org/dataModel.UrbanMobility/last_tracked_time",
         "latitude": "https://smartdatamodels.org/dataModel.UrbanMobility/latitude",
         "license_plate": "https://smartdatamodels.org/dataModel.UrbanMobility/license_plate",
-        "location": "ngsi-ld:location",
+        "location": "https://uri.etsi.org/ngsi-ld/location",
         "longitude": "https://smartdatamodels.org/dataModel.UrbanMobility/longitude",
         "manufacturerName": "https://smartdatamodels.org/dataModel.UrbanMobility/manufacturerName",
         "measurand": "https://smartdatamodels.org/dataModel.UrbanMobility/measurand",
