@@ -4,8 +4,8 @@
     "endDate": {
         "type": "Property",
         "value": {
-            "@type": "Date",
-            "@value": "2019-01-01"
+            "@type":"Date",
+            "@value":"2019-01-01"
         }
     },
     "friday": {
