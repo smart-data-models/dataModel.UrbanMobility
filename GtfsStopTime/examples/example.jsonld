@@ -8,7 +8,6 @@
   "hasTrip": "urn:ngsi-ld:GtfsTrip:Madrid:EMT:FE0010011",
   "stopSequence": 4,
   "@context": [
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
     "https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"
   ]
 }
