@@ -1,3 +1,28 @@
 /* (Beta) Export of data model GtfsAccessPoint of the subject dataModel.UrbanMobility for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
-CREATE TYPE GtfsAccessPoint_type AS ENUM ('GtfsAccessPoint');CREATE TYPE wheelChairAccessible_type AS ENUM ('0','1','2');
-CREATE TABLE GtfsAccessPoint (address JSON, alternateName TEXT, areaServed TEXT, code TEXT, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, hasService TEXT, hasStop JSON, id TEXT PRIMARY KEY, location JSON, name TEXT, owner JSON, page TEXT, seeAlso JSON, source TEXT, stop_desc TEXT, type GtfsAccessPoint_type, wheelChairAccessible wheelChairAccessible_type, zoneCode TEXT);
+CREATE TYPE GtfsAccessPoint_type AS ENUM ('GtfsAccessPoint');
+CREATE TYPE wheelChairAccessible_type AS ENUM ('0', '1', '2');
+CREATE TABLE GtfsAccessPoint (
+  "address" JSON,
+  "alternateName" TEXT,
+  "areaServed" TEXT,
+  "code" TEXT,
+  "dataProvider" TEXT,
+  "dateCreated" TIMESTAMP,
+  "dateModified" TIMESTAMP,
+  "description" TEXT,
+  "hasParentStation" JSON,
+  "hasService" TEXT,
+  "hasStop" JSON,
+  "hasTrip" JSON,
+  "id" TEXT PRIMARY KEY,
+  "location" JSON,
+  "name" TEXT,
+  "owner" JSON,
+  "page" TEXT,
+  "seeAlso" JSON,
+  "source" TEXT,
+  "stop_desc" TEXT,
+  "type" GtfsAccessPoint_type,
+  "wheelChairAccessible" wheelChairAccessible_type,
+  "zoneCode" TEXT
+);
