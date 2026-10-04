@@ -1,3 +1,16 @@
 /* (Beta) Export of data model GtfsService of the subject dataModel.UrbanMobility for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
 CREATE TYPE GtfsService_type AS ENUM ('GtfsService');
-CREATE TABLE GtfsService (alternateName TEXT, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, id TEXT PRIMARY KEY, name TEXT, owner JSON, seeAlso JSON, source TEXT, type GtfsService_type);
+CREATE TABLE GtfsService (
+  "alternateName" TEXT,
+  "dataProvider" TEXT,
+  "dateCreated" TIMESTAMP,
+  "dateModified" TIMESTAMP,
+  "description" TEXT,
+  "id" TEXT PRIMARY KEY,
+  "name" TEXT,
+  "operatedBy" JSON,
+  "owner" JSON,
+  "seeAlso" JSON,
+  "source" TEXT,
+  "type" GtfsService_type
+);
