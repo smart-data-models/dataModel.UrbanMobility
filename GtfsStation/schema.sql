@@ -1,6 +1,6 @@
 /* (Beta) Export of data model GtfsStation of the subject dataModel.UrbanMobility for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
 CREATE TYPE GtfsStation_type AS ENUM ('GtfsStation');
-CREATE TYPE wheelChairAccessible_type AS ENUM ('0', '1', '2');
+CREATE TYPE GtfsStation_wheelChairAccessible_type AS ENUM ('0', '1', '2');
 CREATE TABLE GtfsStation (
   "address" JSON,
   "alternateName" TEXT,
@@ -24,6 +24,6 @@ CREATE TABLE GtfsStation (
   "source" TEXT,
   "stop_desc" TEXT,
   "type" GtfsStation_type,
-  "wheelChairAccessible" wheelChairAccessible_type,
+  "wheelChairAccessible" GtfsStation_wheelChairAccessible_type,
   "zoneCode" TEXT
 );
