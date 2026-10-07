@@ -1,6 +1,6 @@
 /* (Beta) Export of data model TransitManagement of the subject dataModel.UrbanMobility for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
 CREATE TYPE TransitManagement_type AS ENUM ('TransitManagement');
-CREATE TYPE vehicleType_type AS ENUM ('agriculturalVehicle', 'ambulance', 'anyVehicle', 'articulatedVehicle', 'autorickshaw', 'bicycle', 'binTrolley', 'BRT mini bus·', 'BRT bus', 'bus', 'car', 'caravan', 'carOrLightVehicle', 'carWithCaravan', 'carWithTrailer', 'cleaningTrolley', 'compactor', 'constructionOrMaintenanceVehicle', 'dumper', 'e-moped', 'e-scooter', 'e-motorcycle', 'fireTender', 'fourWheelDrive', 'highSidedVehicle', 'hopper', 'lorry', 'minibus', 'moped', 'motorcycle', 'motorcycleWithSideCar', 'motorscooter', 'policeVan', 'publicMotor', 'sweepingMachine', 'tanker', 'tempo', 'threeWheeledVehicle', 'tipper', 'trailer', 'tram', 'trolley', 'twoWheeledVehicle', 'van', 'vehicleWithoutCatalyticConverter', 'vehicleWithCaravan', 'vehicleWithTrailer', 'withEvenNumberedRegistrationPlates', 'withOddNumberedRegistrationPlates', 'other');
+CREATE TYPE TransitManagement_vehicleType_type AS ENUM ('agriculturalVehicle', 'ambulance', 'anyVehicle', 'articulatedVehicle', 'autorickshaw', 'bicycle', 'binTrolley', 'BRT mini bus·', 'BRT bus', 'bus', 'car', 'caravan', 'carOrLightVehicle', 'carWithCaravan', 'carWithTrailer', 'cleaningTrolley', 'compactor', 'constructionOrMaintenanceVehicle', 'dumper', 'e-moped', 'e-scooter', 'e-motorcycle', 'fireTender', 'fourWheelDrive', 'highSidedVehicle', 'hopper', 'lorry', 'minibus', 'moped', 'motorcycle', 'motorcycleWithSideCar', 'motorscooter', 'policeVan', 'publicMotor', 'sweepingMachine', 'tanker', 'tempo', 'threeWheeledVehicle', 'tipper', 'trailer', 'tram', 'trolley', 'twoWheeledVehicle', 'van', 'vehicleWithoutCatalyticConverter', 'vehicleWithCaravan', 'vehicleWithTrailer', 'withEvenNumberedRegistrationPlates', 'withOddNumberedRegistrationPlates', 'other');
 CREATE TABLE TransitManagement (
   "acAvailable" TEXT,
   "ac_available" TEXT,
@@ -97,7 +97,7 @@ CREATE TABLE TransitManagement (
   "vehicleDesc" JSON,
   "vehicleInfo" JSON,
   "vehiclePositionInfo" JSON,
-  "vehicleType" vehicleType_type,
+  "vehicleType" TransitManagement_vehicleType_type,
   "vehicle_id" TEXT,
   "vehicle_label" TEXT,
   "vehicle_position" JSON
