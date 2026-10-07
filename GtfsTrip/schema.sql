@@ -1,17 +1,17 @@
 /* (Beta) Export of data model GtfsTrip of the subject dataModel.UrbanMobility for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
-CREATE TYPE bikesAllowed_type AS ENUM ('0', '1', '2');
-CREATE TYPE direction_type AS ENUM ('0', '1');
+CREATE TYPE GtfsTrip_bikesAllowed_type AS ENUM ('0', '1', '2');
+CREATE TYPE GtfsTrip_direction_type AS ENUM ('0', '1');
 CREATE TYPE GtfsTrip_type AS ENUM ('GtfsTrip');
-CREATE TYPE wheelChairAccessible_type AS ENUM ('0', '1', '2');
+CREATE TYPE GtfsTrip_wheelChairAccessible_type AS ENUM ('0', '1', '2');
 CREATE TABLE GtfsTrip (
   "alternateName" TEXT,
-  "bikesAllowed" bikesAllowed_type,
+  "bikesAllowed" GtfsTrip_bikesAllowed_type,
   "block" TEXT,
   "dataProvider" TEXT,
   "dateCreated" TIMESTAMP,
   "dateModified" TIMESTAMP,
   "description" TEXT,
-  "direction" direction_type,
+  "direction" GtfsTrip_direction_type,
   "hasRoute" TEXT,
   "hasService" JSON,
   "hasShape" JSON,
@@ -23,5 +23,5 @@ CREATE TABLE GtfsTrip (
   "shortName" TEXT,
   "source" TEXT,
   "type" GtfsTrip_type,
-  "wheelChairAccessible" wheelChairAccessible_type
+  "wheelChairAccessible" GtfsTrip_wheelChairAccessible_type
 );
