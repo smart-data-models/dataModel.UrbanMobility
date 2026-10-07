@@ -1,6 +1,6 @@
 /* (Beta) Export of data model PublicTransportStop of the subject dataModel.UrbanMobility for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
 CREATE TYPE PublicTransportStop_type AS ENUM ('PublicTransportStop');
-CREATE TYPE wheelChairAccessible_type AS ENUM ('0', '1', '2');
+CREATE TYPE PublicTransportStop_wheelChairAccessible_type AS ENUM ('0', '1', '2');
 CREATE TABLE PublicTransportStop (
   "address" JSON,
   "alternateName" TEXT,
@@ -23,5 +23,5 @@ CREATE TABLE PublicTransportStop (
   "stopCode" TEXT,
   "transportationType" JSON,
   "type" PublicTransportStop_type,
-  "wheelChairAccessible" wheelChairAccessible_type
+  "wheelChairAccessible" PublicTransportStop_wheelChairAccessible_type
 );
