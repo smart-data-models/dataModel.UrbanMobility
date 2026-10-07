@@ -1,5 +1,5 @@
 /* (Beta) Export of data model PublicTransportRoute of the subject dataModel.UrbanMobility for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
-CREATE TYPE transportationType_type AS ENUM ('0', '1', '2', '3', '4', '5', '6', '7');
+CREATE TYPE PublicTransportRoute_transportationType_type AS ENUM ('0', '1', '2', '3', '4', '5', '6', '7');
 CREATE TYPE PublicTransportRoute_type AS ENUM ('PublicTransportRoute');
 CREATE TABLE PublicTransportRoute (
   "address" JSON,
@@ -21,6 +21,6 @@ CREATE TABLE PublicTransportRoute (
   "seeAlso" JSON,
   "shortRouteCode" TEXT,
   "source" TEXT,
-  "transportationType" transportationType_type,
+  "transportationType" PublicTransportRoute_transportationType_type,
   "type" PublicTransportRoute_type
 );
